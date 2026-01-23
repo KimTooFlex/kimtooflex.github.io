@@ -275,11 +275,11 @@ button {
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link {
-     padding: 0 25px;
-     color: #fff;
-     font-size: 16px;
-     line-height: 20px;
-     text-transform: uppercase;
+    padding: 0 25px;
+    color: #0C0F38;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
@@ -395,7 +395,8 @@ button {
 }
 
 .text-img {
-     background: #da16e6;
+    border-radius: 30px 0px 0px 30px;
+    background: linear-gradient(45deg,#821EF1,#01A4AE);
 }
 
 .text-img figure {
