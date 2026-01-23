@@ -1,0 +1,240 @@
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1340px) {
+    .text-img figure img {
+        height: 709px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .feature .titlepage span {
+        font-size: 16px;
+    }
+    .cont h3 {
+        font-size: 33px;
+    }
+    .text-bg {
+        padding: 90px 15px;
+    }
+    .text-img figure {
+        padding-top: 60px;
+    }
+    .text-img {
+        height: 748px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navigation.navbar-dark .navbar-nav .nav-link:focus,
+    .navigation.navbar-dark .navbar-nav .nav-link:hover {
+        color: #da16e6;
+    }
+    .text-bg {
+        padding-top: 166px;
+        padding-left: 15px;
+        max-width: inherit;
+        float: inherit;
+    }
+    .text-bg span {
+        font-size: 33px;
+        line-height: 45px;
+    }
+    .titlepage h2 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .amezing_box .can h4 {
+        font-size: 26px;
+    }
+    .customer_Carousel .test_box .veni h4 {
+        font-size: 25px;
+        padding-left: 20px;
+    }
+    .cont h3 {
+        font-size: 28px;
+        line-height: 43px;
+    }
+    .cont_call h3 {
+        font-size: 33px;
+        line-height: 47px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+        padding: 15px 30px 10px 30px;
+    }
+    .mean-container .mean-bar {
+        margin-top: 0px;
+    }
+    .text-bg {
+        max-width: inherit;
+        float: inherit;
+        padding-top: 88px;
+    }
+    .text-bg {
+        padding: 90px 15px;
+    }
+    .text-bg h1 {
+        font-size: 64px;
+    }
+    .text-bg span {
+        font-size: 37px;
+        line-height: 46px;
+    }
+    .amezing .read_more {
+        margin-bottom: 30px
+    }
+    .customer_Carousel .test_box .veni h4 {
+        font-size: 17px;
+        padding-left: 14px;
+    }
+    .padd_rightt0 {
+        width: 172px;
+    }
+    ul.social_infomision {
+        padding-bottom: 20px;
+    }
+    .cont h3 {
+        font-size: 35px;
+    }
+    .text-img {
+        height: auto;
+        border-radius: inherit;
+        padding: 40px 20px 40px 50px;
+    }
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        width: 100%;
+    }
+    .navigation .navbar-collapse {
+        background: #da16e6;
+        padding: 20px;
+        margin-top: 46px;
+        position: absolute;
+        width: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #000;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        border: inherit;
+        float: right;
+        padding-top: 6px;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding: 30px 0px 0px 0px;
+    }
+    .logo {
+        text-align: center !important;
+        padding-bottom: 6px;
+        float: left;
+    }
+    .text-bg h1 {
+        font-size: 38px;
+        line-height: 55px;
+        padding-bottom: 35px;
+    }
+    .text-bg {
+        padding: 90px 15px;
+        padding-top: 130px;
+    }
+    .text-bg strong {
+        font-size: 27px;
+        line-height: 35px;
+    }
+    .text-bg span {
+        font-size: 32px;
+        line-height: 46px;
+    }
+    .feature .titlepage span {
+        font-size: 16px;
+    }
+    .titlepage h2 {
+        font-size: 40px;
+        line-height: 43px;
+    }
+    .amezing .read_more {
+        margin-bottom: 30px
+    }
+    ul.social_infomision {
+        padding-bottom: 20px;
+    }
+    .amezing_box .can h4 {
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    .padd_rightt0 {
+        display: none;
+    }
+    .customer_Carousel .test_box .veni h4 {
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    ul.social_infomision li a {
+        font-size: 35px;
+    }
+    .cont h3 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        width: 100%;
+        margin-top: -45px;
+    }
+    .navigation .navbar-collapse {
+        background: #da16e6;
+        padding: 20px;
+        margin-top: 46px;
+        position: absolute;
+        width: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #000;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        float: right;
+        margin-right: 2px;
+        border: inherit;
+    }
+    .testimonial_box {
+        padding: 0px 19px 40px 20px;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        display: none;
+    }
+    .cont_call h3 {
+        font-size: 35px;
+        line-height: 49px;
+    }
+}

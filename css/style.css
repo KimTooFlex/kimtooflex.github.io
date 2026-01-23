@@ -1,0 +1,806 @@
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
+
+/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(font-awesome.min.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(swiper.min.css);
+@import url(slick.css);
+@import url(jquery.fancybox.min.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+* {
+     box-sizing: border-box !important;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     color: #666666;
+     font-size: 14px;
+     font-family: 'Poppins', sans-serif;
+     line-height: 1.80857;
+     font-weight: normal;
+}
+
+a {
+     color: #1f1f1f;
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     color: #111111;
+     margin: 0
+}
+
+h1 {
+     font-size: 24px;
+     font-family: 'Baloo Chettan', cursive;
+}
+
+h2 {
+     font-size: 22px;
+     font-family: 'Baloo Chettan', cursive;
+}
+
+h3 {
+     font-size: 18px;
+     font-family: 'Baloo Chettan', cursive;
+}
+
+h4 {
+     font-size: 16px
+}
+
+h5 {
+     font-size: 14px
+}
+
+h6 {
+     font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+     color: #212121;
+     text-decoration: none!important;
+     opacity: 1
+}
+
+button:focus {
+     outline: none;
+}
+
+ul,
+li,
+ol {
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+}
+
+p {
+     margin: 0px;
+     font-weight: 300;
+     font-size: 15px;
+     line-height: 24px;
+}
+
+a {
+     color: #222222;
+     text-decoration: none;
+     outline: none !important;
+}
+
+a,
+.btn {
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+
+ :focus {
+     outline: 0;
+}
+
+.btn-custom {
+     margin-top: 20px;
+     background-color: transparent !important;
+     border: 2px solid #ddd;
+     padding: 12px 40px;
+     font-size: 16px;
+}
+
+.lead {
+     font-size: 18px;
+     line-height: 30px;
+     color: #767676;
+     margin: 0;
+     padding: 0;
+}
+
+.form-control:focus {
+     border-color: #ffffff !important;
+     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+     border: none !important;
+}
+
+.badge {
+     font-weight: 500;
+}
+
+blockquote {
+     margin: 20px 0 20px;
+     padding: 30px;
+}
+
+button {
+     border: 0;
+     margin: 0;
+     padding: 0;
+     cursor: pointer;
+}
+
+.full {
+     float: left;
+     width: 100%;
+}
+
+.layout_padding {
+     padding-top: 90px;
+     padding-bottom: 90px;
+}
+
+.layout_padding_2 {
+     padding-top: 75px;
+     padding-bottom: 75px;
+}
+
+.light_silver {
+     background: #f9f9f9;
+}
+
+.theme_bg {
+     background: #38c8a8;
+}
+
+.margin_top_30 {
+     margin-top: 30px !important;
+}
+
+.full {
+     width: 100%;
+     float: left;
+     margin: 0;
+     padding: 0;
+}
+
+
+/**-- heading section --**/
+
+
+/*---------------------------- preloader area ----------------------------*/
+
+.loader_bg {
+     position: fixed;
+     z-index: 9999999;
+     background: #fff;
+     width: 100%;
+     height: 100%;
+}
+
+.loader {
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.loader img {
+     width: 280px;
+}
+
+
+/*-- navigation--*/
+
+.navigation.navbar {
+     float: right;
+     padding-top: 12px;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link {
+     padding: 0 25px;
+     color: #fff;
+     font-size: 16px;
+     line-height: 20px;
+     text-transform: uppercase;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link:focus,
+.navigation.navbar-dark .navbar-nav .nav-link:hover {
+     color: #000;
+}
+
+.navigation.navbar-dark .navbar-nav .active>.nav-link,
+.navigation.navbar-dark .navbar-nav .nav-link.active,
+.navigation.navbar-dark .navbar-nav .nav-link.show,
+.navigation.navbar-dark .navbar-nav .show>.nav-link {
+     color: #fdd430;
+}
+
+.navbar-expand-md .navbar-nav {
+     padding-right: 10px;
+}
+
+.sign_btn a {
+     color: #fff;
+     font-size: 17px;
+}
+
+.sign_btn a:hover {
+     color: #000;
+}
+
+
+/*-- header area --*/
+
+
+/*--------------------------------------------------------------------- top banner area ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
+
+.head_top {
+     background-repeat: no-repeat;
+}
+
+.header {
+     width: 100%;
+     background: transparent;
+     padding: 30px 30px;
+     position: absolute;
+     z-index: 999;
+}
+
+.logo a {
+     font-size: 40px;
+     font-weight: bold;
+     text-transform: uppercase;
+     color: #fff;
+     line-height: 40px;
+}
+
+.text_box_color {
+     background: #0c0f38;
+     float: right;
+     width: 100%;
+}
+
+.text-bg {
+     text-align: left;
+     max-width: 556px;
+     width: 100%;
+     float: right;
+     padding: 90px 0;
+}
+
+.text-bg h1 {
+     color: #fff;
+     font-size: 67px;
+     line-height: 90px;
+     padding-bottom: 30px;
+     padding-top: 40px;
+     font-weight: bold;
+}
+
+.text-bg strong {
+     font-family: 'Baloo Chettan', cursive;
+     font-size: 35px;
+     line-height: 35px;
+     color: #fff;
+}
+
+.text-bg span {
+     font-family: 'Baloo Chettan', cursive;
+     color: #da16e6;
+     font-size: 35px;
+     line-height: 77px;
+     font-weight: bold;
+     padding-bottom: 20px;
+     display: block;
+}
+
+.text-bg a {
+     font-size: 17px;
+     background-color: #fff;
+     color: #da16e6;
+     padding: 13px 0px;
+     width: 100%;
+     max-width: 190px;
+     text-align: center;
+     display: inline-block;
+     transition: ease-in all 0.5s;
+}
+
+.text-bg a:hover {
+     background-color: #da16e6;
+     color: #fff;
+     transition: ease-in all 0.5s;
+}
+
+.text-img {
+     background: #da16e6;
+}
+
+.text-img figure {
+     margin: 0px;
+}
+
+.text-img figure img {
+     width: 100%;
+}
+
+.padding_right1 {
+     padding-right: 0;
+     padding-left: 0;
+}
+
+.titlepage {
+     text-align: center;
+     padding-bottom: 60px;
+}
+
+.titlepage h2 {
+     font-size: 50px;
+     color: #0c0f38;
+     line-height: 61px;
+     font-weight: bold;
+     padding: 0;
+}
+
+.d_flex {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+
+/** feature section **/
+
+.feature {
+     margin-top: 90px;
+     background: #fff;
+}
+
+.feature .titlepage h2 {
+     margin-bottom: 20px;
+}
+
+.feature .titlepage span {
+     color: #747373;
+     font-size: 17px;
+}
+
+.feature .feature_box {
+     text-align: center;
+}
+
+.feature .feature_box figure {
+     margin: 0;
+}
+
+.feature .feature_box figure img {
+     width: 100%;
+}
+
+.feature .feature_box .read_more {
+     background: #000;
+     color: #fff;
+     margin-top: 40px;
+}
+
+.feature .feature_box .read_more:hover {
+     background: #da33e2;
+}
+
+
+/** end feature section **/
+
+
+/** amezing section **/
+
+.amezing {
+     background: #0c0f38;
+     margin-top: 90px;
+     padding: 90px 0px;
+}
+
+.amezing .titlepage h2 {
+     color: #fff;
+     text-align: left;
+}
+
+.amezing_box {
+     text-align: left;
+}
+
+.can {
+     font-family: 'Baloo Chettan', cursive;
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     margin-bottom: 30px;
+}
+
+.amezing_box .can span {
+     font-size: 30px;
+     background: #fff;
+     border-radius: 51px;
+     width: 90px;
+     height: 90px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     color: #de32e9;
+}
+
+.amezing_box .can h4 {
+     color: #fff;
+     font-size: 30px;
+     line-height: 40px;
+     font-weight: 500;
+     padding: 0;
+     padding-left: 30px;
+}
+
+.amezing_box p {
+     color: #fff;
+     font-size: 17px;
+     line-height: 28px;
+}
+
+.amezing_box figure {
+     margin: 0;
+}
+
+.amezing_box figure img {
+     width: 100%;
+}
+
+.amezing .read_more {
+     display: block;
+     margin-top: 30px;
+     background-color: #fff;
+     color: #de2fe9;
+}
+
+.amezing .read_more:hover {
+     background-color: #de2fe9;
+     color: #fff;
+}
+
+
+/** end amezing section **/
+
+.read_more {
+     font-size: 17px;
+     background-color: #fff;
+     color: #000;
+     padding: 13px 0px;
+     width: 100%;
+     max-width: 190px;
+     text-align: center;
+     display: inline-block;
+     transition: ease-in all 0.5s;
+}
+
+.read_more:hover {
+     background: #000;
+     color: #fff;
+     transition: ease-in all 0.5s;
+}
+
+
+/** customer section **/
+
+.customer {
+     margin-top: 90px;
+     padding-bottom: 120px;
+     background: #f0f0f030;
+}
+
+.customer .titlepage h2 {
+     padding-bottom: 15px;
+}
+
+.customer .titlepage span {
+     font-size: 16px;
+     line-height: 28px;
+     color: #747373;
+}
+
+.customer_Carousel .carousel-caption {
+     position: inherit;
+     padding: 0;
+}
+
+.customer_box {
+     background: #0c0f38;
+}
+
+.test_box {
+     background: #fff;
+     box-shadow: #ddd 0px 0px 10px -1px;
+     margin-top: 13px;
+}
+
+.customer_Carousel .test_box .veni h4 {
+     font-size: 30px;
+     color: #fff;
+     line-height: 32px;
+     display: inline-block;
+     padding-left: 30px;
+}
+
+.customer_Carousel .test_box p {
+     font-size: 17px;
+     line-height: 28px;
+     color: #797878;
+     font-weight: 400;
+     text-align: left;
+     padding: 40px 25px;
+}
+
+.customer_Carousel .test_box .veni {
+     padding-top: 45px;
+     display: inline-block;
+}
+
+.customar_box::after {
+     position: absolute;
+     content: "";
+     width: 58px;
+     left: 85px;
+     height: 30px;
+     top: 0;
+     background-repeat: no-repeat;
+     background: url(../images/cross.png);
+}
+
+.customar_box {
+     background: #0c0f38;
+     text-align: left;
+     position: relative;
+     padding: 0px 0px 44px 50px;
+}
+
+.padd_rightt0 {
+     padding-right: 10px;
+     float: right;
+}
+
+.customer_Carousel .carousel-indicators {
+     bottom: -52px;
+}
+
+.customer_Carousel .carousel-indicators li {
+     width: 22px;
+     height: 22px;
+     border-radius: 20px;
+     background: #0c0f38;
+}
+
+.customer_Carousel .carousel-indicators li.active {
+     background: #da33e2;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+     display: none;
+}
+
+
+/** end customer section **/
+
+
+/** request section **/
+
+.request {
+     padding: 90px 0;
+     background: #f4f5fe;
+}
+
+.pink {
+     color: #da33e2;
+}
+
+.request .titlepage h2 {
+     padding-bottom: 15px;
+}
+
+.request .titlepage span {
+     font-size: 17px;
+     line-height: 28px;
+}
+
+ul.social_infomision {
+     text-align: center;
+}
+
+ul.social_infomision li a {
+     font-family: 'Baloo Chettan', cursive;
+     font-size: 48px;
+     line-height: 49px;
+     color: #0c0f38;
+     font-weight: bold;
+}
+
+ul.social_infomision li img {
+     padding-right: 15px;
+     width: 80px;
+}
+
+
+/** end request **/
+
+
+/** footer **/
+
+.multi {
+     color: #2bcc91;
+     font-weight: bold;
+     font-size: 40px;
+}
+
+.footer {
+     border-top: #000 solid 1px;
+     font-family: Poppins;
+     background: #0c0f38;
+     padding-top: 50px;
+}
+
+.cont {
+     text-align: center;
+}
+
+.cont h3 {
+     color: #fff;
+     font-size: 37px;
+     line-height: 55px;
+     font-weight: bold;
+     padding-bottom: 20px;
+     display: block;
+}
+
+.cont span {
+     color: #fff;
+     font-size: 16px;
+}
+
+ul.social_icon {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding-top: 25px;
+}
+
+ul.social_icon li {
+     float: left;
+     height: 60px;
+     color: #fff;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     padding-right: 20px;
+}
+
+ul.social_icon li a {
+     color: #0c0f38;
+     width: 50px;
+     height: 50px;
+     border: solid #fff 1px;
+     float: left;
+     text-align: center;
+     line-height: 50px;
+     border-radius: 100%;
+     font-size: 30px;
+     background: #fff;
+}
+
+ul.social_icon li a:hover {
+     background: #d434e3;
+     border: solid #d434e3 1px;
+     color: #fff;
+}
+
+.copyright {
+     margin-top: 43px;
+     padding: 20px 0px;
+     background-color: #fff;
+}
+
+.copyright p {
+     color: #0c0f38;
+     font-size: 18px;
+     line-height: 22px;
+     text-align: center;
+}
+
+.copyright a {
+     color: #0c0f38;
+}
+
+.copyright a:hover {
+     color: #d434e3;
+}
+
+
+/** end footer **/
