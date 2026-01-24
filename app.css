@@ -8,7 +8,7 @@
 }
 
 .gradient-dark {
-    background: linear-gradient(45deg, #F379E3, #20DFF5);
+    background: linear-gradient(90deg,hsl(282, 99%, 60%), hsl(183, 100%, 60%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -16,7 +16,7 @@
 
 
 .gradient-light {
-    background: linear-gradient(45deg, #BD44D5, #6BEDE1);
+    background: linear-gradient(90deg, hsl(282, 99%, 40%),hsl(183, 100%, 40%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
