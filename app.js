@@ -1,3 +1,34 @@
+ 
+function mcp() {
+    Swal.fire({
+        theme: 'dark',
+        title: "The KimTools MCP feature is on the way!",
+        text: "Designed to unlock deeper control, smarter workflows, and advanced capabilities across the KimTools ecosystem.",
+        imageUrl: "images/mcp.png",
+        imageWidth: "150px"
+    });
+}
+
+
+function comingSoon() {
+    const Toast = Swal.mixin({
+        theme: 'dark',
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+    Toast.fire({
+        icon: "info",
+        title: "Under Development, Coming Soon..."
+    });
+}
+ 
 function controlsList() {
     return {
         baseUrl: '',

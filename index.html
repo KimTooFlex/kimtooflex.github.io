@@ -58,6 +58,7 @@
    <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>
    <!-- Alpine Core -->
    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <script src="app.js"></script>
 </head>
 <!-- body -->
@@ -99,10 +100,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#pricing"><b>PRICING</b></a>
                                 </li>
-
-                                
                                 <li class="nav-item">
                                     <a class="nav-link" target="_blank" href="https://kimtooflex.gumroad.com"><b>TEMPLATES</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"  onclick="mcp();"  href="javascript:void();" ><b>MCP</b></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" target="_blank" href="https://www.upwork.com/freelancers/~01799b0179f8a38bce"><b>SERVICES</b></a>
@@ -135,8 +137,10 @@
                      <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
                          <div class="text_box_color">
                              <div class="text-bg">
-                                 <h1 class="gradient-dark">KimTOOLs +
-                                     <br> SDK
+                                 <!--  <img height="28px" src="images/sdk.png"/> -->
+                                 <br/>
+                                 <h1 class="gradient-dark">KimTOOLs +
+
                                  </h1>
                                  <strong>Modern SDK & UI Components
                                      <br> for WinForms
@@ -148,15 +152,15 @@
                                  <br/>
                                  <br/>
                                  <div class="row">
-                                      <div class="col-sm-12 col-md-4" style="padding-top: 10px">
-                                         <a class="read_more" style="width:100%" href="#"><b>Buy Now</b></a>
+                                     <div class="col-sm-12 col-md-4" style="padding-top: 10px">
+                                         <a class="read_more" style="width:100%" href="#pricing"><b>Buy Now</b></a>
                                      </div>
                                      <div class="col-sm-12 col-md-6" style="padding-top: 10px">
                                          <a class="read_more secondary" style="width:100%" href="#components"><b>View Components</b></a>
                                      </div>
                                  </div>
-                                 
-                                
+
+
                              </div>
                          </div>
                      </div>
@@ -355,7 +359,7 @@
                     <li>Designer support</li>
                     <li>Community updates</li>
                 </ul>
-                <a class="read_more" href="#free" style="opacity:.5;">Coming Soon</a>
+                <a class="read_more"  onclick="comingSoon();"  href="javascript:void();"  style="opacity:.5;">Coming Soon</a>
             </div>
 
             <!-- Pro -->
