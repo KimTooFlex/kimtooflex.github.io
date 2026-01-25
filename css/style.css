@@ -389,7 +389,7 @@ button {
         display: inline-block;
         transition: ease-in all 0.5s;
     }
-        .text-bg a.secondary {
+        a.secondary {
             background-color: hsl(236, 25%, 35%);
             color: white;
         }
