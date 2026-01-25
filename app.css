@@ -1,4 +1,10 @@
 
+
+body {
+    background-color: #0C0F38;
+}
+
+
 .gradient-title {
     
     background: linear-gradient(45deg, #F379E3, #20DFF5);
@@ -8,7 +14,7 @@
 }
 
 .gradient-dark {
-    background: linear-gradient(90deg,hsl(282, 99%, 60%), hsl(183, 100%, 60%));
+    background: linear-gradient(45deg,hsl(282, 99%, 60%) 0%, hsl(180, 100%, 60%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -16,10 +22,11 @@
 
 
 .gradient-light {
-    background: linear-gradient(90deg, hsl(282, 99%, 40%),hsl(183, 100%, 40%));
+    background: linear-gradient(45deg, hsl(282, 99%, 40%) 0%,hsl(180, 100%, 40%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+   /* text-shadow: 0 0 4px rgba(130,30,241,0.4);*/
 }
 
 .btn-primary {
@@ -121,7 +128,11 @@
     font-weight: 500;
 }
 
-body {
-    background-color: #0C0F38;
-  
+.pricing-card {
+    width: 320px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: #ddd 0 0 15px;
+    border-radius: 24px; 
+    color: hsla(0,100%,100%,.7);
 }

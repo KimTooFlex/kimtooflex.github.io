@@ -381,7 +381,7 @@ button {
     .text-bg a {
         font-size: 17px;
         background-color: #fff;
-        color: #da16e6;
+        color: hsl(236, 65%, 13%);
         padding: 13px 0px;
         width: 100%;
         max-width: 190px;
@@ -389,6 +389,10 @@ button {
         display: inline-block;
         transition: ease-in all 0.5s;
     }
+        .text-bg a.secondary {
+            background-color: hsl(236, 25%, 35%);
+            color: white;
+        }
 
         .text-bg a:hover {
             background-color: #da16e6;
@@ -396,12 +400,14 @@ button {
             transition: ease-in all 0.5s;
         }
 
- /*.text-img {
+
+
+            /*.text-img {
     border-radius: 50% 0 0 50%;
     background: linear-gradient( 45deg, rgba(130, 30, 241, 0.4), rgba(1, 164, 174, 0.2) );
 }*/
 
-    .text-img figure {
+            .text-img figure {
         margin: 0px;
     }
 
