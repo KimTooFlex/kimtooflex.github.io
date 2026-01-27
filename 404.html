@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Redirecting�</title>
+    <title>Redirecting...</title>
     <script>
         var path = window.location.pathname;
 
@@ -10,17 +10,18 @@
 
         var isDocs = path.toLocaleLowerCase.includes("sdk/") || path.toLocaleLowerCase.includes("/sdk");
 
-        if (isDocs) {
+        if (isDocs) window.location.replace("https://docs.kimtoo.net" + path);
+        else window.location.replace("https://kimtoo.net/#" + path);
 
-            window.location.replace("https://docs.kimtoo.net" + path);
-            window.onload = function () {
-                document.body.innerText = "Redirecting...";
-            }
-        }
+
+            // window.onload = function () {
+            //     document.body.innerText = "Redirecting...";
+            // }
+
 
     </script>
 </head>
 <body>
-   
+ Redirecting...
 </body>
 </html>
