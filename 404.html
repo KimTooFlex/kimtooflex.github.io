@@ -4,15 +4,23 @@
     <meta charset="utf-8">
     <title>Redirecting…</title>
     <script>
-    var path = window.location.pathname;
+        var path = window.location.pathname;
 
-    // map old domain paths to new domain
-    var target = "https://docs.kimtoo.net" + path;
+        // map old domain paths to new domain
 
-    window.location.replace(target);
-  </script>
+        var isDocs = path.toLocaleLowerCase.includes("sdk/") || path.toLocaleLowerCase.includes("/sdk");
+
+        if (isDocs) {
+
+            window.location.replace("https://docs.kimtoo.net" + path);
+            window.onload = function () {
+                document.body.innerText = "Redirecting…";
+            }
+        }
+
+    </script>
 </head>
 <body>
-Redirecting…
+   
 </body>
 </html>
