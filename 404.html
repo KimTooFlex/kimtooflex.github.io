@@ -4,24 +4,26 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-        var path = window.location.pathname;
-
-        // map old domain paths to new domain
-
-        var isDocs = path.toLocaleLowerCase.includes("sdk/") || path.toLocaleLowerCase.includes("/sdk");
-
-        if (isDocs) window.location.replace("https://docs.kimtoo.net" + path);
-        else window.location.replace("https://kimtoo.net/#" + path);
 
 
-            // window.onload = function () {
-            //     document.body.innerText = "Redirecting...";
-            // }
+        window.onload = function (){
+            setTimeout(function () {
+                const path = window.location.pathname;
+                const isDocs = path.toLocaleLowerCase.includes("sdk/") || path.toLocaleLowerCase.includes("/sdk");
+                if (isDocs){
+                    window.location.replace("https://docs.kimtoo.net" + path);
+                    return;
+                }
+
+                  window.location.replace("https://kimtoo.net/#" + path);
+            },2500 );
+        }
+
 
 
     </script>
 </head>
-<body>
- Redirecting...
+<body style="min-height: 100dvh;overflow: hidden; text-align: center;">
+   <img style="margin-top: 25dvh" alt="loading.." height="150px" src="images/kimtools.gif"/>
 </body>
 </html>
