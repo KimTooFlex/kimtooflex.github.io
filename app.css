@@ -136,3 +136,8 @@ body {
     border-radius: 24px; 
     color: hsla(0,100%,100%,.7);
 }
+
+a.primary {
+    color: white;
+    background: linear-gradient(135deg,orange,indigo);
+}
