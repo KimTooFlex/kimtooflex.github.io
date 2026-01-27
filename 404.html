@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
+    <title>Redirecting…</title>
     <script>
+        var path = window.location.pathname;
+        var target = "https://docs.kimtoo.net" + path;
 
-
-        window.onload = function (){
-            setTimeout(function () {
-                const path = window.location.pathname;
-                const isDocs = path.toLocaleLowerCase.includes("sdk/") || path.toLocaleLowerCase.includes("/sdk");
-                if (isDocs){
-                    window.location.replace("https://docs.kimtoo.net" + path);
-                    return;
-                }
-
-                  window.location.replace("https://kimtoo.net/#" + path);
-            },2500 );
-        }
-
-
-
+        window.location.replace(target);
     </script>
 </head>
-<body style="min-height: 100dvh;overflow: hidden; text-align: center;">
-   <img style="margin-top: 25dvh" alt="loading.." height="150px" src="images/kimtools.gif"/>
+<body>
+Redirecting…
 </body>
 </html>
