@@ -131,7 +131,7 @@
         padding-top: 6px;
     }
     .navigation.navbar-dark .navbar-toggler-icon {
-        background: url(../images/menu_icon.png);
+        background: url(../images/menu.svg);
         background-repeat: no-repeat;
     }
     .carousel-control-next-icon,
@@ -226,7 +226,7 @@
         padding: 0px 19px 40px 20px;
     }
     .navigation.navbar-dark .navbar-toggler-icon {
-        background: url(../images/menu_icon.png);
+        background: url(../images/menu.svg);
         background-repeat: no-repeat;
     }
     .carousel-control-next-icon,
