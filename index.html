@@ -2,590 +2,636 @@
 <html lang="en">
 
 <head>
-   <!-- basic -->
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- mobile metas -->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <!-- site metas --> 
-   <title>KimTOOLs – Modern WinForms UI Framework for C# and VB.NET</title>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>KimTOOLs – Modern WinForms UI Framework for C# and VB.NET</title>
 
-   <meta name="description" content="KimTools is a modern UI framework for WinForms that brings contemporary controls, theming, and performance to C# and VB.NET applications. Works with .NET Framework 4.6 through .NET 9.">
+    <meta name="description" content="KimTools is a modern UI framework for WinForms that brings contemporary controls, theming, and performance to C# and VB.NET applications. Works with .NET Framework 4.6 through .NET 9.">
 
-   <meta name="keywords" content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools">
+    <meta name="keywords" content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools">
 
-   <meta name="author" content="Kimutai Kipngetich,Kim Too Flex">
+    <meta name="author" content="Kimutai Kipngetich,Kim Too Flex">
 
-   <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">
 
-   <!-- Open Graph (social sharing) -->
-   <meta property="og:title" content="KimTools – Modern WinForms UI Framework">
-   <meta property="og:description" content="Upgrade WinForms apps with modern UI controls, theming, and high performance. Supports C# and VB.NET from .NET Framework 4.6 to .NET 9.">
-   <meta property="og:type" content="website">
-   <meta property="og:url" content="https://kimtoo.net">
-   <meta property="og:image" content="https://kimtoo.net/images/top_img.png">
+    <!-- Open Graph (social sharing) -->
+    <meta property="og:title" content="KimTools – Modern WinForms UI Framework">
+    <meta property="og:description" content="Upgrade WinForms apps with modern UI controls, theming, and high performance. Supports C# and VB.NET from .NET Framework 4.6 to .NET 9.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kimtoo.net">
+    <meta property="og:image" content="https://kimtoo.net/images/top_img.png">
 
-   <!-- Twitter -->
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="KimTools – Modern WinForms UI Framework">
-   <meta name="twitter:description" content="Modern UI controls and theming for WinForms. C# and VB.NET. .NET 4.6 to .NET 9+.">
-   <meta name="twitter:image" content="https://kimtoo.net/images/top_img.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KimTools – Modern WinForms UI Framework">
+    <meta name="twitter:description" content="Modern UI controls and theming for WinForms. C# and VB.NET. .NET 4.6 to .NET 9+.">
+    <meta name="twitter:image" content="https://kimtoo.net/images/top_img.png">
 
-   
-   <!-- bootstrap css -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <!-- style css -->
-   <link rel="stylesheet" href="css/style.css">
-   <!-- Responsive-->
-   <link rel="stylesheet" href="css/responsive.css">
-   <!-- Favicon -->
-   <link rel="icon" href="favicon.ico">
-   <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-   <!-- Tweaks for older IEs-->
-   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-   <link rel="stylesheet" href="app.css">
-   <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-   <!--HTMX-->
-   <script src="https://unpkg.com/htmx.org@latest"></script>
-   <script src="https://unpkg.com/htmx.org@latest/dist/ext/alpine-morph.js"></script>
-   <!-- Alpine Plugins -->
-   <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>
-   <!-- Alpine Core -->
-   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   <!-- <script src="https://gumroad.com/js/gumroad.js"></script> -->
-   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8RDLCMTFXX');
-   </script>
 
-   <script src="app.js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="app.css">
+    <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!--HTMX-->
+    <script src="https://unpkg.com/htmx.org@latest"></script>
+    <script src="https://unpkg.com/htmx.org@latest/dist/ext/alpine-morph.js"></script>
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://gumroad.com/js/gumroad.js"></script> -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8RDLCMTFXX');
+    </script>
+
+    <script src="app.js"></script>
 </head>
 <!-- body -->
 
 <body class="main-layout">
-   <!-- loader  -->
-   <div class="loader_bg">
-      <div class="loader"><img src="images/kimtools.gif" alt="#" /></div>
-   </div>
-   <!-- end loader -->
-   <!-- header -->
-   <header>
-      <!-- header inner -->
-      <div class="head_top">
-         <div class="header">
-            <div class="container">
-               <div class="row">
-                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                       <div class="full">
-                           <div class="center-desk">
-                               <div class="logo">
-                                   <a href="./"><img src="images/logo-dark.png" alt="#"/></a>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 text-right">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                           data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
-                           aria-label="Toggle navigation">
-                           <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" target="_blank" href="https://docs.kimtoo.net/sdk/get-started/install-and-upgrade"><b>DOCS</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#pricing"><b>PRICING</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" target="_blank" href="https://kimtooflex.gumroad.com"><b>TEMPLATES</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link"  onclick="mcp();"  href="javascript:void();" ><b>MCP</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./bunifu"><b>BUNIFU-UI</b></a>
-                                </li>
-                                <!-- <li class="nav-item"> -->
-                                <!--     <a class="nav-link" target="_blank" href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share"><b>SERVICES</b></a> -->
-                                <!-- </li> -->
-                            </ul>
-                      
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/kimtools.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="head_top">
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="./"><img src="images/logo-dark.png" alt="#" /></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </nav>
-                  </div>
-               </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 text-right">
+                            <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarsExample04">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" target="_blank" href="https://docs.kimtoo.net/sdk/get-started/install-and-upgrade"><b>DOCS</b></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#pricing"><b>PRICING</b></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" target="_blank" href="https://kimtooflex.gumroad.com"><b>TEMPLATES</b></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" onclick="mcp();" href="javascript:void();"><b>MCP</b></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./bunifu"><b>BUNIFU-UI</b></a>
+                                        </li>
+                                        <!-- <li class="nav-item"> -->
+                                        <!--     <a class="nav-link" target="_blank" href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share"><b>SERVICES</b></a> -->
+                                        <!-- </li> -->
+                                    </ul>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <!-- end header inner -->
-         <!-- end header -->
-         <br /> 
-         <!-- banner -->
-         <section class="banner_main">
-             <div class="container-fluid"/>
-             <div class="banner_bg">
-                 <div class="row d_flex">
-                     <div class="full">
-                         <div class="center-desk">
-                             <div class="logo">
-                                 <a>
-                                     <img src="images/blank.png" alt="#"/>
-                                 </a>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
-                         <div class="text_box_color">
-                             <div class="text-bg">
-                                 <!--  <img height="28px" src="images/sdk.png"/> -->
-                                 <br/>
-                                 <h1 class="gradient-dark">KimTOOLs +
+            <!-- end header inner -->
+            <!-- end header -->
+            <br />
+            <!-- banner -->
+            <section class="banner_main">
+                <div class="container-fluid" />
+                <div class="banner_bg">
+                    <div class="row d_flex">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a>
+                                        <img src="images/blank.png" alt="#" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
+                            <div class="text_box_color">
+                                <div class="text-bg">
+                                    <!--  <img height="28px" src="images/sdk.png"/> -->
+                                    <br />
+                                    <h1 class="gradient-dark">
+                                        KimTOOLs +
 
-                                 </h1>
-                                 <strong>Modern SDK & UI Components
-                                     <br> for WinForms
-                                 </strong>
-                                 <div class="row pt-3">
-                                 <img src="images/vs-rider.png" class="pt-3" style="opacity:.6" alt="vs-rider"/>
-                                 </div>
-                                 <div class="row pt-5">
-                                     <div class="col-sm-12 col-md-5" >
-                                         <a class="read_more primary" style="width:100%" href="#pricing"><b>Buy Now</b></a>
-                                     </div>
-                                     <div class="col-sm-12 col-md-6" style="margin-left: 0;padding-left: 0">
-                                         <a class="read_more secondary" style="width:100%" href="#components"><b>View Components</b></a>
-                                     </div>
-                                 </div>
+                                    </h1>
+                                    <strong>
+                                        Modern SDK & UI Components
+                                        <br> for WinForms
+                                    </strong>
+                                    <div class="row pt-3">
+                                        <img src="images/vs-rider.png" class="pt-3" style="opacity:.6" alt="vs-rider" />
+                                    </div>
+                                    <div class="row pt-5">
+                                        <div class="col-sm-12 col-md-5">
+                                            <a class="read_more primary" style="width:100%" href="#pricing"><b>Buy Now</b></a>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6" style="margin-left: 0;padding-left: 0">
+                                            <a class="read_more secondary" style="width:100%" href="#components"><b>View Components</b></a>
+                                        </div>
+                                    </div>
 
 
-                             </div>
-                         </div>
-                     </div>
-                     <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
-                         <div class="text-img">
-                             <figure>
-                                 <img src="images/top_img.png" alt="#"/>
-                             </figure>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </section>
-      </div>
-   </header>
-   <!-- end banner -->
-   <!-- feature -->
-   <div id="components"  class="feature">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12"   style="margin-top:50px;">
-                  <div class="titlepage">
-                      <div class="col-12 text-center">
-                          <img style="margin-right:5px" src="images/cs.png" />
-                          <img style="margin-left:5px"  src="images/vb.jpg" />
-                      </div>
-                      <br/>
-                      <h2>WinForms <strong class="gradient-light">UI Controls</strong> & <strong class="gradient-light">Components</strong>.</h2>
-                      <span>
-                          KimTools brings contemporary visuals and high-performance controls to WinForms.
-                          Compatible with <b>.NET Framework 4.6 - 4.8</b>, and .NET Core <b>.NET 6</b> through <b>.NET 9</b>, it upgrades your apps without rewrites,
-                          keeping them stable, fast, and designer-friendly. Make WinForms look modern and work smarter.
-                      </span>
-                  </div>
-              </div>
-          </div>
-
-      
-         <!-- Controls Cards -->
-        <div  class="container" 
-             x-data="controlsList()" 
-             x-init="baseUrl='https://www.kimtoo.net/sdk/controls/'" 
-             style="margin-top:25px; position: relative;">
-
-            <!-- Search on left -->  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
+                            <div class="text-img">
+                                <figure>
+                                    <img src="images/top_img.png" alt="#" />
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+    <!-- end banner -->
+    <!-- feature -->
+    <div id="components" class="feature">
+        <div class="container">
             <div class="row">
-    <div class="col-md-6 col-sm-12" style="position: relative; width:100%; margin-bottom: 30px;">
-        <input
-            type="text"
-            placeholder="Search..."
-            x-model="query"
-            class="search-input"
-        />
-        <!-- SVG Icon -->
-        <div class="search-icon" style="margin-right:20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
-                 stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                <path d="M21 21l-6 -6" />
-            </svg>
-        </div>
-    </div>
-    <!-- Total + filtered controls -->
- 
-    <div class="col-md-6 col-sm-12">
-        <div style="position:absolute; top:0; right:0; font-weight:600; color:#0f172a;">
-    
-            <span x-text="filteredControls.length + '/' + controls.length"></span>
-        </div>
-        <br/>
-    </div>
-    </div>
- 
-
-    <!-- Cards -->
-    <div class="row">
-        
-
-        <template x-for="(control, index) in filteredControls.slice(0, limit)" :key="control.name">
-            <div class="col-sm-12 col-md-6 col-lg-3"
-                 x-show="true"
-                 x-transition:enter="transition ease-out duration-500"
-                 x-transition:enter-start="opacity-0 transform scale-95"
-                 x-transition:enter-end="opacity-100 transform scale-100"
-                 x-transition:leave="transition ease-in duration-300"
-                 x-transition:leave-start="opacity-100 transform scale-100"
-                 x-transition:leave-end="opacity-0 transform scale-95">
-                <a :href="baseUrl + control.slug" class="control-card" target="_blank" rel="noopener noreferrer">
-                    <img :src="control.thumbnail" alt="" class="control-thumbnail"/>
-                    <h4>
-                        <i><span class="kt-prefix">kt </span></i>
-                        <b><span x-text="control.name.replace('Kt-','')"></span></b>
-                    </h4>
-                </a>
-
-            </div>
-        </template>
-    </div>
-
-    <!-- Show More button -->
-    <div class="text-center mt-6" x-show="limit < filteredControls.length">
-        <button class="read_more secondary"
-                @click="limit += 16">
-            <b>↓&nbsp;&nbsp;Show More</b> 
-        </button>
-    </div>
-    <br/>
-</div>
-
- <!--End Controls Cards -->
-
-      </div>
-   </div>
-   <!-- feature --> 
-  <!-- amezing -->
-<div class="amezing">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="amezing_box">
+                <div class="col-md-12" style="margin-top:50px;">
                     <div class="titlepage">
-                        <h2>Your <strong class="gradient-dark">Target</strong> <b>.NET</b>
-                            <br>
-                            <strong class="gradient-dark">Platforms</strong> Supported
-                        </h2>
-                    </div>
-
-                    <!-- IDEs -->
-                    <div class="can">
-                        <span> 
-                            <img src="images/net-core.png" />
-                        </span>
-                        <h4>dotNET Core 
-                            <b class="gradient-dark">.NET 6</b> / 
-                            <b class="gradient-dark">.NET 7</b> / 
-                            <b class="gradient-dark">.NET 8</b> / 
-                            <b class="gradient-dark">.NET 9+</b>
-
-                        </h4>
-                    </div>
-
-                    <div class="can">
+                        <div class="col-12 text-center">
+                            <img style="margin-right:5px" src="images/cs.png" />
+                            <img style="margin-left:5px" src="images/vb.jpg" />
+                        </div>
+                        <br />
+                        <h2>WinForms <strong class="gradient-light">UI Controls</strong> & <strong class="gradient-light">Components</strong>.</h2>
                         <span>
-                            <img src="images/net-frm.png" /> 
+                            KimTools brings contemporary visuals and high-performance controls to WinForms.
+                            Compatible with <b>.NET Framework 4.6 - 4.8</b>, and .NET Core <b>.NET 6</b> through <b>.NET 9</b>, it upgrades your apps without rewrites,
+                            keeping them stable, fast, and designer-friendly. Make WinForms look modern and work smarter.
                         </span>
-                        <h4>.NET Framework
-                            <b class="gradient-dark">4.6.2</b> / 
-                            <b class="gradient-dark">4.7.2</b> / 
-                            <b class="gradient-dark">4.8</b> 
-                        </h4>
                     </div>
-                
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="amezing_box">
-                    <img src="images/demo.gif" width="100%" alt="KimTools UI" />
+
+            <!-- Controls Cards -->
+            <div class="container"
+                 x-data="controlsList()"
+                 x-init="baseUrl='https://www.kimtoo.net/sdk/controls/'"
+                 style="margin-top:25px; position: relative;">
+
+                <!-- Search on left -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-12" style="position: relative; width:100%; margin-bottom: 30px;">
+                        <input type="text"
+                               placeholder="Search..."
+                               x-model="query"
+                               class="search-input" />
+                        <!-- SVG Icon -->
+                        <div class="search-icon" style="margin-right:20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Total + filtered controls -->
+
+                    <div class="col-md-6 col-sm-12">
+                        <div style="position:absolute; top:0; right:0; font-weight:600; color:#0f172a;">
+
+                            <span x-text="filteredControls.length + '/' + controls.length"></span>
+                        </div>
+                        <br />
+                    </div>
                 </div>
+
+
+                <!-- Cards -->
+                <div class="row">
+
+
+                    <template x-for="(control, index) in filteredControls.slice(0, limit)" :key="control.name">
+                        <div class="col-sm-12 col-md-6 col-lg-3"
+                             x-show="true"
+                             x-transition:enter="transition ease-out duration-500"
+                             x-transition:enter-start="opacity-0 transform scale-95"
+                             x-transition:enter-end="opacity-100 transform scale-100"
+                             x-transition:leave="transition ease-in duration-300"
+                             x-transition:leave-start="opacity-100 transform scale-100"
+                             x-transition:leave-end="opacity-0 transform scale-95">
+                            <a :href="baseUrl + control.slug" class="control-card" target="_blank" rel="noopener noreferrer">
+                                <img :src="control.thumbnail" alt="" class="control-thumbnail" />
+                                <h4>
+                                    <i><span class="kt-prefix">kt </span></i>
+                                    <b><span x-text="control.name.replace('Kt-','')"></span></b>
+                                </h4>
+                            </a>
+
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Show More button -->
+                <div class="text-center mt-6" x-show="limit < filteredControls.length">
+                    <button class="read_more secondary"
+                            @click="limit += 16">
+                        <b>↓&nbsp;&nbsp;Show More</b>
+                    </button>
+                </div>
+                <br />
             </div>
+
+            <!--End Controls Cards -->
+
         </div>
-
-     
-
     </div>
-</div>
-<!-- end amezing -->
+    <!-- feature -->
+    <!-- amezing -->
+    <div class="amezing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="amezing_box">
+                        <div class="titlepage">
+                            <h2>
+                                Your <strong class="gradient-dark">Target</strong> <b>.NET</b>
+                                <br>
+                                <strong class="gradient-dark">Platforms</strong> Supported
+                            </h2>
+                        </div>
 
-   <!-- end amezing -->
-   <br/>
-   <br/>
-   <section class="feature layout_padding light_silver">
-    <div class="container">
-        <div class="row p-5 shadow-lg" style="border-radius: 35px">
-            <div class="p-3 col-sm-12 col-md-5 text-sm-center text-md-right">
-                <img src="images/can.png" width="100%" />
+                        <!-- IDEs -->
+                        <div class="can">
+                            <span>
+                                <img src="images/net-core.png" />
+                            </span>
+                            <h4>
+                                dotNET Core
+                                <b class="gradient-dark">.NET 6</b> /
+                                <b class="gradient-dark">.NET 7</b> /
+                                <b class="gradient-dark">.NET 8</b> /
+                                <b class="gradient-dark">.NET 9+</b>
+
+                            </h4>
+                        </div>
+
+                        <div class="can">
+                            <span>
+                                <img src="images/net-frm.png" />
+                            </span>
+                            <h4>
+                                .NET Framework
+                                <b class="gradient-dark">4.6.2</b> /
+                                <b class="gradient-dark">4.7.2</b> /
+                                <b class="gradient-dark">4.8</b>
+                            </h4>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="amezing_box">
+                        <img src="images/demo.gif" width="100%" alt="KimTools UI" />
+                    </div>
+                </div>
             </div>
-            <div class="titlepage  col-sm-12 col-md-7 text-sm-center text-md-left"  >
-                <br/>
-                <br/>
-                    <h2>You Asked, <b class="gradient-light"><br/> We Listened</b></h2>
-
-                <b class="gradient-light"> KimTools Free Edition</b> <b>(Coming Soon)</b>,
-                <br/>
-                is a set of curated essential controls, built with the same quality, performance,
-                <br/>
-                and modern design standards as the  <b class="gradient-light">PLUS+</b> suite.
 
 
-            </div>
 
         </div>
+    </div>
+    <br />
+    <br />
+    <section class="feature layout_padding light_silver">
+        <div class="container">
+            <div class="row p-5 shadow-lg" style="border-radius: 35px">
+                <div class="p-3 col-sm-12 col-md-5 text-sm-center text-md-right">
+                    <img src="images/can.png" width="100%" />
+                </div>
+                <div class="titlepage  col-sm-12 col-md-7 text-sm-center text-md-left">
+                    <br />
+                    <br />
+                    <h2>You Asked, <b class="gradient-light"><br /> We Listened</b></h2>
 
- <br/>
- <br/>
- <br/>
-                <div  id="pricing" class="titlepage">
+                    <b class="gradient-light"> KimTools Free Edition</b> <b>(Coming Soon)</b>,
+                    <br />
+                    is a set of curated essential controls, built with the same quality, performance,
+                    <br />
+                    and modern design standards as the  <b class="gradient-light">PLUS+</b> suite.
+
+
+                </div>
+
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <div id="pricing" class="titlepage">
                 <h2>Pricing for <b class="gradient-light">Everyone</b></h2>
                 <span>
                     Get access to all <b class="gradient-light"> KimTools Plus + </b> UI Components including future updates and additions for a single low price.
                 </span>
+            </div>
+
+            <div class="row d_flex" style="justify-content:center; gap:30px;">
+
+                <!-- Lifetime -->
+                <div class="pricing-card shadow-lg" style=" background:linear-gradient(0deg,hsl(268, 88%, 60%),hsl(268, 88%, 20%));">
+                    <img src="images/X.png" alt="plus+" />
+                    <h1 class="gradient-dark">Lifetime</h1>
+                    <h1 style="color:white;font-size:5em">$99<sub style="font-size:.25em"> /One-time</sub></h1>
+                    <br />
+                    <p class="text-light"><i>Unlimited Lifetime features For serious desktop applications.</i></p>
+                    <ul style="margin:30px 0; line-height:30px;">
+
+                        <li>Lifetime License</li>
+                        <li>All Free features</li>
+                        <li>Plus premium Components</li>
+                        <li>Themes & Variable Color System</li>
+                        <li>Advanced Design-time editors</li>
+                        <li>Commercial use</li>
+                    </ul>
+                    <a class="read_more" style="opacity:.9" target="_blank" href="https://kimtooflex.gumroad.com/l/kimtools"><b>Buy License</b></a>
                 </div>
 
-        <div class="row d_flex" style="justify-content:center; gap:30px;">
+                <!-- Perpetual -->
+                <div class="pricing-card shadow-lg" style="  background:linear-gradient(0deg,hsl(268, 88%, 60%),hsl(268, 88%, 20%));">
+                    <img src="images/X.png" alt="plus+" />
+                    <h1 class="gradient-dark">Perpetual</h1>
+                    <h1 style="color:white;font-size:5em">$49<sub style="font-size:.25em"> /Year</sub></h1>
+                    <br />
+                    <p class="text-light"><i>Unlimited annual Perpetual features For serious desktop applications.</i></p>
+                    <ul style="margin:30px 0; line-height:30px;">
 
-            <!-- Free -->
-            <div id="free" class="pricing-card" style="background:linear-gradient(0deg,hsl(216, 100%, 50%),hsl(216, 100%, 20%));">
-                <img src="images/free.png" alt="free"/>
-                <br/>
-                <h1 style="color:white;font-size:3em;opacity:.5">$0</h1>
-                <br/>
-                <p class="text-light"><i>Limited features For learning and personal projects.</i></p>
-                <ul style="margin:30px 0; line-height:30px;">
-                    <li>10 Essential Components</li>
-                    <li>Basic theming</li>
-                    <li>Color System</li>
-                    <li>Designer support</li>
-                    <li>Community updates</li>
-                </ul>
-                <a class="read_more"  onclick="comingSoon();"  href="javascript:void();"  style="opacity:.1; pointer-events: none;">Coming Soon</a>
-            </div>
+                        <li>Perpetual License</li>
+                        <li>All Free features</li>
+                        <li>Plus premium Components</li>
+                        <li>Themes & Variable Color System</li>
+                        <li>Advanced Design-time editors</li>
+                        <li>Commercial use</li>
+                    </ul>
+                    <a class="read_more" style="opacity:.9" target="_blank" href="https://kimtooflex.gumroad.com/l/kimtools"><b>Buy License</b></a>
+                </div>
 
-            <!-- Pro -->
-            <div class="pricing-card shadow-lg"  style="min-width:400px; background:linear-gradient(0deg,hsl(268, 88%, 60%),hsl(268, 88%, 20%));">
-                 <img src="images/plus.png" alt="plus+"/>
-                     
-                <br/>
-                <h1 style="color:white;font-size:5em">$12+</h1>
-                <br/>
-                <p class="text-light"><i>Unlimited features For serious desktop applications.</i></p>
-                <ul style="margin:30px 0; line-height:30px;">
-                    <li>All Free features</li>
-                    <li>Plus premium Components</li>
-                    <li>Themes & Variable Color System</li>
-                    <li>Advanced Design-time editors</li>
-                    <li>Commercial use</li>
-                </ul>
-                <!--gumroad-button-->
-                <a class="read_more" style="opacity:.9" target="_blank" href="https://kimtooflex.gumroad.com/l/kimtools"><b>Buy License</b></a>
-            </div>
 
-            <!-- Services -->
-            <div class="pricing-card"  style="background:linear-gradient(0deg,hsl(113, 100%, 33%),hsl(113, 100%, 20%));">
-                      
-                <img src="images/upwork.webp" alt="upwork"/>
-                <h1 style="color:white;font-size:2em;opacity:.8">Services</h1>
-                <p class="text-light"><i>Custom Application UI Development Services.</i></p>
-                <ul style="margin:30px 0; line-height:30px;">
-                    <li>KimTools Plus+ Lifetime LTS</li>
-                    <li>Early Access</li>
-                    <li>Custom Components</li>
-                    <li>Custom Brand Themes</li>
-                    <li>Priority support</li>  
-                    <li>Full Source-code & Docs</li> 
-                </ul> 
-                <a class="read_more" style="opacity:0.9" target="_blank"
-                   href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share">Get Started</a>
-                 
+
+                <!-- Monthly -->
+                <div id="free" class="pricing-card" style="background:linear-gradient(0deg,hsl(216, 100%, 50%),hsl(216, 100%, 20%));">
+                    <img src="images/X.png" alt="plus+" />
+                    <h1 class="gradient-dark">Subscription</h1>
+                    <h1 style="color:white;font-size:5em">$4.9<sub style="font-size:.25em"> /Month</sub></h1>
+                    <br />
+                    <p class="text-light"><i>Monthly Unlimited Subscription features For serious desktop applications.</i></p>
+                    <ul style="margin:30px 0; line-height:30px;">
+
+                        <li>Subscription License</li>
+                        <li>All Free features</li>
+                        <li>Plus premium Components</li>
+                        <li>Themes & Variable Color System</li>
+                        <li>Advanced Design-time editors</li>
+                        <li>Commercial use</li>
+                    </ul>
+                    <a class="read_more" style="opacity:.9" target="_blank" href="https://kimtooflex.gumroad.com/l/kimtools"><b>Buy License</b></a>
+                </div>
+
 
             </div>
-          
+            <br />
+
+            <!-- Up-Work  Banner -->
+            <div class="row my-5 pb-5">
+                <div class="col-12">
+                    <div class="bg-dark text-white rounded shadow-lg p-4 p-md-5"
+                         style="background: linear-gradient(0deg,hsl(113, 100%, 33%),hsl(113, 100%, 20%))!important; border-radius: 35px !important;">
+                        <div class="row align-items-center">
+                            <!-- Logo Section -->
+                            <div class="col-md-2 text-center mb-3 mb-md-0 d-none d-md-block">
+                                <img src="./images/upwork-h.webp"
+                                     alt="UpWorkLogo" class="img-fluid"
+                                     style="max-width:120px;opacity:0.7;filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                            </div>
+
+                            <!-- Content Section -->
+                            <div class="col-md-7 col-12 mb-3 pl-5 mb-md-0" style="border-left: 2px dashed hsla(0, 100%, 100%, 0.2);">
  
-        </div> 
-        <br/>
-      
-        <!-- Bunifu Framework Redirect Banner -->
-<div class="row my-5 pb-5" >
-  <div class="col-12">
-    <div class="bg-dark text-white rounded shadow-lg p-4 p-md-5"
-        style="background:hsl(272, 62%, 11%)!important; border-radius:35px!important;">
-      <div class="row align-items-center">
-        <!-- Logo Section -->
-        <div class="col-md-2 text-center mb-3 mb-md-0 d-none d-md-block">
-            <img src="./images/bunifu-vert.png"
-                 alt="Bunifu Framework Logo" class="img-fluid"
-                 style="max-width:120px;opacity:0.7;filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-        </div>
-        
-        <!-- Content Section -->
-        <div class="col-md-7 col-12 mb-3 pl-5 mb-md-0" style="border-left: 2px dashed hsla(0, 100%, 100%, 0.2);">
+                                <h1 class="mb-3 text-light" style="font-size:3em">
+                                    Custom Application UI Development Services.
+                                </h1>
 
-            <h1 class="text-light" style="font-size:2em">
-                Looking for
-            </h1>
-            <h1 class="mb-3 gradient-dark" style="font-size:3em">
-                 Bunifu Framework?
-            </h1>
+                                <p class="lead my-3" style="font-size: 1.1rem;color:white">
+                                    <li>✔️ KimTools Plus+ Lifetime LTS</li>
+                                    <li>✔️ Early Access</li>
+                                    <li>✔️ Custom Components</li>
+                                    <li>✔️ Custom Brand Themes</li>
+                                    <li>✔️ Priority support</li>
+                                    <li>✔️ Full Source-code & Docs</li>
+                                </p>
 
-            <p class="lead my-3" style="font-size: 1.1rem;color:white">
-                You're in the right place!<br/> <strong>Kimtoo.net</strong> is the creator and founder of Bunifu Framework.
-            </p>
+                                <!-- CTA Section -->
+                                <div class="col-md-6 mt-5"> 
+                                        <a class="read_more" style="opacity:0.9" target="_blank"
+                                           href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share">Get Started</a>
+                                </div>
 
-            <!-- CTA Section -->
-            <div class="col-md-6 mt-5">
-                <a href="./bunifu" class="read_more secondary">
-                    <b>View Bunifu Products</b>
-                </a>
+
+                            </div>
+                       
+                        </div>
+
+                    </div>
+                </div>
             </div>
-          
-
-        </div>
-        <div class="col-md-3 text-center mb-3 mb-md-0 d-none d-md-block">
-            <img src="./images/offer-30.png" alt="30% offer" class="img-fluid"
-                 style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-            <small class="text-secondary d-block">
-                Save up to <br/> <b class="text-success">$105</b> today!
-            </small> 
-        </div>
-     
-      </div>
-      
-      </div>
-    </div>
-  </div> 
+            <!-- Up-Work Redirect Banner -->
             <!-- Bunifu Framework Redirect Banner -->
-        
-    </div>
-</section>
+            <div class="row my-5 pb-5">
+                <div class="col-12">
+                    <div class="bg-dark text-white rounded shadow-lg p-4 p-md-5"
+                         style="background:hsl(272, 62%, 11%)!important; border-radius:35px!important;">
+                        <div class="row align-items-center">
+                            <!-- Logo Section -->
+                            <div class="col-md-2 text-center mb-3 mb-md-0 d-none d-md-block">
+                                <img src="./images/bunifu-vert.png"
+                                     alt="Bunifu Framework Logo" class="img-fluid"
+                                     style="max-width:120px;opacity:0.7;filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                            </div>
 
-    
-   <!--  footer -->
-   <footer>
-      <div class="footer">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-10 offset-md-1">
-                      <div class="cont">
-                          <h3>Master KimTOOLs with our<br/> <b class="gradient-dark">in-depth</b> Video <b class="gradient-dark">Demos & Tutorials</b></h3>
-                          <span>
-                              Every UI component comes with an in-depth screencast to go along with it. This way,
-                              in addition to getting production-ready components,
-                              you get training and instruction to build and modify them for yourself.
-                          </span>
-                          <br/>
-                          <br/>
-                          <iframe
-                              width="100%"
-                              height="500"
-                              src="https://www.youtube.com/embed?listType=user_uploads&list=kimtooflex"
-                              frameborder="0"
-                              allowfullscreen>
-                          </iframe>
-                          <br/>
-                          <br/>
-                          <span>
-                              New KimTools updates, control demos, and WinForms tips are posted on our channel.
-                              <br/>
-                              <b class="gradient-dark">Subscribe</b> to stay updated.
-                          </span>
-                          <br/>
-                          <br/>
-                          
-                              <div class="col-12 text-center">
-                                  <a class="read_more" style="width:200px"  target="_blank" href="https://www.youtube.com/@kimtooflex"><b>Watch Demo</b></a> 
-                              </div>
-                        
-                          <br/>
-                          <br/>
-                          <br/>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-          <!-- request -->
-          <div class="request">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="titlepage">
-                              <h2>Send us a<strong class="gradient-light"> Message</strong></h2>
-                              <span>
-                                  Have feedback, found a bug, or need help?
-                                  Reach out to the KimTools team directly.
+                            <!-- Content Section -->
+                            <div class="col-md-7 col-12 mb-3 pl-5 mb-md-0" style="border-left: 2px dashed hsla(0, 100%, 100%, 0.2);">
 
-                                  KimTools+ subscribers get priority support with faster responses and direct access to fixes and guidance.
-                              </span>
-                              <br/>
-                              <br/>
-                              <li><a href="mailto:support@kimtoo.net"><b><i>support@kimtoo.net</i></b></a></li>
-                          </div>
-                      </div>
-                  </div>
-          
-              </div>
-              <div class="col-md-12 mt-5 text-center">
-                 <img src="images/logo.png" />
-              </div>
-              <div class="copyright">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-12">
-                              <p>© 2026 All Rights Reserved.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- end request -->
-         
-      </div>
-   </footer>
-   <!-- end footer -->
-   <!-- Javascript files-->
-   <script src="js/jquery.min.js"></script>
-   <script src="js/popper.min.js"></script>
-   <script src="js/bootstrap.bundle.min.js"></script>
-   <script src="js/jquery-3.0.0.min.js"></script>
-   <script src="js/plugin.js"></script>
-   <!-- sidebar -->
-   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-   <script src="js/custom.js"></script>
-   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+                                <h1 class="text-light" style="font-size:2em">
+                                    Looking for
+                                </h1>
+                                <h1 class="mb-3 gradient-dark" style="font-size:3em">
+                                    Bunifu Framework?
+                                </h1>
+
+                                <p class="lead my-3" style="font-size: 1.1rem;color:white">
+                                    You're in the right place!<br /> <strong>Kimtoo.net</strong> is the creator and founder of Bunifu Framework.
+                                </p>
+
+                                <!-- CTA Section -->
+                                <div class="col-md-6 mt-5">
+                                    <a href="./bunifu" class="read_more secondary">
+                                        <b>View Bunifu Products</b>
+                                    </a>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 text-center mb-3 mb-md-0 d-none d-md-block">
+                                <img src="./images/offer-30.png" alt="30% offer" class="img-fluid"
+                                     style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+                                <small class="text-secondary d-block">
+                                    Save up to <br /> <b class="text-success">$105</b> today!
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Bunifu Framework Redirect Banner -->
+
+        </div>
+    </section>
+
+
+    <!--  footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="cont">
+                            <h3>Master KimTOOLs with our<br /> <b class="gradient-dark">in-depth</b> Video <b class="gradient-dark">Demos & Tutorials</b></h3>
+                            <span>
+                                Every UI component comes with an in-depth screencast to go along with it. This way,
+                                in addition to getting production-ready components,
+                                you get training and instruction to build and modify them for yourself.
+                            </span>
+                            <br />
+                            <br />
+                            <iframe width="100%"
+                                    height="500"
+                                    src="https://www.youtube.com/embed?listType=user_uploads&list=kimtooflex"
+                                    frameborder="0"
+                                    allowfullscreen>
+                            </iframe>
+                            <br />
+                            <br />
+                            <span>
+                                New KimTools updates, control demos, and WinForms tips are posted on our channel.
+                                <br />
+                                <b class="gradient-dark">Subscribe</b> to stay updated.
+                            </span>
+                            <br />
+                            <br />
+
+                            <div class="col-12 text-center">
+                                <a class="read_more" style="width:200px" target="_blank" href="https://www.youtube.com/@kimtooflex"><b>Watch Demo</b></a>
+                            </div>
+
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- request -->
+            <div class="request">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="titlepage">
+                                <h2>Send us a<strong class="gradient-light"> Message</strong></h2>
+                                <span>
+                                    Have feedback, found a bug, or need help?
+                                    Reach out to the KimTools team directly.
+
+                                    KimTools+ subscribers get priority support with faster responses and direct access to fixes and guidance.
+                                </span>
+                                <br />
+                                <br />
+                                <li><a href="mailto:support@kimtoo.net"><b><i>support@kimtoo.net</i></b></a></li>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-12 mt-5 text-center">
+                    <img src="images/logo.png" />
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>© 2026 All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end request -->
+
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 
 </html>
