@@ -4,6 +4,9 @@
   ],
   "hints": {
     "meta-viewport": "off",
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "no-inline-styles": "off",
+    "axe/text-alternatives": "off",
+    "axe/structure": "off"
   }
 }

@@ -1,4 +1,4 @@
- 
+
 function mcp() {
     Swal.fire({
         theme: 'dark',
@@ -28,7 +28,21 @@ function comingSoon() {
         title: "Under Development, Coming Soon..."
     });
 }
- 
+
+function GetHeader() {
+    const now = new Date();
+    const yy = String(now.getFullYear()).slice(-2);
+    const mm = now.getMonth() + 1;
+    const version = `v${yy}.${mm}`;
+
+    return {
+        cta: "Get Latest Stable " + version,
+        checkout: "https://mainstack.com/kimtools-winforms/checkout",
+        consult: ""
+    }
+}
+
+
 function controlsList() {
     return {
         baseUrl: '',
