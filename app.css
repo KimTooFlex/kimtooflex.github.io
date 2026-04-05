@@ -1,12 +1,10 @@
-
-
 body {
     background-color: #0C0F38;
 }
 
 
 .gradient-title {
-    
+
     background: linear-gradient(45deg, #F379E3, #20DFF5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -14,7 +12,7 @@ body {
 }
 
 .gradient-dark {
-    background: linear-gradient(45deg,hsl(282, 99%, 60%) 0%, hsl(180, 100%, 60%) 100%);
+    background: linear-gradient(45deg, hsl(282, 99%, 60%) 0%, hsl(180, 100%, 60%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -22,11 +20,21 @@ body {
 
 
 .gradient-light {
-    background: linear-gradient(45deg, hsl(282, 99%, 40%) 0%,hsl(180, 100%, 40%) 100%);
+    background: linear-gradient(45deg, hsl(282, 99%, 40%) 0%, hsl(180, 100%, 40%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-   /* text-shadow: 0 0 4px rgba(130,30,241,0.4);*/
+    /* text-shadow: 0 0 4px rgba(130,30,241,0.4);*/
+}
+
+.gradient-bg {
+    background: linear-gradient(45deg, hsl(282, 99%, 40%) 0%, hsl(180, 100%, 40%) 100%);
+    text-align: center;
+    min-height: 60px;
+    padding: 1rem 2rem;
+      position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .btn-primary {
@@ -40,10 +48,10 @@ body {
     text-align: center;
 }
 
-    .btn-primary:hover {
-        background: linear-gradient(45deg, #01A4AE, #821EF1);
-        color: #fff;
-    }
+.btn-primary:hover {
+    background: linear-gradient(45deg, #01A4AE, #821EF1);
+    color: #fff;
+}
 
 .btn-secondary {
     font-family: 'Poppins', sans-serif;
@@ -57,35 +65,40 @@ body {
     text-align: center;
 }
 
-    .btn-secondary:hover {
-        background: #0c0f38;
-        color: #fff;
-    }
+.btn-secondary:hover {
+    background: #0c0f38;
+    color: #fff;
+}
 
 
 .control-card {
     background: #ffffff;
     border-radius: 14px;
-    padding: 0 0 20px 0; /* top padding removed for image */
+    padding: 0 0 20px 0;
+    /* top padding removed for image */
     text-align: center;
     margin-bottom: 30px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
     display: block;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    overflow: hidden; /* clip image rounding */
+    overflow: hidden;
+    /* clip image rounding */
 }
 
-    .control-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
-    }
+.control-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
 
 .control-thumbnail {
     width: 100%;
-    height: 140px; /* top section height */
-    object-fit: cover; /* fills the area nicely */
-    border-top-left-radius: 14px; /* matches card rounding */
+    height: 140px;
+    /* top section height */
+    object-fit: cover;
+    /* fills the area nicely */
+    border-top-left-radius: 14px;
+    /* matches card rounding */
     border-top-right-radius: 14px;
     display: block;
     margin-bottom: 14px;
@@ -99,32 +112,40 @@ body {
 
 .search-input {
     width: 100%;
-    padding: 12px 48px 12px 24px; /* left padding for text, right padding for icon */
-    border-radius: 50px; /* fully rounded */
+    padding: 12px 48px 12px 24px;
+    /* left padding for text, right padding for icon */
+    border-radius: 50px;
+    /* fully rounded */
     border: none;
-    background-color: #f1f5f9; /* slate-100 shade */
-    color: #0f172a; /* slate-900 for text */
+    background-color: #f1f5f9;
+    /* slate-100 shade */
+    color: #0f172a;
+    /* slate-900 for text */
     font-size: 16px;
     outline: none;
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
-    .search-input::placeholder {
-        color: #64748b; /* slate-500 for placeholder */
-    }
+.search-input::placeholder {
+    color: #64748b;
+    /* slate-500 for placeholder */
+}
 
 .search-icon {
     position: absolute;
     right: 18px;
     top: 55%;
     transform: translateY(-50%);
-    color: #64748b; /* slate-500 */
-    pointer-events: none; /* allow clicks to focus input */
+    color: #64748b;
+    /* slate-500 */
+    pointer-events: none;
+    /* allow clicks to focus input */
     font-size: 16px;
 }
 
 .kt-prefix {
-    color: #94a3b8; /* slate-400 for greyed-out */
+    color: #94a3b8;
+    /* slate-400 for greyed-out */
     font-weight: 500;
 }
 
@@ -133,11 +154,11 @@ body {
     padding: 40px;
     text-align: center;
     box-shadow: #ddd 0 0 15px;
-    border-radius: 24px; 
-    color: hsla(0,100%,100%,.7);
+    border-radius: 24px;
+    color: hsla(0, 100%, 100%, .7);
 }
 
 a.primary {
     color: white;
-    background: linear-gradient(135deg,orange,indigo);
+    background: linear-gradient(135deg, orange, indigo);
 }
