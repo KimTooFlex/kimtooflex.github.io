@@ -45,7 +45,7 @@ function GetHeader() {
     const version = `v${yy}.${mm}`;
 
     return {
-        cta: "Get Latest Stable " + version,
+        cta: "Download Latest - Release " + version,
         checkout: "https://mainstack.com/kimtools-winforms/checkout",
         consult: ""
     }

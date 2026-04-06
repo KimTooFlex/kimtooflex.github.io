@@ -97,7 +97,8 @@
                 <span x-data="bannerMessages()">
                     <div class="gradient-bg text-center" style="width: 100%; color: white;" x-on:mouseover="focus=true"
                         x-on:mouseout="focus=false">
-                        <span x-html="messages[current].text"></span> &nbsp;
+                        <span x-html="messages[current].text"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         <a :href="messages[current].url" :target="messages[current].target"
                             x-html="messages[current].cta" style="
                 opacity: .8; 
@@ -173,6 +174,8 @@
             <!-- banner -->
             <section x-data="GetHeader()" class="banner_main">
                 <div class="container-fluid" />
+                <br />
+                <br />
                 <div class="banner_bg">
                     <div class="row d_flex">
                         <div class="full">
@@ -188,30 +191,35 @@
                             <div class="text_box_color">
                                 <div class="text-bg">
                                     <!--  <img height="28px" src="images/sdk.png"/> -->
-                                    <br />
-                                    <h1 style="color: #8DDBDB;">
-                                        Modern Toolkit
+
+                                    <h1 class="pt-3" style="color: #8DDBDB; opacity: .75;font-size: 3.5em;">
+                                        Elegant UI
                                     </h1>
-                                    <h1 class="gradient-dark" style="margin-top: -60px;">
-                                        For {WinForms}
+                                    <h1 class="gradient-dark"
+                                        style="margin-top: -80px;font-weight: bold; font-family: 'Courier New', Courier, monospace; ">
+                                        For&nbsp;{WinForms}
                                     </h1>
-                                    <strong style="opacity: .75;">
-                                        A rich suite of WinForms controls that deliver an exceptional developer
-                                        experience.
+                                    <strong
+                                        style="opacity: .75;font-size: 2em;  font-family: 'Courier New', Courier, monospace;">
+                                        Modern suite of WinForms controls that deliver Stunning UI with exceptional
+                                        developer experience.
                                     </strong>
                                     <br />
-                                    <div class="row pt-3">
-                                        <img src="images/vs-rider.png" class="pt-3" style="opacity:.6" alt="vs-rider" />
-                                    </div>
+                                    <br />
+                                    <br />
                                     <div class="row pt-5">
-                                        <div class="col-sm-12 col-md-6">
+                                        <div class="col-sm-12 col-md-8">
                                             <a class="read_more primary" style="width:100%" href="./pricing/"><b
-                                                    x-text="cta">Get Latest Stable</b></a>
+                                                    x-text="cta">Download Latest Release</b></a>
                                         </div>
-                                        <div class="col-sm-12 col-md-5" style="margin-left: 0;padding-left: 0">
-                                            <a class="read_more secondary" style="width:100%"
-                                                href="https://www.youtube.com/@kimtooflex" target="_blank">
-                                                <b>Watch Demos</b></a>
+                                        <div class="col-md-12 d-lg-none">
+                                            <br />
+                                        </div>
+                                        <div class="col-sm-12 col-md-8 col-lg-4 m-md-0" style="opacity: .8;">
+                                            <a class="read_more secondary" style="width:100%" href="./docs/"
+                                                target="_blank">
+                                                View Docs
+                                            </a>
                                         </div>
                                     </div>
 
@@ -222,7 +230,7 @@
                         <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
                             <div class="text-img">
                                 <figure>
-                                    <a target="_blank" href="https://youtu.be/UgHwt2fzvmI?t=0"
+                                    <a target="_blank" href="https://youtu.be/UgHwt2fzvmI?t=8"
                                         x-data="{  focus: isMobile() }">
 
                                         <img :src="focus ? 'images/banner.png':'images/top_img.png'" alt="View Demo"
@@ -235,7 +243,9 @@
                     </div>
                 </div>
             </section>
+
         </div>
+
     </header>
     <!-- end banner -->
 
@@ -244,13 +254,11 @@
             <div class="row">
                 <div class="col-md-12" style="margin-top:50px;">
                     <div class="titlepage">
-                        <div class="col-12 text-center">
-                            <img style="margin-right:5px" src="images/cs.png" />
-                            <img style="margin-left:5px" src="images/vb.jpg" />
-                        </div>
+                        <br />
                         <br />
                         <h2>WinForms <strong class="gradient-light">UI Controls</strong> & <strong
                                 class="gradient-light">Components</strong>.</h2>
+
                         <span>
                             KimTools brings contemporary visuals and high-performance controls to WinForms.
                             Compatible with <b>.NET Framework 4.6 - 4.8</b>, and .NET Core <b>.NET 6</b> through <b>.NET
@@ -258,6 +266,15 @@
                             keeping them stable, fast, and designer-friendly. Make WinForms look modern and work
                             smarter.
                         </span>
+
+
+                        <div class="col-12 text-center">
+                            <br /> <br />
+                            <img style="margin-right:5px" src="images/cs.png" />
+                            &nbsp; &nbsp;
+                            <img style="margin-left:5px" src="images/vb.jpg" />
+                            <br />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -336,7 +353,12 @@
     <div class="amezing">
         <div class="container">
             <div class="row">
+                <div class="col-12 text-center">
+                    <img src="images/vs-rider.png" style="opacity:.75;margin-top: -100px;margin-bottom: 100px;"
+                        alt="vs-rider" />
+                </div>
                 <div class="col-md-8">
+
                     <div class="amezing_box">
                         <div class="titlepage">
                             <h2>
@@ -598,6 +620,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
+
                         <div class="cont">
                             <h3>Master KimTOOLs with our<br /> <b class="gradient-dark">in-depth</b> Video <b
                                     class="gradient-dark">Demos & Tutorials</b></h3>
