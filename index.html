@@ -93,10 +93,10 @@
 
 
             <div class="header">
-
                 <span x-data="bannerMessages()">
-                    <div class="gradient-bg text-center" style="width: 100%; color: white;" x-on:mouseover="focus=true"
-                        x-on:mouseout="focus=false">
+                    <div class="gradient-bg text-center"
+                        :style="'width: 100%; color: white; opacity:' + (focus ? '1;' : '.7;')"
+                        x-on:mouseover="focus=true" x-on:mouseout="focus=false">
                         <span x-html="messages[current].text"></span>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <a :href="messages[current].url" :target="messages[current].target"
@@ -110,7 +110,7 @@
                 font-weight: 600; 
                 display: inline-block;">
                         </a>
-                    </div>
+                    </div> 
                 </span>
                 <br /><br />
                 <div class="container">
@@ -135,31 +135,27 @@
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item">
                                             <a class="nav-link" target="_blank"
-                                                href="https://docs.kimtoo.net/sdk/get-started/install-and-upgrade"><b>DOCS</b></a>
+                                                href="./docs/"><b>DOCUMENTATION</b></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="./pricing/"><b>PRICING</b></a>
                                         </li>
-                                        <!-- <li class="nav-item">
-                                            <a class="nav-link" href="#components"><b>COMPONENTS</b></a>
-                                        </li> -->
-                                        <li class="nav-item">
+                                         <li class="nav-item">
                                             <a class="nav-link" href="./consultancy/"><b>CONSULTANCY</b></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" target="_blank"
                                                 href="https://kimtooflex.gumroad.com"><b>THEMES</b></a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" onclick="mcp();"
-                                                href="javascript:void();"><b>MCP</b></a>
-                                        </li>
+                                       
                                         <li class="nav-item">
                                             <a class="nav-link" href="./bunifu"><b>BUNIFU</b></a>
                                         </li>
-                                        <!-- <li class="nav-item"> -->
-                                        <!--     <a class="nav-link" target="_blank" href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share"><b>SERVICES</b></a> -->
-                                        <!-- </li> -->
+                                         <li class="nav-item">
+                                            <a class="nav-link" onclick="mcp();"
+                                                href="javascript:void();"><b>MCP</b></a>
+                                        </li>
+                                      
                                     </ul>
 
                                 </div>
