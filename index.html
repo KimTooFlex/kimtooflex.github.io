@@ -90,16 +90,16 @@
     <header>
         <!-- header inner -->
         <div class="head_top">
-          
+
 
             <div class="header">
-                
-        <span x-data="bannerMessages()"> 
-            <div class="gradient-bg text-center" style="width: 100%; color: white;" x-on:mouseover="focus=true"
-                x-on:mouseout="focus=false">
-                <span x-html="messages[current].text"></span> &nbsp;
-                <a :href="messages[current].url" :target="messages[current].target" x-html="messages[current].cta"
-                    style="
+
+                <span x-data="bannerMessages()">
+                    <div class="gradient-bg text-center" style="width: 100%; color: white;" x-on:mouseover="focus=true"
+                        x-on:mouseout="focus=false">
+                        <span x-html="messages[current].text"></span> &nbsp;
+                        <a :href="messages[current].url" :target="messages[current].target"
+                            x-html="messages[current].cta" style="
                 opacity: .8; 
                 padding: 5px 16px; 
                 background-color: white; 
@@ -108,10 +108,10 @@
                 text-decoration: none; 
                 font-weight: 600; 
                 display: inline-block;">
-                </a>
-            </div>
-        </span>
-        <br/><br/>
+                        </a>
+                    </div>
+                </span>
+                <br /><br />
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -211,7 +211,7 @@
                                         <div class="col-sm-12 col-md-5" style="margin-left: 0;padding-left: 0">
                                             <a class="read_more secondary" style="width:100%"
                                                 href="https://www.youtube.com/@kimtooflex" target="_blank">
-                                                <b>View Demos</b></a>
+                                                <b>Watch Demos</b></a>
                                         </div>
                                     </div>
 
@@ -222,7 +222,13 @@
                         <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
                             <div class="text-img">
                                 <figure>
-                                    <img src="images/top_img.png" alt="#" />
+                                    <a target="_blank" href="https://youtu.be/UgHwt2fzvmI?t=0"
+                                        x-data="{  focus: isMobile() }">
+
+                                        <img :src="focus ? 'images/banner.png':'images/top_img.png'" alt="View Demo"
+                                            x-on:mouseover="focus =  true"
+                                            x-on:mouseout="focus = isMobile() || false" />
+                                    </a>
                                 </figure>
                             </div>
                         </div>
@@ -234,8 +240,6 @@
     <!-- end banner -->
 
     <div id="components" class="feature">
-        
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12" style="margin-top:50px;">
@@ -682,7 +686,7 @@
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 
 </html>
