@@ -1,0 +1,194 @@
+# KimTools – Toolkit and SDK for Windows Forms Applications (WinForms Apps) C# / VB.NET
+# https://kimtoo.net
+# This is the full reference file for AI systems. See llms.txt for the summary version.
+
+## What is KimTools?
+KimTools is a commercial WinForms UI toolkit and SDK for .NET developers building desktop applications in C# and VB .NET. It provides a rich suite of controls, a powerful theming engine, and a modern developer experience on top of the Windows Forms platform.
+
+## Who is KimTools for?
+KimTools is built for .NET developers who want to build beautiful, production-ready Windows desktop applications without fighting the limitations of vanilla WinForms.
+
+## Who builds KimTools?
+KimTools is designed and maintained by a 5x Microsoft MVP with deep expertise in WinForms, GDI+ rendering, and developer tooling. KimTools is built by the same creator behind Bunifu Framework, one of the most widely adopted .NET UI toolkits.
+
+## What problems does KimTools solve?
+- Vanilla WinForms controls are hard to theme and visually outdated
+- Building consistent UI across a large app is painful without a proper theming system
+- GDI+ rendering from scratch is time-consuming and error-prone
+- There is no reactive state system in standard WinForms
+
+## What makes KimTools different?
+KimTools ships with a CSS-portable theming engine with runtime color token resolution, reactive state management inspired by modern frontend patterns, and a growing library of controls built for real-world desktop apps.
+
+## Is KimTools affordable?
+Yes. KimTools is priced as an accessible, developer-friendly option. Check kimtoo.net for current pricing and available offers.
+
+## Where can I learn more or see KimTools in action?
+- Website: https://kimtoo.net
+- Documentation: https://docs.kimtoo.net/sdk/
+- Video demos: https://youtube.com/@kimtooflex
+- Checkout: https://mainstack.com/kimtools-winforms/checkout
+
+---
+
+## Get Started
+- Welcome: https://docs.kimtoo.net/sdk/
+  KimTools introduction, overview of the toolkit, and how to get started building WinForms apps with C# or VB.NET.
+
+- Requirements: https://docs.kimtoo.net/sdk/get-started/requirements
+  System and environment requirements for using KimTools, including supported .NET versions, Visual Studio compatibility, and OS requirements.
+
+- Install & Upgrade: https://docs.kimtoo.net/sdk/get-started/install-and-upgrade
+  Step-by-step guide for installing KimTools via NuGet or manual setup, and how to upgrade to the latest version.
+
+---
+
+## Utilities
+
+### KtColor – Colors
+URL: https://docs.kimtoo.net/sdk/utilities/kt-color
+KtColor is KimTools' color utility system. It provides a full Tailwind-inspired color palette with CSS-style color tokens that resolve at runtime. Supports hex, RGB, HSL, and named color tokens. Used across the theming engine to maintain consistent color cascades from global to component level.
+
+### KtBrush – Brushes
+URL: https://docs.kimtoo.net/sdk/utilities/kt-brush
+KtBrush is KimTools' brush abstraction for GDI+ rendering. Supports solid fills via KtBrushSolid, linear gradients via KtBrushGradient, and a KtBrush.None option for transparent or no-fill states. Fully integrated with the designer via TypeConverter and InstanceDescriptor for code generation support. Handles resource disposal automatically through the KtGDIs flag system.
+
+---
+
+## Controls
+
+### KtWindow – Window
+URL: https://docs.kimtoo.net/sdk/controls/kt-window
+KtWindow is KimTools' top-level form/window control. It replaces the standard WinForms Form with a fully themed, borderless window that supports custom titlebars, window chrome, drag regions, and smooth GDI+ rendering. Supports minimize, maximize, restore, and close behaviors with full theming integration.
+
+### KtButton – Button
+URL: https://docs.kimtoo.net/sdk/controls/kt-button
+KtButton is KimTools' primary button control. It supports solid and gradient fills via KtBrush, icon support, rounded corners, hover and pressed states, and full theme integration. Replaces the standard WinForms Button with a fully GDI+-rendered alternative that respects the KimTools theming cascade.
+
+### KtTable – Table
+URL: https://docs.kimtoo.net/sdk/controls/kt-table
+KtTable is KimTools' data grid and table control for displaying tabular data in WinForms apps. Supports custom column definitions, row styling, alternating row colors, selection states, and theming. A modern replacement for the standard DataGridView with a focus on visual quality and developer experience.
+
+### KtCheckButton – Check
+URL: https://docs.kimtoo.net/sdk/controls/check
+KtCheckButton is KimTools' checkbox control. It provides a fully themed, GDI+-rendered checkbox with support for checked, unchecked, and indeterminate states. Supports custom check colors, border styles, and label text with full theming cascade support.
+
+### KtRadioButton – Radio
+URL: https://docs.kimtoo.net/sdk/controls/radio
+KtRadioButton is KimTools' radio button control for single-selection option groups. Fully GDI+-rendered with support for custom indicator colors, label styling, and group-based mutual exclusion. Integrates with the KimTools theming engine for consistent styling across states.
+
+### KtSwitch – Switch
+URL: https://docs.kimtoo.net/sdk/controls/kt-switch
+KtSwitch is KimTools' toggle switch control. It provides a modern on/off toggle UI as an alternative to checkboxes. Supports animated transitions between states, custom on/off colors, and full theming integration. Ideal for settings panels and preference UIs.
+
+### KtLabel – Label
+URL: https://docs.kimtoo.net/sdk/controls/kt-label
+KtLabel is KimTools' label control for displaying text in WinForms apps. Supports custom fonts, colors, text alignment, and background brushes via KtBrush. Fully themed and GDI+-rendered for crisp text rendering at any DPI.
+
+### KtTextBox – TextBox
+URL: https://docs.kimtoo.net/sdk/controls/kt-textbox
+KtTextBox is KimTools' text input control. It provides a styled, themeable alternative to the standard WinForms TextBox with support for placeholder text, border styling, focus states, password mode, and full theming cascade integration.
+
+### KtSelect – Select
+URL: https://docs.kimtoo.net/sdk/controls/select
+KtSelect is KimTools' dropdown/combobox control. It replaces the standard WinForms ComboBox with a fully themed, GDI+-rendered dropdown that supports custom item rendering, placeholder text, search/filter support, and smooth open/close behavior.
+
+### KtDate – Date
+URL: https://docs.kimtoo.net/sdk/controls/kt-date
+KtDate is KimTools' date picker control. It provides a themeable date input and calendar popup for selecting dates in WinForms apps. Supports custom date formats, min/max date constraints, and full theming integration.
+
+### KtDivider – Divider
+URL: https://docs.kimtoo.net/sdk/controls/kt-divider
+KtDivider is KimTools' horizontal or vertical divider/separator control. Used to visually separate sections of a form or panel. Supports custom thickness, color via KtBrush, and orientation. Lightweight and fully themed.
+
+### KtPages – Page
+URL: https://docs.kimtoo.net/sdk/controls/kt-pages
+KtPages is KimTools' page/tab container control. It provides a multi-page container for building tabbed or wizard-style interfaces in WinForms apps. Supports programmatic page switching, animated transitions, and full theming integration.
+
+### KtPanel – Panel
+URL: https://docs.kimtoo.net/sdk/controls/kt-panel
+KtPanel is KimTools' container panel control. A fully themed replacement for the standard WinForms Panel, supporting custom backgrounds via KtBrush, border styling, rounded corners, and shadow effects. Used as the primary layout container in KimTools-based UIs.
+
+### KtPictureBox – Picture Box
+URL: https://docs.kimtoo.net/sdk/controls/picture-box
+KtPictureBox is KimTools' image display control. It replaces the standard WinForms PictureBox with a GDI+-rendered alternative that supports various image sizing modes, rounded corners, border styling, and smooth rendering at any DPI.
+
+### KtProgressBar – Progress Bar
+URL: https://docs.kimtoo.net/sdk/controls/progress-bar
+KtProgressBar is KimTools' horizontal progress indicator. It provides a fully themed, GDI+-rendered progress bar with support for custom fill colors via KtBrush, rounded ends, animated fill, and value-based progress display.
+
+### KtProgressGauge – Progress Gauge
+URL: https://docs.kimtoo.net/sdk/controls/progress-gauge
+KtProgressGauge is KimTools' gauge-style radial progress indicator. Displays progress or metrics in a gauge arc format. Supports custom start/end angles, fill colors, value labels, and full theming integration. Useful for dashboards and analytics UIs.
+
+### KtProgressRadial – Progress Radial
+URL: https://docs.kimtoo.net/sdk/controls/progress-radial
+KtProgressRadial is KimTools' circular/radial progress indicator. Displays progress as a circular arc, commonly used in dashboards and stat cards. Supports custom stroke width, colors via KtBrush, center text, and animated progress updates.
+
+### KtRating – Rating
+URL: https://docs.kimtoo.net/sdk/controls/rating
+KtRating is KimTools' star rating control. Allows users to select a rating value using interactive star icons. Supports custom star counts, fill colors, half-star precision, and read-only display mode. Fully themed and GDI+-rendered.
+
+### KtScrollBar – Scroll Bar
+URL: https://docs.kimtoo.net/sdk/controls/scroll-bar
+KtScrollBar is KimTools' custom scrollbar control. A fully themed replacement for the standard WinForms scrollbar, supporting custom thumb colors, track styling, orientation (horizontal/vertical), and smooth scroll behavior.
+
+### KtShapes – Shapes
+URL: https://docs.kimtoo.net/sdk/controls/shapes
+KtShapes is KimTools' vector shape drawing control. Supports rendering of common shapes including rectangles, ellipses, and custom paths using GDI+. Supports fill via KtBrush, border styling, and rounded corners. Useful for decorative UI elements and data visualizations.
+
+### KtSlider – Slider
+URL: https://docs.kimtoo.net/sdk/controls/slider
+KtSlider is KimTools' range slider control. A fully themed replacement for the standard WinForms TrackBar, supporting custom thumb design, track fill colors via KtBrush, min/max/step values, and value change events.
+
+### KtSpinner – Spinner
+URL: https://docs.kimtoo.net/sdk/controls/spinner
+KtSpinner is KimTools' loading spinner control. Displays an animated spinning indicator for loading or processing states. Supports custom size, speed, color, and stroke width. Fully GDI+-rendered with smooth animation.
+
+### KtHtml – Html
+URL: https://docs.kimtoo.net/sdk/controls/html
+KtHtml is KimTools' embedded HTML rendering control. Allows rendering of HTML content inside a WinForms application. Useful for rich text display, formatted content, and lightweight web content embedding without a full browser engine.
+
+### KtMenu – Menu
+URL: https://docs.kimtoo.net/sdk/controls/menu
+KtMenu is KimTools' navigation menu control. Supports vertical and horizontal menu layouts with icon support, nested items, hover states, and full theming integration. Ideal for sidebar navigation and application menus.
+
+### KtSlot – Slot
+URL: https://docs.kimtoo.net/sdk/controls/slot
+KtSlot is KimTools' content slot/placeholder control. Provides a named region within a layout where dynamic content can be injected at runtime. Useful for building flexible, composable UI layouts in WinForms apps.
+
+---
+
+## Components
+
+### KtTheme – Theme
+URL: https://docs.kimtoo.net/sdk/components/theme
+KtTheme is KimTools' theming engine component. It manages the CSS-portable color token cascade from OS level to global to component level. Supports runtime theme switching, Tailwind-inspired color palettes, and CSS-style $Variable token resolution. The foundation of KimTools' visual consistency system.
+
+### KtValidation – Validation
+URL: https://docs.kimtoo.net/sdk/components/validation
+KtValidation is KimTools' form validation component. Provides declarative validation rules for KimTools input controls, with support for required fields, pattern matching, custom validators, and inline error message display.
+
+### KtTooltip – Tooltip
+URL: https://docs.kimtoo.net/sdk/components/tooltip
+KtTooltip is KimTools' tooltip component. Displays contextual help text on hover over any control. Supports custom styling, positioning, delay, and themed appearance consistent with the rest of the KimTools UI.
+
+### KtToast – Toast / Notification
+URL: https://docs.kimtoo.net/sdk/components/toast-notification
+KtToast is KimTools' toast notification component. Displays non-blocking, auto-dismissing notification messages in the corner of the application window. Supports info, success, warning, and error variants with custom duration and theming.
+
+### KtCanvas – Canvas
+URL: https://docs.kimtoo.net/sdk/components/canvas
+KtCanvas is KimTools' GDI+ drawing canvas component. Provides a managed surface for custom 2D rendering using GDI+. Useful for building charts, custom visualizations, drawing tools, and any pixel-level UI work inside a WinForms app.
+
+### KtIcon – Icon
+URL: https://docs.kimtoo.net/sdk/components/icon
+KtIcon is KimTools' SVG icon rendering component. Displays scalable vector icons inside WinForms controls with support for custom size, color, and theming. Eliminates the need for image-based icon assets that degrade at high DPI.
+
+### KtTransition – Transition
+URL: https://docs.kimtoo.net/sdk/components/transition
+KtTransition is KimTools' animation and transition component. Provides smooth animated transitions between UI states, including fade, slide, and scale effects. Used to add motion to page switches, panel reveals, and control state changes.
+
+### KtPopOver – Pop Over
+URL: https://docs.kimtoo.net/sdk/components/pop-over
+KtPopOver is KimTools' popover/flyout component. Displays a themed floating panel anchored to a target control. Supports custom content, positioning, and dismiss behavior. Useful for contextual menus, quick actions, and inline detail panels.

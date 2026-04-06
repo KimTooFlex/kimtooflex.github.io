@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>KimTOOLs – Modern WinForms UI Framework for C# and VB.NET</title>
+    <title>KimTOOLs – Modern UI Toolkit Framework & SDK for WinForms C# | VB.NET</title>
 
     <meta name="description"
-        content="KimTools is a modern UI framework for WinForms that brings contemporary controls, theming, and performance to C# and VB.NET applications. Works with .NET Framework 4.6 through .NET 9.">
+        content="KimTools Modern UI Toolkit Framework & SDK for WinForms C# | VB.NET that brings cutting edge controls, theming, and performance to C# and VB.NET applications. Works with .NET Framework 4.6 through .NET 9.">
 
     <meta name="keywords"
         content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools">
@@ -21,6 +21,7 @@
 
     <meta name="robots" content="index, follow">
     <meta name="p:domain_verify" content="fcc18b9e22be83e55fb5fcadc93c3835" />
+
 
     <!-- Open Graph (social sharing) -->
     <meta property="og:title" content="KimTools – Modern WinForms UI Framework">
@@ -89,7 +90,28 @@
     <header>
         <!-- header inner -->
         <div class="head_top">
+          
+
             <div class="header">
+                
+        <span x-data="bannerMessages()"> 
+            <div class="gradient-bg text-center" style="width: 100%; color: white;" x-on:mouseover="focus=true"
+                x-on:mouseout="focus=false">
+                <span x-html="messages[current].text"></span> &nbsp;
+                <a :href="messages[current].url" :target="messages[current].target" x-html="messages[current].cta"
+                    style="
+                opacity: .8; 
+                padding: 5px 16px; 
+                background-color: white; 
+                color: black; 
+                border-radius: 20px; 
+                text-decoration: none; 
+                font-weight: 600; 
+                display: inline-block;">
+                </a>
+            </div>
+        </span>
+        <br/><br/>
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -115,18 +137,24 @@
                                                 href="https://docs.kimtoo.net/sdk/get-started/install-and-upgrade"><b>DOCS</b></a>
                                         </li>
                                         <li class="nav-item">
+                                            <a class="nav-link" href="./pricing/"><b>PRICING</b></a>
+                                        </li>
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="#components"><b>COMPONENTS</b></a>
+                                        </li> -->
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./consultancy/"><b>CONSULTANCY</b></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" target="_blank"
-                                                href="https://kimtooflex.gumroad.com"><b>TEMPLATES</b></a>
+                                                href="https://kimtooflex.gumroad.com"><b>THEMES</b></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" onclick="mcp();"
                                                 href="javascript:void();"><b>MCP</b></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="./bunifu"><b>BUNIFU-UI</b></a>
+                                            <a class="nav-link" href="./bunifu"><b>BUNIFU</b></a>
                                         </li>
                                         <!-- <li class="nav-item"> -->
                                         <!--     <a class="nav-link" target="_blank" href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share"><b>SERVICES</b></a> -->
@@ -177,8 +205,8 @@
                                     </div>
                                     <div class="row pt-5">
                                         <div class="col-sm-12 col-md-6">
-                                            <a class="read_more primary" style="width:100%" :href="checkout"><b
-                                                    x-text="cta">Get Latest Stable v26.4</b></a>
+                                            <a class="read_more primary" style="width:100%" href="./pricing/"><b
+                                                    x-text="cta">Get Latest Stable</b></a>
                                         </div>
                                         <div class="col-sm-12 col-md-5" style="margin-left: 0;padding-left: 0">
                                             <a class="read_more secondary" style="width:100%"
@@ -206,42 +234,8 @@
     <!-- end banner -->
 
     <div id="components" class="feature">
-        <!-- feature -->
-        <div class="gradient-bg text-center" style="width: 100%; color: white;" x-data="{
-           messages: [
-    { 
-        text: 'Need a custom app or a UI facelift? Let\'s build something great together.', 
-        url: 'https://mainstack.com/custom-order',
-        cta: 'Book a Free Call'
-    },
-    { 
-        text: '52% off ends soon. Use code SDK26 at checkout.', 
-        url: 'https://mainstack.com/kimtools-winforms/checkout',
-        cta: 'Claim 52% Off'
-    },
-    { 
-        text: 'Don\'t build another WinForms app without KimTools. Limited time: 52% off.', 
-        url: 'https://mainstack.com/kimtools-winforms/checkout',
-        cta: 'Use Code SDK26'
-    },
-    { 
-        text: 'Your next WinForms project deserves better controls. Get KimTools at half price.', 
-        url: 'https://mainstack.com/kimtools-winforms/checkout',
-        cta: 'Get 52% Off – SDK26'
-    }
-],
-            current: 0,
-            init() {
-                setInterval(() => {
-                    this.current = (this.current + 1) % this.messages.length;
-                }, 30000);
-            }
-        }">
-            <span x-text="messages[current].text"></span> &nbsp;
-            <a :href="messages[current].url" target="_blank" x-text="messages[current].cta"
-                style="opacity: .8; padding: 5px 16px; background-color: white; color: black; border-radius: 20px; text-decoration: none; font-weight: 600; display: inline-block;">
-            </a>
-        </div>
+        
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12" style="margin-top:50px;">
@@ -266,8 +260,7 @@
 
 
             <!-- Controls Cards -->
-            <div class="container" x-data="controlsList()" x-init="baseUrl='https://www.kimtoo.net/sdk/controls/'"
-                style="margin-top:25px; position: relative;">
+            <div class="container" x-data="controlsList()" style="margin-top:25px; position: relative;">
 
                 <!-- Search on left -->
                 <div class="row">

@@ -7,12 +7,16 @@
     <meta name="robots" content="noindex">
     <title>Redirecting..</title>
     <script>
-          window.location.href = "https://mainstack.com/custom-order";
+        function redirect() {
+            window.location.href = "https://mainstack.com/custom-order";
+        }
+
+        redirect();
     </script>
 </head>
 
-<body>
-    <p>Load <a href="https://mainstack.com/custom-order">Booking Calendar</a></p>
+<body onload="redirect()">
+    <p><a href="https://mainstack.com/custom-order">Booking Calendar</a></p>
 </body>
 
 </html>

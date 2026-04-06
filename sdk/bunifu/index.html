@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="0; url=https://kimtoo.net/bunifu">
     <meta name="robots" content="noindex">
     <title>Redirecting�</title>
     <script>
-        // fallback for browsers without meta refresh
-        window.location.href = "../../bunifu";
+        function redirect() {
+            window.location.href = "../../bunifu";
+        }
+        redirect();
     </script>
 </head>
-<body>
-<p>Redirecting to <a href="https://kimtoo.net/bunifu">docs.kimtoo.net</a>�</p>
+
+<body onload="redirect()">
+    <p>Redirecting to <a href="../../bunifu">Bunifu</a>�</p>
 </body>
+
 </html>

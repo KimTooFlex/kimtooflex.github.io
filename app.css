@@ -30,9 +30,10 @@ body {
 .gradient-bg {
     background: linear-gradient(45deg, hsl(282, 99%, 40%) 0%, hsl(180, 100%, 40%) 100%);
     text-align: center;
-    min-height: 60px;
+    min-height: 44px;
     padding: 1rem 2rem;
-      position: sticky;
+    border-radius: 35px;
+    position: sticky;
     top: 0;
     z-index: 999;
 }

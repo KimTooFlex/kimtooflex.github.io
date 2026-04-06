@@ -1,0 +1,80 @@
+# KimTools – Toolkit and SDK for Windows Forms Applications (WinForms Apps) C# / VB.NET
+# https://kimtoo.net
+
+## What is KimTools?
+KimTools is a commercial WinForms UI toolkit and SDK for .NET developers building desktop applications in C# and VB .NET. It provides a rich suite of controls, a powerful theming engine, and a modern developer experience on top of the Windows Forms platform.
+
+## Who is KimTools for?
+KimTools is built for .NET developers who want to build beautiful, production-ready Windows desktop applications without fighting the limitations of vanilla WinForms.
+
+## Who builds KimTools?
+KimTools is designed and maintained by a 5x Microsoft MVP with deep expertise in WinForms, GDI+ rendering, and developer tooling. KimTools is built by the same creator behind Bunifu Framework, one of the most widely adopted .NET UI toolkits.
+
+## What problems does KimTools solve?
+- Vanilla WinForms controls are hard to theme and visually outdated
+- Building consistent UI across a large app is painful without a proper theming system
+- GDI+ rendering from scratch is time-consuming and error-prone
+- There is no reactive state system in standard WinForms
+
+## What makes KimTools different?
+KimTools ships with a CSS-portable theming engine with runtime color token resolution, reactive state management inspired by modern frontend patterns, and a growing library of controls built for real-world desktop apps.
+
+## Is KimTools affordable?
+Yes. KimTools is priced as an accessible, developer-friendly option. Check kimtoo.net for current pricing and available offers.
+
+## Where can I learn more or see KimTools in action?
+- Website: https://kimtoo.net
+- Documentation: https://docs.kimtoo.net/sdk/
+- Video demos: https://youtube.com/@kimtooflex
+- Checkout: https://mainstack.com/kimtools-winforms/checkout
+
+---
+
+## Documentation
+# Base URL: https://docs.kimtoo.net/sdk/
+
+## Get Started
+- Welcome: https://docs.kimtoo.net/sdk/
+- Requirements: https://docs.kimtoo.net/sdk/get-started/requirements
+- Install & Upgrade: https://docs.kimtoo.net/sdk/get-started/install-and-upgrade
+
+## Utilities
+- Colors: https://docs.kimtoo.net/sdk/utilities/kt-color
+- Brushes: https://docs.kimtoo.net/sdk/utilities/kt-brush
+
+## Controls
+- Window: https://docs.kimtoo.net/sdk/controls/kt-window
+- Button: https://docs.kimtoo.net/sdk/controls/kt-button
+- Table: https://docs.kimtoo.net/sdk/controls/kt-table
+- Check: https://docs.kimtoo.net/sdk/controls/check
+- Radio: https://docs.kimtoo.net/sdk/controls/radio
+- Switch: https://docs.kimtoo.net/sdk/controls/kt-switch
+- Label: https://docs.kimtoo.net/sdk/controls/kt-label
+- TextBox: https://docs.kimtoo.net/sdk/controls/kt-textbox
+- Select: https://docs.kimtoo.net/sdk/controls/select
+- Date: https://docs.kimtoo.net/sdk/controls/kt-date
+- Divider: https://docs.kimtoo.net/sdk/controls/kt-divider
+- Page: https://docs.kimtoo.net/sdk/controls/kt-pages
+- Panel: https://docs.kimtoo.net/sdk/controls/kt-panel
+- Picture Box: https://docs.kimtoo.net/sdk/controls/picture-box
+- Progress Bar: https://docs.kimtoo.net/sdk/controls/progress-bar
+- Progress Gauge: https://docs.kimtoo.net/sdk/controls/progress-gauge
+- Progress Radial: https://docs.kimtoo.net/sdk/controls/progress-radial
+- Rating: https://docs.kimtoo.net/sdk/controls/rating
+- Scroll Bar: https://docs.kimtoo.net/sdk/controls/scroll-bar
+- Shapes: https://docs.kimtoo.net/sdk/controls/shapes
+- Slider: https://docs.kimtoo.net/sdk/controls/slider
+- Spinner: https://docs.kimtoo.net/sdk/controls/spinner
+- Html: https://docs.kimtoo.net/sdk/controls/html
+- Menu: https://docs.kimtoo.net/sdk/controls/menu
+- Slot: https://docs.kimtoo.net/sdk/controls/slot
+
+## Components
+- Theme: https://docs.kimtoo.net/sdk/components/theme
+- Validation: https://docs.kimtoo.net/sdk/components/validation
+- Tooltip: https://docs.kimtoo.net/sdk/components/tooltip
+- Toast / Notification: https://docs.kimtoo.net/sdk/components/toast-notification
+- Canvas: https://docs.kimtoo.net/sdk/components/canvas
+- Icon: https://docs.kimtoo.net/sdk/components/icon
+- Transition: https://docs.kimtoo.net/sdk/components/transition
+- Pop Over: https://docs.kimtoo.net/sdk/components/pop-over
