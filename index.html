@@ -110,7 +110,7 @@
                 font-weight: 600; 
                 display: inline-block;">
                         </a>
-                    </div> 
+                    </div>
                 </span>
                 <br /><br />
                 <div class="container">
@@ -134,28 +134,27 @@
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item">
-                                            <a class="nav-link" target="_blank"
-                                                href="./docs/"><b>DOCUMENTATION</b></a>
+                                            <a class="nav-link" target="_blank" href="./docs/"><b>DOCUMENTATION</b></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="./pricing/"><b>PRICING</b></a>
+                                            <a class="nav-link" href="./checkout/"><b>DOWNLOAD</b></a>
                                         </li>
-                                         <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="./consultancy/"><b>CONSULTANCY</b></a>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a class="nav-link" target="_blank"
                                                 href="https://kimtooflex.gumroad.com"><b>THEMES</b></a>
                                         </li>
-                                       
+
                                         <li class="nav-item">
                                             <a class="nav-link" href="./bunifu"><b>BUNIFU</b></a>
                                         </li>
-                                         <li class="nav-item">
+                                        <li class="nav-item">
                                             <a class="nav-link" onclick="mcp();"
                                                 href="javascript:void();"><b>MCP</b></a>
                                         </li>
-                                      
+
                                     </ul>
 
                                 </div>
@@ -205,8 +204,14 @@
                                     <br />
                                     <div class="row pt-5">
                                         <div class="col-sm-12 col-md-8">
-                                            <a class="read_more primary" style="width:100%" href="./pricing/"><b
-                                                    x-text="cta">Download Latest Release</b></a>
+                                            <!-- <a class="read_more primary" style="width:100%" href="./checkout/"><b
+                                                    x-text="cta">Download Latest Release</b></a> -->
+                                            <a class="read_more primary" style="width:100%"
+                                                href="https://buy.polar.sh/polar_cl_OnsNuTwvD0ezuF1ydTLqPFFfKeggFH2QAesui17ln52"
+                                                data-polar-checkout data-polar-checkout-theme="dark">
+                                                <b x-text="cta">Download Latest </b>
+                                            </a>
+
                                         </div>
                                         <div class="col-md-12 d-lg-none">
                                             <br />
@@ -697,6 +702,8 @@
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
+    <script src="https://cdn.jsdelivr.net/npm/@polar-sh/checkout@0.1/dist/embed.global.js" defer
+        data-auto-init></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
