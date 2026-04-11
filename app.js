@@ -4,7 +4,7 @@ function isMobile() {
     return check;
 };
 
-function isDesktop(){
+function isDesktop() {
     return !isMobile();
 }
 
@@ -56,6 +56,19 @@ function bannerMessages() {
     return {
 
         messages: [
+
+            // {
+            //     target: '_blank',
+            //     text: 'Need a <strong>custom app</strong> or a <strong>UI facelift</strong>? Let\'s build something great together.',
+            //     url: './consultancy/',
+            //     cta: 'Book a Free Call'
+            // },
+            {
+                target: '_self',
+                text: 'Grab KimTools at <strong>52%</strong> limited offer. Use coupon <strong>SDK26</strong> at checkout.',
+                url: './checkout/',
+                cta: 'Claim 52% Coupon'
+            },
             {
                 target: '_blank',
                 text: 'Looking for <strong><a style=\'color:white;\' href=\'./bunifu/\'>Bunifu Framework?</a></strong> Get it at <strong>30%</strong> offer exclusively on kimtoo.net, Another WinForms Framework from KimTools creator.',
@@ -63,27 +76,15 @@ function bannerMessages() {
                 cta: 'Get Bunifu 30% Offer'
             },
             {
-                target: '_blank',
-                text: 'Need a <strong>custom app</strong> or a <strong>UI facelift</strong>? Let\'s build something great together.',
-                url: './consultancy/',
-                cta: 'Book a Free Call'
-            },
-            {
-                target: '_self',
-                text: 'Grab KimTools at <strong>52%</strong> limited offer. Use coupon <strong>SDK26</strong> at checkout.',
-                url: './pricing/',
-                cta: 'Claim 52% Coupon'
-            },
-            {
                 target: '_self',
                 text: 'Don\'t build another WinForms app without KimTools. Use <strong>52%</strong> coupon <strong>SDK26</strong> at checkout.',
-                url: './pricing/',
+                url: './checkout/',
                 cta: 'Use Code SDK26'
             },
             {
                 target: '_self',
                 text: 'Your next WinForms project deserves better controls. Get KimTools at <strong>52%</strong> discount, use coupon <strong>SDK26</strong>.',
-                url: './pricing/',
+                url: './checkout/',
                 cta: 'Use 52% Coupon \'SDK26\''
             }
         ],
