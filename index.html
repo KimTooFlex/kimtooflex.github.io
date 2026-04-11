@@ -59,14 +59,14 @@
        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     <!--HTMX-->
-    <script src="https://unpkg.com/htmx.org@latest"></script>
-    <script src="https://unpkg.com/htmx.org@latest/dist/ext/alpine-morph.js"></script>
+    <!-- <script src="https://unpkg.com/htmx.org@latest"></script>
+    <script src="https://unpkg.com/htmx.org@latest/dist/ext/alpine-morph.js"></script> -->
     <!-- Alpine Plugins -->
     <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>
     <!-- Alpine Core -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="https://gumroad.com/js/gumroad.js"></script> -->
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
     <script>
@@ -76,7 +76,12 @@
         gtag('config', 'G-8RDLCMTFXX');
     </script>
 
+    <link rel="stylesheet" href="https://unpkg.com/modal-video@2.4.6/css/modal-video.min.css">
+    <script src="https://unpkg.com/modal-video@2.4.6/js/modal-video.min.js"></script>
+
+
     <script src="app.js"></script>
+
 </head>
 <!-- body -->
 
@@ -151,9 +156,13 @@
                                             <a class="nav-link" href="./bunifu"><b>BUNIFU</b></a>
                                         </li>
                                         <li class="nav-item">
+                                            <a class="nav-link" target="_blank"
+                                                href="https://polar.sh/kimtools/portal/"><b>Sign in</b></a>
+                                        </li>
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" onclick="mcp();"
                                                 href="javascript:void();"><b>MCP</b></a>
-                                        </li>
+                                        </li> -->
 
                                     </ul>
 
@@ -203,26 +212,56 @@
                                     <br />
                                     <br />
                                     <div class="row pt-5">
-                                        <div class="col-sm-12 col-md-8">
+                                        <div class="col-sm-12 col-md-7">
                                             <!-- <a class="read_more primary" style="width:100%" href="./checkout/"><b
                                                     x-text="cta">Download Latest Release</b></a> -->
-                                            <a class="read_more primary" style="width:100%"
+                                            <a class="read_more primary"
+                                                style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;"
                                                 href="https://buy.polar.sh/polar_cl_OnsNuTwvD0ezuF1ydTLqPFFfKeggFH2QAesui17ln52"
                                                 data-polar-checkout data-polar-checkout-theme="dark">
-                                                <b x-text="cta">Download Latest </b>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24"
+                                                    fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                                    <path d="M7 11l5 5l5 -5" />
+                                                    <path d="M12 4l0 12" />
+                                                </svg>
+                                                &nbsp;
+                                                <b x-text="cta">Download Latest &nbsp;</b>
                                             </a>
 
                                         </div>
                                         <div class="col-md-12 d-lg-none">
                                             <br />
                                         </div>
-                                        <div class="col-sm-12 col-md-8 col-lg-4 m-md-0" style="opacity: .8;">
-                                            <a class="read_more secondary" style="width:100%"
+                                        <div class="col-sm-12 col-md-8 col-lg-5 m-md-0" style="opacity: .8;">
+                                            <a class="read_more secondary"
+                                                style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;"
                                                 href="https://polar.sh/kimtools/portal/" target="_blank">
-                                                My Account
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-user-key">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                                    <path d="M6 21v-2a4 4 0 0 1 4 -4h5" />
+                                                    <path d="M18.5 18.5l-3.5 3.5l-1.5 -1.5" />
+                                                    <path
+                                                        d="M18.554 18.414a2 2 0 1 1 2.828 -2.828a2 2 0 0 1 -2.828 2.828" />
+                                                    <path d="M16 19l1 1" />
+                                                </svg>
+                                                &nbsp;
+                                                <b>My Account &nbsp;</b>
+
+
                                             </a>
                                         </div>
                                     </div>
+
 
 
                                 </div>
@@ -230,14 +269,19 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
                             <div class="text-img">
-                                <figure>
-                                    <a target="_blank" href="https://youtu.be/UgHwt2fzvmI?t=8"
-                                        x-data="{  focus: isMobile() }">
-
+                                <figure x-data="{  focus: isMobile() }">
+                                    <a class="js-video-btn" data-video-id='UgHwt2fzvmI'
+                                        href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0">
                                         <img :src="focus ? 'images/banner.png':'images/top_img.png'" alt="View Demo"
                                             x-on:mouseover="focus =  true"
                                             x-on:mouseout="focus = isMobile() || false" />
                                     </a>
+                                    <script>
+                                        window.addEventListener('DOMContentLoaded', function () {
+                                            new ModalVideo(".js-video-btn");
+                                        });
+                                    </script>
+
                                 </figure>
                             </div>
                         </div>
