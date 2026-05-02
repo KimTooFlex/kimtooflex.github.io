@@ -45,8 +45,8 @@ function GetHeader() {
     const version = `v${yy}.${mm}`;
 
     return {
-        cta: "Download Latest - " + version,
-        checkout: "https://mainstack.com/kimtools-winforms/checkout",
+        cta: "Get KimTools  &nbsp;&nbsp; - &nbsp;&nbsp;" + version,
+        checkout: "https://checkout.kimtoo.net",
         consult: ""
     }
 }
@@ -66,25 +66,25 @@ function bannerMessages() {
             {
                 target: '_self',
                 text: 'Grab KimTools at <strong>52%</strong> limited offer. Use coupon <strong>SDK26</strong> at checkout.',
-                url: './checkout/',
+                url: 'https://checkout.kimtoo.net',
                 cta: 'Claim 52% Coupon'
             },
             {
                 target: '_blank',
-                text: 'Looking for <strong><a style=\'color:white;\' href=\'./bunifu/\'>Bunifu Framework?</a></strong> Get it at <strong>30%</strong> offer exclusively on kimtoo.net, Another WinForms Framework from KimTools creator.',
-                url: './bunifu/',
+                text: 'Looking for <strong><a style=\'color:white;\' href=\'https://bunifu.kimtoo.net\'>Bunifu Framework?</a></strong> Get it at <strong>30%</strong> offer exclusively on kimtoo.net, Another WinForms Framework from KimTools creator.',
+                url: 'https://bunifu.kimtoo.net',
                 cta: 'Get Bunifu 30% Offer'
             },
             {
                 target: '_self',
                 text: 'Don\'t build another WinForms app without KimTools. Use <strong>52%</strong> coupon <strong>SDK26</strong> at checkout.',
-                url: './checkout/',
+                url: 'https://checkout.kimtoo.net',
                 cta: 'Use Code SDK26'
             },
             {
                 target: '_self',
                 text: 'Your next WinForms project deserves better controls. Get KimTools at <strong>52%</strong> discount, use coupon <strong>SDK26</strong>.',
-                url: './checkout/',
+                url: 'https://checkout.kimtoo.net',
                 cta: 'Use 52% Coupon \'SDK26\''
             }
         ],

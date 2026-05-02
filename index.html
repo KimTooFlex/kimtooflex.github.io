@@ -124,7 +124,7 @@
                             <div class="full">
                                 <div class="center-desk">
                                     <div class="logo">
-                                        <a href="./"><img src="images/logo-dark.png" alt="#" /></a>
+                                        <a href="./"><img src="images/kt-icon-md.png" alt="#" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -200,23 +200,72 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
                             <div class="text_box_color">
-                                <div class="text-bg">
-                                    <!--  <img height="28px" src="images/sdk.png"/> -->
+                                <div class="text-bg ">
 
-                                    <h1 class="pt-3" style="color: #8DDBDB; opacity: .75;font-size: 3.5em;">
-                                        An Elegant UI
-                                    </h1>
-                                    <h1 class="gradient-dark"
-                                        style="margin-top: -80px;font-weight: bold; font-family: 'Courier New', Courier, monospace; ">
-                                        For&nbsp;{WinForms}
-                                    </h1>
-                                    <strong
-                                        style="opacity: .75;font-size: 2em;  font-family: 'Courier New', Courier, monospace;">
-                                        Modern suite of WinForms controls that deliver Stunning UI with exceptional
-                                        developer experience.
-                                    </strong>
+
                                     <br />
                                     <br />
+                                    <br />
+                                    <br />
+
+
+                                    <h1
+                                        style="color: lightsteelblue;font-style: normal; font-weight: 100; font-size: 2.8em;">
+                                        For&nbsp;</h1>
+                                    <h1 class="gradient-dark pb-4" style="font-size: 3em;">
+                                        { WinForms developers }
+                                    </h1>
+                                    <br />
+                                    <span
+                                        style="  color:lightsteelblue;font-size: 1.5rem;line-height: 1em;font-weight:500;">
+                                        <span class="gradient-dark" style="font-size: 1.25em;">
+                                            <b> KimTools</b>
+                                        </span> is the comprehensive toolkit of modern UI components and visual
+                                        editors designed
+                                        to transform legacy .NET apps into sleek, efficient, <span class="gradient-dark"
+                                            style="font-size: 1.25em;">
+                                            <b>AI-era</b>
+                                        </span> powerhouses.
+                                    </span>
+
+                                    <br />
+                                    <div class="pt-4 pl-2" x-data="{
+                                        start: 180, 
+                                        end: 294,
+                                        items: [
+                                        '35+ Modern customizable Controls',
+                                        '35+ Enterprise-Grade Themes',
+                                        'Tailwind-inspired Color Sysyem',
+                                        '10,000+ Precision SVG Icons',
+                                        'Intuitive Low-Code Designers',
+                                        'Advanced Rendering Engine' 
+                                        ]
+                                    }">
+                                        <template x-for="(item, index) in items" :key="index">
+                                            <div class="row" style="font-size: 1.25rem;">
+                                                <div class="col-auto">
+                                                    <svg :style="`color: hsl(${start + ((end - start) / (items.length - 1)) * index}, 100%, 80%);`"
+                                                        xmlns="http://www.w3.org/2000/svg" width="1.25em"
+                                                        height="1.25em" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M9 12l2 2l4 -4" />
+                                                        <path
+                                                            d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
+                                                    </svg>
+                                                </div>
+                                                <div class="col text-left">
+                                                    <span
+                                                        :style="`color: hsl(${start + ((end - start) / (items.length - 1)) * index}, 100%, 90%);`">
+                                                        <b x-text="item" style="font-weight:600;"></b></span>
+                                                </div>
+                                            </div>
+                                        </template>
+
+                                    </div>
+
                                     <br />
                                     <div class="row pt-5">
                                         <div class="col-sm-12 col-md-7">
@@ -226,17 +275,8 @@
                                                 style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;"
                                                 href="https://checkout.kimtoo.net">
 
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24"
-                                                    fill="none" stroke="currentColor" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round"
-                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                                                    <path d="M7 11l5 5l5 -5" />
-                                                    <path d="M12 4l0 12" />
-                                                </svg>
-                                                &nbsp;
-                                                <b x-text="cta">Get Latest &nbsp;</b>
+                                                <img src="./images/X.png" alt="kt-icon" />
+                                                <b x-html="cta">Get Started &nbsp;</b>
                                             </a>
 
                                         </div>
@@ -244,25 +284,20 @@
                                             <br />
                                         </div>
                                         <div class="col-sm-12 col-md-8 col-lg-5 m-md-0" style="opacity: .8;">
-                                            <a class="read_more secondary"
-                                                style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;"
-                                                href="https://polar.sh/kimtools/portal/" target="_blank">
+                                            <a class="read_more secondary js-video-btn" data-video-id='UgHwt2fzvmI'
+                                                href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
+                                                style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;">
 
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-user-key">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="currentColor"
+                                                    class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                                                    <path d="M6 21v-2a4 4 0 0 1 4 -4h5" />
-                                                    <path d="M18.5 18.5l-3.5 3.5l-1.5 -1.5" />
                                                     <path
-                                                        d="M18.554 18.414a2 2 0 1 1 2.828 -2.828a2 2 0 0 1 -2.828 2.828" />
-                                                    <path d="M16 19l1 1" />
+                                                        d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" />
                                                 </svg>
                                                 &nbsp;
-                                                <b>My Account &nbsp;</b>
-
+                                                <b> View &nbsp; Demo</b>
+                                                &nbsp;
 
                                             </a>
                                         </div>
@@ -310,12 +345,14 @@
                 <div class="col-md-12" style="margin-top:50px;">
                     <div class="titlepage">
 
-                        <div class="row" style="opacity: .8;">
+
+
+                        <div class="row">
                             <div class="col-12 text-center">
-                                <img src="https://img.shields.io/badge/Latest_Stable-v26.4-6DA8B2" alt="badge"
+                                <img src="https://img.shields.io/badge/Latest_Stable-v26.5-green" alt="badge"
                                     style="height: 28px;" />
                             </div>
-                            <div class="col-12 pt-4 text-center">
+                            <div class="col-12 pt-4 text-center" style="opacity: .8;">
                                 <img src="https://img.shields.io/badge/.NET-Framework-blue" alt="badge"
                                     style="height: 28px;" />
 
@@ -326,7 +363,7 @@
                                 <img src="https://img.shields.io/badge/v4.8_+-blue" alt="badge" style="height: 28px;" />
                             </div>
 
-                            <div class="col-12 pt-2 pb-3 text-center">
+                            <div class="col-12 pt-2 pb-3 text-center" style="opacity: .8;">
                                 <img src="https://img.shields.io/badge/dotNET-Core-purple" alt="badge"
                                     style="height: 28px;" />
 
@@ -336,20 +373,44 @@
 
                                 <img src="https://img.shields.io/badge/v8.0-purple" alt="badge" style="height: 28px;" />
 
-                                <img src="https://img.shields.io/badge/v9.0+-purple" alt="badge" style="height: 28px;" />
+                                <img src="https://img.shields.io/badge/v9.0+-purple" alt="badge"
+                                    style="height: 28px;" />
                             </div>
-
+                            <br>
                         </div>
-                        <br /> 
+
+                        <br>
+                        <span>
+                            <b>
+
+
+                                For years, we’ve watched the WinForms community feel sidelined as the world of modern
+                                design
+                                moved on.
+                                <br>
+                                As the creator of the Bunifu Framework and a multi-year Microsoft MVP, our founder
+                                built this ecosystem because we believe you shouldn't have to choose between the
+                                reliability
+                                of .NET and the beauty of modern software.
+                            </b>
+                        </span>
+                        <br />
+                        <br />
                         <h2>WinForms <strong class="gradient-light">UI Controls</strong> & <strong
                                 class="gradient-light">Components</strong>.</h2>
 
                         <span>
-                            KimTools brings contemporary visuals and high-performance controls to WinForms.
-                            Compatible with <b>.NET Framework 4.6 - 4.8</b>, and .NET Core <b>.NET 6</b> through <b>.NET
-                                9</b>, it upgrades your apps without rewrites,
-                            keeping them stable, fast, and designer-friendly. Make WinForms look modern and work
-                            smarter.
+                            We created KimTools to heal the frustration of fighting a framework that feels stuck in the
+                            past. We’ve poured decades of award-winning experience into building a native SVG
+                            ecosystem & finally replacing blurry, static bitmaps with a searchable library of 10,000+
+                            scalable icons that breathe life into your interfaces.
+                            <br>
+                            <br>
+                            By marrying a Tailwind/Web isnpired
+                            architecture with high-fidelity rendering, we’ve replaced the exhausting grind of manual
+                            styling with the pure joy of low-code creation. We built this to end the struggle with DPI
+                            scaling and rigid constraints, so you can finally rediscover the spark that made you love
+                            building software in the first place.
                         </span>
 
 
@@ -447,38 +508,41 @@
                     <div class="amezing_box">
                         <div class="titlepage">
                             <h2>
-                                Your <strong class="gradient-dark">Target</strong> <b>.NET</b>
+                                The Next Frontier:
                                 <br>
-                                <strong class="gradient-dark">Platforms</strong> Supported
+                                <strong class="gradient-dark">AI-Ready WinForms</strong>
+
+                                <!-- Your <strong class="gradient-dark">Target</strong> <b>.NET</b>
+                                <br>
+                                <strong class="gradient-dark">Platforms</strong> Supported -->
                             </h2>
+
                         </div>
 
-                        <!-- IDEs -->
-                        <div class="can">
-                            <span>
-                                <img src="images/net-core.png" />
-                            </span>
-                            <h4>
-                                dotNET Core
-                                <b class="gradient-dark">.NET 6</b> /
-                                <b class="gradient-dark">.NET 7</b> /
-                                <b class="gradient-dark">.NET 8</b> /
-                                <b class="gradient-dark">.NET 9+</b>
-
-                            </h4>
+                        <div class="row">
+                            <div class="col-10">
+                                <span style="color: white;font-size: 1rem;">
+                                    The KimTools Ecosystem is now evolving into the ultimate AI-Ready stack, featuring
+                                    an
+                                    integrated MCP Server, Generative UI, and components designed specifically for
+                                    human-AI
+                                    collaboration.
+                                    <br>
+                                    <br>
+                                    With an AI Agent built directly into the workflow, your development
+                                    experience becomes a seamless partnership where stunning, high-fidelity interfaces
+                                    are
+                                    generated, customized, and maintained with zero friction. We aren't just building a
+                                    library;
+                                    <br>
+                                    <br>
+                                    we are providing the platform where developers and AI collaborate to create the most
+                                    stunning, future-proof applications in the WinForms era.
+                                </span>
+                            </div>
                         </div>
 
-                        <div class="can">
-                            <span>
-                                <img src="images/net-frm.png" />
-                            </span>
-                            <h4>
-                                .NET Framework
-                                <b class="gradient-dark">4.6.2</b> /
-                                <b class="gradient-dark">4.7.2</b> /
-                                <b class="gradient-dark">4.8</b>
-                            </h4>
-                        </div>
+
 
                     </div>
                 </div>

@@ -353,29 +353,30 @@ button {
 }
 
     .text-bg h1 {
-        color: #fff;
-        font-size: 67px;
-        line-height: 90px;
+        color: #fff; 
+        line-height: 1em;
+        /* line-height: 90px;
         padding-bottom: 30px;
-        padding-top: 40px;
+        padding-top: 40px; */
         font-weight: bold;
+        display: inline-block;
     }
 
     .text-bg strong {
-        font-family: 'Baloo Chettan', cursive;
-        font-size: 35px;
+        font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* font-size: 35px;
         line-height: 35px;
-        color: #fff;
+        color: #fff; */
     }
 
     .text-bg span {
-        font-family: 'Baloo Chettan', cursive;
-        color: #da16e6;
+        font-family:  'Courier New', Courier, monospace;
+        /* color: #da16e6;
         font-size: 35px;
         line-height: 77px;
         font-weight: bold;
-        padding-bottom: 20px;
-        display: block;
+        padding-bottom: 20px; */
+        /* display: block; */
     }
 
     .text-bg a {
