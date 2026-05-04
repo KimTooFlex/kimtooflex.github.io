@@ -558,7 +558,8 @@
         </section>
 
         <!-- ═══════════════ TICKER / BADGES ═══════════════ -->
-        <div class="py-4 border-y overflow-hidden border-black/[0.07] bg-black/[0.1] dark:border-white/[0.06] dark:bg-white/[0.1] " >
+        <div
+            class="py-4 border-y overflow-hidden border-black/[0.07] bg-black/[0.1] dark:border-white/[0.06] dark:bg-white/[0.1] ">
             <div class="ticker-wrap">
                 <div class="ticker-inner animate">
                     <span v-for="badge in [...tickerBadges, ...tickerBadges]" :key="badge + Math.random()"
@@ -591,30 +592,78 @@
                                 multi-year Microsoft MVP, our founder built this ecosystem because we believe you
                                 shouldn't have to choose between the reliability of .NET and the beauty of modern
                                 software.</p>
-                            <p>We poured decades of award-winning experience into building a native SVG ecosystem —
-                                replacing blurry, static bitmaps with a searchable library of <strong
-                                    class="grad-green">10,000+ scalable icons</strong>.</p>
+
                         </div>
                         <div class="flex gap-4 mt-8">
                             <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
                             <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
                         </div>
                     </div>
-
+                    <!-- https://public-files.gumroad.com/5p0xae7bxlqlnckbe2y29nu7scwi -->
                     <!-- Stats grid -->
                     <div class="grid grid-cols-2 gap-4">
-                        <div v-for="stat in stats" :key="stat.label" class="p-6 rounded-xl transition-all duration-300"
-                            :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
-                            <div class="text-3xl font-display font-bold mb-1" :style="`color: ${stat.color}`">{{
-                                stat.value }}</div>
-                            <div class="text-xs font-mono opacity-60 uppercase tracking-widest"
-                                :class="isDark ? 'text-gray-400' : 'text-gray-600'">{{ stat.label }}</div>
+
+                        <div class="lg:col-span-2">
+                            <div class="rounded-2xl overflow-hidden"
+                                style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 32px 80px rgba(0,0,0,0.6);">
+                                <img src="./images/kt-table.gif" alt="KimTools Table" class="w-full" />
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
             </div>
         </section>
+
+
+        <!-- ═══════════════ DEVELOPER EXPERIENCE ═══════════════ -->
+        <section class="py-24" :class="isDark ? '' : 'bg-gray-50'">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <div class="order-2 lg:order-1">
+                        <div class="rounded-2xl overflow-hidden" :class="isDark ? 'card-dark' : 'card-light'">
+                            <img src="./images/kt-designer.gif" alt="KimTools Free Edition" class="w-full" />
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2">
+                        <p class="section-label mb-4" style="color: #FF6B35;">Developer Experience</p>
+                        <h2 class="font-display text-4xl font-bold leading-tight mb-6"
+                            :class="isDark ? 'text-white' : 'text-gray-900'">
+                            What you see.<br />
+                            <span class="grad-fire">Is what you get.</span>
+                        </h2>
+                        <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                            Kimtools Designer is a <strong class="grad-green">WYSIWYG
+                                powerhouse</strong> for WinForms that replaces static properties with a <strong
+                                class="grad-green">semantic theme engine</strong>
+                            and integrated color tokens.
+                            <br>
+                            <br>
+                            It bridges the gap between design and code with a <strong
+                                class="grad-green">VsCode-style
+                                markup editor</strong> for real-time HTML/SVG editing, an <strong
+                                class="grad-green">integrated icon search</strong>, it allows you to visually compose
+                            modern, production-ready
+                            interfaces with instant, live feedback directly on the design surface.
+                        </p>
+                        <!-- <div class="mt-8">
+                            <a href="https://checkout.kimtoo.net" class="btn-primary">
+                                Get KimTools Plus+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
 
         <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
         <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
@@ -733,7 +782,7 @@
                     <div class="lg:col-span-2">
                         <div class="rounded-2xl overflow-hidden"
                             style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 32px 80px rgba(0,0,0,0.6);">
-                            <img src="./images/demo.gif" alt="KimTools Demo" class="w-full" />
+                            <img src="./images/kt-textbox.gif" alt="KimTools Demo" class="w-full" />
                         </div>
                     </div>
 
@@ -1028,7 +1077,7 @@
                     document.body.style.color = isDark.value ? '#ffffff' : '#111827';
                 }
 
-         
+
 
                 async function fetchControls() {
                     try {
@@ -1049,7 +1098,7 @@
                         bannerIndex.value = (bannerIndex.value + 1) % banners.length;
                     }, 5000);
 
-                      RenderTheme();
+                    RenderTheme();
                 });
 
                 return {
