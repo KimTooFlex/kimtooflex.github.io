@@ -7,6 +7,12 @@
     "disown-opener": "off",
     "no-inline-styles": "off",
     "axe/text-alternatives": "off",
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ]
   }
 }

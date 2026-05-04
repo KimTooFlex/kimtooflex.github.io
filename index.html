@@ -1,880 +1,1077 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
-    <!-- basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <!-- site metas -->
-    <title>KimTOOLs – Modern UI Toolkit Framework & SDK for WinForms C# | VB.NET</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KimTools – Modern UI Toolkit for WinForms C# | VB.NET</title>
     <meta name="description"
-        content="KimTools Modern UI Toolkit Framework & SDK for WinForms C# | VB.NET that brings cutting edge controls, theming, and performance to C# and VB.NET applications. Works with .NET Framework 4.6 through .NET 9.">
-
+        content="KimTools Modern UI Toolkit Framework & SDK for WinForms C# | VB.NET. 35+ controls, 35+ themes, 10,000+ SVG icons. .NET 4.6 through .NET 9." />
     <meta name="keywords"
-        content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools">
-
-    <meta name="author" content="Kimutai Kipngetich,Kim Too Flex">
-
-    <meta name="robots" content="index, follow">
-    <meta name="p:domain_verify" content="fcc18b9e22be83e55fb5fcadc93c3835" />
-
-
-    <!-- Open Graph (social sharing) -->
-    <meta property="og:title" content="KimTools – Modern WinForms UI Framework">
+        content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools" />
+    <meta name="author" content="Kimutai Kipngetich" />
+    <meta property="og:title" content="KimTools – Modern WinForms UI Framework" />
     <meta property="og:description"
-        content="Upgrade WinForms apps with modern UI controls, theming, and high performance. Supports C# and VB.NET from .NET Framework 4.6 to .NET 9.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kimtoo.net">
-    <meta property="og:image" content="https://kimtoo.net/images/top_img.png">
+        content="Upgrade WinForms apps with modern UI controls, theming, and high performance." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kimtoo.net" />
+    <meta property="og:image" content="https://kimtoo.net/images/top_img.png" />
+    <link rel="icon" href="favicon.ico" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KimTools – Modern WinForms UI Framework">
-    <meta name="twitter:description"
-        content="Modern UI controls and theming for WinForms. C# and VB.NET. .NET 4.6 to .NET 9+.">
-    <meta name="twitter:image" content="https://kimtoo.net/images/top_img.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive-->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-        media="screen">
-    <link rel="stylesheet" href="app.css">
-    <!--[if lt IE 9]>
-       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <!--HTMX-->
-    <!-- <script src="https://unpkg.com/htmx.org@latest"></script>
-    <script src="https://unpkg.com/htmx.org@latest/dist/ext/alpine-morph.js"></script> -->
-    <!-- Alpine Plugins -->
-    <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>
-    <!-- Alpine Core -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-8RDLCMTFXX');
-    </script>
-
+    <!-- Google Fonts: JetBrains Mono + Syne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://unpkg.com/modal-video@2.4.6/css/modal-video.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Vue 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <!-- Video pop-up -->
     <script src="https://unpkg.com/modal-video@2.4.6/js/modal-video.min.js"></script>
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-8RDLCMTFXX');</script>
 
-    <script src="app.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        green: { 400: '#60a5fa' },
+                        kt: {
+                            green: '#3B82F6',
+                            cyan: '#7C3AED',
+                            orange: '#FF6B35',
+                            pink: '#FF4C8B',
+                            purple: '#A855F7',
+                            yellow: '#FFD166',
+                        }
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.6s ease forwards',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4,0,0.6,1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'marquee': 'marquee 28s linear infinite',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .font-display {
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* Gradient text utility */
+        .grad-green {
+            background: linear-gradient(135deg, #3B82F6, #7C3AED);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .grad-fire {
+            background: linear-gradient(135deg, #FF6B35, #FF4C8B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .grad-purple {
+            background: linear-gradient(135deg, #A855F7, #FF4C8B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Noise texture overlay */
+        .noise::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            border-radius: inherit;
+        }
+
+        /* Grid background */
+        .grid-bg {
+            background-image: linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Control card */
+        .control-card {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .control-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3B82F644;
+            border-radius: 3px;
+        }
+
+        /* Ticker */
+        .ticker-wrap {
+            overflow: hidden;
+        }
+
+        .ticker-inner {
+            display: flex;
+            white-space: nowrap;
+        }
+
+        .ticker-inner.animate {
+            animation: marquee 30s linear infinite;
+        }
+
+        /* Banner bar gradient */
+        .banner-bar {
+            background: linear-gradient(90deg, #28A8B7, #198DB2, #0F7AAF, #1569AD, #575DAE, #9153B0);
+            background-size: 300% 100%;
+            animation: gradShift 8s ease infinite;
+        }
+
+        @keyframes gradShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+        }
+
+        /* Hero glow */
+        .hero-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.18;
+            pointer-events: none;
+        }
+
+        /* Nav link hover underline */
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #3B82F6;
+            transition: width 0.25s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Feature pill */
+        .pill {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+
+        /* CTA button base */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #3B82F6, #7C3AED);
+            color: white;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.88;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid rgba(59, 130, 246, 0.4);
+            color: #3B82F6;
+            font-weight: 700;
+            font-size: 1.25rem;
+            padding: 13px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: background 0.2s, transform 0.2s, border-color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* Card dark */
+        .card-dark {
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+        }
+
+        .card-light {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            border-radius: 16px;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            overflow: hidden;
+        }
+
+        .mobile-menu.closed {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        /* Animation delays */
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-fade-up {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+    </style>
 </head>
-<!-- body -->
 
-<body class="main-layout">
-    <!-- loader  -->
-    <div class="loader_bg">
-        <div class="loader"><img src="images/kimtools.gif" alt="#" /></div>
-    </div>
-    <!-- end loader -->
-    <!-- header -->
-    <header>
-        <!-- header inner -->
-        <div class="head_top">
+<body class="bg-[#0d0f14] dark:bg-[#0d0f14] text-white transition-colors duration-300">
 
+    <div id="app">
 
-            <div class="header">
-                <span x-data="bannerMessages()">
-                    <div class="gradient-bg text-center"
-                        :style="'width: 100%; color: white; opacity:' + (focus ? '1;' : '.7;')"
-                        x-on:mouseover="focus=true" x-on:mouseout="focus=false">
-                        <span x-html="messages[current].text"></span>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a :href="messages[current].url" :target="messages[current].target"
-                            x-html="messages[current].cta" style="
-                opacity: .8; 
-                padding: 5px 16px; 
-                background-color: white; 
-                color: black; 
-                border-radius: 20px; 
-                text-decoration: none; 
-                font-weight: 600; 
-                display: inline-block;">
-                        </a>
-                    </div>
-                </span>
-                <br /><br />
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                            <div class="full">
-                                <div class="center-desk">
-                                    <div class="logo">
-                                        <a href="./"><img src="images/kt-icon-md.png" alt="#" /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 text-right">
-                            <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarsExample04" aria-controls="navbarsExample04"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarsExample04">
-                                    <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="https://checkout.kimtoo.net"><b>DOWNLOAD</b></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" target="_blank"
-                                                href="https://www.youtube.com/@kimtooflex"><b>DEMOS</b></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" target="_blank"
-                                                href="https://docs.kimtoo.net"><b>DOCS</b></a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" target="_blank"
-                                                href="https://store.kimtoo.net"><b>THEMES</b></a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="https://bunifu.kimtoo.net"><b>
-                                                    BUNIFU-UI</b></a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" target="_blank" href="https://support.kimtoo.net"><b>
-                                                    SUPPORT</b></a>
-                                        </li>
-
-
-                                        <!-- <li class="nav-item">
-                                            <a class="nav-link" onclick="mcp();"
-                                                href="javascript:void();"><b>MCP</b></a>
-                                        </li> -->
-
-                                    </ul>
-
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end header inner -->
-            <!-- end header -->
-            <br />
-            <!-- banner -->
-            <section x-data="GetHeader()" class="banner_main">
-                <div class="container-fluid" />
-                <br />
-                <br />
-                <div class="banner_bg">
-                    <div class="row d_flex">
-                        <div class="full">
-                            <div class="center-desk">
-                                <div class="logo">
-                                    <a>
-                                        <img src="images/blank.png" alt="#" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
-                            <div class="text_box_color">
-                                <div class="text-bg ">
-
-
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <br />
-
-
-                                    <h1
-                                        style="color: lightsteelblue;font-style: normal; font-weight: 100; font-size: 2.8em;">
-                                        For&nbsp;</h1>
-                                    <h1 class="gradient-dark pb-4" style="font-size: 3em;">
-                                        { WinForms developers }
-                                    </h1>
-                                    <br />
-                                    <span
-                                        style="  color:lightsteelblue;font-size: 1.5rem;line-height: 1em;font-weight:500;">
-                                        <span class="gradient-dark" style="font-size: 1.25em;">
-                                            <b> KimTools</b>
-                                        </span> is the comprehensive toolkit of modern UI components and visual
-                                        editors designed
-                                        to transform legacy .NET apps into sleek, efficient, <span class="gradient-dark"
-                                            style="font-size: 1.25em;">
-                                            <b>AI-era</b>
-                                        </span> powerhouses.
-                                    </span>
-
-                                    <br />
-                                    <div class="pt-4 pl-2" x-data="{
-                                        start: 180, 
-                                        end: 294,
-                                        items: [
-                                        '35+ Modern customizable Controls',
-                                        '35+ Enterprise-Grade Themes',
-                                        'Tailwind-inspired Color Sysyem',
-                                        '10,000+ Precision SVG Icons',
-                                        'Intuitive Low-Code Designers',
-                                        'Advanced Rendering Engine' 
-                                        ]
-                                    }">
-                                        <template x-for="(item, index) in items" :key="index">
-                                            <div class="row" style="font-size: 1.25rem;">
-                                                <div class="col-auto">
-                                                    <svg :style="`color: hsl(${start + ((end - start) / (items.length - 1)) * index}, 100%, 80%);`"
-                                                        xmlns="http://www.w3.org/2000/svg" width="1.25em"
-                                                        height="1.25em" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-check">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                        <path d="M9 12l2 2l4 -4" />
-                                                        <path
-                                                            d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" />
-                                                    </svg>
-                                                </div>
-                                                <div class="col text-left">
-                                                    <span
-                                                        :style="`color: hsl(${start + ((end - start) / (items.length - 1)) * index}, 100%, 90%);`">
-                                                        <b x-text="item" style="font-weight:600;"></b></span>
-                                                </div>
-                                            </div>
-                                        </template>
-
-                                    </div>
-
-                                    <br />
-                                    <div class="row pt-5">
-                                        <div class="col-sm-12 col-md-7">
-                                            <!-- <a class="read_more primary" style="width:100%" href="./checkout/"><b
-                                                    x-text="cta">Download Latest Release</b></a> -->
-                                            <a class="read_more primary"
-                                                style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;"
-                                                href="https://checkout.kimtoo.net">
-
-                                                <img src="./images/X.png" alt="kt-icon" />
-                                                <b x-html="cta">Get Started &nbsp;</b>
-                                            </a>
-
-                                        </div>
-                                        <div class="col-md-12 d-lg-none">
-                                            <br />
-                                        </div>
-                                        <div class="col-sm-12 col-md-8 col-lg-5 m-md-0" style="opacity: .8;">
-                                            <a class="read_more secondary js-video-btn" data-video-id='UgHwt2fzvmI'
-                                                href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
-                                                style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;">
-
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="currentColor"
-                                                    class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" />
-                                                </svg>
-                                                &nbsp;
-                                                <b> View &nbsp; Demo</b>
-                                                &nbsp;
-
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 padding_right1">
-                            <div class="text-img">
-                                <figure x-data="{  focus: isMobile() }">
-                                    <a class="js-video-btn" data-video-id='UgHwt2fzvmI'
-                                        href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0">
-                                        <img :src="focus ? './images/banner.png':'./images/top_img.png'" alt="View Demo"
-                                            x-on:mouseover="focus =  true"
-                                            x-on:mouseout="focus = isMobile() || false" />
-                                    </a>
-                                    <script>
-                                        window.addEventListener('DOMContentLoaded', function () {
-                                            new ModalVideo(".js-video-btn");
-                                        });
-                                    </script>
-
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
-            </section>
-
+        <!-- ═══════════════ ANNOUNCEMENT BAR ═══════════════ -->
+        <div class="banner-bar text-white text-xs py-2 px-4 text-center relative"
+            style="font-family:'JetBrains Mono',monospace;">
+            <span class="opacity-80">{{ currentBanner.text }}</span>
+            &nbsp;
+            <a :href="currentBanner.url" :target="currentBanner.target"
+                class="inline-block bg-white text-black font-bold text-xs px-3 py-1 rounded-full hover:opacity-80 transition-opacity ml-2">
+                {{ currentBanner.cta }}
+            </a>
         </div>
 
-    </header>
-    <!-- end banner -->
+        <!-- ═══════════════ NAVBAR ═══════════════ -->
+        <nav class="sticky top-0 z-50 border-b"
+            :class="isDark ? 'bg-[#0d0f14]/95 border-white/[0.06]' : 'bg-white/95 border-black/[0.07]'"
+            style="backdrop-filter: blur(16px);">
+            <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
 
-    <div id="components" class="feature">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" style="margin-top:50px;">
-                    <div class="titlepage">
+                <!-- Logo -->
+                <a href="./" class="flex items-center gap-3">
+                    <img :src="isDark ? './images/logo-wide-dark.webp' :  './images/logo-wide.webp'" alt="KimTools"
+                        class="py-2" style="height:50px;" />
+                    <!-- <span class="font-display  font-bold text-[24px] text-slate-800 dark:text-slate-300" >Kim<span class="grad-green">Tools</span></span> -->
+                </a>
 
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-7">
+                    <a v-for="link in navLinks" :key="link.label" :href="link.href" :target="link.target || '_self'"
+                        class="nav-link text-xs font-bold tracking-widest uppercase transition-colors"
+                        :class="isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'">
+                        {{ link.label }}
+                    </a>
+                </div>
 
+                <!-- Right: theme toggle + CTA -->
+                <div class="flex items-center gap-3">
+                    <!-- Theme toggle -->
+                    <button @click="toggleTheme"
+                        class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
+                        :class="isDark ? 'text-gray-400 hover:text-white hover:bg-white/10' : 'text-gray-500 hover:text-gray-900 hover:bg-black/10'">
+                        <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                        </svg>
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                        </svg>
+                    </button>
 
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img src="https://img.shields.io/badge/Latest_Stable-v26.5-green" alt="badge"
-                                    style="height: 28px;" />
-                            </div>
-                            <div class="col-12 pt-4 text-center" style="opacity: .8;">
-                                <img src="https://img.shields.io/badge/.NET-Framework-blue" alt="badge"
-                                    style="height: 28px;" />
+                    <!-- Download CTA -->
+                    <a href="https://checkout.kimtoo.net"
+                        class="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase px-4 py-2.5 rounded-lg transition-all"
+                        style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
+                        Download
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
 
-                                <img src="https://img.shields.io/badge/v4.6.2-blue" alt="badge" style="height: 28px;" />
-
-                                <img src="https://img.shields.io/badge/v4.7-blue" alt="badge" style="height: 28px;" />
-
-                                <img src="https://img.shields.io/badge/v4.8_+-blue" alt="badge" style="height: 28px;" />
-                            </div>
-
-                            <div class="col-12 pt-2 pb-3 text-center" style="opacity: .8;">
-                                <img src="https://img.shields.io/badge/dotNET-Core-purple" alt="badge"
-                                    style="height: 28px;" />
-
-                                <img src="https://img.shields.io/badge/v6.0-purple" alt="badge" style="height: 28px;" />
-
-                                <img src="https://img.shields.io/badge/v7.0-purple" alt="badge" style="height: 28px;" />
-
-                                <img src="https://img.shields.io/badge/v8.0-purple" alt="badge" style="height: 28px;" />
-
-                                <img src="https://img.shields.io/badge/v9.0+-purple" alt="badge"
-                                    style="height: 28px;" />
-                            </div>
-                            <br>
-                        </div>
-
-                        <br>
-                        <span>
-                            <b>
-
-
-                                For years, we’ve watched the WinForms community feel sidelined as the world of modern
-                                design
-                                moved on.
-                                <br>
-                                As the creator of the Bunifu Framework and a multi-year Microsoft MVP, our founder
-                                built this ecosystem because we believe you shouldn't have to choose between the
-                                reliability
-                                of .NET and the beauty of modern software.
-                            </b>
-                        </span>
-                        <br />
-                        <br />
-                        <h2>WinForms <strong class="gradient-light">UI Controls</strong> & <strong
-                                class="gradient-light">Components</strong>.</h2>
-
-                        <span>
-                            We created KimTools to heal the frustration of fighting a framework that feels stuck in the
-                            past. We’ve poured decades of award-winning experience into building a native SVG
-                            ecosystem & finally replacing blurry, static bitmaps with a searchable library of 10,000+
-                            scalable icons that breathe life into your interfaces.
-                            <br>
-                            <br>
-                            By marrying a Tailwind/Web isnpired
-                            architecture with high-fidelity rendering, we’ve replaced the exhausting grind of manual
-                            styling with the pure joy of low-code creation. We built this to end the struggle with DPI
-                            scaling and rigid constraints, so you can finally rediscover the spark that made you love
-                            building software in the first place.
-                        </span>
-
-
-                        <div class="col-12 text-center">
-                            <br /> <br />
-                            <img style="margin-right:5px" src="images/cs.png" />
-                            &nbsp; &nbsp;
-                            <img style="margin-left:5px" src="images/vb.jpg" />
-                            <br />
-                        </div>
-                    </div>
+                    <!-- Mobile hamburger -->
+                    <button @click="mobileOpen = !mobileOpen"
+                        class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center"
+                        :class="isDark ? 'text-gray-400 hover:bg-white/10' : 'text-gray-600 hover:bg-black/10'">
+                        <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
             </div>
 
+            <!-- Mobile menu -->
+            <div class="mobile-menu md:hidden px-6 pb-4" :class="mobileOpen ? 'open' : 'closed'"
+                :style="isDark ? 'border-top: 1px solid rgba(255,255,255,0.06)' : 'border-top: 1px solid rgba(0,0,0,0.07)'">
+                <div class="flex flex-col gap-4 pt-4">
+                    <a v-for="link in navLinks" :key="link.label" :href="link.href" :target="link.target || '_self'"
+                        class="text-xs font-bold tracking-widest uppercase"
+                        :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        {{ link.label }}
+                    </a>
+                    <a href="https://checkout.kimtoo.net"
+                        class="btn-primary text-center justify-center mt-2">Download</a>
+                </div>
+            </div>
+        </nav>
 
-            <!-- Controls Cards -->
-            <div class="container" x-data="controlsList()" style="margin-top:25px; position: relative;">
+        <!-- ═══════════════ HERO ═══════════════ -->
+        <section class="relative overflow-hidden grid-bg min-h-[92vh] flex items-center"
+            :class="isDark ? '' : 'bg-gray-50'">
 
-                <!-- Search on left -->
-                <div class="row">
-                    <div class="col-md-6 col-sm-12" style="position: relative; width:100%; margin-bottom: 30px;">
-                        <input type="text" placeholder="Search..." x-model="query" class="search-input" />
-                        <!-- SVG Icon -->
-                        <div class="search-icon" style="margin-right:20px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                                <path d="M21 21l-6 -6" />
-                            </svg>
+            <!-- Glow orbs -->
+            <div class="hero-glow w-[600px] h-[600px] bg-kt-green top-[-200px] left-[-200px]"></div>
+            <div class="hero-glow w-[500px] h-[500px] bg-kt-cyan bottom-[-100px] right-[-100px]"></div>
+            <div class="hero-glow w-[300px] h-[300px] bg-kt-purple top-[40%] left-[40%]"></div>
+
+            <div class="max-w-7xl mx-auto px-6 py-24 w-full relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left: Text -->
+                    <div>
+                        <!-- Label -->
+                        <div class="flex items-center gap-3 mb-6 animate-fade-up">
+                            <span class="pill" style="background: rgba(59,130,246,0.12); color: #3B82F6;">For WinForms
+                                Developers</span>
+                            <span class="text-xs opacity-50 font-mono">//&nbsp;v26.5 LTS</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="font-display font-800 leading-tight mb-6 animate-fade-up delay-100"
+                            :class="isDark ? 'text-white' : 'text-gray-900'"
+                            style="font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -0.02em;">
+                            The<br />
+                            <span class="grad-green">Modern UI</span><br />
+                            Toolkit for<br />
+                            <span class="font-mono" style="font-size:0.85em; opacity: 0.7;">{ .NET }</span>
+                        </h1>
+
+                        <!-- Subtext -->
+                        <p class="mb-8 leading-relaxed text-sm animate-fade-up delay-200"
+                            :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                            <span class="text-light font-bold">KimTools</span> is the comprehensive toolkit of stunning
+                            <span class="grad-purple font-bold">UI Controls</span> and <span
+                                class="grad-fire font-bold">Toolbox Components</span> -
+                            <br>
+                            built to transform legacy <span class="grad-green font-bold">WinForms Designer</span> into
+                            sleek,
+                            efficient and Developer friendly workspace.
+                        </p>
+
+                        <!-- Feature list -->
+                        <ul class="space-y-2.5 mb-10 animate-fade-up delay-300">
+                            <li v-for="(feat, i) in features" :key="feat"
+                                class="flex items-center gap-3 text-sm font-mono">
+                                <span class="w-5 h-5 rounded flex items-center justify-center flex-shrink-0"
+                                    :style="`background: ${featColors[i % featColors.length]}22; color: ${featColors[i % featColors.length]};`">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                </span>
+                                <span :class="isDark ? 'text-gray-300' : 'text-gray-700'">{{ feat }}</span>
+                            </li>
+                        </ul>
+
+                        <!-- CTA row -->
+                        <div class="flex flex-wrap gap-4 animate-fade-up delay-400">
+                            <a href="https://checkout.kimtoo.net" class="btn-primary"
+                                style="background: linear-gradient(135deg,#FF6B35,purple); color: white;">
+                                <img src="./images/X.png" alt="btn-logo" class="h-4 w-auto pr-2" />
+                                Get Started
+                            </a>
+                            <figure>
+                                <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
+                                    class="btn-secondary  grad-purple js-video-btn " style="border-width: 0px;">
+                                    <svg class="text-slate-600 dark:text-white pr-1" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z" />
+                                    </svg> View Demo
+                                </a>
+
+                            </figure>
                         </div>
                     </div>
-                    <!-- Total + filtered controls -->
 
-                    <div class="col-md-6 col-sm-12">
-                        <div style="position:absolute; top:0; right:0; font-weight:600; color:#0f172a;">
-
-                            <span x-text="filteredControls.length + '/' + controls.length"></span>
+                    <!-- Right: Hero image -->
+                    <div class="relative animate-fade-up delay-300">
+                        <!-- Glowing frame -->
+                        <div class="relative rounded-2xl overflow-hidden"
+                            style="box-shadow: 0 0 0 1px rgba(59,130,246,0.15), 0 32px 80px rgba(222, 192, 192, 0.6);">
+                            <div class="absolute inset-0 rounded-2xl"
+                                style="background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(124,58,237,0.04)); z-index:1; pointer-events:none;">
+                            </div>
+                            <figure>
+                                <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
+                                    class="block group js-video-btn">
+                                    <img src="./images/top_img.png" alt="KimTools UI Demo"
+                                        class="w-full rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]" />
+                                    <!-- Play overlay -->
+                                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                                        style="background: rgba(0,0,0,0.4); border-radius: 16px;">
+                                        <div class="w-16 h-16 rounded-full flex items-center justify-center"
+                                            style="background: linear-gradient(135deg,#3B82F6,#7C3AED);">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="#0a0d0f">
+                                                <path d="M8 5.14v14l11-7z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            </figure>
                         </div>
-                        <br />
+                        <!-- Corner tag -->
+                        <div class="absolute -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-mono font-bold"
+                            style="background: linear-gradient(135deg,#FF6B35,#FF4C8B); color: white; transform: rotate(3deg);">
+                            HOT
+                        </div>
                     </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ TICKER / BADGES ═══════════════ -->
+        <div class="py-4 border-y overflow-hidden"
+            :class="isDark ? 'border-white/[0.06] bg-white/[0.1]' : 'border-black/[0.07] bg-black/[0.1]'">
+            <div class="ticker-wrap">
+                <div class="ticker-inner animate">
+                    <span v-for="badge in [...tickerBadges, ...tickerBadges]" :key="badge + Math.random()"
+                        class="inline-flex items-center gap-2 px-6 text-xs font-mono opacity-60 whitespace-nowrap"
+                        :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        <span :style="`color: ${badge.color}`">▸</span>
+                        {{ badge.text }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════ ABOUT / STORY ═══════════════ -->
+        <section class="py-24 relative" :class="isDark ? '' : 'bg-gray-50'">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+                    <div>
+                        <p class="section-label mb-4" style="color: #3B82F6;">Our Story</p>
+                        <h2 class="font-display text-4xl font-bold leading-tight mb-6"
+                            :class="isDark ? 'text-white' : 'text-gray-900'">
+                            Built by developers<br />
+                            <span class="grad-green">who felt the gap.</span>
+                        </h2>
+                        <div class="space-y-4 text-sm leading-relaxed"
+                            :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                            <p>For years, we've watched the WinForms community feel sidelined as the world of modern
+                                design moved on.</p>
+                            <p>As the creator of the <strong class="grad-purple">Bunifu Framework</strong> and a
+                                multi-year Microsoft MVP, our founder built this ecosystem because we believe you
+                                shouldn't have to choose between the reliability of .NET and the beauty of modern
+                                software.</p>
+                            <p>We poured decades of award-winning experience into building a native SVG ecosystem —
+                                replacing blurry, static bitmaps with a searchable library of <strong
+                                    class="grad-green">10,000+ scalable icons</strong>.</p>
+                        </div>
+                        <div class="flex gap-4 mt-8">
+                            <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
+                            <img src="./images/vb.jpg" alt="VB.NET"
+                                class="h-10 w-auto opacity-80 rounded" />
+                        </div>
+                    </div>
+
+                    <!-- Stats grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div v-for="stat in stats" :key="stat.label" class="p-6 rounded-xl transition-all duration-300"
+                            :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
+                            <div class="text-3xl font-display font-bold mb-1" :style="`color: ${stat.color}`">{{
+                                stat.value }}</div>
+                            <div class="text-xs font-mono opacity-60 uppercase tracking-widest"
+                                :class="isDark ? 'text-gray-400' : 'text-gray-600'">{{ stat.label }}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
+        <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">.NET
+                    Compatibility</p>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <span v-for="badge in dotnetBadges" :key="badge.text" class="pill text-xs font-mono"
+                        :style="`background: ${badge.color}18; color: ${badge.color}; border: 1px solid ${badge.color}33;`">
+                        {{ badge.text }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════ CONTROLS SECTION ═══════════════ -->
+        <section id="components" class="py-24" :class="isDark ? '' : 'bg-white'">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- IDE logos -->
+                <div class="mt-8">
+                    <img src="./images/vs-rider.png" alt="Visual Studio + Rider"
+                        class="h-16 opacity-60 mx-auto" />
+                </div>
+                <div class="text-center mt-10 mb-14">
+                    <p class="section-label mb-4" style="color: #7C3AED;">UI Components</p>
+                    <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
+                        WinForms <span class="grad-green">Controls</span> &amp; Components
+                    </h2>
+                    <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        By marrying a Tailwind-inspired architecture with high-fidelity rendering, we've replaced the
+                        exhausting grind of manual styling with the pure joy of low-code creation.
+                    </p>
                 </div>
 
+                <!-- Search -->
+                <div class="flex items-center justify-between mb-8 gap-4">
+                    <div class="relative flex-1 max-w-sm">
+                        <input v-model="query" type="text" placeholder="Search controls..."
+                            class="w-full rounded-lg px-4 py-3 pl-10 text-sm font-mono outline-none transition-all"
+                            :class="isDark
+                             ? 'bg-white/[0.05] border border-white/10 text-white placeholder-white/30 focus:border-kt-green/50' 
+                             : 'bg-black/[0.04] border border-black/[0.09] text-gray-900 placeholder-gray-400 focus:border-kt-green/60'" />
+                        <svg class="absolute left-3 top-3.5 opacity-40" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-mono opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                        {{ filteredControls.length }}<span class="opacity-50">/{{ controls.length }}</span> controls
+                    </span>
+                </div>
 
-                <!-- Cards -->
-                <div class="row">
-
-
-                    <template x-for="(control, index) in filteredControls.slice(0, limit)" :key="control.name">
-                        <div class="col-sm-12 col-md-6 col-lg-3" x-show="true"
-                            x-transition:enter="transition ease-out duration-500"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-300"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95">
-                            <a :href="baseUrl + control.slug" class="control-card" target="_blank"
-                                rel="noopener noreferrer">
-                                <img :src="control.thumbnail" alt="" class="control-thumbnail" />
-                                <h4>
-                                    <i><span class="kt-prefix">kt </span></i>
-                                    <b><span x-text="control.name.replace('Kt-','')"></span></b>
-                                </h4>
-                            </a>
-
-                        </div>
+                <!-- Cards grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <template v-for="(control, i) in filteredControls.slice(0, limit)" :key="control.name">
+                        <a :href="'https://docs.kimtoo.net/sdk/controls/' + control.slug" target="_blank"
+                            class="control-card group"
+                            :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
+                            <div class="aspect-video overflow-hidden rounded-t-xl dark:bg-slate-900">
+                                <img :src="control.thumbnail" :alt="control.name"
+                                    class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300  dark:invert-[.75] dark:opacity-50" />
+                            </div>
+                            <div class="p-4 dark:bg-slate-800">
+                                <p class="text-xs font-mono font-600"
+                                    :class="isDark ? 'text-slate-200' : 'text-slate-800'">
+                                    <span class="text-blue-500 opacity-75">kt</span>
+                                    {{ control.name.replace('Kt-', '') }}
+                                </p>
+                            </div>
+                        </a>
                     </template>
                 </div>
 
-                <!-- Show More button -->
-                <div class="text-center mt-6" x-show="limit < filteredControls.length">
-                    <button class="read_more secondary" @click="limit += 16">
-                        <b>↓&nbsp;&nbsp;Show More</b>
+                <!-- Show more -->
+                <div v-if="limit < filteredControls.length" class="text-center mt-10">
+                    <button @click="limit += 16" class="btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg>
+                        Show More
                     </button>
                 </div>
-                <br />
+
+            </div>
+        </section>
+
+        <!-- ═══════════════ AI-READY SECTION ═══════════════ -->
+        <section class="py-24 relative overflow-hidden" :class="isDark ? 'bg-[#080b10]' : 'bg-gray-900'"
+            style="min-height: 480px;">
+
+            <div class="hero-glow w-[500px] h-[500px] bg-kt-purple top-[-100px] right-[-100px]" style="opacity:0.12;">
             </div>
 
-            <!--End Controls Cards -->
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-5 gap-12 items-center">
 
-        </div>
-    </div>
-    <!-- feature -->
-    <!-- amezing -->
-    <div class="amezing">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img src="images/vs-rider.png" style="opacity:.75;margin-top: -100px;margin-bottom: 100px;"
-                        alt="vs-rider" />
-                </div>
-                <div class="col-md-8">
-
-                    <div class="amezing_box">
-                        <div class="titlepage">
-                            <h2>
-                                The Next Frontier:
-                                <br>
-                                <strong class="gradient-dark">AI-Ready WinForms</strong>
-
-                                <!-- Your <strong class="gradient-dark">Target</strong> <b>.NET</b>
-                                <br>
-                                <strong class="gradient-dark">Platforms</strong> Supported -->
-                            </h2>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-10">
-                                <span style="color: white;font-size: 1rem;">
-                                    The KimTools Ecosystem is now evolving into the ultimate AI-Ready stack, featuring
-                                    an
-                                    integrated MCP Server, Generative UI, and components designed specifically for
-                                    human-AI
-                                    collaboration.
-                                    <br>
-                                    <br>
-                                    With an AI Agent built directly into the workflow, your development
-                                    experience becomes a seamless partnership where stunning, high-fidelity interfaces
-                                    are
-                                    generated, customized, and maintained with zero friction. We aren't just building a
-                                    library;
-                                    <br>
-                                    <br>
-                                    we are providing the platform where developers and AI collaborate to create the most
-                                    stunning, future-proof applications in the WinForms era.
-                                </span>
-                            </div>
-                        </div>
-
-
+                    <div class="lg:col-span-3">
+                        <p class="section-label mb-4" style="color: #A855F7;">Roadmap</p>
+                        <h2 class="font-display text-4xl font-bold text-white leading-tight mb-6">
+                            The Next Frontier:<br />
+                            <span class="grad-purple">AI-Ready WinForms</span>
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            The KimTools Ecosystem is evolving into the ultimate AI-Ready stack, featuring an integrated
+                            MCP Server, Generative UI, and components designed specifically for human-AI collaboration.
+                        </p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            With an AI Agent built directly into the workflow, your development experience becomes a
+                            seamless partnership where stunning, high-fidelity interfaces are generated, customized, and
+                            maintained with zero friction.
+                        </p>
 
                     </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="amezing_box">
-                        <img src="images/demo.gif" width="100%" alt="KimTools UI" />
+                    <div class="lg:col-span-2">
+                        <div class="rounded-2xl overflow-hidden"
+                            style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 32px 80px rgba(0,0,0,0.6);">
+                            <img src="./images/demo.gif" alt="KimTools Demo" class="w-full" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ FREE EDITION ═══════════════ -->
+        <section class="py-24" :class="isDark ? '' : 'bg-gray-50'">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <div class="order-2 lg:order-1">
+                        <div class="rounded-2xl overflow-hidden" :class="isDark ? 'card-dark' : 'card-light'">
+                            <img src="./images/can.png" alt="KimTools Free Edition" class="w-full" />
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2">
+                        <p class="section-label mb-4" style="color: #FF6B35;">Coming Soon</p>
+                        <h2 class="font-display text-4xl font-bold leading-tight mb-6"
+                            :class="isDark ? 'text-white' : 'text-gray-900'">
+                            You Asked.<br />
+                            <span class="grad-fire">We Listened.</span>
+                        </h2>
+                        <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                            <strong class="grad-green">KimTools Free Edition</strong> is coming — a curated set of
+                            essential controls built with the same quality, performance, and modern design standards as
+                            the PLUS+ suite.
+                        </p>
+                        <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                            No compromise on rendering fidelity. No watered-down controls. Full access to the DPI-aware,
+                            theme-ready foundation that makes KimTools stand out.
+                        </p>
+                        <div class="mt-8">
+                            <a href="https://checkout.kimtoo.net" class="btn-primary">
+                                Get KimTools Plus+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ BUNIFU BANNER ═══════════════ -->
+        <section class="py-10" :class="isDark ? 'bg-[#0d0f14]' : 'bg-white'">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="rounded-2xl p-10 flex flex-col md:flex-row items-center gap-8"
+                    style="background: linear-gradient(135deg, hsl(272,62%,8%), hsl(272,62%,14%)); border: 1px solid rgba(168,85,247,0.2);">
+                    <img src="./images/bunifu-vert.png" alt="Bunifu Framework"
+                        class="h-24 opacity-70" />
+                    <div class="flex-1 text-center md:text-left"
+                        style="border-left: 2px dashed rgba(255,255,255,0.1); padding-left: 2rem;">
+                        <p class="text-white/60 text-sm mb-1 font-mono">Looking for</p>
+                        <h3 class="font-display text-3xl font-bold grad-purple mb-3">Bunifu Framework?</h3>
+                        <p class="text-white/70 text-sm mb-6">You're in the right place! <strong>Kimtoo.net</strong> is
+                            the creator and founder of Bunifu Framework.</p>
+                        <a href="https://bunifu.kimtoo.net"
+                            class="btn-secondary bg-white text-black font-bold text-xs px-3 py-1 rounded-full hover:opacity-80 transition-opacity ml-2"
+                            style="border-color: rgba(168,85,247,0.4); color: #A855F7;">
+                            View Bunifu Offers
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <img src="./images/offer-30.png" alt="30% off" class="h-28"
+                            style="filter: drop-shadow(0 8px 24px rgba(0,0,0,0.5));" />
+                        <p class="text-white/50 text-xs mt-2 font-mono">Save up to <strong
+                                class="text-green-400">$105</strong> today</p>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- ═══════════════ YOUTUBE / TUTORIALS ═══════════════ -->
+        <section class="py-24" :class="isDark ? 'bg-[#080b10]' : 'bg-gray-100'">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <p class="section-label mb-4" style="color: #FF4C8B;">YouTube Channel</p>
+                <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
+                    Master KimTools with<br /><span class="grad-fire">in-depth Video Demos</span>
+                </h2>
+                <p class="text-sm max-w-xl mx-auto mb-10" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                    Every UI component comes with an in-depth screencast. In addition to production-ready components,
+                    you get training and instruction to build and modify them for yourself.
+                </p>
 
-
-        </div>
-    </div>
-    <br />
-    <br />
-    <section class="feature layout_padding light_silver">
-        <div class="container">
-            <div class="row p-5 shadow-lg" style="border-radius: 35px">
-                <div class="p-3 col-sm-12 col-md-5 text-sm-center text-md-right">
-                    <img src="images/can.png" width="100%" />
-                </div>
-                <div class="titlepage  col-sm-12 col-md-7 text-sm-center text-md-left">
-                    <br />
-                    <br />
-                    <h2>You Asked, <b class="gradient-light"><br /> We Listened</b></h2>
-
-                    <b class="gradient-light"> KimTools Free Edition</b> <b>(Coming Soon)</b>,
-                    <br />
-                    is a set of curated essential controls, built with the same quality, performance,
-                    <br />
-                    and modern design standards as the <b class="gradient-light">PLUS+</b> suite.
-
-
+                <!-- YouTube embed -->
+                <div class="rounded-2xl overflow-hidden mb-8"
+                    style="box-shadow: 0 0 0 1px rgba(255,76,139,0.15), 0 32px 80px rgba(0,0,0,0.6);">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/UgHwt2fzvmI"
+                        title="Build a Modern WinForms Dashboard with KimTools" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="w-full">
+                    </iframe>
                 </div>
 
+                <p class="text-sm mb-6" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                    New KimTools updates, control demos, and WinForms tips posted regularly.
+                    <span class="grad-green font-bold">Subscribe</span> to stay updated.
+                </p>
+                <a href="https://www.youtube.com/@kimtooflex" target="_blank" class="btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#0a0d0f">
+                        <path
+                            d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z" />
+                    </svg>
+                    Watch on YouTube
+                </a>
             </div>
+        </section>
 
-            <!-- <br />
-            <br />
-            <br />
-            <div id="pricing" class="titlepage">
-                <h2>Pricing for <b class="gradient-light">Everyone</b></h2>
-                <span>
-                    Get access to all <b class="gradient-light"> KimTools Plus + </b> UI Components including future
-                    updates and additions for a single low price.
-                </span>
-            </div> -->
+        <!-- ═══════════════ FOOTER ═══════════════ -->
+        <footer class="border-t" :class="isDark ? 'border-white/[0.06] bg-[#0d0f14]' : 'border-black/[0.07] bg-white'">
+            <div class="max-w-7xl mx-auto px-6 py-16">
+                <div class="grid md:grid-cols-4 gap-10 mb-12">
 
-            <!-- <div class="row d_flex" style="justify-content:center; gap:30px;">
+                    <!-- Brand -->
+                    <div class="md:col-span-2">
+                        <div class="flex items-center gap-1 mb-4">
+                            <img src="./images/kt-icon-md.png" alt="KimTools" class="h-6" />
+                            <span class="font-display font-bold text-xl"
+                                :class="isDark ? 'text-slate-400' : 'text-gray-900'"> Kim<span
+                                    class="grad-green">Tools</span></span>
+                        </div>
+                        <p class="text-sm leading-relaxed mb-6" :class="isDark ? 'text-gray-500' : 'text-gray-500'">
+                            The modern UI toolkit for WinForms developers. Build beautiful, AI-ready .NET applications
+                            with confidence.
+                        </p>
+                        <a href="mailto:support@kimtoo.net" class="text-sm font-mono transition-colors"
+                            style="color: #3B82F6;">
+                            support@kimtoo.net
+                        </a>
+                    </div>
 
-               
-                <div class="pricing-card shadow-lg"
-                    style=" background:linear-gradient(0deg,hsl(268, 88%, 60%),hsl(268, 88%, 20%));">
-                    <img src="images/X.png" alt="plus+" />
-                    <h1 class="gradient-dark">Lifetime</h1>
-                    <h1 style="color:white;font-size:5em">$99<sub style="font-size:.25em"> /One-time</sub></h1>
-                    <br />
-                    <p class="text-light"><i>Unlimited Lifetime features For serious desktop applications.</i></p>
-                    <ul style="margin:30px 0; line-height:30px;">
-                        <li>Lifetime License</li>
-                        <li>All Free features</li>
-                        <li>Plus premium Components</li>
-                        <li>Themes & Variable Color System</li>
-                        <li>Advanced Design-time editors</li>
-                        <li>Commercial use</li>
-                    </ul>
-                    <a class="read_more" style="opacity:.9" target="_blank"
-                        href="https://checkout.kimtoo.net"><b>Buy License</b></a>
+                    <!-- Links -->
+                    <div>
+                        <p class="text-xs font-mono font-bold uppercase tracking-widest mb-4 opacity-40"
+                            :class="isDark ? 'text-gray-300' : 'text-gray-700'">Product</p>
+                        <ul class="space-y-3">
+                            <li v-for="link in footerLinks.product" :key="link.label">
+                                <a :href="link.href" :target="link.target" class="text-sm transition-colors"
+                                    :class="isDark ? 'text-gray-500 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
+                                    {{ link.label }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-mono font-bold uppercase tracking-widest mb-4 opacity-40"
+                            :class="isDark ? 'text-gray-300' : 'text-gray-700'">Resources</p>
+                        <ul class="space-y-3">
+                            <li v-for="link in footerLinks.resources" :key="link.label">
+                                <a :href="link.href" :target="link.target" class="text-sm transition-colors"
+                                    :class="isDark ? 'text-gray-500 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
+                                    {{ link.label }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                
-                <div class="pricing-card shadow-lg"
-                    style="  background:linear-gradient(0deg,hsl(268, 88%, 60%),hsl(268, 88%, 20%));">
-                    <img src="images/X.png" alt="plus+" />
-                    <h1 class="gradient-dark">Perpetual</h1>
-                    <h1 style="color:white;font-size:5em">$49<sub style="font-size:.25em"> /Year</sub></h1>
-                    <br />
-                    <p class="text-light"><i>Unlimited annual Perpetual features For serious desktop applications.</i>
+                <!-- Bottom -->
+                <div class="border-t pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+                    :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
+                    <p class="text-xs font-mono opacity-40" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                        © 2026 KimTools. All Rights Reserved.
                     </p>
-                    <ul style="margin:30px 0; line-height:30px;">
-                        <li>Perpetual License</li>
-                        <li>All Free features</li>
-                        <li>Plus premium Components</li>
-                        <li>Themes & Variable Color System</li>
-                        <li>Advanced Design-time editors</li>
-                        <li>Commercial use</li>
-                    </ul>
-                    <a class="read_more" style="opacity:.9" target="_blank"
-                        href="https://checkout.kimtoo.net"><b>Buy License</b></a>
-                </div>
-
-
-
-                 
-                <div id="free" class="pricing-card"
-                    style="background:linear-gradient(0deg,hsl(216, 100%, 50%),hsl(216, 100%, 20%));">
-                    <img src="images/X.png" alt="plus+" />
-                    <h1 class="gradient-dark">Subscription</h1>
-                    <h1 style="color:white;font-size:5em">$4.9<sub style="font-size:.25em"> /Month</sub></h1>
-                    <br />
-                    <p class="text-light"><i>Monthly Unlimited Subscription features For serious desktop
-                            applications.</i></p>
-                    <ul style="margin:30px 0; line-height:30px;">
-
-                        <li>Subscription License</li>
-                        <li>All Free features</li>
-                        <li>Plus premium Components</li>
-                        <li>Themes & Variable Color System</li>
-                        <li>Advanced Design-time editors</li>
-                        <li>Commercial use</li>
-                    </ul>
-                    <a class="read_more" style="opacity:.9" target="_blank"
-                        href="https://checkout.kimtoo.net/plus"><b>Buy License</b></a>
-                </div>
-
-
-            </div>
-            <br /> -->
-
-            <!-- Up-Work  Banner -->
-            <!-- <div class="row my-5 pb-5">
-                <div class="col-12">
-                    <div class="bg-dark text-white rounded shadow-lg p-4 p-md-5"
-                        style="background: linear-gradient(0deg,hsl(113, 100%, 33%),hsl(113, 100%, 20%))!important; border-radius: 35px !important;">
-                        <div class="row align-items-center">
-                          
-                            <div class="col-md-2 text-center mb-3 mb-md-0 d-none d-md-block">
-                                <img src="./images/upwork-h.webp" alt="UpWorkLogo" class="img-fluid"
-                                    style="max-width:120px;opacity:0.7;filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-                            </div>
- 
-                            <div class="col-md-7 col-12 mb-3 pl-5 mb-md-0"
-                                style="border-left: 2px dashed hsla(0, 100%, 100%, 0.2);">
-
-                                <h1 class="mb-3 text-light" style="font-size:3em">
-                                    Custom Application UI Development Services.
-                                </h1>
-
-                                <p class="lead my-3" style="font-size: 1.1rem;color:white">
-                                    <li>✔️ KimTools Plus+ Lifetime LTS</li>
-                                    <li>✔️ Early Access</li>
-                                    <li>✔️ Custom Components</li>
-                                    <li>✔️ Custom Brand Themes</li>
-                                    <li>✔️ Priority support</li>
-                                    <li>✔️ Full Source-code & Docs</li>
-                                </p>
- 
-                                <div class="col-md-6 mt-5">
-                                    <a class="read_more" style="opacity:0.9" target="_blank"
-                                        href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share">Get
-                                        Started</a>
-                                </div>
-
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
-            <!-- Up-Work Redirect Banner -->
-            <!-- Bunifu Framework Redirect Banner -->
-            <div class="row my-5 pb-5">
-                <div class="col-12">
-                    <div class="bg-dark text-white rounded shadow-lg p-4 p-md-5"
-                        style="background:hsl(272, 62%, 11%)!important; border-radius:35px!important;">
-                        <div class="row align-items-center">
-                            <!-- Logo Section -->
-                            <div class="col-md-2 text-center mb-3 mb-md-0 d-none d-md-block">
-                                <img src="./images/bunifu-vert.png" alt="Bunifu Framework Logo" class="img-fluid"
-                                    style="max-width:120px;opacity:0.7;filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-                            </div>
-
-                            <!-- Content Section -->
-                            <div class="col-md-7 col-12 mb-3 pl-5 mb-md-0"
-                                style="border-left: 2px dashed hsla(0, 100%, 100%, 0.2);">
-
-                                <h1 class="text-light" style="font-size:2em">
-                                    Looking for
-                                </h1>
-                                <h1 class="mb-3 gradient-dark" style="font-size:3em">
-                                    Bunifu Framework?
-                                </h1>
-
-                                <p class="lead my-3" style="font-size: 1.1rem;color:white">
-                                    You're in the right place!<br /> <strong>Kimtoo.net</strong> is the creator and
-                                    founder of Bunifu Framework.
-                                </p>
-
-                                <!-- CTA Section -->
-                                <div class="col-md-6 mt-5">
-                                    <a href="https://bunifu.kimtoo.net" class="read_more secondary">
-                                        <b>View Bunifu Products</b>
-                                    </a>
-                                </div>
-
-
-                            </div>
-                            <div class="col-md-3 text-center mb-3 mb-md-0 d-none d-md-block">
-                                <img src="./images/offer-30.png" alt="30% offer" class="img-fluid"
-                                    style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-                                <small class="text-secondary d-block">
-                                    Save up to <br /> <b class="text-success">$105</b> today!
-                                </small>
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div>
             </div>
-            <!-- Bunifu Framework Redirect Banner -->
+        </footer>
 
-        </div>
-    </section>
+    </div><!-- #app -->
 
+    <script>
+        const { createApp, ref, computed, onMounted } = Vue;
 
-    <!--  footer -->
-    <footer>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
+        createApp({
+            setup() {
+                const isDark = ref(true);
+                const mobileOpen = ref(false);
+                const query = ref('');
+                const limit = ref(16);
 
-                        <div class="cont">
-                            <h3>Master KimTOOLs with our<br /> <b class="gradient-dark">in-depth</b> Video <b
-                                    class="gradient-dark">Demos & Tutorials</b></h3>
-                            <span>
-                                Every UI component comes with an in-depth screencast to go along with it. This way,
-                                in addition to getting production-ready components,
-                                you get training and instruction to build and modify them for yourself.
-                            </span>
-                            <br />
-                            <br />
+                const banners = [
+                    { text: '🎉 KimTools v26.5 is now live!', url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
+                    { text: '💥 Limited offer: Use code SDK26 for 52% off', url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Claim Discount' },
+                    { text: '📺 New demo: Modern Dashboard + Dark Mode WinForms', url: 'https://www.youtube.com/@kimtooflex', target: '_blank', cta: 'Watch Now' },
+                ];
+                const bannerIndex = ref(0);
+                const currentBanner = computed(() => banners[bannerIndex.value]);
 
-                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/UgHwt2fzvmI"
-                                title="Build a Modern WinForms Dashboard + Login with Dark &amp; Light modes using KimTOOLs Themes"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <br />
-                            <br />
-                            <span>
-                                New KimTools updates, control demos, and WinForms tips are posted on our channel.
-                                <br />
-                                <b class="gradient-dark">Subscribe</b> to stay updated.
-                            </span>
-                            <br />
-                            <br />
+                const navLinks = [
+                    { label: 'Download', href: 'https://checkout.kimtoo.net' },
+                    { label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
+                    { label: 'Docs', href: 'https://docs.kimtoo.net', target: '_blank' },
+                    { label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank' },
+                    { label: 'Bunifu UI', href: 'https://bunifu.kimtoo.net' },
+                    { label: 'Support', href: 'https://support.kimtoo.net', target: '_blank' },
+                ];
 
-                            <div class="col-12 text-center">
-                                <a class="read_more" style="width:200px" target="_blank"
-                                    href="https://www.youtube.com/@kimtooflex"><b>Watch Demo</b></a>
-                            </div>
+                const features = [
+                    '35+ Modern Customizable Controls',
+                    '35+ Enterprise-Grade Themes',
+                    'Tailwind-Inspired Color System',
+                    '10,000+ Precision SVG Icons',
+                    'Intuitive Low-Code Designers',
+                    'Advanced Rendering Engine',
+                ];
+                const featColors = ['#3B82F6', '#7C3AED', '#FF6B35', '#FF4C8B', '#A855F7', '#FFD166'];
 
-                            <br />
-                            <br />
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
+                const stats = [
+                    { value: '35+', label: 'UI Controls', color: '#3B82F6' },
+                    { value: '35+', label: 'Themes', color: '#7C3AED' },
+                    { value: '10K+', label: 'SVG Icons', color: '#FF6B35' },
+                    { value: '5×', label: 'Microsoft MVP', color: '#A855F7' },
+                ];
 
-            <!-- request -->
-            <div class="request">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="titlepage">
-                                <h2>Send us a<strong class="gradient-light"> Message</strong></h2>
-                                <span>
-                                    Have feedback, found a bug, or need help?
-                                    Reach out to the KimTools team directly.
+                const dotnetBadges = [
+                    { text: '.NET Framework 4.6.2', color: '#3B82F6' },
+                    { text: '.NET Framework 4.7', color: '#3B82F6' },
+                    { text: '.NET Framework 4.8+', color: '#3B82F6' },
+                    { text: '.NET Core 6.0', color: '#A855F7' },
+                    { text: '.NET Core 7.0', color: '#A855F7' },
+                    { text: '.NET Core 8.0', color: '#A855F7' },
+                    { text: '.NET 9.0+', color: '#A855F7' },
+                ];
 
-                                    KimTools+ subscribers get priority support with faster responses and direct access
-                                    to fixes and guidance.
-                                </span>
-                                <br />
-                                <br />
-                                <li><a href="mailto:support@kimtoo.net"><b><i>support@kimtoo.net</i></b></a></li>
-                            </div>
-                        </div>
-                    </div>
+                const tickerBadges = [
+                    { text: '.NET Framework 4.6+', color: '#3B82F6' },
+                    { text: '.NET 9.0 Support', color: '#A855F7' },
+                    { text: 'C# & VB.NET', color: '#3B82F6' },
+                    { text: 'DPI-Aware Rendering', color: '#7C3AED' },
+                    { text: 'WinForms Designer', color: '#FF6B35' },
+                    { text: '10,000+ SVG Icons', color: '#FF4C8B' },
+                    { text: '35+ Themes', color: '#FFD166' },
+                    { text: 'Tailwind Color System', color: '#3B82F6' },
+                    { text: 'AI-Ready Stack', color: '#A855F7' },
+                    { text: 'Perpetual License', color: '#FF6B35' },
+                ];
 
-                </div>
-                <div class="col-md-12 mt-5 text-center">
-                    <img src="images/logo.png" />
-                </div>
-                <div class="copyright">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p>© 2026 All Rights Reserved.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end request -->
+                const controlGradients = [
+                    '#1a222a, #0d111a',
+                    '#1a1a2a, #0d0d1a',
+                    '#2a1a1a, #1a0d0d',
+                    '#221a2a, #110d1a',
+                ];
 
-        </div>
-    </footer>
-    <!-- end footer -->
-    <!-- Javascript files-->
+                const controls = ref([]);
 
+                const filteredControls = computed(() => {
+                    if (!query.value) return controls.value;
+                    const q = query.value.toLowerCase();
+                    return controls.value.filter(c => c.name.toLowerCase().includes(q));
+                });
 
-    <!--Start of Tawk.to Script-->
+                const footerLinks = {
+                    product: [
+                        { label: 'Download', href: 'https://checkout.kimtoo.net' },
+                        { label: 'Themes Store', href: 'https://store.kimtoo.net', target: '_blank' },
+                        { label: 'Bunifu UI', href: 'https://bunifu.kimtoo.net' },
+                        { label: 'Changelog', href: 'https://docs.kimtoo.net', target: '_blank' },
+                    ],
+                    resources: [
+                        { label: 'Documentation', href: 'https://docs.kimtoo.net', target: '_blank' },
+                        { label: 'YouTube Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
+                        { label: 'Support', href: 'https://support.kimtoo.net', target: '_blank' },
+                        { label: 'Contact Us', href: 'mailto:support@kimtoo.net' },
+                    ],
+                };
+
+                function toggleTheme() {
+                    isDark.value = !isDark.value;
+                    document.documentElement.classList.toggle('dark', isDark.value);
+                    document.body.style.backgroundColor = isDark.value ? '#0d0f14' : '#ffffff';
+                    document.body.style.color = isDark.value ? '#ffffff' : '#111827';
+                }
+
+                async function fetchControls() {
+                    try {
+                        const res = await fetch('./docs/controls.json');
+                        const data = await res.json();
+                        controls.value = data;
+                    } catch {
+                        // Fallback controls list
+                        controls.value = [];
+                    }
+                }
+
+                onMounted(() => {
+                    fetchControls();
+
+                    // Rotate banners
+                    setInterval(() => {
+                        bannerIndex.value = (bannerIndex.value + 1) % banners.length;
+                    }, 5000);
+
+                    // Init dark mode
+                    document.documentElement.classList.add('dark');
+                });
+
+                return {
+                    isDark, mobileOpen, query, limit,
+                    currentBanner, navLinks, features, featColors,
+                    stats, dotnetBadges, tickerBadges, controlGradients,
+                    controls, filteredControls, footerLinks,
+                    toggleTheme,
+                };
+            }
+        }).mount('#app');
+    </script>
+
+    <!-- Tawk.to -->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
             var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6306a5d437898912e964fc2b/1gb8vfi4s';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
+            s1.async = true; s1.src = 'https://embed.tawk.to/6306a5d437898912e964fc2b/1gb8vfi4s';
+            s1.charset = 'UTF-8'; s1.setAttribute('crossorigin', '*'); s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-    <!--End of Tawk.to Script-->
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <!-- Video pop-up -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            new ModalVideo(".js-video-btn");
+        });
+    </script>
 
 </body>
 
