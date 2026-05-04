@@ -598,8 +598,7 @@
                         </div>
                         <div class="flex gap-4 mt-8">
                             <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
-                            <img src="./images/vb.jpg" alt="VB.NET"
-                                class="h-10 w-auto opacity-80 rounded" />
+                            <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
                         </div>
                     </div>
 
@@ -637,8 +636,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <!-- IDE logos -->
                 <div class="mt-8">
-                    <img src="./images/vs-rider.png" alt="Visual Studio + Rider"
-                        class="h-16 opacity-60 mx-auto" />
+                    <img src="./images/vs-rider.png" alt="Visual Studio + Rider" class="h-16 opacity-60 mx-auto" />
                 </div>
                 <div class="text-center mt-10 mb-14">
                     <p class="section-label mb-4" style="color: #7C3AED;">UI Components</p>
@@ -791,8 +789,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="rounded-2xl p-10 flex flex-col md:flex-row items-center gap-8"
                     style="background: linear-gradient(135deg, hsl(272,62%,8%), hsl(272,62%,14%)); border: 1px solid rgba(168,85,247,0.2);">
-                    <img src="./images/bunifu-vert.png" alt="Bunifu Framework"
-                        class="h-24 opacity-70" />
+                    <img src="./images/bunifu-vert.png" alt="Bunifu Framework" class="h-24 opacity-70" />
                     <div class="flex-1 text-center md:text-left"
                         style="border-left: 2px dashed rgba(255,255,255,0.1); padding-left: 2rem;">
                         <p class="text-white/60 text-sm mb-1 font-mono">Looking for</p>
@@ -924,7 +921,11 @@
 
         createApp({
             setup() {
-                const isDark = ref(true);
+                // Initialize from localStorage or fallback to system preference
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+                const isDark = ref(savedTheme ? savedTheme === 'dark' : systemPrefersDark);
                 const mobileOpen = ref(false);
                 const query = ref('');
                 const limit = ref(16);
@@ -1018,10 +1019,17 @@
 
                 function toggleTheme() {
                     isDark.value = !isDark.value;
+                    localStorage.setItem('theme', isDark.value ? 'dark' : 'light');
+                    RenderTheme();
+                }
+
+                function RenderTheme() {
                     document.documentElement.classList.toggle('dark', isDark.value);
                     document.body.style.backgroundColor = isDark.value ? '#0d0f14' : '#ffffff';
                     document.body.style.color = isDark.value ? '#ffffff' : '#111827';
                 }
+
+         
 
                 async function fetchControls() {
                     try {
@@ -1042,8 +1050,7 @@
                         bannerIndex.value = (bannerIndex.value + 1) % banners.length;
                     }, 5000);
 
-                    // Init dark mode
-                    document.documentElement.classList.add('dark');
+                      RenderTheme();
                 });
 
                 return {
