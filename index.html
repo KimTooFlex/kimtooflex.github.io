@@ -558,8 +558,7 @@
         </section>
 
         <!-- ═══════════════ TICKER / BADGES ═══════════════ -->
-        <div class="py-4 border-y overflow-hidden"
-            :class="isDark ? 'border-white/[0.06] bg-white/[0.1]' : 'border-black/[0.07] bg-black/[0.1]'">
+        <div class="py-4 border-y overflow-hidden border-black/[0.07] bg-black/[0.1] dark:border-white/[0.06] dark:bg-white/[0.1] " >
             <div class="ticker-wrap">
                 <div class="ticker-inner animate">
                     <span v-for="badge in [...tickerBadges, ...tickerBadges]" :key="badge + Math.random()"
