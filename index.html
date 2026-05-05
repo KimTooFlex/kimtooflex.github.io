@@ -341,12 +341,12 @@
     </style>
 </head>
 
-<body class="bg-[#0d0f14] dark:bg-[#0d0f14] text-white transition-colors duration-300">
+<body class="transition-colors duration-300">
 
     <div id="app">
 
         <!-- ═══════════════ ANNOUNCEMENT BAR ═══════════════ -->
-        <div class="banner-bar text-white text-xs py-2 px-4 text-center relative"
+        <div id="sticky-threshold" class="banner-bar text-white text-xs py-2 px-4 text-center relative"
             style="font-family:'JetBrains Mono',monospace;">
             <span class="opacity-80">{{ currentBanner.text }}</span>
             &nbsp;
@@ -357,8 +357,8 @@
         </div>
 
         <!-- ═══════════════ NAVBAR ═══════════════ -->
-        <nav class="sticky top-0 z-50 border-b"
-            :class="isDark ? 'bg-[#0d0f14]/95 border-white/[0.06]' : 'bg-white/95 border-black/[0.07]'"
+        <nav id="main-nav" class="sticky top-0 z-50 border-b shadow-md"
+            :class="isDark ? 'bg-slate-800/95 border-white/[0.1]' : 'bg-white/95 border-black/[0.07]'"
             style="backdrop-filter: blur(16px);">
             <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
 
@@ -559,7 +559,7 @@
 
         <!-- ═══════════════ TICKER / BADGES ═══════════════ -->
         <div
-            class="py-4 border-y overflow-hidden border-black/[0.07] bg-black/[0.1] dark:border-white/[0.06] dark:bg-white/[0.1] ">
+            class="py-4  border-y overflow-hidden border-black/[0.07] bg-slate/90 dark:border-white/[0.06] dark:bg-white/[0.1] ">
             <div class="ticker-wrap">
                 <div class="ticker-inner animate">
                     <span v-for="badge in [...tickerBadges, ...tickerBadges]" :key="badge + Math.random()"
@@ -573,7 +573,7 @@
         </div>
 
         <!-- ═══════════════ ABOUT / STORY ═══════════════ -->
-        <section class="py-24 relative" :class="isDark ? '' : 'bg-gray-50'">
+        <section class="py-24 relative shadow-xl dark:bg-slate-800">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-start">
 
@@ -618,7 +618,7 @@
 
 
         <!-- ═══════════════ DEVELOPER EXPERIENCE ═══════════════ -->
-        <section class="py-24" :class="isDark ? '' : 'bg-gray-50'">
+        <section class="py-24 bg-white dark:bg-slate-900">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -642,8 +642,7 @@
                             and integrated color tokens.
                             <br>
                             <br>
-                            It bridges the gap between design and code with a <strong
-                                class="grad-green">VsCode-style
+                            It bridges the gap between design and code with a <strong class="grad-green">VsCode-style
                                 markup editor</strong> for real-time HTML/SVG editing, an <strong
                                 class="grad-green">integrated icon search</strong>, it allows you to visually compose
                             modern, production-ready
@@ -700,7 +699,7 @@
                 <!-- Search -->
                 <div class="flex items-center justify-between mb-8 gap-4">
                     <div class="relative flex-1 max-w-sm">
-                        <input v-model="query" type="text" placeholder="Search controls..."
+                        <input v-model="query" type="text" placeholder="Search..."
                             class="w-full rounded-lg px-4 py-3 pl-10 text-sm font-mono outline-none transition-all"
                             :class="isDark
                              ? 'bg-white/[0.05] border border-white/10 text-white placeholder-white/30 focus:border-kt-green/50' 
@@ -976,7 +975,7 @@
                 const isDark = ref(savedTheme ? savedTheme === 'dark' : systemPrefersDark);
                 const mobileOpen = ref(false);
                 const query = ref('');
-                const limit = ref(16);
+                const limit = ref(4);
 
                 const banners = [
                     { text: '🎉 KimTools v26.5 is now live!', url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
@@ -1098,7 +1097,9 @@
                         bannerIndex.value = (bannerIndex.value + 1) % banners.length;
                     }, 5000);
 
+                    
                     RenderTheme();
+                    console.clear();
                 });
 
                 return {
