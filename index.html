@@ -457,7 +457,7 @@
                         <!-- Label -->
                         <div class="flex items-center gap-3 mb-6 animate-fade-up">
                             <span class="pill" style="background: rgba(59,130,246,0.12); color: #3B82F6;">For WinForms
-                                Developers</span>
+                                Developers </span>
                             <span class="text-xs opacity-50 font-mono">//&nbsp;v26.5 LTS</span>
                         </div>
 
@@ -465,7 +465,6 @@
                         <h1 class="font-display font-800 leading-tight mb-6 animate-fade-up delay-100"
                             :class="isDark ? 'text-white' : 'text-gray-900'"
                             style="font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -0.02em;">
-                            The<br />
                             <span class="grad-green">Modern UI</span><br />
                             Toolkit for<br />
                             <span class="font-mono" style="font-size:0.85em; opacity: 0.7;">{ .NET }</span>
@@ -474,13 +473,10 @@
                         <!-- Subtext -->
                         <p class="mb-8 leading-relaxed text-sm animate-fade-up delay-200"
                             :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            <span class="text-light font-bold">KimTools</span> is the comprehensive toolkit of stunning
-                            <span class="grad-purple font-bold">UI Controls</span> and <span
-                                class="grad-fire font-bold">Toolbox Components</span>,
-                            <br>
-                            built to transform legacy <span class="grad-green font-bold">WinForms Designer</span> into
-                            sleek,
-                            efficient and Developer friendly workspace.
+                            An elegant suite of intuitive <span class="grad-purple font-bold">UI controls</span>,
+                            components, and libraries — <br> perfectly polished to
+                            deliver an efficient, aesthetically pleasing Apps and world-class <span
+                                class="grad-fire font-bold">developer experience</span>.
                         </p>
 
                         <!-- Feature list -->
@@ -549,7 +545,13 @@
                         <!-- Corner tag -->
                         <div class="absolute  animate-bounce -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-mono font-bold"
                             style="background: linear-gradient(135deg,#FF6B35,#FF4C8B); color: white; transform: rotate(3deg);">
-                            HOT
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
+                            </svg>
                         </div>
                     </div>
 
@@ -620,7 +622,7 @@
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
 
                     <div class="order-2 lg:order-1">
-                        <div class="rounded-2xl overflow-hidden" :class="isDark ? 'card-dark' : 'card-light'">
+                        <div class="rounded-2xl overflow-hidden " :class="isDark ? 'card-dark' : 'card-light'">
                             <img src="./images/kt-designer.gif" alt="KimTools Free Edition" class="w-full" />
                         </div>
                     </div>
@@ -628,8 +630,7 @@
                     <div class="order-1 lg:order-2">
                         <!-- IDE logos -->
                         <div class="mt-8">
-                            <img src="./images/vs-rider.png" alt="Visual Studio + Rider"
-                                class="h-16 mb-5" />
+                            <img src="./images/vs-rider.png" alt="Visual Studio + Rider" class="h-16 mb-5 " />
                         </div>
                         <p class="section-label mb-4" style="color: #FF6B35;">Developer Experience</p>
                         <h2 class="font-display text-4xl font-bold leading-tight mb-6"
@@ -650,7 +651,7 @@
                             modern, production-ready
                             interfaces with instant, live feedback directly on the design surface.
                         </p>
-                       
+
                     </div>
 
                 </div>
@@ -661,14 +662,15 @@
         <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
         <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
             <div class="max-w-5xl mx-auto px-6 text-center">
-                 <div class="flex gap-4 mb-8  justify-center">
+                <div class="flex gap-4 mb-8  justify-center">
                     <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
                     <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
                 </div>
 
                 <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
                     <b class="grad-purple"> .NET</b>
-                    Compatibility</p>
+                    Compatibility
+                </p>
                 <div class="flex flex-wrap justify-center gap-2">
                     <span v-for="badge in dotnetBadges" :key="badge.text" class="pill text-xs font-mono"
                         :style="`background: ${badge.color}18; color: ${badge.color}; border: 1px solid ${badge.color}33;`">
@@ -676,7 +678,7 @@
                     </span>
                 </div>
 
-               
+
             </div>
         </div>
 
@@ -842,7 +844,7 @@
                         <h3 class="font-display text-3xl font-bold grad-purple mb-3">Bunifu Framework?</h3>
                         <p class="text-white/70 text-sm mb-6">You're in the right place! <strong>Kimtoo.net</strong> is
                             the creator and founder of Bunifu Framework.</p>
-                        <a href="https://bunifu.kimtoo.net"
+                        <a href="https://kimtoo.net/bunifu"
                             class="btn-secondary bg-white text-black font-bold text-xs px-3 py-1 rounded-full hover:opacity-80 transition-opacity ml-2"
                             style="border-color: rgba(168,85,247,0.4); color: #A855F7;">
                             View Bunifu Offers
@@ -985,11 +987,11 @@
                 const currentBanner = computed(() => banners[bannerIndex.value]);
 
                 const navLinks = [
-                    { label: 'Download', href: 'https://checkout.kimtoo.net' },
-                    { label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
                     { label: 'Docs', href: 'https://docs.kimtoo.net', target: '_blank' },
+                    { label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
+                    { label: 'Store', href: 'https://store.kimtoo.net', target: '_blank' },
                     { label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank' },
-                    { label: 'Bunifu UI', href: 'https://bunifu.kimtoo.net' },
+                    { label: 'Bunifu-UI', href: 'https://kimtoo.net/bunifu' },
                     { label: 'Support', href: 'https://support.kimtoo.net', target: '_blank' },
                 ];
 
@@ -998,7 +1000,7 @@
                     '35+ Enterprise-Grade Themes',
                     'Tailwind-Inspired Color System',
                     '10,000+ Precision SVG Icons',
-                    'Intuitive Low-Code Designers',
+                    'No/Low-Code Designer Editor',
                     'Advanced Rendering Engine',
                 ];
                 const featColors = ['#3B82F6', '#7C3AED', '#FF6B35', '#FF4C8B', '#A855F7', '#FFD166'];
@@ -1052,7 +1054,7 @@
                     product: [
                         { label: 'Download', href: 'https://checkout.kimtoo.net' },
                         { label: 'Themes Store', href: 'https://store.kimtoo.net', target: '_blank' },
-                        { label: 'Bunifu UI', href: 'https://bunifu.kimtoo.net' },
+                        { label: 'Bunifu UI', href: 'https://kimtoo.net/bunifu' },
                         { label: 'Changelog', href: 'https://docs.kimtoo.net', target: '_blank' },
                     ],
                     resources: [
