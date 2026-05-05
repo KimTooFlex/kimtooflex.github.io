@@ -2,7 +2,7 @@
 # https://kimtoo.net
 
 ## What is KimTools?
-KimTools is a commercial WinForms UI toolkit and SDK for .NET developers building desktop applications in C# and VB .NET. It provides a rich suite of controls, a powerful theming engine, and a modern developer experience on top of the Windows Forms platform.
+KimTools is a modern WinForms UI toolkit and SDK for .NET developers building desktop applications in C# and VB .NET. It provides a rich suite of controls, a powerful theming engine, and a modern developer experience on top of the Windows Forms platform.
 
 ## Who is KimTools for?
 KimTools is built for .NET developers who want to build beautiful, production-ready Windows desktop applications without fighting the limitations of vanilla WinForms.
