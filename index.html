@@ -304,6 +304,7 @@
             letter-spacing: 0.05em;
             transition: background 0.2s, transform 0.2s, border-color 0.2s;
         }
+        
 
         .btn-secondary:hover {
             transform: translateY(-2px);
@@ -429,7 +430,7 @@
                     </button>
 
                     <!-- Download CTA -->
-                    <a href="https://checkout.kimtoo.net"
+                    <a href="https://checkout.kimtoo.net" data-analytics="checkout-menu-button"
                         class="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase px-4 py-2.5 rounded-lg transition-all"
                         style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
                         Download
@@ -488,7 +489,8 @@
                         <div class="flex items-center gap-3 mb-6 animate-fade-up">
                             <span class="pill" style="background: rgba(59,130,246,0.12); color: #3B82F6;">For WinForms
                                 Developers </span>
-                            <span class="text-xs opacity-50 font-mono">//&nbsp;v26.5 LTS</span>
+                            <span class="text-xs opacity-50 font-mono">//&nbsp;<span v-text="latestVersion"></span>
+                                LTS</span>
                         </div>
 
                         <!-- Headline -->
@@ -526,14 +528,10 @@
 
                         <!-- CTA row -->
                         <div class="flex flex-wrap gap-4 animate-fade-up delay-400">
-                            <!-- <a href="https://checkout.kimtoo.net" class="btn-primary"
-                                style="background: linear-gradient(135deg,#FF6B35,purple); color: white;">
-                                <img src="./images/X.png" alt="btn-logo" class="h-4 w-auto pr-2" />
-                                Get Started
-                            </a> -->
+                           
 
-                            <a class="gumroad-button"
-                                style="border-radius: 12px; background: linear-gradient(135deg,#FF6B35,purple); color: white;"
+                            <a class="gumroad-button" data-analytics="gumroad-button"
+                                style="border-radius: 12px;border-width: 0px; background: linear-gradient(135deg,#FF6B35,purple); color: white;"
                                 href="https://kimtooflex.gumroad.com/l/kimtools">
                                 <img src="./images/X.png" alt="btn-logo" class="h-5 w-auto pr-2" />
                                 <b class="pr-4">Get KimTools</b>
@@ -581,15 +579,16 @@
                             </figure>
                         </div>
                         <!-- Corner tag -->
-                        <div class="absolute  animate-bounce -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-mono font-bold"
-                            style="background: linear-gradient(135deg,#FF6B35,#FF4C8B); color: white; transform: rotate(3deg);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        <div class="absolute  animate-bounce -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-mono font-bold w-fit"
+                            style="z-index: 999; background: linear-gradient(135deg,#FF6B35,#9811A6,#00AFAF); color: white; transform: rotate(3deg);">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
-                            </svg>
+                            </svg> -->
+                            <b v-text="latestVersion"></b>
                         </div>
                     </div>
 
@@ -654,7 +653,7 @@
                              ? 'bg-slate-900 border border-white/10 text-white placeholder-white/30 focus:border-kt-green/50' 
                              : 'bg-black/[0.04] border border-black/[0.09] text-gray-900 placeholder-gray-400 focus:border-kt-green/60'" />
 
-                                <button type="submit"
+                                <button type="submit" data-analytics="join_waitlist"
                                     class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20"
                                     style="height: 44px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);">
                                     Join Waiting List
@@ -785,8 +784,9 @@
         </div>
 
         <!-- ═══════════════ CONTROLS SECTION ═══════════════ -->
-        <section id="components " class="py-24 grid-bg "  >
-            <div class="max-w-7xl mx-auto px-6 shadow-xl bg-white dark:bg-slate-800  rounded-3xl" :class="isDark ? 'card-dark' : 'card-light'" style="padding: 50px;">
+        <section id="components " class="py-24 grid-bg ">
+            <div class="max-w-7xl mx-auto px-6 shadow-xl bg-white dark:bg-slate-800  rounded-3xl"
+                :class="isDark ? 'card-dark' : 'card-light'" style="padding: 50px;">
 
                 <div class="text-center mb-14">
                     <p class="section-label mb-4" style="color: #7C3AED;">UI Components</p>
@@ -841,7 +841,7 @@
 
                 <!-- Show more -->
                 <div v-if="limit < filteredControls.length" class="text-center mt-10">
-                    <button @click="limit += 16" class="btn-secondary">
+                    <button data-analytics="show_more_controls" @click="limit += 16" class="btn-secondary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <path d="M12 5v14M5 12l7 7 7-7" />
@@ -919,7 +919,7 @@
                                     <input type="email" name="email" placeholder="developer@example.com" required
                                         class="w-full px-5 py-4 rounded-xl border border-gray-700 bg-black/30 text-white text-sm transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50 placeholder:text-gray-600" />
 
-                                    <button type="submit"
+                                    <button type="submit" data-analytics="subscribe_newsletter"
                                         class="w-full flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
                                         style="background: linear-gradient(135deg, #A855F7, #6366F1);">
                                         Subscribe Now
@@ -982,7 +982,8 @@
                     <span class="grad-green font-bold">Subscribe</span> to stay updated.
                 </p>
                 <a href="https://www.youtube.com/@kimtooflex" target="_blank" class="btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="currentColor" class="mr-4">
                         <path
                             d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z" />
                     </svg>
@@ -1135,6 +1136,18 @@
 
         createApp({
             setup() {
+
+                const now = new Date();
+
+                // .slice(-2) takes the last two digits (e.g., "2026" becomes "26")
+                const yy = now.getFullYear().toString().slice(-2);
+
+                // .getMonth() is 0-indexed (Jan is 0), so we add 1
+                const mm = now.getMonth() + 1;
+
+                const latest = `v${yy}.${mm}`;
+                const latestVersion = ref(latest);
+
                 // Initialize from localStorage or fallback to system preference
                 const savedTheme = localStorage.getItem('theme');
                 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -1145,7 +1158,7 @@
                 const limit = ref(4);
 
                 const banners = [
-                    { text: '🎉 KimTools v26.5 is now live!', url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
+                    { text: `🎉 KimTools ${latest} is now live!`, url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
                     { text: '💥 Limited offer: Use code SDK26 for 52% off', url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Claim Discount' },
                     { text: '📺 New demo: Modern Dashboard + Dark Mode WinForms', url: 'https://www.youtube.com/@kimtooflex', target: '_blank', cta: 'Watch Now' },
                 ];
@@ -1273,12 +1286,13 @@
                     isDark, mobileOpen, query, limit,
                     currentBanner, navLinks, features, featColors,
                     stats, dotnetBadges, tickerBadges, controlGradients,
-                    controls, filteredControls, footerLinks,
+                    controls, filteredControls, footerLinks, latestVersion,
                     toggleTheme,
                 };
             }
         }).mount('#app');
     </script>
+
 
     <!-- Tawk.to -->
     <script type="text/javascript">
@@ -1290,9 +1304,15 @@
         })();
     </script>
     <!-- Video pop-up -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', () => {
             new ModalVideo(".js-video-btn");
+            //Google Event Tracker: This one script tracks EVERY button with a data-analytics attribute automatically
+            document.querySelectorAll("[data-analytics], .js-video-btn").forEach(btn => {
+                btn.addEventListener('click', () => {
+                    gtag('event', btn.getAttribute('data-analytics'));
+                });
+            });
         });
     </script>
 
