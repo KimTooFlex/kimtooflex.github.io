@@ -33,6 +33,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- Video pop-up -->
     <script src="https://unpkg.com/modal-video@2.4.6/js/modal-video.min.js"></script>
+    <script src="https://gumroad.com/js/gumroad.js"></script>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
@@ -81,6 +82,12 @@
     </script>
 
     <style>
+        /* Hide the logo span specifically */
+        .gumroad-button .logo-full,
+        .gumroad-button svg {
+            display: none !important;
+        }
+
         /* Now moves from 0% (Right) to -100% (Left) */
         @keyframes marquee {
             0% {
@@ -519,11 +526,19 @@
 
                         <!-- CTA row -->
                         <div class="flex flex-wrap gap-4 animate-fade-up delay-400">
-                            <a href="https://checkout.kimtoo.net" class="btn-primary"
+                            <!-- <a href="https://checkout.kimtoo.net" class="btn-primary"
                                 style="background: linear-gradient(135deg,#FF6B35,purple); color: white;">
                                 <img src="./images/X.png" alt="btn-logo" class="h-4 w-auto pr-2" />
                                 Get Started
+                            </a> -->
+
+                            <a class="gumroad-button"
+                                style="border-radius: 12px; background: linear-gradient(135deg,#FF6B35,purple); color: white;"
+                                href="https://kimtooflex.gumroad.com/l/kimtools">
+                                <img src="./images/X.png" alt="btn-logo" class="h-5 w-auto pr-2" />
+                                <b class="pr-4">Get KimTools</b>
                             </a>
+
                             <figure>
                                 <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
                                     class="btn-secondary  grad-purple js-video-btn " style="border-width: 0px;">
@@ -931,7 +946,8 @@
                     <!-- Brand -->
                     <div class="md:col-span-2">
                         <div class="flex items-center gap-1 mb-4">
-                            <img style="height: 44;" :src="isDark ? './images/logo-dark.png' :  './images/logo.png'" alt="KimTools" />
+                            <img style="height: 44;" :src="isDark ? './images/logo-dark.png' :  './images/logo.png'"
+                                alt="KimTools" />
                         </div>
                         <p class="text-sm leading-relaxed mb-6" :class="isDark ? 'text-gray-500' : 'text-gray-500'">
                             The modern UI toolkit for WinForms developers. Build beautiful, AI-ready .NET applications
