@@ -81,23 +81,25 @@
     </script>
 
     <style>
+        /* Now moves from 0% (Right) to -100% (Left) */
         @keyframes marquee {
             0% {
-                transform: translateX(-100%);
+                transform: translateX(0%);
             }
 
             100% {
-                transform: translateX(0%);
+                transform: translateX(-100%);
             }
         }
 
+        /* Now moves from 100% (Right) to 0% (Left) */
         @keyframes marquee2 {
             0% {
-                transform: translateX(0%);
+                transform: translateX(100%);
             }
 
             100% {
-                transform: translateX(100%);
+                transform: translateX(0%);
             }
         }
 
