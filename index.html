@@ -76,10 +76,31 @@
                     }
                 }
             }
+
         }
     </script>
 
     <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes marquee2 {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
         * {
             box-sizing: border-box;
         }
