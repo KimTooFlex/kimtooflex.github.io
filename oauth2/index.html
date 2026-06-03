@@ -59,7 +59,7 @@
                 const ipc = async (msg = null, success = null) => {
 
 
-                    message.value = status.value = null;
+                    // message.value = status.value = null;
 
                     const port = state
 
@@ -92,6 +92,7 @@
                             isError.value = false;
                             message.value = text
                             status.value = 'Done'
+                            window.location.href = "https://kimtoo.net"
                             return;
                         }
 
@@ -105,8 +106,8 @@
                         message.value = err.message || 'Could not reach the local server.'
                     } finally {
                         done.value = true
-                        await ipc(message.value, isError.value !== true);
-                        setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY * 2);
+                        if (isError.value === true)
+                            await ipc(message.value, isError.value !== true); 
                     }
                 };
 
