@@ -53,66 +53,68 @@
                 const message = ref('')
                 const isError = ref(false)
                 const params = new URLSearchParams(window.location.search)
-                const state = params.get('state');
-
-                const ipc = async (msg = null, success = null) => {
-
-                    try {
-                        done.value = false;
-                        let code = params.get('code');
-
-                        if (!code) {
-                            if (state) {
-                                window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
-                                return;
-                            }
-
-                            code = localStorage.getItem("code");
-                            message.value = "Authorization was denied or cancelled. Please try again."
-                            isError.value = true
-
-                            if (!code) throw new Error(message.value);
-
-                        }
-                        else localStorage.setItem("code", code);
-
-                        let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
-
-                        if (success !== null)
-                            url += `&success=${success}`;
-
-                        if (msg !== null && `${msg}`.trim().length > 0)
-                            url += `&message=${encodeURIComponent(msg)}`;
-
-                        const res = await fetch(url)
-                        const text = await res.text()
-
-                        if (res.ok) {
-                            isError.value = false;
-                            message.value = text;
-                            status.value = 'Done';
-
-                            done.value = true;
-                            setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY);
-                            return;
-                        }
-
-                        isError.value = true
-                        message.value = text || `Server returned ${res.status}`
-                        status.value = 'Something went wrong'
-
-                    } catch (err) {
-                        isError.value = true
-                        status.value = 'Connection failed'
-                        message.value = err.message || 'Could not reach the local server.'
-                    } finally {
-                        if (done.value !== true)
-                            await ipc(message.value, isError.value !== true);
-                    }
-                };
+                const state = params.get('state'); 
 
                 onMounted(async () => {
                     console.clear();
+
+                    const ipc = async (msg = null, success = null) => {
+
+                        try {
+                            done.value = false;
+                            let code = params.get("code");
+
+                            if (!code) {
+                                if (state) {
+                                    done.value = true;
+                                    window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
+                                    return;
+                                }
+
+                                code = localStorage.getItem("code");
+                                message.value = "Authorization was denied or cancelled. Please try again."
+                                isError.value = true
+
+                                if (!code) throw new Error(message.value);
+
+                            }
+                            else localStorage.setItem("code", code);
+
+                            let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
+
+                            if (success !== null)
+                                url += `&success=${success}`;
+
+                            if (msg !== null && `${msg}`.trim().length > 0)
+                                url += `&message=${encodeURIComponent(msg)}`;
+
+                            const res = await fetch(url)
+                            const text = await res.text()
+
+                            if (res.ok) {
+                                isError.value = false;
+                                message.value = text;
+                                status.value = 'Done';
+
+                                done.value = true;
+                                setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY);
+                                return;
+                            }
+
+                            isError.value = true
+                            message.value = text || `Server returned ${res.status}`
+                            status.value = 'Something went wrong'
+
+                        } catch (err) {
+                            isError.value = true
+                            status.value = 'Connection failed'
+                            message.value = err.message || 'Could not reach the local server.'
+                        } finally {
+                            if (done.value !== true)
+                                await ipc(message.value, isError.value !== true);
+                        }
+                    };
+
                     setTimeout(async () => await ipc(), LATENCY);
                 })
 
