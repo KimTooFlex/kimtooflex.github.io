@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KimTools – Authenticating</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KimTools – Authenticating</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: '#FF424D',
-              dark:    '#CC333D',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#FF424D',
+                            dark: '#CC333D',
+                        }
+                    },
+                    keyframes: {
+                        spin: { to: { transform: 'rotate(360deg)' } },
+                        fade: { from: { opacity: 0, transform: 'translateY(6px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+                    },
+                    animation: {
+                        spin: 'spin 0.9s linear infinite',
+                        fade: 'fade 0.35s ease forwards',
+                    }
+                }
             }
-          },
-          keyframes: {
-            spin: { to: { transform: 'rotate(360deg)' } },
-            fade: { from: { opacity: 0, transform: 'translateY(6px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
-          },
-          animation: {
-            spin:  'spin 0.9s linear infinite',
-            fade:  'fade 0.35s ease forwards',
-          }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
 </head>
 
 <body class="bg-zinc-950 text-zinc-100 min-h-screen flex items-center justify-center font-sans antialiased">
 
-  <div id="app"></div>
+    <div id="app"></div>
 
-  <script>
+    <script>
 
-    const PATREON_OAUTH2 = 'https://www.patreon.com/oauth2/authorize?response_type=code&client_id=-lKDPRbFOgcbusmxjvr65oiiUtcY2m4-rCoWoEIVLUKuSgzOsQIQy4hi8yO9cDOa&response_type=code&scope=identity'
+        const CLIENT_ID = "-lKDPRbFOgcbusmxjvr65oiiUtcY2m4-rCoWoEIVLUKuSgzOsQIQy4hi8yO9cDOa";
+        const BASE_URL = "https://www.patreon.com/oauth2/authorize";
 
-    const { createApp, ref, onMounted } = Vue
+        const { createApp, ref, onMounted } = Vue
 
-    createApp({
-      setup() {
-        const status   = ref('Connecting…')
-        const done     = ref(false)
-        const message  = ref('')
-        const isError  = ref(false)
+        createApp({
+            setup() {
+                const status = ref('Connecting…')
+                const done = ref(false)
+                const message = ref('')
+                const isError = ref(false)
 
-        onMounted(async () => {
-          console.clear()
+                onMounted(async () => {
+                    console.clear()
 
-          const params = new URLSearchParams(window.location.search)
-          const code   = params.get('code')
-          const state  = params.get('state')
+                    const params = new URLSearchParams(window.location.search)
+                    const code = params.get('code')
+                    const state = params.get('state')
 
-          if (!code || !state) {
-            window.location.href = PATREON_OAUTH2
-            return
-          }
+                    if (!code || !state) {
 
-          status.value = 'Verifying with Patreon…'
+                        window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
+                        return
+                    }
 
-          const port = state
-          const url  = `http://localhost:${port}?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}`
+                    status.value = 'Verifying with Patreon…'
 
-          const start = Date.now()
+                    const port = state
+                    const url = `http://localhost:${port}?code=${encodeURIComponent(code)}`
 
-          try {
-            const res = await fetch(url)
+                    const start = Date.now()
 
-            const elapsed = Date.now() - start
-            const remaining = 300 - elapsed
-            if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
+                    try {
+                        const res = await fetch(url)
 
-            const text = await res.text()
+                        const elapsed = Date.now() - start
+                        const remaining = 300 - elapsed
+                        if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
 
-            if (!res.ok) {
-              isError.value = true
-              message.value = text || `Server returned ${res.status}`
-              status.value  = 'Something went wrong'
-            } else {
-              message.value = text
-              status.value  = 'Done'
-            }
-          } catch (err) {
-            const elapsed = Date.now() - start
-            const remaining = 300 - elapsed
-            if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
+                        const text = await res.text()
 
-            isError.value = true
-            status.value  = 'Connection failed'
-            message.value = err.message || 'Could not reach the local server.'
-          } finally {
-            done.value = true
-          }
-        })
+                        if (!res.ok) {
+                            isError.value = true
+                            message.value = text || `Server returned ${res.status}`
+                            status.value = 'Something went wrong'
+                        } else {
+                            message.value = text
+                            status.value = 'Done'
+                        }
+                    } catch (err) {
+                        const elapsed = Date.now() - start
+                        const remaining = 300 - elapsed
+                        if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
 
-        return { status, done, message, isError }
-      },
+                        isError.value = true
+                        status.value = 'Connection failed'
+                        message.value = err.message || 'Could not reach the local server.'
+                    } finally {
+                        done.value = true
+                    }
+                })
 
-      template: `
+                return { status, done, message, isError }
+            },
+
+            template: `
         <div class="flex flex-col items-center gap-6 px-6 text-center max-w-sm w-full animate-fade">
 
           <img
@@ -147,8 +150,9 @@
 
         </div>
       `
-    }).mount('#app')
-  </script>
+        }).mount('#app')
+    </script>
 
 </body>
+
 </html>
