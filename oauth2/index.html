@@ -40,7 +40,7 @@
 
     <script>
 
-        const LATENCY = 5000;
+        const LATENCY = 4000;
         const CLIENT_ID = "-lKDPRbFOgcbusmxjvr65oiiUtcY2m4-rCoWoEIVLUKuSgzOsQIQy4hi8yO9cDOa";
         const BASE_URL = "https://www.patreon.com/oauth2/authorize";
 
@@ -53,7 +53,7 @@
                 const message = ref('')
                 const isError = ref(false)
                 const params = new URLSearchParams(window.location.search)
-                const state = params.get('state'); 
+                const state = params.get('state');
 
                 onMounted(async () => {
                     console.clear();
@@ -80,13 +80,15 @@
                             }
                             else localStorage.setItem("code", code);
 
-                            let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
+                            if (code) {
+                                let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
 
-                            if (success !== null)
-                                url += `&success=${success}`;
+                                if (success !== null)
+                                    url += `&success=${success}`;
 
-                            if (msg !== null && `${msg}`.trim().length > 0)
-                                url += `&message=${encodeURIComponent(msg)}`;
+                                if (msg !== null && msg.trim().length > 0)
+                                    url += `&message=${encodeURIComponent(msg)}`;
+                            }
 
                             const res = await fetch(url)
                             const text = await res.text()
