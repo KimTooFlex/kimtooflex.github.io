@@ -40,6 +40,7 @@
 
     <script>
 
+        const LATENCY = 5000;
         const CLIENT_ID = "-lKDPRbFOgcbusmxjvr65oiiUtcY2m4-rCoWoEIVLUKuSgzOsQIQy4hi8yO9cDOa";
         const BASE_URL = "https://www.patreon.com/oauth2/authorize";
 
@@ -67,18 +68,18 @@
 
                     setTimeout(async () => {
                         try {
-
-
-                            if (state) {
-                                window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
-                                return;
+ 
+                            if (!code) {
+                                if (state) {
+                                    window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
+                                    return;
+                                }
+                                throw new Error("Authorization was denied or cancelled. Please try again.");
                             }
 
-                            if (!code) throw new Error("Authorization was denied or cancelled. Please try again.");
 
 
-
-                            const res = await fetch(url) 
+                            const res = await fetch(url)
                             const text = await res.text()
 
                             if (!res.ok) {
@@ -89,15 +90,15 @@
                                 message.value = text
                                 status.value = 'Done'
                             }
-                        } catch (err) { 
+                        } catch (err) {
                             isError.value = true
                             status.value = 'Connection failed'
                             message.value = err.message || 'Could not reach the local server.'
                         } finally {
                             done.value = true
-                            setTimeout(() =>   window.location.href = "https://kimtoo.net", 5000);
+                            setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY + LATENCY / 2);
                         }
-                    }, 3500);
+                    }, LATENCY);
 
 
                 })
