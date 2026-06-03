@@ -58,7 +58,7 @@
 
                 const ipc = async (msg = null, success = null) => {
 
-                    let code = params.get('code'); 
+                    var code = params.get('code');
 
                     try {
 
@@ -89,7 +89,8 @@
                             isError.value = false;
                             message.value = text
                             status.value = 'Done'
-                            window.location.href = "https://kimtoo.net"
+
+                            setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY);
                             return;
                         }
 
