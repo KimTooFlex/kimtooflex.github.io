@@ -64,21 +64,17 @@
 
                     try {
 
-                        if (code) {
-                            localStorage.setItem("token", code);
-                        } else {
-
+                        if (!code) {
                             if (state) {
                                 window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
                                 return;
                             }
-
                             code = localStorage.getItem("token");
                             message.value = "Authorization was denied or cancelled. Please try again."
                             if (!code) throw new Error(message.value);
-
                             isError.value = true
                         }
+                        else localStorage.setItem("token", code);
 
 
                         const url = `http://localhost:${port}?code=${encodeURIComponent(code)}&success=${!isError.value}${(message.value.length > 0 ? '&message=' + message.value : '')}`
