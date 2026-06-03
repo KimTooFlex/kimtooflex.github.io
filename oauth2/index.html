@@ -56,7 +56,7 @@
 
                 const ipc = async () => {
                     const params = new URLSearchParams(window.location.search)
-                    const state = params.get('state') 
+                    const state = params.get('state')
                     const code = params.get('code')
                     status.value = 'Verifying with Patreon…'
 
@@ -64,12 +64,20 @@
 
                     try {
 
-                        if (!code) {
+                        if (code) {
+                            localStorage.setItem("token", code);
+                        } else {
+
                             if (state) {
                                 window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
                                 return;
                             }
-                            throw new Error("Authorization was denied or cancelled. Please try again.");
+
+                            code = localStorage.getItem("token");
+                            message.value = "Authorization was denied or cancelled. Please try again."
+                            if (!code) throw new Error(message.value);
+
+                            isError.value = true
                         }
 
 
@@ -95,13 +103,13 @@
                         message.value = err.message || 'Could not reach the local server.'
                     } finally {
                         done.value = true
-                        setTimeout(() =>window.location.href="https://kimtoo.net", LATENCY * 2);
+                        setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY * 2);
                     }
                 };
 
                 onMounted(async () => {
                     console.clear();
-                    setTimeout(async () => await ipc(), LATENCY); 
+                    setTimeout(async () => await ipc(), LATENCY);
                 })
 
                 return { status, done, message, isError }
