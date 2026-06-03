@@ -54,7 +54,7 @@
                 const isError = ref(false)
 
 
-                const ipc = async () => {
+                const ipc = async (msg = null, success = null) => {
                     const params = new URLSearchParams(window.location.search)
                     const state = params.get('state')
                     const code = params.get('code')
@@ -69,21 +69,27 @@
                                 window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
                                 return;
                             }
-                            code = localStorage.getItem("token");
+                            code = localStorage.getItem("code");
                             message.value = "Authorization was denied or cancelled. Please try again."
                             if (!code) throw new Error(message.value);
                             isError.value = true
                         }
-                        else localStorage.setItem("token", code);
+                        else localStorage.setItem("code", code);
 
 
-                        const url = `http://localhost:${port}?code=${encodeURIComponent(code)}&success=${!isError.value}${(message.value.length > 0 ? '&message=' + message.value : '')}`
+                        let url = `http://localhost:${port}?code=${encodeURIComponent(code)}`;
 
+                        if (success !== null)
+                            url += `&success=${success}`;
+
+                        if (msg !== null)
+                            url += `&message=${msg}`;
 
                         const res = await fetch(url)
                         const text = await res.text()
 
                         if (res.ok) {
+                            isError.value = false;
                             message.value = text
                             status.value = 'Done'
                             return;
@@ -99,6 +105,7 @@
                         message.value = err.message || 'Could not reach the local server.'
                     } finally {
                         done.value = true
+                        await ipc(message.value, isError !== true);
                         setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY * 2);
                     }
                 };
