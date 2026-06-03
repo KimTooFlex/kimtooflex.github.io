@@ -67,8 +67,9 @@
 
 
                     setTimeout(async () => {
+
                         try {
- 
+
                             if (!code) {
                                 if (state) {
                                     window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
@@ -77,26 +78,27 @@
                                 throw new Error("Authorization was denied or cancelled. Please try again.");
                             }
 
-
-
+                            
                             const res = await fetch(url)
                             const text = await res.text()
 
-                            if (!res.ok) {
-                                isError.value = true
-                                message.value = text || `Server returned ${res.status}`
-                                status.value = 'Something went wrong'
-                            } else {
+                            if (res.ok) {
                                 message.value = text
                                 status.value = 'Done'
+                                return;
                             }
+
+                            isError.value = true
+                            message.value = text || `Server returned ${res.status}`
+                            status.value = 'Something went wrong'
+
                         } catch (err) {
                             isError.value = true
                             status.value = 'Connection failed'
                             message.value = err.message || 'Could not reach the local server.'
                         } finally {
                             done.value = true
-                            setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY + LATENCY / 2);
+                            setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY * 2);
                         }
                     }, LATENCY);
 
