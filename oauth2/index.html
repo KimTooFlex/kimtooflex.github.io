@@ -78,7 +78,7 @@
                                 throw new Error("Authorization was denied or cancelled. Please try again.");
                             }
 
-                            
+
                             const res = await fetch(url)
                             const text = await res.text()
 
@@ -98,7 +98,7 @@
                             message.value = err.message || 'Could not reach the local server.'
                         } finally {
                             done.value = true
-                            setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY * 2);
+                            setTimeout(() => window.close(), LATENCY * 2);
                         }
                     }, LATENCY);
 
