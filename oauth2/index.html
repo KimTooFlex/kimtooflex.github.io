@@ -95,7 +95,7 @@
                         message.value = err.message || 'Could not reach the local server.'
                     } finally {
                         done.value = true
-                        setTimeout(() => window.close(), LATENCY * 2);
+                        setTimeout(() =>window.location.href="https://kimtoo.net", LATENCY * 2);
                     }
                 };
 
