@@ -52,12 +52,12 @@
                 const done = ref(false)
                 const message = ref('')
                 const isError = ref(false)
-
+                const params = new URLSearchParams(window.location.search)
+                const state = params.get('state');
+                const code = params.get('code');
 
                 const ipc = async (msg = null, success = null) => {
-                    const params = new URLSearchParams(window.location.search)
-                    const state = params.get('state');
-                    const code = params.get('code');
+
 
                     message.value = status.value = null;
 
