@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KimTools – Authenticating</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#FF424D',
+              dark:    '#CC333D',
+            }
+          },
+          keyframes: {
+            spin: { to: { transform: 'rotate(360deg)' } },
+            fade: { from: { opacity: 0, transform: 'translateY(6px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+          },
+          animation: {
+            spin:  'spin 0.9s linear infinite',
+            fade:  'fade 0.35s ease forwards',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+</head>
+
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex items-center justify-center font-sans antialiased">
+
+  <div id="app"></div>
+
+  <script>
+    const PATREON_OAUTH2 = 'https://www.patreon.com/oauth2/authorize?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=https%3A%2F%2Fkimtoo.net%2Foauth2&scope=identity'
+
+    const { createApp, ref, onMounted } = Vue
+
+    createApp({
+      setup() {
+        const status   = ref('Connecting…')
+        const done     = ref(false)
+        const message  = ref('')
+        const isError  = ref(false)
+
+        onMounted(async () => {
+          console.clear()
+
+          const params = new URLSearchParams(window.location.search)
+          const code   = params.get('code')
+          const state  = params.get('state')
+
+          if (!code || !state) {
+            window.location.href = PATREON_OAUTH2
+            return
+          }
+
+          status.value = 'Verifying with Patreon…'
+
+          const port = state
+          const url  = `http://localhost:${port}?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}`
+
+          const start = Date.now()
+
+          try {
+            const res = await fetch(url)
+
+            const elapsed = Date.now() - start
+            const remaining = 300 - elapsed
+            if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
+
+            const text = await res.text()
+
+            if (!res.ok) {
+              isError.value = true
+              message.value = text || `Server returned ${res.status}`
+              status.value  = 'Something went wrong'
+            } else {
+              message.value = text
+              status.value  = 'Done'
+            }
+          } catch (err) {
+            const elapsed = Date.now() - start
+            const remaining = 300 - elapsed
+            if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
+
+            isError.value = true
+            status.value  = 'Connection failed'
+            message.value = err.message || 'Could not reach the local server.'
+          } finally {
+            done.value = true
+          }
+        })
+
+        return { status, done, message, isError }
+      },
+
+      template: `
+        <div class="flex flex-col items-center gap-6 px-6 text-center max-w-sm w-full animate-fade">
+
+          <img
+            src="https://kimtoo.net/images/logo-wide-dark.webp"
+            alt="KimTools"
+            class="h-8 w-auto opacity-90"
+          />
+
+          <div class="flex flex-col items-center gap-4 w-full">
+
+            <div
+              v-if="!done"
+              class="w-10 h-10 rounded-full border-2 border-zinc-700 border-t-brand animate-spin"
+            ></div>
+
+            <div v-else>
+              <div
+                v-if="isError"
+                class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-xl"
+              >✕</div>
+              <div
+                v-else
+                class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 text-xl"
+              >✓</div>
+            </div>
+
+            <p
+              class="text-sm font-medium transition-all duration-300"
+              :class="done && isError ? 'text-red-400' : done ? 'text-green-400' : 'text-zinc-400'"
+            >{{ status }}</p>
+
+          </div>
+
+          <div
+            v-if="done && message"
+            class="w-full rounded-xl border px-4 py-3 text-left text-sm leading-relaxed font-mono break-words animate-fade"
+            :class="isError
+              ? 'bg-red-950/40 border-red-800/50 text-red-300'
+              : 'bg-zinc-900 border-zinc-700/60 text-zinc-300'"
+            v-html="message"
+          ></div>
+
+        </div>
+      `
+    }).mount('#app')
+  </script>
+
+</body>
+</html>
