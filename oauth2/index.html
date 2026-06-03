@@ -56,9 +56,10 @@
 
                 const ipc = async (msg = null, success = null) => {
                     const params = new URLSearchParams(window.location.search)
-                    const state = params.get('state')
-                    const code = params.get('code')
-                    status.value = 'Verifying with Patreon…'
+                    const state = params.get('state');
+                    const code = params.get('code');
+
+                    message.value = status.value = ''
 
                     const port = state
 
@@ -74,7 +75,7 @@
                             if (!code) throw new Error(message.value);
                             isError.value = true
                         }
-                        else localStorage.setItem("code", code); 
+                        else localStorage.setItem("code", code);
 
                         let url = `http://localhost:${port}?code=${encodeURIComponent(code)}`;
 
