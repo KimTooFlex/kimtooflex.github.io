@@ -79,11 +79,11 @@
 
                         let url = `http://localhost:${port}?code=${encodeURIComponent(code)}`;
 
-                        if (`${success}`.trim().length > 0)
-                            url += `&success=${encodeURIComponent(success)}`.toLowerCase().trim();
+                        if (success !== null)
+                            url += `&success=${encodeURIComponent(success)}`;
 
-                        if (`${msg}`.trim().length > 0)
-                            url += `&message=${encodeURIComponent(msg)}`.trim();
+                        if (msg !== null && `${msg}`.trim().length > 0)
+                            url += `&message=${encodeURIComponent(msg)}`;
 
                         const res = await fetch(url)
                         const text = await res.text()
