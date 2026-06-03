@@ -38,14 +38,14 @@
       --ring:rgba(0,0,0,.07);
     }
     .dark{
-      --bg:#0c0c0e; --card-bg:#17171a; --card-bd:rgba(255,255,255,.055);
-      --t1:#f2f2f4; --t2:#8f8f98; --t3:#56565e;
-      --div:rgba(255,255,255,.05);
+      --bg:#0f172a; --card-bg:#1e293b; --card-bd:rgba(148,163,184,.1);
+      --t1:#f1f5f9; --t2:#94a3b8; --t3:#475569;
+      --div:rgba(148,163,184,.08);
       --ok-bg:rgba(22,163,74,.08); --ok-bd:rgba(22,163,74,.2); --ok-tx:#4ade80;
       --er-bg:rgba(239,68,68,.07); --er-bd:rgba(239,68,68,.2); --er-tx:#f87171;
-      --row-bg:rgba(255,255,255,.03); --row-bd:rgba(255,255,255,.06);
+      --row-bg:rgba(148,163,184,.05); --row-bd:rgba(148,163,184,.1);
       --warn-bg:rgba(234,179,8,.06); --warn-bd:rgba(234,179,8,.15); --warn-tx:#fbbf24;
-      --ring:rgba(255,255,255,.06);
+      --ring:rgba(148,163,184,.1);
     }
 
     body{
@@ -99,10 +99,11 @@
       border-radius:11px;padding:10px 11px;
     }
     .kt-perk-icon{
-      flex-shrink:0;width:22px;height:22px;border-radius:6px;
+      flex-shrink:0;width:22px;height:22px;
       display:flex;align-items:center;justify-content:center;
-      font-size:12px;background:rgba(255,66,77,.1);margin-top:1px;
+      margin-top:1px;
     }
+    .kt-perk-icon img{width:18px;height:18px;object-fit:contain;opacity:.85}
     .kt-perk-text{font-size:12.5px;color:var(--t2);line-height:1.5}
     .kt-perk-text strong{color:var(--t1);font-weight:500;display:block;margin-bottom:2px}
 
@@ -210,9 +211,10 @@
         const message = ref('');
         const isError = ref(false);
 
-        const params     = new URLSearchParams(window.location.search);
-        const state      = params.get('state');
-        const errorParam = params.get('error'); // e.g. ?error=session_expired&error_description=...
+        const params      = new URLSearchParams(window.location.search);
+        const state       = params.get('state');
+        const errorParam  = params.get('error');
+        const noticeMessage = params.get('message') || (errorParam ? params.get('error_description') || 'Something went wrong with your session. Please reconnect.' : null);
 
         const patreonUrl = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
         function connectPatreon(){ window.location.href = patreonUrl; }
@@ -269,7 +271,7 @@
           }
         }
 
-        return { phase, status, done, message, isError, state, errorParam, connectPatreon };
+        return { phase, status, done, message, isError, state, errorParam, noticeMessage, connectPatreon };
       },
 
       template: `
@@ -288,38 +290,29 @@
 
             <div class="kt-perks">
               <div class="kt-perk">
-                <div class="kt-perk-icon">🔑</div>
+                <div class="kt-perk-icon"><img src="../images/check.webp" alt="" /></div>
                 <p class="kt-perk-text"><strong>Verify your tier</strong>KimTools checks your active Patreon membership to unlock the right controls for your plan.</p>
               </div>
               <div class="kt-perk">
-                <div class="kt-perk-icon">🔒</div>
+                <div class="kt-perk-icon"><img src="../images/check.webp" alt="" /></div>
                 <p class="kt-perk-text"><strong>No passwords stored</strong>We never see your Patreon password. OAuth2 is the same standard used by Google and GitHub.</p>
               </div>
               <div class="kt-perk">
-                <div class="kt-perk-icon">⚡</div>
+                <div class="kt-perk-icon"><img src="../images/check.webp" alt="" /></div>
                 <p class="kt-perk-text"><strong>One-time setup</strong>After this, KimTools reconnects silently. You won't need to do this again unless you log out.</p>
               </div>
               <div class="kt-perk">
-                <div class="kt-perk-icon">👁</div>
+                <div class="kt-perk-icon"><img src="../images/check.webp" alt="" /></div>
                 <p class="kt-perk-text"><strong>Read-only access</strong>KimTools only reads your membership tier. It cannot post, charge, or change anything on your account.</p>
               </div>
             </div>
 
-            <!-- error notice (from ?error= param) replaces the warning notice -->
-            <div v-if="errorParam" class="kt-notice err">
-              <span class="kt-notice-icon">⚠</span>
+            <!-- notice: only shown when ?message= is present; error colors when ?error= is also present -->
+            <div v-if="noticeMessage" class="kt-notice" :class="errorParam ? 'err' : 'warn'">
+              <span class="kt-notice-icon">{{ errorParam ? '⚠' : 'ℹ' }}</span>
               <p class="kt-notice-text">
-                <strong>{{ errorParam.replace(/_/g,' ') }}</strong>
-                {{ new URLSearchParams(window.location.search).get('error_description') || 'Something went wrong with your session. Please reconnect.' }}
-              </p>
-            </div>
-
-            <!-- default localhost warning -->
-            <div v-else class="kt-notice warn">
-              <span class="kt-notice-icon">ℹ</span>
-              <p class="kt-notice-text">
-                <strong>Patreon may show a security notice</strong>
-                This is expected. It appears because KimTools connects to your local machine (localhost). The connection is private and never leaves your computer.
+                <strong v-if="errorParam">{{ errorParam.replace(/_/g,' ') }}</strong>
+                {{ noticeMessage }}
               </p>
             </div>
 
