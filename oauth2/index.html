@@ -66,13 +66,13 @@
                                 window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
                                 return;
                             }
-                            
+
                             code = localStorage.getItem("code");
                             message.value = "Authorization was denied or cancelled. Please try again."
+                            isError.value = true
 
                             if (!code) throw new Error(message.value);
 
-                            isError.value = true
                         }
                         else localStorage.setItem("code", code);
 
@@ -89,9 +89,10 @@
 
                         if (res.ok) {
                             isError.value = false;
-                            message.value = text
-                            status.value = 'Done'
+                            message.value = text;
+                            status.value = 'Done';
 
+                            done.value = true;
                             setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY);
                             return;
                         }
@@ -107,7 +108,6 @@
                     } finally {
                         if (done.value !== true)
                             await ipc(message.value, isError.value !== true);
-                        else done.value = true;
                     }
                 };
 
