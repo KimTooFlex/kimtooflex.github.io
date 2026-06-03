@@ -220,7 +220,7 @@
         const errorParam  = params.get('error');
         const noticeMessage = params.get('message') || (errorParam ? params.get('error_description') || 'Something went wrong with your session. Please reconnect.' : null);
         
-        const patreonUrl = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity%20identity[memberships]&state=${state}`;
+       const patreonUrl = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity%20identity.memberships&state=${state}`;
         // const patreonUrl = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
         function connectPatreon(){ window.location.href = patreonUrl; }
 
