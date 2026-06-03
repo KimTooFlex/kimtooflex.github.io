@@ -1,179 +1,421 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KimTools – Authenticating</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KimTools – Authenticating</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            DEFAULT: '#FF424D',
-                            dark: '#CC333D',
-                        }
-                    },
-                    keyframes: {
-                        spin: { to: { transform: 'rotate(360deg)' } },
-                        fade: { from: { opacity: 0, transform: 'translateY(6px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
-                    },
-                    animation: {
-                        spin: 'spin 0.9s linear infinite',
-                        fade: 'fade 0.35s ease forwards',
-                    }
-                }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            mono: ['DM Mono', 'monospace'],
+          },
+          colors: {
+            brand: { DEFAULT: '#FF424D', dark: '#CC333D', light: '#FF6B74' },
+            surface: {
+              light: '#ffffff',
+              dark:  '#0f0f10',
             }
+          },
+          keyframes: {
+            'spin-ring': { to: { transform: 'rotate(360deg)' } },
+            'fade-up':   { from: { opacity: 0, transform: 'translateY(10px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+            'scale-in':  { from: { opacity: 0, transform: 'scale(0.92)' },      to: { opacity: 1, transform: 'scale(1)' } },
+            'pulse-dot': { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.3 } },
+          },
+          animation: {
+            'spin-ring': 'spin-ring 0.85s linear infinite',
+            'fade-up':   'fade-up 0.4s cubic-bezier(0.16,1,0.3,1) forwards',
+            'scale-in':  'scale-in 0.35s cubic-bezier(0.16,1,0.3,1) forwards',
+            'pulse-dot': 'pulse-dot 1.4s ease-in-out infinite',
+          }
         }
-    </script>
+      }
+    }
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    // read kimtoo.net theme from localStorage before Vue mounts
+    ;(function () {
+      try {
+        var t = localStorage.getItem('theme') || localStorage.getItem('kimtools-theme') || localStorage.getItem('color-theme');
+        if (t === 'light') document.documentElement.classList.remove('dark');
+        else document.documentElement.classList.add('dark');
+      } catch(e) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+
+  <style>
+    /* base reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* light / dark surface tokens */
+    :root {
+      --bg:          #f5f5f7;
+      --card-bg:     #ffffff;
+      --card-border: rgba(0,0,0,0.07);
+      --text-1:      #0f0f10;
+      --text-2:      #6b6b72;
+      --text-3:      #9898a0;
+      --divider:     rgba(0,0,0,0.06);
+      --success-bg:  #f0faf4;
+      --success-bd:  rgba(22,163,74,0.18);
+      --success-tx:  #15803d;
+      --error-bg:    #fff1f2;
+      --error-bd:    rgba(239,68,68,0.18);
+      --error-tx:    #b91c1c;
+      --mono-bg:     #f8f8fa;
+      --mono-bd:     rgba(0,0,0,0.07);
+      --mono-tx:     #3b3b42;
+      --ring-track:  rgba(0,0,0,0.08);
+    }
+    .dark {
+      --bg:          #0f0f10;
+      --card-bg:     #18181b;
+      --card-border: rgba(255,255,255,0.06);
+      --text-1:      #f5f5f7;
+      --text-2:      #9898a0;
+      --text-3:      #5a5a62;
+      --divider:     rgba(255,255,255,0.05);
+      --success-bg:  rgba(22,163,74,0.08);
+      --success-bd:  rgba(22,163,74,0.2);
+      --success-tx:  #4ade80;
+      --error-bg:    rgba(239,68,68,0.07);
+      --error-bd:    rgba(239,68,68,0.2);
+      --error-tx:    #f87171;
+      --mono-bg:     #111113;
+      --mono-bd:     rgba(255,255,255,0.06);
+      --mono-tx:     #a1a1aa;
+      --ring-track:  rgba(255,255,255,0.06);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    /* subtle grid bg pattern */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(var(--divider) 1px, transparent 1px),
+        linear-gradient(90deg, var(--divider) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* vignette */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 40%, var(--bg) 100%);
+    }
+
+    #app { position: relative; z-index: 1; width: 100%; display: flex; justify-content: center; padding: 2rem 1rem; }
+
+    /* card */
+    .kt-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 40px rgba(0,0,0,0.06);
+      animation: scale-in 0.4s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
+    .dark .kt-card {
+      box-shadow: 0 1px 0px rgba(255,255,255,0.04) inset, 0 24px 64px rgba(0,0,0,0.5);
+    }
+
+    /* logo */
+    .kt-logo { height: 28px; width: auto; display: block; }
+
+    .kt-divider {
+      width: 100%; height: 1px;
+      background: var(--divider);
+      margin: 1.75rem 0;
+    }
+
+    /* spinner */
+    .kt-spinner {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--ring-track);
+      border-top-color: #FF424D;
+      animation: spin-ring 0.85s linear infinite;
+    }
+
+    /* status icon */
+    .kt-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .kt-icon.success { background: var(--success-bg); color: var(--success-tx); border: 1px solid var(--success-bd); }
+    .kt-icon.error   { background: var(--error-bg);   color: var(--error-tx);   border: 1px solid var(--error-bd); }
+
+    /* status label */
+    .kt-status {
+      font-size: 13px; font-weight: 500; letter-spacing: 0.01em;
+      color: var(--text-2);
+      transition: color 0.3s;
+      margin-top: 14px;
+    }
+    .kt-status.success { color: var(--success-tx); }
+    .kt-status.error   { color: var(--error-tx); }
+
+    /* dots */
+    .kt-dots { display: inline-flex; gap: 3px; margin-left: 4px; vertical-align: middle; }
+    .kt-dots span {
+      width: 3px; height: 3px; border-radius: 50%;
+      background: currentColor; display: inline-block;
+      animation: pulse-dot 1.4s ease-in-out infinite;
+    }
+    .kt-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .kt-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+    /* message box */
+    .kt-message {
+      width: 100%;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12.5px;
+      line-height: 1.65;
+      word-break: break-word;
+      border: 1px solid;
+      animation: fade-up 0.35s cubic-bezier(0.16,1,0.3,1) forwards;
+      margin-top: 1.5rem;
+    }
+    .kt-message.success {
+      background: var(--success-bg);
+      border-color: var(--success-bd);
+      color: var(--success-tx);
+    }
+    .kt-message.error {
+      background: var(--error-bg);
+      border-color: var(--error-bd);
+      color: var(--error-tx);
+    }
+
+    /* footer meta */
+    .kt-meta {
+      font-size: 11.5px; color: var(--text-3);
+      margin-top: 1.75rem;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .kt-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-3); }
+
+    /* brand accent line under logo */
+    .kt-accent {
+      width: 28px; height: 2px; border-radius: 99px;
+      background: #FF424D;
+      margin-top: 10px;
+    }
+
+    /* theme toggle */
+    .kt-theme-btn {
+      position: fixed; top: 1.25rem; right: 1.25rem;
+      width: 36px; height: 36px; border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text-2);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px;
+      z-index: 10;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .kt-theme-btn:hover { color: var(--text-1); }
+  </style>
 </head>
 
-<body class="bg-zinc-950 text-zinc-100 min-h-screen flex items-center justify-center font-sans antialiased">
+<body>
 
-    <div id="app"></div>
+  <button class="kt-theme-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark mode">
+    <span id="themeIcon">☀</span>
+  </button>
 
-    <script>
+  <div id="app"></div>
 
-        const LATENCY = 4000;
-        const CLIENT_ID = "-lKDPRbFOgcbusmxjvr65oiiUtcY2m4-rCoWoEIVLUKuSgzOsQIQy4hi8yO9cDOa";
-        const BASE_URL = "https://www.patreon.com/oauth2/authorize";
+  <script>
+    const LATENCY     = 4000;
+    const CLIENT_ID   = "-lKDPRbFOgcbusmxjvr65oiiUtcY2m4-rCoWoEIVLUKuSgzOsQIQy4hi8yO9cDOa";
+    const BASE_URL    = "https://www.patreon.com/oauth2/authorize";
 
-        const { createApp, ref, onMounted } = Vue
+    // theme toggle (syncs with kimtoo.net localStorage key)
+    const THEME_KEY = 'theme';
+    const html      = document.documentElement;
+    const btn       = document.getElementById('themeToggle');
+    const icon      = document.getElementById('themeIcon');
 
-        createApp({
-            setup() {
-                const status = ref('Connecting…')
-                const done = ref(false)
-                const message = ref('')
-                const isError = ref(false)
-                const params = new URLSearchParams(window.location.search)
-                const state = params.get('state');
+    function applyTheme(t) {
+      if (t === 'light') { html.classList.remove('dark'); icon.textContent = '☽'; }
+      else               { html.classList.add('dark');    icon.textContent = '☀'; }
+      try { localStorage.setItem(THEME_KEY, t); } catch(e) {}
+    }
 
-                onMounted(async () => {
-                    console.clear();
+    btn.addEventListener('click', () => {
+      applyTheme(html.classList.contains('dark') ? 'light' : 'dark');
+    });
 
-                    const ipc = async (msg = null, success = null) => {
+    // init icon to match current state
+    icon.textContent = html.classList.contains('dark') ? '☀' : '☽';
 
-                        try {
-                            done.value = false;
-                            let code = params.get("code");
+    const { createApp, ref, onMounted } = Vue;
 
-                            if (!code) {
-                                if (state) {
-                                    done.value = true;
-                                    window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
-                                    return;
-                                }
+    createApp({
+      setup() {
+        const status  = ref('Initializing');
+        const done    = ref(false);
+        const message = ref('');
+        const isError = ref(false);
+        const params  = new URLSearchParams(window.location.search);
+        const state   = params.get('state');
 
-                                code = localStorage.getItem("code");
-                                message.value = "Authorization was denied or cancelled. Please try again."
-                                isError.value = true
+        onMounted(async () => {
+          console.clear();
 
-                                if (!code)
-                                {
-                                    done.value = true;
-                                    return;
-                                }
+          const ipc = async (msg = null, success = null) => {
+            try {
+              done.value = false;
+              let code   = params.get('code');
 
-                            }
-                            else localStorage.setItem("code", code);
+              if (!code) {
+                if (state) {
+                  status.value  = 'Redirecting to Patreon';
+                  done.value    = true;
+                  window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
+                  return;
+                }
 
+                code = localStorage.getItem('code');
+                message.value = 'Authorization was denied or cancelled. Please try again.';
+                isError.value = true;
 
-                            let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
+                if (!code) { done.value = true; return; }
+              } else {
+                localStorage.setItem('code', code);
+              }
 
-                            if (success !== null)
-                                url += `&success=${success}`;
+              status.value = 'Verifying with Patreon';
 
-                            if (msg !== null && msg.trim().length > 0)
-                                url += `&message=${encodeURIComponent(msg)}`;
+              let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
+              if (success !== null) url += `&success=${success}`;
+              if (msg !== null && msg.trim().length > 0) url += `&message=${encodeURIComponent(msg)}`;
 
-                            const res = await fetch(url)
-                            const text = await res.text()
+              const start = Date.now();
+              const res   = await fetch(url);
+              const text  = await res.text();
 
-                            if (res.ok) {
-                                isError.value = false;
-                                message.value = text;
-                                status.value = 'Done';
+              const elapsed   = Date.now() - start;
+              const remaining = 300 - elapsed;
+              if (remaining > 0) await new Promise(r => setTimeout(r, remaining));
 
-                                done.value = true;
-                                setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY);
-                                return;
-                            }
+              if (res.ok) {
+                isError.value = false;
+                message.value = text;
+                status.value  = 'Connected successfully';
+                done.value    = true;
+                setTimeout(() => window.location.href = 'https://kimtoo.net', LATENCY);
+                return;
+              }
 
-                            isError.value = true
-                            message.value = text || `Server returned ${res.status}`
-                            status.value = 'Something went wrong'
+              isError.value = true;
+              message.value = text || `Server returned ${res.status}`;
+              status.value  = 'Something went wrong';
 
-                        } catch (err) {
-                            isError.value = true
-                            status.value = 'Connection failed'
-                            message.value = err.message || 'Could not reach the local server.'
-                        } finally {
-                            if (done.value !== true)
-                                await ipc(message.value, isError.value !== true);
-                        }
-                    };
+            } catch (err) {
+              isError.value = true;
+              status.value  = 'Connection failed';
+              message.value = err.message || 'Could not reach the local server.';
+            } finally {
+              if (done.value !== true)
+                await ipc(message.value, !isError.value);
+            }
+          };
 
-                    setTimeout(async () => await ipc(), LATENCY);
-                })
+          status.value = 'Connecting';
+          setTimeout(async () => await ipc(), LATENCY);
+        });
 
-                return { status, done, message, isError }
-            },
+        return { status, done, message, isError };
+      },
 
-            template: `
-        <div class="flex flex-col items-center gap-6 px-6 text-center max-w-sm w-full animate-fade">
+      template: `
+        <div class="kt-card">
 
           <img
             src="https://kimtoo.net/images/logo-wide-dark.webp"
             alt="KimTools"
-            class="h-8 w-auto opacity-90"
+            class="kt-logo dark-logo"
+            style="display: block;"
           />
 
-          <div class="flex flex-col items-center gap-4 w-full">
+          <div class="kt-accent"></div>
 
-            <div
-              v-if="!done"
-              class="w-10 h-10 rounded-full border-2 border-zinc-700 border-t-brand animate-spin"
-            ></div>
+          <div class="kt-divider"></div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; width:100%;">
+
+            <div v-if="!done" class="kt-spinner"></div>
 
             <div v-else>
-              <div
-                v-if="isError"
-                class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-xl"
-              >✕</div>
-              <div
-                v-else
-                class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 text-xl"
-              >✓</div>
+              <div v-if="isError" class="kt-icon error">✕</div>
+              <div v-else         class="kt-icon success">✓</div>
             </div>
 
             <p
-              class="text-sm font-medium transition-all duration-300"
-              :class="done && isError ? 'text-red-400' : done ? 'text-green-400' : 'text-zinc-400'"
-            >{{ status }}</p>
+              class="kt-status"
+              :class="done && isError ? 'error' : done ? 'success' : ''"
+            >
+              {{ status }}<span v-if="!done" class="kt-dots"><span></span><span></span><span></span></span>
+            </p>
 
           </div>
 
           <div
             v-if="done && message"
-            class="w-full rounded-xl border px-4 py-3 text-left text-sm leading-relaxed font-mono break-words animate-fade"
-            :class="isError
-              ? 'bg-red-950/40 border-red-800/50 text-red-300'
-              : 'bg-zinc-900 border-zinc-700/60 text-zinc-300'"
+            class="kt-message"
+            :class="isError ? 'error' : 'success'"
             v-html="message"
           ></div>
 
+          <p class="kt-meta">
+            <span>kimtoo.net</span>
+            <span class="kt-meta-dot"></span>
+            <span>Patreon OAuth2</span>
+            <span class="kt-meta-dot"></span>
+            <span>Secure</span>
+          </p>
+
         </div>
       `
-        }).mount('#app')
-    </script>
+    }).mount('#app');
+  </script>
 
 </body>
-
 </html>
