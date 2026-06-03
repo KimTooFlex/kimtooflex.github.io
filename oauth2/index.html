@@ -74,16 +74,15 @@
                             if (!code) throw new Error(message.value);
                             isError.value = true
                         }
-                        else localStorage.setItem("code", code);
-
+                        else localStorage.setItem("code", code); 
 
                         let url = `http://localhost:${port}?code=${encodeURIComponent(code)}`;
 
                         if (`${success}`.trim().length > 0)
-                            url += `&success=${success}`.toLowerCase;
+                            url += `&success=${encodeURIComponent(success)}`.toLowerCase().trim();
 
                         if (`${msg}`.trim().length > 0)
-                            url += `&message=${msg}`;
+                            url += `&message=${encodeURIComponent(msg)}`.trim();
 
                         const res = await fetch(url)
                         const text = await res.text()
