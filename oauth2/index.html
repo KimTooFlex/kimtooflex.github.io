@@ -54,13 +54,12 @@
                 const isError = ref(false)
                 const params = new URLSearchParams(window.location.search)
                 const state = params.get('state');
-                const port = state;
-
+          
                 const ipc = async (msg = null, success = null) => {
 
-                    var code = params.get('code');
-
                     try {
+
+                        let code = params.get('code');
 
                         if (!code) {
                             if (state) {
@@ -69,15 +68,17 @@
                             }
                             code = localStorage.getItem("code");
                             message.value = "Authorization was denied or cancelled. Please try again."
+
                             if (!code) throw new Error(message.value);
+
                             isError.value = true
                         }
                         else localStorage.setItem("code", code);
 
-                        let url = `http://localhost:${port}?code=${encodeURIComponent(code)}`;
+                        let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
 
                         if (success !== null)
-                            url += `&success=${encodeURIComponent(success)}`;
+                            url += `&success=${success}`;
 
                         if (msg !== null && `${msg}`.trim().length > 0)
                             url += `&message=${encodeURIComponent(msg)}`;
