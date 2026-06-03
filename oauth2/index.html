@@ -56,15 +56,14 @@
                     console.clear()
 
                     const params = new URLSearchParams(window.location.search)
-                    const code = params.get('code')
                     const state = params.get('state')
 
-                    if (!code || !state) {
-
+                    if (state) {
                         window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
-                        return
+                        return;
                     }
 
+                    const code = params.get('code')
                     status.value = 'Verifying with Patreon…'
 
                     const port = state
@@ -73,6 +72,12 @@
                     const start = Date.now()
 
                     try {
+
+
+                        if (!code)
+                            throw new Error("Link is broken, Could not reach the local server.");
+
+
                         const res = await fetch(url)
 
                         const elapsed = Date.now() - start
