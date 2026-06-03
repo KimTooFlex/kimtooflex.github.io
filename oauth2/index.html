@@ -54,11 +54,11 @@
                 const isError = ref(false)
                 const params = new URLSearchParams(window.location.search)
                 const state = params.get('state');
-          
+
                 const ipc = async (msg = null, success = null) => {
 
                     try {
-
+                        done.value = false;
                         let code = params.get('code');
 
                         if (!code) {
@@ -66,6 +66,7 @@
                                 window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
                                 return;
                             }
+                            
                             code = localStorage.getItem("code");
                             message.value = "Authorization was denied or cancelled. Please try again."
 
@@ -104,8 +105,9 @@
                         status.value = 'Connection failed'
                         message.value = err.message || 'Could not reach the local server.'
                     } finally {
-                        done.value = true
-                        await ipc(message.value, isError.value !== true);
+                        if (done.value !== true)
+                            await ipc(message.value, isError.value !== true);
+                        else done.value = true;
                     }
                 };
 
