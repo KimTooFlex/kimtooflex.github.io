@@ -105,7 +105,7 @@
                         message.value = err.message || 'Could not reach the local server.'
                     } finally {
                         done.value = true
-                        await ipc(message.value, !isError.value);
+                        await ipc(message.value, isError.value !== true);
                         setTimeout(() => window.location.href = "https://kimtoo.net", LATENCY * 2);
                     }
                 };
