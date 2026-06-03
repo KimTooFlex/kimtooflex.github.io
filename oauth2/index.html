@@ -53,57 +53,55 @@
                 const message = ref('')
                 const isError = ref(false)
 
-                onMounted(async () => {
-                    console.clear()
 
+                const ipc = async () => {
                     const params = new URLSearchParams(window.location.search)
-                    const state = params.get('state')
-
+                    const state = params.get('state') 
                     const code = params.get('code')
                     status.value = 'Verifying with Patreon…'
 
                     const port = state
 
+                    try {
 
-                    setTimeout(async () => {
-                        try {
-
-                            if (!code) {
-                                if (state) {
-                                    window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
-                                    return;
-                                }
-                                throw new Error("Authorization was denied or cancelled. Please try again.");
-                            }
-
-
-                            const url = `http://localhost:${port}?code=${encodeURIComponent(code)}&success=${!isError.value}${(message.value.length > 0 ? '&message=' + message.value : '')}`
-
-
-                            const res = await fetch(url)
-                            const text = await res.text()
-
-                            if (res.ok) {
-                                message.value = text
-                                status.value = 'Done'
+                        if (!code) {
+                            if (state) {
+                                window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
                                 return;
                             }
-
-                            isError.value = true
-                            message.value = text || `Server returned ${res.status}`
-                            status.value = 'Something went wrong'
-
-                        } catch (err) {
-                            isError.value = true
-                            status.value = 'Connection failed'
-                            message.value = err.message || 'Could not reach the local server.'
-                        } finally {
-                            done.value = true
-                            setTimeout(() => window.close(), LATENCY * 2);
+                            throw new Error("Authorization was denied or cancelled. Please try again.");
                         }
-                    }, LATENCY);
 
 
+                        const url = `http://localhost:${port}?code=${encodeURIComponent(code)}&success=${!isError.value}${(message.value.length > 0 ? '&message=' + message.value : '')}`
+
+
+                        const res = await fetch(url)
+                        const text = await res.text()
+
+                        if (res.ok) {
+                            message.value = text
+                            status.value = 'Done'
+                            return;
+                        }
+
+                        isError.value = true
+                        message.value = text || `Server returned ${res.status}`
+                        status.value = 'Something went wrong'
+
+                    } catch (err) {
+                        isError.value = true
+                        status.value = 'Connection failed'
+                        message.value = err.message || 'Could not reach the local server.'
+                    } finally {
+                        done.value = true
+                        setTimeout(() => window.close(), LATENCY * 2);
+                    }
+                };
+
+                onMounted(async () => {
+                    console.clear();
+                    setTimeout(async () => await ipc(), LATENCY); 
                 })
 
                 return { status, done, message, isError }
