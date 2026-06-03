@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,315 +7,178 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['DM Sans', 'sans-serif'],
-            mono: ['DM Mono', 'monospace'],
-          },
-          colors: {
-            brand: { DEFAULT: '#FF424D', dark: '#CC333D', light: '#FF6B74' },
-          },
-          keyframes: {
-            'spin-ring': { to: { transform: 'rotate(360deg)' } },
-            'fade-up':   { '0%': { opacity: 0, transform: 'translateY(12px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
-            'scale-in':  { '0%': { opacity: 0, transform: 'scale(0.94)' },     '100%': { opacity: 1, transform: 'scale(1)' } },
-            'pulse-dot': { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.25 } },
-            'shimmer':   { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
-          },
-          animation: {
-            'spin-ring': 'spin-ring 0.85s linear infinite',
-            'fade-up':   'fade-up 0.45s cubic-bezier(0.16,1,0.3,1) forwards',
-            'scale-in':  'scale-in 0.4s cubic-bezier(0.16,1,0.3,1) forwards',
-            'pulse-dot': 'pulse-dot 1.4s ease-in-out infinite',
-            'shimmer':   'shimmer 2s linear infinite',
-          }
-        }
-      }
+      theme: { extend: { fontFamily: { sans: ['DM Sans','sans-serif'], mono: ['DM Mono','monospace'] } } }
     }
-
-    ;(function () {
+    ;(function(){
       try {
-        var t = localStorage.getItem('theme') || localStorage.getItem('kimtools-theme') || localStorage.getItem('color-theme');
-        if (t === 'light') document.documentElement.classList.remove('dark');
+        var t = localStorage.getItem('theme')||localStorage.getItem('kimtools-theme')||localStorage.getItem('color-theme');
+        if(t==='light') document.documentElement.classList.remove('dark');
         else document.documentElement.classList.add('dark');
-      } catch(e) {
-        document.documentElement.classList.add('dark');
-      }
+      } catch(e){ document.documentElement.classList.add('dark'); }
     })();
   </script>
-
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-    :root {
-      --bg:          #f4f4f6;
-      --card-bg:     #ffffff;
-      --card-border: rgba(0,0,0,0.07);
-      --text-1:      #0f0f10;
-      --text-2:      #6b6b72;
-      --text-3:      #a0a0a8;
-      --divider:     rgba(0,0,0,0.055);
-      --success-bg:  #f0faf4;
-      --success-bd:  rgba(22,163,74,0.18);
-      --success-tx:  #15803d;
-      --error-bg:    #fff1f2;
-      --error-bd:    rgba(239,68,68,0.18);
-      --error-tx:    #b91c1c;
-      --ring-track:  rgba(0,0,0,0.07);
-      --pill-bg:     rgba(0,0,0,0.04);
-      --pill-bd:     rgba(0,0,0,0.07);
-      --check-bg:    rgba(0,0,0,0.03);
-      --check-bd:    rgba(0,0,0,0.06);
-      --patreon:     #FF424D;
+    :root{
+      --bg:#f4f4f6; --card-bg:#fff; --card-bd:rgba(0,0,0,.07);
+      --t1:#0f0f10; --t2:#6b6b72; --t3:#a0a0a8;
+      --div:rgba(0,0,0,.055);
+      --ok-bg:#f0faf4; --ok-bd:rgba(22,163,74,.18); --ok-tx:#15803d;
+      --er-bg:#fff1f2; --er-bd:rgba(239,68,68,.18); --er-tx:#b91c1c;
+      --row-bg:rgba(0,0,0,.025); --row-bd:rgba(0,0,0,.06);
+      --warn-bg:rgba(234,179,8,.07); --warn-bd:rgba(234,179,8,.2); --warn-tx:#854d0e;
+      --ring:rgba(0,0,0,.07);
     }
-    .dark {
-      --bg:          #0c0c0e;
-      --card-bg:     #17171a;
-      --card-border: rgba(255,255,255,0.055);
-      --text-1:      #f2f2f4;
-      --text-2:      #8f8f98;
-      --text-3:      #56565e;
-      --divider:     rgba(255,255,255,0.05);
-      --success-bg:  rgba(22,163,74,0.08);
-      --success-bd:  rgba(22,163,74,0.2);
-      --success-tx:  #4ade80;
-      --error-bg:    rgba(239,68,68,0.07);
-      --error-bd:    rgba(239,68,68,0.2);
-      --error-tx:    #f87171;
-      --ring-track:  rgba(255,255,255,0.06);
-      --pill-bg:     rgba(255,255,255,0.05);
-      --pill-bd:     rgba(255,255,255,0.07);
-      --check-bg:    rgba(255,255,255,0.03);
-      --check-bd:    rgba(255,255,255,0.06);
+    .dark{
+      --bg:#0c0c0e; --card-bg:#17171a; --card-bd:rgba(255,255,255,.055);
+      --t1:#f2f2f4; --t2:#8f8f98; --t3:#56565e;
+      --div:rgba(255,255,255,.05);
+      --ok-bg:rgba(22,163,74,.08); --ok-bd:rgba(22,163,74,.2); --ok-tx:#4ade80;
+      --er-bg:rgba(239,68,68,.07); --er-bd:rgba(239,68,68,.2); --er-tx:#f87171;
+      --row-bg:rgba(255,255,255,.03); --row-bd:rgba(255,255,255,.06);
+      --warn-bg:rgba(234,179,8,.06); --warn-bd:rgba(234,179,8,.15); --warn-tx:#fbbf24;
+      --ring:rgba(255,255,255,.06);
     }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text-1);
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.25s, color 0.25s;
+    body{
+      font-family:'DM Sans',sans-serif;
+      background:var(--bg); color:var(--t1);
+      min-height:100dvh; display:flex; align-items:center; justify-content:center;
+      transition:background .25s,color .25s;
+    }
+    body::before{
+      content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+      background-image:linear-gradient(var(--div) 1px,transparent 1px),linear-gradient(90deg,var(--div) 1px,transparent 1px);
+      background-size:40px 40px;
+    }
+    body::after{
+      content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+      background:radial-gradient(ellipse 80% 60% at 50% 50%,transparent 30%,var(--bg) 100%);
     }
 
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image:
-        linear-gradient(var(--divider) 1px, transparent 1px),
-        linear-gradient(90deg, var(--divider) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    body::after {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, var(--bg) 100%);
-    }
+    #app{position:relative;z-index:1;width:100%;display:flex;justify-content:center;padding:2rem 1rem}
 
-    #app {
-      position: relative; z-index: 1;
-      width: 100%; display: flex;
-      justify-content: center;
-      padding: 2rem 1rem;
+    .kt-card{
+      background:var(--card-bg); border:1px solid var(--card-bd); border-radius:22px;
+      width:100%; max-width:560px;
+      display:flex; flex-direction:column; align-items:center;
+      padding:2.25rem 2.25rem 1.75rem;
+      animation:scaleIn .4s cubic-bezier(.16,1,.3,1) forwards;
     }
+    .dark .kt-card{ box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 28px 80px rgba(0,0,0,.55); }
+    .kt-card:not(.dark *){ box-shadow:0 2px 4px rgba(0,0,0,.04),0 12px 40px rgba(0,0,0,.06); }
 
-    /* ── Card ── */
-    .kt-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 22px;
-      width: 100%; max-width: 420px;
-      display: flex; flex-direction: column; align-items: center;
-      padding: 2.25rem 2rem 2rem;
-      animation: scale-in 0.4s cubic-bezier(0.16,1,0.3,1) forwards;
-    }
-    .dark .kt-card {
-      box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 28px 80px rgba(0,0,0,0.55);
-    }
-    .light .kt-card {
-      box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.06);
-    }
+    /* logos */
+    .kt-logo{height:26px;width:auto}
+    .kt-logo-dark{display:block}
+    .kt-logo-light{display:none}
+    :root:not(.dark) .kt-logo-dark{display:none}
+    :root:not(.dark) .kt-logo-light{display:block}
 
-    .kt-logo { height: 26px; width: auto; display: block; }
+    .kt-accent{width:24px;height:2.5px;border-radius:99px;background:#FF424D;margin-top:10px}
+    .kt-divider{width:100%;height:1px;background:var(--div);margin:1.5rem 0}
 
-    .kt-accent {
-      width: 24px; height: 2.5px; border-radius: 99px;
-      background: #FF424D; margin-top: 10px;
-    }
+    /* onboard */
+    .kt-onboard{width:100%;animation:fadeUp .4s cubic-bezier(.16,1,.3,1) forwards}
+    .kt-headline{font-size:17px;font-weight:600;color:var(--t1);text-align:center;margin-bottom:7px;line-height:1.35}
+    .kt-sub{font-size:13.5px;color:var(--t2);text-align:center;line-height:1.6;margin-bottom:1.25rem}
 
-    .kt-divider {
-      width: 100%; height: 1px;
-      background: var(--divider);
-      margin: 1.6rem 0;
+    /* perks grid */
+    .kt-perks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
+    @media(max-width:480px){.kt-perks{grid-template-columns:1fr}}
+    .kt-perk{
+      display:flex;align-items:flex-start;gap:9px;
+      background:var(--row-bg);border:1px solid var(--row-bd);
+      border-radius:11px;padding:10px 11px;
     }
+    .kt-perk-icon{
+      flex-shrink:0;width:22px;height:22px;border-radius:6px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:12px;background:rgba(255,66,77,.1);margin-top:1px;
+    }
+    .kt-perk-text{font-size:12.5px;color:var(--t2);line-height:1.5}
+    .kt-perk-text strong{color:var(--t1);font-weight:500;display:block;margin-bottom:2px}
 
-    /* ── Onboarding ── */
-    .kt-onboard { width: 100%; animation: fade-up 0.4s cubic-bezier(0.16,1,0.3,1) forwards; }
+    /* warning / error notice card */
+    .kt-notice{
+      width:100%;border-radius:11px;padding:11px 13px;
+      display:flex;align-items:flex-start;gap:10px;
+      margin-bottom:1.1rem;border:1px solid;
+    }
+    .kt-notice.warn{background:var(--warn-bg);border-color:var(--warn-bd);color:var(--warn-tx)}
+    .kt-notice.err {background:var(--er-bg);  border-color:var(--er-bd);  color:var(--er-tx)}
+    .kt-notice-icon{font-size:14px;flex-shrink:0;margin-top:1px}
+    .kt-notice-text{font-size:12.5px;line-height:1.55}
+    .kt-notice-text strong{font-weight:500;display:block;margin-bottom:2px}
 
-    .kt-headline {
-      font-size: 17px; font-weight: 600;
-      color: var(--text-1); line-height: 1.35;
-      text-align: center; margin-bottom: 8px;
+    /* connect button */
+    .kt-btn{
+      width:100%;display:flex;align-items:center;justify-content:center;gap:10px;
+      padding:13px 20px;border-radius:12px;border:none;cursor:pointer;
+      font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:600;
+      color:#fff;background:#FF424D;letter-spacing:.01em;
+      transition:background .18s,transform .15s,box-shadow .18s;
+      margin-bottom:1rem;
     }
-    .kt-sub {
-      font-size: 13.5px; color: var(--text-2);
-      text-align: center; line-height: 1.6;
-      margin-bottom: 1.4rem;
-    }
+    .kt-btn:hover{background:#e53d48;box-shadow:0 4px 20px rgba(255,66,77,.3)}
+    .kt-btn:active{transform:scale(.98)}
+    .kt-btn svg{width:18px;height:18px;flex-shrink:0}
 
-    /* perks list */
-    .kt-perks {
-      display: flex; flex-direction: column; gap: 8px;
-      margin-bottom: 1.5rem;
-    }
-    .kt-perk {
-      display: flex; align-items: flex-start; gap: 10px;
-      background: var(--check-bg);
-      border: 1px solid var(--check-bd);
-      border-radius: 11px;
-      padding: 10px 12px;
-    }
-    .kt-perk-icon {
-      flex-shrink: 0;
-      width: 22px; height: 22px; border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px;
-      background: rgba(255,66,77,0.1);
-      color: #FF424D;
-      margin-top: 1px;
-    }
-    .kt-perk-text { font-size: 13px; color: var(--text-2); line-height: 1.5; }
-    .kt-perk-text strong { color: var(--text-1); font-weight: 500; }
+    /* single footer line */
+    .kt-foot{font-size:11px;color:var(--t3);text-align:center;margin-top:.25rem}
 
-    /* note */
-    .kt-note {
-      font-size: 11.5px; color: var(--text-3);
-      text-align: center; line-height: 1.6;
-      margin-bottom: 1.4rem;
-      padding: 0 0.5rem;
+    /* auth state */
+    .kt-auth{width:100%;display:flex;flex-direction:column;align-items:center;animation:fadeUp .4s cubic-bezier(.16,1,.3,1) forwards}
+    .kt-loader{width:52px;height:52px;object-fit:contain}
+    .kt-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .kt-icon.ok {background:var(--ok-bg);color:var(--ok-tx);border:1px solid var(--ok-bd)}
+    .kt-icon.err{background:var(--er-bg);color:var(--er-tx);border:1px solid var(--er-bd)}
+    .kt-status{font-size:13px;font-weight:500;color:var(--t2);transition:color .3s;margin-top:13px;text-align:center}
+    .kt-status.ok {color:var(--ok-tx)}
+    .kt-status.err{color:var(--er-tx)}
+    .kt-dots{display:inline-flex;gap:3px;margin-left:4px;vertical-align:middle}
+    .kt-dots span{
+      width:3px;height:3px;border-radius:50%;
+      background:currentColor;display:inline-block;
+      animation:pulseDot 1.4s ease-in-out infinite;
     }
+    .kt-dots span:nth-child(2){animation-delay:.2s}
+    .kt-dots span:nth-child(3){animation-delay:.4s}
+    .kt-msg{
+      width:100%;border-radius:10px;padding:12px 14px;
+      font-family:'DM Mono',monospace;font-size:12px;line-height:1.65;
+      word-break:break-word;border:1px solid;
+      animation:fadeUp .35s cubic-bezier(.16,1,.3,1) forwards;margin-top:1.25rem;
+    }
+    .kt-msg.ok {background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok-tx)}
+    .kt-msg.err{background:var(--er-bg);border-color:var(--er-bd);color:var(--er-tx)}
 
-    /* ── Connect button ── */
-    .kt-btn-connect {
-      width: 100%;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      padding: 13px 20px;
-      border-radius: 12px;
-      border: none; cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14.5px; font-weight: 600;
-      color: #ffffff;
-      background: #FF424D;
-      transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
-      letter-spacing: 0.01em;
-      margin-bottom: 10px;
+    /* theme btn */
+    .kt-theme-btn{
+      position:fixed;top:1.25rem;right:1.25rem;
+      width:34px;height:34px;border-radius:9px;
+      border:1px solid var(--card-bd);background:var(--card-bg);color:var(--t2);
+      cursor:pointer;display:flex;align-items:center;justify-content:center;
+      font-size:14px;z-index:10;transition:background .2s,border-color .2s;
     }
-    .kt-btn-connect:hover  { background: #e53d48; box-shadow: 0 4px 20px rgba(255,66,77,0.35); }
-    .kt-btn-connect:active { transform: scale(0.98); }
+    .kt-theme-btn:hover{color:var(--t1)}
 
-    .kt-btn-connect .p-icon {
-      width: 20px; height: 20px; flex-shrink: 0;
-    }
-
-    /* security badge row */
-    .kt-badges {
-      display: flex; align-items: center; justify-content: center;
-      gap: 12px; flex-wrap: wrap;
-      margin-top: 4px;
-    }
-    .kt-badge {
-      display: flex; align-items: center; gap: 5px;
-      font-size: 11px; color: var(--text-3);
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-bd);
-      border-radius: 99px;
-      padding: 4px 10px;
-    }
-    .kt-badge-dot {
-      width: 5px; height: 5px; border-radius: 50%;
-      background: #22c55e; flex-shrink: 0;
-    }
-
-    /* ── Auth processing state ── */
-    .kt-auth { width: 100%; display: flex; flex-direction: column; align-items: center; animation: fade-up 0.4s cubic-bezier(0.16,1,0.3,1) forwards; }
-
-    .kt-spinner {
-      width: 46px; height: 46px; border-radius: 50%;
-      border: 2.5px solid var(--ring-track);
-      border-top-color: #FF424D;
-      animation: spin-ring 0.85s linear infinite;
-    }
-
-    .kt-icon {
-      width: 46px; height: 46px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; font-size: 20px;
-    }
-    .kt-icon.success { background: var(--success-bg); color: var(--success-tx); border: 1px solid var(--success-bd); }
-    .kt-icon.error   { background: var(--error-bg);   color: var(--error-tx);   border: 1px solid var(--error-bd); }
-
-    .kt-status {
-      font-size: 13px; font-weight: 500; color: var(--text-2);
-      transition: color 0.3s; margin-top: 14px; text-align: center;
-    }
-    .kt-status.success { color: var(--success-tx); }
-    .kt-status.error   { color: var(--error-tx); }
-
-    .kt-dots { display: inline-flex; gap: 3px; margin-left: 4px; vertical-align: middle; }
-    .kt-dots span {
-      width: 3px; height: 3px; border-radius: 50%;
-      background: currentColor; display: inline-block;
-      animation: pulse-dot 1.4s ease-in-out infinite;
-    }
-    .kt-dots span:nth-child(2) { animation-delay: 0.2s; }
-    .kt-dots span:nth-child(3) { animation-delay: 0.4s; }
-
-    .kt-message {
-      width: 100%; border-radius: 10px;
-      padding: 12px 14px;
-      font-family: 'DM Mono', monospace;
-      font-size: 12px; line-height: 1.65;
-      word-break: break-word; border: 1px solid;
-      animation: fade-up 0.35s cubic-bezier(0.16,1,0.3,1) forwards;
-      margin-top: 1.4rem;
-    }
-    .kt-message.success { background: var(--success-bg); border-color: var(--success-bd); color: var(--success-tx); }
-    .kt-message.error   { background: var(--error-bg);   border-color: var(--error-bd);   color: var(--error-tx); }
-
-    .kt-meta {
-      font-size: 11px; color: var(--text-3);
-      margin-top: 1.6rem;
-      display: flex; align-items: center; gap: 6px;
-    }
-    .kt-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-3); }
-
-    /* ── Theme toggle ── */
-    .kt-theme-btn {
-      position: fixed; top: 1.25rem; right: 1.25rem;
-      width: 34px; height: 34px; border-radius: 9px;
-      border: 1px solid var(--card-border);
-      background: var(--card-bg); color: var(--text-2);
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      font-size: 14px; z-index: 10;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .kt-theme-btn:hover { color: var(--text-1); }
+    @keyframes scaleIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+    @keyframes fadeUp {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.25}}
   </style>
 </head>
-
 <body>
 
-  <button class="kt-theme-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark mode">
+  <button class="kt-theme-btn" id="themeToggle" aria-label="Toggle theme">
     <span id="themeIcon">☀</span>
   </button>
 
@@ -328,194 +190,183 @@
     const BASE_URL  = "https://www.patreon.com/oauth2/authorize";
 
     const THEME_KEY = 'theme';
-    const html      = document.documentElement;
-    const btn       = document.getElementById('themeToggle');
-    const icon      = document.getElementById('themeIcon');
-
-    function applyTheme(t) {
-      if (t === 'light') { html.classList.remove('dark'); icon.textContent = '☽'; }
-      else               { html.classList.add('dark');    icon.textContent = '☀'; }
-      try { localStorage.setItem(THEME_KEY, t); } catch(e) {}
+    const htmlEl    = document.documentElement;
+    const tBtn      = document.getElementById('themeToggle');
+    const tIcon     = document.getElementById('themeIcon');
+    function applyTheme(t){
+      if(t==='light'){htmlEl.classList.remove('dark');tIcon.textContent='☽'}
+      else{htmlEl.classList.add('dark');tIcon.textContent='☀'}
+      try{localStorage.setItem(THEME_KEY,t)}catch(e){}
     }
-    btn.addEventListener('click', () => applyTheme(html.classList.contains('dark') ? 'light' : 'dark'));
-    icon.textContent = html.classList.contains('dark') ? '☀' : '☽';
+    tBtn.addEventListener('click',()=>applyTheme(htmlEl.classList.contains('dark')?'light':'dark'));
+    tIcon.textContent = htmlEl.classList.contains('dark') ? '☀' : '☽';
 
     const { createApp, ref, onMounted } = Vue;
 
     createApp({
-      setup() {
-        const phase   = ref('onboard'); // 'onboard' | 'auth'
+      setup(){
+        const phase   = ref('onboard');
         const status  = ref('Connecting');
         const done    = ref(false);
         const message = ref('');
         const isError = ref(false);
-        const params  = new URLSearchParams(window.location.search);
-        const state   = params.get('state');
 
-        // build Patreon URL
+        const params     = new URLSearchParams(window.location.search);
+        const state      = params.get('state');
+        const errorParam = params.get('error'); // e.g. ?error=session_expired&error_description=...
+
         const patreonUrl = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
-
-        function connectPatreon() {
-          window.location.href = patreonUrl;
-        }
+        function connectPatreon(){ window.location.href = patreonUrl; }
 
         onMounted(async () => {
           console.clear();
-
-          const code = params.get('code');
-
-          // if code is present, skip onboarding and go straight to auth processing
-          if (code) {
+          if(params.get('code')){
             phase.value = 'auth';
             await runIpc();
           }
-          // if no code and no state, show onboarding without a connect button that does anything useful
-          // state is the port, so we need it to eventually IPC back
         });
 
-        async function runIpc(msg = null, success = null) {
-          try {
-            done.value  = false;
-            let code    = params.get('code');
-
-            if (!code) {
+        async function runIpc(msg=null, success=null){
+          try{
+            done.value = false;
+            let code = params.get('code');
+            if(!code){
               code = localStorage.getItem('code');
               message.value = 'Authorization was denied or cancelled. Please try again.';
               isError.value = true;
-              if (!code) { done.value = true; return; }
+              if(!code){ done.value=true; return; }
             } else {
               localStorage.setItem('code', code);
             }
 
             status.value = 'Verifying with Patreon';
-
             let url = `http://localhost:${state}?code=${encodeURIComponent(code)}`;
-            if (success !== null) url += `&success=${success}`;
-            if (msg !== null && msg.trim().length > 0) url += `&message=${encodeURIComponent(msg)}`;
+            if(success !== null) url += `&success=${success}`;
+            if(msg !== null && msg.trim().length > 0) url += `&message=${encodeURIComponent(msg)}`;
 
             const start = Date.now();
             const res   = await fetch(url);
             const text  = await res.text();
+            const rem   = 300-(Date.now()-start);
+            if(rem>0) await new Promise(r=>setTimeout(r,rem));
 
-            const elapsed   = Date.now() - start;
-            const remaining = 300 - elapsed;
-            if (remaining > 0) await new Promise(r => setTimeout(r, remaining));
-
-            if (res.ok) {
+            if(res.ok){
               isError.value = false;
               message.value = text;
               status.value  = 'Connected successfully';
               done.value    = true;
-              setTimeout(() => window.location.href = 'https://kimtoo.net', LATENCY);
+              setTimeout(()=>window.location.href='https://kimtoo.net', LATENCY);
               return;
             }
-
             isError.value = true;
             message.value = text || `Server returned ${res.status}`;
             status.value  = 'Something went wrong';
-
-          } catch (err) {
+          } catch(err){
             isError.value = true;
             status.value  = 'Connection failed';
             message.value = err.message || 'Could not reach the local server.';
           } finally {
-            if (done.value !== true)
-              await runIpc(message.value, !isError.value);
+            if(done.value !== true) await runIpc(message.value, !isError.value);
           }
         }
 
-        return { phase, status, done, message, isError, state, connectPatreon };
+        return { phase, status, done, message, isError, state, errorParam, connectPatreon };
       },
 
       template: `
         <div class="kt-card">
 
-          <!-- logo -->
-          <img src="https://kimtoo.net/images/logo-wide-dark.webp" alt="KimTools" class="kt-logo" />
+          <img src="https://kimtoo.net/images/logo-wide-dark.webp" alt="KimTools" class="kt-logo kt-logo-dark" />
+          <img src="https://kimtoo.net/images/logo-wide.webp"      alt="KimTools" class="kt-logo kt-logo-light" />
           <div class="kt-accent"></div>
           <div class="kt-divider"></div>
 
-          <!-- ── ONBOARDING ── -->
+          <!-- ONBOARD -->
           <div v-if="phase === 'onboard'" class="kt-onboard">
 
             <p class="kt-headline">Activate your KimTools session</p>
-            <p class="kt-sub">
-              Sign in with Patreon to verify your membership and unlock your licensed controls inside Visual Studio.
-            </p>
+            <p class="kt-sub">Sign in with Patreon to verify your membership and unlock your licensed controls inside Visual Studio.</p>
 
             <div class="kt-perks">
               <div class="kt-perk">
                 <div class="kt-perk-icon">🔑</div>
-                <p class="kt-perk-text"><strong>Verify your tier</strong> — KimTools checks your active Patreon membership so the right controls are unlocked for your plan.</p>
+                <p class="kt-perk-text"><strong>Verify your tier</strong>KimTools checks your active Patreon membership to unlock the right controls for your plan.</p>
               </div>
               <div class="kt-perk">
                 <div class="kt-perk-icon">🔒</div>
-                <p class="kt-perk-text"><strong>No passwords stored</strong> — We never see or store your Patreon password. The connection uses OAuth2, the same standard used by Google and GitHub.</p>
+                <p class="kt-perk-text"><strong>No passwords stored</strong>We never see your Patreon password. OAuth2 is the same standard used by Google and GitHub.</p>
               </div>
               <div class="kt-perk">
                 <div class="kt-perk-icon">⚡</div>
-                <p class="kt-perk-text"><strong>One-time setup</strong> — After this, KimTools reconnects silently in the background. You won't need to do this again unless you log out.</p>
+                <p class="kt-perk-text"><strong>One-time setup</strong>After this, KimTools reconnects silently. You won't need to do this again unless you log out.</p>
+              </div>
+              <div class="kt-perk">
+                <div class="kt-perk-icon">👁</div>
+                <p class="kt-perk-text"><strong>Read-only access</strong>KimTools only reads your membership tier. It cannot post, charge, or change anything on your account.</p>
               </div>
             </div>
 
-            <p class="kt-note">
-              Patreon may show a warning because this is a developer app connecting to localhost. This is expected and safe — it simply means KimTools is running on your machine.
-            </p>
+            <!-- error notice (from ?error= param) replaces the warning notice -->
+            <div v-if="errorParam" class="kt-notice err">
+              <span class="kt-notice-icon">⚠</span>
+              <p class="kt-notice-text">
+                <strong>{{ errorParam.replace(/_/g,' ') }}</strong>
+                {{ new URLSearchParams(window.location.search).get('error_description') || 'Something went wrong with your session. Please reconnect.' }}
+              </p>
+            </div>
 
-            <button class="kt-btn-connect" v-if="state" @click="connectPatreon">
-              <svg class="p-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- default localhost warning -->
+            <div v-else class="kt-notice warn">
+              <span class="kt-notice-icon">ℹ</span>
+              <p class="kt-notice-text">
+                <strong>Patreon may show a security notice</strong>
+                This is expected. It appears because KimTools connects to your local machine (localhost). The connection is private and never leaves your computer.
+              </p>
+            </div>
+
+            <button class="kt-btn" v-if="state" @click="connectPatreon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.82 2.41C18.78 2.41 22 5.65 22 9.62C22 13.58 18.78 16.8 14.82 16.8C10.85 16.8 7.61 13.58 7.61 9.62C7.61 5.65 10.85 2.41 14.82 2.41Z" fill="white"/>
                 <path d="M2 21.6H5.5V2.41H2V21.6Z" fill="white"/>
               </svg>
               Continue with Patreon
             </button>
 
-            <p v-if="!state" style="font-size:12px;color:var(--error-tx);text-align:center;margin-bottom:12px;">
+            <p v-if="!state" style="font-size:12px;color:var(--er-tx);text-align:center;margin-bottom:12px;">
               Open this page from within KimTools to get started.
             </p>
 
-            <div class="kt-badges">
-              <span class="kt-badge"><span class="kt-badge-dot"></span>OAuth2 secured</span>
-              <span class="kt-badge"><span class="kt-badge-dot"></span>No password shared</span>
-              <span class="kt-badge"><span class="kt-badge-dot"></span>Read-only access</span>
-            </div>
+            <p class="kt-foot">🔐 OAuth2 · Read-only · kimtoo.net</p>
 
           </div>
 
-          <!-- ── AUTH PROCESSING ── -->
+          <!-- AUTH -->
           <div v-if="phase === 'auth'" class="kt-auth">
 
-            <div v-if="!done" class="kt-spinner"></div>
+            <img v-if="!done" src="./images/loader.gif" class="kt-loader" alt="Loading" />
             <div v-else>
-              <div v-if="isError" class="kt-icon error">✕</div>
-              <div v-else         class="kt-icon success">✓</div>
+              <div v-if="isError" class="kt-icon err">✕</div>
+              <div v-else         class="kt-icon ok">✓</div>
             </div>
 
-            <p class="kt-status" :class="done && isError ? 'error' : done ? 'success' : ''">
+            <p class="kt-status" :class="done && isError ? 'err' : done ? 'ok' : ''">
               {{ status }}<span v-if="!done" class="kt-dots"><span></span><span></span><span></span></span>
             </p>
 
             <div
               v-if="done && message"
-              class="kt-message"
-              :class="isError ? 'error' : 'success'"
+              class="kt-msg"
+              :class="isError ? 'err' : 'ok'"
               v-html="message"
             ></div>
 
-          </div>
+            <p class="kt-foot" style="margin-top:1.5rem">kimtoo.net · Patreon OAuth2</p>
 
-          <p class="kt-meta">
-            <span>kimtoo.net</span>
-            <span class="kt-meta-dot"></span>
-            <span>Patreon OAuth2</span>
-            <span class="kt-meta-dot"></span>
-            <span>Secure</span>
-          </p>
+          </div>
 
         </div>
       `
     }).mount('#app');
   </script>
-
 </body>
 </html>
