@@ -78,10 +78,7 @@
 
 
 
-                            const res = await fetch(url)
-
-
-
+                            const res = await fetch(url) 
                             const text = await res.text()
 
                             if (!res.ok) {
@@ -92,14 +89,13 @@
                                 message.value = text
                                 status.value = 'Done'
                             }
-                        } catch (err) {
-
-
+                        } catch (err) { 
                             isError.value = true
                             status.value = 'Connection failed'
                             message.value = err.message || 'Could not reach the local server.'
                         } finally {
                             done.value = true
+                            setTimeout(() =>   window.location.href = "https://kimtoo.net", 5000);
                         }
                     }, 3500);
 
