@@ -58,53 +58,52 @@
                     const params = new URLSearchParams(window.location.search)
                     const state = params.get('state')
 
-                    if (state) {
-                        window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
-                        return;
-                    }
-
                     const code = params.get('code')
                     status.value = 'Verifying with Patreon…'
 
                     const port = state
                     const url = `http://localhost:${port}?code=${encodeURIComponent(code)}`
 
-                    const start = Date.now()
 
-                    try {
-
-
-                        if (!code)
-                            throw new Error("Link is broken, Could not reach the local server.");
+                    setTimeout(async () => {
+                        try {
 
 
-                        const res = await fetch(url)
+                            if (state) {
+                                window.location.href = `${BASE_URL}?response_type=code&client_id=${CLIENT_ID}&scope=identity&state=${state}`;
+                                return;
+                            }
 
-                        const elapsed = Date.now() - start
-                        const remaining = 300 - elapsed
-                        if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
+                            if (!code) throw new Error("Authorization was denied or cancelled. Please try again.");
 
-                        const text = await res.text()
 
-                        if (!res.ok) {
+
+                            const res = await fetch(url)
+
+
+
+                            const text = await res.text()
+
+                            if (!res.ok) {
+                                isError.value = true
+                                message.value = text || `Server returned ${res.status}`
+                                status.value = 'Something went wrong'
+                            } else {
+                                message.value = text
+                                status.value = 'Done'
+                            }
+                        } catch (err) {
+
+
                             isError.value = true
-                            message.value = text || `Server returned ${res.status}`
-                            status.value = 'Something went wrong'
-                        } else {
-                            message.value = text
-                            status.value = 'Done'
+                            status.value = 'Connection failed'
+                            message.value = err.message || 'Could not reach the local server.'
+                        } finally {
+                            done.value = true
                         }
-                    } catch (err) {
-                        const elapsed = Date.now() - start
-                        const remaining = 300 - elapsed
-                        if (remaining > 0) await new Promise(r => setTimeout(r, remaining))
+                    }, 3500);
 
-                        isError.value = true
-                        status.value = 'Connection failed'
-                        message.value = err.message || 'Could not reach the local server.'
-                    } finally {
-                        done.value = true
-                    }
+
                 })
 
                 return { status, done, message, isError }
