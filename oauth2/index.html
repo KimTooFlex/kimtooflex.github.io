@@ -63,11 +63,9 @@
                     status.value = 'Verifying with Patreon…'
 
                     const port = state
-                    const url = `http://localhost:${port}?code=${encodeURIComponent(code)}`
 
 
                     setTimeout(async () => {
-
                         try {
 
                             if (!code) {
@@ -77,6 +75,9 @@
                                 }
                                 throw new Error("Authorization was denied or cancelled. Please try again.");
                             }
+
+
+                            const url = `http://localhost:${port}?code=${encodeURIComponent(code)}&success=${!isError.value}${(message.value.length > 0 ? '&message=' + message.value : '')}`
 
 
                             const res = await fetch(url)
