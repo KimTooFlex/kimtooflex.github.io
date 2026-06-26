@@ -612,26 +612,25 @@
                 </div>
             </div>
         </div>
-        <!-- ═══════════════ FREE EDITION ═══════════════ -->
-        <section class="py-24 shadow-lg  dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'">
+        <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
 
                     <div class="order-2 lg:order-1">
                         <div class="rounded-2xl overflow-hidden p-16"
-                            :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'">
+                             :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'">
                             <img src="./images/can.png" alt="KimTools Free Edition" class="w-full" />
                         </div>
                     </div>
 
                     <div class="order-1 lg:order-2">
-                        <p class="section-label mb-4" style="color: #FF6B35;">Free Edition is coming</p>
+                        <p class="section-label mb-4" style="color: #FF6B35;">Free Edition</p>
                         <h3 class="font-display text-3xl font-bold leading-tight mb-6"
                             :class="isDark ? 'text-white' : 'text-gray-900'">
-                            You Asked, <span class="grad-fire">We Listened.</span>
+                            14 Essential Controls. <span class="grad-fire">Completely Free.</span>
                         </h3>
                         <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            <strong class="grad-green">KimTools Free Edition</strong> is coming — a curated set of
+                            <strong class="grad-green">KimTools Free Edition</strong> is here — a curated set of
                             essential controls built with the same quality, performance, and modern design standards as
                             the PLUS+ suite.
                         </p>
@@ -640,37 +639,21 @@
                             theme-ready foundation that makes KimTools stand out.
                         </p>
 
-                        <!-- ═══════════════ FULL-WIDTH WAITING LIST FORM ═══════════════ -->
                         <div class="mt-10 w-full">
-                            <p class="text-xs font-bold uppercase tracking-widest mb-3"
-                                :class="isDark ? 'text-gray-500' : 'text-gray-400'">
-                                Join the waiting list
-                            </p>
-                            <form action="https://gumroad.com/follow_from_embed_form" method="post"
-                                id="gumroad-follow-form-embed" class="flex flex-col gap-3 w-full">
-                                <input type="hidden" name="seller_id" value="2023101745328" />
-
-                                <input type="email" name="email" placeholder="Enter your email address" required
-                                    class="w-full rounded-lg px-4 py-3 pl-10 text-sm font-mono outline-none transition-all"
-                                    :class="isDark
-                             ? 'bg-slate-900 border border-white/10 text-white placeholder-white/30 focus:border-kt-green/50' 
-                             : 'bg-black/[0.04] border border-black/[0.09] text-gray-900 placeholder-gray-400 focus:border-kt-green/60'" />
-
-                                <button type="submit" data-analytics="join_waitlist"
-                                    class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20"
-                                    style="height: 44px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);">
-                                    Join Waiting List
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2.5">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </button>
-                            </form>
+                            <a href="https://gumroad.com/checkout?product=wdhwd&option=iQgbFGr3IQ-hOnXIWI4ncA%3D%3D&quantity=1&_gl=1*b57d87*_ga*NTUyNzIxMDM4LjE3Nzg0NTk2NjU.*_ga_6LJN6D94N6*czE3ODI0NzY2MTIkbzExMyRnMCR0MTc4MjQ3NjYxMiRqNjAkbDAkaDA." target="_blank" rel="noopener noreferrer"
+                               data-analytics="get_free_edition"
+                               class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20"
+                               style="height: 54px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);">
+                                Get Free Edition
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
                             <p class="mt-4 text-[11px] italic" :class="isDark ? 'text-gray-600' : 'text-gray-400'">
-                                * We'll notify you the moment the Free Edition is ready for download.
+                                * Free forever. No account required.
                             </p>
                         </div>
-                        <!-- ══════════════════════════════════════════════════ -->
 
                     </div>
 
