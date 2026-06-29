@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KimTools – Modern UI Toolkit for WinForms C# | VB.NET</title>
     <meta name="description"
-        content="KimTools Modern UI Toolkit Framework & SDK for WinForms C# | VB.NET. 35+ controls, 35+ themes, 10,000+ SVG icons. .NET 4.6 through .NET 9." />
+          content="KimTools Modern UI Toolkit Framework & SDK for WinForms C# | VB.NET. 35+ controls, 35+ themes, 10,000+ SVG icons. .NET 4.6 through .NET 9." />
     <meta name="keywords"
-        content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools" />
+          content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools" />
     <meta name="author" content="Kimutai Kipngetich" />
     <meta property="og:title" content="KimTools – Modern WinForms UI Framework" />
     <meta property="og:description"
-        content="Upgrade WinForms apps with modern UI controls, theming, and high performance." />
+          content="Upgrade WinForms apps with modern UI controls, theming, and high performance." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kimtoo.net" />
     <meta property="og:image" content="https://kimtoo.net/images/top_img.png" />
@@ -25,9 +25,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://unpkg.com/modal-video@2.4.6/css/modal-video.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet" />
 
     <!-- Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -161,8 +160,7 @@
 
         /* Grid background */
         .grid-bg {
-            background-image: linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
             background-size: 40px 40px;
         }
 
@@ -175,9 +173,9 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .control-card:hover {
-            transform: translateY(-4px);
-        }
+            .control-card:hover {
+                transform: translateY(-4px);
+            }
 
         /* Scrollbar */
         ::-webkit-scrollbar {
@@ -203,9 +201,9 @@
             white-space: nowrap;
         }
 
-        .ticker-inner.animate {
-            animation: marquee 30s linear infinite;
-        }
+            .ticker-inner.animate {
+                animation: marquee 30s linear infinite;
+            }
 
         /* Banner bar gradient */
         .banner-bar {
@@ -216,8 +214,7 @@
 
         @keyframes gradShift {
 
-            0%,
-            100% {
+            0%, 100% {
                 background-position: 0% 50%
             }
 
@@ -242,20 +239,20 @@
             padding-bottom: 2px;
         }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 0;
-            height: 2px;
-            background: #3B82F6;
-            transition: width 0.25s ease;
-        }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                background: #3B82F6;
+                transition: width 0.25s ease;
+            }
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
+            .nav-link:hover::after {
+                width: 100%;
+            }
 
         /* Feature pill */
         .pill {
@@ -285,10 +282,10 @@
             transition: opacity 0.2s, transform 0.2s;
         }
 
-        .btn-primary:hover {
-            opacity: 0.88;
-            transform: translateY(-2px);
-        }
+            .btn-primary:hover {
+                opacity: 0.88;
+                transform: translateY(-2px);
+            }
 
         .btn-secondary {
             display: inline-flex;
@@ -306,9 +303,9 @@
         }
 
 
-        .btn-secondary:hover {
-            transform: translateY(-2px);
-        }
+            .btn-secondary:hover {
+                transform: translateY(-2px);
+            }
 
         /* Sections */
         .section-label {
@@ -338,15 +335,15 @@
             overflow: hidden;
         }
 
-        .mobile-menu.closed {
-            max-height: 0;
-            opacity: 0;
-        }
+            .mobile-menu.closed {
+                max-height: 0;
+                opacity: 0;
+            }
 
-        .mobile-menu.open {
-            max-height: 500px;
-            opacity: 1;
-        }
+            .mobile-menu.open {
+                max-height: 500px;
+                opacity: 1;
+            }
 
         /* Animation delays */
         .delay-100 {
@@ -585,12 +582,12 @@
                         <div class="absolute  animate-bounce -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-mono font-bold w-fit"
                              style="z-index: 999; background: linear-gradient(135deg,#FF6B35,#9811A6,#00AFAF); color: white; transform: rotate(3deg);">
                             <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                                d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
-                        </svg> -->
+                                fill="currentColor"
+                                class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
+                            </svg> -->
                             <b v-text="latestVersion"></b>
                         </div>
                     </div>
@@ -612,55 +609,102 @@
                 </div>
             </div>
         </div>
-        <!-- ═══════════════ FREE SECTION ═══════════════ -->
+        <!-- $1$ ═══════════════ FREE SECTION ═══════════════ #1# -->
+        <!-- <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'"> -->
+        <!--     <div class="max-w-7xl mx-auto px-6"> -->
+        <!--         <div class="grid lg:grid-cols-2 gap-16 items-center"> -->
+        <!-- -->
+        <!--             <div class="order-2 lg:order-1"> -->
+        <!--                 <div class="rounded-2xl overflow-hidden p-16" -->
+        <!--                      :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'"> -->
+        <!--                     <img src="./images/can.png" alt="KimTools Free Edition" class="w-full" /> -->
+        <!--                 </div> -->
+        <!--             </div> -->
+        <!-- -->
+        <!--             <div class="order-1 lg:order-2"> -->
+        <!--                 <p class="section-label mb-4" style="color: #FF6B35;">Free Edition</p> -->
+        <!--                 <h3 class="font-display text-3xl font-bold leading-tight mb-6" -->
+        <!--                     :class="isDark ? 'text-white' : 'text-gray-900'"> -->
+        <!--                     10 Essential Controls. <span class="grad-fire">Completely Free.</span> -->
+        <!--                 </h3> -->
+        <!--                 <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'"> -->
+        <!--                     <strong class="grad-green">KimTools Free Edition</strong> is here — a curated set of -->
+        <!--                     essential controls built with the same quality, performance, and modern design standards as -->
+        <!--                     the PLUS+ suite. -->
+        <!--                 </p> -->
+        <!--                 <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'"> -->
+        <!--                     No compromise on rendering fidelity. No watered-down controls. Full access to the DPI-aware, -->
+        <!--                     theme-ready foundation that makes KimTools stand out. -->
+        <!--                 </p> -->
+        <!-- -->
+        <!--                 <div class="mt-10 w-full"> -->
+        <!--                     <a href="https://gumroad.com/checkout?product=wdhwd&option=iQgbFGr3IQ-hOnXIWI4ncA%3D%3D&quantity=1&_gl=1*b57d87*_ga*NTUyNzIxMDM4LjE3Nzg0NTk2NjU.*_ga_6LJN6D94N6*czE3ODI0NzY2MTIkbzExMyRnMCR0MTc4MjQ3NjYxMiRqNjAkbDAkaDA." target="_blank" rel="noopener noreferrer" -->
+        <!--                        data-analytics="get_free_edition" -->
+        <!--                        class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20" -->
+        <!--                        style="height: 54px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);"> -->
+        <!--                         Get Free Edition -->
+        <!--                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" -->
+        <!--                              fill="none" stroke="currentColor" stroke-width="2.5"> -->
+        <!--                             <path d="M5 12h14M12 5l7 7-7 7" /> -->
+        <!--                         </svg> -->
+        <!--                     </a> -->
+        <!--                     <p class="mt-4 text-[11px] italic" :class="isDark ? 'text-gray-600' : 'text-gray-400'"> -->
+        <!--                         * Free forever. No account required. -->
+        <!--                     </p> -->
+        <!--                 </div> -->
+        <!-- -->
+        <!--             </div> -->
+        <!-- -->
+        <!--         </div> -->
+        <!--     </div> -->
+        <!-- </section> -->
+        <!-- ═══════════════ HIRE SECTION ═══════════════ -->
         <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
-
                     <div class="order-2 lg:order-1">
                         <div class="rounded-2xl overflow-hidden p-16"
                              :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'">
-                            <img src="./images/can.png" alt="KimTools Free Edition" class="w-full" />
+                            <a href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&tier=1">
+                                <img src="./images/mvp.jpg" alt="Custom WinForms Development" class="w-full" />
+                            </a>
                         </div>
                     </div>
-
                     <div class="order-1 lg:order-2">
-                        <p class="section-label mb-4" style="color: #FF6B35;">Free Edition</p>
+                        <p class="section-label mb-4" style="color: #FF6B35;">Custom Development</p>
                         <h3 class="font-display text-3xl font-bold leading-tight mb-6"
                             :class="isDark ? 'text-white' : 'text-gray-900'">
-                            14 Essential Controls. <span class="grad-fire">Completely Free.</span>
+                            Need something built? <span class="grad-fire">Let's talk.</span>
                         </h3>
                         <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            <strong class="grad-green">KimTools Free Edition</strong> is here — a curated set of
-                            essential controls built with the same quality, performance, and modern design standards as
-                            the PLUS+ suite.
+                            <strong class="grad-green">KimToo.net</strong> is available for freelance engagements —
+                            custom WinForms controls, UI component libraries, licensing systems, or anything
+                            in the .NET desktop space.
                         </p>
                         <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            No compromise on rendering fidelity. No watered-down controls. Full access to the DPI-aware,
-                            theme-ready foundation that makes KimTools stand out.
+                            Same craft that goes into KimTools — DPI-aware, theme-ready, production-grade.
+                            No hand-holding required on your end.
                         </p>
-
                         <div class="mt-10 w-full">
-                            <a href="https://gumroad.com/checkout?product=wdhwd&option=iQgbFGr3IQ-hOnXIWI4ncA%3D%3D&quantity=1&_gl=1*b57d87*_ga*NTUyNzIxMDM4LjE3Nzg0NTk2NjU.*_ga_6LJN6D94N6*czE3ODI0NzY2MTIkbzExMyRnMCR0MTc4MjQ3NjYxMiRqNjAkbDAkaDA." target="_blank" rel="noopener noreferrer"
-                               data-analytics="get_free_edition"
+                            <a href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&tier=1"
+                               data-analytics="hire_cta"
                                class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20"
                                style="height: 54px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);">
-                                Get Free Edition
+                                Get a Free Quote
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                      fill="none" stroke="currentColor" stroke-width="2.5">
                                     <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg>
                             </a>
                             <p class="mt-4 text-[11px] italic" :class="isDark ? 'text-gray-600' : 'text-gray-400'">
-                                * Free forever. No account required.
+                                * Typically respond within 24 hours.
                             </p>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </section>
+
         <!-- ═══════════════ ABOUT / STORY ═══════════════ -->
         <section class="py-24 relative shadow dark:bg-slate-900">
             <div class="max-w-7xl mx-auto px-6">
@@ -1025,7 +1069,7 @@
             </div>
         </section>
 
-     
+
         <!-- ═══════════════ FOOTER ═══════════════ -->
         <footer class="border-t" :class="isDark ? 'border-white/[0.06] bg-[#0d0f14]' : 'border-black/[0.07] bg-white'">
             <div class="max-w-7xl mx-auto px-6 py-16">
@@ -1133,8 +1177,8 @@
 
                 const features = [
                     'Now available on Nuget',
-                    '40+ Modern Customizable Controls',
-                    '14+ Free Controls',
+                    '40 Modern Customizable Controls',
+                    //'10 Free Controls',
                     '35+ Enterprise-Grade Themes',
                     'Tailwind-Inspired Color System',
                     '10,000+ Precision SVG Icons',
