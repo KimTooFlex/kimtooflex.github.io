@@ -621,7 +621,9 @@
                         Simple, <span class="grad-green">lifetime</span> licensing
                     </h2>
                     <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        One-time purchase, no subscriptions. Pick the target that matches your stack or grab Plus+
+                        One-time purchase, no subscriptions.
+                        <br/>
+                        Pick the target that matches your stack or grab <b>{{pricingTiers[2].name}}</b>
                         for everything.
                     </p>
                 </div>
@@ -635,15 +637,15 @@
                         <span v-if="tier.highlight" class="pill absolute -top-3 left-1/2 -translate-x-1/2 "
                               style="border-width:5px; background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;"
                               :style="`border-color:${isDark ? 'black':'white' }`">
-                            &nbsp;&nbsp;{{ tier.name }}&nbsp;&nbsp;
+                            &nbsp;&nbsp; {{ tier.name }} &nbsp;&nbsp;
                         </span>
 
                         <div class="mb-6" :style="tier.highlight ? 'color:white;' : ''">
-
+                            <br />
                             <div class="mt-2 w-full">
                                 <span v-if="tier.highlight"
-                                      class=" mt-6 mb-2"
-                                      style="margin-left:80px; display:flex; align-items:center; gap:12px;">
+                                      class="absolute   left-1/2 -translate-x-1/2 "
+                                      style="  display:flex; align-items:center; gap:12px;">
                                     <img style="height:80px"
                                          :src="pricingTiers[0].logo"
                                          :alt="pricingTiers[0].name" />
@@ -651,10 +653,15 @@
                                     <img style="height:80px"
                                          :src="pricingTiers[1].logo"
                                          :alt="pricingTiers[1].name" />
+
                                 </span>
                                 <img v-else="tier.highlight" style="height:64px;float:right" :src="tier.logo" :alt="tier.name" />
                             </div>
-
+                            <span v-if="tier.highlight">
+                                <br/>
+                                <br/>
+                                <br/>
+                            </span>
                             <h3 v-if="!tier.highlight" class="font-display text-xl font-bold mt-8"
                                 :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-900'">
                                 {{ tier.name }}
@@ -1354,7 +1361,7 @@
                         option: "iEzCAUtpfn6l3wk4CVfadQ==",
                         key: 'plus',
                         emoji: '🟩',
-                        name: 'Plus +',
+                        name: 'PLUS',
                         price: '17.99',
                         color: 'white',
                         targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+', '.NET Latest + Preview'],
