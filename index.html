@@ -621,13 +621,13 @@
                         Simple, <span class="grad-green">lifetime</span> licensing
                     </h2>
                     <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        One-time purchase, no subscriptions. Pick the target that matches your stack — or grab Plus
-                        for everything. The runtime is always 100% royalty-free.
+                        One-time purchase, no subscriptions. Pick the target that matches your stack or grab Plus+
+                        for everything.
                     </p>
                 </div>
 
                 <!-- Pricing cards -->
-                <div class="grid md:grid-cols-3 gap-6 items-stretch" >
+                <div class="grid md:grid-cols-3 gap-6 items-stretch">
                     <div v-for="tier in pricingTiers" :key="tier.key" class="relative rounded-2xl shadow-lg p-8 flex flex-col bg-slate-100 dark:bg-slate-800"
                          :class="[isDark ? 'card-dark' : 'card-light', tier.highlight ? 'md:-translate-y-3' : '']"
                          :style="tier.highlight ? 'border: 1.5px solid transparent; background-image: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(135deg,#3B82F6,#7C3AED); background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 24px 60px rgba(59,130,246,0.25);' : ''">
@@ -654,8 +654,8 @@
                                 </span>
                                 <img v-else="tier.highlight" style="height:64px;float:right" :src="tier.logo" :alt="tier.name" />
                             </div>
-                           
-                            <h3 v-if="!tier.highlight"  class="font-display text-xl font-bold mt-8"
+
+                            <h3 v-if="!tier.highlight" class="font-display text-xl font-bold mt-8"
                                 :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-900'">
                                 {{ tier.name }}
                             </h3>
@@ -1304,7 +1304,7 @@
                     'WYSIWYG Designer UI Editors',
                     'Now available on Nuget.org',
 
-                   // 'Advanced Rendering Engine',
+                    // 'Advanced Rendering Engine',
                 ];
                 const featColors = ['#3B82F6', '#7C3AED', '#FF6B35', '#FF4C8B', '#A855F7', '#FFD166'];
 
@@ -1319,7 +1319,7 @@
                     { text: '.NET Framework 4.6.2', color: '#3B82F6' },
                     { text: '.NET Framework 4.7', color: '#3B82F6' },
                     { text: '.NET Framework 4.8+', color: '#3B82F6' },
-                  
+
                     { text: '.NET Core 8.0', color: '#A855F7' },
                     { text: '.NET 9.0', color: '#A855F7' },
                     { text: '.NET 10.0 (Preview)', color: '#A855F7' },
@@ -1357,7 +1357,7 @@
                         name: 'Plus +',
                         price: '17.99',
                         color: 'white',
-                        targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+','.NET Latest + Preview'],
+                        targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+', '.NET Latest + Preview'],
                         description: 'The ultimate developer license bundle — unlocks the full KimTools WinForms control suite across every supported WinForms target.',
                         highlight: true,
                     },
@@ -1409,7 +1409,7 @@
                         { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms' },
                         { label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank' },
                         { label: 'News', href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D', target: '_blank' },
-                     ],
+                    ],
                     resources: [
                         { label: 'Get Bunifu (30% Discount)', href: 'https://kimtoo.net/bunifu' },
                         { label: 'Documentation', href: 'https://docs.kimtoo.net', target: '_blank' },
