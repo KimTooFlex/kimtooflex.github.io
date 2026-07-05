@@ -32,7 +32,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- Video pop-up -->
     <script src="https://unpkg.com/modal-video@2.4.6/js/modal-video.min.js"></script>
-    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <!-- <script src="https://gumroad.com/js/gumroad.js"></script> -->
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-8RDLCMTFXX');</script>
@@ -627,39 +627,55 @@
                 </div>
 
                 <!-- Pricing cards -->
-                <div class="grid md:grid-cols-3 gap-6 items-stretch">
-                    <div v-for="tier in pricingTiers" :key="tier.key" class="relative rounded-2xl p-8 flex flex-col"
+                <div class="grid md:grid-cols-3 gap-6 items-stretch" >
+                    <div v-for="tier in pricingTiers" :key="tier.key" class="relative rounded-2xl shadow-lg p-8 flex flex-col bg-slate-100 dark:bg-slate-800"
                          :class="[isDark ? 'card-dark' : 'card-light', tier.highlight ? 'md:-translate-y-3' : '']"
                          :style="tier.highlight ? 'border: 1.5px solid transparent; background-image: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(135deg,#3B82F6,#7C3AED); background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 24px 60px rgba(59,130,246,0.25);' : ''">
 
-                        <span v-if="tier.highlight" class="pill absolute -top-3 left-1/2 -translate-x-1/2"
-                              style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
-                            Most Popular
+                        <span v-if="tier.highlight" class="pill absolute -top-3 left-1/2 -translate-x-1/2 "
+                              style="border-width:5px; background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;"
+                              :style="`border-color:${isDark ? 'black':'white' }`">
+                            &nbsp;&nbsp;{{ tier.name }}&nbsp;&nbsp;
                         </span>
 
-                        <div class="mb-6">
-                            <span class="text-2xl">{{ tier.emoji }}</span>
-                            <h3 class="font-display text-xl font-bold mt-2"
-                                :class="isDark ? 'text-white' : 'text-gray-900'">
+                        <div class="mb-6" :style="tier.highlight ? 'color:white;' : ''">
+
+                            <div class="mt-2 w-full">
+                                <span v-if="tier.highlight"
+                                      class=" mt-6 mb-2"
+                                      style="margin-left:80px; display:flex; align-items:center; gap:12px;">
+                                    <img style="height:80px"
+                                         :src="pricingTiers[0].logo"
+                                         :alt="pricingTiers[0].name" />
+
+                                    <img style="height:80px"
+                                         :src="pricingTiers[1].logo"
+                                         :alt="pricingTiers[1].name" />
+                                </span>
+                                <img v-else="tier.highlight" style="height:64px;float:right" :src="tier.logo" :alt="tier.name" />
+                            </div>
+                           
+                            <h3 v-if="!tier.highlight"  class="font-display text-xl font-bold mt-8"
+                                :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-900'">
                                 {{ tier.name }}
                             </h3>
                         </div>
 
                         <div class="mb-6">
                             <span class="font-display text-4xl font-bold"
-                                  :class="isDark ? 'text-white' : 'text-gray-900'">${{ tier.price }}</span>
-                            <span class="text-xs font-mono opacity-50 ml-1"
-                                  :class="isDark ? 'text-gray-400' : 'text-gray-600'">one-time</span>
+                                  :style="`color:${tier.color}`">${{ tier.price }}</span>
+                            <span class="text-xs font-mono opacity-50 ml-2"
+                                  :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-600'">one-time</span>
                         </div>
 
-                        <p class="text-sm leading-relaxed mb-6" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        <p class="text-sm leading-relaxed mb-6 opacity-60" :class="isDark || tier.highlight  ? 'text-white' : 'text-black'">
                             {{ tier.description }}
                         </p>
 
                         <ul class="space-y-2 mb-8">
                             <li v-for="target in tier.targets" :key="target"
-                                class="flex items-center gap-2 text-xs font-mono"
-                                :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                                class="flex items-center gap-2 text-xs font-mono opacity-80"
+                                :class="isDark || tier.highlight ? 'text-white' : 'text-black'">
                                 <span :style="`color:${tier.color}`">●</span>
                                 {{ target }}
                             </li>
@@ -668,7 +684,7 @@
                         <a :href="`https://checkout.kimtoo.net?wanted=true&option=${encodeURIComponent(tier.option)}`" data-analytics="pricing-tier-cta"
                            class="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm transition-all active:scale-[0.98]"
                            :style="tier.highlight
-                             ? 'background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;'
+                             ? 'background-color: white; color: #1E2939;'
                              : `background: ${tier.color}18; color: ${tier.color}; border: 1.5px solid ${tier.color}44;`">
                             Get {{ tier.name }}
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
@@ -1260,8 +1276,8 @@
 
                 const banners = [
                     { text: `🎉 KimTools ${latest} is now live!`, url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
-                    { text: '💥 Limited offer: Use code SDK26 for 52% off', url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Claim Discount' },
-                    { text: '📺 New demo: Modern Dashboard + Dark Mode WinForms', url: 'https://www.youtube.com/@kimtooflex', target: '_blank', cta: 'Watch Now' },
+                    { text: '💥 Limited offer: Use code SDK26 for 50% DISCOUNT', url: 'https://checkout.kimtoo.net?wanted=true&code=SDK26', target: '_blank', cta: 'Claim Discount' },
+                    { text: '📺 New demo: Modern Dashboard + Light/Dark Mode WinForms', url: 'https://www.youtube.com/@kimtooflex', target: '_blank', cta: 'Watch Now' },
                 ];
                 const bannerIndex = ref(0);
                 const currentBanner = computed(() => banners[bannerIndex.value]);
@@ -1278,15 +1294,16 @@
                 ];
 
                 const features = [
-                    'Now available on Nuget',
                     '40 Modern Customizable Controls',
-                    'C# + VB.NET Languages',
+                    'C# & VB.NET Language support',
                     '.NET Framework targets',
                     '.NET Core targets',
                     '35+ Enterprise-Grade Stylable Themes',
-                    'Tailwind-Inspired Color System',
-                    '10,000+ Precision SVG Icons',
+                    'Tailwind-Style Semantic Color System',
+                    '10,000+ Precision Vector Icons (SVG)',
                     'WYSIWYG Designer UI Editors',
+                    'Now available on Nuget.org',
+
                    // 'Advanced Rendering Engine',
                 ];
                 const featColors = ['#3B82F6', '#7C3AED', '#FF6B35', '#FF4C8B', '#A855F7', '#FFD166'];
@@ -1313,9 +1330,10 @@
                         option: "kZvb1wvedojNu0twPUUhXg==",
                         key: 'framework',
                         emoji: '🟦',
+                        logo: './images/dot-net-framework.webp',
                         name: '.NET Framework',
-                        price: '9.99',
-                        color: '#3B82F6',
+                        price: '8.99',
+                        color: '#A855F7',
                         targets: ['.NET Framework 4.6.2', '4.7 – 4.7.2', '4.8 – 4.8.1'],
                         description: 'Unlocks the full KimTools WinForms control suite for .NET Framework. Ideal for developers who solely target .NET Framework.',
                         highlight: false,
@@ -1324,9 +1342,10 @@
                         option: "qX8IwOf2-BDYxK99l8XVhQ==",
                         key: 'core',
                         emoji: '🟪',
+                        logo: './images/dot-net-core.webp',
                         name: '.NET Core',
-                        price: '11.99',
-                        color: '#A855F7',
+                        price: '12.99',
+                        color: '#3B82F6',
                         targets: ['.NET 8.0', '.NET 9.0', '.NET 10.0 (Preview)'],
                         description: 'Unlocks the full KimTools WinForms control suite for .NET 8, 9, and 10 (Preview). Ideal for developers who solely target .NET Core.',
                         highlight: false,
@@ -1335,10 +1354,10 @@
                         option: "iEzCAUtpfn6l3wk4CVfadQ==",
                         key: 'plus',
                         emoji: '🟩',
-                        name: 'Plus (All-in-One)',
-                        price: '19.99',
-                        color: '#3B82F6',
-                        targets: ['.NET Framework 4.6.2 - 4.8.1', '.NET Core 8.0, 9.0, 10.0 (Preview)'],
+                        name: 'Plus +',
+                        price: '17.99',
+                        color: 'white',
+                        targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+','.NET Latest + Preview'],
                         description: 'The ultimate developer license bundle — unlocks the full KimTools WinForms control suite across every supported WinForms target.',
                         highlight: true,
                     },
@@ -1386,13 +1405,13 @@
                 const footerLinks = {
                     product: [
                         { label: 'Pricing', href: '#pricing' },
+                        { label: 'Checkout', href: 'https://checkout.kimtoo.net', target: '_blank' },
                         { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms' },
                         { label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank' },
                         { label: 'News', href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D', target: '_blank' },
-                        { label: 'Get Bunifu (30% Discount)', href: 'https://kimtoo.net/bunifu' },
-                        { label: 'Changelog', href: 'https://docs.kimtoo.net', target: '_blank' },
-                    ],
+                     ],
                     resources: [
+                        { label: 'Get Bunifu (30% Discount)', href: 'https://kimtoo.net/bunifu' },
                         { label: 'Documentation', href: 'https://docs.kimtoo.net', target: '_blank' },
                         { label: 'YouTube Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
                         { label: 'Support Ticket', href: 'https://support.kimtoo.net', target: '_blank' },
