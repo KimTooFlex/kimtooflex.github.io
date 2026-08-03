@@ -564,7 +564,8 @@
                             <figure>
                                 <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
                                    class="block group js-video-btn">
-                                    <img src="./images/top_img.png" alt="KimTools UI Demo"
+                                    <img :src="isDark? './images/ui-kit-dark.png':'./images/ui-kit-light.png'"
+                                           alt="KimTools UI Kit"
                                          class="w-full rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]" />
                                     <!-- Play overlay -->
                                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
@@ -610,11 +611,8 @@
                 </div>
             </div>
         </div>
-        <!-- ═══════════════ PRICING ═══════════════
-         -
-
-        -->
-        <section id="pricing" class="py-24 relative" :class="isDark ? 'bg-[#0d0f14]' : 'bg-gray-50'">
+        <!-- ═══════════════ PRICING ═══════════════-->
+        <section id="pricing" class="py-24 relative"  :class="isDark ? 'bg-[#0d0f14]' : 'bg-gray-50'">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div class="text-center mb-14">
