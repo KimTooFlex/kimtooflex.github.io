@@ -1,0 +1,88 @@
+okf_version: 0.9.0
+bundle:
+  name: kimtools-winforms
+  title: KimTools.WinForms
+  description: ""
+  url: "https://docs.kimtoo.net"
+  generated_by: "@docmd/plugin-okf"
+  generated_at: "2026-08-15T15:07:40.309Z"
+  default_type: concept
+stats:
+  concepts: 9
+  by_type:
+    concept: 9
+  locales: 
+  versions: 
+concepts:
+  - id: controls-kt-button
+    type: concept
+    title: "KimTools / Controls / Button"
+    path: /controls/kt-button/
+    file: concepts/controls-kt-button.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-panel
+    type: concept
+    title: "KimTools / Controls / Panel"
+    path: /controls/kt-panel/
+    file: concepts/controls-kt-panel.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-window
+    type: concept
+    title: "KimTools / Window"
+    path: /controls/kt-window/
+    file: concepts/controls-kt-window.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: faq
+    type: concept
+    title: "KimTools / FAQ"
+    path: /faq/
+    file: concepts/faq.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: root
+    type: concept
+    title: "Getting Started"
+    path: /
+    file: concepts/root.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: licensing
+    type: concept
+    title: "KimTools / Licensing"
+    path: /licensing/
+    file: concepts/licensing.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: requirements
+    type: concept
+    title: "KimTools / System Requirements"
+    path: /requirements/
+    file: concepts/requirements.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: utilities-kt-brush
+    type: concept
+    title: "KimTools / Brush"
+    path: /utilities/kt-brush/
+    file: concepts/utilities-kt-brush.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: utilities-kt-color
+    type: concept
+    title: "KimTools / Color"
+    path: /utilities/kt-color/
+    file: concepts/utilities-kt-color.md
+    locale: ""
+    version: ""
+    tags: 

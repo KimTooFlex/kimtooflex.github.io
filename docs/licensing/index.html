@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script>
-      var root = "./";
+      var root = "../";
       if (root && !root.endsWith('/')) root += '/';
       if (root === '') root = './';
       window.DOCMD_ROOT = root;
@@ -99,27 +99,27 @@
       }
     </style>
     <title>
-      Getting Started : KimTools.WinForms
+      KimTools / Licensing : KimTools.WinForms
     </title>
     
     
 
-    <link id="site-favicon" rel="icon" href="./assets/images/favicon.ico?v=msuifkch">
-    <link rel="stylesheet" href="./assets/css/docmd-main.css?v=msuifkch">
+    <link id="site-favicon" rel="icon" href="../assets/images/favicon.ico?v=msuifkch">
+    <link rel="stylesheet" href="../assets/css/docmd-main.css?v=msuifkch">
     
-    <link rel="stylesheet" href="./assets/css/docmd-highlight-light.css?v=msuifkch" id="hljs-light" >
-    <link rel="stylesheet" href="./assets/css/docmd-highlight-dark.css?v=msuifkch" id="hljs-dark" disabled>
+    <link rel="stylesheet" href="../assets/css/docmd-highlight-light.css?v=msuifkch" id="hljs-light" >
+    <link rel="stylesheet" href="../assets/css/docmd-highlight-dark.css?v=msuifkch" id="hljs-dark" disabled>
     
     
-<meta name="description" content="Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.">
-<link rel="canonical" href="https://docs.kimtoo.net/">
-<meta property="og:title" content="Getting Started - KimTools.WinForms">
-<meta property="og:description" content="Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.">
-<meta property="og:url" content="https://docs.kimtoo.net/">
+<meta name="description" content="Understand KimTools.WinForms licensing, editions, activation, and commercial usage.">
+<link rel="canonical" href="https://docs.kimtoo.net/licensing/">
+<meta property="og:title" content="KimTools / Licensing - KimTools.WinForms">
+<meta property="og:description" content="Understand KimTools.WinForms licensing, editions, activation, and commercial usage.">
+<meta property="og:url" content="https://docs.kimtoo.net/licensing/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Getting Started - KimTools.WinForms">
-<meta name="twitter:description" content="Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.">
+<meta name="twitter:title" content="KimTools / Licensing - KimTools.WinForms">
+<meta name="twitter:description" content="Understand KimTools.WinForms licensing, editions, activation, and commercial usage.">
 
 
     <!-- GA4 -->
@@ -132,7 +132,7 @@
     </script>
 
 
-<link rel="manifest" href="./manifest.webmanifest">
+<link rel="manifest" href="../manifest.webmanifest">
 <meta name="theme-color" content="#1e293b">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -142,7 +142,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register("./service-worker.js").then(reg => {
+        navigator.serviceWorker.register("../service-worker.js").then(reg => {
           // Check for Service Worker updates from the server every 5 minutes 
           setInterval(() => {
              reg.update().catch(() => {});
@@ -154,17 +154,17 @@
     }
   </script>
   
-<link rel="stylesheet" href="./assets/css/docmd-openapi.css?v=msuifkch" >
+<link rel="stylesheet" href="../assets/css/docmd-openapi.css?v=msuifkch" >
 
     
-      <link rel="stylesheet" href="./assets/css/kimtools.css?v=msuifkch">
+      <link rel="stylesheet" href="../assets/css/kimtools.css?v=msuifkch">
     
     
   </head>
   <body
-    class="sidebar-collapsible toc-disabled"
+    class="sidebar-collapsible"
     data-default-collapsed="false"
-    data-copy-code-enabled="true" data-spa-enabled="true" data-source-file="docs/index.md">
+    data-copy-code-enabled="true" data-spa-enabled="true" data-source-file="docs/licensing.md">
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -175,10 +175,10 @@
           
 <a href="https://kimtoo.net" class="logo-link">
               <img
-                src="./assets/images/logo-light.webp"
+                src="../assets/images/logo-light.webp"
                 alt="KimTools Logo" class="logo-light" style="height: 32px;">
               <img
-                src="./assets/images/logo-dark.webp"
+                src="../assets/images/logo-dark.webp"
                 alt="KimTools Logo" class="logo-dark" style="height: 32px;">
             </a>
           
@@ -265,9 +265,9 @@
         
       </li>
     
-      <li class="active collapsible expanded nav-group"  aria-expanded="true" >
+      <li class="active-parent collapsible expanded nav-group"  aria-expanded="true" >
       
-        <a href="./" class="active nav-group"
+        <a href="../" class=" nav-group"
           >
            
 <svg class="lucide-icon icon-rocket " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -317,9 +317,9 @@
         
           <ul class="submenu">
             
-      <li class="" >
+      <li class="active" >
       
-        <a href="./licensing/" class=" "
+        <a href="../licensing/" class="active "
           >
           
           <span class="nav-item-title">
@@ -335,7 +335,7 @@
     
       <li class="" >
       
-        <a href="./requirements/" class=" "
+        <a href="../requirements/" class=" "
           >
           
           <span class="nav-item-title">
@@ -351,7 +351,7 @@
     
       <li class="" >
       
-        <a href="./faq/" class=" "
+        <a href="../faq/" class=" "
           >
           
           <span class="nav-item-title">
@@ -448,7 +448,7 @@
             
       <li class="" >
       
-        <a href="./controls/kt-window/" class=" "
+        <a href="../controls/kt-window/" class=" "
           >
           
           <span class="nav-item-title">
@@ -464,7 +464,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-panel/" class=" "
+        <a href="../controls/kt-panel/" class=" "
           >
           
           <span class="nav-item-title">
@@ -480,7 +480,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-pages/" class=" "
+        <a href="../controls/kt-pages/" class=" "
           >
           
           <span class="nav-item-title">
@@ -496,7 +496,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-divider/" class=" "
+        <a href="../controls/kt-divider/" class=" "
           >
           
           <span class="nav-item-title">
@@ -512,7 +512,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-slot/" class=" "
+        <a href="../controls/kt-slot/" class=" "
           >
           
           <span class="nav-item-title">
@@ -580,7 +580,7 @@
             
       <li class="" >
       
-        <a href="./controls/kt-button/" class=" "
+        <a href="../controls/kt-button/" class=" "
           >
           
           <span class="nav-item-title">
@@ -596,7 +596,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-check/" class=" "
+        <a href="../controls/kt-check/" class=" "
           >
           
           <span class="nav-item-title">
@@ -612,7 +612,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-radio/" class=" "
+        <a href="../controls/kt-radio/" class=" "
           >
           
           <span class="nav-item-title">
@@ -628,7 +628,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-switch/" class=" "
+        <a href="../controls/kt-switch/" class=" "
           >
           
           <span class="nav-item-title">
@@ -698,7 +698,7 @@
             
       <li class="" >
       
-        <a href="./controls/kt-textbox/" class=" "
+        <a href="../controls/kt-textbox/" class=" "
           >
           
           <span class="nav-item-title">
@@ -714,7 +714,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-select/" class=" "
+        <a href="../controls/kt-select/" class=" "
           >
           
           <span class="nav-item-title">
@@ -730,7 +730,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-date/" class=" "
+        <a href="../controls/kt-date/" class=" "
           >
           
           <span class="nav-item-title">
@@ -746,7 +746,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-slider/" class=" "
+        <a href="../controls/kt-slider/" class=" "
           >
           
           <span class="nav-item-title">
@@ -762,7 +762,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-rating/" class=" "
+        <a href="../controls/kt-rating/" class=" "
           >
           
           <span class="nav-item-title">
@@ -831,7 +831,7 @@
             
       <li class="" >
       
-        <a href="./controls/kt-label/" class=" "
+        <a href="../controls/kt-label/" class=" "
           >
           
           <span class="nav-item-title">
@@ -847,7 +847,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-picture-box/" class=" "
+        <a href="../controls/kt-picture-box/" class=" "
           >
           
           <span class="nav-item-title">
@@ -863,7 +863,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-html/" class=" "
+        <a href="../controls/kt-html/" class=" "
           >
           
           <span class="nav-item-title">
@@ -879,7 +879,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-shapes/" class=" "
+        <a href="../controls/kt-shapes/" class=" "
           >
           
           <span class="nav-item-title">
@@ -895,7 +895,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-table/" class=" "
+        <a href="../controls/kt-table/" class=" "
           >
           
           <span class="nav-item-title">
@@ -911,7 +911,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-progress-bar/" class=" "
+        <a href="../controls/kt-progress-bar/" class=" "
           >
           
           <span class="nav-item-title">
@@ -927,7 +927,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-progress-gauge/" class=" "
+        <a href="../controls/kt-progress-gauge/" class=" "
           >
           
           <span class="nav-item-title">
@@ -943,7 +943,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-progress-radial/" class=" "
+        <a href="../controls/kt-progress-radial/" class=" "
           >
           
           <span class="nav-item-title">
@@ -959,7 +959,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-spinner/" class=" "
+        <a href="../controls/kt-spinner/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1027,7 +1027,7 @@
             
       <li class="" >
       
-        <a href="./controls/kt-menu/" class=" "
+        <a href="../controls/kt-menu/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1043,7 +1043,7 @@
     
       <li class="" >
       
-        <a href="./controls/kt-scroll-bar/" class=" "
+        <a href="../controls/kt-scroll-bar/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1149,7 +1149,7 @@
             
       <li class="" >
       
-        <a href="./components/kt-theme/" class=" "
+        <a href="../components/kt-theme/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1165,7 +1165,7 @@
     
       <li class="" >
       
-        <a href="./components/kt-transition/" class=" "
+        <a href="../components/kt-transition/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1233,7 +1233,7 @@
             
       <li class="" >
       
-        <a href="./components/kt-tooltip/" class=" "
+        <a href="../components/kt-tooltip/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1249,7 +1249,7 @@
     
       <li class="" >
       
-        <a href="./components/kt-toast/" class=" "
+        <a href="../components/kt-toast/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1265,7 +1265,7 @@
     
       <li class="" >
       
-        <a href="./components/kt-pop-over/" class=" "
+        <a href="../components/kt-pop-over/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1335,7 +1335,7 @@
             
       <li class="" >
       
-        <a href="./components/kt-canvas/" class=" "
+        <a href="../components/kt-canvas/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1351,7 +1351,7 @@
     
       <li class="" >
       
-        <a href="./components/kt-icon/" class=" "
+        <a href="../components/kt-icon/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1419,7 +1419,7 @@
             
       <li class="" >
       
-        <a href="./components/kt-validation/" class=" "
+        <a href="../components/kt-validation/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1507,7 +1507,7 @@
             
       <li class="" >
       
-        <a href="./utilities/kt-color/" class=" "
+        <a href="../utilities/kt-color/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1523,7 +1523,7 @@
     
       <li class="" >
       
-        <a href="./utilities/kt-brush/" class=" "
+        <a href="../utilities/kt-brush/" class=" "
           >
           
           <span class="nav-item-title">
@@ -1543,7 +1543,7 @@
     
       <li class="" >
       
-        <a href="./theming/" class=" "
+        <a href="../theming/" class=" "
           >
            
 <svg class="lucide-icon icon-palette " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -1579,7 +1579,7 @@
     
       <li class="" >
       
-        <a href="./templates/" class=" "
+        <a href="../templates/" class=" "
           >
            
 <svg class="lucide-icon icon-layout-template " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -1665,7 +1665,7 @@
     
       <li class="" >
       
-        <a href="./changelog/" class=" "
+        <a href="../changelog/" class=" "
           >
            
 <svg class="lucide-icon icon-scroll-text " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -2038,7 +2038,7 @@
               
               <div class="header-titles-wrapper">
                 <span class="header-title">
-                  Getting Started
+                  KimTools / Licensing
                 </span>
               </div>
             </div>
@@ -2132,15 +2132,39 @@
             <div class="content-layout">
               <div class="main-content">
                 <div class="docmd-breadcrumbs-row">
-                  <div id="docmd-raw-markdown" data-content="---%0D%0Atitle%3A%20%22Getting%20Started%22%0D%0Adescription%3A%20%22Modern%20WinForms%20controls%2C%20Components%2C%20and%20theming%20for%20.NET%20-single%20assembly%2C%20one-time%20license%2C%20zero%20dependencies.%22%0D%0Alayout%3A%20%22full%22%0D%0Atoc%3A%20false%0D%0A---%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%20%20%20%20%23%20KimTools%20%60WinForms%60%20%0D%0A%0D%0A%20%20%20%20Modern%20UI%20Toolkit%20for%20%60%7B%20.NET%20%7D%60%0D%0A%0D%0A%20%20%20%20Elegant%20WinForms%20Controls%20%26%20Components%20for%20.NET%20(Framework%20%2B%20Core)%2C%20and%20beyond%2C%20no%20bloat.%20%0D%0A%0D%0A%20%20%20%20%3A%3A%3A%20button%20%22Go%20to%20Website%26nbsp%3B%26nbsp%3B%22%20%20external%3Ahttps%3A%2F%2Fkimtoo.net%20icon%3Aarrow-up-right%20%7B.primary%7D%0D%0A%0D%0A%3D%3D%20side%20%0D%0A%20%20%20%20!%5Btheme%5D(%2Fassets%2Fimages%2Fui-kit-dark.png)%20%7B%20.size-large%20.dark%20%7D%0D%0A%0D%0A%20%20%20%20!%5Btheme%5D(%2Fassets%2Fimages%2Fui-kit-light.png)%20%7B%20.size-large%20.light%20%7D%0D%0A%3A%3A%3A%0D%0A%0D%0A%0D%0A%23%20Why%20KimTools%20%3F%0D%0A%0D%0A%3A%3A%3A%20grids%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22Unlimited%20Projects%22%20icon%3Afolder%20%7B.shadow%7D%20%0D%0ABuild%20as%20many%20desktop%20applications%20as%20you%20need.%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22Unlimited%20Activations%22%20icon%3Alaptop%0D%0A%0D%0ADevelop%20across%20your%20personal%20development%20machines.%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22Royalty-Free%22%20icon%3Apackage%0D%0A%0D%0ADeploy%20applications%20without%20runtime%20royalties.%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22Visual%20Designer%22%20icon%3Alayout%0D%0A%0D%0AIntegrated%20WinForms%20Designer%20support%20and%20visual%20editors.%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22Documentation%22%20icon%3Abook%0D%0A%0D%0AComprehensive%20guides%2C%20API%20documentation%2C%20and%20examples.%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22Professional%20Themes%22%20icon%3Apalette%0D%0A%0D%0AModern%20themes%2C%20semantic%20colors%2C%20and%20SVG%20icons.%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%0D%0A%0D%0A%0D%0A%0D%0A%23%20Supported%20Frameworks%0D%0A%0D%0A%3A%3A%3A%20grids%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22.NET%20Framework%22%0D%0A%0D%0ASupported%20versions%3A%0D%0A%0D%0A-%20.NET%20Framework%204.6.2%0D%0A-%20.NET%20Framework%204.7%0D%0A-%20.NET%20Framework%204.7.1%0D%0A-%20.NET%20Framework%204.7.2%0D%0A-%20.NET%20Framework%204.8%0D%0A-%20.NET%20Framework%204.8.1%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20grid%0D%0A%3A%3A%3A%20card%20%22Modern%20.NET%22%0D%0A%0D%0ASupported%20versions%3A%0D%0A%0D%0A-%20.NET%208%0D%0A-%20.NET%209%0D%0A-%20.NET%2010%20(Preview)%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%23%23%20Get%20Started%0D%0A%0D%0A%3A%3A%3A%20steps%0D%0A%0D%0A1.%20**Install%20%26%20Upgrade%20via%20NuGet**%0D%0A%20%20%20%3A%3A%3A%20tabs%0D%0A%20%20%20%20%0D%0A%20%20%20%20%3D%3D%20tab%20%22Package%20Manager%20Console%22%20icon%3Apackage%0D%0A%20%20%20%20%60%60%60powershell%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0A%20%20%20%20Install-Package%20KimTools.WinForms%0D%0A%20%20%20%20%60%60%60%0D%0A%20%20%20%3D%3D%20tab%20%22Package%20Manager%20GUI%22%20icon%3Ainfinity%0D%0A%20%20%20!%5Bvs-package-manager%5D(%2Fassets%2Fimages%2Fpackage-manager.png)%20%7B%20.size-large%20.lightbox%20%7D%0D%0A%20%20%20%20%3D%3D%20tab%20%22.NET%20CLI%22%20icon%3Asquare-terminal%0D%0A%20%20%20%20%60%60%60bash%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0A%20%20%20%20dotnet%20add%20package%20KimTools.WinForms%0D%0A%20%20%20%20%60%60%60%0D%0A%20%20%20%3A%3A%3A%0D%0A%20%20%20%20%0D%0A2.%20**Pick%20your%20license%20tier**%0D%0A%20%20%20Choose%20.NET%20Framework%2C%20.NET%20Core%2C%20or%20PLUS%20depending%20on%20what%20your%20project%20targets.%0D%0A%20%20%20%3A%3A%3A%20button%20%22Get%20KimTools%20License%22%20%20external%3Ahttps%3A%2F%2Fkimtoo.net%2F%23pricing%20icon%3Akey%0D%0A%0D%0A3.%20**Drop%20controls%20onto%20the%20designer**%0D%0A%20%20%20KimTools%20controls%20appear%20in%20your%20Visual%20Studio%20Toolbox%20like%20any%20other%20WinForms%20control%20-no%20extra%20setup.%0D%0A%3A%3A%3A%0D%0A" style="display: none;"></div>
+                  <div id="docmd-raw-markdown" data-content="---%0Atitle%3A%20%22KimTools%20%2F%20Licensing%22%0Adescription%3A%20%22Understand%20KimTools.WinForms%20licensing%2C%20editions%2C%20activation%2C%20and%20commercial%20usage.%22%0Alayout%3A%20%22full%22%0Atoc%3A%20true%0A---%0A%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0A%0A%23%20Licensing%0A%0AKimTools%20offers%20straightforward%20licensing%20with%20royalty-free%20distribution%20and%20unlimited%20project%20development.%0A%0A%3A%3A%3A%20button%20%22View%20Pricing%22%20https%3A%2F%2Fkimtoo.net%2F%23pricing%20icon%3Aexternal-link%0A%0A%3D%3D%20side%0A%0A!%5BKimTools%20Licensing%5D(assets%2Fimages%2Fhero.png)%0A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20callout%20info%20%22Simple%20Developer%20Licensing%22%0A%0AKimTools%20is%20licensed%20**per%20developer**%2C%20not%20per%20application.%0A%0AChoose%20the%20edition%20that%20matches%20your%20development%20target%2C%20activate%20your%20license%2C%20and%20start%20building.%20Applications%20created%20with%20KimTools%20can%20be%20distributed%20royalty-free%20under%20the%20terms%20of%20your%20license.%0A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20callout%20tip%0A%23%23%23%20Note%0AStarting%20a%20project%20from%20scratch%3F%20%5BPremium%20Templates%5D(%2F)%20ship%20with%20a%20pre-licensed%2C%20offline-activated%20copy%20of%20KimTools%20already%20wired%20in.%0A%3A%3A%3A%0A%0A%20%0A---%0A%0A%23%20Available%20Editions%0AUnlike%20complex%20licensing%20models%20that%20charge%20per%20application%2C%20deployment%2C%20or%20customer%2C%20KimTools%20licenses%20the%20**developer**.%20Once%20licensed%2C%20you%20can%20build%20unlimited%20desktop%20applications%20using%20the%20features%20included%20in%20your%20chosen%20edition.%0A%0A%3A%3A%3A%20grids%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22.NET%20Framework%22%20icon%3Alayers%0A%0AIdeal%20for%20developers%20targeting%20classic%20Windows%20Forms%20applications%20built%20on%20the%20.NET%20Framework.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22Modern%20.NET%22%20icon%3Acpu%0A%0ABuilt%20for%20developers%20targeting%20the%20latest%20.NET%20releases%20for%20Windows%20Forms.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22PLUS%22%20icon%3Asparkles%0A%0AThe%20complete%20edition%2C%20including%20every%20supported%20WinForms%20target%20together%20with%20the%20full%20KimTools%20ecosystem.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20callout%20tip%20%22Pricing%22%0A%0AKimTools%20editions%2C%20promotions%2C%20and%20pricing%20may%20change%20over%20time.%0A%0APlease%20refer%20to%20the%20official%20pricing%20page%20for%20the%20latest%20information.%0A%0A%3A%3A%3A%20button%20%22View%20Current%20Pricing%22%20https%3A%2F%2Fkimtoo.net%2F%23pricing%20icon%3Aexternal-link%0A%3A%3A%3A%0A%0A---%0A%0A%23%20Every%20License%20Includes%0A%0A%3A%3A%3A%20grids%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22Unlimited%20Projects%22%20icon%3Afolder%0A%0ABuild%20as%20many%20desktop%20applications%20as%20you%20need.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22Unlimited%20Activations%22%20icon%3Alaptop%0A%0ADevelop%20across%20your%20personal%20development%20machines.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22Royalty-Free%22%20icon%3Apackage%0A%0ADeploy%20applications%20without%20runtime%20royalties.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22Visual%20Designer%22%20icon%3Alayout%0A%0AIntegrated%20WinForms%20Designer%20support%20and%20visual%20editors.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22Documentation%22%20icon%3Abook%0A%0AComprehensive%20guides%2C%20API%20documentation%2C%20and%20examples.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%20grid%0A%3A%3A%3A%20card%20%22Professional%20Themes%22%20icon%3Apalette%0A%0AModern%20themes%2C%20semantic%20colors%2C%20and%20SVG%20icons.%0A%0A%3A%3A%3A%0A%3A%3A%3A%0A%0A%3A%3A%3A%0A%0A---%0A%0A%23%20License%20Activation%0A%0A%3A%3A%3A%20steps%0A%0A1.%20**Choose%20an%20Edition**%0A%0A%20%20%20Select%20the%20edition%20that%20matches%20your%20development%20stack.%0A%0A2.%20**Complete%20Your%20Purchase**%0A%0A%20%20%20Purchase%20directly%20from%20the%20official%20KimTools%20website.%0A%0A3.%20**Activate%20Your%20License**%0A%0A%20%20%20Enter%20your%20license%20information%20using%20the%20built-in%20licensing%20tools.%0A%0A4.%20**Start%20Building**%0A%0A%20%20%20Create%20unlimited%20WinForms%20applications%20using%20KimTools.%0A%0A%3A%3A%3A%0A%0A---%0A%0A%23%20Commercial%20Usage%0A%0AKimTools%20is%20suitable%20for%3A%0A%0A-%20Commercial%20desktop%20applications%0A-%20Internal%20business%20software%0A-%20Client%20projects%0A-%20Enterprise%20systems%0A-%20Educational%20software%0A-%20Personal%20projects%0A%0AApplications%20created%20using%20KimTools%20may%20be%20distributed%20according%20to%20the%20terms%20of%20your%20license.%0A%20" style="display: none;"></div>
                   
                     <nav aria-label="breadcrumb" class="docmd-breadcrumbs">
                       <ol>
                         
                         
+                          <li class="breadcrumb-item " >
+                            
+                              <a href="../">Getting Started</a>
+                            
+                            
+                              <span class="breadcrumb-separator">
+<svg class="lucide-icon icon-chevron-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+                            
+                          </li>
+                        
                           <li class="breadcrumb-item active" aria-current=&quot;page&quot;>
                             
-                              <span>Getting Started</span>
+                              <span>Licensing</span>
                             
                             
                           </li>
@@ -2198,12 +2222,11 @@
                 </div>
                 
                 <div class="docmd-hero hero-split hero-glow"><div class="hero-content">
-<h1>KimTools <code>WinForms</code></h1>
-<p>Modern UI Toolkit for <code>{ .NET }</code></p>
-<p>Elegant WinForms Controls &amp; Components for .NET (Framework + Core), and beyond, no bloat.</p>
-<a href="https://kimtoo.net" class="docmd-button" target="_blank" rel="noopener noreferrer">
-<svg class="lucide-icon icon-arrow-up-right button-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-arrow-up-right"
+<h1>Licensing</h1>
+<p>KimTools offers straightforward licensing with royalty-free distribution and unlimited project development.</p>
+<a href="https://kimtoo.net/#pricing" class="docmd-button">
+<svg class="lucide-icon icon-external-link button-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -2214,16 +2237,123 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M7 7h10v10" />
-  <path d="M7 17 17 7" />
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
 </svg>
-Go to Website  </a></div>
+View Pricing</a></div>
 <div class="hero-side">
-<p class="size-large dark"><img src="./assets/images/ui-kit-dark.png" alt="theme"></p>
-<p class="size-large light"><img src="./assets/images/ui-kit-light.png" alt="theme"></p>
+<p><img src="../assets/images/hero.png" alt="KimTools Licensing"></p>
 </div>
 </div>
-<h1 id="why-kimtools" class="docmd-heading"><a href="#why-kimtools" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Why KimTools ?</h1>
+<div class="docmd-container callout callout-info"><div class="callout-title">Simple Developer Licensing</div><div class="callout-content">
+<p>KimTools is licensed <strong>per developer</strong>, not per application.</p>
+<p>Choose the edition that matches your development target, activate your license, and start building. Applications created with KimTools can be distributed royalty-free under the terms of your license.</p>
+</div></div>
+<div class="docmd-container callout callout-tip"><div class="callout-content">
+<h3>Note</h3>
+<p>Starting a project from scratch? <a href="../">Premium Templates</a> ship with a pre-licensed, offline-activated copy of KimTools already wired in.</p>
+</div></div>
+<hr>
+<h1 id="available-editions" class="docmd-heading"><a href="#available-editions" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Available Editions</h1>
+<p>Unlike complex licensing models that charge per application, deployment, or customer, KimTools licenses the <strong>developer</strong>. Once licensed, you can build unlimited desktop applications using the features included in your chosen edition.</p>
+<div class="docmd-container grids">
+<div class="docmd-container grid-item">
+<div class="docmd-container card"><div class="card-title">
+<svg class="lucide-icon icon-layers card-icon-heading" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layers"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+.NET Framework</div><div class="card-content"><p>Ideal for developers targeting classic Windows Forms applications built on the .NET Framework.</p>
+</div></div></div>
+<div class="docmd-container grid-item">
+<div class="docmd-container card"><div class="card-title">
+<svg class="lucide-icon icon-cpu card-icon-heading" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-cpu"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 20v2" />
+  <path d="M12 2v2" />
+  <path d="M17 20v2" />
+  <path d="M17 2v2" />
+  <path d="M2 12h2" />
+  <path d="M2 17h2" />
+  <path d="M2 7h2" />
+  <path d="M20 12h2" />
+  <path d="M20 17h2" />
+  <path d="M20 7h2" />
+  <path d="M7 20v2" />
+  <path d="M7 2v2" />
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <rect x="8" y="8" width="8" height="8" rx="1" />
+</svg>
+Modern .NET</div><div class="card-content"><p>Built for developers targeting the latest .NET releases for Windows Forms.</p>
+</div></div></div>
+<div class="docmd-container grid-item">
+<div class="docmd-container card"><div class="card-title">
+<svg class="lucide-icon icon-sparkles card-icon-heading" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sparkles"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path d="M20 2v4" />
+  <path d="M22 4h-4" />
+  <circle cx="4" cy="20" r="2" />
+</svg>
+PLUS</div><div class="card-content"><p>The complete edition, including every supported WinForms target together with the full KimTools ecosystem.</p>
+</div></div></div>
+</div>
+<div class="docmd-container callout callout-tip"><div class="callout-title">Pricing</div><div class="callout-content">
+<p>KimTools editions, promotions, and pricing may change over time.</p>
+<p>Please refer to the official pricing page for the latest information.</p>
+<a href="https://kimtoo.net/#pricing" class="docmd-button">
+<svg class="lucide-icon icon-external-link button-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+View Current Pricing</a></div></div>
+<hr>
+<h1 id="every-license-includes" class="docmd-heading"><a href="#every-license-includes" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Every License Includes</h1>
 <div class="docmd-container grids">
 <div class="docmd-container grid-item">
 <div class="docmd-container card"><div class="card-title">
@@ -2344,123 +2474,65 @@ Documentation</div><div class="card-content"><p>Comprehensive guides, API docume
 Professional Themes</div><div class="card-content"><p>Modern themes, semantic colors, and SVG icons.</p>
 </div></div></div>
 </div>
-<h1 id="supported-frameworks" class="docmd-heading"><a href="#supported-frameworks" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Supported Frameworks</h1>
-<div class="docmd-container grids">
-<div class="docmd-container grid-item">
-<div class="docmd-container card"><div class="card-title">.NET Framework</div><div class="card-content"><p>Supported versions:</p>
-<ul>
-<li>.NET Framework 4.6.2</li>
-<li>.NET Framework 4.7</li>
-<li>.NET Framework 4.7.1</li>
-<li>.NET Framework 4.7.2</li>
-<li>.NET Framework 4.8</li>
-<li>.NET Framework 4.8.1</li>
-</ul>
-</div></div></div>
-<div class="docmd-container grid-item">
-<div class="docmd-container card"><div class="card-title">Modern .NET</div><div class="card-content"><p>Supported versions:</p>
-<ul>
-<li>.NET 8</li>
-<li>.NET 9</li>
-<li>.NET 10 (Preview)</li>
-</ul>
-</div></div></div>
-</div>
-<h2 id="supported-frameworks-get-started" class="docmd-heading"><a href="#supported-frameworks-get-started" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Get Started</h2>
-<div class="docmd-container steps steps-reset"><ol class="steps-list"><li class="step-item" id="step-1"><a href="#step-1" class="step-permalink" aria-label="Permalink to this step"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a><p><strong>Install &amp; Upgrade via NuGet</strong></p>
-<div class="docmd-tabs">
-<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
-<svg class="lucide-icon icon-package tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-package"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
-  <path d="M12 22V12" />
-  <polyline points="3.29 7 12 12 20.71 7" />
-  <path d="m7.5 4.27 9 5.15" />
-</svg>
-<span>Package Manager Console</span></div><div class="docmd-tabs-nav-item ">
-<svg class="lucide-icon icon-infinity tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-infinity"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8" />
-</svg>
-<span>Package Manager GUI</span></div><div class="docmd-tabs-nav-item ">
-<svg class="lucide-icon icon-square-terminal tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-square-terminal"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m7 11 2-2-2-2" />
-  <path d="M11 13h4" />
-  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-</svg>
-<span>.NET CLI</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-powershell">Install<span class="hljs-operator">-</span>Package KimTools.<span class="hljs-attr">WinForms</span>
-</code></pre>
-</div></div><div class="docmd-tab-pane "><p class="size-large lightbox"><img src="./assets/images/package-manager.png" alt="vs-package-manager"></p>
-</div><div class="docmd-tab-pane "><div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-bash">dotnet add package KimTools.<span class="hljs-attr">WinForms</span>
-</code></pre>
-</div></div></div></div></li>
-<li class="step-item" id="step-2"><a href="#step-2" class="step-permalink" aria-label="Permalink to this step"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a><p><strong>Pick your license tier</strong><br>
-Choose .NET Framework, .NET Core, or PLUS depending on what your project targets.</p>
-<a href="https://kimtoo.net/#pricing" class="docmd-button" target="_blank" rel="noopener noreferrer">
-<svg class="lucide-icon icon-key button-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-key"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4" />
-  <path d="m21 2-9.6 9.6" />
-  <circle cx="7.5" cy="15.5" r="5.5" />
-</svg>
-Get KimTools License</a></li>
-<li class="step-item" id="step-3"><a href="#step-3" class="step-permalink" aria-label="Permalink to this step"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a><p><strong>Drop controls onto the designer</strong><br>
-KimTools controls appear in your Visual Studio Toolbox like any other WinForms control -no extra setup.</p>
+<hr>
+<h1 id="license-activation" class="docmd-heading"><a href="#license-activation" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>License Activation</h1>
+<div class="docmd-container steps steps-reset"><ol class="steps-list"><li class="step-item" id="step-4"><a href="#step-4" class="step-permalink" aria-label="Permalink to this step"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a><p><strong>Choose an Edition</strong></p>
+<p>Select the edition that matches your development stack.</p>
+</li>
+<li class="step-item" id="step-5"><a href="#step-5" class="step-permalink" aria-label="Permalink to this step"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a><p><strong>Complete Your Purchase</strong></p>
+<p>Purchase directly from the official KimTools website.</p>
+</li>
+<li class="step-item" id="step-6"><a href="#step-6" class="step-permalink" aria-label="Permalink to this step"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a><p><strong>Activate Your License</strong></p>
+<p>Enter your license information using the built-in licensing tools.</p>
+</li>
+<li class="step-item" id="step-7"><a href="#step-7" class="step-permalink" aria-label="Permalink to this step"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a><p><strong>Start Building</strong></p>
+<p>Create unlimited WinForms applications using KimTools.</p>
 </li>
 </ol>
-</div>
+</div><hr>
+<h1 id="commercial-usage" class="docmd-heading"><a href="#commercial-usage" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Commercial Usage</h1>
+<p>KimTools is suitable for:</p>
+<ul>
+<li>Commercial desktop applications</li>
+<li>Internal business software</li>
+<li>Client projects</li>
+<li>Enterprise systems</li>
+<li>Educational software</li>
+<li>Personal projects</li>
+</ul>
+<p>Applications created using KimTools may be distributed according to the terms of your license.</p>
+
                 
                   <div class="page-navigation">
                     
-                      <div class="prev-page-placeholder">
-                      </div>
+                      <a href="../" class="prev-page">
+                        
+<svg class="lucide-icon icon-arrow-left page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 19-7-7 7-7" />
+  <path d="M19 12H5" />
+</svg>
+
+                        <span><small>Previous</small><strong>
+                            Getting Started
+                          </strong></span>
+                      </a>
                     
                     
-                      <a href="./licensing/" class="next-page">
+                      <a href="../requirements/" class="next-page">
                         <span><small>Next</small>
                           <strong>
-                            Licensing
+                            Requirements
                           </strong></span>
                         
 <svg class="lucide-icon icon-arrow-right page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -2485,6 +2557,50 @@ KimTools controls appear in your Visual Studio Toolbox like any other WinForms c
                 
               </div>
               
+              <div class="toc-sidebar">
+                
+
+
+  <div class="toc-container">
+    <h2 class="toc-title">On This Page<span class="mobile-view toc-menu-button float-right">
+<svg class="lucide-icon icon-chevron-down " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg>
+</span></h2>
+    <ul class="toc-list">
+      
+        <li class="toc-item toc-level-1">
+          <a href="#available-editions" class="toc-link">Available Editions</a>
+        </li>
+      
+        <li class="toc-item toc-level-1">
+          <a href="#every-license-includes" class="toc-link">Every License Includes</a>
+        </li>
+      
+        <li class="toc-item toc-level-1">
+          <a href="#license-activation" class="toc-link">License Activation</a>
+        </li>
+      
+        <li class="toc-item toc-level-1">
+          <a href="#commercial-usage" class="toc-link">Commercial Usage</a>
+        </li>
+      
+    </ul>
+  </div>
+
+              </div>
+              
             </div>
             <div class="page-footer-actions">
               
@@ -2506,12 +2622,12 @@ KimTools controls appear in your Visual Studio Toolbox like any other WinForms c
         </div>
       </div>
       
-      <script src="./assets/js/docmd-main.js?v=msuifkch"></script>
+      <script src="../assets/js/docmd-main.js?v=msuifkch"></script>
       
-      <script src="./assets/js/docmd-git.js?v=msuifkch"></script>
-      <script src="./assets/js/docmd-image-lightbox.js?v=msuifkch" ></script>
-<script src="./assets/js/vendor/minisearch.js?v=msuifkch" ></script>
-<script src="./assets/js/docmd-search.js?v=msuifkch" ></script>
+      <script src="../assets/js/docmd-git.js?v=msuifkch"></script>
+      <script src="../assets/js/docmd-image-lightbox.js?v=msuifkch" ></script>
+<script src="../assets/js/vendor/minisearch.js?v=msuifkch" ></script>
+<script src="../assets/js/docmd-search.js?v=msuifkch" ></script>
 
   <!-- Search Modal (Injected by @docmd/plugin-search) -->
   <div id="docmd-search-modal" class="docmd-search-modal" style="display: none;" data-show-confidence="false" data-show-filters="true"
@@ -2589,7 +2705,7 @@ KimTools controls appear in your Visual Studio Toolbox like any other WinForms c
 
       
         <script
-          src="./assets/js/kimtools.js?v=msuifkch"></script>
+          src="../assets/js/kimtools.js?v=msuifkch"></script>
         
       
       
