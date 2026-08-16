@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://docs.kimtoo.net/sitemap.xml
+Sitemap: https://kimtoo.net/docs/sitemap.xml

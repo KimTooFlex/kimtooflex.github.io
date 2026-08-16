@@ -4,20 +4,20 @@
 
 ## Documentation Files
 
-- [KimTools / Controls / Button](https://docs.kimtoo.net/controls/kt-button/)
+- [KimTools / Controls / Button](https://kimtoo.net/controls/kt-button/)
   Kt-Button is a fully customizable button control for Modern winforms
-- [KimTools / Controls / Panel](https://docs.kimtoo.net/controls/kt-panel/)
+- [KimTools / Controls / Panel](https://kimtoo.net/controls/kt-panel/)
   Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.
-- [KimTools / Window](https://docs.kimtoo.net/controls/kt-window/)
+- [KimTools / Window](https://kimtoo.net/controls/kt-window/)
   Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.
-- [KimTools / FAQ](https://docs.kimtoo.net/faq/)
+- [KimTools / FAQ](https://kimtoo.net/faq/)
   Frequently asked questions about KimTools.WinForms.
-- [Getting Started](https://docs.kimtoo.net/)
+- [Getting Started](https://kimtoo.net/)
   Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.
-- [KimTools / Licensing](https://docs.kimtoo.net/licensing/)
+- [KimTools / Licensing](https://kimtoo.net/licensing/)
   Understand KimTools.WinForms licensing, editions, activation, and commercial usage.
-- [KimTools / System Requirements](https://docs.kimtoo.net/requirements/)
+- [KimTools / System Requirements](https://kimtoo.net/requirements/)
   Supported operating systems, .NET versions, development environments, and hardware requirements for KimTools.WinForms.
-- [KimTools / Brush](https://docs.kimtoo.net/utilities/kt-brush/)
-- [KimTools / Color](https://docs.kimtoo.net/utilities/kt-color/)
+- [KimTools / Brush](https://kimtoo.net/utilities/kt-brush/)
+- [KimTools / Color](https://kimtoo.net/utilities/kt-color/)
   KimTools Color System

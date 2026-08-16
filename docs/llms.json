@@ -4,55 +4,55 @@
   "pages": [
     {
       "title": "KimTools / Controls / Button",
-      "url": "https://docs.kimtoo.net/controls/kt-button/",
+      "url": "https://kimtoo.net/controls/kt-button/",
       "description": "Kt-Button is a fully customizable button control for Modern winforms",
       "priority": "medium"
     },
     {
       "title": "KimTools / Controls / Panel",
-      "url": "https://docs.kimtoo.net/controls/kt-panel/",
+      "url": "https://kimtoo.net/controls/kt-panel/",
       "description": "Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.",
       "priority": "medium"
     },
     {
       "title": "KimTools / Window",
-      "url": "https://docs.kimtoo.net/controls/kt-window/",
+      "url": "https://kimtoo.net/controls/kt-window/",
       "description": "Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.",
       "priority": "medium"
     },
     {
       "title": "KimTools / FAQ",
-      "url": "https://docs.kimtoo.net/faq/",
+      "url": "https://kimtoo.net/faq/",
       "description": "Frequently asked questions about KimTools.WinForms.",
       "priority": "medium"
     },
     {
       "title": "Getting Started",
-      "url": "https://docs.kimtoo.net/",
+      "url": "https://kimtoo.net/",
       "description": "Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.",
       "priority": "high"
     },
     {
       "title": "KimTools / Licensing",
-      "url": "https://docs.kimtoo.net/licensing/",
+      "url": "https://kimtoo.net/licensing/",
       "description": "Understand KimTools.WinForms licensing, editions, activation, and commercial usage.",
       "priority": "medium"
     },
     {
       "title": "KimTools / System Requirements",
-      "url": "https://docs.kimtoo.net/requirements/",
+      "url": "https://kimtoo.net/requirements/",
       "description": "Supported operating systems, .NET versions, development environments, and hardware requirements for KimTools.WinForms.",
       "priority": "medium"
     },
     {
       "title": "KimTools / Brush",
-      "url": "https://docs.kimtoo.net/utilities/kt-brush/",
+      "url": "https://kimtoo.net/utilities/kt-brush/",
       "description": "",
       "priority": "medium"
     },
     {
       "title": "KimTools / Color",
-      "url": "https://docs.kimtoo.net/utilities/kt-color/",
+      "url": "https://kimtoo.net/utilities/kt-color/",
       "description": "KimTools Color System",
       "priority": "medium"
     }

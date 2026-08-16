@@ -2,12 +2,12 @@
 type: concept
 title: "KimTools / FAQ"
 description: "Frequently asked questions about KimTools.WinForms."
-source: "https://docs.kimtoo.net/faq/"
+source: "https://kimtoo.net/faq/"
 path: /faq/
-updated: 2026-08-15
+updated: 2026-08-16
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-15T15:07:40.305Z"
+  generated_at: "2026-08-16T18:16:49.831Z"
 ---
 ---
 title: "KimTools / FAQ"

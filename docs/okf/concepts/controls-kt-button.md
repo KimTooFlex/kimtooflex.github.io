@@ -2,12 +2,12 @@
 type: concept
 title: "KimTools / Controls / Button"
 description: "Kt-Button is a fully customizable button control for Modern winforms"
-source: "https://docs.kimtoo.net/controls/kt-button/"
+source: "https://kimtoo.net/controls/kt-button/"
 path: /controls/kt-button/
-updated: 2026-08-15
+updated: 2026-08-16
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-15T15:07:40.300Z"
+  generated_at: "2026-08-16T18:16:49.825Z"
 ---
 ---
 title: "KimTools / Controls / Button"
@@ -18,49 +18,55 @@ layout: "full"
 
 ::: hero layout:split glow:true
 # Kt `Button`
- A modern, fully customizable button control for WinForms, with built-in icon, gradient, and border support. 
+A modern, fully customizable button control for WinForms, with built-in icon, gradient, and border support.
 ::: callout tip
 #### 🟣 PREMIUM
- This component is only available in the Premium version of KimTools. 
+This component is only available in the Premium version of KimTools.
 ::: button "Get KimTools"  external:https://kimtoo.net/#pricinghttps://kimtoo.net/#pricing icon:external-link
 
 :::
 
 == side
-![kt-button-light](/assets/images/controls/kt-button/kt-button-light.jpg){ .light .snapshot} ![kt-button-dark](/assets/images/controls/kt-button/kt-button-dark.jpg){.dark .snapshot}
+![kt-button-light](/assets/images/controls/kt-button/kt-button-light.png?v=639225111764462972){ .light .snapshot} ![kt-button-dark](/assets/images/controls/kt-button/kt-button-dark.png?v=639225111764483150){.dark .snapshot}
 :::
- ## API `Reference`
- |          | RETURNS | DESCRIPTION |
-| -------- | ------- | ----------- |
-| ::: tag "Background" icon:wrench | ::: tag "Kt-Brush" color:#820BF4 icon:corner-down-right url:/utilities/kt-brush.md  | *Sets the progress color.* |
-| ::: tag "Border" icon:wrench | ::: tag "Kt-Brush" color:#820BF4 icon:corner-down-right url:/utilities/kt-brush.md  | *Sets the panel's border color.* |
-| ::: tag "BorderEdges" icon:wrench | ::: tag "Edges" color:#6B7C94 icon:check-check  | *Sets the Border edges.* |
-| ::: tag "Foreground" icon:wrench | ::: tag "Kt-Color" color:#820BF4 icon:corner-down-right url:/utilities/kt-color.md  | *Sets the Foreground.* |
-| ::: tag "IconColor" icon:wrench | ::: tag "Kt-Color" color:#820BF4 icon:corner-down-right url:/utilities/kt-color.md  | *Sets the Icon color.* |
-| ::: tag "Pattern" icon:wrench | ::: tag "Kt-Pattern" color:#6B7C94 icon:check-check  | *Sets the Pattern.* |
-| ::: tag "IconStroke" icon:wrench | ::: tag "Double" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.double?view=netframework-4.8  | *Sets the Icon stroke.* |
-| ::: tag "ImageAlign" icon:wrench | ::: tag "ContentAlignment" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.drawing.contentalignment?view=netframework-4.8  | *The alignment of the image that will be displayed on the control.* |
-| ::: tag "TextAlign" icon:wrench | ::: tag "ContentAlignment" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.drawing.contentalignment?view=netframework-4.8  | *The alignment of the text that will be displayed on the control.* |
-| ::: tag "BorderStyle" icon:wrench | ::: tag "DashStyle" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.drawing.drawing2d.dashstyle?view=netframework-4.8  | *Sets the panel's border style.* |
-| ::: tag "IconSize" icon:wrench | ::: tag "Int32" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the Icon size.* |
-| ::: tag "BorderRadius" icon:wrench | ::: tag "float" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.8 ::: tag "Nullable" color:#F96A06 icon:circle-alert url:external:https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types | *Sets the Border radius.* |
-| ::: tag "BorderWidth" icon:wrench | ::: tag "float" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.8  | *Sets the Border width.* |
-| ::: tag "Icon" icon:wrench | ::: tag "String" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8  | *Sets the Icon.* |
-| ::: tag "Value" icon:wrench | ::: tag "String" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8  | *Sets the Value.* |
-| ::: tag "Cursor" icon:wrench | ::: tag "Cursor" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.cursor?view=netframework-4.8  | *The cursor that appears when the pointer moves over the control.* |
-| ::: tag "BorderMargin" icon:wrench | ::: tag "Padding" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.padding?view=netframework-4.8  | *Sets the border Margin.* |
-| ::: tag "Padding" icon:wrench | ::: tag "Padding" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.padding?view=netframework-4.8  | *Specifies the interior spacing of a control.* |
 
 ::: callout success
 #### 🟢 DESIGNER SUPPORT
 **This control has full Visual Studio design-time support.**
 Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.
 :::
- ---
+
+---
 
 ::: hero layout:split glow:true
-## Solid `Color` | `KtColor` 
-KtButton Background supports plain Solid Color or KtColor with or without opacity
+# Kt `Button`
+A modern, fully customizable button control for WinForms, with built-in icon, gradient, and border support.
+::: callout tip
+#### 🟣 PREMIUM
+This component is only available in the Premium version of KimTools.
+::: button "Get KimTools"  external:https://kimtoo.net/#pricinghttps://kimtoo.net/#pricing icon:external-link
+
+:::
+
+== side
+![kt-button-light](/assets/images/controls/kt-button/kt-button-light.png?v=639225111764462972){ .light .snapshot} ![kt-button-dark](/assets/images/controls/kt-button/kt-button-dark.png?v=639225111764483150){.dark .snapshot}
+:::
+
+::: callout success
+#### 🟢 DESIGNER SUPPORT
+**This control has full Visual Studio design-time support.**
+Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.
+:::
+
+---
+# Background
+| ::: tag "Background" icon:wrench | ::: tag "Kt-Brush" color:#820BF4 icon:corner-down-right url:/utilities/kt-brush.md  | *Sets the progress color.* |
+| -------- | ------- | ----------- |
+
+::: hero layout:split glow:true
+## Gradient with `Kt-Colors`
+Use KimTools Semantically named dynamic theme colors.
+
 ```csharp "🔴 🟡 🟢"
 // using KimTools.WinForms;
 var button = new KtButton();
@@ -75,13 +81,13 @@ button.Background = Color.BlueViolet;   // Color
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![solid-background-light](/assets/images/controls/kt-button/solid-background-light.jpg){ .light .snapshot} ![solid-background-dark](/assets/images/controls/kt-button/solid-background-dark.jpg){.dark .snapshot}
+![solid-background-light](/assets/images/controls/kt-button/solid-background-light.png?v=639225111795042046){ .light .snapshot} ![solid-background-dark](/assets/images/controls/kt-button/solid-background-dark.png?v=639225111795042046){.dark .snapshot}
 
 == tab "Light" icon:sun
-![solid-background-light](/assets/images/controls/kt-button/solid-background-light.jpg){  .snapshot}
+![solid-background-light](/assets/images/controls/kt-button/solid-background-light.png?v=639225111795006659){  .snapshot}
 
 == tab "Dark" icon:moon
-![solid-background-dark](/assets/images/controls/kt-button/solid-background-dark.jpg){ .snapshot}
+![solid-background-dark](/assets/images/controls/kt-button/solid-background-dark.png?v=639225111795006659){ .snapshot}
 
 :::
 :::
@@ -93,7 +99,7 @@ Use KimTools Semantic theme colors to match the current global theme.
 // using KimTools.WinForms;
 var button = new KtButton();
 button.Text = "Upgrade to Pro";
-	
+button.Size = new Size(200, 50);
 // Background supports Kt-Color gradients with an optional angle
 button.Background =
 (
@@ -105,16 +111,19 @@ button.Background =
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gradient-background-light](/assets/images/controls/kt-button/gradient-background-light.jpg){ .light .snapshot} ![gradient-background-dark](/assets/images/controls/kt-button/gradient-background-dark.jpg){.dark .snapshot}
+![gradient-background-light](/assets/images/controls/kt-button/gradient-background-light.png?v=639225111802661816){ .light .snapshot} ![gradient-background-dark](/assets/images/controls/kt-button/gradient-background-dark.png?v=639225111802661816){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gradient-background-light](/assets/images/controls/kt-button/gradient-background-light.jpg){  .snapshot}
+![gradient-background-light](/assets/images/controls/kt-button/gradient-background-light.png?v=639225111802661816){  .snapshot}
 
 == tab "Dark" icon:moon
-![gradient-background-dark](/assets/images/controls/kt-button/gradient-background-dark.jpg){ .snapshot}
+![gradient-background-dark](/assets/images/controls/kt-button/gradient-background-dark.png?v=639225111802661816){ .snapshot}
 
 :::
 :::
+# Border
+| ::: tag "Border" icon:wrench | ::: tag "Kt-Brush" color:#820BF4 icon:corner-down-right url:/utilities/kt-brush.md  | *Sets the panel's border color.* |
+| -------- | ------- | ----------- |
 
 ::: hero layout:split glow:true
 ## Outlined `Border`
@@ -132,52 +141,53 @@ button.BorderWidth = 2f;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![outlined-button-light](/assets/images/controls/kt-button/outlined-button-light.jpg){ .light .snapshot} ![outlined-button-dark](/assets/images/controls/kt-button/outlined-button-dark.jpg){.dark .snapshot}
+![outlined-button-light](/assets/images/controls/kt-button/outlined-button-light.png?v=639225111810191356){ .light .snapshot} ![outlined-button-dark](/assets/images/controls/kt-button/outlined-button-dark.png?v=639225111810191356){.dark .snapshot}
 
 == tab "Light" icon:sun
-![outlined-button-light](/assets/images/controls/kt-button/outlined-button-light.jpg){  .snapshot}
+![outlined-button-light](/assets/images/controls/kt-button/outlined-button-light.png?v=639225111810191356){  .snapshot}
 
 == tab "Dark" icon:moon
-![outlined-button-dark](/assets/images/controls/kt-button/outlined-button-dark.jpg){ .snapshot}
+![outlined-button-dark](/assets/images/controls/kt-button/outlined-button-dark.png?v=639225111810191356){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## `BorderRadius`
-Set `BorderRadius` from `0` (square) to `1` (pill).
+## Border `Radius`
+Set `BorderRadius` from `0` (square) to `.99f` (pill) or >1 (int) for actual pixels.
 ```csharp "🔴 🟡 🟢"
 // using KimTools.WinForms;
 var button = new KtButton();
 button.Text = "Subscribe";
 button.Background = KtColor.PRIMARY;
 	
-// BorderRadius runs 0 (square) .. 1 (fully pill-shaped)
+// BorderRadius runs 0 (square) .. .99f (fully pill-shaped)
 button.BorderRadius = .99f;
+button.BorderRadius = 5f; // Actual pixels
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rounded-button-light](/assets/images/controls/kt-button/rounded-button-light.jpg){ .light .snapshot} ![rounded-button-dark](/assets/images/controls/kt-button/rounded-button-dark.jpg){.dark .snapshot}
+![rounded-button-light](/assets/images/controls/kt-button/rounded-button-light.png?v=639225111817579472){ .light .snapshot} ![rounded-button-dark](/assets/images/controls/kt-button/rounded-button-dark.png?v=639225111817579472){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rounded-button-light](/assets/images/controls/kt-button/rounded-button-light.jpg){  .snapshot}
+![rounded-button-light](/assets/images/controls/kt-button/rounded-button-light.png?v=639225111817579472){  .snapshot}
 
 == tab "Dark" icon:moon
-![rounded-button-dark](/assets/images/controls/kt-button/rounded-button-dark.jpg){ .snapshot}
+![rounded-button-dark](/assets/images/controls/kt-button/rounded-button-dark.png?v=639225111817579472){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## `Icon`
-Set `Icon` to a Lucide icon name; `IconSize` and `IconStroke` control its rendering.
+## SVG `Icon`
+Set `Icon` to a Tabler icon name; `IconSize` and `IconStroke` control its rendering.
 ```csharp "🔴 🟡 🟢"
 // using KimTools.WinForms;
 var button = new KtButton();
 button.Text = "Download";
 	
-// Icon accepts a Lucide icon name; IconSize / IconStroke tune its rendering
+// Icon accepts a Tabler icon name; IconSize / IconStroke tune its rendering
 button.Icon = "download";
 button.IconSize = 18;
 button.IconStroke = 2.5;
@@ -185,13 +195,42 @@ button.IconStroke = 2.5;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-button-light](/assets/images/controls/kt-button/icon-button-light.jpg){ .light .snapshot} ![icon-button-dark](/assets/images/controls/kt-button/icon-button-dark.jpg){.dark .snapshot}
+![icon-text-button-light](/assets/images/controls/kt-button/icon-text-button-light.png?v=639225111825169242){ .light .snapshot} ![icon-text-button-dark](/assets/images/controls/kt-button/icon-text-button-dark.png?v=639225111825169242){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-button-light](/assets/images/controls/kt-button/icon-button-light.jpg){  .snapshot}
+![icon-text-button-light](/assets/images/controls/kt-button/icon-text-button-light.png?v=639225111825169242){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-button-dark](/assets/images/controls/kt-button/icon-button-dark.jpg){ .snapshot}
+![icon-text-button-dark](/assets/images/controls/kt-button/icon-text-button-dark.png?v=639225111825169242){ .snapshot}
+
+:::
+:::
+
+::: hero layout:split glow:true
+## Rounded `Icon Button` 
+Set `Icon` to a Tabler icon name; `IconSize` and `IconStroke` control its rendering.
+```csharp "🔴 🟡 🟢"
+// using KimTools.WinForms;
+var button = new KtButton();
+button.Text = string.Empty;
+	
+// Icon accepts a Tabler icon name; IconSize / IconStroke tune its rendering
+button.Icon = "sparkles";
+button.IconSize = 18;
+button.IconStroke = 2.5;
+button.BorderRadius = .99f;
+button.Height = 50;
+```
+== side
+::: tabs
+== tab "Auto" icon:app-window
+![icon-button-light](/assets/images/controls/kt-button/icon-button-light.png?v=639225111831929161){ .light .snapshot} ![icon-button-dark](/assets/images/controls/kt-button/icon-button-dark.png?v=639225111831929161){.dark .snapshot}
+
+== tab "Light" icon:sun
+![icon-button-light](/assets/images/controls/kt-button/icon-button-light.png?v=639225111831929161){  .snapshot}
+
+== tab "Dark" icon:moon
+![icon-button-dark](/assets/images/controls/kt-button/icon-button-dark.png?v=639225111831929161){ .snapshot}
 
 :::
 :::
@@ -203,6 +242,7 @@ Move the icon to the trailing edge by pairing `ImageAlign` with `TextAlign`.
 // using KimTools.WinForms;
 var button = new KtButton();
 button.Text = "Continue";
+button.Icon = "check";
 // button.Icon = "arrow-right";
 	
 // Reposition the icon and label independently
@@ -212,13 +252,13 @@ button.TextAlign = ContentAlignment.MiddleLeft;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![text-icon-align-light](/assets/images/controls/kt-button/text-icon-align-light.jpg){ .light .snapshot} ![text-icon-align-dark](/assets/images/controls/kt-button/text-icon-align-dark.jpg){.dark .snapshot}
+![text-icon-align-light](/assets/images/controls/kt-button/text-icon-align-light.png?v=639225111838717000){ .light .snapshot} ![text-icon-align-dark](/assets/images/controls/kt-button/text-icon-align-dark.png?v=639225111838717000){.dark .snapshot}
 
 == tab "Light" icon:sun
-![text-icon-align-light](/assets/images/controls/kt-button/text-icon-align-light.jpg){  .snapshot}
+![text-icon-align-light](/assets/images/controls/kt-button/text-icon-align-light.png?v=639225111838717000){  .snapshot}
 
 == tab "Dark" icon:moon
-![text-icon-align-dark](/assets/images/controls/kt-button/text-icon-align-dark.jpg){ .snapshot}
+![text-icon-align-dark](/assets/images/controls/kt-button/text-icon-align-dark.png?v=639225111838717000){ .snapshot}
 
 :::
 :::
@@ -240,13 +280,34 @@ button.IconColor = KtColor.PRIMARY;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-foreground-light](/assets/images/controls/kt-button/custom-foreground-light.jpg){ .light .snapshot} ![custom-foreground-dark](/assets/images/controls/kt-button/custom-foreground-dark.jpg){.dark .snapshot}
+![custom-foreground-light](/assets/images/controls/kt-button/custom-foreground-light.png?v=639225111845526014){ .light .snapshot} ![custom-foreground-dark](/assets/images/controls/kt-button/custom-foreground-dark.png?v=639225111845526014){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-foreground-light](/assets/images/controls/kt-button/custom-foreground-light.jpg){  .snapshot}
+![custom-foreground-light](/assets/images/controls/kt-button/custom-foreground-light.png?v=639225111845526014){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-foreground-dark](/assets/images/controls/kt-button/custom-foreground-dark.jpg){ .snapshot}
+![custom-foreground-dark](/assets/images/controls/kt-button/custom-foreground-dark.png?v=639225111845526014){ .snapshot}
 
 :::
 :::
+## API `Reference`
+|   |  |   |
+| -------- | ------- | ----------- |
+| ::: tag "Background" icon:wrench | ::: tag "Kt-Brush" color:#820BF4 icon:corner-down-right url:/utilities/kt-brush.md  | *Sets the progress color.* |
+| ::: tag "Border" icon:wrench | ::: tag "Kt-Brush" color:#820BF4 icon:corner-down-right url:/utilities/kt-brush.md  | *Sets the panel's border color.* |
+| ::: tag "BorderEdges" icon:wrench | ::: tag "Edges" color:#6B7C94 icon:check-check  | *Sets the Border edges.* |
+| ::: tag "Foreground" icon:wrench | ::: tag "Kt-Color" color:#820BF4 icon:corner-down-right url:/utilities/kt-color.md  | *Sets the Foreground.* |
+| ::: tag "IconColor" icon:wrench | ::: tag "Kt-Color" color:#820BF4 icon:corner-down-right url:/utilities/kt-color.md  | *Sets the Icon color.* |
+| ::: tag "Pattern" icon:wrench | ::: tag "Kt-Pattern" color:#6B7C94 icon:check-check  | *Sets the Pattern.* |
+| ::: tag "IconStroke" icon:wrench | ::: tag "Double" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.double?view=netframework-4.8  | *Sets the Icon stroke.* |
+| ::: tag "ImageAlign" icon:wrench | ::: tag "ContentAlignment" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.drawing.contentalignment?view=netframework-4.8  | *The alignment of the image that will be displayed on the control.* |
+| ::: tag "TextAlign" icon:wrench | ::: tag "ContentAlignment" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.drawing.contentalignment?view=netframework-4.8  | *The alignment of the text that will be displayed on the control.* |
+| ::: tag "BorderStyle" icon:wrench | ::: tag "DashStyle" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.drawing.drawing2d.dashstyle?view=netframework-4.8  | *Sets the panel's border style.* |
+| ::: tag "IconSize" icon:wrench | ::: tag "Int32" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the Icon size.* |
+| ::: tag "BorderRadius" icon:wrench | ::: tag "float" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.8 ::: tag "Nullable" color:#F96A06 icon:circle-alert url:external:https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types | *Sets the Border radius.* |
+| ::: tag "BorderWidth" icon:wrench | ::: tag "float" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.8  | *Sets the Border width.* |
+| ::: tag "Icon" icon:wrench | ::: tag "String" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8  | *Sets the Icon.* |
+| ::: tag "Value" icon:wrench | ::: tag "String" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8  | *Sets the Value.* |
+| ::: tag "Cursor" icon:wrench | ::: tag "Cursor" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.cursor?view=netframework-4.8  | *The cursor that appears when the pointer moves over the control.* |
+| ::: tag "BorderMargin" icon:wrench | ::: tag "Padding" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.padding?view=netframework-4.8  | *Sets the border Margin.* |
+| ::: tag "Padding" icon:wrench | ::: tag "Padding" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.padding?view=netframework-4.8  | *Specifies the interior spacing of a control.* |
