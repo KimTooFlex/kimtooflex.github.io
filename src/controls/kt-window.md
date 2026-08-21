@@ -16,7 +16,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-window-light](/assets/images/controls/kt-window/kt-window-light.png?v=639229026080855228){ .light .snapshot} ![kt-window-dark](/assets/images/controls/kt-window/kt-window-dark.png?v=639229026080855228){.dark .snapshot}
+![kt-window-light](/assets/images/controls/kt-window/kt-window-light.png?v=639229064820063656){ .light .snapshot} ![kt-window-dark](/assets/images/controls/kt-window/kt-window-dark.png?v=639229064820063656){.dark .snapshot}
 :::
 
 ::: callout success
@@ -42,13 +42,13 @@ window.Background =
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![kt-window-light](/assets/images/controls/kt-window/kt-window-light.png?v=639229026090710867){ .light .snapshot} ![kt-window-dark](/assets/images/controls/kt-window/kt-window-dark.png?v=639229026090710867){.dark .snapshot}
+![kt-window-light](/assets/images/controls/kt-window/kt-window-light.png?v=639229064830024842){ .light .snapshot} ![kt-window-dark](/assets/images/controls/kt-window/kt-window-dark.png?v=639229064830024842){.dark .snapshot}
 
 == tab "Light" icon:sun
-![kt-window-light](/assets/images/controls/kt-window/kt-window-light.png?v=639229026090710867){  .snapshot}
+![kt-window-light](/assets/images/controls/kt-window/kt-window-light.png?v=639229064830024842){  .snapshot}
 
 == tab "Dark" icon:moon
-![kt-window-dark](/assets/images/controls/kt-window/kt-window-dark.png?v=639229026090710867){ .snapshot}
+![kt-window-dark](/assets/images/controls/kt-window/kt-window-dark.png?v=639229064830024842){ .snapshot}
 
 :::
 :::
@@ -66,13 +66,13 @@ window.Background = KtColor.PRIMARY[50];
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![solid-backgrounds-light](/assets/images/controls/kt-window/solid-backgrounds-light.png?v=639229026100543235){ .light .snapshot} ![solid-backgrounds-dark](/assets/images/controls/kt-window/solid-backgrounds-dark.png?v=639229026100543235){.dark .snapshot}
+![solid-backgrounds-light](/assets/images/controls/kt-window/solid-backgrounds-light.png?v=639229064839840154){ .light .snapshot} ![solid-backgrounds-dark](/assets/images/controls/kt-window/solid-backgrounds-dark.png?v=639229064839840154){.dark .snapshot}
 
 == tab "Light" icon:sun
-![solid-backgrounds-light](/assets/images/controls/kt-window/solid-backgrounds-light.png?v=639229026100543235){  .snapshot}
+![solid-backgrounds-light](/assets/images/controls/kt-window/solid-backgrounds-light.png?v=639229064839840154){  .snapshot}
 
 == tab "Dark" icon:moon
-![solid-backgrounds-dark](/assets/images/controls/kt-window/solid-backgrounds-dark.png?v=639229026100543235){ .snapshot}
+![solid-backgrounds-dark](/assets/images/controls/kt-window/solid-backgrounds-dark.png?v=639229064839840154){ .snapshot}
 
 :::
 :::
@@ -91,13 +91,13 @@ window.Background =
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gradient-backgrounds-light](/assets/images/controls/kt-window/gradient-backgrounds-light.png?v=639229026110363483){ .light .snapshot} ![gradient-backgrounds-dark](/assets/images/controls/kt-window/gradient-backgrounds-dark.png?v=639229026110363483){.dark .snapshot}
+![gradient-backgrounds-light](/assets/images/controls/kt-window/gradient-backgrounds-light.png?v=639229064849886363){ .light .snapshot} ![gradient-backgrounds-dark](/assets/images/controls/kt-window/gradient-backgrounds-dark.png?v=639229064849886363){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gradient-backgrounds-light](/assets/images/controls/kt-window/gradient-backgrounds-light.png?v=639229026110363483){  .snapshot}
+![gradient-backgrounds-light](/assets/images/controls/kt-window/gradient-backgrounds-light.png?v=639229064849886363){  .snapshot}
 
 == tab "Dark" icon:moon
-![gradient-backgrounds-dark](/assets/images/controls/kt-window/gradient-backgrounds-dark.png?v=639229026110363483){ .snapshot}
+![gradient-backgrounds-dark](/assets/images/controls/kt-window/gradient-backgrounds-dark.png?v=639229064849886363){ .snapshot}
 
 :::
 :::
@@ -117,13 +117,13 @@ window.Background =
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gradient-angles-light](/assets/images/controls/kt-window/gradient-angles-light.png?v=639229026120363277){ .light .snapshot} ![gradient-angles-dark](/assets/images/controls/kt-window/gradient-angles-dark.png?v=639229026120363277){.dark .snapshot}
+![gradient-angles-light](/assets/images/controls/kt-window/gradient-angles-light.png?v=639229064859520289){ .light .snapshot} ![gradient-angles-dark](/assets/images/controls/kt-window/gradient-angles-dark.png?v=639229064859520289){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gradient-angles-light](/assets/images/controls/kt-window/gradient-angles-light.png?v=639229026120363277){  .snapshot}
+![gradient-angles-light](/assets/images/controls/kt-window/gradient-angles-light.png?v=639229064859520289){  .snapshot}
 
 == tab "Dark" icon:moon
-![gradient-angles-dark](/assets/images/controls/kt-window/gradient-angles-dark.png?v=639229026120363277){ .snapshot}
+![gradient-angles-dark](/assets/images/controls/kt-window/gradient-angles-dark.png?v=639229064859520289){ .snapshot}
 
 :::
 :::
@@ -138,13 +138,13 @@ window.Background = KtColor.ACCENT;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![semantic-backgrounds-light](/assets/images/controls/kt-window/semantic-backgrounds-light.png?v=639229026130207701){ .light .snapshot} ![semantic-backgrounds-dark](/assets/images/controls/kt-window/semantic-backgrounds-dark.png?v=639229026130207701){.dark .snapshot}
+![semantic-backgrounds-light](/assets/images/controls/kt-window/semantic-backgrounds-light.png?v=639229064869358378){ .light .snapshot} ![semantic-backgrounds-dark](/assets/images/controls/kt-window/semantic-backgrounds-dark.png?v=639229064869358378){.dark .snapshot}
 
 == tab "Light" icon:sun
-![semantic-backgrounds-light](/assets/images/controls/kt-window/semantic-backgrounds-light.png?v=639229026130198594){  .snapshot}
+![semantic-backgrounds-light](/assets/images/controls/kt-window/semantic-backgrounds-light.png?v=639229064869358378){  .snapshot}
 
 == tab "Dark" icon:moon
-![semantic-backgrounds-dark](/assets/images/controls/kt-window/semantic-backgrounds-dark.png?v=639229026130198594){ .snapshot}
+![semantic-backgrounds-dark](/assets/images/controls/kt-window/semantic-backgrounds-dark.png?v=639229064869358378){ .snapshot}
 
 :::
 :::
@@ -159,13 +159,13 @@ window.Background = KtColor.SECONDARY[20];
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![background-shades-light](/assets/images/controls/kt-window/background-shades-light.png?v=639229026139848584){ .light .snapshot} ![background-shades-dark](/assets/images/controls/kt-window/background-shades-dark.png?v=639229026139848584){.dark .snapshot}
+![background-shades-light](/assets/images/controls/kt-window/background-shades-light.png?v=639229064879185759){ .light .snapshot} ![background-shades-dark](/assets/images/controls/kt-window/background-shades-dark.png?v=639229064879185759){.dark .snapshot}
 
 == tab "Light" icon:sun
-![background-shades-light](/assets/images/controls/kt-window/background-shades-light.png?v=639229026139848584){  .snapshot}
+![background-shades-light](/assets/images/controls/kt-window/background-shades-light.png?v=639229064879185759){  .snapshot}
 
 == tab "Dark" icon:moon
-![background-shades-dark](/assets/images/controls/kt-window/background-shades-dark.png?v=639229026139848584){ .snapshot}
+![background-shades-dark](/assets/images/controls/kt-window/background-shades-dark.png?v=639229064879185759){ .snapshot}
 
 :::
 :::
@@ -181,13 +181,13 @@ window.Background = Color.Teal;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-background-colors-light](/assets/images/controls/kt-window/custom-background-colors-light.png?v=639229026149710413){ .light .snapshot} ![custom-background-colors-dark](/assets/images/controls/kt-window/custom-background-colors-dark.png?v=639229026149710413){.dark .snapshot}
+![custom-background-colors-light](/assets/images/controls/kt-window/custom-background-colors-light.png?v=639229064889034457){ .light .snapshot} ![custom-background-colors-dark](/assets/images/controls/kt-window/custom-background-colors-dark.png?v=639229064889034457){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-background-colors-light](/assets/images/controls/kt-window/custom-background-colors-light.png?v=639229026149710413){  .snapshot}
+![custom-background-colors-light](/assets/images/controls/kt-window/custom-background-colors-light.png?v=639229064889034457){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-background-colors-dark](/assets/images/controls/kt-window/custom-background-colors-dark.png?v=639229026149710413){ .snapshot}
+![custom-background-colors-dark](/assets/images/controls/kt-window/custom-background-colors-dark.png?v=639229064889034457){ .snapshot}
 
 :::
 :::
@@ -208,13 +208,13 @@ window.PatternStyle = HatchStyle.LargeConfetti;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![background-patterns_largeconfetti-light](/assets/images/controls/kt-window/background-patterns_largeconfetti-light.png?v=639229026149748819){ .light .snapshot} ![background-patterns_largeconfetti-dark](/assets/images/controls/kt-window/background-patterns_largeconfetti-dark.png?v=639229026149748819){.dark .snapshot}
+![background-patterns_largeconfetti-light](/assets/images/controls/kt-window/background-patterns_largeconfetti-light.png?v=639229064889082333){ .light .snapshot} ![background-patterns_largeconfetti-dark](/assets/images/controls/kt-window/background-patterns_largeconfetti-dark.png?v=639229064889082333){.dark .snapshot}
 
 == tab "Light" icon:sun
-![background-patterns_largeconfetti-light](/assets/images/controls/kt-window/background-patterns_largeconfetti-light.png?v=639229026149748819){  .snapshot}
+![background-patterns_largeconfetti-light](/assets/images/controls/kt-window/background-patterns_largeconfetti-light.png?v=639229064889082333){  .snapshot}
 
 == tab "Dark" icon:moon
-![background-patterns_largeconfetti-dark](/assets/images/controls/kt-window/background-patterns_largeconfetti-dark.png?v=639229026149748819){ .snapshot}
+![background-patterns_largeconfetti-dark](/assets/images/controls/kt-window/background-patterns_largeconfetti-dark.png?v=639229064889082333){ .snapshot}
 
 :::
 :::
@@ -225,392 +225,392 @@ window.PatternStyle = HatchStyle.LargeConfetti;
 
 ::: grid
 ::: card "Horizontal"
-![background-patterns_horizontal-light](/assets/images/controls/kt-window/background-patterns_horizontal-light.png?v=639229026159718211){ .light .snapshot} ![background-patterns_horizontal-dark](/assets/images/controls/kt-window/background-patterns_horizontal-dark.png?v=639229026159718211){.dark .snapshot}
+![background-patterns_horizontal-light](/assets/images/controls/kt-window/background-patterns_horizontal-light.png?v=639229064898891759){ .light .snapshot} ![background-patterns_horizontal-dark](/assets/images/controls/kt-window/background-patterns_horizontal-dark.png?v=639229064898891759){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Min"
-![background-patterns_min-light](/assets/images/controls/kt-window/background-patterns_min-light.png?v=639229026169533533){ .light .snapshot} ![background-patterns_min-dark](/assets/images/controls/kt-window/background-patterns_min-dark.png?v=639229026169533533){.dark .snapshot}
+![background-patterns_min-light](/assets/images/controls/kt-window/background-patterns_min-light.png?v=639229064908681206){ .light .snapshot} ![background-patterns_min-dark](/assets/images/controls/kt-window/background-patterns_min-dark.png?v=639229064908681206){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Vertical"
-![background-patterns_vertical-light](/assets/images/controls/kt-window/background-patterns_vertical-light.png?v=639229026179355424){ .light .snapshot} ![background-patterns_vertical-dark](/assets/images/controls/kt-window/background-patterns_vertical-dark.png?v=639229026179355424){.dark .snapshot}
+![background-patterns_vertical-light](/assets/images/controls/kt-window/background-patterns_vertical-light.png?v=639229064918528136){ .light .snapshot} ![background-patterns_vertical-dark](/assets/images/controls/kt-window/background-patterns_vertical-dark.png?v=639229064918528136){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "ForwardDiagonal"
-![background-patterns_forwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_forwarddiagonal-light.png?v=639229026189031848){ .light .snapshot} ![background-patterns_forwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_forwarddiagonal-dark.png?v=639229026189031848){.dark .snapshot}
+![background-patterns_forwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_forwarddiagonal-light.png?v=639229064928394514){ .light .snapshot} ![background-patterns_forwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_forwarddiagonal-dark.png?v=639229064928394514){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "BackwardDiagonal"
-![background-patterns_backwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_backwarddiagonal-light.png?v=639229026199061832){ .light .snapshot} ![background-patterns_backwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_backwarddiagonal-dark.png?v=639229026199061832){.dark .snapshot}
+![background-patterns_backwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_backwarddiagonal-light.png?v=639229064938237326){ .light .snapshot} ![background-patterns_backwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_backwarddiagonal-dark.png?v=639229064938237326){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Cross"
-![background-patterns_cross-light](/assets/images/controls/kt-window/background-patterns_cross-light.png?v=639229026209208464){ .light .snapshot} ![background-patterns_cross-dark](/assets/images/controls/kt-window/background-patterns_cross-dark.png?v=639229026209208464){.dark .snapshot}
+![background-patterns_cross-light](/assets/images/controls/kt-window/background-patterns_cross-light.png?v=639229064948198167){ .light .snapshot} ![background-patterns_cross-dark](/assets/images/controls/kt-window/background-patterns_cross-dark.png?v=639229064948198167){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "LargeGrid"
-![background-patterns_largegrid-light](/assets/images/controls/kt-window/background-patterns_largegrid-light.png?v=639229026219212179){ .light .snapshot} ![background-patterns_largegrid-dark](/assets/images/controls/kt-window/background-patterns_largegrid-dark.png?v=639229026219212179){.dark .snapshot}
+![background-patterns_largegrid-light](/assets/images/controls/kt-window/background-patterns_largegrid-light.png?v=639229064958172500){ .light .snapshot} ![background-patterns_largegrid-dark](/assets/images/controls/kt-window/background-patterns_largegrid-dark.png?v=639229064958172500){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Max"
-![background-patterns_max-light](/assets/images/controls/kt-window/background-patterns_max-light.png?v=639229026229025537){ .light .snapshot} ![background-patterns_max-dark](/assets/images/controls/kt-window/background-patterns_max-dark.png?v=639229026229025537){.dark .snapshot}
+![background-patterns_max-light](/assets/images/controls/kt-window/background-patterns_max-light.png?v=639229064968199997){ .light .snapshot} ![background-patterns_max-dark](/assets/images/controls/kt-window/background-patterns_max-dark.png?v=639229064968199997){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DiagonalCross"
-![background-patterns_diagonalcross-light](/assets/images/controls/kt-window/background-patterns_diagonalcross-light.png?v=639229026239052487){ .light .snapshot} ![background-patterns_diagonalcross-dark](/assets/images/controls/kt-window/background-patterns_diagonalcross-dark.png?v=639229026239052487){.dark .snapshot}
+![background-patterns_diagonalcross-light](/assets/images/controls/kt-window/background-patterns_diagonalcross-light.png?v=639229064978237550){ .light .snapshot} ![background-patterns_diagonalcross-dark](/assets/images/controls/kt-window/background-patterns_diagonalcross-dark.png?v=639229064978237550){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent05"
-![background-patterns_percent05-light](/assets/images/controls/kt-window/background-patterns_percent05-light.png?v=639229026248857806){ .light .snapshot} ![background-patterns_percent05-dark](/assets/images/controls/kt-window/background-patterns_percent05-dark.png?v=639229026248857806){.dark .snapshot}
+![background-patterns_percent05-light](/assets/images/controls/kt-window/background-patterns_percent05-light.png?v=639229064988016105){ .light .snapshot} ![background-patterns_percent05-dark](/assets/images/controls/kt-window/background-patterns_percent05-dark.png?v=639229064988016105){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent10"
-![background-patterns_percent10-light](/assets/images/controls/kt-window/background-patterns_percent10-light.png?v=639229026258857304){ .light .snapshot} ![background-patterns_percent10-dark](/assets/images/controls/kt-window/background-patterns_percent10-dark.png?v=639229026258857304){.dark .snapshot}
+![background-patterns_percent10-light](/assets/images/controls/kt-window/background-patterns_percent10-light.png?v=639229064997679668){ .light .snapshot} ![background-patterns_percent10-dark](/assets/images/controls/kt-window/background-patterns_percent10-dark.png?v=639229064997679668){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent20"
-![background-patterns_percent20-light](/assets/images/controls/kt-window/background-patterns_percent20-light.png?v=639229026268545292){ .light .snapshot} ![background-patterns_percent20-dark](/assets/images/controls/kt-window/background-patterns_percent20-dark.png?v=639229026268545292){.dark .snapshot}
+![background-patterns_percent20-light](/assets/images/controls/kt-window/background-patterns_percent20-light.png?v=639229065007546226){ .light .snapshot} ![background-patterns_percent20-dark](/assets/images/controls/kt-window/background-patterns_percent20-dark.png?v=639229065007546226){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent25"
-![background-patterns_percent25-light](/assets/images/controls/kt-window/background-patterns_percent25-light.png?v=639229026278194332){ .light .snapshot} ![background-patterns_percent25-dark](/assets/images/controls/kt-window/background-patterns_percent25-dark.png?v=639229026278194332){.dark .snapshot}
+![background-patterns_percent25-light](/assets/images/controls/kt-window/background-patterns_percent25-light.png?v=639229065017469873){ .light .snapshot} ![background-patterns_percent25-dark](/assets/images/controls/kt-window/background-patterns_percent25-dark.png?v=639229065017469873){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent30"
-![background-patterns_percent30-light](/assets/images/controls/kt-window/background-patterns_percent30-light.png?v=639229026288189310){ .light .snapshot} ![background-patterns_percent30-dark](/assets/images/controls/kt-window/background-patterns_percent30-dark.png?v=639229026288189310){.dark .snapshot}
+![background-patterns_percent30-light](/assets/images/controls/kt-window/background-patterns_percent30-light.png?v=639229065027386266){ .light .snapshot} ![background-patterns_percent30-dark](/assets/images/controls/kt-window/background-patterns_percent30-dark.png?v=639229065027386266){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent40"
-![background-patterns_percent40-light](/assets/images/controls/kt-window/background-patterns_percent40-light.png?v=639229026298210070){ .light .snapshot} ![background-patterns_percent40-dark](/assets/images/controls/kt-window/background-patterns_percent40-dark.png?v=639229026298210070){.dark .snapshot}
+![background-patterns_percent40-light](/assets/images/controls/kt-window/background-patterns_percent40-light.png?v=639229065037205984){ .light .snapshot} ![background-patterns_percent40-dark](/assets/images/controls/kt-window/background-patterns_percent40-dark.png?v=639229065037205984){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent50"
-![background-patterns_percent50-light](/assets/images/controls/kt-window/background-patterns_percent50-light.png?v=639229026308227479){ .light .snapshot} ![background-patterns_percent50-dark](/assets/images/controls/kt-window/background-patterns_percent50-dark.png?v=639229026308227479){.dark .snapshot}
+![background-patterns_percent50-light](/assets/images/controls/kt-window/background-patterns_percent50-light.png?v=639229065046922747){ .light .snapshot} ![background-patterns_percent50-dark](/assets/images/controls/kt-window/background-patterns_percent50-dark.png?v=639229065046922747){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent60"
-![background-patterns_percent60-light](/assets/images/controls/kt-window/background-patterns_percent60-light.png?v=639229026318356684){ .light .snapshot} ![background-patterns_percent60-dark](/assets/images/controls/kt-window/background-patterns_percent60-dark.png?v=639229026318356684){.dark .snapshot}
+![background-patterns_percent60-light](/assets/images/controls/kt-window/background-patterns_percent60-light.png?v=639229065056681270){ .light .snapshot} ![background-patterns_percent60-dark](/assets/images/controls/kt-window/background-patterns_percent60-dark.png?v=639229065056681270){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent70"
-![background-patterns_percent70-light](/assets/images/controls/kt-window/background-patterns_percent70-light.png?v=639229026328033750){ .light .snapshot} ![background-patterns_percent70-dark](/assets/images/controls/kt-window/background-patterns_percent70-dark.png?v=639229026328033750){.dark .snapshot}
+![background-patterns_percent70-light](/assets/images/controls/kt-window/background-patterns_percent70-light.png?v=639229065066538358){ .light .snapshot} ![background-patterns_percent70-dark](/assets/images/controls/kt-window/background-patterns_percent70-dark.png?v=639229065066538358){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent75"
-![background-patterns_percent75-light](/assets/images/controls/kt-window/background-patterns_percent75-light.png?v=639229026337861021){ .light .snapshot} ![background-patterns_percent75-dark](/assets/images/controls/kt-window/background-patterns_percent75-dark.png?v=639229026337861021){.dark .snapshot}
+![background-patterns_percent75-light](/assets/images/controls/kt-window/background-patterns_percent75-light.png?v=639229065076365983){ .light .snapshot} ![background-patterns_percent75-dark](/assets/images/controls/kt-window/background-patterns_percent75-dark.png?v=639229065076365983){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent80"
-![background-patterns_percent80-light](/assets/images/controls/kt-window/background-patterns_percent80-light.png?v=639229026347542067){ .light .snapshot} ![background-patterns_percent80-dark](/assets/images/controls/kt-window/background-patterns_percent80-dark.png?v=639229026347542067){.dark .snapshot}
+![background-patterns_percent80-light](/assets/images/controls/kt-window/background-patterns_percent80-light.png?v=639229065086022879){ .light .snapshot} ![background-patterns_percent80-dark](/assets/images/controls/kt-window/background-patterns_percent80-dark.png?v=639229065086022879){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Percent90"
-![background-patterns_percent90-light](/assets/images/controls/kt-window/background-patterns_percent90-light.png?v=639229026357378439){ .light .snapshot} ![background-patterns_percent90-dark](/assets/images/controls/kt-window/background-patterns_percent90-dark.png?v=639229026357378439){.dark .snapshot}
+![background-patterns_percent90-light](/assets/images/controls/kt-window/background-patterns_percent90-light.png?v=639229065096021050){ .light .snapshot} ![background-patterns_percent90-dark](/assets/images/controls/kt-window/background-patterns_percent90-dark.png?v=639229065096021050){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "LightDownwardDiagonal"
-![background-patterns_lightdownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_lightdownwarddiagonal-light.png?v=639229026367206466){ .light .snapshot} ![background-patterns_lightdownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_lightdownwarddiagonal-dark.png?v=639229026367206466){.dark .snapshot}
+![background-patterns_lightdownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_lightdownwarddiagonal-light.png?v=639229065106224779){ .light .snapshot} ![background-patterns_lightdownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_lightdownwarddiagonal-dark.png?v=639229065106224779){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "LightUpwardDiagonal"
-![background-patterns_lightupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_lightupwarddiagonal-light.png?v=639229026377019065){ .light .snapshot} ![background-patterns_lightupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_lightupwarddiagonal-dark.png?v=639229026377019065){.dark .snapshot}
+![background-patterns_lightupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_lightupwarddiagonal-light.png?v=639229065116182314){ .light .snapshot} ![background-patterns_lightupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_lightupwarddiagonal-dark.png?v=639229065116182314){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DarkDownwardDiagonal"
-![background-patterns_darkdownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_darkdownwarddiagonal-light.png?v=639229026386892022){ .light .snapshot} ![background-patterns_darkdownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_darkdownwarddiagonal-dark.png?v=639229026386892022){.dark .snapshot}
+![background-patterns_darkdownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_darkdownwarddiagonal-light.png?v=639229065126009519){ .light .snapshot} ![background-patterns_darkdownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_darkdownwarddiagonal-dark.png?v=639229065126009519){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DarkUpwardDiagonal"
-![background-patterns_darkupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_darkupwarddiagonal-light.png?v=639229026396894366){ .light .snapshot} ![background-patterns_darkupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_darkupwarddiagonal-dark.png?v=639229026396894366){.dark .snapshot}
+![background-patterns_darkupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_darkupwarddiagonal-light.png?v=639229065135873178){ .light .snapshot} ![background-patterns_darkupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_darkupwarddiagonal-dark.png?v=639229065135873178){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "WideDownwardDiagonal"
-![background-patterns_widedownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_widedownwarddiagonal-light.png?v=639229026406854942){ .light .snapshot} ![background-patterns_widedownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_widedownwarddiagonal-dark.png?v=639229026406854942){.dark .snapshot}
+![background-patterns_widedownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_widedownwarddiagonal-light.png?v=639229065145504316){ .light .snapshot} ![background-patterns_widedownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_widedownwarddiagonal-dark.png?v=639229065145504316){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "WideUpwardDiagonal"
-![background-patterns_wideupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_wideupwarddiagonal-light.png?v=639229026416875023){ .light .snapshot} ![background-patterns_wideupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_wideupwarddiagonal-dark.png?v=639229026416875023){.dark .snapshot}
+![background-patterns_wideupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_wideupwarddiagonal-light.png?v=639229065155185008){ .light .snapshot} ![background-patterns_wideupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_wideupwarddiagonal-dark.png?v=639229065155185008){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "LightVertical"
-![background-patterns_lightvertical-light](/assets/images/controls/kt-window/background-patterns_lightvertical-light.png?v=639229026426868481){ .light .snapshot} ![background-patterns_lightvertical-dark](/assets/images/controls/kt-window/background-patterns_lightvertical-dark.png?v=639229026426868481){.dark .snapshot}
+![background-patterns_lightvertical-light](/assets/images/controls/kt-window/background-patterns_lightvertical-light.png?v=639229065165049411){ .light .snapshot} ![background-patterns_lightvertical-dark](/assets/images/controls/kt-window/background-patterns_lightvertical-dark.png?v=639229065165049411){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "LightHorizontal"
-![background-patterns_lighthorizontal-light](/assets/images/controls/kt-window/background-patterns_lighthorizontal-light.png?v=639229026436861682){ .light .snapshot} ![background-patterns_lighthorizontal-dark](/assets/images/controls/kt-window/background-patterns_lighthorizontal-dark.png?v=639229026436861682){.dark .snapshot}
+![background-patterns_lighthorizontal-light](/assets/images/controls/kt-window/background-patterns_lighthorizontal-light.png?v=639229065175034757){ .light .snapshot} ![background-patterns_lighthorizontal-dark](/assets/images/controls/kt-window/background-patterns_lighthorizontal-dark.png?v=639229065175034757){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "NarrowVertical"
-![background-patterns_narrowvertical-light](/assets/images/controls/kt-window/background-patterns_narrowvertical-light.png?v=639229026446708327){ .light .snapshot} ![background-patterns_narrowvertical-dark](/assets/images/controls/kt-window/background-patterns_narrowvertical-dark.png?v=639229026446708327){.dark .snapshot}
+![background-patterns_narrowvertical-light](/assets/images/controls/kt-window/background-patterns_narrowvertical-light.png?v=639229065185036126){ .light .snapshot} ![background-patterns_narrowvertical-dark](/assets/images/controls/kt-window/background-patterns_narrowvertical-dark.png?v=639229065185036126){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "NarrowHorizontal"
-![background-patterns_narrowhorizontal-light](/assets/images/controls/kt-window/background-patterns_narrowhorizontal-light.png?v=639229026456720043){ .light .snapshot} ![background-patterns_narrowhorizontal-dark](/assets/images/controls/kt-window/background-patterns_narrowhorizontal-dark.png?v=639229026456720043){.dark .snapshot}
+![background-patterns_narrowhorizontal-light](/assets/images/controls/kt-window/background-patterns_narrowhorizontal-light.png?v=639229065194716910){ .light .snapshot} ![background-patterns_narrowhorizontal-dark](/assets/images/controls/kt-window/background-patterns_narrowhorizontal-dark.png?v=639229065194716910){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DarkVertical"
-![background-patterns_darkvertical-light](/assets/images/controls/kt-window/background-patterns_darkvertical-light.png?v=639229026466529065){ .light .snapshot} ![background-patterns_darkvertical-dark](/assets/images/controls/kt-window/background-patterns_darkvertical-dark.png?v=639229026466529065){.dark .snapshot}
+![background-patterns_darkvertical-light](/assets/images/controls/kt-window/background-patterns_darkvertical-light.png?v=639229065204673531){ .light .snapshot} ![background-patterns_darkvertical-dark](/assets/images/controls/kt-window/background-patterns_darkvertical-dark.png?v=639229065204673531){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DarkHorizontal"
-![background-patterns_darkhorizontal-light](/assets/images/controls/kt-window/background-patterns_darkhorizontal-light.png?v=639229026476517569){ .light .snapshot} ![background-patterns_darkhorizontal-dark](/assets/images/controls/kt-window/background-patterns_darkhorizontal-dark.png?v=639229026476517569){.dark .snapshot}
+![background-patterns_darkhorizontal-light](/assets/images/controls/kt-window/background-patterns_darkhorizontal-light.png?v=639229065214521126){ .light .snapshot} ![background-patterns_darkhorizontal-dark](/assets/images/controls/kt-window/background-patterns_darkhorizontal-dark.png?v=639229065214521126){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DashedDownwardDiagonal"
-![background-patterns_dasheddownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_dasheddownwarddiagonal-light.png?v=639229026486333191){ .light .snapshot} ![background-patterns_dasheddownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_dasheddownwarddiagonal-dark.png?v=639229026486333191){.dark .snapshot}
+![background-patterns_dasheddownwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_dasheddownwarddiagonal-light.png?v=639229065224180619){ .light .snapshot} ![background-patterns_dasheddownwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_dasheddownwarddiagonal-dark.png?v=639229065224180619){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DashedUpwardDiagonal"
-![background-patterns_dashedupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_dashedupwarddiagonal-light.png?v=639229026496189693){ .light .snapshot} ![background-patterns_dashedupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_dashedupwarddiagonal-dark.png?v=639229026496189693){.dark .snapshot}
+![background-patterns_dashedupwarddiagonal-light](/assets/images/controls/kt-window/background-patterns_dashedupwarddiagonal-light.png?v=639229065234038429){ .light .snapshot} ![background-patterns_dashedupwarddiagonal-dark](/assets/images/controls/kt-window/background-patterns_dashedupwarddiagonal-dark.png?v=639229065234038429){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DashedHorizontal"
-![background-patterns_dashedhorizontal-light](/assets/images/controls/kt-window/background-patterns_dashedhorizontal-light.png?v=639229026506173905){ .light .snapshot} ![background-patterns_dashedhorizontal-dark](/assets/images/controls/kt-window/background-patterns_dashedhorizontal-dark.png?v=639229026506173905){.dark .snapshot}
+![background-patterns_dashedhorizontal-light](/assets/images/controls/kt-window/background-patterns_dashedhorizontal-light.png?v=639229065243846145){ .light .snapshot} ![background-patterns_dashedhorizontal-dark](/assets/images/controls/kt-window/background-patterns_dashedhorizontal-dark.png?v=639229065243846145){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DashedVertical"
-![background-patterns_dashedvertical-light](/assets/images/controls/kt-window/background-patterns_dashedvertical-light.png?v=639229026516189161){ .light .snapshot} ![background-patterns_dashedvertical-dark](/assets/images/controls/kt-window/background-patterns_dashedvertical-dark.png?v=639229026516189161){.dark .snapshot}
+![background-patterns_dashedvertical-light](/assets/images/controls/kt-window/background-patterns_dashedvertical-light.png?v=639229065253510162){ .light .snapshot} ![background-patterns_dashedvertical-dark](/assets/images/controls/kt-window/background-patterns_dashedvertical-dark.png?v=639229065253510162){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "SmallConfetti"
-![background-patterns_smallconfetti-light](/assets/images/controls/kt-window/background-patterns_smallconfetti-light.png?v=639229026526019270){ .light .snapshot} ![background-patterns_smallconfetti-dark](/assets/images/controls/kt-window/background-patterns_smallconfetti-dark.png?v=639229026526019270){.dark .snapshot}
+![background-patterns_smallconfetti-light](/assets/images/controls/kt-window/background-patterns_smallconfetti-light.png?v=639229065263371793){ .light .snapshot} ![background-patterns_smallconfetti-dark](/assets/images/controls/kt-window/background-patterns_smallconfetti-dark.png?v=639229065263371793){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "LargeConfetti"
-![background-patterns_largeconfetti-light](/assets/images/controls/kt-window/background-patterns_largeconfetti-light.png?v=639229026536042358){ .light .snapshot} ![background-patterns_largeconfetti-dark](/assets/images/controls/kt-window/background-patterns_largeconfetti-dark.png?v=639229026536042358){.dark .snapshot}
+![background-patterns_largeconfetti-light](/assets/images/controls/kt-window/background-patterns_largeconfetti-light.png?v=639229065273071787){ .light .snapshot} ![background-patterns_largeconfetti-dark](/assets/images/controls/kt-window/background-patterns_largeconfetti-dark.png?v=639229065273071787){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "ZigZag"
-![background-patterns_zigzag-light](/assets/images/controls/kt-window/background-patterns_zigzag-light.png?v=639229026545675684){ .light .snapshot} ![background-patterns_zigzag-dark](/assets/images/controls/kt-window/background-patterns_zigzag-dark.png?v=639229026545675684){.dark .snapshot}
+![background-patterns_zigzag-light](/assets/images/controls/kt-window/background-patterns_zigzag-light.png?v=639229065283204446){ .light .snapshot} ![background-patterns_zigzag-dark](/assets/images/controls/kt-window/background-patterns_zigzag-dark.png?v=639229065283204446){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Wave"
-![background-patterns_wave-light](/assets/images/controls/kt-window/background-patterns_wave-light.png?v=639229026555511398){ .light .snapshot} ![background-patterns_wave-dark](/assets/images/controls/kt-window/background-patterns_wave-dark.png?v=639229026555511398){.dark .snapshot}
+![background-patterns_wave-light](/assets/images/controls/kt-window/background-patterns_wave-light.png?v=639229065293040852){ .light .snapshot} ![background-patterns_wave-dark](/assets/images/controls/kt-window/background-patterns_wave-dark.png?v=639229065293040852){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DiagonalBrick"
-![background-patterns_diagonalbrick-light](/assets/images/controls/kt-window/background-patterns_diagonalbrick-light.png?v=639229026565379774){ .light .snapshot} ![background-patterns_diagonalbrick-dark](/assets/images/controls/kt-window/background-patterns_diagonalbrick-dark.png?v=639229026565379774){.dark .snapshot}
+![background-patterns_diagonalbrick-light](/assets/images/controls/kt-window/background-patterns_diagonalbrick-light.png?v=639229065302721089){ .light .snapshot} ![background-patterns_diagonalbrick-dark](/assets/images/controls/kt-window/background-patterns_diagonalbrick-dark.png?v=639229065302721089){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "HorizontalBrick"
-![background-patterns_horizontalbrick-light](/assets/images/controls/kt-window/background-patterns_horizontalbrick-light.png?v=639229026575018879){ .light .snapshot} ![background-patterns_horizontalbrick-dark](/assets/images/controls/kt-window/background-patterns_horizontalbrick-dark.png?v=639229026575018879){.dark .snapshot}
+![background-patterns_horizontalbrick-light](/assets/images/controls/kt-window/background-patterns_horizontalbrick-light.png?v=639229065312536352){ .light .snapshot} ![background-patterns_horizontalbrick-dark](/assets/images/controls/kt-window/background-patterns_horizontalbrick-dark.png?v=639229065312536352){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Weave"
-![background-patterns_weave-light](/assets/images/controls/kt-window/background-patterns_weave-light.png?v=639229026585032757){ .light .snapshot} ![background-patterns_weave-dark](/assets/images/controls/kt-window/background-patterns_weave-dark.png?v=639229026585032757){.dark .snapshot}
+![background-patterns_weave-light](/assets/images/controls/kt-window/background-patterns_weave-light.png?v=639229065322186053){ .light .snapshot} ![background-patterns_weave-dark](/assets/images/controls/kt-window/background-patterns_weave-dark.png?v=639229065322186053){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Plaid"
-![background-patterns_plaid-light](/assets/images/controls/kt-window/background-patterns_plaid-light.png?v=639229026594861846){ .light .snapshot} ![background-patterns_plaid-dark](/assets/images/controls/kt-window/background-patterns_plaid-dark.png?v=639229026594861846){.dark .snapshot}
+![background-patterns_plaid-light](/assets/images/controls/kt-window/background-patterns_plaid-light.png?v=639229065332706846){ .light .snapshot} ![background-patterns_plaid-dark](/assets/images/controls/kt-window/background-patterns_plaid-dark.png?v=639229065332706846){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Divot"
-![background-patterns_divot-light](/assets/images/controls/kt-window/background-patterns_divot-light.png?v=639229026604707680){ .light .snapshot} ![background-patterns_divot-dark](/assets/images/controls/kt-window/background-patterns_divot-dark.png?v=639229026604707680){.dark .snapshot}
+![background-patterns_divot-light](/assets/images/controls/kt-window/background-patterns_divot-light.png?v=639229065342724165){ .light .snapshot} ![background-patterns_divot-dark](/assets/images/controls/kt-window/background-patterns_divot-dark.png?v=639229065342724165){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DottedGrid"
-![background-patterns_dottedgrid-light](/assets/images/controls/kt-window/background-patterns_dottedgrid-light.png?v=639229026614362594){ .light .snapshot} ![background-patterns_dottedgrid-dark](/assets/images/controls/kt-window/background-patterns_dottedgrid-dark.png?v=639229026614362594){.dark .snapshot}
+![background-patterns_dottedgrid-light](/assets/images/controls/kt-window/background-patterns_dottedgrid-light.png?v=639229065352369510){ .light .snapshot} ![background-patterns_dottedgrid-dark](/assets/images/controls/kt-window/background-patterns_dottedgrid-dark.png?v=639229065352369510){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "DottedDiamond"
-![background-patterns_dotteddiamond-light](/assets/images/controls/kt-window/background-patterns_dotteddiamond-light.png?v=639229026624033457){ .light .snapshot} ![background-patterns_dotteddiamond-dark](/assets/images/controls/kt-window/background-patterns_dotteddiamond-dark.png?v=639229026624033457){.dark .snapshot}
+![background-patterns_dotteddiamond-light](/assets/images/controls/kt-window/background-patterns_dotteddiamond-light.png?v=639229065362246003){ .light .snapshot} ![background-patterns_dotteddiamond-dark](/assets/images/controls/kt-window/background-patterns_dotteddiamond-dark.png?v=639229065362246003){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Shingle"
-![background-patterns_shingle-light](/assets/images/controls/kt-window/background-patterns_shingle-light.png?v=639229026634165670){ .light .snapshot} ![background-patterns_shingle-dark](/assets/images/controls/kt-window/background-patterns_shingle-dark.png?v=639229026634165670){.dark .snapshot}
+![background-patterns_shingle-light](/assets/images/controls/kt-window/background-patterns_shingle-light.png?v=639229065372202772){ .light .snapshot} ![background-patterns_shingle-dark](/assets/images/controls/kt-window/background-patterns_shingle-dark.png?v=639229065372202772){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Trellis"
-![background-patterns_trellis-light](/assets/images/controls/kt-window/background-patterns_trellis-light.png?v=639229026644031663){ .light .snapshot} ![background-patterns_trellis-dark](/assets/images/controls/kt-window/background-patterns_trellis-dark.png?v=639229026644031663){.dark .snapshot}
+![background-patterns_trellis-light](/assets/images/controls/kt-window/background-patterns_trellis-light.png?v=639229065382365210){ .light .snapshot} ![background-patterns_trellis-dark](/assets/images/controls/kt-window/background-patterns_trellis-dark.png?v=639229065382365210){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "Sphere"
-![background-patterns_sphere-light](/assets/images/controls/kt-window/background-patterns_sphere-light.png?v=639229026653834300){ .light .snapshot} ![background-patterns_sphere-dark](/assets/images/controls/kt-window/background-patterns_sphere-dark.png?v=639229026653834300){.dark .snapshot}
+![background-patterns_sphere-light](/assets/images/controls/kt-window/background-patterns_sphere-light.png?v=639229065392539933){ .light .snapshot} ![background-patterns_sphere-dark](/assets/images/controls/kt-window/background-patterns_sphere-dark.png?v=639229065392539933){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "SmallGrid"
-![background-patterns_smallgrid-light](/assets/images/controls/kt-window/background-patterns_smallgrid-light.png?v=639229026663681112){ .light .snapshot} ![background-patterns_smallgrid-dark](/assets/images/controls/kt-window/background-patterns_smallgrid-dark.png?v=639229026663681112){.dark .snapshot}
+![background-patterns_smallgrid-light](/assets/images/controls/kt-window/background-patterns_smallgrid-light.png?v=639229065402525860){ .light .snapshot} ![background-patterns_smallgrid-dark](/assets/images/controls/kt-window/background-patterns_smallgrid-dark.png?v=639229065402525860){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "SmallCheckerBoard"
-![background-patterns_smallcheckerboard-light](/assets/images/controls/kt-window/background-patterns_smallcheckerboard-light.png?v=639229026673677763){ .light .snapshot} ![background-patterns_smallcheckerboard-dark](/assets/images/controls/kt-window/background-patterns_smallcheckerboard-dark.png?v=639229026673677763){.dark .snapshot}
+![background-patterns_smallcheckerboard-light](/assets/images/controls/kt-window/background-patterns_smallcheckerboard-light.png?v=639229065412226536){ .light .snapshot} ![background-patterns_smallcheckerboard-dark](/assets/images/controls/kt-window/background-patterns_smallcheckerboard-dark.png?v=639229065412226536){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "LargeCheckerBoard"
-![background-patterns_largecheckerboard-light](/assets/images/controls/kt-window/background-patterns_largecheckerboard-light.png?v=639229026683678578){ .light .snapshot} ![background-patterns_largecheckerboard-dark](/assets/images/controls/kt-window/background-patterns_largecheckerboard-dark.png?v=639229026683678578){.dark .snapshot}
+![background-patterns_largecheckerboard-light](/assets/images/controls/kt-window/background-patterns_largecheckerboard-light.png?v=639229065421869535){ .light .snapshot} ![background-patterns_largecheckerboard-dark](/assets/images/controls/kt-window/background-patterns_largecheckerboard-dark.png?v=639229065421869535){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "OutlinedDiamond"
-![background-patterns_outlineddiamond-light](/assets/images/controls/kt-window/background-patterns_outlineddiamond-light.png?v=639229026693529592){ .light .snapshot} ![background-patterns_outlineddiamond-dark](/assets/images/controls/kt-window/background-patterns_outlineddiamond-dark.png?v=639229026693529592){.dark .snapshot}
+![background-patterns_outlineddiamond-light](/assets/images/controls/kt-window/background-patterns_outlineddiamond-light.png?v=639229065432087543){ .light .snapshot} ![background-patterns_outlineddiamond-dark](/assets/images/controls/kt-window/background-patterns_outlineddiamond-dark.png?v=639229065432087543){.dark .snapshot}
 :::
 ::: 
 
 
 ::: grid
 ::: card "SolidDiamond"
-![background-patterns_soliddiamond-light](/assets/images/controls/kt-window/background-patterns_soliddiamond-light.png?v=639229026703509600){ .light .snapshot} ![background-patterns_soliddiamond-dark](/assets/images/controls/kt-window/background-patterns_soliddiamond-dark.png?v=639229026703509600){.dark .snapshot}
+![background-patterns_soliddiamond-light](/assets/images/controls/kt-window/background-patterns_soliddiamond-light.png?v=639229065442205860){ .light .snapshot} ![background-patterns_soliddiamond-dark](/assets/images/controls/kt-window/background-patterns_soliddiamond-dark.png?v=639229065442205860){.dark .snapshot}
 :::
 ::: 
 

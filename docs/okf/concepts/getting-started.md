@@ -7,7 +7,7 @@ path: /getting-started/
 updated: 2026-08-21
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-21T05:16:20.543Z"
+  generated_at: "2026-08-21T08:05:00.613Z"
 ---
 ---
 title: "Getting Started"
