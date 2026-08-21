@@ -51,7 +51,7 @@
       "title": "Home",
       "path": "https://kimtoo.net",
       "icon": "house",
-      "external": true
+      "external": false
     },
     {
       "title": "Getting Started",
