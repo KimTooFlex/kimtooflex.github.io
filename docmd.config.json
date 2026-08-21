@@ -1,0 +1,232 @@
+{
+  "title": "KimTools.WinForms",
+  "url": "https://kimtoo.net",
+  "engine": "js",
+  "src": "src",
+  "out": "docs",
+  "base": "/",
+  "favicon": "/assets/images/favicon.ico",
+  "theme": {
+    "name": "default",
+    "appearance": "light",
+    "customCss": [
+      "/assets/css/kimtools.css"
+    ]
+  },
+  "customJs": [
+    "/assets/js/kimtools.js"
+  ],
+  "logo": {
+    "light": "/assets/images/logo-light.webp",
+    "dark": "/assets/images/logo-dark.webp",
+    "href": "https://kimtoo.net",
+    "alt": "KimTools Logo - Horizontal",
+    "height": "32px"
+  },
+  "layout": {
+    "spa": true,
+    "footer": {
+      "branding": false,
+      "copyright": "KimTools.WinForms \u00a9 2026"
+    }
+  },
+  "plugins": {
+    "analytics": {
+      "googleV4": {
+        "measurementId": "G-83J0E6X910"
+      },
+      "autoEvents": true,
+      "trackSearch": true
+    },
+    "pwa": {
+      "themeColor": "#1e293b",
+      "bgColor": "#ffffff",
+      "logo": "/assets/images/favicon.ico"
+    },
+    "ai": false,
+    "git": false
+  },
+  "navigation": [
+    {
+      "title": "Home",
+      "path": "https://kimtoo.net",
+      "icon": "house",
+      "external": true
+    },
+    {
+      "title": "Getting Started",
+      "icon": "rocket",
+      "path": "/",
+      "children": [
+        { "title": "Licensing", "path": "/licensing.md" },
+        { "title": "Requirements", "path": "/requirements.md" },
+        { "title": "FAQ", "path": "/faq.md" }
+      ]
+    },
+    {
+      "title": " ",
+      "collapsible": false
+    },
+    {
+      "title": " \ud83d\udfe3 Controls",
+      "collapsible": false,
+      "children": [
+        {
+          "title": "Containers",
+          "icon": "layout-panel-top",
+          "children": [
+            { "title": "Kt-Window", "path": "/controls/kt-window.md" },
+            { "title": "Kt-Panel", "path": "/controls/kt-panel.md" },
+            { "title": "Kt-Pages", "path": "/controls/kt-pages.md" },
+            { "title": "Kt-Divider", "path": "/controls/kt-divider.md" },
+            { "title": "Kt-Slot", "path": "/controls/kt-slot.md" }
+          ]
+        },
+        {
+          "title": "Selection",
+          "icon": "check-square",
+          "children": [
+            { "title": "Kt-Button", "path": "/controls/kt-button.md" },
+            { "title": "Kt-Check-Box", "path": "/controls/kt-check-box.md" },
+            { "title": "Kt-Check-Button", "path": "/controls/kt-check-button.md" },
+            { "title": "Kt-Radio-Box", "path": "/controls/kt-radio-box.md" },
+            { "title": "Kt-Radio-Button", "path": "/controls/kt-radio-button.md" },
+            { "title": "Kt-Switch", "path": "/controls/kt-switch.md" },
+            { "title": "Kt-Switch", "path": "/controls/kt-switch.md" }
+          ]
+        },
+        {
+          "title": "Input",
+          "icon": "rectangle-ellipsis",
+          "children": [
+            { "title": "Kt-TextBox", "path": "/controls/kt-textbox.md" },
+            { "title": "Kt-Select", "path": "/controls/kt-select.md" },
+            { "title": "Kt-Date", "path": "/controls/kt-date.md" },
+            { "title": "Kt-Slider", "path": "/controls/kt-slider.md" },
+            { "title": "Kt-Rating", "path": "/controls/kt-rating.md" }
+          ]
+        },
+        {
+          "title": "Display",
+          "icon": "image",
+          "children": [
+            { "title": "Kt-Label", "path": "/controls/kt-label.md" },
+            { "title": "Kt-Picture-Box", "path": "/controls/kt-picture-box.md" },
+            { "title": "Kt-HTML", "path": "/controls/kt-html.md" },
+            { "title": "Kt-Shapes", "path": "/controls/kt-shapes.md" },
+            { "title": "Kt-Table", "path": "/controls/kt-table.md" },
+            { "title": "Kt-Progress", "path": "/controls/kt-progress-bar.md" },
+            { "title": "Kt-Progress-Gauge", "path": "/controls/kt-progress-gauge.md" },
+            { "title": "Kt-Progress-Radial", "path": "/controls/kt-progress-radial.md" },
+            { "title": "Kt-Spinner", "path": "/controls/kt-spinner.md" }
+          ]
+        },
+        {
+          "title": "Navigation",
+          "icon": "panel-left",
+          "children": [
+            { "title": "Kt-Menu", "path": "/controls/kt-menu.md" },
+            { "title": "Kt-Scroll-Bar", "path": "/controls/kt-scroll-bar.md" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": " \ud83d\udd35 Components",
+      "children": [
+        {
+          "title": "Theming",
+          "icon": "palette",
+          "children": [
+            { "title": "Kt-Theme", "path": "/components/kt-theme.md" },
+            { "title": "Kt-Transition", "path": "/components/kt-transition.md" }
+          ]
+        },
+        {
+          "title": "Notifications",
+          "icon": "bell",
+          "children": [
+            { "title": "Kt-Tooltip", "path": "/components/kt-tooltip.md" },
+            { "title": "Kt-Toast", "path": "/components/kt-toast.md" },
+            { "title": "Kt-Pop-Over", "path": "/components/kt-pop-over.md" }
+          ]
+        },
+        {
+          "title": "Validation",
+          "icon": "shield-check",
+          "children": [
+            { "title": "Kt-Validation", "path": "/components/kt-validation.md" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": " ",
+      "collapsible": false
+    },
+    {
+      "title": "Colors",
+      "icon": "swatch-book",
+      "children": [
+        { "title": "Kt-Color", "path": "/utilities/kt-color.md" },
+        { "title": "Kt-Brush", "path": "/utilities/kt-brush.md" }
+      ]
+    },
+    {
+      "title": "Theming",
+      "path": "/theming.md",
+      "icon": "palette"
+    },
+    {
+      "title": "Templates",
+      "path": "/templates",
+      "icon": "layout-template"
+    },
+    {
+      "title": "Release Notes",
+      "path": "https://store.kimtoo.net/?section=0JNqmLFulvHeku3QucyOJg%3D%3D",
+      "icon": "history",
+      "external": true
+    },
+    {
+      "title": "Change Log",
+      "path": "/changelog",
+      "icon": "scroll-text"
+    },
+    {
+      "title": "Resources",
+      "children": [
+        {
+          "title": "Pricing",
+          "path": "https://kimtoo.net/#pricing",
+          "icon": "badge-dollar-sign",
+          "external": true
+        },
+        {
+          "title": "Store",
+          "path": "https://store.kimtoo.net",
+          "icon": "shopping-cart",
+          "external": true
+        },
+        {
+          "title": "NuGet",
+          "path": "https://www.nuget.org/packages/KimTools.WinForms",
+          "icon": "package-search",
+          "external": true
+        },
+        {
+          "title": "Support",
+          "path": "https://support.kimtoo.net",
+          "icon": "life-buoy",
+          "external": true
+        },
+        {
+          "title": "Services",
+          "path": "https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&tier=1",
+          "icon": "briefcase",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

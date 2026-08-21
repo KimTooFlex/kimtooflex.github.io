@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@docmd/plugin-pwa": "^0.9.0"
+  },
+  "devDependencies": {
+    "@docmd/core": "^0.9.0"
+  }
+}

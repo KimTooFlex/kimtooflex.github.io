@@ -4,10 +4,10 @@ title: "KimTools / FAQ"
 description: "Frequently asked questions about KimTools.WinForms."
 source: "https://kimtoo.net/faq/"
 path: /faq/
-updated: 2026-08-16
+updated: 2026-08-21
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-16T18:16:49.831Z"
+  generated_at: "2026-08-21T06:51:13.378Z"
 ---
 ---
 title: "KimTools / FAQ"

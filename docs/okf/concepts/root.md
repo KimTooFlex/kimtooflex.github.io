@@ -4,10 +4,10 @@ title: "Getting Started"
 description: "Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies."
 source: "https://kimtoo.net/"
 path: /
-updated: 2026-08-16
+updated: 2026-08-21
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-16T18:16:49.832Z"
+  generated_at: "2026-08-21T06:51:13.380Z"
 ---
 ---
 title: "Getting Started"
