@@ -48,12 +48,6 @@
   },
   "navigation": [
     {
-      "title": "Home",
-      "path": "https://kimtoo.net",
-      "icon": "house",
-      "external": false
-    },
-    {
       "title": "Getting Started",
       "icon": "rocket",
       "path": "/",
