@@ -7,7 +7,7 @@ path: /requirements/
 updated: 2026-08-23
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-23T12:09:14.760Z"
+  generated_at: "2026-08-23T12:26:23.507Z"
 ---
 ---
 title: "KimTools / System Requirements"
