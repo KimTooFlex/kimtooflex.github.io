@@ -5,11 +5,7 @@
     <title>Redirecting…</title>
     <script>
         const path = window.location.pathname;
-
-        const target = path.toLowerCase().includes("sdk/")
-            ? "https://docs.kimtoo.net" + path
-            : "./docs/404.html" + path;
-
+        const target = "./docs/404.html#"+ path;
         window.location.replace(target);
     </script>
 </head>
