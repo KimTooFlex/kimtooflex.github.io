@@ -6,7 +6,7 @@ path: /utilities/kt-brush/
 updated: 2026-08-24
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T12:42:34.391Z"
+  generated_at: "2026-08-24T16:02:46.275Z"
 ---
 ---
 title: "KimTools / Brush"
@@ -15,7 +15,7 @@ toc: false
 layout: "full"
 ---
 
-# KtBrush
+# Kt`Brush`
 
 `KtBrush` is an abstract fill type with three concrete states - `KtBrushNone`, `KtBrushSolid`, `KtBrushGradient` - built on top of `KtColor`. Besides color, it carries the geometry needed to paint itself (rect, border radius/width, margin, rounded corners) and produces the actual GDI+ `Brush`, `Pen`, and `GraphicsPath` on demand.
 
@@ -23,7 +23,7 @@ Every example below builds a `KtBrush` through an implicit conversion, an operat
 
 ## Creating a Brush
 
-```csharp
+```csharp "🔴 🟡 🟢"
 KtBrush solid    = KtColor.PRIMARY;                 // implicit: KtColor -> solid brush (None if the color is empty)
 KtBrush fromCss  = Color.Red;                        // implicit: System.Drawing.Color -> solid brush
 
@@ -36,7 +36,7 @@ KtBrush fromArr  = stops;                             // implicit: array -> firs
 
 Ready-made semantic brushes and blank starting points:
 
-```csharp
+```csharp "🔴 🟡 🟢"
 KtBrush accent  = KtBrush.PRIMARY;   // PRIMARY -> SECONDARY gradient
 KtBrush surface = KtBrush.BASE;      // solid BASE
 
@@ -46,7 +46,7 @@ KtBrush blankG  = KtBrush.Gradient;  // an empty gradient
 
 From a string:
 
-```csharp
+```csharp "🔴 🟡 🟢"
 KtBrush byName  = KtBrush.FromName("Solid");        // blank Solid / Gradient / None by kind name
 KtBrush parsed1 = KtBrush.Parse("Blue");             // solid
 KtBrush parsed2 = KtBrush.Parse("(Blue,Sky,45)");    // gradient with an angle
@@ -54,7 +54,7 @@ KtBrush parsed2 = KtBrush.Parse("(Blue,Sky,45)");    // gradient with an angle
 
 ## Kinds
 
-```csharp
+```csharp "🔴 🟡 🟢"
 bool isNone     = someBrush.IsNone;
 bool isSolid    = someBrush.IsSolid;
 bool isGradient = someBrush.IsGradient;
@@ -67,7 +67,7 @@ KtBrush copy = someBrush.Clone();      // same color(s)/angle, independent insta
 
 The operators mutate the brush's own rect/border state in place and return the same instance, so they chain naturally but don't produce a copy:
 
-```csharp
+```csharp "🔴 🟡 🟢"
 var positioned = someBrush & new RectangleF(0, 0, 120, 40);  // set the paint rectangle
 var moved      = someBrush & new PointF(10, 10);             // reposition, keep size
 var nudged     = someBrush + new PointF(5, 0);                // offset location by a delta
@@ -90,7 +90,7 @@ A radius under `1` is treated as a *fraction* of the shape's shorter side rather
 
 Rounding can be limited to specific corners:
 
-```csharp
+```csharp "🔴 🟡 🟢"
 someBrush.BorderEdges(KtBrush.Corners.Top);                 // round only the top corners
 someBrush.BorderEdges(new KtBrush.Edges { BottomLeft = false }); // per-corner toggle
 
@@ -100,7 +100,7 @@ var path    = KtBrush.Squircle(rect, radius: 12f);            // rounded-rect pa
 
 ## Gradient Angle
 
-```csharp
+```csharp "🔴 🟡 🟢"
 var rotated = someBrush % 90;   // set a gradient's angle to 90°
 var same    = 90 % someBrush;   // order doesn't matter
 ```
@@ -109,7 +109,7 @@ No-op (returns the brush unchanged) if it isn't a gradient.
 
 ## Content & Contrast
 
-```csharp
+```csharp "🔴 🟡 🟢"
 KtColor text  = !someBrush;               // readable text color for whatever's painted
 KtColor text2 = ~someBrush;               // same idea, from lightness only
 KtColor onFill = someBrush % someColor;   // flatten someColor onto the brush's own paint color
@@ -121,21 +121,21 @@ For a gradient, `!`, `~`, and `brush % color` currently all read only `StartColo
 
 ## Combining & Fallback
 
-```csharp
+```csharp "🔴 🟡 🟢"
 KtBrush picked   = hasOverride | fallbackBrush;  // hasOverride if it's set, otherwise fallbackBrush
 KtBrush replaced = hasOverride & otherBrush;      // otherBrush if hasOverride is set, otherwise None
 ```
 
 `&`/`|` also accept a `KtColor` directly on the right-hand side. Both also work with an `Action` for fluent side effects - the brush itself is always returned unchanged:
 
-```csharp
+```csharp "🔴 🟡 🟢"
 someBrush & (() => Invalidate());   // run the action only if the brush is set
 someBrush | (() => LoadDefault());  // run the action only if the brush is None
 ```
 
 ## Rendering
 
-```csharp
+```csharp "🔴 🟡 🟢"
 Brush gdiBrush     = someBrush.Brush();   // System.Drawing.Brush, cached and reused
 Pen   gdiPen       = someBrush.Pen();     // non-null only once a border width is set
 GraphicsPath path  = someBrush.Path();    // the rounded-rect/squircle outline
@@ -150,7 +150,7 @@ someBrush.Dispose(KtBrush.KtGDIs.Brush);  // force a specific cached resource (P
 
 ## State & Equality
 
-```csharp
+```csharp "🔴 🟡 🟢"
 if (someBrush) { }                  // implicit bool: true unless None
 bool empty   = someBrush.IsEmpty;
 bool visible = someBrush.IsVisible;
@@ -159,7 +159,7 @@ bool same    = brushA.Equals(brushB); // Solid/Gradient compare by color(s) + an
 
 ## Interop
 
-```csharp
+```csharp "🔴 🟡 🟢"
 var json = new JObject { ["fill"] = someBrush }; // implicit -> JToken: [color] for solid, [start, stop] for gradient
 ```
 

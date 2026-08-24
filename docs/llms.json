@@ -9,9 +9,21 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / CheckButton",
+      "url": "https://kimtoo.net/controls/kt-check-button/",
+      "description": "KtCheckButton is a toggleable check button control for Modern WinForms",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / Panel",
       "url": "https://kimtoo.net/controls/kt-panel/",
       "description": "Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / RadioButton",
+      "url": "https://kimtoo.net/controls/kt-radio-button/",
+      "description": "KtRadioButton is a themeable single-selection radio button control for Modern WinForms",
       "priority": "medium"
     },
     {

@@ -6,13 +6,13 @@
     "description": "",
     "url": "https://kimtoo.net",
     "generated_by": "@docmd/plugin-okf",
-    "generated_at": "2026-08-24T12:42:34.396Z",
+    "generated_at": "2026-08-24T16:02:46.285Z",
     "default_type": "concept"
   },
   "stats": {
-    "concepts": 9,
+    "concepts": 11,
     "by_type": {
-      "concept": 9
+      "concept": 11
     },
     "locales": [],
     "versions": []
@@ -29,11 +29,31 @@
       "tags": []
     },
     {
+      "id": "controls-kt-check-button",
+      "type": "concept",
+      "title": "KimTools / Controls / CheckButton",
+      "path": "/controls/kt-check-button/",
+      "file": "concepts/controls-kt-check-button.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
       "id": "controls-kt-panel",
       "type": "concept",
       "title": "KimTools / Controls / Panel",
       "path": "/controls/kt-panel/",
       "file": "concepts/controls-kt-panel.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-radio-button",
+      "type": "concept",
+      "title": "KimTools / Controls / RadioButton",
+      "path": "/controls/kt-radio-button/",
+      "file": "concepts/controls-kt-radio-button.md",
       "locale": "",
       "version": "",
       "tags": []

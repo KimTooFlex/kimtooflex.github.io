@@ -6,8 +6,12 @@
 
 - [KimTools / Controls / Button](https://kimtoo.net/controls/kt-button/)
   Kt-Button is a fully customizable button control for Modern winforms
+- [KimTools / Controls / CheckButton](https://kimtoo.net/controls/kt-check-button/)
+  KtCheckButton is a toggleable check button control for Modern WinForms
 - [KimTools / Controls / Panel](https://kimtoo.net/controls/kt-panel/)
   Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.
+- [KimTools / Controls / RadioButton](https://kimtoo.net/controls/kt-radio-button/)
+  KtRadioButton is a themeable single-selection radio button control for Modern WinForms
 - [KimTools / Window](https://kimtoo.net/controls/kt-window/)
   Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.
 - [KimTools / FAQ](https://kimtoo.net/faq/)
