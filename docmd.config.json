@@ -21,8 +21,7 @@
     "dark": "/assets/images/logo-dark.webp",
     "href": "https://kimtoo.net",
     "alt": "KimTools Logo - Horizontal",
-    "height": "32px",
-    "external": false
+    "height": "32px"
   },
   "layout": {
     "spa": true,
