@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Redirecting…</title>
     <script>
-        var path = window.location.pathname;
+        const path = window.location.pathname;
 
-        var target =path.toLowerCase().includes("sdk/")
+        const target = path.toLowerCase().includes("sdk/")
             ? "https://docs.kimtoo.net" + path
-            : "https://kimtoo.net/#" + path ;
+            : "./docs/404.html" + path;
 
         window.location.replace(target);
     </script>
