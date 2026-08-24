@@ -7,7 +7,7 @@ path: /controls/kt-window/
 updated: 2026-08-24
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T11:48:04.571Z"
+  generated_at: "2026-08-24T12:00:06.282Z"
 ---
 ---
 title: "KimTools / Window"
