@@ -4,10 +4,10 @@ title: "KimTools / Color"
 description: "KimTools Color System"
 source: "https://kimtoo.net/utilities/kt-color/"
 path: /utilities/kt-color/
-updated: 2026-08-23
+updated: 2026-08-24
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-23T12:26:23.514Z"
+  generated_at: "2026-08-24T10:21:07.277Z"
 ---
 ---
 title: "KimTools / Color"

@@ -33,7 +33,7 @@
   "plugins": {
     "analytics": {
       "googleV4": {
-        "measurementId": "G-8RDLCMTFXX" 
+        "measurementId": "G-8RDLCMTFXX"
       },
       "autoEvents": true,
       "trackSearch": true
