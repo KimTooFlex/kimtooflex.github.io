@@ -7,7 +7,7 @@ path: /utilities/kt-color/
 updated: 2026-08-24
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T10:21:07.277Z"
+  generated_at: "2026-08-24T11:19:34.850Z"
 ---
 ---
 title: "KimTools / Color"
