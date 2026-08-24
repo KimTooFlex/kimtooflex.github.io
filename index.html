@@ -425,8 +425,8 @@
                         </svg>
                     </button>
 
-                    <!-- Download CTA -->
-                    <a href="#pricing" data-analytics="checkout-menu-button"
+                    <!-- CTA -->
+                    <a href="./docs" data-analytics="checkout-menu-button"
                        class="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase px-4 py-2.5 rounded-lg transition-all"
                        style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
                         Get Started
@@ -1290,13 +1290,15 @@
                 const currentBanner = computed(() => banners[bannerIndex.value]);
 
                 const navLinks = [
+                    
+                    { label: 'Docs', href: './docs'  },
                     { label: 'Pricing', href: '#pricing' },
                     { label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
                     { label: 'Themes & Templates', href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D', target: '_blank' },
                     { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms', target: '_blank' },
                     { label: 'Blog', href: 'https://store.kimtoo.net?section=0JNqmLFulvHeku3QucyOJg%3D%3D', target: '_blank' },
                     //{ label: 'Bunifu', href: 'https://kimtoo.net/bunifu' },
-                    { label: 'Docs', href: './docs'  },
+
                     //  { label: 'Support', href: 'https://support.kimtoo.net', target: '_blank' },
                 ];
 
