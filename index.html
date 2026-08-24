@@ -936,7 +936,7 @@
                 <!-- Cards grid -->
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     <template v-for="(control, i) in filteredControls.slice(0, limit)" :key="control.name">
-                        <a :href="'./docs/controls/' + control.slug" target="_blank"
+                        <a :href="'./docs/controls/' + control.slug"
                            class="control-card group"
                            :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
                             <div class="aspect-video overflow-hidden rounded-t-xl dark:bg-slate-900">
@@ -1296,7 +1296,7 @@
                     { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms', target: '_blank' },
                     { label: 'Blog', href: 'https://store.kimtoo.net?section=0JNqmLFulvHeku3QucyOJg%3D%3D', target: '_blank' },
                     //{ label: 'Bunifu', href: 'https://kimtoo.net/bunifu' },
-                    { label: 'Docs', href: 'https://kimtoo.net/docs', target: '_blank' },
+                    { label: 'Docs', href: './docs'  },
                     //  { label: 'Support', href: 'https://support.kimtoo.net', target: '_blank' },
                 ];
 
