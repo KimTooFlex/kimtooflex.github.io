@@ -1273,7 +1273,7 @@
                 const latestVersion = ref(latest);
 
                 // Initialize from localStorage or fallback to system preference
-                const savedTheme = localStorage.getItem('theme');
+                const savedTheme = localStorage.getItem('docmd-theme');
                 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
                 const isDark = ref(savedTheme ? savedTheme === 'dark' : systemPrefersDark);
@@ -1430,7 +1430,7 @@
 
                 function toggleTheme() {
                     isDark.value = !isDark.value;
-                    localStorage.setItem('theme', isDark.value ? 'dark' : 'light');
+                    localStorage.setItem('docmd-theme', isDark.value ? 'dark' : 'light');
                     RenderTheme();
                 }
 

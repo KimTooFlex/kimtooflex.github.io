@@ -1,0 +1,2 @@
+RewriteEngine on
+ErrorDocument 404   https://kimtoo.net/404.html
