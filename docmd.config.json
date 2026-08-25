@@ -132,7 +132,7 @@
           "title": "Theming",
           "icon": "palette",
           "children": [
-            { "title": "Kt-Theme", "path": "/components/kt-theme.md" },
+            { "title": "Kt-Theme", "path": "/utilities/kt-themes.md" },
             { "title": "Kt-Transition", "path": "/components/kt-transition.md" }
           ]
         },
