@@ -6,7 +6,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kimtoo.net/controls/kt-check-box/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kimtoo.net/controls/kt-check-button/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-label/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -16,7 +26,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kimtoo.net/controls/kt-radio-box/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kimtoo.net/controls/kt-radio-button/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-switch/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-text-box/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

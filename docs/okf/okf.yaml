@@ -5,12 +5,12 @@ bundle:
   description: ""
   url: "https://kimtoo.net"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-25T16:09:32.723Z"
+  generated_at: "2026-08-25T18:42:05.648Z"
   default_type: concept
 stats:
-  concepts: 12
+  concepts: 17
   by_type:
-    concept: 12
+    concept: 17
   locales: 
   versions: 
 concepts:
@@ -22,11 +22,27 @@ concepts:
     locale: ""
     version: ""
     tags: 
+  - id: controls-kt-check-box
+    type: concept
+    title: "KimTools / Controls / CheckBox"
+    path: /controls/kt-check-box/
+    file: concepts/controls-kt-check-box.md
+    locale: ""
+    version: ""
+    tags: 
   - id: controls-kt-check-button
     type: concept
     title: "KimTools / Controls / CheckButton"
     path: /controls/kt-check-button/
     file: concepts/controls-kt-check-button.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-label
+    type: concept
+    title: "KimTools / Controls / Label"
+    path: /controls/kt-label/
+    file: concepts/controls-kt-label.md
     locale: ""
     version: ""
     tags: 
@@ -38,11 +54,35 @@ concepts:
     locale: ""
     version: ""
     tags: 
+  - id: controls-kt-radio-box
+    type: concept
+    title: "KimTools / Controls / RadioButton"
+    path: /controls/kt-radio-box/
+    file: concepts/controls-kt-radio-box.md
+    locale: ""
+    version: ""
+    tags: 
   - id: controls-kt-radio-button
     type: concept
     title: "KimTools / Controls / RadioButton"
     path: /controls/kt-radio-button/
     file: concepts/controls-kt-radio-button.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-switch
+    type: concept
+    title: "KimTools / Controls / Switch"
+    path: /controls/kt-switch/
+    file: concepts/controls-kt-switch.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-text-box
+    type: concept
+    title: "KimTools / Controls / TextBox"
+    path: /controls/kt-text-box/
+    file: concepts/controls-kt-text-box.md
     locale: ""
     version: ""
     tags: 

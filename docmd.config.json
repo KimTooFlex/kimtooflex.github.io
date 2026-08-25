@@ -85,7 +85,6 @@
             { "title": "Kt-Check-Button", "path": "/controls/kt-check-button.md" },
             { "title": "Kt-Radio-Box", "path": "/controls/kt-radio-box.md" },
             { "title": "Kt-Radio-Button", "path": "/controls/kt-radio-button.md" },
-            { "title": "Kt-Switch", "path": "/controls/kt-switch.md" },
             { "title": "Kt-Switch", "path": "/controls/kt-switch.md" }
           ]
         },
@@ -93,7 +92,7 @@
           "title": "Input",
           "icon": "rectangle-ellipsis",
           "children": [
-            { "title": "Kt-TextBox", "path": "/controls/kt-textbox.md" },
+            { "title": "Kt-TextBox", "path": "/controls/kt-text-box.md" },
             { "title": "Kt-Select", "path": "/controls/kt-select.md" },
             { "title": "Kt-Date", "path": "/controls/kt-date.md" },
             { "title": "Kt-Slider", "path": "/controls/kt-slider.md" },

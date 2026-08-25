@@ -9,9 +9,21 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / CheckBox",
+      "url": "https://kimtoo.net/controls/kt-check-box/",
+      "description": "CheckboxA is a modern, themeable checkbox for WinForms, inspired by Tailwind CSS with per-state color customization.",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / CheckButton",
       "url": "https://kimtoo.net/controls/kt-check-button/",
       "description": "KtCheckButton is a toggleable check button control for Modern WinForms",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Label",
+      "url": "https://kimtoo.net/controls/kt-label/",
+      "description": "KtLabel is a theme-aware label control for Modern WinForms with automatic contrast management",
       "priority": "medium"
     },
     {
@@ -22,8 +34,26 @@
     },
     {
       "title": "KimTools / Controls / RadioButton",
+      "url": "https://kimtoo.net/controls/kt-radio-box/",
+      "description": "KtRadioButton is a themeable single-selection radio button control for Modern WinForms",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / RadioButton",
       "url": "https://kimtoo.net/controls/kt-radio-button/",
       "description": "KtRadioButton is a themeable single-selection radio button control for Modern WinForms",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Switch",
+      "url": "https://kimtoo.net/controls/kt-switch/",
+      "description": "KtSwitch is a smooth, customizable toggle switch control for Modern WinForms",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / TextBox",
+      "url": "https://kimtoo.net/controls/kt-text-box/",
+      "description": "KtTextBox is an enhanced, highly flexible text input control for Modern WinForms with modern design styles and built-in SVG icons",
       "priority": "medium"
     },
     {

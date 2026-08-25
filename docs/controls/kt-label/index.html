@@ -1,0 +1,2892 @@
+<!--
+  ---------------------------------------------------------------
+  docmd : the zero-config documentation engine.
+  @website https://docmd.io
+  [docmd-source] - Please do not remove this header.
+  ---------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="docmd v0.9.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+      var root = "../../";
+      if (root && !root.endsWith('/')) root += '/';
+      if (root === '') root = './';
+      window.DOCMD_ROOT = root;
+
+      window.DOCMD_SITE_ROOT = "/docs/";
+
+      window.DOCMD_APPEARANCE = "light";
+      window.DOCMD_VERSION_ROOT = "/";
+      window.DOCMD_BASE = "/docs/";
+      window.DOCMD_LOCALE = "";
+      window.DOCMD_DEFAULT_LOCALE = "";
+    </script>
+    <script>/**
+ * --------------------------------------------------------------------
+ * docmd : the zero-config documentation engine.
+ *
+ * @package     @docmd/core (and ecosystem)
+ * @website     https://docmd.io
+ * @repository  https://github.com/docmd-io/docmd
+ * @license     MIT
+ * @copyright   Copyright (c) 2025-present docmd.io
+ *
+ * [docmd-source] - Please do not remove this header.
+ * --------------------------------------------------------------------
+ */
+
+(function () {
+  try {
+    // 1. Determine Theme
+    //
+    // Resolve from three sources, in priority order:
+    //   1. localStorage explicit user choice (light / dark)
+    //   2. window.DOCMD_APPEARANCE  (current canonical name, set by EJS templates)
+    //   3. window.DOCMD_DEFAULT_MODE (legacy alias kept for pre-0.8.7 outputs)
+    //   4. 'light' as the final fallback
+    //
+    // Note: localStorage is only honoured when it holds an explicit
+    // 'light' or 'dark' value. A stored 'system' value (from a prior
+    // session where the user picked "follow system") must NOT win over
+    // a freshly resolved config value — the resolved value will itself
+    // be 'system' in that case and the OS preference check below takes
+    // over, so this is a no-op for the in-session behaviour but keeps
+    // any future storage migration simple.
+    var localValue = localStorage.getItem('docmd-theme');
+    var configValue = window.DOCMD_APPEARANCE
+      || window.DOCMD_DEFAULT_MODE
+      || 'light';
+    var theme = (localValue === 'light' || localValue === 'dark')
+      ? localValue
+      : configValue;
+
+    if (theme === 'system') {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // 2. Apply to Root
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // 3. Highlight.js Toggle Strategy
+    var lightLink = document.getElementById('hljs-light');
+    var darkLink = document.getElementById('hljs-dark');
+
+    if (lightLink && darkLink) {
+      if (theme === 'dark') {
+        lightLink.disabled = true;
+        darkLink.disabled = false;
+      } else {
+        lightLink.disabled = false;
+        darkLink.disabled = true;
+      }
+    }
+
+    document.documentElement.style.visibility = "visible";
+  } catch (e) {
+    document.documentElement.style.visibility = "visible";
+    console.error('Theme init failed', e);
+  }
+})();</script>
+    <style>
+      html {
+        visibility: hidden;
+      }
+    </style>
+    <title>
+      KimTools / Controls / Label : KimTools.WinForms
+    </title>
+    
+    
+
+    <link id="site-favicon" rel="icon" href="../../assets/images/favicon.ico?v=mt90hrq2">
+    <link rel="stylesheet" href="../../assets/css/docmd-main.css?v=mt90hrq2">
+    
+    <link rel="stylesheet" href="../../assets/css/docmd-highlight-light.css?v=mt90hrq2" id="hljs-light" >
+    <link rel="stylesheet" href="../../assets/css/docmd-highlight-dark.css?v=mt90hrq2" id="hljs-dark" disabled>
+    
+    
+<meta name="description" content="KtLabel is a theme-aware label control for Modern WinForms with automatic contrast management">
+<link rel="canonical" href="https://kimtoo.net/controls/kt-label/">
+<meta property="og:title" content="KimTools / Controls / Label - KimTools.WinForms">
+<meta property="og:description" content="KtLabel is a theme-aware label control for Modern WinForms with automatic contrast management">
+<meta property="og:url" content="https://kimtoo.net/controls/kt-label/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KimTools / Controls / Label - KimTools.WinForms">
+<meta name="twitter:description" content="KtLabel is a theme-aware label control for Modern WinForms with automatic contrast management">
+
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id="G-8RDLCMTFXX""></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', "G-8RDLCMTFXX");
+    </script>
+
+
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta name="theme-color" content="#1e293b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register("../../service-worker.js").then(reg => {
+          // Check for Service Worker updates from the server every 5 minutes 
+          setInterval(() => {
+             reg.update().catch(() => {});
+          }, 5 * 60 * 1000);
+        }).catch(err => {
+          console.log('PWA SW Registration Failed:', err);
+        });
+      });
+    }
+  </script>
+  
+<link rel="stylesheet" href="../../assets/css/docmd-openapi.css?v=mt90hrq2" >
+
+    
+      <link rel="stylesheet" href="../../assets/css/kimtools.css?v=mt90hrq2">
+    
+    
+  </head>
+  <body
+    class="sidebar-collapsible toc-disabled"
+    data-default-collapsed="false"
+    data-copy-code-enabled="true" data-spa-enabled="true" data-source-file="src/controls/kt-label.md">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    
+    
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          
+<a href="https://kimtoo.net" class="logo-link">
+              <img
+                src="../../assets/images/logo-light.webp"
+                alt="KimTools Logo - Horizontal" class="logo-light" style="height: 32px;">
+              <img
+                src="../../assets/images/logo-dark.webp"
+                alt="KimTools Logo - Horizontal" class="logo-dark" style="height: 32px;">
+            </a>
+          
+          <span class="mobile-view sidebar-menu-button float-right">
+            
+<svg class="lucide-icon icon-menu " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-menu"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" />
+</svg>
+
+          </span>
+        </div>
+        <div class="sidebar-top-group">
+          
+          
+          
+          
+        </div>
+        
+
+<nav class="sidebar-nav" aria-label="Main Navigation">
+  <ul>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <a href="../../" class=" nav-group"
+          >
+           
+<svg class="lucide-icon icon-rocket " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-rocket"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+  <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Getting Started
+            </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+          
+        </a>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../licensing/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Licensing
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../requirements/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Requirements
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../faq/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            FAQ
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="" >
+      
+        <span class="nav-label ">
+          
+          <span class="nav-item-title">
+             
+          </span>
+          
+        </span>
+        
+
+        
+      </li>
+    
+      <li class="active-parent expanded nav-group" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+             🟣 Controls
+          </span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-layout-panel-top " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layout-panel-top"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Containers
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../controls/kt-window/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Window
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-panel/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Panel
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-pages/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Pages
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-divider/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Divider
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-slot/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Slot
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-check-square " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-square-check-big"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344" />
+  <path d="m9 11 3 3L22 4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Selection
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../controls/kt-button/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Button
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-check-box/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Check-Box
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-check-button/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Check-Button
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-radio-box/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Radio-Box
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-radio-button/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Radio-Button
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-switch/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Switch
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-rectangle-ellipsis " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-rectangle-ellipsis"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="12" x="2" y="6" rx="2" />
+  <path d="M12 12h.01" />
+  <path d="M17 12h.01" />
+  <path d="M7 12h.01" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Input
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../controls/kt-text-box/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-TextBox
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-select/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Select
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-date/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Date
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-slider/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Slider
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-rating/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Rating
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="active-parent collapsible expanded nav-group"  aria-expanded="true" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-image " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-image"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+  <circle cx="9" cy="9" r="2" />
+  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Display
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="active" >
+      
+        <a href="../../controls/kt-label/" class="active "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Label
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-picture-box/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Picture-Box
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-html/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-HTML
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-shapes/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Shapes
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-table/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Table
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-progress-bar/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Progress
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-progress-gauge/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Progress-Gauge
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-progress-radial/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Progress-Radial
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-spinner/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Spinner
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-panel-left " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-panel-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M9 3v18" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Navigation
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../controls/kt-menu/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Menu
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-scroll-bar/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Scroll-Bar
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+             🔵 Components
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-palette " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-palette"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Theming
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../utilities/kt-themes/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Theme
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../components/kt-transition/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Transition
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-bell " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-bell"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+  <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Notifications
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../components/kt-tooltip/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Tooltip
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../components/kt-toast/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Toast
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../components/kt-pop-over/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Pop-Over
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-shield-check " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-shield-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Validation
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../components/kt-validation/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Validation
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="" >
+      
+        <span class="nav-label ">
+          
+          <span class="nav-item-title">
+             
+          </span>
+          
+        </span>
+        
+
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+           
+<svg class="lucide-icon icon-swatch-book " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-swatch-book"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11 17a4 4 0 0 1-8 0V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2Z" />
+  <path d="M16.7 13H19a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7" />
+  <path d="M 7 17h.01" />
+  <path d="m11 8 2.3-2.3a2.4 2.4 0 0 1 3.404.004L18.6 7.6a2.4 2.4 0 0 1 .026 3.434L9.9 19.8" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Colors
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../utilities/kt-color/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Color
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../utilities/kt-brush/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Kt-Brush
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../utilities/kt-themes/" class=" "
+          >
+           
+<svg class="lucide-icon icon-palette " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-palette"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Theming
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../templates/" class=" "
+          >
+           
+<svg class="lucide-icon icon-layout-template " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layout-template"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="7" x="3" y="3" rx="1" />
+  <rect width="9" height="7" x="3" y="14" rx="1" />
+  <rect width="5" height="7" x="16" y="14" rx="1" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Templates
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://store.kimtoo.net/?section=0JNqmLFulvHeku3QucyOJg%3D%3D" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-history " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-history"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+  <path d="M3 3v5h5" />
+  <path d="M12 7v5l4 2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Release Notes
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../changelog/" class=" "
+          >
+           
+<svg class="lucide-icon icon-scroll-text " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-scroll-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 12h-5" />
+  <path d="M15 8h-5" />
+  <path d="M19 17V5a2 2 0 0 0-2-2H4" />
+  <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Change Log
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+            Resources
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="https://kimtoo.net/#pricing" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-badge-dollar-sign " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-badge-dollar-sign"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+  <path d="M12 18V6" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Pricing
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://store.kimtoo.net" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-shopping-cart " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-shopping-cart"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="8" cy="21" r="1" />
+  <circle cx="19" cy="21" r="1" />
+  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Store
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://www.nuget.org/packages/KimTools.WinForms" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-package-search " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-package-search"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22V12" />
+  <path d="M20.27 18.27 22 20" />
+  <path d="M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559" />
+  <path d="M3.29 7 12 12l8.71-5" />
+  <path d="m7.5 4.27 8.997 5.148" />
+  <circle cx="18.5" cy="16.5" r="2.5" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            NuGet
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://support.kimtoo.net" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-life-buoy " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-life-buoy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="m4.93 4.93 4.24 4.24" />
+  <path d="m14.83 9.17 4.24-4.24" />
+  <path d="m14.83 14.83 4.24 4.24" />
+  <path d="m9.17 14.83-4.24 4.24" />
+  <circle cx="12" cy="12" r="4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Support
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&amp;tier=1" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-briefcase " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-briefcase"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+  <rect width="20" height="14" x="2" y="6" rx="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Services
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+        <div class="sidebar-bottom-group mt-auto">
+          
+          
+          
+          
+        </div>
+      </aside>
+      
+      
+      
+      <div class="main-content-wrapper">
+        
+        
+          <header class="page-header">
+            <div class="header-left">
+              
+                <button id="sidebar-toggle-button" class="sidebar-toggle-button"
+                  aria-label="Toggle Sidebar">
+                  
+<svg class="lucide-icon icon-chevron-left " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 18-6-6 6-6" />
+</svg>
+
+                </button>
+              
+              <div class="header-titles-wrapper">
+                <span class="header-title">
+                  KimTools / Controls / Label
+                </span>
+              </div>
+            </div>
+            <div class="header-right">
+              
+                
+
+
+<div class="docmd-options-menu">
+    
+    <button class="docmd-search-trigger" aria-label="Search">
+        
+<svg class="lucide-icon icon-search " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-search"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+
+        <span class="search-label">Search</span>
+        <span class="search-keys"><kbd class="docmd-kbd">⌘</kbd><kbd class="docmd-kbd">K</kbd></span>
+    </button>
+    
+
+    
+
+    
+
+    
+    <button class="theme-toggle-button" aria-label="Toggle theme">
+        
+<svg class="lucide-icon icon-sun icon-sun" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+ 
+<svg class="lucide-icon icon-moon icon-moon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+
+    </button>
+    
+
+    
+</div>
+
+              
+            </div>
+          </header>
+        
+        <div class="content-theme-cover">
+          <main class="content-area" id="main-content">
+            <div class="content-layout">
+              <div class="main-content">
+                <div class="docmd-breadcrumbs-row">
+                  <div id="docmd-raw-markdown" data-content="---%0D%0Atitle%3A%20%22KimTools%20%2F%20Controls%20%2F%20Label%22%0D%0Adescription%3A%20%22KtLabel%20is%20a%20theme-aware%20label%20control%20for%20Modern%20WinForms%20with%20automatic%20contrast%20management%22%0D%0Atoc%3A%20false%0D%0Alayout%3A%20%22full%22%0D%0A---%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%20Kt%20%60Label%60%0D%0AA%20theme-aware%20label%20control%20for%20Modern%20WinForms%20with%20intelligent%20foreground%20contrast%20generation%20and%20KtColor%20palette%20integration.%0D%0A%3A%3A%3A%20callout%20tip%0D%0A%23%23%23%23%20%F0%9F%9F%A3%20PREMIUM%0D%0AThis%20component%20is%20only%20available%20in%20the%20Premium%20version%20of%20KimTools.%0D%0A%3A%3A%3A%20button%20%22Get%20KimTools%22%20%20external%3Ahttps%3A%2F%2Fkimtoo.net%2F%23pricinghttps%3A%2F%2Fkimtoo.net%2F%23pricing%20icon%3Aexternal-link%0D%0A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3D%3D%20side%0D%0A!%5Bkt-label-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Fkt-label-light.png%3Fv%3D639232895094354787)%7B%20.light%20.snapshot%7D%20!%5Bkt-label-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Fkt-label-dark.png%3Fv%3D639232895094354787)%7B.dark%20.snapshot%7D%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20callout%20success%0D%0A%23%23%23%23%20%F0%9F%9F%A2%20DESIGNER%20SUPPORT%0D%0A**This%20control%20has%20full%20Visual%20Studio%20design-time%20support.**%0ADrag%20it%20from%20the%20Toolbox%20onto%20your%20form%2C%20customize%20its%20properties%20directly%20in%20the%20Properties%20window%2C%20and%20KimTools%20will%20generate%20the%20corresponding%20code%20for%20you.%0D%0A%3A%3A%3A%0D%0A%23%23%20Color%0A%7C%20%3A%3A%3A%20tag%20%22Color%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Kt-Color%22%20color%3A%23820BF4%20icon%3Acorner-down-right%20url%3A%2Futilities%2Fkt-color%20%20%7C%20*Sets%20the%20Color.*%20%7C%0A%7C%20--------%20%7C%20-------%20%7C%20-----------%20%7C%0A%23%23%20Background%0A%7C%20%3A%3A%3A%20tag%20%22Background%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Kt-Color%22%20color%3A%23820BF4%20icon%3Acorner-down-right%20url%3A%2Futilities%2Fkt-color%20%20%7C%20*Sets%20the%20Background.*%20%7C%0A%7C%20--------%20%7C%20-------%20%7C%20-----------%20%7C%0A%23%23%20Align%0A%7C%20%3A%3A%3A%20tag%20%22Align%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22ContentAlignment%22%20color%3A%230B64F4%20icon%3Aexternal-link%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.drawing.contentalignment%3Fview%3Dnetframework-4.8%20%20%7C%20*Sets%20the%20Align.*%20%7C%0A%7C%20--------%20%7C%20-------%20%7C%20-----------%20%7C%0A%23%23%20Auto%0A%7C%20%3A%3A%3A%20tag%20%22Auto%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Boolean%22%20color%3A%230B64F4%20icon%3Aexternal-link%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.boolean%3Fview%3Dnetframework-4.8%20%20%7C%20*Sets%20the%20Auto.*%20%7C%0A%7C%20--------%20%7C%20-------%20%7C%20-----------%20%7C%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Palette%20Color%20Variants%0AUse%20the%20%60Color%60%20property%20to%20set%20theme-aware%20text%20colors.%20Foreground%20contrast%20and%20shade%20variations%20automatically%20adapt%20based%20on%20font%20weight%20and%20active%20theme%20settings.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20Panel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20280%2C%0D%0A%20%20%20%20Height%20%3D%20110%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20primaryLabel%20%3D%20new%20KtLabel%0D%0A%7B%0D%0A%20%20%20%20Text%20%3D%20%22Primary%20Theme%20Text%22%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.PRIMARY%2C%0D%0A%20%20%20%20Auto%20%3D%20true%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20successLabel%20%3D%20new%20KtLabel%0D%0A%7B%0D%0A%20%20%20%20Text%20%3D%20%22Success%20Status%20Text%22%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.SUCCESS%2C%0D%0A%20%20%20%20Auto%20%3D%20true%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20errorLabel%20%3D%20new%20KtLabel%0D%0A%7B%0D%0A%20%20%20%20Text%20%3D%20%22Error%20Alert%20Text%22%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.ERROR%2C%0D%0A%20%20%20%20Auto%20%3D%20true%0D%0A%7D%3B%0D%0A%09%0D%0Apanel.Controls.Add(primaryLabel)%3B%0D%0Apanel.Controls.Add(successLabel)%3B%0D%0Apanel.Controls.Add(errorLabel)%3B%0D%0A%09%0D%0AprimaryLabel.Location%20%3D%20new%20Point(10%2C%2010)%3B%0D%0AsuccessLabel.Location%20%3D%20new%20Point(10%2C%2042)%3B%0D%0AerrorLabel.Location%20%3D%20new%20Point(10%2C%2074)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Blabel-colors-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-colors-light.png%3Fv%3D639232895117329429)%7B%20.light%20.snapshot%7D%20!%5Blabel-colors-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-colors-dark.png%3Fv%3D639232895117329429)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Blabel-colors-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-colors-light.png%3Fv%3D639232895117309382)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Blabel-colors-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-colors-dark.png%3Fv%3D639232895117309382)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Text%20Alignment%0ASet%20%60Auto%20%3D%20false%60%20to%20define%20a%20custom%20control%20size%2C%20then%20use%20%60Align%60%20to%20position%20text%20(%60ContentAlignment%60)%20within%20the%20bounds.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20Panel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20280%2C%0D%0A%20%20%20%20Height%20%3D%2060%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20alignedLabel%20%3D%20new%20KtLabel%0D%0A%7B%0D%0A%20%20%20%20Text%20%3D%20%22Centered%20Text%20Alignment%22%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.PRIMARY%2C%0D%0A%20%20%20%20Auto%20%3D%20false%2C%0D%0A%20%20%20%20Size%20%3D%20new%20Size(260%2C%2040)%2C%0D%0A%20%20%20%20Align%20%3D%20ContentAlignment.MiddleCenter%0D%0A%7D%3B%0D%0A%09%0D%0Apanel.Controls.Add(alignedLabel)%3B%0D%0AalignedLabel.Location%20%3D%20new%20Point(10%2C%2010)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Blabel-alignment-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-alignment-light.png%3Fv%3D639232895127895599)%7B%20.light%20.snapshot%7D%20!%5Blabel-alignment-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-alignment-dark.png%3Fv%3D639232895127895599)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Blabel-alignment-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-alignment-light.png%3Fv%3D639232895127885562)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Blabel-alignment-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-label%2Flabel-alignment-dark.png%3Fv%3D639232895127885562)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%23%23%20API%20%60Reference%60%0A%7C%20%20%20%7C%20%20%7C%20%20%20%7C%0A%7C%20--------%20%7C%20-------%20%7C%20-----------%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22Color%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Kt-Color%22%20color%3A%23820BF4%20icon%3Acorner-down-right%20url%3A%2Futilities%2Fkt-color%20%20%7C%20*Sets%20the%20Color.*%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22Background%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Kt-Color%22%20color%3A%23820BF4%20icon%3Acorner-down-right%20url%3A%2Futilities%2Fkt-color%20%20%7C%20*Sets%20the%20Background.*%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22Auto%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Boolean%22%20color%3A%230B64F4%20icon%3Aexternal-link%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.boolean%3Fview%3Dnetframework-4.8%20%20%7C%20*Sets%20the%20Auto.*%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22Align%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22ContentAlignment%22%20color%3A%230B64F4%20icon%3Aexternal-link%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.drawing.contentalignment%3Fview%3Dnetframework-4.8%20%20%7C%20*Sets%20the%20Align.*%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22Text%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22String%22%20color%3A%230B64F4%20icon%3Aexternal-link%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.string%3Fview%3Dnetframework-4.8%20%20%7C%20*The%20text%20associated%20with%20the%20control.*%20%7C%0A" style="display: none;"></div>
+                  
+                    <nav aria-label="breadcrumb" class="docmd-breadcrumbs">
+                      <ol>
+                        
+                        
+                          <li class="breadcrumb-item " >
+                            
+                              <span> 🟣 Controls</span>
+                            
+                            
+                              <span class="breadcrumb-separator">
+<svg class="lucide-icon icon-chevron-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+                            
+                          </li>
+                        
+                          <li class="breadcrumb-item " >
+                            
+                              <span>Display</span>
+                            
+                            
+                              <span class="breadcrumb-separator">
+<svg class="lucide-icon icon-chevron-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+                            
+                          </li>
+                        
+                          <li class="breadcrumb-item active" aria-current=&quot;page&quot;>
+                            
+                              <span>Kt-Label</span>
+                            
+                            
+                          </li>
+                        
+                      </ol>
+                    </nav>
+                  
+
+                  
+                    <div class="docmd-copy-widgets">
+                      
+                        <button class="docmd-copy-btn docmd-copy-raw-btn" data-copied="Copied!" title="Copy Markdown" aria-label="Copy Markdown">
+                          <span class="docmd-btn-icon">
+<svg class="lucide-icon icon-copy " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-copy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+</svg>
+</span>
+                        </button>
+                      
+                      
+                        <button class="docmd-copy-btn docmd-copy-context-btn" data-copied="Copied!" title="Copy Context">
+                          <span class="docmd-btn-icon">
+<svg class="lucide-icon icon-message-square " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-message-square"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+</svg>
+</span>
+                          <span class="docmd-btn-text">Copy Context</span>
+                        </button>
+                      
+                    </div>
+                  
+                </div>
+                
+                <div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h1>Kt <code>Label</code></h1>
+<p>A theme-aware label control for Modern WinForms with intelligent foreground contrast generation and KtColor palette integration.</p>
+<div class="docmd-container callout callout-tip"><div class="callout-content">
+<h4>🟣 PREMIUM</h4>
+<p>This component is only available in the Premium version of KimTools.</p>
+<a href="https://kimtoo.net/#pricinghttps://kimtoo.net/#pricing" class="docmd-button" target="_blank" rel="noopener noreferrer">
+<svg class="lucide-icon icon-external-link button-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+Get KimTools</a></div></div>
+</div>
+<div class="hero-side">
+<p><img src="../../assets/images/screenshots/kt-label/kt-label-light.png?v=639232895094354787" alt="kt-label-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-label/kt-label-dark.png?v=639232895094354787" alt="kt-label-dark" class="dark snapshot"></p>
+</div>
+</div>
+<div class="docmd-container callout callout-success"><div class="callout-content">
+<h4>🟢 DESIGNER SUPPORT</h4>
+<p><strong>This control has full Visual Studio design-time support.</strong><br>
+Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.</p>
+</div></div>
+<h2 id="color" class="docmd-heading"><a href="#color" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Color</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Color</span></th>
+<th><a href="../../utilities/kt-color/" class="docmd-tag-link" style="text-decoration:none;"><span class="docmd-tag" style="--tag-color: #820BF4; background-color: color-mix(in srgb, #820BF4 15%, transparent); color: #820BF4; border-color: color-mix(in srgb, #820BF4 30%, transparent);">
+<svg class="lucide-icon icon-corner-down-right tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-corner-down-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 10 5 5-5 5" />
+  <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+</svg>
+Kt-Color</span></a></th>
+<th><em>Sets the Color.</em></th>
+</tr>
+</thead>
+</table>
+</div><h2 id="background" class="docmd-heading"><a href="#background" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Background</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Background</span></th>
+<th><a href="../../utilities/kt-color/" class="docmd-tag-link" style="text-decoration:none;"><span class="docmd-tag" style="--tag-color: #820BF4; background-color: color-mix(in srgb, #820BF4 15%, transparent); color: #820BF4; border-color: color-mix(in srgb, #820BF4 30%, transparent);">
+<svg class="lucide-icon icon-corner-down-right tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-corner-down-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 10 5 5-5 5" />
+  <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+</svg>
+Kt-Color</span></a></th>
+<th><em>Sets the Background.</em></th>
+</tr>
+</thead>
+</table>
+</div><h2 id="align" class="docmd-heading"><a href="#align" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Align</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Align</span></th>
+<th><a href="https://learn.microsoft.com/en-us/dotnet/api/system.drawing.contentalignment?view=netframework-4.8" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #0B64F4; background-color: color-mix(in srgb, #0B64F4 15%, transparent); color: #0B64F4; border-color: color-mix(in srgb, #0B64F4 30%, transparent);">
+<svg class="lucide-icon icon-external-link tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+ContentAlignment</span></a></th>
+<th><em>Sets the Align.</em></th>
+</tr>
+</thead>
+</table>
+</div><h2 id="auto" class="docmd-heading"><a href="#auto" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Auto</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Auto</span></th>
+<th><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.8" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #0B64F4; background-color: color-mix(in srgb, #0B64F4 15%, transparent); color: #0B64F4; border-color: color-mix(in srgb, #0B64F4 30%, transparent);">
+<svg class="lucide-icon icon-external-link tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+Boolean</span></a></th>
+<th><em>Sets the Auto.</em></th>
+</tr>
+</thead>
+</table>
+</div><div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Palette Color Variants</h2>
+<p>Use the <code>Color</code> property to set theme-aware text colors. Foreground contrast and shade variations automatically adapt based on font weight and active theme settings.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> Panel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">280</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">110</span>,
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>
+};
+	
+<span class="hljs-keyword">var</span> primaryLabel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtLabel
+{
+    Text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Primary Theme Text&quot;</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">PRIMARY</span>,
+    Auto <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>
+};
+	
+<span class="hljs-keyword">var</span> successLabel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtLabel
+{
+    Text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Success Status Text&quot;</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">SUCCESS</span>,
+    Auto <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>
+};
+	
+<span class="hljs-keyword">var</span> errorLabel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtLabel
+{
+    Text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Error Alert Text&quot;</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">ERROR</span>,
+    Auto <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>
+};
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(primaryLabel);
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(successLabel);
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(errorLabel);
+	
+primaryLabel.<span class="hljs-attr">Location</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Point</span>(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>);
+successLabel.<span class="hljs-attr">Location</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Point</span>(<span class="hljs-number">10</span>, <span class="hljs-number">42</span>);
+errorLabel.<span class="hljs-attr">Location</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Point</span>(<span class="hljs-number">10</span>, <span class="hljs-number">74</span>);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-label/label-colors-light.png?v=639232895117329429" alt="label-colors-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-label/label-colors-dark.png?v=639232895117329429" alt="label-colors-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-label/label-colors-light.png?v=639232895117309382" alt="label-colors-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-label/label-colors-dark.png?v=639232895117309382" alt="label-colors-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Text Alignment</h2>
+<p>Set <code>Auto = false</code> to define a custom control size, then use <code>Align</code> to position text (<code>ContentAlignment</code>) within the bounds.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> Panel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">280</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">60</span>,
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>
+};
+	
+<span class="hljs-keyword">var</span> alignedLabel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtLabel
+{
+    Text <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Centered Text Alignment&quot;</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">PRIMARY</span>,
+    Auto <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    Size <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Size</span>(<span class="hljs-number">260</span>, <span class="hljs-number">40</span>),
+    Align <span class="hljs-operator">=</span> ContentAlignment.<span class="hljs-attr">MiddleCenter</span>
+};
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(alignedLabel);
+alignedLabel.<span class="hljs-attr">Location</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Point</span>(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-label/label-alignment-light.png?v=639232895127895599" alt="label-alignment-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-label/label-alignment-dark.png?v=639232895127895599" alt="label-alignment-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-label/label-alignment-light.png?v=639232895127885562" alt="label-alignment-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-label/label-alignment-dark.png?v=639232895127885562" alt="label-alignment-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<h2 id="api-reference" class="docmd-heading"><a href="#api-reference" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>API <code>Reference</code></h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Color</span></td>
+<td><a href="../../utilities/kt-color/" class="docmd-tag-link" style="text-decoration:none;"><span class="docmd-tag" style="--tag-color: #820BF4; background-color: color-mix(in srgb, #820BF4 15%, transparent); color: #820BF4; border-color: color-mix(in srgb, #820BF4 30%, transparent);">
+<svg class="lucide-icon icon-corner-down-right tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-corner-down-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 10 5 5-5 5" />
+  <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+</svg>
+Kt-Color</span></a></td>
+<td><em>Sets the Color.</em></td>
+</tr>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Background</span></td>
+<td><a href="../../utilities/kt-color/" class="docmd-tag-link" style="text-decoration:none;"><span class="docmd-tag" style="--tag-color: #820BF4; background-color: color-mix(in srgb, #820BF4 15%, transparent); color: #820BF4; border-color: color-mix(in srgb, #820BF4 30%, transparent);">
+<svg class="lucide-icon icon-corner-down-right tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-corner-down-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 10 5 5-5 5" />
+  <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+</svg>
+Kt-Color</span></a></td>
+<td><em>Sets the Background.</em></td>
+</tr>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Auto</span></td>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.8" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #0B64F4; background-color: color-mix(in srgb, #0B64F4 15%, transparent); color: #0B64F4; border-color: color-mix(in srgb, #0B64F4 30%, transparent);">
+<svg class="lucide-icon icon-external-link tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+Boolean</span></a></td>
+<td><em>Sets the Auto.</em></td>
+</tr>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Align</span></td>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.drawing.contentalignment?view=netframework-4.8" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #0B64F4; background-color: color-mix(in srgb, #0B64F4 15%, transparent); color: #0B64F4; border-color: color-mix(in srgb, #0B64F4 30%, transparent);">
+<svg class="lucide-icon icon-external-link tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+ContentAlignment</span></a></td>
+<td><em>Sets the Align.</em></td>
+</tr>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Text</span></td>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #0B64F4; background-color: color-mix(in srgb, #0B64F4 15%, transparent); color: #0B64F4; border-color: color-mix(in srgb, #0B64F4 30%, transparent);">
+<svg class="lucide-icon icon-external-link tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+String</span></a></td>
+<td><em>The text associated with the control.</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+                
+                  <div class="page-navigation">
+                    
+                      <a href="../../controls/kt-rating/" class="prev-page">
+                        
+<svg class="lucide-icon icon-arrow-left page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 19-7-7 7-7" />
+  <path d="M19 12H5" />
+</svg>
+
+                        <span><small>Previous</small><strong>
+                            Kt-Rating
+                          </strong></span>
+                      </a>
+                    
+                    
+                      <a href="../../controls/kt-picture-box/" class="next-page">
+                        <span><small>Next</small>
+                          <strong>
+                            Kt-Picture-Box
+                          </strong></span>
+                        
+<svg class="lucide-icon icon-arrow-right page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg>
+
+                      </a>
+                    
+                  </div>
+                
+              </div>
+              
+            </div>
+            <div class="page-footer-actions">
+              
+              
+              <span class="git-spacer"></span>
+              
+            </div>
+          </main>
+          
+
+
+<footer class="page-footer">
+  <div class="footer-content">
+    <div class="user-footer">KimTools.WinForms © 2026</div>
+    
+  </div>
+</footer>
+
+        </div>
+      </div>
+      
+      <script src="../../assets/js/docmd-main.js?v=mt90hrq2"></script>
+      
+      <script src="../../assets/js/docmd-git.js?v=mt90hrq2"></script>
+      <script src="../../assets/js/docmd-image-lightbox.js?v=mt90hrq2" ></script>
+<script src="../../assets/js/vendor/minisearch.js?v=mt90hrq2" ></script>
+<script src="../../assets/js/docmd-search.js?v=mt90hrq2" ></script>
+
+  <!-- Search Modal (Injected by @docmd/plugin-search) -->
+  <div id="docmd-search-modal" class="docmd-search-modal" style="display: none;" data-show-confidence="false" data-show-filters="true"
+       data-search-placeholder="Search documentation..."
+       data-search-no-results="No results found."
+       data-search-error="Failed to load search index."
+       data-search-offline="Search requires a web server. Open this site via http://localhost instead of file:// to enable search."
+       data-search-offline-build="Search is disabled because these docs were built with the --offline flag. Rebuild the site without the flag to enable search."
+       data-search-initial="Type to start searching..."
+       data-search-navigate="to navigate"
+       data-search-escape="to close">
+      <div class="docmd-search-box">
+          <div class="docmd-search-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon icon-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              <input type="text" id="docmd-search-input" placeholder="Search documentation..." autocomplete="off" spellcheck="false">
+              <button onclick="window.closeDocmdSearch()" class="docmd-search-close" aria-label="Close search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon icon-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+              </button>
+          </div>
+          <div id="docmd-search-results" class="docmd-search-results"></div>
+          <div class="docmd-search-footer">
+              <span><kbd class="docmd-kbd">↑</kbd> <kbd class="docmd-kbd">↓</kbd> to navigate</span>
+              <span><kbd class="docmd-kbd">ESC</kbd> to close</span>
+          </div>
+      </div>
+  </div>
+
+    <script>
+      (function() {
+        var searchDebounceTimer;
+
+        document.addEventListener('click', function(e) {
+          var link = e.target.closest('a');
+          if (!link || !window.gtag) return;
+          
+          var url = link.href;
+          var hostname = window.location.hostname;
+          var isExternal = link.hostname && link.hostname !== hostname;
+          var isDownload = link.hasAttribute('download') || url.match(/\.(pdf|zip|tar|gz|exe|pkg)$/i);
+          
+          if (isExternal) {
+            gtag('event', 'click_external', { 'url': url, 'link_text': link.innerText.trim() });
+          } else if (isDownload) {
+            gtag('event', 'download', { 'file_name': url.split('/').pop(), 'url': url });
+          }
+
+          // TOC tracking
+          if (link.classList.contains('toc-link')) {
+            gtag('event', 'toc_click', { 'target_id': link.getAttribute('href'), 'title': link.innerText.trim() });
+          }
+
+          // Permalink tracking
+          if (link.classList.contains('heading-anchor')) {
+            gtag('event', 'permalink_click', { 'url': url });
+          }
+        });
+
+        
+        // Search Keyword Tracking
+        document.addEventListener('input', function(e) {
+          if (e.target.id === 'docmd-search-input' && window.gtag) {
+            var query = e.target.value.trim();
+            if (query.length < 3) return;
+            
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(function() {
+              gtag('event', 'search', { 'search_term': query });
+            }, 1000);
+          }
+        });
+        
+      })();
+    </script>
+
+
+      
+        <script
+          src="../../assets/js/kimtools.js?v=mt90hrq2"></script>
+        
+      
+      
+  </body>
+</html>
