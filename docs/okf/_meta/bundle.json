@@ -6,13 +6,13 @@
     "description": "",
     "url": "https://kimtoo.net",
     "generated_by": "@docmd/plugin-okf",
-    "generated_at": "2026-08-25T18:42:05.648Z",
+    "generated_at": "2026-08-25T19:38:40.249Z",
     "default_type": "concept"
   },
   "stats": {
-    "concepts": 17,
+    "concepts": 19,
     "by_type": {
-      "concept": 17
+      "concept": 19
     },
     "locales": [],
     "versions": []
@@ -49,11 +49,31 @@
       "tags": []
     },
     {
+      "id": "controls-kt-divider",
+      "type": "concept",
+      "title": "KimTools / Controls / Divider",
+      "path": "/controls/kt-divider/",
+      "file": "concepts/controls-kt-divider.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
       "id": "controls-kt-label",
       "type": "concept",
       "title": "KimTools / Controls / Label",
       "path": "/controls/kt-label/",
       "file": "concepts/controls-kt-label.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-pages",
+      "type": "concept",
+      "title": "KimTools / Controls / Pages",
+      "path": "/controls/kt-pages/",
+      "file": "concepts/controls-kt-pages.md",
       "locale": "",
       "version": "",
       "tags": []

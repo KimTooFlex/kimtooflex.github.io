@@ -21,9 +21,21 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / Divider",
+      "url": "https://kimtoo.net/controls/kt-divider/",
+      "description": "KtDivider provides custom horizontal and vertical line separators with configurable dash caps, line thicknesses, faded edge gradients, and KtColor theme integration for Modern WinForms",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / Label",
       "url": "https://kimtoo.net/controls/kt-label/",
       "description": "KtLabel is a theme-aware label control for Modern WinForms with automatic contrast management",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Pages",
+      "url": "https://kimtoo.net/controls/kt-pages/",
+      "description": "KtPages provides controlled tab-based navigation with SPA-style routing, custom transitions, extender button integration, and history navigation for Modern WinForms",
       "priority": "medium"
     },
     {

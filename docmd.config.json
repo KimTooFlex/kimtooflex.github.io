@@ -71,9 +71,7 @@
           "children": [
             { "title": "Kt-Window", "path": "/controls/kt-window.md" },
             { "title": "Kt-Panel", "path": "/controls/kt-panel.md" },
-            { "title": "Kt-Pages", "path": "/controls/kt-pages.md" },
-            { "title": "Kt-Divider", "path": "/controls/kt-divider.md" },
-            { "title": "Kt-Slot", "path": "/controls/kt-slot.md" }
+            { "title": "Kt-Pages", "path": "/controls/kt-pages.md" }
           ]
         },
         {
@@ -104,6 +102,7 @@
           "icon": "image",
           "children": [
             { "title": "Kt-Label", "path": "/controls/kt-label.md" },
+            { "title": "Kt-Divider", "path": "/controls/kt-divider.md" },
             { "title": "Kt-Picture-Box", "path": "/controls/kt-picture-box.md" },
             { "title": "Kt-HTML", "path": "/controls/kt-html.md" },
             { "title": "Kt-Shapes", "path": "/controls/kt-shapes.md" },

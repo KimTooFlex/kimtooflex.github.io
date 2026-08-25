@@ -7,7 +7,7 @@ path: /controls/kt-button/
 updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-25T18:42:05.470Z"
+  generated_at: "2026-08-25T19:38:40.003Z"
 ---
 ---
 title: "KimTools / Controls / Button"

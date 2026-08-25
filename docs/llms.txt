@@ -10,8 +10,12 @@
   CheckboxA is a modern, themeable checkbox for WinForms, inspired by Tailwind CSS with per-state color customization.
 - [KimTools / Controls / CheckButton](https://kimtoo.net/controls/kt-check-button/)
   KtCheckButton is a toggleable check button control for Modern WinForms
+- [KimTools / Controls / Divider](https://kimtoo.net/controls/kt-divider/)
+  KtDivider provides custom horizontal and vertical line separators with configurable dash caps, line thicknesses, faded edge gradients, and KtColor theme integration for Modern WinForms
 - [KimTools / Controls / Label](https://kimtoo.net/controls/kt-label/)
   KtLabel is a theme-aware label control for Modern WinForms with automatic contrast management
+- [KimTools / Controls / Pages](https://kimtoo.net/controls/kt-pages/)
+  KtPages provides controlled tab-based navigation with SPA-style routing, custom transitions, extender button integration, and history navigation for Modern WinForms
 - [KimTools / Controls / Panel](https://kimtoo.net/controls/kt-panel/)
   Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies.
 - [KimTools / Controls / RadioButton](https://kimtoo.net/controls/kt-radio-box/)
