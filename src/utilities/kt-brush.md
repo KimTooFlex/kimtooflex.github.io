@@ -1,6 +1,6 @@
 ---
 title: "KimTools / Brush"
-description: ""
+description: "Modern brush and color utilities for building consistent, theme-aware WinForms interfaces."
 toc: false
 layout: "full"
 ---

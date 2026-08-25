@@ -23,5 +23,8 @@
 - [KimTools / System Requirements](https://kimtoo.net/requirements/)
   Supported operating systems, .NET versions, development environments, and hardware requirements for KimTools.WinForms.
 - [KimTools / Brush](https://kimtoo.net/utilities/kt-brush/)
+  Modern brush and color utilities for building consistent, theme-aware WinForms interfaces.
 - [KimTools / Color](https://kimtoo.net/utilities/kt-color/)
   KimTools Color System
+- [KimTools / Themes](https://kimtoo.net/utilities/kt-themes/)
+  Semantic UI themes inspired by Tailwind CSS and daisyUI.

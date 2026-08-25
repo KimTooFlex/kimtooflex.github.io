@@ -6,13 +6,13 @@
     "description": "",
     "url": "https://kimtoo.net",
     "generated_by": "@docmd/plugin-okf",
-    "generated_at": "2026-08-25T06:16:40.805Z",
+    "generated_at": "2026-08-25T11:08:50.490Z",
     "default_type": "concept"
   },
   "stats": {
-    "concepts": 11,
+    "concepts": 12,
     "by_type": {
-      "concept": 11
+      "concept": 12
     },
     "locales": [],
     "versions": []
@@ -124,6 +124,16 @@
       "title": "KimTools / Color",
       "path": "/utilities/kt-color/",
       "file": "concepts/utilities-kt-color.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "utilities-kt-themes",
+      "type": "concept",
+      "title": "KimTools / Themes",
+      "path": "/utilities/kt-themes/",
+      "file": "concepts/utilities-kt-themes.md",
       "locale": "",
       "version": "",
       "tags": []

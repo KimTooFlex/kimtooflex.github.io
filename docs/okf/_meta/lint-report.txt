@@ -9,6 +9,7 @@
 [WARN] missing-type /requirements/  (using fallback 'concept')
 [WARN] missing-type /utilities/kt-brush/  (using fallback 'concept')
 [WARN] missing-type /utilities/kt-color/  (using fallback 'concept')
+[WARN] missing-type /utilities/kt-themes/  (using fallback 'concept')
 [WARN] orphan-concept controls-kt-button  (no inbound links)
 [WARN] orphan-concept controls-kt-check-button  (no inbound links)
 [WARN] orphan-concept controls-kt-panel  (no inbound links)
@@ -20,3 +21,4 @@
 [WARN] orphan-concept requirements  (no inbound links)
 [WARN] orphan-concept utilities-kt-brush  (no inbound links)
 [WARN] orphan-concept utilities-kt-color  (no inbound links)
+[WARN] orphan-concept utilities-kt-themes  (no inbound links)

@@ -59,13 +59,19 @@
     {
       "title": "KimTools / Brush",
       "url": "https://kimtoo.net/utilities/kt-brush/",
-      "description": "",
+      "description": "Modern brush and color utilities for building consistent, theme-aware WinForms interfaces.",
       "priority": "medium"
     },
     {
       "title": "KimTools / Color",
       "url": "https://kimtoo.net/utilities/kt-color/",
       "description": "KimTools Color System",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Themes",
+      "url": "https://kimtoo.net/utilities/kt-themes/",
+      "description": "Semantic UI themes inspired by Tailwind CSS and daisyUI.",
       "priority": "medium"
     }
   ]
