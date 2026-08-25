@@ -7,7 +7,7 @@ path: /controls/kt-radio-button/
 updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-25T11:34:23.863Z"
+  generated_at: "2026-08-25T12:16:48.352Z"
 ---
 ---
 title: "KimTools / Controls / RadioButton"
@@ -27,7 +27,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232520193587463){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232520193587463){.dark .snapshot}
+![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232677774202309){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232677774202309){.dark .snapshot}
 :::
 
 ::: callout success
@@ -72,13 +72,13 @@ var selected = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232520221066232){ .light .snapshot} ![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232520221066232){.dark .snapshot}
+![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232677807165879){ .light .snapshot} ![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232677807165879){.dark .snapshot}
 
 == tab "Light" icon:sun
-![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232520221066232){  .snapshot}
+![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232677807114372){  .snapshot}
 
 == tab "Dark" icon:moon
-![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232520221066232){ .snapshot}
+![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232677807114372){ .snapshot}
 
 :::
 :::
@@ -104,13 +104,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232520231418284){ .light .snapshot} ![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232520231418284){.dark .snapshot}
+![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232677818015281){ .light .snapshot} ![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232677818015281){.dark .snapshot}
 
 == tab "Light" icon:sun
-![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232520231418284){  .snapshot}
+![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232677818015281){  .snapshot}
 
 == tab "Dark" icon:moon
-![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232520231418284){ .snapshot}
+![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232677818015281){ .snapshot}
 
 :::
 :::
@@ -139,13 +139,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232520241990334){ .light .snapshot} ![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232520241990334){.dark .snapshot}
+![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232677828617590){ .light .snapshot} ![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232677828617590){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232520241990334){  .snapshot}
+![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232677828617590){  .snapshot}
 
 == tab "Dark" icon:moon
-![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232520241990334){ .snapshot}
+![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232677828617590){ .snapshot}
 
 :::
 :::
@@ -174,13 +174,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232520252695460){ .light .snapshot} ![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232520252695460){.dark .snapshot}
+![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232677839795821){ .light .snapshot} ![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232677839795821){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232520252695460){  .snapshot}
+![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232677839785940){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232520252695460){ .snapshot}
+![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232677839785940){ .snapshot}
 
 :::
 :::
@@ -208,13 +208,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232520263152486){ .light .snapshot} ![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232520263152486){.dark .snapshot}
+![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232677850691844){ .light .snapshot} ![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232677850691844){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232520263152486){  .snapshot}
+![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232677850680754){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232520263152486){ .snapshot}
+![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232677850680754){ .snapshot}
 
 :::
 :::
@@ -242,13 +242,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232520273448948){ .light .snapshot} ![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232520273448948){.dark .snapshot}
+![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232677861083325){ .light .snapshot} ![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232677861083325){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232520273448948){  .snapshot}
+![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232677861083325){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232520273448948){ .snapshot}
+![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232677861083325){ .snapshot}
 
 :::
 :::
@@ -277,13 +277,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232520283567514){ .light .snapshot} ![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232520283567514){.dark .snapshot}
+![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232677871710992){ .light .snapshot} ![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232677871710992){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232520283567514){  .snapshot}
+![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232677871710992){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232520283567514){ .snapshot}
+![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232677871710992){ .snapshot}
 
 :::
 :::
@@ -308,13 +308,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232520293851556){ .light .snapshot} ![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232520293851556){.dark .snapshot}
+![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232677882374347){ .light .snapshot} ![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232677882374347){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232520293851556){  .snapshot}
+![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232677882364428){  .snapshot}
 
 == tab "Dark" icon:moon
-![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232520293851556){ .snapshot}
+![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232677882364428){ .snapshot}
 
 :::
 :::
@@ -346,13 +346,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232520304239349){ .light .snapshot} ![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232520304239349){.dark .snapshot}
+![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232677893095730){ .light .snapshot} ![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232677893095730){.dark .snapshot}
 
 == tab "Light" icon:sun
-![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232520304239349){  .snapshot}
+![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232677893085715){  .snapshot}
 
 == tab "Dark" icon:moon
-![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232520304239349){ .snapshot}
+![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232677893085715){ .snapshot}
 
 :::
 :::
@@ -385,13 +385,13 @@ var pushOption = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232520317046983){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232520317046983){.dark .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232677907407815){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232677907407815){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232520317046983){  .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232677907407815){  .snapshot}
 
 == tab "Dark" icon:moon
-![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232520317046983){ .snapshot}
+![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232677907407815){ .snapshot}
 
 :::
 :::
@@ -413,13 +413,13 @@ var payment = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232520330976406){ .light .snapshot} ![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232520330976406){.dark .snapshot}
+![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232677922032677){ .light .snapshot} ![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232677922032677){.dark .snapshot}
 
 == tab "Light" icon:sun
-![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232520330976406){  .snapshot}
+![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232677922017233){  .snapshot}
 
 == tab "Dark" icon:moon
-![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232520330976406){ .snapshot}
+![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232677922017233){ .snapshot}
 
 :::
 :::
@@ -444,13 +444,13 @@ var expressOption = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232520344284713){ .light .snapshot} ![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232520344284713){.dark .snapshot}
+![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232677936818266){ .light .snapshot} ![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232677936818266){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232520344284713){  .snapshot}
+![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232677936808257){  .snapshot}
 
 == tab "Dark" icon:moon
-![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232520344284713){ .snapshot}
+![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232677936808257){ .snapshot}
 
 :::
 :::
@@ -466,7 +466,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232520193587463){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232520193587463){.dark .snapshot}
+![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232677774202309){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232677774202309){.dark .snapshot}
 :::
 
 ::: callout success
@@ -486,7 +486,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232520193587463){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232520193587463){.dark .snapshot}
+![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232677774202309){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232677774202309){.dark .snapshot}
 :::
 
 ::: callout success
@@ -515,13 +515,13 @@ var plan = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232520382130943){ .light .snapshot} ![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232520382130943){.dark .snapshot}
+![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232677979652925){ .light .snapshot} ![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232677979652925){.dark .snapshot}
 
 == tab "Light" icon:sun
-![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232520382130943){  .snapshot}
+![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232677979652925){  .snapshot}
 
 == tab "Dark" icon:moon
-![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232520382130943){ .snapshot}
+![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232677979652925){ .snapshot}
 
 :::
 :::
@@ -555,13 +555,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232520392640774){ .light .snapshot} ![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232520392640774){.dark .snapshot}
+![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232677990815367){ .light .snapshot} ![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232677990815367){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232520392640774){  .snapshot}
+![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232677990815367){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232520392640774){ .snapshot}
+![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232677990815367){ .snapshot}
 
 :::
 :::
@@ -577,7 +577,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232520193587463){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232520193587463){.dark .snapshot}
+![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232677774202309){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232677774202309){.dark .snapshot}
 :::
 
 ::: callout success
@@ -618,13 +618,13 @@ flow.Controls.Add(disabled);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232520419390283){ .light .snapshot} ![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232520419390283){.dark .snapshot}
+![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232678021063687){ .light .snapshot} ![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232678021063687){.dark .snapshot}
 
 == tab "Light" icon:sun
-![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232520419390283){  .snapshot}
+![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232678021063687){  .snapshot}
 
 == tab "Dark" icon:moon
-![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232520419390283){ .snapshot}
+![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232678021063687){ .snapshot}
 
 :::
 :::
@@ -670,35 +670,133 @@ personal.CheckedChanged += (_, _) =>
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232520429908658){ .light .snapshot} ![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232520429908658){.dark .snapshot}
+![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232678032393011){ .light .snapshot} ![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232678032393011){.dark .snapshot}
 
 == tab "Light" icon:sun
-![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232520429908658){  .snapshot}
+![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232678032393011){  .snapshot}
 
 == tab "Dark" icon:moon
-![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232520429908658){ .snapshot}
+![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232678032393011){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-# Kt `RadioButton`
-A themeable single-select control for WinForms, with independent checked and unchecked styling for background, border, icon and foreground.
-::: callout tip
-#### 🟣 PREMIUM
-This component is only available in the Premium version of KimTools.
-::: button "Get KimTools"  external:https://kimtoo.net/#pricinghttps://kimtoo.net/#pricing icon:external-link
-
-:::
-
+## Payment Method Example
+```csharp "🔴 🟡 🟢"
+var panel = new TableLayoutPanel
+                {
+                    Width = 420,
+                    Height = 230,
+                    ColumnCount = 1,
+                    RowCount = 4,
+                    Padding = new Padding(16),
+                    BackColor = Color.Transparent
+                };
+	
+                panel.RowStyles.Add(new RowStyle(SizeType.Absolute, 42));
+                panel.RowStyles.Add(new RowStyle(SizeType.Absolute, 48));
+                panel.RowStyles.Add(new RowStyle(SizeType.Absolute, 48));
+                panel.RowStyles.Add(new RowStyle(SizeType.Absolute, 48));
+	
+                panel.Controls.Add(
+                    new Label
+                    {
+                        Text = "Preferred contact method",
+                        AutoSize = true,
+                        Font = new Font(this.Font.FontFamily, 13f, FontStyle.Bold)
+                    },
+                    0,
+                    0);
+	
+                var phone = new KtRadioButton
+                {
+                    Text = "Phone",
+                    Dock = DockStyle.Fill,
+                    Border = KtColor.PRIMARY,
+                    Checked = true
+                };
+	
+                var email = new KtRadioButton
+                {
+                    Text = "Email",
+                    Dock = DockStyle.Fill,
+                    Border = KtColor.SECONDARY
+                };
+	
+                var message = new KtRadioButton
+                {
+                    Text = "Text message",
+                    Dock = DockStyle.Fill,
+                    Border = KtColor.ACCENT
+                };
+	
+                KtRadioButton[] options =
+                [
+                    phone,
+                    email,
+                    message
+                ];
+	
+                foreach (var option in options)
+                {
+                    option.CheckedChanged += (_, _) =>
+                    {
+                        if (!option.Checked)
+                            return;
+	
+                        foreach (var other in options)
+                        {
+                            if (other != option)
+                                other.Checked = false;
+                        }
+                    };
+                }
+	
+                panel.Controls.Add(phone, 0, 1);
+                panel.Controls.Add(email, 0, 2);
+                panel.Controls.Add(message, 0, 3);
+                code.Stop();
+                return Capture(panel, name)
+                    .Snippet(code,name,"## Payment Method Example");
+            }
+        };
+	
+        public override void Build()
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
+            base.Build();
+        }
+	
+        protected override KtDocsScenario<KtRadioButton> Capture(
+            Control control,
+            string scenario
+            , Func<GraphicsPath> graphicsPath = null)
+        {
+            if (control is KtRadioButton radio)
+                radio.Font = new Font(this.Font.FontFamily, 12f);
+	
+            this.Size = new Size(
+                this.Padding.Horizontal + control.Width,
+                this.Padding.Vertical + control.Height);
+	
+            return base.Capture(control, scenario, graphicsPath);
+        }
+    }
+}
+```
 == side
-![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232520193587463){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232520193587463){.dark .snapshot}
-:::
+::: tabs
+== tab "Auto" icon:app-window
+![form-layout-light](/assets/images/screenshots/kt-radio-button/form-layout-light.png?v=639232678045664700){ .light .snapshot} ![form-layout-dark](/assets/images/screenshots/kt-radio-button/form-layout-dark.png?v=639232678045664700){.dark .snapshot}
 
-::: callout success
-#### 🟢 DESIGNER SUPPORT
-**This control has full Visual Studio design-time support.**
-Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.
+== tab "Light" icon:sun
+![form-layout-light](/assets/images/screenshots/kt-radio-button/form-layout-light.png?v=639232678045654642){  .snapshot}
+
+== tab "Dark" icon:moon
+![form-layout-dark](/assets/images/screenshots/kt-radio-button/form-layout-dark.png?v=639232678045654642){ .snapshot}
+
+:::
 :::
 ## API `Reference`
 |   |  |   |
