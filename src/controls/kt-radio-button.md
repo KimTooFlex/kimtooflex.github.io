@@ -16,7 +16,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232694004690252){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232694004690252){.dark .snapshot}
+![kt-radio-button-light](/assets/images/screenshots/kt-radio-button/kt-radio-button-light.png?v=639232794999738981){ .light .snapshot} ![kt-radio-button-dark](/assets/images/screenshots/kt-radio-button/kt-radio-button-dark.png?v=639232794999738981){.dark .snapshot}
 :::
 
 ::: callout success
@@ -46,14 +46,14 @@ var unselected = new KtRadioButton
 {
     Text = "Standard option",
     TextAlign = ContentAlignment.MiddleRight,
-    Width = 130,
+    Width = 140,
     Checked = false
 };
 	
 var selected = new KtRadioButton
 {
     Text = "Selected option",
-    Width = 130,
+    Width = 140,
     TextAlign = ContentAlignment.MiddleRight,
     Checked = true
 };
@@ -61,13 +61,13 @@ var selected = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232694045679964){ .light .snapshot} ![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232694045679964){.dark .snapshot}
+![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232795033181955){ .light .snapshot} ![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232795033181955){.dark .snapshot}
 
 == tab "Light" icon:sun
-![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232694045609588){  .snapshot}
+![default-state-light](/assets/images/screenshots/kt-radio-button/default-state-light.png?v=639232795033161846){  .snapshot}
 
 == tab "Dark" icon:moon
-![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232694045609588){ .snapshot}
+![default-state-dark](/assets/images/screenshots/kt-radio-button/default-state-dark.png?v=639232795033161846){ .snapshot}
 
 :::
 :::
@@ -93,13 +93,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232694056923066){ .light .snapshot} ![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232694056923066){.dark .snapshot}
+![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232795043524796){ .light .snapshot} ![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232795043524796){.dark .snapshot}
 
 == tab "Light" icon:sun
-![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232694056923066){  .snapshot}
+![solid-checked-background-light](/assets/images/screenshots/kt-radio-button/solid-checked-background-light.png?v=639232795043524796){  .snapshot}
 
 == tab "Dark" icon:moon
-![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232694056923066){ .snapshot}
+![solid-checked-background-dark](/assets/images/screenshots/kt-radio-button/solid-checked-background-dark.png?v=639232795043524796){ .snapshot}
 
 :::
 :::
@@ -128,13 +128,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232694067602989){ .light .snapshot} ![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232694067602989){.dark .snapshot}
+![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232795053812720){ .light .snapshot} ![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232795053812720){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232694067593191){  .snapshot}
+![gradient-background-checked-light](/assets/images/screenshots/kt-radio-button/gradient-background-checked-light.png?v=639232795053812720){  .snapshot}
 
 == tab "Dark" icon:moon
-![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232694067593191){ .snapshot}
+![gradient-background-checked-dark](/assets/images/screenshots/kt-radio-button/gradient-background-checked-dark.png?v=639232795053812720){ .snapshot}
 
 :::
 :::
@@ -163,13 +163,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232694078929065){ .light .snapshot} ![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232694078929065){.dark .snapshot}
+![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232795064421949){ .light .snapshot} ![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232795064421949){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232694078929065){  .snapshot}
+![custom-border-light](/assets/images/screenshots/kt-radio-button/custom-border-light.png?v=639232795064421949){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232694078929065){ .snapshot}
+![custom-border-dark](/assets/images/screenshots/kt-radio-button/custom-border-dark.png?v=639232795064421949){ .snapshot}
 
 :::
 :::
@@ -197,13 +197,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232694089680037){ .light .snapshot} ![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232694089680037){.dark .snapshot}
+![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232795074937065){ .light .snapshot} ![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232795074937065){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232694089680037){  .snapshot}
+![custom-icons-light](/assets/images/screenshots/kt-radio-button/custom-icons-light.png?v=639232795074937065){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232694089680037){ .snapshot}
+![custom-icons-dark](/assets/images/screenshots/kt-radio-button/custom-icons-dark.png?v=639232795074937065){ .snapshot}
 
 :::
 :::
@@ -231,13 +231,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232694100390943){ .light .snapshot} ![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232694100390943){.dark .snapshot}
+![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232795085464290){ .light .snapshot} ![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232795085464290){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232694100390943){  .snapshot}
+![icon-size-and-stroke-light](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-light.png?v=639232795085454126){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232694100390943){ .snapshot}
+![icon-size-and-stroke-dark](/assets/images/screenshots/kt-radio-button/icon-size-and-stroke-dark.png?v=639232795085464290){ .snapshot}
 
 :::
 :::
@@ -266,13 +266,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232694111178448){ .light .snapshot} ![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232694111178448){.dark .snapshot}
+![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232795095874715){ .light .snapshot} ![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232795095874715){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232694111178448){  .snapshot}
+![custom-foreground-light](/assets/images/screenshots/kt-radio-button/custom-foreground-light.png?v=639232795095874715){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232694111178448){ .snapshot}
+![custom-foreground-dark](/assets/images/screenshots/kt-radio-button/custom-foreground-dark.png?v=639232795095874715){ .snapshot}
 
 :::
 :::
@@ -297,13 +297,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232694122435517){ .light .snapshot} ![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232694122435517){.dark .snapshot}
+![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232795106215896){ .light .snapshot} ![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232795106215896){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232694122435517){  .snapshot}
+![rounded-radio-light](/assets/images/screenshots/kt-radio-button/rounded-radio-light.png?v=639232795106215896){  .snapshot}
 
 == tab "Dark" icon:moon
-![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232694122435517){ .snapshot}
+![rounded-radio-dark](/assets/images/screenshots/kt-radio-button/rounded-radio-dark.png?v=639232795106215896){ .snapshot}
 
 :::
 :::
@@ -335,13 +335,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232694132953495){ .light .snapshot} ![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232694132953495){.dark .snapshot}
+![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232795116639576){ .light .snapshot} ![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232795116639576){.dark .snapshot}
 
 == tab "Light" icon:sun
-![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232694132938430){  .snapshot}
+![outlined-radio-light](/assets/images/screenshots/kt-radio-button/outlined-radio-light.png?v=639232795116639576){  .snapshot}
 
 == tab "Dark" icon:moon
-![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232694132938430){ .snapshot}
+![outlined-radio-dark](/assets/images/screenshots/kt-radio-button/outlined-radio-dark.png?v=639232795116639576){ .snapshot}
 
 :::
 :::
@@ -374,13 +374,13 @@ var pushOption = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232694147758442){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232694147758442){.dark .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232795130504526){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232795130504526){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232694147743325){  .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-button/radio-group-light.png?v=639232795130504526){  .snapshot}
 
 == tab "Dark" icon:moon
-![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232694147743325){ .snapshot}
+![radio-group-dark](/assets/images/screenshots/kt-radio-button/radio-group-dark.png?v=639232795130504526){ .snapshot}
 
 :::
 :::
@@ -402,13 +402,13 @@ var payment = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232694162764727){ .light .snapshot} ![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232694162764727){.dark .snapshot}
+![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232795144745212){ .light .snapshot} ![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232795144745212){.dark .snapshot}
 
 == tab "Light" icon:sun
-![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232694162754521){  .snapshot}
+![payment-method-light](/assets/images/screenshots/kt-radio-button/payment-method-light.png?v=639232795144745212){  .snapshot}
 
 == tab "Dark" icon:moon
-![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232694162754521){ .snapshot}
+![payment-method-dark](/assets/images/screenshots/kt-radio-button/payment-method-dark.png?v=639232795144745212){ .snapshot}
 
 :::
 :::
@@ -433,13 +433,13 @@ var expressOption = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232694177881985){ .light .snapshot} ![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232694177881985){.dark .snapshot}
+![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232795159027000){ .light .snapshot} ![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232795159027000){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232694177881985){  .snapshot}
+![shipping-options-light](/assets/images/screenshots/kt-radio-button/shipping-options-light.png?v=639232795159027000){  .snapshot}
 
 == tab "Dark" icon:moon
-![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232694177881985){ .snapshot}
+![shipping-options-dark](/assets/images/screenshots/kt-radio-button/shipping-options-dark.png?v=639232795159027000){ .snapshot}
 
 :::
 :::
@@ -464,13 +464,13 @@ var plan = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232694221133385){ .light .snapshot} ![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232694221133385){.dark .snapshot}
+![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232795200523580){ .light .snapshot} ![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232795200523580){.dark .snapshot}
 
 == tab "Light" icon:sun
-![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232694221133385){  .snapshot}
+![cards-light](/assets/images/screenshots/kt-radio-button/cards-light.png?v=639232795200504684){  .snapshot}
 
 == tab "Dark" icon:moon
-![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232694221133385){ .snapshot}
+![cards-dark](/assets/images/screenshots/kt-radio-button/cards-dark.png?v=639232795200504684){ .snapshot}
 
 :::
 :::
@@ -504,13 +504,13 @@ var radio = new KtRadioButton
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232694232285648){ .light .snapshot} ![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232694232285648){.dark .snapshot}
+![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232795211420902){ .light .snapshot} ![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232795211420902){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232694232285648){  .snapshot}
+![icon-only-light](/assets/images/screenshots/kt-radio-button/icon-only-light.png?v=639232795211420902){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232694232285648){ .snapshot}
+![icon-only-dark](/assets/images/screenshots/kt-radio-button/icon-only-dark.png?v=639232795211420902){ .snapshot}
 
 :::
 :::
@@ -547,13 +547,13 @@ flow.Controls.Add(disabled);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232694262810749){ .light .snapshot} ![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232694262810749){.dark .snapshot}
+![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232795240392408){ .light .snapshot} ![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232795240392408){.dark .snapshot}
 
 == tab "Light" icon:sun
-![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232694262810749){  .snapshot}
+![disabled-state-light](/assets/images/screenshots/kt-radio-button/disabled-state-light.png?v=639232795240382369){  .snapshot}
 
 == tab "Dark" icon:moon
-![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232694262810749){ .snapshot}
+![disabled-state-dark](/assets/images/screenshots/kt-radio-button/disabled-state-dark.png?v=639232795240382369){ .snapshot}
 
 :::
 :::
@@ -599,13 +599,13 @@ personal.CheckedChanged += (_, _) =>
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232694274139076){ .light .snapshot} ![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232694274139076){.dark .snapshot}
+![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232795251193310){ .light .snapshot} ![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232795251193310){.dark .snapshot}
 
 == tab "Light" icon:sun
-![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232694274139076){  .snapshot}
+![selection-event-light](/assets/images/screenshots/kt-radio-button/selection-event-light.png?v=639232795251193310){  .snapshot}
 
 == tab "Dark" icon:moon
-![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232694274139076){ .snapshot}
+![selection-event-dark](/assets/images/screenshots/kt-radio-button/selection-event-dark.png?v=639232795251193310){ .snapshot}
 
 :::
 :::
@@ -689,13 +689,13 @@ panel.Controls.Add(message, 0, 3);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![form-layout-light](/assets/images/screenshots/kt-radio-button/form-layout-light.png?v=639232694287395845){ .light .snapshot} ![form-layout-dark](/assets/images/screenshots/kt-radio-button/form-layout-dark.png?v=639232694287395845){.dark .snapshot}
+![form-layout-light](/assets/images/screenshots/kt-radio-button/form-layout-light.png?v=639232795264182942){ .light .snapshot} ![form-layout-dark](/assets/images/screenshots/kt-radio-button/form-layout-dark.png?v=639232795264182942){.dark .snapshot}
 
 == tab "Light" icon:sun
-![form-layout-light](/assets/images/screenshots/kt-radio-button/form-layout-light.png?v=639232694287385729){  .snapshot}
+![form-layout-light](/assets/images/screenshots/kt-radio-button/form-layout-light.png?v=639232795264182942){  .snapshot}
 
 == tab "Dark" icon:moon
-![form-layout-dark](/assets/images/screenshots/kt-radio-button/form-layout-dark.png?v=639232694287385729){ .snapshot}
+![form-layout-dark](/assets/images/screenshots/kt-radio-button/form-layout-dark.png?v=639232795264182942){ .snapshot}
 
 :::
 :::
