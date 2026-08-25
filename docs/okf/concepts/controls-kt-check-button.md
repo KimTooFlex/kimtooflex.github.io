@@ -4,10 +4,10 @@ title: "KimTools / Controls / CheckButton"
 description: "KtCheckButton is a toggleable check button control for Modern WinForms"
 source: "https://kimtoo.net/controls/kt-check-button/"
 path: /controls/kt-check-button/
-updated: 2026-08-24
+updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T16:36:53.592Z"
+  generated_at: "2026-08-25T06:16:40.727Z"
 ---
 ---
 title: "KimTools / Controls / CheckButton"

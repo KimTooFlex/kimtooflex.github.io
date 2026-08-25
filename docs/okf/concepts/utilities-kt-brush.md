@@ -3,10 +3,10 @@ type: concept
 title: "KimTools / Brush"
 source: "https://kimtoo.net/utilities/kt-brush/"
 path: /utilities/kt-brush/
-updated: 2026-08-24
+updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T16:36:53.646Z"
+  generated_at: "2026-08-25T06:16:40.801Z"
 ---
 ---
 title: "KimTools / Brush"

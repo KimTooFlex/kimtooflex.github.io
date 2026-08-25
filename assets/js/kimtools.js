@@ -16,6 +16,18 @@ function watchBuildFile(pollMs = 1000) {
             }).catch(() => {});
     }, pollMs);
 }
+function talkTo() {
+    <!--Start of Tawk.to Script-->
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6306a5d437898912e964fc2b/1gb8vfi4s';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+}
 
 function syncBodyTheme(qualifiedName = "data-theme") {
     const theme =document.documentElement.dataset.theme;
@@ -32,8 +44,8 @@ function syncBodyTheme(qualifiedName = "data-theme") {
         }
     });
 
-   watchBuildFile();   
-
+   watchBuildFile();
+   talkTo();
     observer.observe(document.body, {
         attributes: true,
         attributeFilter: [qualifiedName] // High performance: only fires for this exact attribute

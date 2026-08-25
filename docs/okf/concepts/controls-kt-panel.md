@@ -4,10 +4,10 @@ title: "KimTools / Controls / Panel"
 description: "Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies."
 source: "https://kimtoo.net/controls/kt-panel/"
 path: /controls/kt-panel/
-updated: 2026-08-24
+updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T16:36:53.598Z"
+  generated_at: "2026-08-25T06:16:40.730Z"
 ---
 ---
 title: "KimTools / Controls / Panel"

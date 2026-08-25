@@ -4,10 +4,10 @@ title: "KimTools / Window"
 description: "Modern WinForms controls, Components, and theming for .NET -single assembly, one-time license, zero dependencies."
 source: "https://kimtoo.net/controls/kt-window/"
 path: /controls/kt-window/
-updated: 2026-08-24
+updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T16:36:53.603Z"
+  generated_at: "2026-08-25T06:16:40.736Z"
 ---
 ---
 title: "KimTools / Window"

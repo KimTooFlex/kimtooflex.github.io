@@ -4,10 +4,10 @@ title: "KimTools / Controls / Button"
 description: "Kt-Button is a fully customizable button control for Modern winforms"
 source: "https://kimtoo.net/controls/kt-button/"
 path: /controls/kt-button/
-updated: 2026-08-24
+updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T16:36:53.590Z"
+  generated_at: "2026-08-25T06:16:40.690Z"
 ---
 ---
 title: "KimTools / Controls / Button"

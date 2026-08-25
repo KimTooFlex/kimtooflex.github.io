@@ -4,10 +4,10 @@ title: "KimTools / Controls / RadioButton"
 description: "KtRadioButton is a themeable single-selection radio button control for Modern WinForms"
 source: "https://kimtoo.net/controls/kt-radio-button/"
 path: /controls/kt-radio-button/
-updated: 2026-08-24
+updated: 2026-08-25
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-24T16:36:53.601Z"
+  generated_at: "2026-08-25T06:16:40.733Z"
 ---
 ---
 title: "KimTools / Controls / RadioButton"
