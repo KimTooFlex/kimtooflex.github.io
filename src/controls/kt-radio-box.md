@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-radio-box-light](/assets/images/screenshots/kt-radio-box/kt-radio-box-light.png?v=639233545121077759){ .light .snapshot} ![kt-radio-box-dark](/assets/images/screenshots/kt-radio-box/kt-radio-box-dark.png?v=639233545121077759){.dark .snapshot}
+![kt-radio-box-light](/assets/images/screenshots/kt-radio-box/kt-radio-box-light.png?v=639233575843213520){ .light .snapshot} ![kt-radio-box-dark](/assets/images/screenshots/kt-radio-box/kt-radio-box-dark.png?v=639233575843213520){.dark .snapshot}
 :::
 
 ::: callout success
@@ -72,13 +72,13 @@ radio.BindingControlPosition = KtRadioBox.BindingControlPositions.Right;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233545145049639){ .light .snapshot} ![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233545145049639){.dark .snapshot}
+![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233575868850527){ .light .snapshot} ![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233575868850527){.dark .snapshot}
 
 == tab "Light" icon:sun
-![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233545145049639){  .snapshot}
+![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233575868850527){  .snapshot}
 
 == tab "Dark" icon:moon
-![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233545145049639){ .snapshot}
+![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233575868850527){ .snapshot}
 
 :::
 :::
@@ -175,13 +175,13 @@ container.Controls.Add(row3);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233545156141182){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233545156141182){.dark .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233575880019133){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233575880019133){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233545156131156){  .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233575880019133){  .snapshot}
 
 == tab "Dark" icon:moon
-![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233545156131156){ .snapshot}
+![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233575880019133){ .snapshot}
 
 :::
 :::
@@ -222,13 +222,13 @@ label.Location = new Point(radio.Right + 8, 4);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233545166399190){ .light .snapshot} ![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233545166399190){.dark .snapshot}
+![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233575890597023){ .light .snapshot} ![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233575890597023){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233545166394954){  .snapshot}
+![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233575890597023){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233545166394954){ .snapshot}
+![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233575890597023){ .snapshot}
 
 :::
 :::

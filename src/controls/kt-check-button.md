@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-check-button-light](/assets/images/screenshots/kt-check-button/kt-check-button-light.png?v=639233544302264602){ .light .snapshot} ![kt-check-button-dark](/assets/images/screenshots/kt-check-button/kt-check-button-dark.png?v=639233544302264602){.dark .snapshot}
+![kt-check-button-light](/assets/images/screenshots/kt-check-button/kt-check-button-light.png?v=639233575007356739){ .light .snapshot} ![kt-check-button-dark](/assets/images/screenshots/kt-check-button/kt-check-button-dark.png?v=639233575007356739){.dark .snapshot}
 :::
 
 ::: callout success
@@ -48,13 +48,13 @@ var checked_ = new KtCheckButton { Text = "Notify me", Checked = true };
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![default-state-light](/assets/images/screenshots/kt-check-button/default-state-light.png?v=639233544328729356){ .light .snapshot} ![default-state-dark](/assets/images/screenshots/kt-check-button/default-state-dark.png?v=639233544328729356){.dark .snapshot}
+![default-state-light](/assets/images/screenshots/kt-check-button/default-state-light.png?v=639233575036589271){ .light .snapshot} ![default-state-dark](/assets/images/screenshots/kt-check-button/default-state-dark.png?v=639233575036589271){.dark .snapshot}
 
 == tab "Light" icon:sun
-![default-state-light](/assets/images/screenshots/kt-check-button/default-state-light.png?v=639233544328729356){  .snapshot}
+![default-state-light](/assets/images/screenshots/kt-check-button/default-state-light.png?v=639233575036589271){  .snapshot}
 
 == tab "Dark" icon:moon
-![default-state-dark](/assets/images/screenshots/kt-check-button/default-state-dark.png?v=639233544328729356){ .snapshot}
+![default-state-dark](/assets/images/screenshots/kt-check-button/default-state-dark.png?v=639233575036589271){ .snapshot}
 
 :::
 :::
@@ -75,13 +75,13 @@ check.Checked = true;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![solid-checked-background-light](/assets/images/screenshots/kt-check-button/solid-checked-background-light.png?v=639233544339251083){ .light .snapshot} ![solid-checked-background-dark](/assets/images/screenshots/kt-check-button/solid-checked-background-dark.png?v=639233544339251083){.dark .snapshot}
+![solid-checked-background-light](/assets/images/screenshots/kt-check-button/solid-checked-background-light.png?v=639233575047058859){ .light .snapshot} ![solid-checked-background-dark](/assets/images/screenshots/kt-check-button/solid-checked-background-dark.png?v=639233575047058859){.dark .snapshot}
 
 == tab "Light" icon:sun
-![solid-checked-background-light](/assets/images/screenshots/kt-check-button/solid-checked-background-light.png?v=639233544339251083){  .snapshot}
+![solid-checked-background-light](/assets/images/screenshots/kt-check-button/solid-checked-background-light.png?v=639233575047058859){  .snapshot}
 
 == tab "Dark" icon:moon
-![solid-checked-background-dark](/assets/images/screenshots/kt-check-button/solid-checked-background-dark.png?v=639233544339251083){ .snapshot}
+![solid-checked-background-dark](/assets/images/screenshots/kt-check-button/solid-checked-background-dark.png?v=639233575047058859){ .snapshot}
 
 :::
 :::
@@ -108,13 +108,13 @@ check.Checked = true;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gradient-background-checked-light](/assets/images/screenshots/kt-check-button/gradient-background-checked-light.png?v=639233544349387712){ .light .snapshot} ![gradient-background-checked-dark](/assets/images/screenshots/kt-check-button/gradient-background-checked-dark.png?v=639233544349397112){.dark .snapshot}
+![gradient-background-checked-light](/assets/images/screenshots/kt-check-button/gradient-background-checked-light.png?v=639233575057470070){ .light .snapshot} ![gradient-background-checked-dark](/assets/images/screenshots/kt-check-button/gradient-background-checked-dark.png?v=639233575057470070){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gradient-background-checked-light](/assets/images/screenshots/kt-check-button/gradient-background-checked-light.png?v=639233544349387712){  .snapshot}
+![gradient-background-checked-light](/assets/images/screenshots/kt-check-button/gradient-background-checked-light.png?v=639233575057470070){  .snapshot}
 
 == tab "Dark" icon:moon
-![gradient-background-checked-dark](/assets/images/screenshots/kt-check-button/gradient-background-checked-dark.png?v=639233544349387712){ .snapshot}
+![gradient-background-checked-dark](/assets/images/screenshots/kt-check-button/gradient-background-checked-dark.png?v=639233575057470070){ .snapshot}
 
 :::
 :::
@@ -136,13 +136,13 @@ check.Checked = true;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-checked-icon-light](/assets/images/screenshots/kt-check-button/custom-checked-icon-light.png?v=639233544359586433){ .light .snapshot} ![custom-checked-icon-dark](/assets/images/screenshots/kt-check-button/custom-checked-icon-dark.png?v=639233544359586433){.dark .snapshot}
+![custom-checked-icon-light](/assets/images/screenshots/kt-check-button/custom-checked-icon-light.png?v=639233575067894865){ .light .snapshot} ![custom-checked-icon-dark](/assets/images/screenshots/kt-check-button/custom-checked-icon-dark.png?v=639233575067894865){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-checked-icon-light](/assets/images/screenshots/kt-check-button/custom-checked-icon-light.png?v=639233544359586433){  .snapshot}
+![custom-checked-icon-light](/assets/images/screenshots/kt-check-button/custom-checked-icon-light.png?v=639233575067894865){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-checked-icon-dark](/assets/images/screenshots/kt-check-button/custom-checked-icon-dark.png?v=639233544359586433){ .snapshot}
+![custom-checked-icon-dark](/assets/images/screenshots/kt-check-button/custom-checked-icon-dark.png?v=639233575067894865){ .snapshot}
 
 :::
 :::
@@ -166,13 +166,13 @@ check.BorderWidth = 2f;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![outlined-checkbutton-light](/assets/images/screenshots/kt-check-button/outlined-checkbutton-light.png?v=639233544370050758){ .light .snapshot} ![outlined-checkbutton-dark](/assets/images/screenshots/kt-check-button/outlined-checkbutton-dark.png?v=639233544370050758){.dark .snapshot}
+![outlined-checkbutton-light](/assets/images/screenshots/kt-check-button/outlined-checkbutton-light.png?v=639233575078502783){ .light .snapshot} ![outlined-checkbutton-dark](/assets/images/screenshots/kt-check-button/outlined-checkbutton-dark.png?v=639233575078502783){.dark .snapshot}
 
 == tab "Light" icon:sun
-![outlined-checkbutton-light](/assets/images/screenshots/kt-check-button/outlined-checkbutton-light.png?v=639233544370050758){  .snapshot}
+![outlined-checkbutton-light](/assets/images/screenshots/kt-check-button/outlined-checkbutton-light.png?v=639233575078502783){  .snapshot}
 
 == tab "Dark" icon:moon
-![outlined-checkbutton-dark](/assets/images/screenshots/kt-check-button/outlined-checkbutton-dark.png?v=639233544370050758){ .snapshot}
+![outlined-checkbutton-dark](/assets/images/screenshots/kt-check-button/outlined-checkbutton-dark.png?v=639233575078502783){ .snapshot}
 
 :::
 :::
@@ -196,13 +196,13 @@ check.Checked = true;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rounded-checkbutton-light](/assets/images/screenshots/kt-check-button/rounded-checkbutton-light.png?v=639233544380400703){ .light .snapshot} ![rounded-checkbutton-dark](/assets/images/screenshots/kt-check-button/rounded-checkbutton-dark.png?v=639233544380400703){.dark .snapshot}
+![rounded-checkbutton-light](/assets/images/screenshots/kt-check-button/rounded-checkbutton-light.png?v=639233575089008301){ .light .snapshot} ![rounded-checkbutton-dark](/assets/images/screenshots/kt-check-button/rounded-checkbutton-dark.png?v=639233575089008301){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rounded-checkbutton-light](/assets/images/screenshots/kt-check-button/rounded-checkbutton-light.png?v=639233544380395513){  .snapshot}
+![rounded-checkbutton-light](/assets/images/screenshots/kt-check-button/rounded-checkbutton-light.png?v=639233575089008301){  .snapshot}
 
 == tab "Dark" icon:moon
-![rounded-checkbutton-dark](/assets/images/screenshots/kt-check-button/rounded-checkbutton-dark.png?v=639233544380395513){ .snapshot}
+![rounded-checkbutton-dark](/assets/images/screenshots/kt-check-button/rounded-checkbutton-dark.png?v=639233575089008301){ .snapshot}
 
 :::
 :::
@@ -229,13 +229,13 @@ check.IconStroke = 2.5;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-only-checkbutton-light](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-light.png?v=639233544390850898){ .light .snapshot} ![icon-only-checkbutton-dark](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-dark.png?v=639233544390850898){.dark .snapshot}
+![icon-only-checkbutton-light](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-light.png?v=639233575099778010){ .light .snapshot} ![icon-only-checkbutton-dark](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-dark.png?v=639233575099778010){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-only-checkbutton-light](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-light.png?v=639233544390840911){  .snapshot}
+![icon-only-checkbutton-light](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-light.png?v=639233575099778010){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-only-checkbutton-dark](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-dark.png?v=639233544390840911){ .snapshot}
+![icon-only-checkbutton-dark](/assets/images/screenshots/kt-check-button/icon-only-checkbutton-dark.png?v=639233575099778010){ .snapshot}
 
 :::
 :::
@@ -260,13 +260,13 @@ check.Foreground_Checked = KtColor.PRIMARY;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-foreground-checked-light](/assets/images/screenshots/kt-check-button/custom-foreground-checked-light.png?v=639233544401259996){ .light .snapshot} ![custom-foreground-checked-dark](/assets/images/screenshots/kt-check-button/custom-foreground-checked-dark.png?v=639233544401259996){.dark .snapshot}
+![custom-foreground-checked-light](/assets/images/screenshots/kt-check-button/custom-foreground-checked-light.png?v=639233575110212903){ .light .snapshot} ![custom-foreground-checked-dark](/assets/images/screenshots/kt-check-button/custom-foreground-checked-dark.png?v=639233575110212903){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-foreground-checked-light](/assets/images/screenshots/kt-check-button/custom-foreground-checked-light.png?v=639233544401259996){  .snapshot}
+![custom-foreground-checked-light](/assets/images/screenshots/kt-check-button/custom-foreground-checked-light.png?v=639233575110212903){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-foreground-checked-dark](/assets/images/screenshots/kt-check-button/custom-foreground-checked-dark.png?v=639233544401259996){ .snapshot}
+![custom-foreground-checked-dark](/assets/images/screenshots/kt-check-button/custom-foreground-checked-dark.png?v=639233575110212903){ .snapshot}
 
 :::
 :::
@@ -285,13 +285,13 @@ var push = new KtCheckButton { Text = "Push notifications", Checked = true };
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![multiselect-panel-light](/assets/images/screenshots/kt-check-button/multiselect-panel-light.png?v=639233544415151913){ .light .snapshot} ![multiselect-panel-dark](/assets/images/screenshots/kt-check-button/multiselect-panel-dark.png?v=639233544415151913){.dark .snapshot}
+![multiselect-panel-light](/assets/images/screenshots/kt-check-button/multiselect-panel-light.png?v=639233575125252561){ .light .snapshot} ![multiselect-panel-dark](/assets/images/screenshots/kt-check-button/multiselect-panel-dark.png?v=639233575125252561){.dark .snapshot}
 
 == tab "Light" icon:sun
-![multiselect-panel-light](/assets/images/screenshots/kt-check-button/multiselect-panel-light.png?v=639233544415140701){  .snapshot}
+![multiselect-panel-light](/assets/images/screenshots/kt-check-button/multiselect-panel-light.png?v=639233575125252561){  .snapshot}
 
 == tab "Dark" icon:moon
-![multiselect-panel-dark](/assets/images/screenshots/kt-check-button/multiselect-panel-dark.png?v=639233544415140701){ .snapshot}
+![multiselect-panel-dark](/assets/images/screenshots/kt-check-button/multiselect-panel-dark.png?v=639233575125252561){ .snapshot}
 
 :::
 :::
@@ -317,13 +317,13 @@ overview.BorderEdges.BottomRight = false;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![multiselect-tabbed-pages-light](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-light.png?v=639233544428905857){ .light .snapshot} ![multiselect-tabbed-pages-dark](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-dark.png?v=639233544428905857){.dark .snapshot}
+![multiselect-tabbed-pages-light](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-light.png?v=639233575141198662){ .light .snapshot} ![multiselect-tabbed-pages-dark](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-dark.png?v=639233575141198662){.dark .snapshot}
 
 == tab "Light" icon:sun
-![multiselect-tabbed-pages-light](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-light.png?v=639233544428894898){  .snapshot}
+![multiselect-tabbed-pages-light](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-light.png?v=639233575141198662){  .snapshot}
 
 == tab "Dark" icon:moon
-![multiselect-tabbed-pages-dark](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-dark.png?v=639233544428894898){ .snapshot}
+![multiselect-tabbed-pages-dark](/assets/images/screenshots/kt-check-button/multiselect-tabbed-pages-dark.png?v=639233575141198662){ .snapshot}
 
 :::
 :::

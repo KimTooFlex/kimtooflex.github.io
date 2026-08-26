@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-switch-light](/assets/images/screenshots/kt-switch/kt-switch-light.png?v=639233545461261177){ .light .snapshot} ![kt-switch-dark](/assets/images/screenshots/kt-switch/kt-switch-dark.png?v=639233545461261177){.dark .snapshot}
+![kt-switch-light](/assets/images/screenshots/kt-switch/kt-switch-light.png?v=639233576205322319){ .light .snapshot} ![kt-switch-dark](/assets/images/screenshots/kt-switch/kt-switch-dark.png?v=639233576205322319){.dark .snapshot}
 :::
 
 ::: callout success
@@ -85,13 +85,13 @@ label.Location = new Point(toggle.Right + 10, 6);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233545487107507){ .light .snapshot} ![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233545487107507){.dark .snapshot}
+![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233576233191225){ .light .snapshot} ![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233576233191225){.dark .snapshot}
 
 == tab "Light" icon:sun
-![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233545487097528){  .snapshot}
+![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233576233191225){  .snapshot}
 
 == tab "Dark" icon:moon
-![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233545487107507){ .snapshot}
+![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233576233191225){ .snapshot}
 
 :::
 :::
@@ -137,13 +137,13 @@ label.Location = new Point(toggle.Right + 10, 6);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233545497788183){ .light .snapshot} ![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233545497788183){.dark .snapshot}
+![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233576244056745){ .light .snapshot} ![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233576244056745){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233545497788183){  .snapshot}
+![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233576244056745){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233545497788183){ .snapshot}
+![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233576244056745){ .snapshot}
 
 :::
 :::

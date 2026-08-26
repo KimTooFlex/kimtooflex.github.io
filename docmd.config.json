@@ -76,64 +76,76 @@
       "collapsible": false,
       "children": [
         {
-          "kt": "ktbutton",
+          "kt": "kt-button",
+          "path": "/controls/kt-button.md",
           "title": "Kt • Button",
-          "path": "/controls/kt-button.md"
+          "icon": "rectangle-horizontal"
         },
         {
-          "kt": "ktcheckbox",
+          "kt": "kt-check-box",
+          "path": "/controls/kt-check-box.md",
           "title": "Kt • CheckBox",
-          "path": "/controls/kt-check-box.md"
+          "icon": "square-check"
         },
         {
-          "kt": "ktcheckbutton",
+          "kt": "kt-check-button",
+          "path": "/controls/kt-check-button.md",
           "title": "Kt • CheckButton",
-          "path": "/controls/kt-check-button.md"
+          "icon": "rectangle-ellipsis"
         },
         {
-          "kt": "ktdivider",
+          "kt": "kt-divider",
+          "path": "/controls/kt-divider.md",
           "title": "Kt • Divider",
-          "path": "/controls/kt-divider.md"
+          "icon": "square-split-vertical"
         },
         {
-          "kt": "ktlabel",
+          "kt": "kt-label",
+          "path": "/controls/kt-label.md",
           "title": "Kt • Label",
-          "path": "/controls/kt-label.md"
+          "icon": "type"
         },
         {
-          "kt": "ktpages",
+          "kt": "kt-pages",
+          "path": "/controls/kt-pages.md",
           "title": "Kt • Pages",
-          "path": "/controls/kt-pages.md"
+          "icon": "layers"
         },
         {
-          "kt": "ktpanel",
+          "kt": "kt-panel",
+          "path": "/controls/kt-panel.md",
           "title": "Kt • Panel",
-          "path": "/controls/kt-panel.md"
+          "icon": "layout-panel-top"
         },
         {
-          "kt": "ktradiobox",
+          "kt": "kt-radio-box",
+          "path": "/controls/kt-radio-box.md",
           "title": "Kt • RadioBox",
-          "path": "/controls/kt-radio-box.md"
+          "icon": "circle-stop"
         },
         {
-          "kt": "ktradiobutton",
+          "kt": "kt-radio-button",
+          "path": "/controls/kt-radio-button.md",
           "title": "Kt • RadioButton",
-          "path": "/controls/kt-radio-button.md"
+          "icon": "rectangle-ellipsis"
         },
         {
-          "kt": "ktswitch",
+          "kt": "kt-switch",
+          "path": "/controls/kt-switch.md",
           "title": "Kt • Switch",
-          "path": "/controls/kt-switch.md"
+          "icon": "toggle-right"
         },
         {
-          "kt": "kttextbox",
+          "kt": "kt-text-box",
+          "path": "/controls/kt-text-box.md",
           "title": "Kt • TextBox",
-          "path": "/controls/kt-text-box.md"
+          "icon": "text-cursor-input"
         },
         {
-          "kt": "ktwindow",
+          "kt": "kt-window",
+          "path": "/controls/kt-window.md",
           "title": "Kt • Window",
-          "path": "/controls/kt-window.md"
+          "icon": "app-window-mac"
         }
       ]
     },
@@ -142,23 +154,9 @@
       "title": " 🔵 Components",
       "children": [
         {
-          "title": "Theming",
-          "icon": "palette",
-          "children": [
-            {
-              "title": "Kt-Theme",
-              "path": "/utilities/kt-themes.md"
-            },
-            {
-              "title": "Kt-Transition",
-              "path": "/components/kt-transition.md"
-            }
-          ]
+          "title": "Kt-Transition",
+          "path": "/components/kt-transition.md"
         },
-        {
-          "title": "Notifications",
-          "icon": "bell",
-          "children": [
             {
               "title": "Kt-Tooltip",
               "path": "/components/kt-tooltip.md"
@@ -170,19 +168,12 @@
             {
               "title": "Kt-Pop-Over",
               "path": "/components/kt-pop-over.md"
-            }
-          ]
-        },
-        {
-          "title": "Validation",
-          "icon": "shield-check",
-          "children": [
+            },
             {
               "title": "Kt-Validation",
               "path": "/components/kt-validation.md"
             }
-          ]
-        }
+
       ]
     },
     {
@@ -190,24 +181,26 @@
       "collapsible": false
     },
     {
-      "title": "Colors",
-      "icon": "swatch-book",
+      "kt": "utilities",
+      "title": " 🟢 Utilities",
       "children": [
         {
           "title": "Kt-Color",
-          "path": "/utilities/kt-color.md"
+          "path": "/utilities/kt-color.md",
+          "icon": "swatch-book"
         },
         {
           "title": "Kt-Brush",
-          "path": "/utilities/kt-brush.md"
+          "path": "/utilities/kt-brush.md",
+          "icon": "paintbrush"
+        },{
+          "title": "Theming",
+          "path": "/utilities/kt-themes.md",
+          "icon": "palette"
         }
       ]
     },
-    {
-      "title": "Theming",
-      "path": "/utilities/kt-themes.md",
-      "icon": "palette"
-    },
+
     {
       "title": "Templates",
       "path": "/templates",

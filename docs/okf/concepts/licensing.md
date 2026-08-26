@@ -7,7 +7,7 @@ path: /licensing/
 updated: 2026-08-26
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T12:24:50.049Z"
+  generated_at: "2026-08-26T13:53:02.948Z"
 ---
 ---
 title: "KimTools / Licensing"

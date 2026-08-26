@@ -7,7 +7,7 @@ path: /controls/kt-divider/
 updated: 2026-08-26
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T12:24:49.926Z"
+  generated_at: "2026-08-26T13:53:02.818Z"
 ---
 ---
 title: "KimTools / Controls / Divider"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-divider-light](/assets/images/screenshots/kt-divider/kt-divider-light.png?v=639233544451109062){ .light .snapshot} ![kt-divider-dark](/assets/images/screenshots/kt-divider/kt-divider-dark.png?v=639233544451109062){.dark .snapshot}
+![kt-divider-light](/assets/images/screenshots/kt-divider/kt-divider-light.png?v=639233575163189649){ .light .snapshot} ![kt-divider-dark](/assets/images/screenshots/kt-divider/kt-divider-dark.png?v=639233575163189649){.dark .snapshot}
 :::
 
 ::: callout success
@@ -116,13 +116,13 @@ container.Controls.Add(solidDivider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639233544472478889){ .light .snapshot} ![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639233544472483940){.dark .snapshot}
+![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639233575185483405){ .light .snapshot} ![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639233575185483405){.dark .snapshot}
 
 == tab "Light" icon:sun
-![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639233544472478889){  .snapshot}
+![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639233575185483405){  .snapshot}
 
 == tab "Dark" icon:moon
-![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639233544472478889){ .snapshot}
+![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639233575185483405){ .snapshot}
 
 :::
 :::
@@ -176,13 +176,13 @@ container.Controls.Add(doubleFaded);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639233544483412088){ .light .snapshot} ![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639233544483412088){.dark .snapshot}
+![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639233575196704019){ .light .snapshot} ![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639233575196704019){.dark .snapshot}
 
 == tab "Light" icon:sun
-![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639233544483412088){  .snapshot}
+![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639233575196704019){  .snapshot}
 
 == tab "Dark" icon:moon
-![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639233544483412088){ .snapshot}
+![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639233575196704019){ .snapshot}
 
 :::
 :::
@@ -229,13 +229,13 @@ container.Controls.Add(leftLabel);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639233544494423241){ .light .snapshot} ![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639233544494423241){.dark .snapshot}
+![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639233575208152367){ .light .snapshot} ![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639233575208152367){.dark .snapshot}
 
 == tab "Light" icon:sun
-![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639233544494423241){  .snapshot}
+![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639233575208152367){  .snapshot}
 
 == tab "Dark" icon:moon
-![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639233544494423241){ .snapshot}
+![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639233575208152367){ .snapshot}
 
 :::
 :::
