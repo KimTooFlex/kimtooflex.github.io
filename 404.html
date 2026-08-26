@@ -19,6 +19,18 @@
             display: block;
         }
     </style>
+    <script>
+        const iframe = document.querySelector('iframe');
+        iframe.addEventListener('load', () => {
+            iframe.contentWindow.document.addEventListener('click', (e) => {
+                const anchor = e.target.closest('a');
+                if (anchor && anchor.href) {
+                    e.preventDefault();
+                    window.top.location.href = anchor.href;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <iframe src="https://kimtoo.net/docs/404.html" sandbox="allow-scripts allow-same-origin allow-top-navigation"></iframe>
