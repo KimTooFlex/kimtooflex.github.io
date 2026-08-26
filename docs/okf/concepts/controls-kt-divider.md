@@ -4,10 +4,10 @@ title: "KimTools / Controls / Divider"
 description: "KtDivider provides custom horizontal and vertical line separators with configurable dash caps, line thicknesses, faded edge gradients, and KtColor theme integration for Modern WinForms"
 source: "https://kimtoo.net/controls/kt-divider/"
 path: /controls/kt-divider/
-updated: 2026-08-25
+updated: 2026-08-26
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-25T19:38:40.045Z"
+  generated_at: "2026-08-26T09:39:06.740Z"
 ---
 ---
 title: "KimTools / Controls / Divider"
@@ -27,7 +27,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-divider-light](/assets/images/screenshots/kt-divider/kt-divider-light.png?v=639232942099005354){ .light .snapshot} ![kt-divider-dark](/assets/images/screenshots/kt-divider/kt-divider-dark.png?v=639232942099005354){.dark .snapshot}
+![kt-divider-light](/assets/images/screenshots/kt-divider/kt-divider-light.png?v=639233400074411431){ .light .snapshot} ![kt-divider-dark](/assets/images/screenshots/kt-divider/kt-divider-dark.png?v=639233400074411431){.dark .snapshot}
 :::
 
 ::: callout success
@@ -115,13 +115,13 @@ container.Controls.Add(solidDivider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639232942121153962){ .light .snapshot} ![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639232942121153962){.dark .snapshot}
+![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639233400096398394){ .light .snapshot} ![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639233400096398394){.dark .snapshot}
 
 == tab "Light" icon:sun
-![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639232942121144045){  .snapshot}
+![divider-horizontal-styles-light](/assets/images/screenshots/kt-divider/divider-horizontal-styles-light.png?v=639233400096398394){  .snapshot}
 
 == tab "Dark" icon:moon
-![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639232942121144045){ .snapshot}
+![divider-horizontal-styles-dark](/assets/images/screenshots/kt-divider/divider-horizontal-styles-dark.png?v=639233400096398394){ .snapshot}
 
 :::
 :::
@@ -175,13 +175,13 @@ container.Controls.Add(doubleFaded);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639232942132169777){ .light .snapshot} ![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639232942132169777){.dark .snapshot}
+![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639233400107145651){ .light .snapshot} ![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639233400107145651){.dark .snapshot}
 
 == tab "Light" icon:sun
-![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639232942132169777){  .snapshot}
+![divider-faded-edges-light](/assets/images/screenshots/kt-divider/divider-faded-edges-light.png?v=639233400107145651){  .snapshot}
 
 == tab "Dark" icon:moon
-![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639232942132169777){ .snapshot}
+![divider-faded-edges-dark](/assets/images/screenshots/kt-divider/divider-faded-edges-dark.png?v=639233400107145651){ .snapshot}
 
 :::
 :::
@@ -228,13 +228,13 @@ container.Controls.Add(leftLabel);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639232942143503675){ .light .snapshot} ![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639232942143503675){.dark .snapshot}
+![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639233400118224713){ .light .snapshot} ![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639233400118224713){.dark .snapshot}
 
 == tab "Light" icon:sun
-![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639232942143503675){  .snapshot}
+![divider-vertical-light](/assets/images/screenshots/kt-divider/divider-vertical-light.png?v=639233400118215652){  .snapshot}
 
 == tab "Dark" icon:moon
-![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639232942143503675){ .snapshot}
+![divider-vertical-dark](/assets/images/screenshots/kt-divider/divider-vertical-dark.png?v=639233400118215652){ .snapshot}
 
 :::
 :::

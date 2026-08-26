@@ -16,7 +16,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-label-light](/assets/images/screenshots/kt-label/kt-label-light.png?v=639232895094354787){ .light .snapshot} ![kt-label-dark](/assets/images/screenshots/kt-label/kt-label-dark.png?v=639232895094354787){.dark .snapshot}
+![kt-label-light](/assets/images/screenshots/kt-label/kt-label-light.png?v=639233400140180660){ .light .snapshot} ![kt-label-dark](/assets/images/screenshots/kt-label/kt-label-dark.png?v=639233400140180660){.dark .snapshot}
 :::
 
 ::: callout success
@@ -80,13 +80,13 @@ errorLabel.Location = new Point(10, 74);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639232895117329429){ .light .snapshot} ![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639232895117329429){.dark .snapshot}
+![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639233400163309331){ .light .snapshot} ![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639233400163309331){.dark .snapshot}
 
 == tab "Light" icon:sun
-![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639232895117309382){  .snapshot}
+![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639233400163309331){  .snapshot}
 
 == tab "Dark" icon:moon
-![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639232895117309382){ .snapshot}
+![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639233400163309331){ .snapshot}
 
 :::
 :::
@@ -117,13 +117,13 @@ alignedLabel.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639232895127895599){ .light .snapshot} ![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639232895127895599){.dark .snapshot}
+![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639233400173819596){ .light .snapshot} ![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639233400173819596){.dark .snapshot}
 
 == tab "Light" icon:sun
-![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639232895127885562){  .snapshot}
+![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639233400173819596){  .snapshot}
 
 == tab "Dark" icon:moon
-![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639232895127885562){ .snapshot}
+![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639233400173819596){ .snapshot}
 
 :::
 :::

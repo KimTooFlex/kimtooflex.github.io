@@ -16,7 +16,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-button-light](/assets/images/screenshots/kt-button/kt-button-light.png?v=639232658970540640){ .light .snapshot} ![kt-button-dark](/assets/images/screenshots/kt-button/kt-button-dark.png?v=639232658970540640){.dark .snapshot}
+![kt-button-light](/assets/images/screenshots/kt-button/kt-button-light.png?v=639233399690237729){ .light .snapshot} ![kt-button-dark](/assets/images/screenshots/kt-button/kt-button-dark.png?v=639233399690237729){.dark .snapshot}
 :::
 
 ::: callout success
@@ -46,13 +46,13 @@ button.Background = Color.BlueViolet;   // Color
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![solid-background-light](/assets/images/screenshots/kt-button/solid-background-light.png?v=639232658995236038){ .light .snapshot} ![solid-background-dark](/assets/images/screenshots/kt-button/solid-background-dark.png?v=639232658995236038){.dark .snapshot}
+![solid-background-light](/assets/images/screenshots/kt-button/solid-background-light.png?v=639233399717842346){ .light .snapshot} ![solid-background-dark](/assets/images/screenshots/kt-button/solid-background-dark.png?v=639233399717842346){.dark .snapshot}
 
 == tab "Light" icon:sun
-![solid-background-light](/assets/images/screenshots/kt-button/solid-background-light.png?v=639232658995220633){  .snapshot}
+![solid-background-light](/assets/images/screenshots/kt-button/solid-background-light.png?v=639233399717777474){  .snapshot}
 
 == tab "Dark" icon:moon
-![solid-background-dark](/assets/images/screenshots/kt-button/solid-background-dark.png?v=639232658995220633){ .snapshot}
+![solid-background-dark](/assets/images/screenshots/kt-button/solid-background-dark.png?v=639233399717777474){ .snapshot}
 
 :::
 :::
@@ -76,13 +76,13 @@ button.Background =
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gradient-background-light](/assets/images/screenshots/kt-button/gradient-background-light.png?v=639232659005308521){ .light .snapshot} ![gradient-background-dark](/assets/images/screenshots/kt-button/gradient-background-dark.png?v=639232659005308521){.dark .snapshot}
+![gradient-background-light](/assets/images/screenshots/kt-button/gradient-background-light.png?v=639233399727903626){ .light .snapshot} ![gradient-background-dark](/assets/images/screenshots/kt-button/gradient-background-dark.png?v=639233399727903626){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gradient-background-light](/assets/images/screenshots/kt-button/gradient-background-light.png?v=639232659005308521){  .snapshot}
+![gradient-background-light](/assets/images/screenshots/kt-button/gradient-background-light.png?v=639233399727903626){  .snapshot}
 
 == tab "Dark" icon:moon
-![gradient-background-dark](/assets/images/screenshots/kt-button/gradient-background-dark.png?v=639232659005308521){ .snapshot}
+![gradient-background-dark](/assets/images/screenshots/kt-button/gradient-background-dark.png?v=639233399727903626){ .snapshot}
 
 :::
 :::
@@ -106,13 +106,13 @@ button.BorderWidth = 2f;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![outlined-button-light](/assets/images/screenshots/kt-button/outlined-button-light.png?v=639232659015206361){ .light .snapshot} ![outlined-button-dark](/assets/images/screenshots/kt-button/outlined-button-dark.png?v=639232659015206361){.dark .snapshot}
+![outlined-button-light](/assets/images/screenshots/kt-button/outlined-button-light.png?v=639233399738062765){ .light .snapshot} ![outlined-button-dark](/assets/images/screenshots/kt-button/outlined-button-dark.png?v=639233399738062765){.dark .snapshot}
 
 == tab "Light" icon:sun
-![outlined-button-light](/assets/images/screenshots/kt-button/outlined-button-light.png?v=639232659015206361){  .snapshot}
+![outlined-button-light](/assets/images/screenshots/kt-button/outlined-button-light.png?v=639233399738053736){  .snapshot}
 
 == tab "Dark" icon:moon
-![outlined-button-dark](/assets/images/screenshots/kt-button/outlined-button-dark.png?v=639232659015206361){ .snapshot}
+![outlined-button-dark](/assets/images/screenshots/kt-button/outlined-button-dark.png?v=639233399738053736){ .snapshot}
 
 :::
 :::
@@ -133,13 +133,13 @@ button.BorderWidth = 2f;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![outlined-gradient-button-light](/assets/images/screenshots/kt-button/outlined-gradient-button-light.png?v=639232659025201718){ .light .snapshot} ![outlined-gradient-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-button-dark.png?v=639232659025201718){.dark .snapshot}
+![outlined-gradient-button-light](/assets/images/screenshots/kt-button/outlined-gradient-button-light.png?v=639233399748244479){ .light .snapshot} ![outlined-gradient-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-button-dark.png?v=639233399748244479){.dark .snapshot}
 
 == tab "Light" icon:sun
-![outlined-gradient-button-light](/assets/images/screenshots/kt-button/outlined-gradient-button-light.png?v=639232659025201718){  .snapshot}
+![outlined-gradient-button-light](/assets/images/screenshots/kt-button/outlined-gradient-button-light.png?v=639233399748244479){  .snapshot}
 
 == tab "Dark" icon:moon
-![outlined-gradient-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-button-dark.png?v=639232659025201718){ .snapshot}
+![outlined-gradient-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-button-dark.png?v=639233399748244479){ .snapshot}
 
 :::
 :::
@@ -161,13 +161,13 @@ button.BorderStyle = DashStyle.DashDot;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![outlined-gradient-dashed-button-light](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-light.png?v=639232659034948034){ .light .snapshot} ![outlined-gradient-dashed-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-dark.png?v=639232659034948034){.dark .snapshot}
+![outlined-gradient-dashed-button-light](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-light.png?v=639233399758317622){ .light .snapshot} ![outlined-gradient-dashed-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-dark.png?v=639233399758317622){.dark .snapshot}
 
 == tab "Light" icon:sun
-![outlined-gradient-dashed-button-light](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-light.png?v=639232659034948034){  .snapshot}
+![outlined-gradient-dashed-button-light](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-light.png?v=639233399758317622){  .snapshot}
 
 == tab "Dark" icon:moon
-![outlined-gradient-dashed-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-dark.png?v=639232659034948034){ .snapshot}
+![outlined-gradient-dashed-button-dark](/assets/images/screenshots/kt-button/outlined-gradient-dashed-button-dark.png?v=639233399758317622){ .snapshot}
 
 :::
 :::
@@ -188,13 +188,13 @@ button.BorderRadius = 5f; // Actual pixels
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rounded-button-light](/assets/images/screenshots/kt-button/rounded-button-light.png?v=639232659045195767){ .light .snapshot} ![rounded-button-dark](/assets/images/screenshots/kt-button/rounded-button-dark.png?v=639232659045195767){.dark .snapshot}
+![rounded-button-light](/assets/images/screenshots/kt-button/rounded-button-light.png?v=639233399768243269){ .light .snapshot} ![rounded-button-dark](/assets/images/screenshots/kt-button/rounded-button-dark.png?v=639233399768243269){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rounded-button-light](/assets/images/screenshots/kt-button/rounded-button-light.png?v=639232659045195767){  .snapshot}
+![rounded-button-light](/assets/images/screenshots/kt-button/rounded-button-light.png?v=639233399768234467){  .snapshot}
 
 == tab "Dark" icon:moon
-![rounded-button-dark](/assets/images/screenshots/kt-button/rounded-button-dark.png?v=639232659045195767){ .snapshot}
+![rounded-button-dark](/assets/images/screenshots/kt-button/rounded-button-dark.png?v=639233399768234467){ .snapshot}
 
 :::
 :::
@@ -216,13 +216,13 @@ button.Width = 150;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-text-button-light](/assets/images/screenshots/kt-button/icon-text-button-light.png?v=639232659055177691){ .light .snapshot} ![icon-text-button-dark](/assets/images/screenshots/kt-button/icon-text-button-dark.png?v=639232659055177691){.dark .snapshot}
+![icon-text-button-light](/assets/images/screenshots/kt-button/icon-text-button-light.png?v=639233399778429929){ .light .snapshot} ![icon-text-button-dark](/assets/images/screenshots/kt-button/icon-text-button-dark.png?v=639233399778429929){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-text-button-light](/assets/images/screenshots/kt-button/icon-text-button-light.png?v=639232659055177691){  .snapshot}
+![icon-text-button-light](/assets/images/screenshots/kt-button/icon-text-button-light.png?v=639233399778419758){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-text-button-dark](/assets/images/screenshots/kt-button/icon-text-button-dark.png?v=639232659055177691){ .snapshot}
+![icon-text-button-dark](/assets/images/screenshots/kt-button/icon-text-button-dark.png?v=639233399778419758){ .snapshot}
 
 :::
 :::
@@ -247,13 +247,13 @@ button.Height = 50;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![icon-button-light](/assets/images/screenshots/kt-button/icon-button-light.png?v=639232659065407517){ .light .snapshot} ![icon-button-dark](/assets/images/screenshots/kt-button/icon-button-dark.png?v=639232659065407517){.dark .snapshot}
+![icon-button-light](/assets/images/screenshots/kt-button/icon-button-light.png?v=639233399788452738){ .light .snapshot} ![icon-button-dark](/assets/images/screenshots/kt-button/icon-button-dark.png?v=639233399788452738){.dark .snapshot}
 
 == tab "Light" icon:sun
-![icon-button-light](/assets/images/screenshots/kt-button/icon-button-light.png?v=639232659065407517){  .snapshot}
+![icon-button-light](/assets/images/screenshots/kt-button/icon-button-light.png?v=639233399788452738){  .snapshot}
 
 == tab "Dark" icon:moon
-![icon-button-dark](/assets/images/screenshots/kt-button/icon-button-dark.png?v=639232659065407517){ .snapshot}
+![icon-button-dark](/assets/images/screenshots/kt-button/icon-button-dark.png?v=639233399788452738){ .snapshot}
 
 :::
 :::
@@ -275,13 +275,13 @@ button.TextAlign = ContentAlignment.MiddleLeft;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![text-icon-align-light](/assets/images/screenshots/kt-button/text-icon-align-light.png?v=639232659075941680){ .light .snapshot} ![text-icon-align-dark](/assets/images/screenshots/kt-button/text-icon-align-dark.png?v=639232659075941680){.dark .snapshot}
+![text-icon-align-light](/assets/images/screenshots/kt-button/text-icon-align-light.png?v=639233399798476448){ .light .snapshot} ![text-icon-align-dark](/assets/images/screenshots/kt-button/text-icon-align-dark.png?v=639233399798476448){.dark .snapshot}
 
 == tab "Light" icon:sun
-![text-icon-align-light](/assets/images/screenshots/kt-button/text-icon-align-light.png?v=639232659075931632){  .snapshot}
+![text-icon-align-light](/assets/images/screenshots/kt-button/text-icon-align-light.png?v=639233399798476448){  .snapshot}
 
 == tab "Dark" icon:moon
-![text-icon-align-dark](/assets/images/screenshots/kt-button/text-icon-align-dark.png?v=639232659075931632){ .snapshot}
+![text-icon-align-dark](/assets/images/screenshots/kt-button/text-icon-align-dark.png?v=639233399798476448){ .snapshot}
 
 :::
 :::
@@ -303,13 +303,13 @@ button.IconColor = KtColor.PRIMARY;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-foreground-light](/assets/images/screenshots/kt-button/custom-foreground-light.png?v=639232659086395287){ .light .snapshot} ![custom-foreground-dark](/assets/images/screenshots/kt-button/custom-foreground-dark.png?v=639232659086395287){.dark .snapshot}
+![custom-foreground-light](/assets/images/screenshots/kt-button/custom-foreground-light.png?v=639233399808540990){ .light .snapshot} ![custom-foreground-dark](/assets/images/screenshots/kt-button/custom-foreground-dark.png?v=639233399808540990){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-foreground-light](/assets/images/screenshots/kt-button/custom-foreground-light.png?v=639232659086385069){  .snapshot}
+![custom-foreground-light](/assets/images/screenshots/kt-button/custom-foreground-light.png?v=639233399808540990){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-foreground-dark](/assets/images/screenshots/kt-button/custom-foreground-dark.png?v=639232659086385069){ .snapshot}
+![custom-foreground-dark](/assets/images/screenshots/kt-button/custom-foreground-dark.png?v=639233399808540990){ .snapshot}
 
 :::
 :::

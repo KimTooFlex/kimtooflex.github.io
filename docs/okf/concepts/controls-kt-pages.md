@@ -4,10 +4,10 @@ title: "KimTools / Controls / Pages"
 description: "KtPages provides controlled tab-based navigation with SPA-style routing, custom transitions, extender button integration, and history navigation for Modern WinForms"
 source: "https://kimtoo.net/controls/kt-pages/"
 path: /controls/kt-pages/
-updated: 2026-08-25
+updated: 2026-08-26
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-25T19:38:40.069Z"
+  generated_at: "2026-08-26T09:39:06.742Z"
 ---
 ---
 title: "KimTools / Controls / Pages"
@@ -27,7 +27,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-pages-light](/assets/images/screenshots/kt-pages/kt-pages-light.png?v=639232942166790544){ .light .snapshot} ![kt-pages-dark](/assets/images/screenshots/kt-pages/kt-pages-dark.png?v=639232942166790544){.dark .snapshot}
+![kt-pages-light](/assets/images/screenshots/kt-pages/kt-pages-light.png?v=639233400196134811){ .light .snapshot} ![kt-pages-dark](/assets/images/screenshots/kt-pages/kt-pages-dark.png?v=639233400196134811){.dark .snapshot}
 :::
 
 ::: callout success
@@ -88,6 +88,7 @@ var rbOverview = new KtRadioButton
     Text = "Overview",
     Checked = true,
     Icon = null,
+    Icon_Checked = null,
     AutoSize = true,
     Background = KtColor.PRIMARY,
     Location = new Point(10, 10)
@@ -98,6 +99,7 @@ var rbSettings = new KtRadioButton
     Text = "Settings",
     Checked = false,
     Icon = null,
+    Icon_Checked = null,
     AutoSize = true,
     Background = KtColor.BASE_3,
     Location = new Point(120, 10)
@@ -127,13 +129,13 @@ pages.Location = new Point(10, 50);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639232942191291970){ .light .snapshot} ![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639232942191291970){.dark .snapshot}
+![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639233400221068417){ .light .snapshot} ![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639233400221068417){.dark .snapshot}
 
 == tab "Light" icon:sun
-![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639232942191291970){  .snapshot}
+![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639233400221068417){  .snapshot}
 
 == tab "Dark" icon:moon
-![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639232942191291970){ .snapshot}
+![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639233400221068417){ .snapshot}
 
 :::
 :::
@@ -183,13 +185,13 @@ pages.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639232942204160421){ .light .snapshot} ![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639232942204160421){.dark .snapshot}
+![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639233400233763402){ .light .snapshot} ![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639233400233763402){.dark .snapshot}
 
 == tab "Light" icon:sun
-![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639232942204160421){  .snapshot}
+![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639233400233763402){  .snapshot}
 
 == tab "Dark" icon:moon
-![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639232942204160421){ .snapshot}
+![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639233400233763402){ .snapshot}
 
 :::
 :::
@@ -231,13 +233,13 @@ pages.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639232942216052833){ .light .snapshot} ![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639232942216052833){.dark .snapshot}
+![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639233400245800529){ .light .snapshot} ![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639233400245800529){.dark .snapshot}
 
 == tab "Light" icon:sun
-![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639232942216052833){  .snapshot}
+![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639233400245800529){  .snapshot}
 
 == tab "Dark" icon:moon
-![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639232942216052833){ .snapshot}
+![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639233400245800529){ .snapshot}
 
 :::
 :::
