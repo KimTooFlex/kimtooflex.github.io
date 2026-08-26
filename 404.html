@@ -2,37 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #ffffff;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-    </style>
+    <title>Redirecting…</title>
     <script>
-        const iframe = document.querySelector('iframe');
-        iframe.addEventListener('load', () => {
-            iframe.contentWindow.document.addEventListener('click', (e) => {
-                const anchor = e.target.closest('a');
-                if (anchor && anchor.href) {
-                    e.preventDefault();
-                    window.top.location.href = anchor.href;
-                }
-            });
-        });
+        const path = window.location.pathname;
+        const target = "https://kimtoo.net/docs/404.html";
+        window.location.replace(target);
     </script>
 </head>
 <body>
-<iframe src="https://kimtoo.net/docs/404.html" sandbox="allow-scripts allow-same-origin allow-top-navigation"></iframe>
+Redirecting…
 </body>
 </html>
