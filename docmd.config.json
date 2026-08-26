@@ -94,6 +94,12 @@
           "icon": "rectangle-ellipsis"
         },
         {
+          "kt": "kt-date",
+          "path": "/controls/kt-date.md",
+          "title": "Kt • Date",
+          "icon": "calendar"
+        },
+        {
           "kt": "kt-divider",
           "path": "/controls/kt-divider.md",
           "title": "Kt • Divider",
@@ -104,6 +110,12 @@
           "path": "/controls/kt-label.md",
           "title": "Kt • Label",
           "icon": "type"
+        },
+        {
+          "kt": "kt-menu",
+          "path": "/controls/kt-menu.md",
+          "title": "Kt • Menu",
+          "icon": "list-tree"
         },
         {
           "kt": "kt-pages",
@@ -118,6 +130,24 @@
           "icon": "layout-panel-top"
         },
         {
+          "kt": "kt-picture-box",
+          "path": "/controls/kt-picture-box.md",
+          "title": "Kt • PictureBox",
+          "icon": "image"
+        },
+        {
+          "kt": "kt-progress",
+          "path": "/controls/kt-progress.md",
+          "title": "Kt • Progress",
+          "icon": "gauge"
+        },
+        {
+          "kt": "kt-progress-radial",
+          "path": "/controls/kt-progress-radial.md",
+          "title": "Kt • ProgressRadial",
+          "icon": "gauge"
+        },
+        {
           "kt": "kt-radio-box",
           "path": "/controls/kt-radio-box.md",
           "title": "Kt • RadioBox",
@@ -130,10 +160,34 @@
           "icon": "rectangle-ellipsis"
         },
         {
+          "kt": "kt-rating",
+          "path": "/controls/kt-rating.md",
+          "title": "Kt • Rating",
+          "icon": "star"
+        },
+        {
+          "kt": "kt-select",
+          "path": "/controls/kt-select.md",
+          "title": "Kt • Select",
+          "icon": "chevrons-up-down"
+        },
+        {
+          "kt": "kt-shapes",
+          "path": "/controls/kt-shapes.md",
+          "title": "Kt • Shapes",
+          "icon": "shapes"
+        },
+        {
           "kt": "kt-switch",
           "path": "/controls/kt-switch.md",
           "title": "Kt • Switch",
           "icon": "toggle-right"
+        },
+        {
+          "kt": "kt-table",
+          "path": "/controls/kt-table.md",
+          "title": "Kt • Table",
+          "icon": "table-2"
         },
         {
           "kt": "kt-text-box",
@@ -157,50 +211,46 @@
           "title": "Kt-Transition",
           "path": "/components/kt-transition.md"
         },
-            {
-              "title": "Kt-Tooltip",
-              "path": "/components/kt-tooltip.md"
-            },
-            {
-              "title": "Kt-Toast",
-              "path": "/components/kt-toast.md"
-            },
-            {
-              "title": "Kt-Pop-Over",
-              "path": "/components/kt-pop-over.md"
-            },
-            {
-              "title": "Kt-Validation",
-              "path": "/components/kt-validation.md"
-            }
-
+        {
+          "title": "Kt-Tooltip",
+          "path": "/components/kt-tooltip.md"
+        },
+        {
+          "title": "Kt-Toast",
+          "path": "/components/kt-toast.md"
+        },
+        {
+          "title": "Kt-Pop-Over",
+          "path": "/components/kt-pop-over.md"
+        },
+        {
+          "title": "Kt-Validation",
+          "path": "/components/kt-validation.md"
+        }
       ]
-    },
-    {
-      "title": " ",
-      "collapsible": false
     },
     {
       "kt": "utilities",
       "title": " 🟢 Utilities",
       "children": [
         {
-          "title": "Kt-Color",
+          "title": "Kt • Color",
           "path": "/utilities/kt-color.md",
           "icon": "swatch-book"
         },
         {
-          "title": "Kt-Brush",
+          "title": "Kt • Brush",
           "path": "/utilities/kt-brush.md",
           "icon": "paintbrush"
-        },{
-          "title": "Theming",
+        },
+        {
+          "kt": "kt-themes",
           "path": "/utilities/kt-themes.md",
+          "title": "Kt • Themes",
           "icon": "palette"
         }
       ]
     },
-
     {
       "title": "Templates",
       "path": "/templates",

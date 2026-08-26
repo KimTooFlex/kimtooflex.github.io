@@ -16,12 +16,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kimtoo.net/controls/kt-date/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kimtoo.net/controls/kt-divider/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kimtoo.net/controls/kt-label/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -36,6 +46,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kimtoo.net/controls/kt-picture-box/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-progress-radial/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-progress/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kimtoo.net/controls/kt-radio-box/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -46,7 +71,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kimtoo.net/controls/kt-rating/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-select/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-shapes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kimtoo.net/controls/kt-switch/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/controls/kt-table/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -77,6 +122,11 @@
   </url>
   <url>
     <loc>https://kimtoo.net/requirements/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimtoo.net/templates/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

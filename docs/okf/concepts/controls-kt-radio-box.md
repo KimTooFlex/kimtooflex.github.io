@@ -7,7 +7,7 @@ path: /controls/kt-radio-box/
 updated: 2026-08-26
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T13:53:02.877Z"
+  generated_at: "2026-08-26T20:32:11.546Z"
 ---
 ---
 title: "KimTools / Controls / RadioBox"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-radio-box-light](/assets/images/screenshots/kt-radio-box/kt-radio-box-light.png?v=639233575843213520){ .light .snapshot} ![kt-radio-box-dark](/assets/images/screenshots/kt-radio-box/kt-radio-box-dark.png?v=639233575843213520){.dark .snapshot}
+![kt-radio-box-light](/assets/images/screenshots/kt-radio-box/kt-radio-box-light.png?v=639233745644894439){ .light .snapshot} ![kt-radio-box-dark](/assets/images/screenshots/kt-radio-box/kt-radio-box-dark.png?v=639233745644894439){.dark .snapshot}
 :::
 
 ::: callout success
@@ -83,13 +83,13 @@ radio.BindingControlPosition = KtRadioBox.BindingControlPositions.Right;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233575868850527){ .light .snapshot} ![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233575868850527){.dark .snapshot}
+![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233745681744420){ .light .snapshot} ![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233745681744420){.dark .snapshot}
 
 == tab "Light" icon:sun
-![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233575868850527){  .snapshot}
+![binding-control-light](/assets/images/screenshots/kt-radio-box/binding-control-light.png?v=639233745681744420){  .snapshot}
 
 == tab "Dark" icon:moon
-![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233575868850527){ .snapshot}
+![binding-control-dark](/assets/images/screenshots/kt-radio-box/binding-control-dark.png?v=639233745681744420){ .snapshot}
 
 :::
 :::
@@ -186,13 +186,13 @@ container.Controls.Add(row3);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233575880019133){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233575880019133){.dark .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233745698799427){ .light .snapshot} ![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233745698799427){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233575880019133){  .snapshot}
+![radio-group-light](/assets/images/screenshots/kt-radio-box/radio-group-light.png?v=639233745698789336){  .snapshot}
 
 == tab "Dark" icon:moon
-![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233575880019133){ .snapshot}
+![radio-group-dark](/assets/images/screenshots/kt-radio-box/radio-group-dark.png?v=639233745698789336){ .snapshot}
 
 :::
 :::
@@ -233,13 +233,13 @@ label.Location = new Point(radio.Right + 8, 4);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233575890597023){ .light .snapshot} ![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233575890597023){.dark .snapshot}
+![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233745714988905){ .light .snapshot} ![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233745714988905){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233575890597023){  .snapshot}
+![custom-colors-light](/assets/images/screenshots/kt-radio-box/custom-colors-light.png?v=639233745714988905){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233575890597023){ .snapshot}
+![custom-colors-dark](/assets/images/screenshots/kt-radio-box/custom-colors-dark.png?v=639233745714988905){ .snapshot}
 
 :::
 :::

@@ -21,6 +21,12 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / Date",
+      "url": "https://kimtoo.net/controls/kt-date/",
+      "description": "A modern, highly customizable Date Picker control for WinForms supporting custom icons, border radius, theme color styling, and alignment modes.",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / Divider",
       "url": "https://kimtoo.net/controls/kt-divider/",
       "description": "A visual separator control for Modern WinForms providing styled divider lines, customizable orientations, dash caps, and gradient edge fading.",
@@ -30,6 +36,12 @@
       "title": "KimTools / Controls / Label",
       "url": "https://kimtoo.net/controls/kt-label/",
       "description": "A theme-aware label control for Modern WinForms with intelligent foreground contrast generation and KtColor palette integration.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Menu",
+      "url": "https://kimtoo.net/controls/kt-menu/",
+      "description": "An expandable tree-style navigation menu supporting independently themeable state styles, gradient highlights, custom connector lines, checkboxes, and inline badge tags.",
       "priority": "medium"
     },
     {
@@ -45,6 +57,24 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / PictureBox",
+      "url": "https://kimtoo.net/controls/kt-picture-box/",
+      "description": "A modern, customizable PictureBox control supporting rounded corners, custom border styles, image filters, and dynamic gradient/brush masking.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / ProgressRadial",
+      "url": "https://kimtoo.net/controls/kt-progress-radial/",
+      "description": "A customizable circular progress indicator with gradient arcs, independent cap styles, sub/superscript annotations, and smooth animation support.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Progress",
+      "url": "https://kimtoo.net/controls/kt-progress/",
+      "description": "A stylish progress indicator supporting dual-layer rendering, gradient fills, hatch patterns, rounded corners, per-edge border control, and animated spinner text.",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / RadioBox",
       "url": "https://kimtoo.net/controls/kt-radio-box/",
       "description": "A customizable, stylish radio button control for WinForms with built-in binding and color states.",
@@ -57,9 +87,33 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / Rating",
+      "url": "https://kimtoo.net/controls/kt-rating/",
+      "description": "A customizable rating input with star, circle, and square shapes, independent color states for empty, hover, rated, and disabled, plus read-only and right-click-to-clear support.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Select",
+      "url": "https://kimtoo.net/controls/kt-select/",
+      "description": "A fully owner-drawn dropdown with rounded corners, theme-aware colors, adjustable indicator styles, and independent styling for the closed surface and dropdown list items.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Shapes",
+      "url": "https://kimtoo.net/controls/kt-shapes/",
+      "description": "A versatile shape renderer supporting circles, ovals, squares, rectangles, polygons, and lines with independent fill, border, rotation, and side-count control.",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / Switch",
       "url": "https://kimtoo.net/controls/kt-switch/",
       "description": "A smooth, highly customizable toggle switch control for Modern WinForms supporting custom state styling and animations.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Table",
+      "url": "https://kimtoo.net/controls/kt-table/",
+      "description": "A fully themed data grid with per-region skinning, rounded cell corners, custom scrollbar overlays, and native-looking checkbox, button, and link rendering.",
       "priority": "medium"
     },
     {
@@ -96,6 +150,12 @@
       "title": "KimTools / System Requirements",
       "url": "https://kimtoo.net/requirements/",
       "description": "Supported operating systems, .NET versions, development environments, and hardware requirements for KimTools.WinForms.",
+      "priority": "medium"
+    },
+    {
+      "title": "Untitled",
+      "url": "https://kimtoo.net/templates/",
+      "description": "",
       "priority": "medium"
     },
     {

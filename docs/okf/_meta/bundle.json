@@ -6,13 +6,13 @@
     "description": "",
     "url": "https://kimtoo.net",
     "generated_by": "@docmd/plugin-okf",
-    "generated_at": "2026-08-26T13:53:02.985Z",
+    "generated_at": "2026-08-26T20:32:11.719Z",
     "default_type": "concept"
   },
   "stats": {
-    "concepts": 19,
+    "concepts": 29,
     "by_type": {
-      "concept": 19
+      "concept": 29
     },
     "locales": [],
     "versions": []
@@ -49,6 +49,16 @@
       "tags": []
     },
     {
+      "id": "controls-kt-date",
+      "type": "concept",
+      "title": "KimTools / Controls / Date",
+      "path": "/controls/kt-date/",
+      "file": "concepts/controls-kt-date.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
       "id": "controls-kt-divider",
       "type": "concept",
       "title": "KimTools / Controls / Divider",
@@ -64,6 +74,16 @@
       "title": "KimTools / Controls / Label",
       "path": "/controls/kt-label/",
       "file": "concepts/controls-kt-label.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-menu",
+      "type": "concept",
+      "title": "KimTools / Controls / Menu",
+      "path": "/controls/kt-menu/",
+      "file": "concepts/controls-kt-menu.md",
       "locale": "",
       "version": "",
       "tags": []
@@ -89,6 +109,36 @@
       "tags": []
     },
     {
+      "id": "controls-kt-picture-box",
+      "type": "concept",
+      "title": "KimTools / Controls / PictureBox",
+      "path": "/controls/kt-picture-box/",
+      "file": "concepts/controls-kt-picture-box.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-progress-radial",
+      "type": "concept",
+      "title": "KimTools / Controls / ProgressRadial",
+      "path": "/controls/kt-progress-radial/",
+      "file": "concepts/controls-kt-progress-radial.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-progress",
+      "type": "concept",
+      "title": "KimTools / Controls / Progress",
+      "path": "/controls/kt-progress/",
+      "file": "concepts/controls-kt-progress.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
       "id": "controls-kt-radio-box",
       "type": "concept",
       "title": "KimTools / Controls / RadioBox",
@@ -109,11 +159,51 @@
       "tags": []
     },
     {
+      "id": "controls-kt-rating",
+      "type": "concept",
+      "title": "KimTools / Controls / Rating",
+      "path": "/controls/kt-rating/",
+      "file": "concepts/controls-kt-rating.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-select",
+      "type": "concept",
+      "title": "KimTools / Controls / Select",
+      "path": "/controls/kt-select/",
+      "file": "concepts/controls-kt-select.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-shapes",
+      "type": "concept",
+      "title": "KimTools / Controls / Shapes",
+      "path": "/controls/kt-shapes/",
+      "file": "concepts/controls-kt-shapes.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
       "id": "controls-kt-switch",
       "type": "concept",
       "title": "KimTools / Controls / Switch",
       "path": "/controls/kt-switch/",
       "file": "concepts/controls-kt-switch.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "controls-kt-table",
+      "type": "concept",
+      "title": "KimTools / Controls / Table",
+      "path": "/controls/kt-table/",
+      "file": "concepts/controls-kt-table.md",
       "locale": "",
       "version": "",
       "tags": []
@@ -174,6 +264,16 @@
       "title": "KimTools / System Requirements",
       "path": "/requirements/",
       "file": "concepts/requirements.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "templates",
+      "type": "concept",
+      "title": "Untitled",
+      "path": "/templates/",
+      "file": "concepts/templates.md",
       "locale": "",
       "version": "",
       "tags": []

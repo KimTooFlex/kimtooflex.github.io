@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-check-box-light](/assets/images/screenshots/kt-check-box/kt-check-box-light.png?v=639233574917712580){ .light .snapshot} ![kt-check-box-dark](/assets/images/screenshots/kt-check-box/kt-check-box-dark.png?v=639233574917712580){.dark .snapshot}
+![kt-check-box-light](/assets/images/screenshots/kt-check-box/kt-check-box-light.png?v=639233744124387993){ .light .snapshot} ![kt-check-box-dark](/assets/images/screenshots/kt-check-box/kt-check-box-dark.png?v=639233744124387993){.dark .snapshot}
 :::
 
 ::: callout success
@@ -65,13 +65,13 @@ label.Location = new Point(checkbox.Right + 8, 4);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![anchored-label-light](/assets/images/screenshots/kt-check-box/anchored-label-light.png?v=639233574942279469){ .light .snapshot} ![anchored-label-dark](/assets/images/screenshots/kt-check-box/anchored-label-dark.png?v=639233574942279469){.dark .snapshot}
+![anchored-label-light](/assets/images/screenshots/kt-check-box/anchored-label-light.png?v=639233744149724294){ .light .snapshot} ![anchored-label-dark](/assets/images/screenshots/kt-check-box/anchored-label-dark.png?v=639233744149724294){.dark .snapshot}
 
 == tab "Light" icon:sun
-![anchored-label-light](/assets/images/screenshots/kt-check-box/anchored-label-light.png?v=639233574942267795){  .snapshot}
+![anchored-label-light](/assets/images/screenshots/kt-check-box/anchored-label-light.png?v=639233744149724294){  .snapshot}
 
 == tab "Dark" icon:moon
-![anchored-label-dark](/assets/images/screenshots/kt-check-box/anchored-label-dark.png?v=639233574942267795){ .snapshot}
+![anchored-label-dark](/assets/images/screenshots/kt-check-box/anchored-label-dark.png?v=639233744149724294){ .snapshot}
 
 :::
 :::
@@ -165,13 +165,13 @@ container.Controls.Add(roundPanel);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![checkbox-styles-light](/assets/images/screenshots/kt-check-box/checkbox-styles-light.png?v=639233574953666928){ .light .snapshot} ![checkbox-styles-dark](/assets/images/screenshots/kt-check-box/checkbox-styles-dark.png?v=639233574953666928){.dark .snapshot}
+![checkbox-styles-light](/assets/images/screenshots/kt-check-box/checkbox-styles-light.png?v=639233744161346412){ .light .snapshot} ![checkbox-styles-dark](/assets/images/screenshots/kt-check-box/checkbox-styles-dark.png?v=639233744161346412){.dark .snapshot}
 
 == tab "Light" icon:sun
-![checkbox-styles-light](/assets/images/screenshots/kt-check-box/checkbox-styles-light.png?v=639233574953666928){  .snapshot}
+![checkbox-styles-light](/assets/images/screenshots/kt-check-box/checkbox-styles-light.png?v=639233744161346412){  .snapshot}
 
 == tab "Dark" icon:moon
-![checkbox-styles-dark](/assets/images/screenshots/kt-check-box/checkbox-styles-dark.png?v=639233574953666928){ .snapshot}
+![checkbox-styles-dark](/assets/images/screenshots/kt-check-box/checkbox-styles-dark.png?v=639233744161346412){ .snapshot}
 
 :::
 :::
@@ -212,13 +212,13 @@ label.Location = new Point(checkbox.Right + 8, 4);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![three-state-light](/assets/images/screenshots/kt-check-box/three-state-light.png?v=639233574963843381){ .light .snapshot} ![three-state-dark](/assets/images/screenshots/kt-check-box/three-state-dark.png?v=639233574963843381){.dark .snapshot}
+![three-state-light](/assets/images/screenshots/kt-check-box/three-state-light.png?v=639233744171546380){ .light .snapshot} ![three-state-dark](/assets/images/screenshots/kt-check-box/three-state-dark.png?v=639233744171546380){.dark .snapshot}
 
 == tab "Light" icon:sun
-![three-state-light](/assets/images/screenshots/kt-check-box/three-state-light.png?v=639233574963843381){  .snapshot}
+![three-state-light](/assets/images/screenshots/kt-check-box/three-state-light.png?v=639233744171546380){  .snapshot}
 
 == tab "Dark" icon:moon
-![three-state-dark](/assets/images/screenshots/kt-check-box/three-state-dark.png?v=639233574963843381){ .snapshot}
+![three-state-dark](/assets/images/screenshots/kt-check-box/three-state-dark.png?v=639233744171546380){ .snapshot}
 
 :::
 :::
@@ -242,13 +242,13 @@ checkbox.OnUncheck.BorderColor = KtColor.NEUTRAL % 60;
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-state-colors-light](/assets/images/screenshots/kt-check-box/custom-state-colors-light.png?v=639233574973988133){ .light .snapshot} ![custom-state-colors-dark](/assets/images/screenshots/kt-check-box/custom-state-colors-dark.png?v=639233574973988133){.dark .snapshot}
+![custom-state-colors-light](/assets/images/screenshots/kt-check-box/custom-state-colors-light.png?v=639233744181508231){ .light .snapshot} ![custom-state-colors-dark](/assets/images/screenshots/kt-check-box/custom-state-colors-dark.png?v=639233744181508231){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-state-colors-light](/assets/images/screenshots/kt-check-box/custom-state-colors-light.png?v=639233574973988133){  .snapshot}
+![custom-state-colors-light](/assets/images/screenshots/kt-check-box/custom-state-colors-light.png?v=639233744181508231){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-state-colors-dark](/assets/images/screenshots/kt-check-box/custom-state-colors-dark.png?v=639233574973988133){ .snapshot}
+![custom-state-colors-dark](/assets/images/screenshots/kt-check-box/custom-state-colors-dark.png?v=639233744181508231){ .snapshot}
 
 :::
 :::
@@ -342,13 +342,13 @@ container.Controls.Add(usage);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![checklist-light](/assets/images/screenshots/kt-check-box/checklist-light.png?v=639233574985375366){ .light .snapshot} ![checklist-dark](/assets/images/screenshots/kt-check-box/checklist-dark.png?v=639233574985375366){.dark .snapshot}
+![checklist-light](/assets/images/screenshots/kt-check-box/checklist-light.png?v=639233744192803595){ .light .snapshot} ![checklist-dark](/assets/images/screenshots/kt-check-box/checklist-dark.png?v=639233744192803595){.dark .snapshot}
 
 == tab "Light" icon:sun
-![checklist-light](/assets/images/screenshots/kt-check-box/checklist-light.png?v=639233574985375366){  .snapshot}
+![checklist-light](/assets/images/screenshots/kt-check-box/checklist-light.png?v=639233744192803595){  .snapshot}
 
 == tab "Dark" icon:moon
-![checklist-dark](/assets/images/screenshots/kt-check-box/checklist-dark.png?v=639233574985375366){ .snapshot}
+![checklist-dark](/assets/images/screenshots/kt-check-box/checklist-dark.png?v=639233744192803595){ .snapshot}
 
 :::
 :::
