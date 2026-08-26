@@ -1,6 +1,7 @@
 ---
 title: "KimTools / Controls / Pages"
-description: "KtPages provides controlled tab-based navigation with SPA-style routing, custom transitions, extender button integration, and history navigation for Modern WinForms"
+description: "An invisible tab-based navigation container for Modern WinForms that provides SPA-style routing, custom page transitions, navigation history, and design-time extenders."
+keywords: ["KimTools", "Controls", "KtPages", "Pages", "TabControl"]
 toc: false
 layout: "full"
 ---
@@ -16,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-pages-light](/assets/images/screenshots/kt-pages/kt-pages-light.png?v=639233400196134811){ .light .snapshot} ![kt-pages-dark](/assets/images/screenshots/kt-pages/kt-pages-dark.png?v=639233400196134811){.dark .snapshot}
+![kt-pages-light](/assets/images/screenshots/kt-pages/kt-pages-light.png?v=639233544571823388){ .light .snapshot} ![kt-pages-dark](/assets/images/screenshots/kt-pages/kt-pages-dark.png?v=639233544571823388){.dark .snapshot}
 :::
 
 ::: callout success
@@ -118,13 +119,13 @@ pages.Location = new Point(10, 50);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639233400221068417){ .light .snapshot} ![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639233400221068417){.dark .snapshot}
+![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639233544595876669){ .light .snapshot} ![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639233544595876669){.dark .snapshot}
 
 == tab "Light" icon:sun
-![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639233400221068417){  .snapshot}
+![pages-radio-tabs-light](/assets/images/screenshots/kt-pages/pages-radio-tabs-light.png?v=639233544595876669){  .snapshot}
 
 == tab "Dark" icon:moon
-![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639233400221068417){ .snapshot}
+![pages-radio-tabs-dark](/assets/images/screenshots/kt-pages/pages-radio-tabs-dark.png?v=639233544595876669){ .snapshot}
 
 :::
 :::
@@ -174,13 +175,13 @@ pages.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639233400233763402){ .light .snapshot} ![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639233400233763402){.dark .snapshot}
+![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639233544608448188){ .light .snapshot} ![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639233544608448188){.dark .snapshot}
 
 == tab "Light" icon:sun
-![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639233400233763402){  .snapshot}
+![pages-navigation-light](/assets/images/screenshots/kt-pages/pages-navigation-light.png?v=639233544608448188){  .snapshot}
 
 == tab "Dark" icon:moon
-![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639233400233763402){ .snapshot}
+![pages-navigation-dark](/assets/images/screenshots/kt-pages/pages-navigation-dark.png?v=639233544608448188){ .snapshot}
 
 :::
 :::
@@ -222,13 +223,13 @@ pages.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639233400245800529){ .light .snapshot} ![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639233400245800529){.dark .snapshot}
+![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639233544620537900){ .light .snapshot} ![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639233544620537900){.dark .snapshot}
 
 == tab "Light" icon:sun
-![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639233400245800529){  .snapshot}
+![pages-operators-light](/assets/images/screenshots/kt-pages/pages-operators-light.png?v=639233544620537900){  .snapshot}
 
 == tab "Dark" icon:moon
-![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639233400245800529){ .snapshot}
+![pages-operators-dark](/assets/images/screenshots/kt-pages/pages-operators-dark.png?v=639233544620537900){ .snapshot}
 
 :::
 :::

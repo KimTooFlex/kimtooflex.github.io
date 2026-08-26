@@ -5,7 +5,7 @@ bundle:
   description: ""
   url: "https://kimtoo.net"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T09:39:06.820Z"
+  generated_at: "2026-08-26T12:24:50.087Z"
   default_type: concept
 stats:
   concepts: 19
@@ -72,7 +72,7 @@ concepts:
     tags: 
   - id: controls-kt-radio-box
     type: concept
-    title: "KimTools / Controls / RadioButton"
+    title: "KimTools / Controls / RadioBox"
     path: /controls/kt-radio-box/
     file: concepts/controls-kt-radio-box.md
     locale: ""
@@ -104,7 +104,7 @@ concepts:
     tags: 
   - id: controls-kt-window
     type: concept
-    title: "KimTools / Window"
+    title: "KimTools / Controls / Window"
     path: /controls/kt-window/
     file: concepts/controls-kt-window.md
     locale: ""
@@ -160,7 +160,7 @@ concepts:
     tags: 
   - id: utilities-kt-themes
     type: concept
-    title: "KimTools / Themes"
+    title: "KimTools / utilities / Themes"
     path: /utilities/kt-themes/
     file: concepts/utilities-kt-themes.md
     locale: ""

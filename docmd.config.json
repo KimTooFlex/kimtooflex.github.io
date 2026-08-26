@@ -27,7 +27,7 @@
     "spa": true,
     "footer": {
       "branding": false,
-      "copyright": "KimTools.WinForms \u00a9 2026"
+      "copyright": "KimTools.WinForms © 2026"
     }
   },
   "plugins": {
@@ -52,9 +52,18 @@
       "icon": "rocket",
       "path": "/",
       "children": [
-        { "title": "Licensing", "path": "/licensing.md" },
-        { "title": "Requirements", "path": "/requirements.md" },
-        { "title": "FAQ", "path": "/faq.md" }
+        {
+          "title": "Licensing",
+          "path": "/licensing.md"
+        },
+        {
+          "title": "Requirements",
+          "path": "/requirements.md"
+        },
+        {
+          "title": "FAQ",
+          "path": "/faq.md"
+        }
       ]
     },
     {
@@ -62,92 +71,116 @@
       "collapsible": false
     },
     {
-      "title": " \ud83d\udfe3 Controls",
+      "kt": "controls",
+      "title": " 🟣 Controls",
       "collapsible": false,
       "children": [
         {
-          "title": "Containers",
-          "icon": "layout-panel-top",
-          "children": [
-            { "title": "Kt-Window", "path": "/controls/kt-window.md" },
-            { "title": "Kt-Panel", "path": "/controls/kt-panel.md" },
-            { "title": "Kt-Pages", "path": "/controls/kt-pages.md" }
-          ]
+          "kt": "ktbutton",
+          "title": "Kt • Button",
+          "path": "/controls/kt-button.md"
         },
         {
-          "title": "Selection",
-          "icon": "check-square",
-          "children": [
-            { "title": "Kt-Button", "path": "/controls/kt-button.md" },
-            { "title": "Kt-Check-Box", "path": "/controls/kt-check-box.md" },
-            { "title": "Kt-Check-Button", "path": "/controls/kt-check-button.md" },
-            { "title": "Kt-Radio-Box", "path": "/controls/kt-radio-box.md" },
-            { "title": "Kt-Radio-Button", "path": "/controls/kt-radio-button.md" },
-            { "title": "Kt-Switch", "path": "/controls/kt-switch.md" }
-          ]
+          "kt": "ktcheckbox",
+          "title": "Kt • CheckBox",
+          "path": "/controls/kt-check-box.md"
         },
         {
-          "title": "Input",
-          "icon": "rectangle-ellipsis",
-          "children": [
-            { "title": "Kt-TextBox", "path": "/controls/kt-text-box.md" },
-            { "title": "Kt-Select", "path": "/controls/kt-select.md" },
-            { "title": "Kt-Date", "path": "/controls/kt-date.md" },
-            { "title": "Kt-Slider", "path": "/controls/kt-slider.md" },
-            { "title": "Kt-Rating", "path": "/controls/kt-rating.md" }
-          ]
+          "kt": "ktcheckbutton",
+          "title": "Kt • CheckButton",
+          "path": "/controls/kt-check-button.md"
         },
         {
-          "title": "Display",
-          "icon": "image",
-          "children": [
-            { "title": "Kt-Label", "path": "/controls/kt-label.md" },
-            { "title": "Kt-Divider", "path": "/controls/kt-divider.md" },
-            { "title": "Kt-Picture-Box", "path": "/controls/kt-picture-box.md" },
-            { "title": "Kt-HTML", "path": "/controls/kt-html.md" },
-            { "title": "Kt-Shapes", "path": "/controls/kt-shapes.md" },
-            { "title": "Kt-Table", "path": "/controls/kt-table.md" },
-            { "title": "Kt-Progress", "path": "/controls/kt-progress-bar.md" },
-            { "title": "Kt-Progress-Gauge", "path": "/controls/kt-progress-gauge.md" },
-            { "title": "Kt-Progress-Radial", "path": "/controls/kt-progress-radial.md" },
-            { "title": "Kt-Spinner", "path": "/controls/kt-spinner.md" }
-          ]
+          "kt": "ktdivider",
+          "title": "Kt • Divider",
+          "path": "/controls/kt-divider.md"
         },
         {
-          "title": "Navigation",
-          "icon": "panel-left",
-          "children": [
-            { "title": "Kt-Menu", "path": "/controls/kt-menu.md" },
-            { "title": "Kt-Scroll-Bar", "path": "/controls/kt-scroll-bar.md" }
-          ]
+          "kt": "ktlabel",
+          "title": "Kt • Label",
+          "path": "/controls/kt-label.md"
+        },
+        {
+          "kt": "ktpages",
+          "title": "Kt • Pages",
+          "path": "/controls/kt-pages.md"
+        },
+        {
+          "kt": "ktpanel",
+          "title": "Kt • Panel",
+          "path": "/controls/kt-panel.md"
+        },
+        {
+          "kt": "ktradiobox",
+          "title": "Kt • RadioBox",
+          "path": "/controls/kt-radio-box.md"
+        },
+        {
+          "kt": "ktradiobutton",
+          "title": "Kt • RadioButton",
+          "path": "/controls/kt-radio-button.md"
+        },
+        {
+          "kt": "ktswitch",
+          "title": "Kt • Switch",
+          "path": "/controls/kt-switch.md"
+        },
+        {
+          "kt": "kttextbox",
+          "title": "Kt • TextBox",
+          "path": "/controls/kt-text-box.md"
+        },
+        {
+          "kt": "ktwindow",
+          "title": "Kt • Window",
+          "path": "/controls/kt-window.md"
         }
       ]
     },
     {
-      "title": " \ud83d\udd35 Components",
+      "kt": "components",
+      "title": " 🔵 Components",
       "children": [
         {
           "title": "Theming",
           "icon": "palette",
           "children": [
-            { "title": "Kt-Theme", "path": "/utilities/kt-themes.md" },
-            { "title": "Kt-Transition", "path": "/components/kt-transition.md" }
+            {
+              "title": "Kt-Theme",
+              "path": "/utilities/kt-themes.md"
+            },
+            {
+              "title": "Kt-Transition",
+              "path": "/components/kt-transition.md"
+            }
           ]
         },
         {
           "title": "Notifications",
           "icon": "bell",
           "children": [
-            { "title": "Kt-Tooltip", "path": "/components/kt-tooltip.md" },
-            { "title": "Kt-Toast", "path": "/components/kt-toast.md" },
-            { "title": "Kt-Pop-Over", "path": "/components/kt-pop-over.md" }
+            {
+              "title": "Kt-Tooltip",
+              "path": "/components/kt-tooltip.md"
+            },
+            {
+              "title": "Kt-Toast",
+              "path": "/components/kt-toast.md"
+            },
+            {
+              "title": "Kt-Pop-Over",
+              "path": "/components/kt-pop-over.md"
+            }
           ]
         },
         {
           "title": "Validation",
           "icon": "shield-check",
           "children": [
-            { "title": "Kt-Validation", "path": "/components/kt-validation.md" }
+            {
+              "title": "Kt-Validation",
+              "path": "/components/kt-validation.md"
+            }
           ]
         }
       ]
@@ -160,8 +193,14 @@
       "title": "Colors",
       "icon": "swatch-book",
       "children": [
-        { "title": "Kt-Color", "path": "/utilities/kt-color.md" },
-        { "title": "Kt-Brush", "path": "/utilities/kt-brush.md" }
+        {
+          "title": "Kt-Color",
+          "path": "/utilities/kt-color.md"
+        },
+        {
+          "title": "Kt-Brush",
+          "path": "/utilities/kt-brush.md"
+        }
       ]
     },
     {

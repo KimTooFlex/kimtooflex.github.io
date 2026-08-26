@@ -1,6 +1,7 @@
 ---
 title: "KimTools / Controls / TextBox"
-description: "KtTextBox is an enhanced, highly flexible text input control for Modern WinForms with modern design styles and built-in SVG icons"
+description: "An enhanced, highly flexible text input control for Modern WinForms supporting custom styles, SVG icons, and automatic casing."
+keywords: ["KimTools", "Controls", "KtTextBox", "TextBox", "UserControl"]
 toc: false
 layout: "full"
 ---
@@ -16,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-text-box-light](/assets/images/screenshots/kt-text-box/kt-text-box-light.png?v=639233401155254249){ .light .snapshot} ![kt-text-box-dark](/assets/images/screenshots/kt-text-box/kt-text-box-dark.png?v=639233401155254249){.dark .snapshot}
+![kt-text-box-light](/assets/images/screenshots/kt-text-box/kt-text-box-light.png?v=639233545519810644){ .light .snapshot} ![kt-text-box-dark](/assets/images/screenshots/kt-text-box/kt-text-box-dark.png?v=639233545519810644){.dark .snapshot}
 :::
 
 ::: callout success
@@ -99,13 +100,13 @@ passwordInput.Location = new Point(10, 60);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639233401181726474){ .light .snapshot} ![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639233401181726474){.dark .snapshot}
+![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639233545544758672){ .light .snapshot} ![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639233545544758672){.dark .snapshot}
 
 == tab "Light" icon:sun
-![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639233401181726474){  .snapshot}
+![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639233545544758672){  .snapshot}
 
 == tab "Dark" icon:moon
-![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639233401181726474){ .snapshot}
+![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639233545544758672){ .snapshot}
 
 :::
 :::
@@ -136,13 +137,13 @@ loadingInput.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639233401193740950){ .light .snapshot} ![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639233401193740950){.dark .snapshot}
+![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639233545556538395){ .light .snapshot} ![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639233545556538395){.dark .snapshot}
 
 == tab "Light" icon:sun
-![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639233401193740950){  .snapshot}
+![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639233545556538395){  .snapshot}
 
 == tab "Dark" icon:moon
-![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639233401193740950){ .snapshot}
+![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639233545556538395){ .snapshot}
 
 :::
 :::

@@ -1,17 +1,18 @@
 ---
 type: concept
 title: "KimTools / Controls / Switch"
-description: "KtSwitch is a smooth, customizable toggle switch control for Modern WinForms"
+description: "A smooth, highly customizable toggle switch control for Modern WinForms supporting custom state styling and animations."
 source: "https://kimtoo.net/controls/kt-switch/"
 path: /controls/kt-switch/
 updated: 2026-08-26
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T09:39:06.757Z"
+  generated_at: "2026-08-26T12:24:49.998Z"
 ---
 ---
 title: "KimTools / Controls / Switch"
-description: "KtSwitch is a smooth, customizable toggle switch control for Modern WinForms"
+description: "A smooth, highly customizable toggle switch control for Modern WinForms supporting custom state styling and animations."
+keywords: ["KimTools", "Controls", "KtSwitch", "Switch", "UserControl"]
 toc: false
 layout: "full"
 ---
@@ -27,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-switch-light](/assets/images/screenshots/kt-switch/kt-switch-light.png?v=639233401095951872){ .light .snapshot} ![kt-switch-dark](/assets/images/screenshots/kt-switch/kt-switch-dark.png?v=639233401095951872){.dark .snapshot}
+![kt-switch-light](/assets/images/screenshots/kt-switch/kt-switch-light.png?v=639233545461261177){ .light .snapshot} ![kt-switch-dark](/assets/images/screenshots/kt-switch/kt-switch-dark.png?v=639233545461261177){.dark .snapshot}
 :::
 
 ::: callout success
@@ -95,13 +96,13 @@ label.Location = new Point(toggle.Right + 10, 6);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233401122409264){ .light .snapshot} ![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233401122409264){.dark .snapshot}
+![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233545487107507){ .light .snapshot} ![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233545487107507){.dark .snapshot}
 
 == tab "Light" icon:sun
-![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233401122409264){  .snapshot}
+![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233545487097528){  .snapshot}
 
 == tab "Dark" icon:moon
-![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233401122409264){ .snapshot}
+![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233545487107507){ .snapshot}
 
 :::
 :::
@@ -147,13 +148,13 @@ label.Location = new Point(toggle.Right + 10, 6);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233401133058960){ .light .snapshot} ![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233401133058960){.dark .snapshot}
+![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233545497788183){ .light .snapshot} ![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233545497788183){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233401133058960){  .snapshot}
+![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233545497788183){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233401133058960){ .snapshot}
+![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233545497788183){ .snapshot}
 
 :::
 :::
