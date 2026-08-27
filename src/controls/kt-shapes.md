@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-shapes-light](/assets/images/screenshots/kt-shapes/kt-shapes-light.png?v=639233813004582612){ .light .snapshot} ![kt-shapes-dark](/assets/images/screenshots/kt-shapes/kt-shapes-dark.png?v=639233813004582612){.dark .snapshot}
+![kt-shapes-light](/assets/images/screenshots/kt-shapes/kt-shapes-light.png?v=639234524975644323){ .light .snapshot} ![kt-shapes-dark](/assets/images/screenshots/kt-shapes/kt-shapes-dark.png?v=639234524975644323){.dark .snapshot}
 :::
 
 ::: callout success
@@ -122,13 +122,13 @@ panel.Controls.Add(line);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-gallery-light](/assets/images/screenshots/kt-shapes/shapes-gallery-light.png?v=639233813028832792){ .light .snapshot} ![shapes-gallery-dark](/assets/images/screenshots/kt-shapes/shapes-gallery-dark.png?v=639233813028832792){.dark .snapshot}
+![shapes-gallery-light](/assets/images/screenshots/kt-shapes/shapes-gallery-light.png?v=639234525011862839){ .light .snapshot} ![shapes-gallery-dark](/assets/images/screenshots/kt-shapes/shapes-gallery-dark.png?v=639234525011862839){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-gallery-light](/assets/images/screenshots/kt-shapes/shapes-gallery-light.png?v=639233813028806325){  .snapshot}
+![shapes-gallery-light](/assets/images/screenshots/kt-shapes/shapes-gallery-light.png?v=639234525011862839){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-gallery-dark](/assets/images/screenshots/kt-shapes/shapes-gallery-dark.png?v=639233813028806325){ .snapshot}
+![shapes-gallery-dark](/assets/images/screenshots/kt-shapes/shapes-gallery-dark.png?v=639234525011862839){ .snapshot}
 
 :::
 :::
@@ -177,13 +177,13 @@ panel.Controls.Add(outline);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639233813039960447){ .light .snapshot} ![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639233813039960447){.dark .snapshot}
+![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639234525029354335){ .light .snapshot} ![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639234525029354335){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639233813039960447){  .snapshot}
+![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639234525029354335){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639233813039960447){ .snapshot}
+![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639234525029354335){ .snapshot}
 
 :::
 :::
@@ -262,13 +262,13 @@ panel.Controls.Add(octagon);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-polygon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-light.png?v=639233813051950915){ .light .snapshot} ![shapes-polygon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-dark.png?v=639233813051950915){.dark .snapshot}
+![shapes-polygon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-light.png?v=639234525048154878){ .light .snapshot} ![shapes-polygon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-dark.png?v=639234525048154878){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-polygon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-light.png?v=639233813051940850){  .snapshot}
+![shapes-polygon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-light.png?v=639234525048154878){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-polygon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-dark.png?v=639233813051940850){ .snapshot}
+![shapes-polygon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-dark.png?v=639234525048154878){ .snapshot}
 
 :::
 :::
@@ -347,13 +347,13 @@ panel.Controls.Add(line90);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639233813063289096){ .light .snapshot} ![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639233813063289096){.dark .snapshot}
+![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639234525065866143){ .light .snapshot} ![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639234525065866143){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639233813063289096){  .snapshot}
+![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639234525065857103){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639233813063289096){ .snapshot}
+![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639234525065857103){ .snapshot}
 
 :::
 :::
@@ -415,13 +415,13 @@ panel.Controls.Add(thick);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639233813074479846){ .light .snapshot} ![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639233813074479846){.dark .snapshot}
+![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639234525083689343){ .light .snapshot} ![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639234525083689343){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639233813074479846){  .snapshot}
+![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639234525083683448){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639233813074479846){ .snapshot}
+![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639234525083683448){ .snapshot}
 
 :::
 :::

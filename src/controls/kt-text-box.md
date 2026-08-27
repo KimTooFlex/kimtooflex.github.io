@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-text-box-light](/assets/images/screenshots/kt-text-box/kt-text-box-light.png?v=639233746238059871){ .light .snapshot} ![kt-text-box-dark](/assets/images/screenshots/kt-text-box/kt-text-box-dark.png?v=639233746238059871){.dark .snapshot}
+![kt-text-box-light](/assets/images/screenshots/kt-text-box/kt-text-box-light.png?v=639234525668358539){ .light .snapshot} ![kt-text-box-dark](/assets/images/screenshots/kt-text-box/kt-text-box-dark.png?v=639234525668358539){.dark .snapshot}
 :::
 
 ::: callout success
@@ -100,13 +100,13 @@ passwordInput.Location = new Point(10, 60);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639233746276726724){ .light .snapshot} ![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639233746276726724){.dark .snapshot}
+![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639234525711153437){ .light .snapshot} ![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639234525711153437){.dark .snapshot}
 
 == tab "Light" icon:sun
-![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639233746276726724){  .snapshot}
+![textbox-icons-light](/assets/images/screenshots/kt-text-box/textbox-icons-light.png?v=639234525711153437){  .snapshot}
 
 == tab "Dark" icon:moon
-![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639233746276726724){ .snapshot}
+![textbox-icons-dark](/assets/images/screenshots/kt-text-box/textbox-icons-dark.png?v=639234525711153437){ .snapshot}
 
 :::
 :::
@@ -137,13 +137,13 @@ loadingInput.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639233746294748955){ .light .snapshot} ![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639233746294748955){.dark .snapshot}
+![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639234525730082222){ .light .snapshot} ![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639234525730082222){.dark .snapshot}
 
 == tab "Light" icon:sun
-![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639233746294748955){  .snapshot}
+![textbox-loading-light](/assets/images/screenshots/kt-text-box/textbox-loading-light.png?v=639234525730082222){  .snapshot}
 
 == tab "Dark" icon:moon
-![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639233746294748955){ .snapshot}
+![textbox-loading-dark](/assets/images/screenshots/kt-text-box/textbox-loading-dark.png?v=639234525730082222){ .snapshot}
 
 :::
 :::

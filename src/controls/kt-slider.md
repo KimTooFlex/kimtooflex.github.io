@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-slider-light](/assets/images/screenshots/kt-slider/kt-slider-light.png?v=639234337801360505){ .light .snapshot} ![kt-slider-dark](/assets/images/screenshots/kt-slider/kt-slider-dark.png?v=639234337801360505){.dark .snapshot}
+![kt-slider-light](/assets/images/screenshots/kt-slider/kt-slider-light.png?v=639234525095807241){ .light .snapshot} ![kt-slider-dark](/assets/images/screenshots/kt-slider/kt-slider-dark.png?v=639234525095807241){.dark .snapshot}
 :::
 
 ::: callout success
@@ -59,13 +59,13 @@ panel.Controls.Add(slider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234337826296822){ .light .snapshot} ![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234337826296822){.dark .snapshot}
+![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234525135004752){ .light .snapshot} ![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234525135004752){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234337826276835){  .snapshot}
+![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234525135004752){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234337826276835){ .snapshot}
+![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234525135004752){ .snapshot}
 
 :::
 :::
@@ -103,13 +103,13 @@ panel.Controls.Add(slider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234337837284785){ .light .snapshot} ![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234337837284785){.dark .snapshot}
+![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234525152361057){ .light .snapshot} ![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234525152361057){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234337837275655){  .snapshot}
+![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234525152361057){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234337837275655){ .snapshot}
+![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234525152361057){ .snapshot}
 
 :::
 :::
@@ -177,13 +177,13 @@ panel.Controls.Add(error);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234337849333836){ .light .snapshot} ![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234337849333836){.dark .snapshot}
+![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234525171188291){ .light .snapshot} ![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234525171188291){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234337849333836){  .snapshot}
+![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234525171188291){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234337849333836){ .snapshot}
+![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234525171188291){ .snapshot}
 
 :::
 :::
@@ -222,13 +222,13 @@ panel.Controls.Add(slider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234337860765245){ .light .snapshot} ![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234337860765245){.dark .snapshot}
+![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234525189172471){ .light .snapshot} ![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234525189172471){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234337860765245){  .snapshot}
+![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234525189172471){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234337860765245){ .snapshot}
+![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234525189172471){ .snapshot}
 
 :::
 :::

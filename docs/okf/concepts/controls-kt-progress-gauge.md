@@ -7,7 +7,7 @@ path: /controls/kt-progress-gauge/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T10:23:11.103Z"
+  generated_at: "2026-08-27T17:46:21.390Z"
 ---
 ---
 title: "KimTools / Controls / ProgressGauge"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-progress-gauge-light](/assets/images/screenshots/kt-progress-gauge/kt-progress-gauge-light.png?v=639234312128759643){ .light .snapshot} ![kt-progress-gauge-dark](/assets/images/screenshots/kt-progress-gauge/kt-progress-gauge-dark.png?v=639234312128759643){.dark .snapshot}
+![kt-progress-gauge-light](/assets/images/screenshots/kt-progress-gauge/kt-progress-gauge-light.png?v=639234523579673539){ .light .snapshot} ![kt-progress-gauge-dark](/assets/images/screenshots/kt-progress-gauge/kt-progress-gauge-dark.png?v=639234523579673539){.dark .snapshot}
 :::
 
 ::: callout success
@@ -74,13 +74,13 @@ panel.Controls.Add(gauge);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gauge-flat-light](/assets/images/screenshots/kt-progress-gauge/gauge-flat-light.png?v=639234312205848971){ .light .snapshot} ![gauge-flat-dark](/assets/images/screenshots/kt-progress-gauge/gauge-flat-dark.png?v=639234312205848971){.dark .snapshot}
+![gauge-flat-light](/assets/images/screenshots/kt-progress-gauge/gauge-flat-light.png?v=639234523613226743){ .light .snapshot} ![gauge-flat-dark](/assets/images/screenshots/kt-progress-gauge/gauge-flat-dark.png?v=639234523613226743){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gauge-flat-light](/assets/images/screenshots/kt-progress-gauge/gauge-flat-light.png?v=639234312205819510){  .snapshot}
+![gauge-flat-light](/assets/images/screenshots/kt-progress-gauge/gauge-flat-light.png?v=639234523613226743){  .snapshot}
 
 == tab "Dark" icon:moon
-![gauge-flat-dark](/assets/images/screenshots/kt-progress-gauge/gauge-flat-dark.png?v=639234312205819510){ .snapshot}
+![gauge-flat-dark](/assets/images/screenshots/kt-progress-gauge/gauge-flat-dark.png?v=639234523613226743){ .snapshot}
 
 :::
 :::
@@ -124,13 +124,13 @@ panel.Controls.Add(gauge);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gauge-dual-range-light](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-light.png?v=639234312243334586){ .light .snapshot} ![gauge-dual-range-dark](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-dark.png?v=639234312243334586){.dark .snapshot}
+![gauge-dual-range-light](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-light.png?v=639234523629716492){ .light .snapshot} ![gauge-dual-range-dark](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-dark.png?v=639234523629716492){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gauge-dual-range-light](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-light.png?v=639234312243334586){  .snapshot}
+![gauge-dual-range-light](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-light.png?v=639234523629716492){  .snapshot}
 
 == tab "Dark" icon:moon
-![gauge-dual-range-dark](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-dark.png?v=639234312243334586){ .snapshot}
+![gauge-dual-range-dark](/assets/images/screenshots/kt-progress-gauge/gauge-dual-range-dark.png?v=639234523629716492){ .snapshot}
 
 :::
 :::
@@ -207,13 +207,13 @@ panel.Controls.Add(thick);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gauge-thickness-light](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-light.png?v=639234312282008953){ .light .snapshot} ![gauge-thickness-dark](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-dark.png?v=639234312282008953){.dark .snapshot}
+![gauge-thickness-light](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-light.png?v=639234523646758995){ .light .snapshot} ![gauge-thickness-dark](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-dark.png?v=639234523646758995){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gauge-thickness-light](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-light.png?v=639234312282008953){  .snapshot}
+![gauge-thickness-light](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-light.png?v=639234523646748976){  .snapshot}
 
 == tab "Dark" icon:moon
-![gauge-thickness-dark](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-dark.png?v=639234312282008953){ .snapshot}
+![gauge-thickness-dark](/assets/images/screenshots/kt-progress-gauge/gauge-thickness-dark.png?v=639234523646748976){ .snapshot}
 
 :::
 :::
@@ -279,13 +279,13 @@ panel.Controls.Add(fullLabels);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gauge-labels-light](/assets/images/screenshots/kt-progress-gauge/gauge-labels-light.png?v=639234312320176733){ .light .snapshot} ![gauge-labels-dark](/assets/images/screenshots/kt-progress-gauge/gauge-labels-dark.png?v=639234312320176733){.dark .snapshot}
+![gauge-labels-light](/assets/images/screenshots/kt-progress-gauge/gauge-labels-light.png?v=639234523664214089){ .light .snapshot} ![gauge-labels-dark](/assets/images/screenshots/kt-progress-gauge/gauge-labels-dark.png?v=639234523664214089){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gauge-labels-light](/assets/images/screenshots/kt-progress-gauge/gauge-labels-light.png?v=639234312320176733){  .snapshot}
+![gauge-labels-light](/assets/images/screenshots/kt-progress-gauge/gauge-labels-light.png?v=639234523664214089){  .snapshot}
 
 == tab "Dark" icon:moon
-![gauge-labels-dark](/assets/images/screenshots/kt-progress-gauge/gauge-labels-dark.png?v=639234312320176733){ .snapshot}
+![gauge-labels-dark](/assets/images/screenshots/kt-progress-gauge/gauge-labels-dark.png?v=639234523664214089){ .snapshot}
 
 :::
 :::
@@ -332,13 +332,13 @@ panel.Controls.Add(gauge);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gauge-auto-color-light](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-light.png?v=639234312357653182){ .light .snapshot} ![gauge-auto-color-dark](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-dark.png?v=639234312357653182){.dark .snapshot}
+![gauge-auto-color-light](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-light.png?v=639234523681244893){ .light .snapshot} ![gauge-auto-color-dark](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-dark.png?v=639234523681244893){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gauge-auto-color-light](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-light.png?v=639234312357653182){  .snapshot}
+![gauge-auto-color-light](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-light.png?v=639234523681244893){  .snapshot}
 
 == tab "Dark" icon:moon
-![gauge-auto-color-dark](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-dark.png?v=639234312357653182){ .snapshot}
+![gauge-auto-color-dark](/assets/images/screenshots/kt-progress-gauge/gauge-auto-color-dark.png?v=639234523681244893){ .snapshot}
 
 :::
 :::
@@ -397,13 +397,13 @@ panel.Controls.Add(round);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![gauge-caps-light](/assets/images/screenshots/kt-progress-gauge/gauge-caps-light.png?v=639234312395835671){ .light .snapshot} ![gauge-caps-dark](/assets/images/screenshots/kt-progress-gauge/gauge-caps-dark.png?v=639234312395835671){.dark .snapshot}
+![gauge-caps-light](/assets/images/screenshots/kt-progress-gauge/gauge-caps-light.png?v=639234523698079984){ .light .snapshot} ![gauge-caps-dark](/assets/images/screenshots/kt-progress-gauge/gauge-caps-dark.png?v=639234523698079984){.dark .snapshot}
 
 == tab "Light" icon:sun
-![gauge-caps-light](/assets/images/screenshots/kt-progress-gauge/gauge-caps-light.png?v=639234312395835671){  .snapshot}
+![gauge-caps-light](/assets/images/screenshots/kt-progress-gauge/gauge-caps-light.png?v=639234523698079984){  .snapshot}
 
 == tab "Dark" icon:moon
-![gauge-caps-dark](/assets/images/screenshots/kt-progress-gauge/gauge-caps-dark.png?v=639234312395835671){ .snapshot}
+![gauge-caps-dark](/assets/images/screenshots/kt-progress-gauge/gauge-caps-dark.png?v=639234523698079984){ .snapshot}
 
 :::
 :::

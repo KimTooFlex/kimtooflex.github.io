@@ -7,7 +7,7 @@ path: /controls/kt-picture-box/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T10:23:11.091Z"
+  generated_at: "2026-08-27T17:46:21.384Z"
 ---
 ---
 title: "KimTools / Controls / PictureBox"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-picture-box-light](/assets/images/screenshots/kt-picture-box/kt-picture-box-light.png?v=639233745425800943){ .light .snapshot} ![kt-picture-box-dark](/assets/images/screenshots/kt-picture-box/kt-picture-box-dark.png?v=639233745425800943){.dark .snapshot}
+![kt-picture-box-light](/assets/images/screenshots/kt-picture-box/kt-picture-box-light.png?v=639234523435060037){ .light .snapshot} ![kt-picture-box-dark](/assets/images/screenshots/kt-picture-box/kt-picture-box-dark.png?v=639234523435060037){.dark .snapshot}
 :::
 
 ::: callout success
@@ -80,13 +80,13 @@ panel.Controls.Add(glassPic);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![picture-box-image-brush-light](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-light.png?v=639233745456807656){ .light .snapshot} ![picture-box-image-brush-dark](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-dark.png?v=639233745456807656){.dark .snapshot}
+![picture-box-image-brush-light](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-light.png?v=639234523466501001){ .light .snapshot} ![picture-box-image-brush-dark](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-dark.png?v=639234523466501001){.dark .snapshot}
 
 == tab "Light" icon:sun
-![picture-box-image-brush-light](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-light.png?v=639233745456807656){  .snapshot}
+![picture-box-image-brush-light](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-light.png?v=639234523466501001){  .snapshot}
 
 == tab "Dark" icon:moon
-![picture-box-image-brush-dark](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-dark.png?v=639233745456807656){ .snapshot}
+![picture-box-image-brush-dark](/assets/images/screenshots/kt-picture-box/picture-box-image-brush-dark.png?v=639234523466501001){ .snapshot}
 
 :::
 :::
@@ -132,13 +132,13 @@ panel.Controls.Add(fullPill);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![picture-box-border-radius-light](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-light.png?v=639233745475165906){ .light .snapshot} ![picture-box-border-radius-dark](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-dark.png?v=639233745475165906){.dark .snapshot}
+![picture-box-border-radius-light](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-light.png?v=639234523486123766){ .light .snapshot} ![picture-box-border-radius-dark](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-dark.png?v=639234523486123766){.dark .snapshot}
 
 == tab "Light" icon:sun
-![picture-box-border-radius-light](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-light.png?v=639233745475165906){  .snapshot}
+![picture-box-border-radius-light](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-light.png?v=639234523486123766){  .snapshot}
 
 == tab "Dark" icon:moon
-![picture-box-border-radius-dark](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-dark.png?v=639233745475165906){ .snapshot}
+![picture-box-border-radius-dark](/assets/images/screenshots/kt-picture-box/picture-box-border-radius-dark.png?v=639234523486123766){ .snapshot}
 
 :::
 :::

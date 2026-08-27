@@ -7,7 +7,7 @@ path: /controls/kt-table/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T10:23:11.246Z"
+  generated_at: "2026-08-27T17:46:21.467Z"
 ---
 ---
 title: "KimTools / Controls / Table"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-table-light](/assets/images/screenshots/kt-table/kt-table-light.png?v=639233836454618382){ .light .snapshot} ![kt-table-dark](/assets/images/screenshots/kt-table/kt-table-dark.png?v=639233836454618382){.dark .snapshot}
+![kt-table-light](/assets/images/screenshots/kt-table/kt-table-light.png?v=639234525531668621){ .light .snapshot} ![kt-table-dark](/assets/images/screenshots/kt-table/kt-table-dark.png?v=639234525531668621){.dark .snapshot}
 :::
 
 ::: callout success
@@ -79,13 +79,13 @@ panel.Controls.Add(table);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![table-flat-light](/assets/images/screenshots/kt-table/table-flat-light.png?v=639233836480589034){ .light .snapshot} ![table-flat-dark](/assets/images/screenshots/kt-table/table-flat-dark.png?v=639233836480589034){.dark .snapshot}
+![table-flat-light](/assets/images/screenshots/kt-table/table-flat-light.png?v=639234525573162091){ .light .snapshot} ![table-flat-dark](/assets/images/screenshots/kt-table/table-flat-dark.png?v=639234525573162091){.dark .snapshot}
 
 == tab "Light" icon:sun
-![table-flat-light](/assets/images/screenshots/kt-table/table-flat-light.png?v=639233836480568916){  .snapshot}
+![table-flat-light](/assets/images/screenshots/kt-table/table-flat-light.png?v=639234525573152536){  .snapshot}
 
 == tab "Dark" icon:moon
-![table-flat-dark](/assets/images/screenshots/kt-table/table-flat-dark.png?v=639233836480568916){ .snapshot}
+![table-flat-dark](/assets/images/screenshots/kt-table/table-flat-dark.png?v=639234525573152536){ .snapshot}
 
 :::
 :::
@@ -132,13 +132,13 @@ panel.Controls.Add(table);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![table-rounded-light](/assets/images/screenshots/kt-table/table-rounded-light.png?v=639233836492560869){ .light .snapshot} ![table-rounded-dark](/assets/images/screenshots/kt-table/table-rounded-dark.png?v=639233836492560869){.dark .snapshot}
+![table-rounded-light](/assets/images/screenshots/kt-table/table-rounded-light.png?v=639234525592145053){ .light .snapshot} ![table-rounded-dark](/assets/images/screenshots/kt-table/table-rounded-dark.png?v=639234525592145053){.dark .snapshot}
 
 == tab "Light" icon:sun
-![table-rounded-light](/assets/images/screenshots/kt-table/table-rounded-light.png?v=639233836492560869){  .snapshot}
+![table-rounded-light](/assets/images/screenshots/kt-table/table-rounded-light.png?v=639234525592145053){  .snapshot}
 
 == tab "Dark" icon:moon
-![table-rounded-dark](/assets/images/screenshots/kt-table/table-rounded-dark.png?v=639233836492560869){ .snapshot}
+![table-rounded-dark](/assets/images/screenshots/kt-table/table-rounded-dark.png?v=639234525592145053){ .snapshot}
 
 :::
 :::
@@ -206,13 +206,13 @@ panel.Controls.Add(emerald);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![table-themed-light](/assets/images/screenshots/kt-table/table-themed-light.png?v=639233836507717610){ .light .snapshot} ![table-themed-dark](/assets/images/screenshots/kt-table/table-themed-dark.png?v=639233836507717610){.dark .snapshot}
+![table-themed-light](/assets/images/screenshots/kt-table/table-themed-light.png?v=639234525614666452){ .light .snapshot} ![table-themed-dark](/assets/images/screenshots/kt-table/table-themed-dark.png?v=639234525614666452){.dark .snapshot}
 
 == tab "Light" icon:sun
-![table-themed-light](/assets/images/screenshots/kt-table/table-themed-light.png?v=639233836507717610){  .snapshot}
+![table-themed-light](/assets/images/screenshots/kt-table/table-themed-light.png?v=639234525614666452){  .snapshot}
 
 == tab "Dark" icon:moon
-![table-themed-dark](/assets/images/screenshots/kt-table/table-themed-dark.png?v=639233836507717610){ .snapshot}
+![table-themed-dark](/assets/images/screenshots/kt-table/table-themed-dark.png?v=639234525614666452){ .snapshot}
 
 :::
 :::
@@ -262,13 +262,13 @@ panel.Controls.Add(table);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![table-cells-light](/assets/images/screenshots/kt-table/table-cells-light.png?v=639233836520060758){ .light .snapshot} ![table-cells-dark](/assets/images/screenshots/kt-table/table-cells-dark.png?v=639233836520060758){.dark .snapshot}
+![table-cells-light](/assets/images/screenshots/kt-table/table-cells-light.png?v=639234525635681290){ .light .snapshot} ![table-cells-dark](/assets/images/screenshots/kt-table/table-cells-dark.png?v=639234525635681290){.dark .snapshot}
 
 == tab "Light" icon:sun
-![table-cells-light](/assets/images/screenshots/kt-table/table-cells-light.png?v=639233836520051674){  .snapshot}
+![table-cells-light](/assets/images/screenshots/kt-table/table-cells-light.png?v=639234525635681290){  .snapshot}
 
 == tab "Dark" icon:moon
-![table-cells-dark](/assets/images/screenshots/kt-table/table-cells-dark.png?v=639233836520051674){ .snapshot}
+![table-cells-dark](/assets/images/screenshots/kt-table/table-cells-dark.png?v=639234525635681290){ .snapshot}
 
 :::
 :::
@@ -315,13 +315,13 @@ panel.Controls.Add(table);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![table-scrollbar-light](/assets/images/screenshots/kt-table/table-scrollbar-light.png?v=639233836532879134){ .light .snapshot} ![table-scrollbar-dark](/assets/images/screenshots/kt-table/table-scrollbar-dark.png?v=639233836532879134){.dark .snapshot}
+![table-scrollbar-light](/assets/images/screenshots/kt-table/table-scrollbar-light.png?v=639234525655821593){ .light .snapshot} ![table-scrollbar-dark](/assets/images/screenshots/kt-table/table-scrollbar-dark.png?v=639234525655821593){.dark .snapshot}
 
 == tab "Light" icon:sun
-![table-scrollbar-light](/assets/images/screenshots/kt-table/table-scrollbar-light.png?v=639233836532879134){  .snapshot}
+![table-scrollbar-light](/assets/images/screenshots/kt-table/table-scrollbar-light.png?v=639234525655821593){  .snapshot}
 
 == tab "Dark" icon:moon
-![table-scrollbar-dark](/assets/images/screenshots/kt-table/table-scrollbar-dark.png?v=639233836532879134){ .snapshot}
+![table-scrollbar-dark](/assets/images/screenshots/kt-table/table-scrollbar-dark.png?v=639234525655821593){ .snapshot}
 
 :::
 :::

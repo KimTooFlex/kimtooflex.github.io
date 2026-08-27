@@ -7,7 +7,7 @@ path: /controls/kt-label/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T10:23:10.980Z"
+  generated_at: "2026-08-27T17:46:21.366Z"
 ---
 ---
 title: "KimTools / Controls / Label"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-label-light](/assets/images/screenshots/kt-label/kt-label-light.png?v=639233744498655143){ .light .snapshot} ![kt-label-dark](/assets/images/screenshots/kt-label/kt-label-dark.png?v=639233744498655143){.dark .snapshot}
+![kt-label-light](/assets/images/screenshots/kt-label/kt-label-light.png?v=639234522547436428){ .light .snapshot} ![kt-label-dark](/assets/images/screenshots/kt-label/kt-label-dark.png?v=639234522547436428){.dark .snapshot}
 :::
 
 ::: callout success
@@ -92,13 +92,13 @@ errorLabel.Location = new Point(10, 74);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639233744521990778){ .light .snapshot} ![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639233744521990778){.dark .snapshot}
+![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639234522571161393){ .light .snapshot} ![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639234522571161393){.dark .snapshot}
 
 == tab "Light" icon:sun
-![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639233744521990778){  .snapshot}
+![label-colors-light](/assets/images/screenshots/kt-label/label-colors-light.png?v=639234522571161393){  .snapshot}
 
 == tab "Dark" icon:moon
-![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639233744521990778){ .snapshot}
+![label-colors-dark](/assets/images/screenshots/kt-label/label-colors-dark.png?v=639234522571161393){ .snapshot}
 
 :::
 :::
@@ -129,13 +129,13 @@ alignedLabel.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639233744532423050){ .light .snapshot} ![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639233744532423050){.dark .snapshot}
+![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639234522581884076){ .light .snapshot} ![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639234522581884076){.dark .snapshot}
 
 == tab "Light" icon:sun
-![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639233744532407924){  .snapshot}
+![label-alignment-light](/assets/images/screenshots/kt-label/label-alignment-light.png?v=639234522581884076){  .snapshot}
 
 == tab "Dark" icon:moon
-![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639233744532407924){ .snapshot}
+![label-alignment-dark](/assets/images/screenshots/kt-label/label-alignment-dark.png?v=639234522581884076){ .snapshot}
 
 :::
 :::

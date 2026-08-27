@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-date-light](/assets/images/screenshots/kt-date/kt-date-light.png?v=639233744365781521){ .light .snapshot} ![kt-date-dark](/assets/images/screenshots/kt-date/kt-date-dark.png?v=639233744365781521){.dark .snapshot}
+![kt-date-light](/assets/images/screenshots/kt-date/kt-date-light.png?v=639234522433182833){ .light .snapshot} ![kt-date-dark](/assets/images/screenshots/kt-date/kt-date-dark.png?v=639234522433182833){.dark .snapshot}
 :::
 
 ::: callout success
@@ -64,13 +64,13 @@ dateRight.Location = new Point(10, 60);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![date-icon-alignments-light](/assets/images/screenshots/kt-date/date-icon-alignments-light.png?v=639233744388846558){ .light .snapshot} ![date-icon-alignments-dark](/assets/images/screenshots/kt-date/date-icon-alignments-dark.png?v=639233744388846558){.dark .snapshot}
+![date-icon-alignments-light](/assets/images/screenshots/kt-date/date-icon-alignments-light.png?v=639234522456069446){ .light .snapshot} ![date-icon-alignments-dark](/assets/images/screenshots/kt-date/date-icon-alignments-dark.png?v=639234522456069446){.dark .snapshot}
 
 == tab "Light" icon:sun
-![date-icon-alignments-light](/assets/images/screenshots/kt-date/date-icon-alignments-light.png?v=639233744388846558){  .snapshot}
+![date-icon-alignments-light](/assets/images/screenshots/kt-date/date-icon-alignments-light.png?v=639234522456069446){  .snapshot}
 
 == tab "Dark" icon:moon
-![date-icon-alignments-dark](/assets/images/screenshots/kt-date/date-icon-alignments-dark.png?v=639233744388846558){ .snapshot}
+![date-icon-alignments-dark](/assets/images/screenshots/kt-date/date-icon-alignments-dark.png?v=639234522456069446){ .snapshot}
 
 :::
 :::
@@ -119,13 +119,13 @@ subtleGradientPicker.Location = new Point(10, 60);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![date-gradient-background-light](/assets/images/screenshots/kt-date/date-gradient-background-light.png?v=639233744400025373){ .light .snapshot} ![date-gradient-background-dark](/assets/images/screenshots/kt-date/date-gradient-background-dark.png?v=639233744400025373){.dark .snapshot}
+![date-gradient-background-light](/assets/images/screenshots/kt-date/date-gradient-background-light.png?v=639234522467304976){ .light .snapshot} ![date-gradient-background-dark](/assets/images/screenshots/kt-date/date-gradient-background-dark.png?v=639234522467304976){.dark .snapshot}
 
 == tab "Light" icon:sun
-![date-gradient-background-light](/assets/images/screenshots/kt-date/date-gradient-background-light.png?v=639233744400025373){  .snapshot}
+![date-gradient-background-light](/assets/images/screenshots/kt-date/date-gradient-background-light.png?v=639234522467304976){  .snapshot}
 
 == tab "Dark" icon:moon
-![date-gradient-background-dark](/assets/images/screenshots/kt-date/date-gradient-background-dark.png?v=639233744400025373){ .snapshot}
+![date-gradient-background-dark](/assets/images/screenshots/kt-date/date-gradient-background-dark.png?v=639234522467304976){ .snapshot}
 
 :::
 :::
@@ -156,13 +156,13 @@ datePicker.Location = new Point(10, 10);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![date-week-numbers-light](/assets/images/screenshots/kt-date/date-week-numbers-light.png?v=639233744410697666){ .light .snapshot} ![date-week-numbers-dark](/assets/images/screenshots/kt-date/date-week-numbers-dark.png?v=639233744410697666){.dark .snapshot}
+![date-week-numbers-light](/assets/images/screenshots/kt-date/date-week-numbers-light.png?v=639234522478182103){ .light .snapshot} ![date-week-numbers-dark](/assets/images/screenshots/kt-date/date-week-numbers-dark.png?v=639234522478182103){.dark .snapshot}
 
 == tab "Light" icon:sun
-![date-week-numbers-light](/assets/images/screenshots/kt-date/date-week-numbers-light.png?v=639233744410697666){  .snapshot}
+![date-week-numbers-light](/assets/images/screenshots/kt-date/date-week-numbers-light.png?v=639234522478182103){  .snapshot}
 
 == tab "Dark" icon:moon
-![date-week-numbers-dark](/assets/images/screenshots/kt-date/date-week-numbers-dark.png?v=639233744410697666){ .snapshot}
+![date-week-numbers-dark](/assets/images/screenshots/kt-date/date-week-numbers-dark.png?v=639234522478182103){ .snapshot}
 
 :::
 :::

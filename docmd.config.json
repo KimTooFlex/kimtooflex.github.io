@@ -190,6 +190,18 @@
           "icon": "sliders-horizontal"
         },
         {
+          "kt": "kt-slider-vert",
+          "path": "/controls/kt-slider-vert.md",
+          "title": "Kt • SliderVert",
+          "icon": "sliders-vertical"
+        },
+        {
+          "kt": "kt-spinner",
+          "path": "/controls/kt-spinner.md",
+          "title": "Kt • Spinner",
+          "icon": "loader"
+        },
+        {
           "kt": "kt-switch",
           "path": "/controls/kt-switch.md",
           "title": "Kt • Switch",
@@ -208,6 +220,12 @@
           "icon": "text-cursor-input"
         },
         {
+          "kt": "kt-themes",
+          "path": "/controls/kt-themes.md",
+          "title": "Kt • Themes",
+          "icon": "palette"
+        },
+        {
           "kt": "kt-window",
           "path": "/controls/kt-window.md",
           "title": "Kt • Window",
@@ -220,24 +238,16 @@
       "title": " 🔵 Components",
       "children": [
         {
-          "title": "Kt-Transition",
-          "path": "/components/kt-transition.md"
+          "kt": "kt-pop-over",
+          "path": "/components/kt-pop-over.md",
+          "title": "Kt • PopOver",
+          "icon": "picture-in-picture-2"
         },
         {
-          "title": "Kt-Tooltip",
-          "path": "/components/kt-tooltip.md"
-        },
-        {
-          "title": "Kt-Toast",
-          "path": "/components/kt-toast.md"
-        },
-        {
-          "title": "Kt-Pop-Over",
-          "path": "/components/kt-pop-over.md"
-        },
-        {
-          "title": "Kt-Validation",
-          "path": "/components/kt-validation.md"
+          "kt": "kt-toasts",
+          "path": "/components/kt-toasts.md",
+          "title": "Kt • Toasts",
+          "icon": "bell"
         }
       ]
     },

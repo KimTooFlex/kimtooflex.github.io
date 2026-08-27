@@ -7,7 +7,7 @@ path: /controls/kt-progress-radial/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T10:23:11.106Z"
+  generated_at: "2026-08-27T17:46:21.392Z"
 ---
 ---
 title: "KimTools / Controls / ProgressRadial"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-progress-radial-light](/assets/images/screenshots/kt-progress-radial/kt-progress-radial-light.png?v=639233779288801067){ .light .snapshot} ![kt-progress-radial-dark](/assets/images/screenshots/kt-progress-radial/kt-progress-radial-dark.png?v=639233779288801067){.dark .snapshot}
+![kt-progress-radial-light](/assets/images/screenshots/kt-progress-radial/kt-progress-radial-light.png?v=639234523710182812){ .light .snapshot} ![kt-progress-radial-dark](/assets/images/screenshots/kt-progress-radial/kt-progress-radial-dark.png?v=639234523710182812){.dark .snapshot}
 :::
 
 ::: callout success
@@ -74,13 +74,13 @@ panel.Controls.Add(radial);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radial-flat-light](/assets/images/screenshots/kt-progress-radial/radial-flat-light.png?v=639233779366284486){ .light .snapshot} ![radial-flat-dark](/assets/images/screenshots/kt-progress-radial/radial-flat-dark.png?v=639233779366284486){.dark .snapshot}
+![radial-flat-light](/assets/images/screenshots/kt-progress-radial/radial-flat-light.png?v=639234523798446983){ .light .snapshot} ![radial-flat-dark](/assets/images/screenshots/kt-progress-radial/radial-flat-dark.png?v=639234523798446983){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radial-flat-light](/assets/images/screenshots/kt-progress-radial/radial-flat-light.png?v=639233779366264336){  .snapshot}
+![radial-flat-light](/assets/images/screenshots/kt-progress-radial/radial-flat-light.png?v=639234523798446983){  .snapshot}
 
 == tab "Dark" icon:moon
-![radial-flat-dark](/assets/images/screenshots/kt-progress-radial/radial-flat-dark.png?v=639233779366264336){ .snapshot}
+![radial-flat-dark](/assets/images/screenshots/kt-progress-radial/radial-flat-dark.png?v=639234523798446983){ .snapshot}
 
 :::
 :::
@@ -122,13 +122,13 @@ panel.Controls.Add(radial);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radial-gradient-light](/assets/images/screenshots/kt-progress-radial/radial-gradient-light.png?v=639233779403961283){ .light .snapshot} ![radial-gradient-dark](/assets/images/screenshots/kt-progress-radial/radial-gradient-dark.png?v=639233779403961283){.dark .snapshot}
+![radial-gradient-light](/assets/images/screenshots/kt-progress-radial/radial-gradient-light.png?v=639234523842388239){ .light .snapshot} ![radial-gradient-dark](/assets/images/screenshots/kt-progress-radial/radial-gradient-dark.png?v=639234523842388239){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radial-gradient-light](/assets/images/screenshots/kt-progress-radial/radial-gradient-light.png?v=639233779403961283){  .snapshot}
+![radial-gradient-light](/assets/images/screenshots/kt-progress-radial/radial-gradient-light.png?v=639234523842382224){  .snapshot}
 
 == tab "Dark" icon:moon
-![radial-gradient-dark](/assets/images/screenshots/kt-progress-radial/radial-gradient-dark.png?v=639233779403961283){ .snapshot}
+![radial-gradient-dark](/assets/images/screenshots/kt-progress-radial/radial-gradient-dark.png?v=639234523842382224){ .snapshot}
 
 :::
 :::
@@ -170,13 +170,13 @@ panel.Controls.Add(radial);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radial-caps-light](/assets/images/screenshots/kt-progress-radial/radial-caps-light.png?v=639233779441760041){ .light .snapshot} ![radial-caps-dark](/assets/images/screenshots/kt-progress-radial/radial-caps-dark.png?v=639233779441760041){.dark .snapshot}
+![radial-caps-light](/assets/images/screenshots/kt-progress-radial/radial-caps-light.png?v=639234523886087418){ .light .snapshot} ![radial-caps-dark](/assets/images/screenshots/kt-progress-radial/radial-caps-dark.png?v=639234523886087418){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radial-caps-light](/assets/images/screenshots/kt-progress-radial/radial-caps-light.png?v=639233779441760041){  .snapshot}
+![radial-caps-light](/assets/images/screenshots/kt-progress-radial/radial-caps-light.png?v=639234523886087418){  .snapshot}
 
 == tab "Dark" icon:moon
-![radial-caps-dark](/assets/images/screenshots/kt-progress-radial/radial-caps-dark.png?v=639233779441760041){ .snapshot}
+![radial-caps-dark](/assets/images/screenshots/kt-progress-radial/radial-caps-dark.png?v=639234523886087418){ .snapshot}
 
 :::
 :::
@@ -218,13 +218,13 @@ panel.Controls.Add(radial);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radial-thickness-light](/assets/images/screenshots/kt-progress-radial/radial-thickness-light.png?v=639233779479654984){ .light .snapshot} ![radial-thickness-dark](/assets/images/screenshots/kt-progress-radial/radial-thickness-dark.png?v=639233779479654984){.dark .snapshot}
+![radial-thickness-light](/assets/images/screenshots/kt-progress-radial/radial-thickness-light.png?v=639234523929883173){ .light .snapshot} ![radial-thickness-dark](/assets/images/screenshots/kt-progress-radial/radial-thickness-dark.png?v=639234523929883173){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radial-thickness-light](/assets/images/screenshots/kt-progress-radial/radial-thickness-light.png?v=639233779479654984){  .snapshot}
+![radial-thickness-light](/assets/images/screenshots/kt-progress-radial/radial-thickness-light.png?v=639234523929883173){  .snapshot}
 
 == tab "Dark" icon:moon
-![radial-thickness-dark](/assets/images/screenshots/kt-progress-radial/radial-thickness-dark.png?v=639233779479654984){ .snapshot}
+![radial-thickness-dark](/assets/images/screenshots/kt-progress-radial/radial-thickness-dark.png?v=639234523929883173){ .snapshot}
 
 :::
 :::
@@ -268,13 +268,13 @@ panel.Controls.Add(radial);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radial-percentage-light](/assets/images/screenshots/kt-progress-radial/radial-percentage-light.png?v=639233779517443132){ .light .snapshot} ![radial-percentage-dark](/assets/images/screenshots/kt-progress-radial/radial-percentage-dark.png?v=639233779517443132){.dark .snapshot}
+![radial-percentage-light](/assets/images/screenshots/kt-progress-radial/radial-percentage-light.png?v=639234523973901549){ .light .snapshot} ![radial-percentage-dark](/assets/images/screenshots/kt-progress-radial/radial-percentage-dark.png?v=639234523973901549){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radial-percentage-light](/assets/images/screenshots/kt-progress-radial/radial-percentage-light.png?v=639233779517443132){  .snapshot}
+![radial-percentage-light](/assets/images/screenshots/kt-progress-radial/radial-percentage-light.png?v=639234523973901549){  .snapshot}
 
 == tab "Dark" icon:moon
-![radial-percentage-dark](/assets/images/screenshots/kt-progress-radial/radial-percentage-dark.png?v=639233779517443132){ .snapshot}
+![radial-percentage-dark](/assets/images/screenshots/kt-progress-radial/radial-percentage-dark.png?v=639234523973901549){ .snapshot}
 
 :::
 :::
@@ -323,13 +323,13 @@ panel.Controls.Add(radial);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radial-sub-superscript-light](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-light.png?v=639233779555450990){ .light .snapshot} ![radial-sub-superscript-dark](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-dark.png?v=639233779555450990){.dark .snapshot}
+![radial-sub-superscript-light](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-light.png?v=639234524018199279){ .light .snapshot} ![radial-sub-superscript-dark](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-dark.png?v=639234524018199279){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radial-sub-superscript-light](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-light.png?v=639233779555450990){  .snapshot}
+![radial-sub-superscript-light](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-light.png?v=639234524018199279){  .snapshot}
 
 == tab "Dark" icon:moon
-![radial-sub-superscript-dark](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-dark.png?v=639233779555450990){ .snapshot}
+![radial-sub-superscript-dark](/assets/images/screenshots/kt-progress-radial/radial-sub-superscript-dark.png?v=639234524018199279){ .snapshot}
 
 :::
 :::
@@ -374,13 +374,13 @@ panel.Controls.Add(radial);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![radial-animated-light](/assets/images/screenshots/kt-progress-radial/radial-animated-light.png?v=639233779593436404){ .light .snapshot} ![radial-animated-dark](/assets/images/screenshots/kt-progress-radial/radial-animated-dark.png?v=639233779593436404){.dark .snapshot}
+![radial-animated-light](/assets/images/screenshots/kt-progress-radial/radial-animated-light.png?v=639234524063055068){ .light .snapshot} ![radial-animated-dark](/assets/images/screenshots/kt-progress-radial/radial-animated-dark.png?v=639234524063055068){.dark .snapshot}
 
 == tab "Light" icon:sun
-![radial-animated-light](/assets/images/screenshots/kt-progress-radial/radial-animated-light.png?v=639233779593436404){  .snapshot}
+![radial-animated-light](/assets/images/screenshots/kt-progress-radial/radial-animated-light.png?v=639234524063055068){  .snapshot}
 
 == tab "Dark" icon:moon
-![radial-animated-dark](/assets/images/screenshots/kt-progress-radial/radial-animated-dark.png?v=639233779593436404){ .snapshot}
+![radial-animated-dark](/assets/images/screenshots/kt-progress-radial/radial-animated-dark.png?v=639234524063055068){ .snapshot}
 
 :::
 :::

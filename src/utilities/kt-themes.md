@@ -17,174 +17,174 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-themes-light](/assets/images/screenshots/kt-themes/kt-themes-light.png?v=639233746316858313){ .light .snapshot} ![kt-themes-dark](/assets/images/screenshots/kt-themes/kt-themes-dark.png?v=639233746316858313){.dark .snapshot}
+![kt-themes-light](/assets/images/screenshots/kt-themes/kt-themes-light.png?v=639234525742380721){ .light .snapshot} ![kt-themes-dark](/assets/images/screenshots/kt-themes/kt-themes-dark.png?v=639234525742380721){.dark .snapshot}
 :::
 <!-- -->
 
 ::: grids
 
 ::: grid
-![Cupcake-light](/assets/images/screenshots/kt-themes/Cupcake-light.png?v=639233746343289001){ .light .snapshot} ![Cupcake-dark](/assets/images/screenshots/kt-themes/Cupcake-dark.png?v=639233746343289001){.dark .snapshot}
+![Cupcake-light](/assets/images/screenshots/kt-themes/Cupcake-light.png?v=639234525771389169){ .light .snapshot} ![Cupcake-dark](/assets/images/screenshots/kt-themes/Cupcake-dark.png?v=639234525771389169){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Bumblebee-light](/assets/images/screenshots/kt-themes/Bumblebee-light.png?v=639233746343289001){ .light .snapshot} ![Bumblebee-dark](/assets/images/screenshots/kt-themes/Bumblebee-dark.png?v=639233746343289001){.dark .snapshot}
+![Bumblebee-light](/assets/images/screenshots/kt-themes/Bumblebee-light.png?v=639234525771399244){ .light .snapshot} ![Bumblebee-dark](/assets/images/screenshots/kt-themes/Bumblebee-dark.png?v=639234525771399244){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Emerald-light](/assets/images/screenshots/kt-themes/Emerald-light.png?v=639233746343289001){ .light .snapshot} ![Emerald-dark](/assets/images/screenshots/kt-themes/Emerald-dark.png?v=639233746343289001){.dark .snapshot}
+![Emerald-light](/assets/images/screenshots/kt-themes/Emerald-light.png?v=639234525771399244){ .light .snapshot} ![Emerald-dark](/assets/images/screenshots/kt-themes/Emerald-dark.png?v=639234525771399244){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Corporate-light](/assets/images/screenshots/kt-themes/Corporate-light.png?v=639233746343289001){ .light .snapshot} ![Corporate-dark](/assets/images/screenshots/kt-themes/Corporate-dark.png?v=639233746343289001){.dark .snapshot}
+![Corporate-light](/assets/images/screenshots/kt-themes/Corporate-light.png?v=639234525771399244){ .light .snapshot} ![Corporate-dark](/assets/images/screenshots/kt-themes/Corporate-dark.png?v=639234525771399244){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Synthwave-light](/assets/images/screenshots/kt-themes/Synthwave-light.png?v=639233746343289001){ .light .snapshot} ![Synthwave-dark](/assets/images/screenshots/kt-themes/Synthwave-dark.png?v=639233746343289001){.dark .snapshot}
+![Synthwave-light](/assets/images/screenshots/kt-themes/Synthwave-light.png?v=639234525771404282){ .light .snapshot} ![Synthwave-dark](/assets/images/screenshots/kt-themes/Synthwave-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Retro-light](/assets/images/screenshots/kt-themes/Retro-light.png?v=639233746343298994){ .light .snapshot} ![Retro-dark](/assets/images/screenshots/kt-themes/Retro-dark.png?v=639233746343298994){.dark .snapshot}
+![Retro-light](/assets/images/screenshots/kt-themes/Retro-light.png?v=639234525771404282){ .light .snapshot} ![Retro-dark](/assets/images/screenshots/kt-themes/Retro-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Cyberpunk-light](/assets/images/screenshots/kt-themes/Cyberpunk-light.png?v=639233746343298994){ .light .snapshot} ![Cyberpunk-dark](/assets/images/screenshots/kt-themes/Cyberpunk-dark.png?v=639233746343298994){.dark .snapshot}
+![Cyberpunk-light](/assets/images/screenshots/kt-themes/Cyberpunk-light.png?v=639234525771404282){ .light .snapshot} ![Cyberpunk-dark](/assets/images/screenshots/kt-themes/Cyberpunk-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Valentine-light](/assets/images/screenshots/kt-themes/Valentine-light.png?v=639233746343298994){ .light .snapshot} ![Valentine-dark](/assets/images/screenshots/kt-themes/Valentine-dark.png?v=639233746343298994){.dark .snapshot}
+![Valentine-light](/assets/images/screenshots/kt-themes/Valentine-light.png?v=639234525771404282){ .light .snapshot} ![Valentine-dark](/assets/images/screenshots/kt-themes/Valentine-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Halloween-light](/assets/images/screenshots/kt-themes/Halloween-light.png?v=639233746343298994){ .light .snapshot} ![Halloween-dark](/assets/images/screenshots/kt-themes/Halloween-dark.png?v=639233746343298994){.dark .snapshot}
+![Halloween-light](/assets/images/screenshots/kt-themes/Halloween-light.png?v=639234525771404282){ .light .snapshot} ![Halloween-dark](/assets/images/screenshots/kt-themes/Halloween-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Garden-light](/assets/images/screenshots/kt-themes/Garden-light.png?v=639233746343298994){ .light .snapshot} ![Garden-dark](/assets/images/screenshots/kt-themes/Garden-dark.png?v=639233746343298994){.dark .snapshot}
+![Garden-light](/assets/images/screenshots/kt-themes/Garden-light.png?v=639234525771404282){ .light .snapshot} ![Garden-dark](/assets/images/screenshots/kt-themes/Garden-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Forest-light](/assets/images/screenshots/kt-themes/Forest-light.png?v=639233746343298994){ .light .snapshot} ![Forest-dark](/assets/images/screenshots/kt-themes/Forest-dark.png?v=639233746343298994){.dark .snapshot}
+![Forest-light](/assets/images/screenshots/kt-themes/Forest-light.png?v=639234525771404282){ .light .snapshot} ![Forest-dark](/assets/images/screenshots/kt-themes/Forest-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Aqua-light](/assets/images/screenshots/kt-themes/Aqua-light.png?v=639233746343298994){ .light .snapshot} ![Aqua-dark](/assets/images/screenshots/kt-themes/Aqua-dark.png?v=639233746343298994){.dark .snapshot}
+![Aqua-light](/assets/images/screenshots/kt-themes/Aqua-light.png?v=639234525771404282){ .light .snapshot} ![Aqua-dark](/assets/images/screenshots/kt-themes/Aqua-dark.png?v=639234525771404282){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Lofi-light](/assets/images/screenshots/kt-themes/Lofi-light.png?v=639233746343298994){ .light .snapshot} ![Lofi-dark](/assets/images/screenshots/kt-themes/Lofi-dark.png?v=639233746343298994){.dark .snapshot}
+![Lofi-light](/assets/images/screenshots/kt-themes/Lofi-light.png?v=639234525771414319){ .light .snapshot} ![Lofi-dark](/assets/images/screenshots/kt-themes/Lofi-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Pastel-light](/assets/images/screenshots/kt-themes/Pastel-light.png?v=639233746343308994){ .light .snapshot} ![Pastel-dark](/assets/images/screenshots/kt-themes/Pastel-dark.png?v=639233746343308994){.dark .snapshot}
+![Pastel-light](/assets/images/screenshots/kt-themes/Pastel-light.png?v=639234525771414319){ .light .snapshot} ![Pastel-dark](/assets/images/screenshots/kt-themes/Pastel-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Fantasy-light](/assets/images/screenshots/kt-themes/Fantasy-light.png?v=639233746343308994){ .light .snapshot} ![Fantasy-dark](/assets/images/screenshots/kt-themes/Fantasy-dark.png?v=639233746343308994){.dark .snapshot}
+![Fantasy-light](/assets/images/screenshots/kt-themes/Fantasy-light.png?v=639234525771414319){ .light .snapshot} ![Fantasy-dark](/assets/images/screenshots/kt-themes/Fantasy-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Wireframe-light](/assets/images/screenshots/kt-themes/Wireframe-light.png?v=639233746343308994){ .light .snapshot} ![Wireframe-dark](/assets/images/screenshots/kt-themes/Wireframe-dark.png?v=639233746343308994){.dark .snapshot}
+![Wireframe-light](/assets/images/screenshots/kt-themes/Wireframe-light.png?v=639234525771414319){ .light .snapshot} ![Wireframe-dark](/assets/images/screenshots/kt-themes/Wireframe-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Black-light](/assets/images/screenshots/kt-themes/Black-light.png?v=639233746343308994){ .light .snapshot} ![Black-dark](/assets/images/screenshots/kt-themes/Black-dark.png?v=639233746343308994){.dark .snapshot}
+![Black-light](/assets/images/screenshots/kt-themes/Black-light.png?v=639234525771414319){ .light .snapshot} ![Black-dark](/assets/images/screenshots/kt-themes/Black-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Luxury-light](/assets/images/screenshots/kt-themes/Luxury-light.png?v=639233746343308994){ .light .snapshot} ![Luxury-dark](/assets/images/screenshots/kt-themes/Luxury-dark.png?v=639233746343308994){.dark .snapshot}
+![Luxury-light](/assets/images/screenshots/kt-themes/Luxury-light.png?v=639234525771414319){ .light .snapshot} ![Luxury-dark](/assets/images/screenshots/kt-themes/Luxury-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Dracula-light](/assets/images/screenshots/kt-themes/Dracula-light.png?v=639233746343308994){ .light .snapshot} ![Dracula-dark](/assets/images/screenshots/kt-themes/Dracula-dark.png?v=639233746343308994){.dark .snapshot}
+![Dracula-light](/assets/images/screenshots/kt-themes/Dracula-light.png?v=639234525771414319){ .light .snapshot} ![Dracula-dark](/assets/images/screenshots/kt-themes/Dracula-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![CMYK-light](/assets/images/screenshots/kt-themes/CMYK-light.png?v=639233746343308994){ .light .snapshot} ![CMYK-dark](/assets/images/screenshots/kt-themes/CMYK-dark.png?v=639233746343308994){.dark .snapshot}
+![CMYK-light](/assets/images/screenshots/kt-themes/CMYK-light.png?v=639234525771414319){ .light .snapshot} ![CMYK-dark](/assets/images/screenshots/kt-themes/CMYK-dark.png?v=639234525771414319){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Autumn-light](/assets/images/screenshots/kt-themes/Autumn-light.png?v=639233746343308994){ .light .snapshot} ![Autumn-dark](/assets/images/screenshots/kt-themes/Autumn-dark.png?v=639233746343308994){.dark .snapshot}
+![Autumn-light](/assets/images/screenshots/kt-themes/Autumn-light.png?v=639234525771424351){ .light .snapshot} ![Autumn-dark](/assets/images/screenshots/kt-themes/Autumn-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Business-light](/assets/images/screenshots/kt-themes/Business-light.png?v=639233746343308994){ .light .snapshot} ![Business-dark](/assets/images/screenshots/kt-themes/Business-dark.png?v=639233746343308994){.dark .snapshot}
+![Business-light](/assets/images/screenshots/kt-themes/Business-light.png?v=639234525771424351){ .light .snapshot} ![Business-dark](/assets/images/screenshots/kt-themes/Business-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Acid-light](/assets/images/screenshots/kt-themes/Acid-light.png?v=639233746343308994){ .light .snapshot} ![Acid-dark](/assets/images/screenshots/kt-themes/Acid-dark.png?v=639233746343308994){.dark .snapshot}
+![Acid-light](/assets/images/screenshots/kt-themes/Acid-light.png?v=639234525771424351){ .light .snapshot} ![Acid-dark](/assets/images/screenshots/kt-themes/Acid-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Lemonade-light](/assets/images/screenshots/kt-themes/Lemonade-light.png?v=639233746343308994){ .light .snapshot} ![Lemonade-dark](/assets/images/screenshots/kt-themes/Lemonade-dark.png?v=639233746343308994){.dark .snapshot}
+![Lemonade-light](/assets/images/screenshots/kt-themes/Lemonade-light.png?v=639234525771424351){ .light .snapshot} ![Lemonade-dark](/assets/images/screenshots/kt-themes/Lemonade-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Night-light](/assets/images/screenshots/kt-themes/Night-light.png?v=639233746343308994){ .light .snapshot} ![Night-dark](/assets/images/screenshots/kt-themes/Night-dark.png?v=639233746343308994){.dark .snapshot}
+![Night-light](/assets/images/screenshots/kt-themes/Night-light.png?v=639234525771424351){ .light .snapshot} ![Night-dark](/assets/images/screenshots/kt-themes/Night-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Coffee-light](/assets/images/screenshots/kt-themes/Coffee-light.png?v=639233746343308994){ .light .snapshot} ![Coffee-dark](/assets/images/screenshots/kt-themes/Coffee-dark.png?v=639233746343308994){.dark .snapshot}
+![Coffee-light](/assets/images/screenshots/kt-themes/Coffee-light.png?v=639234525771424351){ .light .snapshot} ![Coffee-dark](/assets/images/screenshots/kt-themes/Coffee-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Winter-light](/assets/images/screenshots/kt-themes/Winter-light.png?v=639233746343324053){ .light .snapshot} ![Winter-dark](/assets/images/screenshots/kt-themes/Winter-dark.png?v=639233746343324053){.dark .snapshot}
+![Winter-light](/assets/images/screenshots/kt-themes/Winter-light.png?v=639234525771424351){ .light .snapshot} ![Winter-dark](/assets/images/screenshots/kt-themes/Winter-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Dim-light](/assets/images/screenshots/kt-themes/Dim-light.png?v=639233746343324053){ .light .snapshot} ![Dim-dark](/assets/images/screenshots/kt-themes/Dim-dark.png?v=639233746343324053){.dark .snapshot}
+![Dim-light](/assets/images/screenshots/kt-themes/Dim-light.png?v=639234525771424351){ .light .snapshot} ![Dim-dark](/assets/images/screenshots/kt-themes/Dim-dark.png?v=639234525771424351){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Nord-light](/assets/images/screenshots/kt-themes/Nord-light.png?v=639233746343324053){ .light .snapshot} ![Nord-dark](/assets/images/screenshots/kt-themes/Nord-dark.png?v=639233746343324053){.dark .snapshot}
+![Nord-light](/assets/images/screenshots/kt-themes/Nord-light.png?v=639234525771434350){ .light .snapshot} ![Nord-dark](/assets/images/screenshots/kt-themes/Nord-dark.png?v=639234525771434350){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Sunset-light](/assets/images/screenshots/kt-themes/Sunset-light.png?v=639233746343324053){ .light .snapshot} ![Sunset-dark](/assets/images/screenshots/kt-themes/Sunset-dark.png?v=639233746343324053){.dark .snapshot}
+![Sunset-light](/assets/images/screenshots/kt-themes/Sunset-light.png?v=639234525771434350){ .light .snapshot} ![Sunset-dark](/assets/images/screenshots/kt-themes/Sunset-dark.png?v=639234525771434350){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![CaramelLatte-light](/assets/images/screenshots/kt-themes/CaramelLatte-light.png?v=639233746343324053){ .light .snapshot} ![CaramelLatte-dark](/assets/images/screenshots/kt-themes/CaramelLatte-dark.png?v=639233746343324053){.dark .snapshot}
+![CaramelLatte-light](/assets/images/screenshots/kt-themes/CaramelLatte-light.png?v=639234525771434350){ .light .snapshot} ![CaramelLatte-dark](/assets/images/screenshots/kt-themes/CaramelLatte-dark.png?v=639234525771434350){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Abyss-light](/assets/images/screenshots/kt-themes/Abyss-light.png?v=639233746343324053){ .light .snapshot} ![Abyss-dark](/assets/images/screenshots/kt-themes/Abyss-dark.png?v=639233746343324053){.dark .snapshot}
+![Abyss-light](/assets/images/screenshots/kt-themes/Abyss-light.png?v=639234525771434350){ .light .snapshot} ![Abyss-dark](/assets/images/screenshots/kt-themes/Abyss-dark.png?v=639234525771434350){.dark .snapshot}
 ::: 
 
 
 ::: grid
-![Silk-light](/assets/images/screenshots/kt-themes/Silk-light.png?v=639233746343324053){ .light .snapshot} ![Silk-dark](/assets/images/screenshots/kt-themes/Silk-dark.png?v=639233746343324053){.dark .snapshot}
+![Silk-light](/assets/images/screenshots/kt-themes/Silk-light.png?v=639234525771434350){ .light .snapshot} ![Silk-dark](/assets/images/screenshots/kt-themes/Silk-dark.png?v=639234525771434350){.dark .snapshot}
 ::: 
 
 :::
@@ -238,13 +238,13 @@ KtColor.Presets.Cupcake();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Cupcake-light](/assets/images/screenshots/kt-themes/Cupcake-light.png?v=639233746389804903){ .light .snapshot} ![Cupcake-dark](/assets/images/screenshots/kt-themes/Cupcake-dark.png?v=639233746389804903){.dark .snapshot}
+![Cupcake-light](/assets/images/screenshots/kt-themes/Cupcake-light.png?v=639234525818597009){ .light .snapshot} ![Cupcake-dark](/assets/images/screenshots/kt-themes/Cupcake-dark.png?v=639234525818597009){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Cupcake-light](/assets/images/screenshots/kt-themes/Cupcake-light.png?v=639233746389804903){  .snapshot}
+![Cupcake-light](/assets/images/screenshots/kt-themes/Cupcake-light.png?v=639234525818597009){  .snapshot}
 
 == tab "Dark" icon:moon
-![Cupcake-dark](/assets/images/screenshots/kt-themes/Cupcake-dark.png?v=639233746389804903){ .snapshot}
+![Cupcake-dark](/assets/images/screenshots/kt-themes/Cupcake-dark.png?v=639234525818597009){ .snapshot}
 
 :::
 :::
@@ -259,13 +259,13 @@ KtColor.Presets.Bumblebee();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Bumblebee-light](/assets/images/screenshots/kt-themes/Bumblebee-light.png?v=639233746422694619){ .light .snapshot} ![Bumblebee-dark](/assets/images/screenshots/kt-themes/Bumblebee-dark.png?v=639233746422694619){.dark .snapshot}
+![Bumblebee-light](/assets/images/screenshots/kt-themes/Bumblebee-light.png?v=639234525852513862){ .light .snapshot} ![Bumblebee-dark](/assets/images/screenshots/kt-themes/Bumblebee-dark.png?v=639234525852513862){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Bumblebee-light](/assets/images/screenshots/kt-themes/Bumblebee-light.png?v=639233746422694619){  .snapshot}
+![Bumblebee-light](/assets/images/screenshots/kt-themes/Bumblebee-light.png?v=639234525852513862){  .snapshot}
 
 == tab "Dark" icon:moon
-![Bumblebee-dark](/assets/images/screenshots/kt-themes/Bumblebee-dark.png?v=639233746422694619){ .snapshot}
+![Bumblebee-dark](/assets/images/screenshots/kt-themes/Bumblebee-dark.png?v=639234525852513862){ .snapshot}
 
 :::
 :::
@@ -280,13 +280,13 @@ KtColor.Presets.Emerald();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Emerald-light](/assets/images/screenshots/kt-themes/Emerald-light.png?v=639233746454160514){ .light .snapshot} ![Emerald-dark](/assets/images/screenshots/kt-themes/Emerald-dark.png?v=639233746454160514){.dark .snapshot}
+![Emerald-light](/assets/images/screenshots/kt-themes/Emerald-light.png?v=639234525885342268){ .light .snapshot} ![Emerald-dark](/assets/images/screenshots/kt-themes/Emerald-dark.png?v=639234525885342268){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Emerald-light](/assets/images/screenshots/kt-themes/Emerald-light.png?v=639233746454150350){  .snapshot}
+![Emerald-light](/assets/images/screenshots/kt-themes/Emerald-light.png?v=639234525885333195){  .snapshot}
 
 == tab "Dark" icon:moon
-![Emerald-dark](/assets/images/screenshots/kt-themes/Emerald-dark.png?v=639233746454150350){ .snapshot}
+![Emerald-dark](/assets/images/screenshots/kt-themes/Emerald-dark.png?v=639234525885333195){ .snapshot}
 
 :::
 :::
@@ -301,13 +301,13 @@ KtColor.Presets.Corporate();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Corporate-light](/assets/images/screenshots/kt-themes/Corporate-light.png?v=639233746487548879){ .light .snapshot} ![Corporate-dark](/assets/images/screenshots/kt-themes/Corporate-dark.png?v=639233746487548879){.dark .snapshot}
+![Corporate-light](/assets/images/screenshots/kt-themes/Corporate-light.png?v=639234525917244034){ .light .snapshot} ![Corporate-dark](/assets/images/screenshots/kt-themes/Corporate-dark.png?v=639234525917244034){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Corporate-light](/assets/images/screenshots/kt-themes/Corporate-light.png?v=639233746487548879){  .snapshot}
+![Corporate-light](/assets/images/screenshots/kt-themes/Corporate-light.png?v=639234525917244034){  .snapshot}
 
 == tab "Dark" icon:moon
-![Corporate-dark](/assets/images/screenshots/kt-themes/Corporate-dark.png?v=639233746487548879){ .snapshot}
+![Corporate-dark](/assets/images/screenshots/kt-themes/Corporate-dark.png?v=639234525917244034){ .snapshot}
 
 :::
 :::
@@ -322,13 +322,13 @@ KtColor.Presets.Synthwave();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Synthwave-light](/assets/images/screenshots/kt-themes/Synthwave-light.png?v=639233746520606807){ .light .snapshot} ![Synthwave-dark](/assets/images/screenshots/kt-themes/Synthwave-dark.png?v=639233746520606807){.dark .snapshot}
+![Synthwave-light](/assets/images/screenshots/kt-themes/Synthwave-light.png?v=639234525950161006){ .light .snapshot} ![Synthwave-dark](/assets/images/screenshots/kt-themes/Synthwave-dark.png?v=639234525950161006){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Synthwave-light](/assets/images/screenshots/kt-themes/Synthwave-light.png?v=639233746520606807){  .snapshot}
+![Synthwave-light](/assets/images/screenshots/kt-themes/Synthwave-light.png?v=639234525950161006){  .snapshot}
 
 == tab "Dark" icon:moon
-![Synthwave-dark](/assets/images/screenshots/kt-themes/Synthwave-dark.png?v=639233746520606807){ .snapshot}
+![Synthwave-dark](/assets/images/screenshots/kt-themes/Synthwave-dark.png?v=639234525950161006){ .snapshot}
 
 :::
 :::
@@ -343,13 +343,13 @@ KtColor.Presets.Retro();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Retro-light](/assets/images/screenshots/kt-themes/Retro-light.png?v=639233746551956680){ .light .snapshot} ![Retro-dark](/assets/images/screenshots/kt-themes/Retro-dark.png?v=639233746551956680){.dark .snapshot}
+![Retro-light](/assets/images/screenshots/kt-themes/Retro-light.png?v=639234525983912324){ .light .snapshot} ![Retro-dark](/assets/images/screenshots/kt-themes/Retro-dark.png?v=639234525983912324){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Retro-light](/assets/images/screenshots/kt-themes/Retro-light.png?v=639233746551956680){  .snapshot}
+![Retro-light](/assets/images/screenshots/kt-themes/Retro-light.png?v=639234525983912324){  .snapshot}
 
 == tab "Dark" icon:moon
-![Retro-dark](/assets/images/screenshots/kt-themes/Retro-dark.png?v=639233746551956680){ .snapshot}
+![Retro-dark](/assets/images/screenshots/kt-themes/Retro-dark.png?v=639234525983912324){ .snapshot}
 
 :::
 :::
@@ -364,13 +364,13 @@ KtColor.Presets.Cyberpunk();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Cyberpunk-light](/assets/images/screenshots/kt-themes/Cyberpunk-light.png?v=639233746582776318){ .light .snapshot} ![Cyberpunk-dark](/assets/images/screenshots/kt-themes/Cyberpunk-dark.png?v=639233746582776318){.dark .snapshot}
+![Cyberpunk-light](/assets/images/screenshots/kt-themes/Cyberpunk-light.png?v=639234526021582708){ .light .snapshot} ![Cyberpunk-dark](/assets/images/screenshots/kt-themes/Cyberpunk-dark.png?v=639234526021582708){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Cyberpunk-light](/assets/images/screenshots/kt-themes/Cyberpunk-light.png?v=639233746582776318){  .snapshot}
+![Cyberpunk-light](/assets/images/screenshots/kt-themes/Cyberpunk-light.png?v=639234526021582708){  .snapshot}
 
 == tab "Dark" icon:moon
-![Cyberpunk-dark](/assets/images/screenshots/kt-themes/Cyberpunk-dark.png?v=639233746582776318){ .snapshot}
+![Cyberpunk-dark](/assets/images/screenshots/kt-themes/Cyberpunk-dark.png?v=639234526021582708){ .snapshot}
 
 :::
 :::
@@ -385,13 +385,13 @@ KtColor.Presets.Valentine();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Valentine-light](/assets/images/screenshots/kt-themes/Valentine-light.png?v=639233746614906970){ .light .snapshot} ![Valentine-dark](/assets/images/screenshots/kt-themes/Valentine-dark.png?v=639233746614906970){.dark .snapshot}
+![Valentine-light](/assets/images/screenshots/kt-themes/Valentine-light.png?v=639234526054347044){ .light .snapshot} ![Valentine-dark](/assets/images/screenshots/kt-themes/Valentine-dark.png?v=639234526054347044){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Valentine-light](/assets/images/screenshots/kt-themes/Valentine-light.png?v=639233746614906970){  .snapshot}
+![Valentine-light](/assets/images/screenshots/kt-themes/Valentine-light.png?v=639234526054347044){  .snapshot}
 
 == tab "Dark" icon:moon
-![Valentine-dark](/assets/images/screenshots/kt-themes/Valentine-dark.png?v=639233746614906970){ .snapshot}
+![Valentine-dark](/assets/images/screenshots/kt-themes/Valentine-dark.png?v=639234526054347044){ .snapshot}
 
 :::
 :::
@@ -406,13 +406,13 @@ KtColor.Presets.Halloween();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Halloween-light](/assets/images/screenshots/kt-themes/Halloween-light.png?v=639233746651460201){ .light .snapshot} ![Halloween-dark](/assets/images/screenshots/kt-themes/Halloween-dark.png?v=639233746651460201){.dark .snapshot}
+![Halloween-light](/assets/images/screenshots/kt-themes/Halloween-light.png?v=639234526086380698){ .light .snapshot} ![Halloween-dark](/assets/images/screenshots/kt-themes/Halloween-dark.png?v=639234526086380698){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Halloween-light](/assets/images/screenshots/kt-themes/Halloween-light.png?v=639233746651460201){  .snapshot}
+![Halloween-light](/assets/images/screenshots/kt-themes/Halloween-light.png?v=639234526086380698){  .snapshot}
 
 == tab "Dark" icon:moon
-![Halloween-dark](/assets/images/screenshots/kt-themes/Halloween-dark.png?v=639233746651460201){ .snapshot}
+![Halloween-dark](/assets/images/screenshots/kt-themes/Halloween-dark.png?v=639234526086380698){ .snapshot}
 
 :::
 :::
@@ -427,13 +427,13 @@ KtColor.Presets.Garden();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Garden-light](/assets/images/screenshots/kt-themes/Garden-light.png?v=639233746684524929){ .light .snapshot} ![Garden-dark](/assets/images/screenshots/kt-themes/Garden-dark.png?v=639233746684524929){.dark .snapshot}
+![Garden-light](/assets/images/screenshots/kt-themes/Garden-light.png?v=639234526119529495){ .light .snapshot} ![Garden-dark](/assets/images/screenshots/kt-themes/Garden-dark.png?v=639234526119529495){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Garden-light](/assets/images/screenshots/kt-themes/Garden-light.png?v=639233746684524929){  .snapshot}
+![Garden-light](/assets/images/screenshots/kt-themes/Garden-light.png?v=639234526119515480){  .snapshot}
 
 == tab "Dark" icon:moon
-![Garden-dark](/assets/images/screenshots/kt-themes/Garden-dark.png?v=639233746684524929){ .snapshot}
+![Garden-dark](/assets/images/screenshots/kt-themes/Garden-dark.png?v=639234526119515480){ .snapshot}
 
 :::
 :::
@@ -448,13 +448,13 @@ KtColor.Presets.Forest();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Forest-light](/assets/images/screenshots/kt-themes/Forest-light.png?v=639233746714461432){ .light .snapshot} ![Forest-dark](/assets/images/screenshots/kt-themes/Forest-dark.png?v=639233746714461432){.dark .snapshot}
+![Forest-light](/assets/images/screenshots/kt-themes/Forest-light.png?v=639234526151739732){ .light .snapshot} ![Forest-dark](/assets/images/screenshots/kt-themes/Forest-dark.png?v=639234526151739732){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Forest-light](/assets/images/screenshots/kt-themes/Forest-light.png?v=639233746714461432){  .snapshot}
+![Forest-light](/assets/images/screenshots/kt-themes/Forest-light.png?v=639234526151739732){  .snapshot}
 
 == tab "Dark" icon:moon
-![Forest-dark](/assets/images/screenshots/kt-themes/Forest-dark.png?v=639233746714461432){ .snapshot}
+![Forest-dark](/assets/images/screenshots/kt-themes/Forest-dark.png?v=639234526151739732){ .snapshot}
 
 :::
 :::
@@ -469,13 +469,13 @@ KtColor.Presets.Aqua();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Aqua-light](/assets/images/screenshots/kt-themes/Aqua-light.png?v=639233746746107376){ .light .snapshot} ![Aqua-dark](/assets/images/screenshots/kt-themes/Aqua-dark.png?v=639233746746107376){.dark .snapshot}
+![Aqua-light](/assets/images/screenshots/kt-themes/Aqua-light.png?v=639234526183816537){ .light .snapshot} ![Aqua-dark](/assets/images/screenshots/kt-themes/Aqua-dark.png?v=639234526183816537){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Aqua-light](/assets/images/screenshots/kt-themes/Aqua-light.png?v=639233746746107376){  .snapshot}
+![Aqua-light](/assets/images/screenshots/kt-themes/Aqua-light.png?v=639234526183816537){  .snapshot}
 
 == tab "Dark" icon:moon
-![Aqua-dark](/assets/images/screenshots/kt-themes/Aqua-dark.png?v=639233746746107376){ .snapshot}
+![Aqua-dark](/assets/images/screenshots/kt-themes/Aqua-dark.png?v=639234526183816537){ .snapshot}
 
 :::
 :::
@@ -490,13 +490,13 @@ KtColor.Presets.Lofi();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Lofi-light](/assets/images/screenshots/kt-themes/Lofi-light.png?v=639233746778006009){ .light .snapshot} ![Lofi-dark](/assets/images/screenshots/kt-themes/Lofi-dark.png?v=639233746778006009){.dark .snapshot}
+![Lofi-light](/assets/images/screenshots/kt-themes/Lofi-light.png?v=639234526217090852){ .light .snapshot} ![Lofi-dark](/assets/images/screenshots/kt-themes/Lofi-dark.png?v=639234526217090852){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Lofi-light](/assets/images/screenshots/kt-themes/Lofi-light.png?v=639233746778006009){  .snapshot}
+![Lofi-light](/assets/images/screenshots/kt-themes/Lofi-light.png?v=639234526217090852){  .snapshot}
 
 == tab "Dark" icon:moon
-![Lofi-dark](/assets/images/screenshots/kt-themes/Lofi-dark.png?v=639233746778006009){ .snapshot}
+![Lofi-dark](/assets/images/screenshots/kt-themes/Lofi-dark.png?v=639234526217090852){ .snapshot}
 
 :::
 :::
@@ -511,13 +511,13 @@ KtColor.Presets.Pastel();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Pastel-light](/assets/images/screenshots/kt-themes/Pastel-light.png?v=639233746809573742){ .light .snapshot} ![Pastel-dark](/assets/images/screenshots/kt-themes/Pastel-dark.png?v=639233746809573742){.dark .snapshot}
+![Pastel-light](/assets/images/screenshots/kt-themes/Pastel-light.png?v=639234526248831104){ .light .snapshot} ![Pastel-dark](/assets/images/screenshots/kt-themes/Pastel-dark.png?v=639234526248831104){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Pastel-light](/assets/images/screenshots/kt-themes/Pastel-light.png?v=639233746809573742){  .snapshot}
+![Pastel-light](/assets/images/screenshots/kt-themes/Pastel-light.png?v=639234526248831104){  .snapshot}
 
 == tab "Dark" icon:moon
-![Pastel-dark](/assets/images/screenshots/kt-themes/Pastel-dark.png?v=639233746809573742){ .snapshot}
+![Pastel-dark](/assets/images/screenshots/kt-themes/Pastel-dark.png?v=639234526248831104){ .snapshot}
 
 :::
 :::
@@ -532,13 +532,13 @@ KtColor.Presets.Fantasy();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Fantasy-light](/assets/images/screenshots/kt-themes/Fantasy-light.png?v=639233746841477426){ .light .snapshot} ![Fantasy-dark](/assets/images/screenshots/kt-themes/Fantasy-dark.png?v=639233746841477426){.dark .snapshot}
+![Fantasy-light](/assets/images/screenshots/kt-themes/Fantasy-light.png?v=639234526280430572){ .light .snapshot} ![Fantasy-dark](/assets/images/screenshots/kt-themes/Fantasy-dark.png?v=639234526280430572){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Fantasy-light](/assets/images/screenshots/kt-themes/Fantasy-light.png?v=639233746841477426){  .snapshot}
+![Fantasy-light](/assets/images/screenshots/kt-themes/Fantasy-light.png?v=639234526280430572){  .snapshot}
 
 == tab "Dark" icon:moon
-![Fantasy-dark](/assets/images/screenshots/kt-themes/Fantasy-dark.png?v=639233746841477426){ .snapshot}
+![Fantasy-dark](/assets/images/screenshots/kt-themes/Fantasy-dark.png?v=639234526280430572){ .snapshot}
 
 :::
 :::
@@ -553,13 +553,13 @@ KtColor.Presets.Wireframe();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Wireframe-light](/assets/images/screenshots/kt-themes/Wireframe-light.png?v=639233746872524769){ .light .snapshot} ![Wireframe-dark](/assets/images/screenshots/kt-themes/Wireframe-dark.png?v=639233746872524769){.dark .snapshot}
+![Wireframe-light](/assets/images/screenshots/kt-themes/Wireframe-light.png?v=639234526312858317){ .light .snapshot} ![Wireframe-dark](/assets/images/screenshots/kt-themes/Wireframe-dark.png?v=639234526312858317){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Wireframe-light](/assets/images/screenshots/kt-themes/Wireframe-light.png?v=639233746872524769){  .snapshot}
+![Wireframe-light](/assets/images/screenshots/kt-themes/Wireframe-light.png?v=639234526312848984){  .snapshot}
 
 == tab "Dark" icon:moon
-![Wireframe-dark](/assets/images/screenshots/kt-themes/Wireframe-dark.png?v=639233746872524769){ .snapshot}
+![Wireframe-dark](/assets/images/screenshots/kt-themes/Wireframe-dark.png?v=639234526312848984){ .snapshot}
 
 :::
 :::
@@ -574,13 +574,13 @@ KtColor.Presets.Black();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Black-light](/assets/images/screenshots/kt-themes/Black-light.png?v=639233746896408056){ .light .snapshot} ![Black-dark](/assets/images/screenshots/kt-themes/Black-dark.png?v=639233746896408056){.dark .snapshot}
+![Black-light](/assets/images/screenshots/kt-themes/Black-light.png?v=639234526337314542){ .light .snapshot} ![Black-dark](/assets/images/screenshots/kt-themes/Black-dark.png?v=639234526337314542){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Black-light](/assets/images/screenshots/kt-themes/Black-light.png?v=639233746896408056){  .snapshot}
+![Black-light](/assets/images/screenshots/kt-themes/Black-light.png?v=639234526337314542){  .snapshot}
 
 == tab "Dark" icon:moon
-![Black-dark](/assets/images/screenshots/kt-themes/Black-dark.png?v=639233746896408056){ .snapshot}
+![Black-dark](/assets/images/screenshots/kt-themes/Black-dark.png?v=639234526337314542){ .snapshot}
 
 :::
 :::
@@ -595,13 +595,13 @@ KtColor.Presets.Luxury();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Luxury-light](/assets/images/screenshots/kt-themes/Luxury-light.png?v=639233746928182777){ .light .snapshot} ![Luxury-dark](/assets/images/screenshots/kt-themes/Luxury-dark.png?v=639233746928182777){.dark .snapshot}
+![Luxury-light](/assets/images/screenshots/kt-themes/Luxury-light.png?v=639234526368962035){ .light .snapshot} ![Luxury-dark](/assets/images/screenshots/kt-themes/Luxury-dark.png?v=639234526368962035){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Luxury-light](/assets/images/screenshots/kt-themes/Luxury-light.png?v=639233746928182777){  .snapshot}
+![Luxury-light](/assets/images/screenshots/kt-themes/Luxury-light.png?v=639234526368962035){  .snapshot}
 
 == tab "Dark" icon:moon
-![Luxury-dark](/assets/images/screenshots/kt-themes/Luxury-dark.png?v=639233746928182777){ .snapshot}
+![Luxury-dark](/assets/images/screenshots/kt-themes/Luxury-dark.png?v=639234526368962035){ .snapshot}
 
 :::
 :::
@@ -616,13 +616,13 @@ KtColor.Presets.Dracula();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Dracula-light](/assets/images/screenshots/kt-themes/Dracula-light.png?v=639233746959891715){ .light .snapshot} ![Dracula-dark](/assets/images/screenshots/kt-themes/Dracula-dark.png?v=639233746959891715){.dark .snapshot}
+![Dracula-light](/assets/images/screenshots/kt-themes/Dracula-light.png?v=639234526400679588){ .light .snapshot} ![Dracula-dark](/assets/images/screenshots/kt-themes/Dracula-dark.png?v=639234526400679588){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Dracula-light](/assets/images/screenshots/kt-themes/Dracula-light.png?v=639233746959891715){  .snapshot}
+![Dracula-light](/assets/images/screenshots/kt-themes/Dracula-light.png?v=639234526400679588){  .snapshot}
 
 == tab "Dark" icon:moon
-![Dracula-dark](/assets/images/screenshots/kt-themes/Dracula-dark.png?v=639233746959891715){ .snapshot}
+![Dracula-dark](/assets/images/screenshots/kt-themes/Dracula-dark.png?v=639234526400679588){ .snapshot}
 
 :::
 :::
@@ -637,13 +637,13 @@ KtColor.Presets.CMYK();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![CMYK-light](/assets/images/screenshots/kt-themes/CMYK-light.png?v=639233746992346817){ .light .snapshot} ![CMYK-dark](/assets/images/screenshots/kt-themes/CMYK-dark.png?v=639233746992346817){.dark .snapshot}
+![CMYK-light](/assets/images/screenshots/kt-themes/CMYK-light.png?v=639234526433889477){ .light .snapshot} ![CMYK-dark](/assets/images/screenshots/kt-themes/CMYK-dark.png?v=639234526433889477){.dark .snapshot}
 
 == tab "Light" icon:sun
-![CMYK-light](/assets/images/screenshots/kt-themes/CMYK-light.png?v=639233746992346817){  .snapshot}
+![CMYK-light](/assets/images/screenshots/kt-themes/CMYK-light.png?v=639234526433889477){  .snapshot}
 
 == tab "Dark" icon:moon
-![CMYK-dark](/assets/images/screenshots/kt-themes/CMYK-dark.png?v=639233746992346817){ .snapshot}
+![CMYK-dark](/assets/images/screenshots/kt-themes/CMYK-dark.png?v=639234526433889477){ .snapshot}
 
 :::
 :::
@@ -658,13 +658,13 @@ KtColor.Presets.Autumn();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Autumn-light](/assets/images/screenshots/kt-themes/Autumn-light.png?v=639233747024197473){ .light .snapshot} ![Autumn-dark](/assets/images/screenshots/kt-themes/Autumn-dark.png?v=639233747024197473){.dark .snapshot}
+![Autumn-light](/assets/images/screenshots/kt-themes/Autumn-light.png?v=639234526466127618){ .light .snapshot} ![Autumn-dark](/assets/images/screenshots/kt-themes/Autumn-dark.png?v=639234526466127618){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Autumn-light](/assets/images/screenshots/kt-themes/Autumn-light.png?v=639233747024197473){  .snapshot}
+![Autumn-light](/assets/images/screenshots/kt-themes/Autumn-light.png?v=639234526466127618){  .snapshot}
 
 == tab "Dark" icon:moon
-![Autumn-dark](/assets/images/screenshots/kt-themes/Autumn-dark.png?v=639233747024197473){ .snapshot}
+![Autumn-dark](/assets/images/screenshots/kt-themes/Autumn-dark.png?v=639234526466127618){ .snapshot}
 
 :::
 :::
@@ -679,13 +679,13 @@ KtColor.Presets.Business();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Business-light](/assets/images/screenshots/kt-themes/Business-light.png?v=639233747047091598){ .light .snapshot} ![Business-dark](/assets/images/screenshots/kt-themes/Business-dark.png?v=639233747047091598){.dark .snapshot}
+![Business-light](/assets/images/screenshots/kt-themes/Business-light.png?v=639234526489797775){ .light .snapshot} ![Business-dark](/assets/images/screenshots/kt-themes/Business-dark.png?v=639234526489797775){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Business-light](/assets/images/screenshots/kt-themes/Business-light.png?v=639233747047091598){  .snapshot}
+![Business-light](/assets/images/screenshots/kt-themes/Business-light.png?v=639234526489787634){  .snapshot}
 
 == tab "Dark" icon:moon
-![Business-dark](/assets/images/screenshots/kt-themes/Business-dark.png?v=639233747047091598){ .snapshot}
+![Business-dark](/assets/images/screenshots/kt-themes/Business-dark.png?v=639234526489787634){ .snapshot}
 
 :::
 :::
@@ -700,13 +700,13 @@ KtColor.Presets.Acid();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Acid-light](/assets/images/screenshots/kt-themes/Acid-light.png?v=639233747079105468){ .light .snapshot} ![Acid-dark](/assets/images/screenshots/kt-themes/Acid-dark.png?v=639233747079105468){.dark .snapshot}
+![Acid-light](/assets/images/screenshots/kt-themes/Acid-light.png?v=639234526523915686){ .light .snapshot} ![Acid-dark](/assets/images/screenshots/kt-themes/Acid-dark.png?v=639234526523915686){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Acid-light](/assets/images/screenshots/kt-themes/Acid-light.png?v=639233747079105468){  .snapshot}
+![Acid-light](/assets/images/screenshots/kt-themes/Acid-light.png?v=639234526523905093){  .snapshot}
 
 == tab "Dark" icon:moon
-![Acid-dark](/assets/images/screenshots/kt-themes/Acid-dark.png?v=639233747079105468){ .snapshot}
+![Acid-dark](/assets/images/screenshots/kt-themes/Acid-dark.png?v=639234526523905093){ .snapshot}
 
 :::
 :::
@@ -721,13 +721,13 @@ KtColor.Presets.Lemonade();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Lemonade-light](/assets/images/screenshots/kt-themes/Lemonade-light.png?v=639233747109709430){ .light .snapshot} ![Lemonade-dark](/assets/images/screenshots/kt-themes/Lemonade-dark.png?v=639233747109709430){.dark .snapshot}
+![Lemonade-light](/assets/images/screenshots/kt-themes/Lemonade-light.png?v=639234526556457171){ .light .snapshot} ![Lemonade-dark](/assets/images/screenshots/kt-themes/Lemonade-dark.png?v=639234526556457171){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Lemonade-light](/assets/images/screenshots/kt-themes/Lemonade-light.png?v=639233747109709430){  .snapshot}
+![Lemonade-light](/assets/images/screenshots/kt-themes/Lemonade-light.png?v=639234526556457171){  .snapshot}
 
 == tab "Dark" icon:moon
-![Lemonade-dark](/assets/images/screenshots/kt-themes/Lemonade-dark.png?v=639233747109709430){ .snapshot}
+![Lemonade-dark](/assets/images/screenshots/kt-themes/Lemonade-dark.png?v=639234526556457171){ .snapshot}
 
 :::
 :::
@@ -742,13 +742,13 @@ KtColor.Presets.Night();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Night-light](/assets/images/screenshots/kt-themes/Night-light.png?v=639233747134125229){ .light .snapshot} ![Night-dark](/assets/images/screenshots/kt-themes/Night-dark.png?v=639233747134125229){.dark .snapshot}
+![Night-light](/assets/images/screenshots/kt-themes/Night-light.png?v=639234526580488022){ .light .snapshot} ![Night-dark](/assets/images/screenshots/kt-themes/Night-dark.png?v=639234526580488022){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Night-light](/assets/images/screenshots/kt-themes/Night-light.png?v=639233747134125229){  .snapshot}
+![Night-light](/assets/images/screenshots/kt-themes/Night-light.png?v=639234526580488022){  .snapshot}
 
 == tab "Dark" icon:moon
-![Night-dark](/assets/images/screenshots/kt-themes/Night-dark.png?v=639233747134125229){ .snapshot}
+![Night-dark](/assets/images/screenshots/kt-themes/Night-dark.png?v=639234526580488022){ .snapshot}
 
 :::
 :::
@@ -763,13 +763,13 @@ KtColor.Presets.Coffee();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Coffee-light](/assets/images/screenshots/kt-themes/Coffee-light.png?v=639233747156948505){ .light .snapshot} ![Coffee-dark](/assets/images/screenshots/kt-themes/Coffee-dark.png?v=639233747156948505){.dark .snapshot}
+![Coffee-light](/assets/images/screenshots/kt-themes/Coffee-light.png?v=639234526604572573){ .light .snapshot} ![Coffee-dark](/assets/images/screenshots/kt-themes/Coffee-dark.png?v=639234526604572573){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Coffee-light](/assets/images/screenshots/kt-themes/Coffee-light.png?v=639233747156948505){  .snapshot}
+![Coffee-light](/assets/images/screenshots/kt-themes/Coffee-light.png?v=639234526604563580){  .snapshot}
 
 == tab "Dark" icon:moon
-![Coffee-dark](/assets/images/screenshots/kt-themes/Coffee-dark.png?v=639233747156948505){ .snapshot}
+![Coffee-dark](/assets/images/screenshots/kt-themes/Coffee-dark.png?v=639234526604563580){ .snapshot}
 
 :::
 :::
@@ -784,13 +784,13 @@ KtColor.Presets.Winter();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Winter-light](/assets/images/screenshots/kt-themes/Winter-light.png?v=639233747188859473){ .light .snapshot} ![Winter-dark](/assets/images/screenshots/kt-themes/Winter-dark.png?v=639233747188859473){.dark .snapshot}
+![Winter-light](/assets/images/screenshots/kt-themes/Winter-light.png?v=639234526638846876){ .light .snapshot} ![Winter-dark](/assets/images/screenshots/kt-themes/Winter-dark.png?v=639234526638846876){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Winter-light](/assets/images/screenshots/kt-themes/Winter-light.png?v=639233747188859473){  .snapshot}
+![Winter-light](/assets/images/screenshots/kt-themes/Winter-light.png?v=639234526638846876){  .snapshot}
 
 == tab "Dark" icon:moon
-![Winter-dark](/assets/images/screenshots/kt-themes/Winter-dark.png?v=639233747188859473){ .snapshot}
+![Winter-dark](/assets/images/screenshots/kt-themes/Winter-dark.png?v=639234526638846876){ .snapshot}
 
 :::
 :::
@@ -805,13 +805,13 @@ KtColor.Presets.Dim();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Dim-light](/assets/images/screenshots/kt-themes/Dim-light.png?v=639233747211666113){ .light .snapshot} ![Dim-dark](/assets/images/screenshots/kt-themes/Dim-dark.png?v=639233747211666113){.dark .snapshot}
+![Dim-light](/assets/images/screenshots/kt-themes/Dim-light.png?v=639234526668380891){ .light .snapshot} ![Dim-dark](/assets/images/screenshots/kt-themes/Dim-dark.png?v=639234526668380891){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Dim-light](/assets/images/screenshots/kt-themes/Dim-light.png?v=639233747211666113){  .snapshot}
+![Dim-light](/assets/images/screenshots/kt-themes/Dim-light.png?v=639234526668380891){  .snapshot}
 
 == tab "Dark" icon:moon
-![Dim-dark](/assets/images/screenshots/kt-themes/Dim-dark.png?v=639233747211666113){ .snapshot}
+![Dim-dark](/assets/images/screenshots/kt-themes/Dim-dark.png?v=639234526668380891){ .snapshot}
 
 :::
 :::
@@ -826,13 +826,13 @@ KtColor.Presets.Nord();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Nord-light](/assets/images/screenshots/kt-themes/Nord-light.png?v=639233747242975926){ .light .snapshot} ![Nord-dark](/assets/images/screenshots/kt-themes/Nord-dark.png?v=639233747242975926){.dark .snapshot}
+![Nord-light](/assets/images/screenshots/kt-themes/Nord-light.png?v=639234526704768651){ .light .snapshot} ![Nord-dark](/assets/images/screenshots/kt-themes/Nord-dark.png?v=639234526704768651){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Nord-light](/assets/images/screenshots/kt-themes/Nord-light.png?v=639233747242966118){  .snapshot}
+![Nord-light](/assets/images/screenshots/kt-themes/Nord-light.png?v=639234526704768651){  .snapshot}
 
 == tab "Dark" icon:moon
-![Nord-dark](/assets/images/screenshots/kt-themes/Nord-dark.png?v=639233747242966118){ .snapshot}
+![Nord-dark](/assets/images/screenshots/kt-themes/Nord-dark.png?v=639234526704768651){ .snapshot}
 
 :::
 :::
@@ -847,13 +847,13 @@ KtColor.Presets.Sunset();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Sunset-light](/assets/images/screenshots/kt-themes/Sunset-light.png?v=639233747265783802){ .light .snapshot} ![Sunset-dark](/assets/images/screenshots/kt-themes/Sunset-dark.png?v=639233747265783802){.dark .snapshot}
+![Sunset-light](/assets/images/screenshots/kt-themes/Sunset-light.png?v=639234526729022503){ .light .snapshot} ![Sunset-dark](/assets/images/screenshots/kt-themes/Sunset-dark.png?v=639234526729022503){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Sunset-light](/assets/images/screenshots/kt-themes/Sunset-light.png?v=639233747265771700){  .snapshot}
+![Sunset-light](/assets/images/screenshots/kt-themes/Sunset-light.png?v=639234526729022503){  .snapshot}
 
 == tab "Dark" icon:moon
-![Sunset-dark](/assets/images/screenshots/kt-themes/Sunset-dark.png?v=639233747265771700){ .snapshot}
+![Sunset-dark](/assets/images/screenshots/kt-themes/Sunset-dark.png?v=639234526729022503){ .snapshot}
 
 :::
 :::
@@ -868,13 +868,13 @@ KtColor.Presets.CaramelLatte();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![CaramelLatte-light](/assets/images/screenshots/kt-themes/CaramelLatte-light.png?v=639233747301686320){ .light .snapshot} ![CaramelLatte-dark](/assets/images/screenshots/kt-themes/CaramelLatte-dark.png?v=639233747301686320){.dark .snapshot}
+![CaramelLatte-light](/assets/images/screenshots/kt-themes/CaramelLatte-light.png?v=639234526761866562){ .light .snapshot} ![CaramelLatte-dark](/assets/images/screenshots/kt-themes/CaramelLatte-dark.png?v=639234526761866562){.dark .snapshot}
 
 == tab "Light" icon:sun
-![CaramelLatte-light](/assets/images/screenshots/kt-themes/CaramelLatte-light.png?v=639233747301676182){  .snapshot}
+![CaramelLatte-light](/assets/images/screenshots/kt-themes/CaramelLatte-light.png?v=639234526761866562){  .snapshot}
 
 == tab "Dark" icon:moon
-![CaramelLatte-dark](/assets/images/screenshots/kt-themes/CaramelLatte-dark.png?v=639233747301676182){ .snapshot}
+![CaramelLatte-dark](/assets/images/screenshots/kt-themes/CaramelLatte-dark.png?v=639234526761866562){ .snapshot}
 
 :::
 :::
@@ -889,13 +889,13 @@ KtColor.Presets.Abyss();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Abyss-light](/assets/images/screenshots/kt-themes/Abyss-light.png?v=639233747327756632){ .light .snapshot} ![Abyss-dark](/assets/images/screenshots/kt-themes/Abyss-dark.png?v=639233747327756632){.dark .snapshot}
+![Abyss-light](/assets/images/screenshots/kt-themes/Abyss-light.png?v=639234526785889171){ .light .snapshot} ![Abyss-dark](/assets/images/screenshots/kt-themes/Abyss-dark.png?v=639234526785889171){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Abyss-light](/assets/images/screenshots/kt-themes/Abyss-light.png?v=639233747327756632){  .snapshot}
+![Abyss-light](/assets/images/screenshots/kt-themes/Abyss-light.png?v=639234526785889171){  .snapshot}
 
 == tab "Dark" icon:moon
-![Abyss-dark](/assets/images/screenshots/kt-themes/Abyss-dark.png?v=639233747327756632){ .snapshot}
+![Abyss-dark](/assets/images/screenshots/kt-themes/Abyss-dark.png?v=639234526785889171){ .snapshot}
 
 :::
 :::
@@ -910,13 +910,13 @@ KtColor.Presets.Silk();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![Silk-light](/assets/images/screenshots/kt-themes/Silk-light.png?v=639233747359926518){ .light .snapshot} ![Silk-dark](/assets/images/screenshots/kt-themes/Silk-dark.png?v=639233747359926518){.dark .snapshot}
+![Silk-light](/assets/images/screenshots/kt-themes/Silk-light.png?v=639234526818700154){ .light .snapshot} ![Silk-dark](/assets/images/screenshots/kt-themes/Silk-dark.png?v=639234526818700154){.dark .snapshot}
 
 == tab "Light" icon:sun
-![Silk-light](/assets/images/screenshots/kt-themes/Silk-light.png?v=639233747359926518){  .snapshot}
+![Silk-light](/assets/images/screenshots/kt-themes/Silk-light.png?v=639234526818700154){  .snapshot}
 
 == tab "Dark" icon:moon
-![Silk-dark](/assets/images/screenshots/kt-themes/Silk-dark.png?v=639233747359926518){ .snapshot}
+![Silk-dark](/assets/images/screenshots/kt-themes/Silk-dark.png?v=639234526818700154){ .snapshot}
 
 :::
 :::

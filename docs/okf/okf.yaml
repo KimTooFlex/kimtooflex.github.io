@@ -5,15 +5,31 @@ bundle:
   description: ""
   url: "https://kimtoo.net"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T10:23:11.349Z"
+  generated_at: "2026-08-27T17:46:21.507Z"
   default_type: concept
 stats:
-  concepts: 31
+  concepts: 37
   by_type:
-    concept: 31
+    concept: 37
   locales: 
   versions: 
 concepts:
+  - id: components-kt-pop-over
+    type: concept
+    title: "KimTools / Components / PopOver"
+    path: /components/kt-pop-over/
+    file: concepts/components-kt-pop-over.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: components-kt-toasts
+    type: concept
+    title: "KimTools / Components / Toasts"
+    path: /components/kt-toasts/
+    file: concepts/components-kt-toasts.md
+    locale: ""
+    version: ""
+    tags: 
   - id: controls-kt-button
     type: concept
     title: "KimTools / Controls / Button"
@@ -94,6 +110,14 @@ concepts:
     locale: ""
     version: ""
     tags: 
+  - id: controls-kt-pop-over
+    type: concept
+    title: "KimTools / Controls / PopOver"
+    path: /controls/kt-pop-over/
+    file: concepts/controls-kt-pop-over.md
+    locale: ""
+    version: ""
+    tags: 
   - id: controls-kt-progress-gauge
     type: concept
     title: "KimTools / Controls / ProgressGauge"
@@ -158,11 +182,27 @@ concepts:
     locale: ""
     version: ""
     tags: 
+  - id: controls-kt-slider-vert
+    type: concept
+    title: "KimTools / Controls / SliderVert"
+    path: /controls/kt-slider-vert/
+    file: concepts/controls-kt-slider-vert.md
+    locale: ""
+    version: ""
+    tags: 
   - id: controls-kt-slider
     type: concept
     title: "KimTools / Controls / Slider"
     path: /controls/kt-slider/
     file: concepts/controls-kt-slider.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-spinner
+    type: concept
+    title: "KimTools / Controls / Spinner"
+    path: /controls/kt-spinner/
+    file: concepts/controls-kt-spinner.md
     locale: ""
     version: ""
     tags: 
@@ -187,6 +227,14 @@ concepts:
     title: "KimTools / Controls / TextBox"
     path: /controls/kt-text-box/
     file: concepts/controls-kt-text-box.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-themes
+    type: concept
+    title: "KimTools / Controls / Themes"
+    path: /controls/kt-themes/
+    file: concepts/controls-kt-themes.md
     locale: ""
     version: ""
     tags: 

@@ -7,7 +7,7 @@ path: /controls/kt-switch/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T10:23:11.210Z"
+  generated_at: "2026-08-27T17:46:21.430Z"
 ---
 ---
 title: "KimTools / Controls / Switch"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-switch-light](/assets/images/screenshots/kt-switch/kt-switch-light.png?v=639233746158571737){ .light .snapshot} ![kt-switch-dark](/assets/images/screenshots/kt-switch/kt-switch-dark.png?v=639233746158571737){.dark .snapshot}
+![kt-switch-light](/assets/images/screenshots/kt-switch/kt-switch-light.png?v=639234525463254696){ .light .snapshot} ![kt-switch-dark](/assets/images/screenshots/kt-switch/kt-switch-dark.png?v=639234525463254696){.dark .snapshot}
 :::
 
 ::: callout success
@@ -96,13 +96,13 @@ label.Location = new Point(toggle.Right + 10, 6);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233746199257201){ .light .snapshot} ![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233746199257201){.dark .snapshot}
+![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639234525502765845){ .light .snapshot} ![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639234525502765845){.dark .snapshot}
 
 == tab "Light" icon:sun
-![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639233746199257201){  .snapshot}
+![state-colors-light](/assets/images/screenshots/kt-switch/state-colors-light.png?v=639234525502756807){  .snapshot}
 
 == tab "Dark" icon:moon
-![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639233746199257201){ .snapshot}
+![state-colors-dark](/assets/images/screenshots/kt-switch/state-colors-dark.png?v=639234525502756807){ .snapshot}
 
 :::
 :::
@@ -148,13 +148,13 @@ label.Location = new Point(toggle.Right + 10, 6);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233746215910489){ .light .snapshot} ![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233746215910489){.dark .snapshot}
+![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639234525519699108){ .light .snapshot} ![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639234525519699108){.dark .snapshot}
 
 == tab "Light" icon:sun
-![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639233746215910489){  .snapshot}
+![custom-radii-light](/assets/images/screenshots/kt-switch/custom-radii-light.png?v=639234525519699108){  .snapshot}
 
 == tab "Dark" icon:moon
-![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639233746215910489){ .snapshot}
+![custom-radii-dark](/assets/images/screenshots/kt-switch/custom-radii-dark.png?v=639234525519699108){ .snapshot}
 
 :::
 :::
