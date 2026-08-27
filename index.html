@@ -792,19 +792,24 @@
                 <!-- Cards grid -->
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     <template v-for="(control, i) in filteredControls.slice(0, limit)" :key="control.name">
-                        <a :href="'./docs/controls/' + control.slug"
+                        <a :href="'./docs/'+control.category+'/' + control.slug"
                            class="control-card group"
                            :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
                             <div class="aspect-video overflow-hidden p-5 rounded-t-xl dark:bg-slate-800">
                                 <img :src="'./docs/assets/images/screenshots/'+control.slug+'/' + control.slug + (isDark ? '-dark' : '-light')+'.png'" :alt="control.name"
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                             </div>
-                            <div class="p-4 dark:bg-slate-700">
+                            <div class="p-4 dark:bg-slate-700 flex items-center justify-between">
                                 <p class="text-xs font-mono font-600"
                                    :class="isDark ? 'text-slate-200' : 'text-slate-800'">
                                     <span class="text-blue-500 opacity-75">kt</span>
                                     {{ control.name.replace('Kt ', '') }}
                                 </p>
+
+                                <span :class="'pill text-xs font-mono ' + (isDark ? 'text-slate-200' : 'text-slate-800')"
+                                      :style="`zoom:80%;background: ${control.color}18; color: ${control.color}; border: 1px solid ${control.color}33;`">
+                                    {{ control.category.replace(/s+$/i, "") }}
+                                </span>
                             </div>
                         </a>
                     </template>
@@ -1441,20 +1446,6 @@
                     document.body.style.color = isDark.value ? '#ffffff' : '#111827';
                 }
 
-
-
-                // async function fetchControls() {
-                //     try {
-                //         const res = await fetch("./docmd.config.json");
-                //         // const res = await fetch('./docs/controls.json');
-                //         const data = await res.json();
-                //         controls.value = data["navigation"];
-                //     } catch {
-                //         // Fallback controls list
-                //         controls.value = [];
-                //     }
-                // }
-
                 async function fetchControls() {
                     try {
                         const res = await fetch('./docmd.config.json');
@@ -1474,6 +1465,7 @@
                                     name: child.title,
                                     slug: child.kt,
                                     category: category,
+                                    color: category==="controls" ? "#9810FA" : "#4F39F6",
                                     thumbnail: `./docs/assets/images/screenshots/${category}/${child.kt}-dark.png`
                                 });
                             }
