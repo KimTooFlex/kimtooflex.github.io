@@ -731,6 +731,98 @@
             </div>
         </section>
 
+        <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
+        <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <div class="flex gap-4 mb-8  justify-center">
+                    <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
+                    <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
+                </div>
+
+                <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                    <b class="grad-purple"> .NET</b>
+                    Compatibility
+                </p>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <span v-for="badge in dotnetBadges" :key="badge.text" class="pill text-xs font-mono"
+                          :style="`background: ${badge.color}18; color: ${badge.color}; border: 1px solid ${badge.color}33;`">
+                        {{ badge.text }}
+                    </span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- ═══════════════ CONTROLS SECTION ═══════════════ -->
+        <section id="components " class="py-24 grid-bg ">
+            <div class="max-w-7xl mx-auto px-6 shadow-xl bg-white dark:bg-slate-800  rounded-3xl"
+                 :class="isDark ? 'card-dark' : 'card-light'" style="padding: 50px;">
+
+                <div class="text-center mb-14">
+                    <p class="section-label mb-4" style="color: #7C3AED;">UI Components</p>
+                    <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
+                        WinForms <span class="grad-green">Controls</span> &amp; Components
+                    </h2>
+                    <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        By marrying a Tailwind-inspired architecture with high-fidelity rendering, we've replaced the
+                        exhausting grind of manual styling with the pure joy of low-code creation.
+                    </p>
+                </div>
+
+                <!-- Search -->
+                <div class="flex items-center justify-between mb-8 gap-4">
+                    <div class="relative flex-1 max-w-sm">
+                        <input v-model="query" type="text" placeholder="Search..."
+                               class="w-full rounded-lg px-4 py-3 pl-10 text-sm font-mono outline-none transition-all"
+                               :class="isDark
+                             ? 'bg-white/[0.05] border border-white/10 text-white placeholder-white/30 focus:border-kt-green/50'
+                             : 'bg-black/[0.04] border border-black/[0.09] text-gray-900 placeholder-gray-400 focus:border-kt-green/60'" />
+                        <svg class="absolute left-3 top-3.5 opacity-40" xmlns="http://www.w3.org/2000/svg" width="16"
+                             height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-mono opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                        {{ filteredControls.length }}<span class="opacity-50">/{{ controls.length }}</span> controls
+                    </span>
+                </div>
+
+                <!-- Cards grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <template v-for="(control, i) in filteredControls.slice(0, limit)" :key="control.name">
+                        <a :href="'./docs/controls/' + control.slug"
+                           class="control-card group"
+                           :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
+                            <div class="aspect-video overflow-hidden p-5 rounded-t-xl dark:bg-slate-800">
+                                <img :src="'./docs/assets/images/screenshots/'+control.slug+'/' + control.slug + (isDark ? '-dark' : '-light')+'.png'" :alt="control.name"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                            </div>
+                            <div class="p-4 dark:bg-slate-700">
+                                <p class="text-xs font-mono font-600"
+                                   :class="isDark ? 'text-slate-200' : 'text-slate-800'">
+                                    <span class="text-blue-500 opacity-75">kt</span>
+                                    {{ control.name.replace('Kt ', '') }}
+                                </p>
+                            </div>
+                        </a>
+                    </template>
+                </div>
+
+                <!-- Show more -->
+                <div v-if="limit < filteredControls.length" class="text-center mt-10">
+                    <button data-analytics="show_more_controls" @click="limit += 16" class="btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg>
+                        Show More
+                    </button>
+                </div>
+
+            </div>
+        </section>
 
         <!-- $1$ ═══════════════ FREE SECTION ═══════════════ #1# -->
         <!-- <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'"> -->
@@ -875,98 +967,7 @@
         </section>
 
 
-        <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
-        <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <div class="flex gap-4 mb-8  justify-center">
-                    <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
-                    <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
-                </div>
 
-                <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
-                    <b class="grad-purple"> .NET</b>
-                    Compatibility
-                </p>
-                <div class="flex flex-wrap justify-center gap-2">
-                    <span v-for="badge in dotnetBadges" :key="badge.text" class="pill text-xs font-mono"
-                          :style="`background: ${badge.color}18; color: ${badge.color}; border: 1px solid ${badge.color}33;`">
-                        {{ badge.text }}
-                    </span>
-                </div>
-
-
-            </div>
-        </div>
-
-        <!-- ═══════════════ CONTROLS SECTION ═══════════════ -->
-        <section id="components " class="py-24 grid-bg ">
-            <div class="max-w-7xl mx-auto px-6 shadow-xl bg-white dark:bg-slate-800  rounded-3xl"
-                 :class="isDark ? 'card-dark' : 'card-light'" style="padding: 50px;">
-
-                <div class="text-center mb-14">
-                    <p class="section-label mb-4" style="color: #7C3AED;">UI Components</p>
-                    <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
-                        WinForms <span class="grad-green">Controls</span> &amp; Components
-                    </h2>
-                    <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        By marrying a Tailwind-inspired architecture with high-fidelity rendering, we've replaced the
-                        exhausting grind of manual styling with the pure joy of low-code creation.
-                    </p>
-                </div>
-
-                <!-- Search -->
-                <div class="flex items-center justify-between mb-8 gap-4">
-                    <div class="relative flex-1 max-w-sm">
-                        <input v-model="query" type="text" placeholder="Search..."
-                               class="w-full rounded-lg px-4 py-3 pl-10 text-sm font-mono outline-none transition-all"
-                               :class="isDark
-                             ? 'bg-white/[0.05] border border-white/10 text-white placeholder-white/30 focus:border-kt-green/50'
-                             : 'bg-black/[0.04] border border-black/[0.09] text-gray-900 placeholder-gray-400 focus:border-kt-green/60'" />
-                        <svg class="absolute left-3 top-3.5 opacity-40" xmlns="http://www.w3.org/2000/svg" width="16"
-                             height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                        </svg>
-                    </div>
-                    <span class="text-xs font-mono opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
-                        {{ filteredControls.length }}<span class="opacity-50">/{{ controls.length }}</span> controls
-                    </span>
-                </div>
-
-                <!-- Cards grid -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <template v-for="(control, i) in filteredControls.slice(0, limit)" :key="control.name">
-                        <a :href="'./docs/controls/' + control.slug"
-                           class="control-card group"
-                           :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
-                            <div class="aspect-video overflow-hidden rounded-t-xl dark:bg-slate-900"> 
-                                <img :src="'./docs/assets/images/screenshots/'+control.slug+'/' + control.slug + (isDark ? '-dark' : '-light')+'.png'" :alt="control.name"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                            </div>
-                            <div class="p-4 dark:bg-slate-700">
-                                <p class="text-xs font-mono font-600"
-                                   :class="isDark ? 'text-slate-200' : 'text-slate-800'">
-                                    <span class="text-blue-500 opacity-75">kt</span>
-                                    {{ control.name.replace('Kt ', '') }}
-                                </p>
-                            </div>
-                        </a>
-                    </template>
-                </div>
-
-                <!-- Show more -->
-                <div v-if="limit < filteredControls.length" class="text-center mt-10">
-                    <button data-analytics="show_more_controls" @click="limit += 16" class="btn-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2">
-                            <path d="M12 5v14M5 12l7 7 7-7" />
-                        </svg>
-                        Show More
-                    </button>
-                </div>
-
-            </div>
-        </section>
         <!-- ═══════════════ NEWSLETTER SUBSCRIPTION SECTION ═══════════════ -->
         <section class="py-24 relative overflow-hidden" :class="isDark ? 'bg-[#080b10]' : 'bg-gray-900'"
                  style="min-height: 500px;">
