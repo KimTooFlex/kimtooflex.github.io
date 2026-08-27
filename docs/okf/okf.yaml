@@ -5,12 +5,12 @@ bundle:
   description: ""
   url: "https://kimtoo.net"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T20:32:11.719Z"
+  generated_at: "2026-08-27T10:23:11.349Z"
   default_type: concept
 stats:
-  concepts: 29
+  concepts: 31
   by_type:
-    concept: 29
+    concept: 31
   locales: 
   versions: 
 concepts:
@@ -94,6 +94,14 @@ concepts:
     locale: ""
     version: ""
     tags: 
+  - id: controls-kt-progress-gauge
+    type: concept
+    title: "KimTools / Controls / ProgressGauge"
+    path: /controls/kt-progress-gauge/
+    file: concepts/controls-kt-progress-gauge.md
+    locale: ""
+    version: ""
+    tags: 
   - id: controls-kt-progress-radial
     type: concept
     title: "KimTools / Controls / ProgressRadial"
@@ -147,6 +155,14 @@ concepts:
     title: "KimTools / Controls / Shapes"
     path: /controls/kt-shapes/
     file: concepts/controls-kt-shapes.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-slider
+    type: concept
+    title: "KimTools / Controls / Slider"
+    path: /controls/kt-slider/
+    file: concepts/controls-kt-slider.md
     locale: ""
     version: ""
     tags: 

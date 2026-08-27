@@ -4,10 +4,10 @@ title: "KimTools / Controls / Switch"
 description: "A smooth, highly customizable toggle switch control for Modern WinForms supporting custom state styling and animations."
 source: "https://kimtoo.net/controls/kt-switch/"
 path: /controls/kt-switch/
-updated: 2026-08-26
+updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T20:32:11.592Z"
+  generated_at: "2026-08-27T10:23:11.210Z"
 ---
 ---
 title: "KimTools / Controls / Switch"

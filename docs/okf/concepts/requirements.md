@@ -4,10 +4,10 @@ title: "KimTools / System Requirements"
 description: "Supported operating systems, .NET versions, development environments, and hardware requirements for KimTools.WinForms."
 source: "https://kimtoo.net/requirements/"
 path: /requirements/
-updated: 2026-08-26
+updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-26T20:32:11.673Z"
+  generated_at: "2026-08-27T10:23:11.324Z"
 ---
 ---
 title: "KimTools / System Requirements"

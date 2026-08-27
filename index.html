@@ -939,15 +939,15 @@
                         <a :href="'./docs/controls/' + control.slug"
                            class="control-card group"
                            :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
-                            <div class="aspect-video overflow-hidden rounded-t-xl dark:bg-slate-900">
-                                <img :src="control.thumbnail" :alt="control.name"
-                                     class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300  dark:invert-[.75] dark:opacity-50" />
+                            <div class="aspect-video overflow-hidden rounded-t-xl dark:bg-slate-900"> 
+                                <img :src="'./docs/assets/images/screenshots/'+control.slug+'/' + control.slug + (isDark ? '-dark' : '-light')+'.png'" :alt="control.name"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                             </div>
                             <div class="p-4 dark:bg-slate-700">
                                 <p class="text-xs font-mono font-600"
                                    :class="isDark ? 'text-slate-200' : 'text-slate-800'">
                                     <span class="text-blue-500 opacity-75">kt</span>
-                                    {{ control.name.replace('Kt-', '') }}
+                                    {{ control.name.replace('Kt ', '') }}
                                 </p>
                             </div>
                         </a>
@@ -1442,21 +1442,50 @@
 
 
 
+                // async function fetchControls() {
+                //     try {
+                //         const res = await fetch("./docmd.config.json");
+                //         // const res = await fetch('./docs/controls.json');
+                //         const data = await res.json();
+                //         controls.value = data["navigation"];
+                //     } catch {
+                //         // Fallback controls list
+                //         controls.value = [];
+                //     }
+                // }
+
                 async function fetchControls() {
                     try {
-                        const res = await fetch('./docs/controls.json');
+                        const res = await fetch('./docmd.config.json');
                         const data = await res.json();
-                        controls.value = data;
+
+                        const flat = [];
+
+                        for (const parent of data.navigation || []) {
+                            if (!parent.children?.length) continue;
+
+                            const category = parent.kt || 'misc';
+
+                            for (const child of parent.children) {
+                                if (!child.kt) continue;
+
+                                flat.push({
+                                    name: child.title,
+                                    slug: child.kt,
+                                    category: category,
+                                    thumbnail: `./docs/assets/images/screenshots/${category}/${child.kt}-dark.png`
+                                });
+                            }
+                        }
+
+                        controls.value = flat;
                     } catch {
-                        // Fallback controls list
                         controls.value = [];
                     }
                 }
 
                 onMounted(() => {
                     fetchControls();
-
-                    // Rotate banners
                     setInterval(() => {
                         bannerIndex.value = (bannerIndex.value + 1) % banners.length;
                     }, 5000);

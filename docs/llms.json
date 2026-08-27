@@ -63,6 +63,12 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / ProgressGauge",
+      "url": "https://kimtoo.net/controls/kt-progress-gauge/",
+      "description": "An arc-based gauge meter with dual-range color support, automatic background generation, cap style control, and smooth value transitions.",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / ProgressRadial",
       "url": "https://kimtoo.net/controls/kt-progress-radial/",
       "description": "A customizable circular progress indicator with gradient arcs, independent cap styles, sub/superscript annotations, and smooth animation support.",
@@ -102,6 +108,12 @@
       "title": "KimTools / Controls / Shapes",
       "url": "https://kimtoo.net/controls/kt-shapes/",
       "description": "A versatile shape renderer supporting circles, ovals, squares, rectangles, polygons, and lines with independent fill, border, rotation, and side-count control.",
+      "priority": "medium"
+    },
+    {
+      "title": "KimTools / Controls / Slider",
+      "url": "https://kimtoo.net/controls/kt-slider/",
+      "description": "A horizontal range slider with state-based theming, fill/outline thumb styles, thick/thin track borders, and smooth color transitions.",
       "priority": "medium"
     },
     {

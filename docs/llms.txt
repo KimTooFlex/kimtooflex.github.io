@@ -24,6 +24,8 @@
   A modern, fully customizable panel control for WinForms. It is a container for grouping and styling related content.
 - [KimTools / Controls / PictureBox](https://kimtoo.net/controls/kt-picture-box/)
   A modern, customizable PictureBox control supporting rounded corners, custom border styles, image filters, and dynamic gradient/brush masking.
+- [KimTools / Controls / ProgressGauge](https://kimtoo.net/controls/kt-progress-gauge/)
+  An arc-based gauge meter with dual-range color support, automatic background generation, cap style control, and smooth value transitions.
 - [KimTools / Controls / ProgressRadial](https://kimtoo.net/controls/kt-progress-radial/)
   A customizable circular progress indicator with gradient arcs, independent cap styles, sub/superscript annotations, and smooth animation support.
 - [KimTools / Controls / Progress](https://kimtoo.net/controls/kt-progress/)
@@ -38,6 +40,8 @@
   A fully owner-drawn dropdown with rounded corners, theme-aware colors, adjustable indicator styles, and independent styling for the closed surface and dropdown list items.
 - [KimTools / Controls / Shapes](https://kimtoo.net/controls/kt-shapes/)
   A versatile shape renderer supporting circles, ovals, squares, rectangles, polygons, and lines with independent fill, border, rotation, and side-count control.
+- [KimTools / Controls / Slider](https://kimtoo.net/controls/kt-slider/)
+  A horizontal range slider with state-based theming, fill/outline thumb styles, thick/thin track borders, and smooth color transitions.
 - [KimTools / Controls / Switch](https://kimtoo.net/controls/kt-switch/)
   A smooth, highly customizable toggle switch control for Modern WinForms supporting custom state styling and animations.
 - [KimTools / Controls / Table](https://kimtoo.net/controls/kt-table/)

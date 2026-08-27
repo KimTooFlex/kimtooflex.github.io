@@ -142,6 +142,12 @@
           "icon": "gauge"
         },
         {
+          "kt": "kt-progress-gauge",
+          "path": "/controls/kt-progress-gauge.md",
+          "title": "Kt • ProgressGauge",
+          "icon": "gauge"
+        },
+        {
           "kt": "kt-progress-radial",
           "path": "/controls/kt-progress-radial.md",
           "title": "Kt • ProgressRadial",
@@ -176,6 +182,12 @@
           "path": "/controls/kt-shapes.md",
           "title": "Kt • Shapes",
           "icon": "shapes"
+        },
+        {
+          "kt": "kt-slider",
+          "path": "/controls/kt-slider.md",
+          "title": "Kt • Slider",
+          "icon": "sliders-horizontal"
         },
         {
           "kt": "kt-switch",
