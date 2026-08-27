@@ -5,7 +5,7 @@ bundle:
   description: ""
   url: "https://kimtoo.net"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T17:46:21.507Z"
+  generated_at: "2026-08-27T20:29:04.450Z"
   default_type: concept
 stats:
   concepts: 37
@@ -27,6 +27,14 @@ concepts:
     title: "KimTools / Components / Toasts"
     path: /components/kt-toasts/
     file: concepts/components-kt-toasts.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: components-kt-tooltips
+    type: concept
+    title: "KimTools / Components / Tooltips"
+    path: /components/kt-tooltips/
+    file: concepts/components-kt-tooltips.md
     locale: ""
     version: ""
     tags: 
@@ -227,14 +235,6 @@ concepts:
     title: "KimTools / Controls / TextBox"
     path: /controls/kt-text-box/
     file: concepts/controls-kt-text-box.md
-    locale: ""
-    version: ""
-    tags: 
-  - id: controls-kt-themes
-    type: concept
-    title: "KimTools / Controls / Themes"
-    path: /controls/kt-themes/
-    file: concepts/controls-kt-themes.md
     locale: ""
     version: ""
     tags: 

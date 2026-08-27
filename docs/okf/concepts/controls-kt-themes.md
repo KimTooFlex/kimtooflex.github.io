@@ -7,7 +7,7 @@ path: /controls/kt-themes/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T17:46:21.471Z"
+  generated_at: "2026-08-27T20:24:42.268Z"
 ---
 ---
 title: "KimTools / Controls / Themes"

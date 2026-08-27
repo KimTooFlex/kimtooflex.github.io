@@ -7,7 +7,7 @@ path: /controls/kt-radio-button/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T17:46:21.405Z"
+  generated_at: "2026-08-27T20:29:04.232Z"
 ---
 ---
 title: "KimTools / Controls / RadioButton"

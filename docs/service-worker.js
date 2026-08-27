@@ -1,4 +1,4 @@
-const CACHE_NAME = 'docmd-cache-1787852781538';
+const CACHE_NAME = 'docmd-cache-1787862544494';
     
     self.addEventListener('install', (event) => {
       self.skipWaiting();

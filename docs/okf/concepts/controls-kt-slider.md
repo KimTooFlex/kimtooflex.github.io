@@ -7,7 +7,7 @@ path: /controls/kt-slider/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T17:46:21.427Z"
+  generated_at: "2026-08-27T20:29:04.264Z"
 ---
 ---
 title: "KimTools / Controls / Slider"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-slider-light](/assets/images/screenshots/kt-slider/kt-slider-light.png?v=639234525095807241){ .light .snapshot} ![kt-slider-dark](/assets/images/screenshots/kt-slider/kt-slider-dark.png?v=639234525095807241){.dark .snapshot}
+![kt-slider-light](/assets/images/screenshots/kt-slider/kt-slider-light.png?v=639234625359322751){ .light .snapshot} ![kt-slider-dark](/assets/images/screenshots/kt-slider/kt-slider-dark.png?v=639234625359322751){.dark .snapshot}
 :::
 
 ::: callout success
@@ -70,13 +70,13 @@ panel.Controls.Add(slider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234525135004752){ .light .snapshot} ![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234525135004752){.dark .snapshot}
+![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234625410766077){ .light .snapshot} ![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234625410766077){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234525135004752){  .snapshot}
+![slider-flat-light](/assets/images/screenshots/kt-slider/slider-flat-light.png?v=639234625410753439){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234525135004752){ .snapshot}
+![slider-flat-dark](/assets/images/screenshots/kt-slider/slider-flat-dark.png?v=639234625410753439){ .snapshot}
 
 :::
 :::
@@ -114,13 +114,13 @@ panel.Controls.Add(slider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234525152361057){ .light .snapshot} ![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234525152361057){.dark .snapshot}
+![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234625448445360){ .light .snapshot} ![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234625448445360){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234525152361057){  .snapshot}
+![slider-fill-light](/assets/images/screenshots/kt-slider/slider-fill-light.png?v=639234625448439645){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234525152361057){ .snapshot}
+![slider-fill-dark](/assets/images/screenshots/kt-slider/slider-fill-dark.png?v=639234625448439645){ .snapshot}
 
 :::
 :::
@@ -188,13 +188,13 @@ panel.Controls.Add(error);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234525171188291){ .light .snapshot} ![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234525171188291){.dark .snapshot}
+![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234625487069078){ .light .snapshot} ![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234625487069078){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234525171188291){  .snapshot}
+![slider-themed-light](/assets/images/screenshots/kt-slider/slider-themed-light.png?v=639234625487069078){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234525171188291){ .snapshot}
+![slider-themed-dark](/assets/images/screenshots/kt-slider/slider-themed-dark.png?v=639234625487069078){ .snapshot}
 
 :::
 :::
@@ -233,13 +233,13 @@ panel.Controls.Add(slider);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234525189172471){ .light .snapshot} ![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234525189172471){.dark .snapshot}
+![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234625525078804){ .light .snapshot} ![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234625525078804){.dark .snapshot}
 
 == tab "Light" icon:sun
-![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234525189172471){  .snapshot}
+![slider-disabled-light](/assets/images/screenshots/kt-slider/slider-disabled-light.png?v=639234625525078804){  .snapshot}
 
 == tab "Dark" icon:moon
-![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234525189172471){ .snapshot}
+![slider-disabled-dark](/assets/images/screenshots/kt-slider/slider-disabled-dark.png?v=639234625525078804){ .snapshot}
 
 :::
 :::

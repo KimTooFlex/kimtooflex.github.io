@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-select-light](/assets/images/screenshots/kt-select/kt-select-light.png?v=639234524841300372){ .light .snapshot} ![kt-select-dark](/assets/images/screenshots/kt-select/kt-select-dark.png?v=639234524841300372){.dark .snapshot}
+![kt-select-light](/assets/images/screenshots/kt-select/kt-select-light.png?v=639234658074362850){ .light .snapshot} ![kt-select-dark](/assets/images/screenshots/kt-select/kt-select-dark.png?v=639234658074362850){.dark .snapshot}
 :::
 
 ::: callout success
@@ -25,6 +25,9 @@ This component is only available in the Premium version of KimTools.
 **This control has full Visual Studio design-time support.**
 Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.
 :::
+```csharp "🔴 🟡 🟢"
+var select = new KtSelect();
+```
 
 ::: hero layout:split glow:true
 ## Flat / Minimal Select
@@ -61,7 +64,7 @@ var select = new KtSelect
     ItemBorderColor = KtColor.BASE_3 % 20,
 };
 	
-select.Items.AddRange(new[] { "Option A", "Option B", "Option C" });
+select.Items.AddRange(["Option A", "Option B", "Option C"]);
 select.SelectedIndex = 0;
 	
 panel.Controls.Add(select);
@@ -69,13 +72,13 @@ panel.Controls.Add(select);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![select-flat-light](/assets/images/screenshots/kt-select/select-flat-light.png?v=639234524875822595){ .light .snapshot} ![select-flat-dark](/assets/images/screenshots/kt-select/select-flat-dark.png?v=639234524875822595){.dark .snapshot}
+![select-flat-light](/assets/images/screenshots/kt-select/select-flat-light.png?v=639234658135916863){ .light .snapshot} ![select-flat-dark](/assets/images/screenshots/kt-select/select-flat-dark.png?v=639234658135916863){.dark .snapshot}
 
 == tab "Light" icon:sun
-![select-flat-light](/assets/images/screenshots/kt-select/select-flat-light.png?v=639234524875822595){  .snapshot}
+![select-flat-light](/assets/images/screenshots/kt-select/select-flat-light.png?v=639234658135911254){  .snapshot}
 
 == tab "Dark" icon:moon
-![select-flat-dark](/assets/images/screenshots/kt-select/select-flat-dark.png?v=639234524875822595){ .snapshot}
+![select-flat-dark](/assets/images/screenshots/kt-select/select-flat-dark.png?v=639234658135911254){ .snapshot}
 
 :::
 :::
@@ -115,7 +118,7 @@ var select = new KtSelect
     ItemBorderColor = KtColor.BASE_3 % 30,
 };
 	
-select.Items.AddRange(new[] { "Active", "Paused", "Archived" });
+select.Items.AddRange(["Active", "Paused", "Archived"]);
 select.SelectedIndex = 0;
 	
 panel.Controls.Add(select);
@@ -123,13 +126,13 @@ panel.Controls.Add(select);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![select-pill-light](/assets/images/screenshots/kt-select/select-pill-light.png?v=639234524892487589){ .light .snapshot} ![select-pill-dark](/assets/images/screenshots/kt-select/select-pill-dark.png?v=639234524892487589){.dark .snapshot}
+![select-pill-light](/assets/images/screenshots/kt-select/select-pill-light.png?v=639234658176451713){ .light .snapshot} ![select-pill-dark](/assets/images/screenshots/kt-select/select-pill-dark.png?v=639234658176451713){.dark .snapshot}
 
 == tab "Light" icon:sun
-![select-pill-light](/assets/images/screenshots/kt-select/select-pill-light.png?v=639234524892487589){  .snapshot}
+![select-pill-light](/assets/images/screenshots/kt-select/select-pill-light.png?v=639234658176441656){  .snapshot}
 
 == tab "Dark" icon:moon
-![select-pill-dark](/assets/images/screenshots/kt-select/select-pill-dark.png?v=639234524892487589){ .snapshot}
+![select-pill-dark](/assets/images/screenshots/kt-select/select-pill-dark.png?v=639234658176441656){ .snapshot}
 
 :::
 :::
@@ -193,9 +196,9 @@ var right = new KtSelect
     DropdownBorderThickness = KtSelect.BorderThickness.Thin,
 };
 	
-left.Items.AddRange(new[] { "Left aligned", "Center aligned", "Right aligned" });
-center.Items.AddRange(new[] { "Left aligned", "Center aligned", "Right aligned" });
-right.Items.AddRange(new[] { "Left aligned", "Center aligned", "Right aligned" });
+left.Items.AddRange(["Left aligned", "Center aligned", "Right aligned"]);
+center.Items.AddRange(["Left aligned", "Center aligned", "Right aligned"]);
+right.Items.AddRange(["Left aligned", "Center aligned", "Right aligned"]);
 	
 left.SelectedIndex = 0;
 center.SelectedIndex = 1;
@@ -208,13 +211,13 @@ panel.Controls.Add(right);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![select-alignment-light](/assets/images/screenshots/kt-select/select-alignment-light.png?v=639234524911360550){ .light .snapshot} ![select-alignment-dark](/assets/images/screenshots/kt-select/select-alignment-dark.png?v=639234524911360550){.dark .snapshot}
+![select-alignment-light](/assets/images/screenshots/kt-select/select-alignment-light.png?v=639234658217789133){ .light .snapshot} ![select-alignment-dark](/assets/images/screenshots/kt-select/select-alignment-dark.png?v=639234658217789133){.dark .snapshot}
 
 == tab "Light" icon:sun
-![select-alignment-light](/assets/images/screenshots/kt-select/select-alignment-light.png?v=639234524911350634){  .snapshot}
+![select-alignment-light](/assets/images/screenshots/kt-select/select-alignment-light.png?v=639234658217789133){  .snapshot}
 
 == tab "Dark" icon:moon
-![select-alignment-dark](/assets/images/screenshots/kt-select/select-alignment-dark.png?v=639234524911350634){ .snapshot}
+![select-alignment-dark](/assets/images/screenshots/kt-select/select-alignment-dark.png?v=639234658217789133){ .snapshot}
 
 :::
 :::
@@ -265,8 +268,8 @@ var filled = new KtSelect
     FillIndicator = true,
 };
 	
-outline.Items.AddRange(new[] { "Outline indicator", "Filled indicator" });
-filled.Items.AddRange(new[] { "Outline indicator", "Filled indicator" });
+outline.Items.AddRange(["Outline indicator", "Filled indicator"]);
+filled.Items.AddRange(["Outline indicator", "Filled indicator"]);
 	
 outline.SelectedIndex = 0;
 filled.SelectedIndex = 1;
@@ -277,13 +280,13 @@ panel.Controls.Add(filled);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![select-indicator-light](/assets/images/screenshots/kt-select/select-indicator-light.png?v=639234524928880945){ .light .snapshot} ![select-indicator-dark](/assets/images/screenshots/kt-select/select-indicator-dark.png?v=639234524928880945){.dark .snapshot}
+![select-indicator-light](/assets/images/screenshots/kt-select/select-indicator-light.png?v=639234658258608959){ .light .snapshot} ![select-indicator-dark](/assets/images/screenshots/kt-select/select-indicator-dark.png?v=639234658258608959){.dark .snapshot}
 
 == tab "Light" icon:sun
-![select-indicator-light](/assets/images/screenshots/kt-select/select-indicator-light.png?v=639234524928880945){  .snapshot}
+![select-indicator-light](/assets/images/screenshots/kt-select/select-indicator-light.png?v=639234658258608959){  .snapshot}
 
 == tab "Dark" icon:moon
-![select-indicator-dark](/assets/images/screenshots/kt-select/select-indicator-dark.png?v=639234524928880945){ .snapshot}
+![select-indicator-dark](/assets/images/screenshots/kt-select/select-indicator-dark.png?v=639234658258608959){ .snapshot}
 
 :::
 :::
@@ -322,7 +325,7 @@ var select = new KtSelect
     DisabledIndicatorColor = KtColor.CONTENT % 25,
 };
 	
-select.Items.AddRange(new[] { "Unavailable", "Offline", "Restricted" });
+select.Items.AddRange(["Unavailable", "Offline", "Restricted"]);
 select.SelectedIndex = 0;
 	
 panel.Controls.Add(select);
@@ -330,13 +333,13 @@ panel.Controls.Add(select);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![select-disabled-light](/assets/images/screenshots/kt-select/select-disabled-light.png?v=639234524946165793){ .light .snapshot} ![select-disabled-dark](/assets/images/screenshots/kt-select/select-disabled-dark.png?v=639234524946165793){.dark .snapshot}
+![select-disabled-light](/assets/images/screenshots/kt-select/select-disabled-light.png?v=639234658299077378){ .light .snapshot} ![select-disabled-dark](/assets/images/screenshots/kt-select/select-disabled-dark.png?v=639234658299077378){.dark .snapshot}
 
 == tab "Light" icon:sun
-![select-disabled-light](/assets/images/screenshots/kt-select/select-disabled-light.png?v=639234524946165793){  .snapshot}
+![select-disabled-light](/assets/images/screenshots/kt-select/select-disabled-light.png?v=639234658299077378){  .snapshot}
 
 == tab "Dark" icon:moon
-![select-disabled-dark](/assets/images/screenshots/kt-select/select-disabled-dark.png?v=639234524946165793){ .snapshot}
+![select-disabled-dark](/assets/images/screenshots/kt-select/select-disabled-dark.png?v=639234658299077378){ .snapshot}
 
 :::
 :::
@@ -378,7 +381,7 @@ var select = new KtSelect
     TextLeftMargin = 8,
 };
 	
-select.Items.AddRange(new[] { "Deploy", "Staging", "Production", "Rollback" });
+select.Items.AddRange(["Deploy", "Staging", "Production", "Rollback"]);
 select.SelectedIndex = 2;
 	
 panel.Controls.Add(select);
@@ -386,13 +389,13 @@ panel.Controls.Add(select);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![select-list-theme-light](/assets/images/screenshots/kt-select/select-list-theme-light.png?v=639234524963350755){ .light .snapshot} ![select-list-theme-dark](/assets/images/screenshots/kt-select/select-list-theme-dark.png?v=639234524963350755){.dark .snapshot}
+![select-list-theme-light](/assets/images/screenshots/kt-select/select-list-theme-light.png?v=639234658339489331){ .light .snapshot} ![select-list-theme-dark](/assets/images/screenshots/kt-select/select-list-theme-dark.png?v=639234658339489331){.dark .snapshot}
 
 == tab "Light" icon:sun
-![select-list-theme-light](/assets/images/screenshots/kt-select/select-list-theme-light.png?v=639234524963341727){  .snapshot}
+![select-list-theme-light](/assets/images/screenshots/kt-select/select-list-theme-light.png?v=639234658339489331){  .snapshot}
 
 == tab "Dark" icon:moon
-![select-list-theme-dark](/assets/images/screenshots/kt-select/select-list-theme-dark.png?v=639234524963341727){ .snapshot}
+![select-list-theme-dark](/assets/images/screenshots/kt-select/select-list-theme-dark.png?v=639234658339489331){ .snapshot}
 
 :::
 :::

@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kimtoo.net/components/kt-tooltips/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kimtoo.net/controls/kt-button/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -132,11 +137,6 @@
   </url>
   <url>
     <loc>https://kimtoo.net/controls/kt-text-box/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kimtoo.net/controls/kt-themes/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

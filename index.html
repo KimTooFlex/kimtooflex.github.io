@@ -808,7 +808,7 @@
 
                                 <span :class="'pill text-xs font-mono ' + (isDark ? 'text-slate-200' : 'text-slate-800')"
                                       :style="`zoom:80%;background: ${control.color}18; color: ${control.color}; border: 1px solid ${control.color}33;`">
-                                    {{ control.category.replace(/s+$/i, "") }}
+                                    {{ control.category.replace("ies","y").replace(/s+$/i, "") }}
                                 </span>
                             </div>
                         </a>
@@ -1465,8 +1465,11 @@
                                     name: child.title,
                                     slug: child.kt,
                                     category: category,
-                                    color: category==="controls" ? "#9810FA" : "#4F39F6",
-                                    thumbnail: `./docs/assets/images/screenshots/${category}/${child.kt}-dark.png`
+                                    thumbnail: `./docs/assets/images/screenshots/${category}/${child.kt}-dark.png`,                                    color: category.toLowerCase()==="controls"
+                                        ? "#9810FA"
+                                        : category.toLowerCase()==="components"
+                                            ? "#4F39F6"
+                                            : "#81C03F"
                                 });
                             }
                         }

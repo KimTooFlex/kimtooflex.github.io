@@ -220,12 +220,6 @@
           "icon": "text-cursor-input"
         },
         {
-          "kt": "kt-themes",
-          "path": "/controls/kt-themes.md",
-          "title": "Kt • Themes",
-          "icon": "palette"
-        },
-        {
           "kt": "kt-window",
           "path": "/controls/kt-window.md",
           "title": "Kt • Window",
@@ -248,6 +242,12 @@
           "path": "/components/kt-toasts.md",
           "title": "Kt • Toasts",
           "icon": "bell"
+        },
+        {
+          "kt": "kt-tooltips",
+          "path": "/components/kt-tooltips.md",
+          "title": "Kt • Tooltips",
+          "icon": "message-square"
         }
       ]
     },

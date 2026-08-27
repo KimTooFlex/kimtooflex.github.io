@@ -7,7 +7,7 @@ path: /faq/
 updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T17:46:21.478Z"
+  generated_at: "2026-08-27T20:29:04.344Z"
 ---
 ---
 title: "KimTools / FAQ"
