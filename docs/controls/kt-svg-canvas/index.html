@@ -1,0 +1,3480 @@
+<!--
+  ---------------------------------------------------------------
+  docmd : the zero-config documentation engine.
+  @website https://docmd.io
+  [docmd-source] - Please do not remove this header.
+  ---------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="docmd v0.9.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+      var root = "../../";
+      if (root && !root.endsWith('/')) root += '/';
+      if (root === '') root = './';
+      window.DOCMD_ROOT = root;
+
+      window.DOCMD_SITE_ROOT = "/docs/";
+
+      window.DOCMD_APPEARANCE = "light";
+      window.DOCMD_VERSION_ROOT = "/";
+      window.DOCMD_BASE = "/docs/";
+      window.DOCMD_LOCALE = "";
+      window.DOCMD_DEFAULT_LOCALE = "";
+    </script>
+    <script>/**
+ * --------------------------------------------------------------------
+ * docmd : the zero-config documentation engine.
+ *
+ * @package     @docmd/core (and ecosystem)
+ * @website     https://docmd.io
+ * @repository  https://github.com/docmd-io/docmd
+ * @license     MIT
+ * @copyright   Copyright (c) 2025-present docmd.io
+ *
+ * [docmd-source] - Please do not remove this header.
+ * --------------------------------------------------------------------
+ */
+
+(function () {
+  try {
+    // 1. Determine Theme
+    //
+    // Resolve from three sources, in priority order:
+    //   1. localStorage explicit user choice (light / dark)
+    //   2. window.DOCMD_APPEARANCE  (current canonical name, set by EJS templates)
+    //   3. window.DOCMD_DEFAULT_MODE (legacy alias kept for pre-0.8.7 outputs)
+    //   4. 'light' as the final fallback
+    //
+    // Note: localStorage is only honoured when it holds an explicit
+    // 'light' or 'dark' value. A stored 'system' value (from a prior
+    // session where the user picked "follow system") must NOT win over
+    // a freshly resolved config value — the resolved value will itself
+    // be 'system' in that case and the OS preference check below takes
+    // over, so this is a no-op for the in-session behaviour but keeps
+    // any future storage migration simple.
+    var localValue = localStorage.getItem('docmd-theme');
+    var configValue = window.DOCMD_APPEARANCE
+      || window.DOCMD_DEFAULT_MODE
+      || 'light';
+    var theme = (localValue === 'light' || localValue === 'dark')
+      ? localValue
+      : configValue;
+
+    if (theme === 'system') {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // 2. Apply to Root
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // 3. Highlight.js Toggle Strategy
+    var lightLink = document.getElementById('hljs-light');
+    var darkLink = document.getElementById('hljs-dark');
+
+    if (lightLink && darkLink) {
+      if (theme === 'dark') {
+        lightLink.disabled = true;
+        darkLink.disabled = false;
+      } else {
+        lightLink.disabled = false;
+        darkLink.disabled = true;
+      }
+    }
+
+    document.documentElement.style.visibility = "visible";
+  } catch (e) {
+    document.documentElement.style.visibility = "visible";
+    console.error('Theme init failed', e);
+  }
+})();</script>
+    <style>
+      html {
+        visibility: hidden;
+      }
+    </style>
+    <title>
+      KimTools / Controls / SvgCanvas : KimTools.WinForms
+    </title>
+    
+    
+
+    <link id="site-favicon" rel="icon" href="../../assets/images/favicon.ico?v=mtd2ncoy">
+    <link rel="stylesheet" href="../../assets/css/docmd-main.css?v=mtd2ncoy">
+    
+    <link rel="stylesheet" href="../../assets/css/docmd-highlight-light.css?v=mtd2ncoy" id="hljs-light" >
+    <link rel="stylesheet" href="../../assets/css/docmd-highlight-dark.css?v=mtd2ncoy" id="hljs-dark" disabled>
+    
+    
+<meta name="description" content="A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables.">
+<link rel="canonical" href="https://kimtoo.net/controls/kt-svg-canvas/">
+<meta property="og:title" content="KimTools / Controls / SvgCanvas - KimTools.WinForms">
+<meta property="og:description" content="A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables.">
+<meta property="og:url" content="https://kimtoo.net/controls/kt-svg-canvas/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KimTools / Controls / SvgCanvas - KimTools.WinForms">
+<meta name="twitter:description" content="A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables.">
+<meta name="keywords" content="KimTools, Controls, KtSvgCanvas, SvgCanvas, Panel">
+
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id="G-8RDLCMTFXX""></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', "G-8RDLCMTFXX");
+    </script>
+
+
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta name="theme-color" content="#1e293b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register("../../service-worker.js").then(reg => {
+          // Check for Service Worker updates from the server every 5 minutes 
+          setInterval(() => {
+             reg.update().catch(() => {});
+          }, 5 * 60 * 1000);
+        }).catch(err => {
+          console.log('PWA SW Registration Failed:', err);
+        });
+      });
+    }
+  </script>
+  
+<link rel="stylesheet" href="../../assets/css/docmd-openapi.css?v=mtd2ncoy" >
+
+    
+      <link rel="stylesheet" href="../../assets/css/kimtools.css?v=mtd2ncoy">
+    
+    
+  </head>
+  <body
+    class="sidebar-collapsible toc-disabled"
+    data-default-collapsed="false"
+    data-copy-code-enabled="true" data-spa-enabled="true" data-source-file="src/controls/kt-svg-canvas.md">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    
+    
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          
+<a href="https://kimtoo.net" class="logo-link">
+              <img
+                src="../../assets/images/logo-light.webp"
+                alt="KimTools Logo - Horizontal" class="logo-light" style="height: 32px;">
+              <img
+                src="../../assets/images/logo-dark.webp"
+                alt="KimTools Logo - Horizontal" class="logo-dark" style="height: 32px;">
+            </a>
+          
+          <span class="mobile-view sidebar-menu-button float-right">
+            
+<svg class="lucide-icon icon-menu " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-menu"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" />
+</svg>
+
+          </span>
+        </div>
+        <div class="sidebar-top-group">
+          
+          
+          
+          
+        </div>
+        
+
+<nav class="sidebar-nav" aria-label="Main Navigation">
+  <ul>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <a href="../../" class=" nav-group"
+          >
+           
+<svg class="lucide-icon icon-rocket " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-rocket"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+  <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Getting Started
+            </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+          
+        </a>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../licensing/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Licensing
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../requirements/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            Requirements
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../faq/" class=" "
+          >
+          
+          <span class="nav-item-title">
+            FAQ
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="" >
+      
+        <span class="nav-label ">
+          
+          <span class="nav-item-title">
+             
+          </span>
+          
+        </span>
+        
+
+        
+      </li>
+    
+      <li class="active-parent expanded nav-group" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+             🟣 Controls
+          </span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../controls/kt-button/" class=" "
+          >
+           
+<svg class="lucide-icon icon-rectangle-horizontal " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-rectangle-horizontal"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="12" x="2" y="6" rx="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Button
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-check-box/" class=" "
+          >
+           
+<svg class="lucide-icon icon-square-check " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-square-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="m9 12 2 2 4-4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • CheckBox
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-check-button/" class=" "
+          >
+           
+<svg class="lucide-icon icon-rectangle-ellipsis " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-rectangle-ellipsis"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="12" x="2" y="6" rx="2" />
+  <path d="M12 12h.01" />
+  <path d="M17 12h.01" />
+  <path d="M7 12h.01" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • CheckButton
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-date/" class=" "
+          >
+           
+<svg class="lucide-icon icon-calendar " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-calendar"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 2v4" />
+  <path d="M16 2v4" />
+  <rect width="18" height="18" x="3" y="4" rx="2" />
+  <path d="M3 10h18" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Date
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-divider/" class=" "
+          >
+           
+<svg class="lucide-icon icon-square-split-vertical " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-square-split-vertical"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 8V5c0-1 1-2 2-2h10c1 0 2 1 2 2v3" />
+  <path d="M19 16v3c0 1-1 2-2 2H7c-1 0-2-1-2-2v-3" />
+  <line x1="4" x2="20" y1="12" y2="12" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Divider
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-label/" class=" "
+          >
+           
+<svg class="lucide-icon icon-type " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-type"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 4v16" />
+  <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
+  <path d="M9 20h6" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Label
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-menu/" class=" "
+          >
+           
+<svg class="lucide-icon icon-list-tree " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-list-tree"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 5h13" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="M3 10a2 2 0 0 0 2 2h3" />
+  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Menu
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-pages/" class=" "
+          >
+           
+<svg class="lucide-icon icon-layers " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layers"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Pages
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-panel/" class=" "
+          >
+           
+<svg class="lucide-icon icon-layout-panel-top " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layout-panel-top"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Panel
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-picture-box/" class=" "
+          >
+           
+<svg class="lucide-icon icon-image " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-image"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+  <circle cx="9" cy="9" r="2" />
+  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • PictureBox
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-progress/" class=" "
+          >
+           
+<svg class="lucide-icon icon-gauge " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-gauge"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 14 4-4" />
+  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Progress
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-progress-gauge/" class=" "
+          >
+           
+<svg class="lucide-icon icon-gauge " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-gauge"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 14 4-4" />
+  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • ProgressGauge
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-progress-radial/" class=" "
+          >
+           
+<svg class="lucide-icon icon-gauge " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-gauge"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 14 4-4" />
+  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • ProgressRadial
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-radio-box/" class=" "
+          >
+           
+<svg class="lucide-icon icon-circle-stop " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-circle-stop"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <rect x="9" y="9" width="6" height="6" rx="1" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • RadioBox
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-radio-button/" class=" "
+          >
+           
+<svg class="lucide-icon icon-rectangle-ellipsis " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-rectangle-ellipsis"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="12" x="2" y="6" rx="2" />
+  <path d="M12 12h.01" />
+  <path d="M17 12h.01" />
+  <path d="M7 12h.01" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • RadioButton
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-rating/" class=" "
+          >
+           
+<svg class="lucide-icon icon-star " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-star"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Rating
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-select/" class=" "
+          >
+           
+<svg class="lucide-icon icon-chevrons-up-down " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevrons-up-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m7 15 5 5 5-5" />
+  <path d="m7 9 5-5 5 5" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Select
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-shapes/" class=" "
+          >
+           
+<svg class="lucide-icon icon-shapes " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-shapes"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
+  <rect x="3" y="14" width="7" height="7" rx="1" />
+  <circle cx="17.5" cy="17.5" r="3.5" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Shapes
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-slider/" class=" "
+          >
+           
+<svg class="lucide-icon icon-sliders-horizontal " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sliders-horizontal"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 5H3" />
+  <path d="M12 19H3" />
+  <path d="M14 3v4" />
+  <path d="M16 17v4" />
+  <path d="M21 12h-9" />
+  <path d="M21 19h-5" />
+  <path d="M21 5h-7" />
+  <path d="M8 10v4" />
+  <path d="M8 12H3" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Slider
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-slider-vert/" class=" "
+          >
+           
+<svg class="lucide-icon icon-sliders-vertical " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sliders-vertical"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 8h4" />
+  <path d="M12 21v-9" />
+  <path d="M12 8V3" />
+  <path d="M17 16h4" />
+  <path d="M19 12V3" />
+  <path d="M19 21v-5" />
+  <path d="M3 14h4" />
+  <path d="M5 10V3" />
+  <path d="M5 21v-7" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • SliderVert
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-spinner/" class=" "
+          >
+           
+<svg class="lucide-icon icon-loader " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-loader"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 2v4" />
+  <path d="m16.2 7.8 2.9-2.9" />
+  <path d="M18 12h4" />
+  <path d="m16.2 16.2 2.9 2.9" />
+  <path d="M12 18v4" />
+  <path d="m4.9 19.1 2.9-2.9" />
+  <path d="M2 12h4" />
+  <path d="m4.9 4.9 2.9 2.9" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Spinner
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="active" >
+      
+        <a href="../../controls/kt-svg-canvas/" class="active "
+          >
+           
+<svg class="lucide-icon icon-image " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-image"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+  <circle cx="9" cy="9" r="2" />
+  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • SvgCanvas
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-switch/" class=" "
+          >
+           
+<svg class="lucide-icon icon-toggle-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-toggle-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="15" cy="12" r="3" />
+  <rect width="20" height="14" x="2" y="5" rx="7" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Switch
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-table/" class=" "
+          >
+           
+<svg class="lucide-icon icon-table-2 " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-table-2"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Table
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-text-box/" class=" "
+          >
+           
+<svg class="lucide-icon icon-text-cursor-input " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-text-cursor-input"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 20h-1a2 2 0 0 1-2-2 2 2 0 0 1-2 2H6" />
+  <path d="M13 8h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7" />
+  <path d="M5 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1" />
+  <path d="M6 4h1a2 2 0 0 1 2 2 2 2 0 0 1 2-2h1" />
+  <path d="M9 6v12" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • TextBox
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../controls/kt-window/" class=" "
+          >
+           
+<svg class="lucide-icon icon-app-window-mac " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window-mac"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="16" x="2" y="4" rx="2" />
+  <path d="M6 8h.01" />
+  <path d="M10 8h.01" />
+  <path d="M14 8h.01" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Window
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+             🔵 Components
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../components/kt-pop-over/" class=" "
+          >
+           
+<svg class="lucide-icon icon-picture-in-picture-2 " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-picture-in-picture-2"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M21 9V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h4" />
+  <rect width="10" height="7" x="12" y="13" rx="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • PopOver
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../components/kt-toasts/" class=" "
+          >
+           
+<svg class="lucide-icon icon-bell " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-bell"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+  <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Toasts
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../components/kt-tooltips/" class=" "
+          >
+           
+<svg class="lucide-icon icon-message-square " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-message-square"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Tooltips
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+             🟢 Utilities
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../utilities/kt-color/" class=" "
+          >
+           
+<svg class="lucide-icon icon-swatch-book " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-swatch-book"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11 17a4 4 0 0 1-8 0V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2Z" />
+  <path d="M16.7 13H19a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7" />
+  <path d="M 7 17h.01" />
+  <path d="m11 8 2.3-2.3a2.4 2.4 0 0 1 3.404.004L18.6 7.6a2.4 2.4 0 0 1 .026 3.434L9.9 19.8" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Color
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../utilities/kt-brush/" class=" "
+          >
+           
+<svg class="lucide-icon icon-paintbrush " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-paintbrush"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m14.622 17.897-10.68-2.913" />
+  <path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z" />
+  <path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Brush
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../utilities/kt-themes/" class=" "
+          >
+           
+<svg class="lucide-icon icon-palette " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-palette"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Kt • Themes
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../templates/" class=" "
+          >
+           
+<svg class="lucide-icon icon-layout-template " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layout-template"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="7" x="3" y="3" rx="1" />
+  <rect width="9" height="7" x="3" y="14" rx="1" />
+  <rect width="5" height="7" x="16" y="14" rx="1" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Templates
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://store.kimtoo.net/?section=0JNqmLFulvHeku3QucyOJg%3D%3D" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-history " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-history"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+  <path d="M3 3v5h5" />
+  <path d="M12 7v5l4 2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Release Notes
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../changelog/" class=" "
+          >
+           
+<svg class="lucide-icon icon-scroll-text " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-scroll-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 12h-5" />
+  <path d="M15 8h-5" />
+  <path d="M19 17V5a2 2 0 0 0-2-2H4" />
+  <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Change Log
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="collapsible nav-group"  aria-expanded="false" >
+      
+        <span class="nav-label nav-group">
+          
+          <span class="nav-item-title">
+            Resources
+          </span>
+          
+            <span class="collapse-icon-wrapper">
+<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+          
+        </span>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="https://kimtoo.net/#pricing" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-badge-dollar-sign " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-badge-dollar-sign"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+  <path d="M12 18V6" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Pricing
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://store.kimtoo.net" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-shopping-cart " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-shopping-cart"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="8" cy="21" r="1" />
+  <circle cx="19" cy="21" r="1" />
+  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Store
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://www.nuget.org/packages/KimTools.WinForms" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-package-search " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-package-search"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22V12" />
+  <path d="M20.27 18.27 22 20" />
+  <path d="M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559" />
+  <path d="M3.29 7 12 12l8.71-5" />
+  <path d="m7.5 4.27 8.997 5.148" />
+  <circle cx="18.5" cy="16.5" r="2.5" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            NuGet
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://support.kimtoo.net" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-life-buoy " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-life-buoy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="m4.93 4.93 4.24 4.24" />
+  <path d="m14.83 9.17 4.24-4.24" />
+  <path d="m14.83 14.83 4.24 4.24" />
+  <path d="m9.17 14.83-4.24 4.24" />
+  <circle cx="12" cy="12" r="4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Support
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&amp;tier=1" class=" "
+          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
+           
+<svg class="lucide-icon icon-briefcase " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-briefcase"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+  <rect width="20" height="14" x="2" y="6" rx="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Services
+            </span>
+          
+           
+<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+        <div class="sidebar-bottom-group mt-auto">
+          
+          
+          
+          
+        </div>
+      </aside>
+      
+      
+      
+      <div class="main-content-wrapper">
+        
+        
+          <header class="page-header">
+            <div class="header-left">
+              
+                <button id="sidebar-toggle-button" class="sidebar-toggle-button"
+                  aria-label="Toggle Sidebar">
+                  
+<svg class="lucide-icon icon-chevron-left " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 18-6-6 6-6" />
+</svg>
+
+                </button>
+              
+              <div class="header-titles-wrapper">
+                <span class="header-title">
+                  KimTools / Controls / SvgCanvas
+                </span>
+              </div>
+            </div>
+            <div class="header-right">
+              
+                
+
+
+<div class="docmd-options-menu">
+    
+    <button class="docmd-search-trigger" aria-label="Search">
+        
+<svg class="lucide-icon icon-search " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-search"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+
+        <span class="search-label">Search</span>
+        <span class="search-keys"><kbd class="docmd-kbd">⌘</kbd><kbd class="docmd-kbd">K</kbd></span>
+    </button>
+    
+
+    
+
+    
+
+    
+    <button class="theme-toggle-button" aria-label="Toggle theme">
+        
+<svg class="lucide-icon icon-sun icon-sun" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+ 
+<svg class="lucide-icon icon-moon icon-moon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+
+    </button>
+    
+
+    
+</div>
+
+              
+            </div>
+          </header>
+        
+        <div class="content-theme-cover">
+          <main class="content-area" id="main-content">
+            <div class="content-layout">
+              <div class="main-content">
+                <div class="docmd-breadcrumbs-row">
+                  <div id="docmd-raw-markdown" data-content="---%0D%0Atitle%3A%20%22KimTools%20%2F%20Controls%20%2F%20SvgCanvas%22%0D%0Adescription%3A%20%22A%20high-performance%20SVG%20canvas%20with%20a%20full%20templating%20engine%20supporting%20model%20binding%2C%20loops%2C%20conditionals%2C%20show%2Fhide%2C%20processing%20instructions%2C%20and%20CSS%20SmartFormat%20variables.%22%0D%0Akeywords%3A%20%5B%22KimTools%22%2C%20%22Controls%22%2C%20%22KtSvgCanvas%22%2C%20%22SvgCanvas%22%2C%20%22Panel%22%5D%0D%0Atoc%3A%20false%0D%0Alayout%3A%20%22full%22%0D%0A---%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%20Kt%20%60SvgCanvas%60%0D%0AA%20high-performance%20SVG%20canvas%20with%20a%20full%20templating%20engine%20supporting%20model%20binding%2C%20loops%2C%20conditionals%2C%20show%2Fhide%2C%20processing%20instructions%2C%20and%20CSS%20SmartFormat%20variables.%0D%0A%3A%3A%3A%20callout%20tip%0D%0A%23%23%23%23%20%F0%9F%9F%A3%20PREMIUM%0D%0AThis%20component%20is%20only%20available%20in%20the%20Premium%20version%20of%20KimTools.%0D%0A%3A%3A%3A%20button%20%22Get%20KimTools%22%20%20external%3Ahttps%3A%2F%2Fkimtoo.net%2F%23pricinghttps%3A%2F%2Fkimtoo.net%2F%23pricing%20icon%3Aexternal-link%0D%0A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3D%3D%20side%0D%0A!%5Bkt-svg-canvas-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fkt-svg-canvas-light.png%3Fv%3D639235348439107254)%7B%20.light%20.snapshot%7D%20!%5Bkt-svg-canvas-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fkt-svg-canvas-dark.png%3Fv%3D639235348439107254)%7B.dark%20.snapshot%7D%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20callout%20success%0D%0A%23%23%23%23%20%F0%9F%9F%A2%20DESIGNER%20SUPPORT%0D%0A**This%20control%20has%20full%20Visual%20Studio%20design-time%20support.**%0ADrag%20it%20from%20the%20Toolbox%20onto%20your%20form%2C%20customize%20its%20properties%20directly%20in%20the%20Properties%20window%2C%20and%20KimTools%20will%20generate%20the%20corresponding%20code%20for%20you.%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Icon%20Row%20%2F%20Tabler%20Set%0ADisplay%20multiple%20Tabler%20icons%20side-by-side%20in%20individual%20%60KtSvgCanvas%60%20instances.%20Each%20canvas%20carries%20its%20own%20%60KtSvgTemplate%60%20with%20a%20distinct%20icon%20path.%20Canvas%20dimensions%20are%20set%20to%2080%20%25%20of%20the%20panel%20height%20for%20uniform%2C%20responsive%20sizing.%20Use%20the%20%60Color%60%20property%20to%20theme%20each%20icon%20independently%20against%20a%20transparent%20background.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.LeftToRight%0D%0A%7D%3B%0D%0A%09%0D%0Astring%5B%5D%20icons%20%3D%20%7B%20IconHome%2C%20IconUser%2C%20IconHeart%2C%20IconGear%2C%20IconBell%20%7D%3B%0D%0AKtColor%5B%5D%20colors%20%3D%20%7B%20KtColor.PRIMARY%2C%20KtColor.INFO%2C%20KtColor.ERROR%2C%20KtColor.CONTENT%2C%20KtColor.WARNING%20%7D%3B%0D%0A%09%0D%0Afor%20(int%20i%20%3D%200%3B%20i%20%3C%20icons.Length%3B%20i%2B%2B)%0D%0A%7B%0D%0A%20%20%20%20int%20dim%20%3D%20(int)((panel.Height%20-%20panel.Padding.Vertical)%20*%200.8)%3B%0D%0A%09%0D%0A%20%20%20%20var%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%20%20%20%20%7B%0D%0A%20%20%20%20%20%20%20%20Width%20%3D%20dim%2C%0D%0A%20%20%20%20%20%20%20%20Height%20%3D%20dim%2C%0D%0A%20%20%20%20%20%20%20%20Margin%20%3D%20new%20Padding(8)%2C%0D%0A%20%20%20%20%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20%20%20%20%20Color%20%3D%20colors%5Bi%5D%0D%0A%20%20%20%20%7D%3B%0D%0A%09%0D%0A%20%20%20%20canvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%20%20%20%20%7B%0D%0A%20%20%20%20%20%20%20%20Name%20%3D%20%24%22icon-%7Bi%7D%22%2C%0D%0A%20%20%20%20%20%20%20%20Svg%20%3D%20icons%5Bi%5D%0D%0A%20%20%20%20%7D)%3B%0D%0A%09%0D%0A%20%20%20%20panel.Controls.Add(canvas)%3B%0D%0A%7D%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-icon-row-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-icon-row-light.png%3Fv%3D639235348474064273)%7B%20.light%20.snapshot%7D%20!%5Bsvg-icon-row-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-icon-row-dark.png%3Fv%3D639235348474064273)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-icon-row-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-icon-row-light.png%3Fv%3D639235348474038877)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-icon-row-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-icon-row-dark.png%3Fv%3D639235348474038877)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Themed%20Icons%20(%60Color%60%2C%20%60BackColor%60)%0ATabler%20icons%20inherit%20the%20canvas%20%60Color%60%20as%20their%20stroke%20color.%20Place%20canvases%20on%20contrasting%20%60BackColor%60%20surfaces%20%E2%80%94%20light%20on%20dark%2C%20primary%20on%20white%2C%20or%20tinted%20washes.%20The%20error%20state%20uses%20%60KtColor.ERROR%60%20at%20full%20strength%20over%20a%2020%20%25%20opacity%20wash.%20This%20makes%20the%20same%20vector%20paths%20adapt%20to%20any%20theme%20surface%20without%20duplicating%20SVG%20markup.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.LeftToRight%0D%0A%7D%3B%0D%0A%09%0D%0Aint%20dim%20%3D%20(int)((panel.Height%20-%20panel.Padding.Vertical)%20*%200.8)%3B%0D%0A%09%0D%0Avar%20canvasLight%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20dim%2C%0D%0A%20%20%20%20Height%20%3D%20dim%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(8)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_1%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.CONTENT%0D%0A%7D%3B%0D%0A%09%0D%0AcanvasLight.Templates.Add(new%20KtSvgTemplate(canvasLight.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22search%22%2C%0D%0A%20%20%20%20Svg%20%3D%20IconSearch%0D%0A%7D)%3B%0D%0A%09%0D%0Avar%20canvasPrimary%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20dim%2C%0D%0A%20%20%20%20Height%20%3D%20dim%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(8)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.PRIMARY%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.White%0D%0A%7D%3B%0D%0A%09%0D%0AcanvasPrimary.Templates.Add(new%20KtSvgTemplate(canvasPrimary.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22check%22%2C%0D%0A%20%20%20%20Svg%20%3D%20IconCheck%0D%0A%7D)%3B%0D%0A%09%0D%0Avar%20canvasError%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20dim%2C%0D%0A%20%20%20%20Height%20%3D%20dim%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(8)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.ERROR%20%25%2020%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.ERROR%0D%0A%7D%3B%0D%0A%09%0D%0AcanvasError.Templates.Add(new%20KtSvgTemplate(canvasError.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22heart%22%2C%0D%0A%20%20%20%20Svg%20%3D%20IconHeart%0D%0A%7D)%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvasLight)%3B%0D%0Apanel.Controls.Add(canvasPrimary)%3B%0D%0Apanel.Controls.Add(canvasError)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-themed-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-themed-light.png%3Fv%3D639235348498376833)%7B%20.light%20.snapshot%7D%20!%5Bsvg-themed-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-themed-dark.png%3Fv%3D639235348498376833)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-themed-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-themed-light.png%3Fv%3D639235348498364462)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-themed-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-themed-dark.png%3Fv%3D639235348498364462)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Model-Bound%20Geometry%20%26%20Text%0ALeverage%20the%20%60Model%60%20dictionary%20to%20inject%20dynamic%20values%20into%20SVG%20templates.%20Reference%20keys%20like%20%60%7Bstatus%7D%60%20and%20%60%7Bprogress%7D%60%20inside%20the%20SVG%20markup%3B%20the%20compiler%20substitutes%20them%20at%20render%20time.%20Here%20the%20bar%20width%20is%20driven%20by%20%60%7Bprogress%7D%25%60%2C%20stretching%20relative%20to%20the%20canvas.%20Ideal%20for%20progress%20badges%2C%20counters%2C%20and%20live%20data%20overlays.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.TopDown%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20panel.Width%20-%20panel.Padding.Horizontal%2C%0D%0A%20%20%20%20Height%20%3D%20(int)((panel.Height%20-%20panel.Padding.Vertical)%20*%200.6)%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(0%2C%2010%2C%200%2C%2010)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_2%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.PRIMARY%0D%0A%7D%3B%0D%0A%09%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22status%22%2C%0D%0A%20%20%20%20Svg%20%3D%0D%0A%20%20%20%20%20%20%20%20%40%22%3Csvg%20width%3D%22%22100%25%22%22%20height%3D%22%22100%25%22%22%20viewBox%3D%22%220%200%20100%20100%22%22%20fill%3D%22%22none%22%22%20xmlns%3D%22%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Crect%20x%3D%22%220%22%22%20y%3D%22%2230%25%22%22%20width%3D%22%22%7Bprogress%7D%25%22%22%20height%3D%22%2240%25%22%22%20rx%3D%22%224%22%22%20fill%3D%22%22currentColor%22%22%20opacity%3D%22%220.9%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ctext%20x%3D%22%2250%25%22%22%20y%3D%22%2250%25%22%22%20dominant-baseline%3D%22%22middle%22%22%20text-anchor%3D%22%22middle%22%22%20font-size%3D%22%2214%22%22%20fill%3D%22%22white%22%22%3E%7Bstatus%7D%3C%2Ftext%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fsvg%3E%22%0D%0A%7D)%3B%0D%0A%09%0D%0Acanvas.Model%5B%22status%22%5D%20%3D%20%22Uploading...%22%3B%0D%0Acanvas.Model%5B%22progress%22%5D%20%3D%2065%3B%0D%0Acanvas.Render()%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvas)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-model-bound-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-model-bound-light.png%3Fv%3D639235348521282182)%7B%20.light%20.snapshot%7D%20!%5Bsvg-model-bound-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-model-bound-dark.png%3Fv%3D639235348521282182)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-model-bound-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-model-bound-light.png%3Fv%3D639235348521272039)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-model-bound-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-model-bound-dark.png%3Fv%3D639235348521272039)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Conditional%20Rendering%20(%60x%3Aif%60%20%2F%20%60x%3Aelse%60)%0AToggle%20entire%20SVG%20branches%20using%20%60x%3Aif%60%20and%20%60x%3Aelse%60%20attributes.%20The%20compiler%20evaluates%20the%20bound%20expression%20and%20emits%20only%20the%20matching%20branch.%20Use%20this%20for%20state-driven%20icons%20%E2%80%94%20check%20vs.%20cross%2C%20connected%20vs.%20disconnected%2C%20or%20locked%20vs.%20unlocked.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.TopDown%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20(int)((panel.Width%20-%20panel.Padding.Horizontal)%20*%200.5)%2C%0D%0A%20%20%20%20Height%20%3D%20panel.Height%20-%20panel.Padding.Vertical%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(0%2C%2010%2C%200%2C%2010)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_2%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.SUCCESS%0D%0A%7D%3B%0D%0A%09%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22toggle%22%2C%0D%0A%20%20%20%20Svg%20%3D%0D%0A%20%20%20%20%20%20%20%20%40%22%3Csvg%20width%3D%22%22100%25%22%22%20height%3D%22%22100%25%22%22%20viewBox%3D%22%220%200%20100%20100%22%22%20fill%3D%22%22none%22%22%20xmlns%3D%22%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cg%20x%3Aif%3D%22%22%7BisActive%7D%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ccircle%20cx%3D%22%2250%25%22%22%20cy%3D%22%2250%25%22%22%20r%3D%22%2240%25%22%22%20fill%3D%22%22currentColor%22%22%20opacity%3D%22%220.2%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cpath%20d%3D%22%22M5%2012l5%205l10%20-10%22%22%20stroke%3D%22%22currentColor%22%22%20stroke-width%3D%22%222%22%22%20fill%3D%22%22none%22%22%20transform%3D%22%22scale(2.5)%20translate(4%2C4)%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fg%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cg%20x%3Aelse%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ccircle%20cx%3D%22%2250%25%22%22%20cy%3D%22%2250%25%22%22%20r%3D%22%2240%25%22%22%20fill%3D%22%22currentColor%22%22%20opacity%3D%22%220.1%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cpath%20d%3D%22%22M6%206l12%2012%20M6%2018l12%20-12%22%22%20stroke%3D%22%22currentColor%22%22%20stroke-width%3D%22%222%22%22%20fill%3D%22%22none%22%22%20transform%3D%22%22scale(2.5)%20translate(4%2C4)%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fg%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fsvg%3E%22%0D%0A%7D)%3B%0D%0A%09%0D%0Acanvas.Model%5B%22isActive%22%5D%20%3D%20true%3B%0D%0Acanvas.Render()%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvas)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-conditional-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-conditional-light.png%3Fv%3D639235348543778045)%7B%20.light%20.snapshot%7D%20!%5Bsvg-conditional-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-conditional-dark.png%3Fv%3D639235348543778045)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-conditional-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-conditional-light.png%3Fv%3D639235348543778045)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-conditional-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-conditional-dark.png%3Fv%3D639235348543778045)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20List%20Rendering%20(%60x%3Afor%60)%0ARepeat%20SVG%20fragments%20with%20%60x%3Afor%60%20using%20a%20JSON%20array%20literal%20injected%20via%20%60%3Cscript%3E%60.%20The%20compiler%20expands%20the%20loop%20into%20SmartFormat%20list%20syntax%2C%20binding%20each%20iteration%20to%20the%20declared%20variable.%20Reference%20item%20properties%20directly%20%E2%80%94%20%60%7Bx%7D%60%20and%20%60%7Ba%7D%60%20%E2%80%94%20to%20build%20ratings%2C%20step%20indicators%2C%20or%20dot%20pagers%20without%20manual%20duplication.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.TopDown%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20panel.Width%20-%20panel.Padding.Horizontal%2C%0D%0A%20%20%20%20Height%20%3D%20(int)((panel.Height%20-%20panel.Padding.Vertical)%20*%200.5)%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(0%2C%2010%2C%200%2C%2010)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_1%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.WARNING%0D%0A%7D%3B%0D%0A%09%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22rating%22%2C%0D%0A%20%20%20%20Svg%20%3D%0D%0A%20%20%20%20%20%20%20%20%40%22%3Csvg%20width%3D%22%22100%25%22%22%20height%3D%22%22100%25%22%22%20viewBox%3D%22%220%200%20100%20100%22%22%20fill%3D%22%22none%22%22%20xmlns%3D%22%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cscript%3E%7B%22%22dots%22%22%3A%5B%7B%22%22x%22%22%3A10%2C%22%22a%22%22%3A1%7D%2C%7B%22%22x%22%22%3A30%2C%22%22a%22%22%3A1%7D%2C%7B%22%22x%22%22%3A50%2C%22%22a%22%22%3A1%7D%2C%7B%22%22x%22%22%3A70%2C%22%22a%22%22%3A0.2%7D%2C%7B%22%22x%22%22%3A90%2C%22%22a%22%22%3A0.2%7D%5D%7D%3C%2Fscript%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cg%20x%3Afor%3D%22%22dots%20as%20d%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ccircle%20cx%3D%22%22%7Bx%7D%25%22%22%20cy%3D%22%2250%25%22%22%20r%3D%22%228%25%22%22%20fill%3D%22%22currentColor%22%22%20opacity%3D%22%22%7Ba%7D%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fg%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fsvg%3E%22%0D%0A%7D)%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvas)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-loop-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-loop-light.png%3Fv%3D639235348566344818)%7B%20.light%20.snapshot%7D%20!%5Bsvg-loop-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-loop-dark.png%3Fv%3D639235348566344818)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-loop-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-loop-light.png%3Fv%3D639235348566344818)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-loop-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-loop-dark.png%3Fv%3D639235348566344818)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Visibility%20Toggles%20(%60x%3Ashow%60%20%2F%20%60x%3Ahide%60)%0AControl%20visibility%20without%20removing%20elements%20from%20the%20DOM%20using%20%60x%3Ashow%60%20and%20%60x%3Ahide%60.%20These%20attributes%20compile%20to%20SVG%20%60visibility%60%20rules%20driven%20by%20the%20model.%20Useful%20for%20soft-state%20indicators%20%E2%80%94%20online%20dots%2C%20notification%20badges%2C%20or%20validation%20checkmarks.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.TopDown%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20panel.Width%20-%20panel.Padding.Horizontal%2C%0D%0A%20%20%20%20Height%20%3D%20(int)((panel.Height%20-%20panel.Padding.Vertical)%20*%200.5)%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(0%2C%2010%2C%200%2C%2010)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_2%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.INFO%0D%0A%7D%3B%0D%0A%09%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22visibility%22%2C%0D%0A%20%20%20%20Svg%20%3D%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20%20%20%3Csvg%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20100%20100%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%225%25%22%20y%3D%2210%25%22%20width%3D%2290%25%22%20height%3D%2280%25%22%20rx%3D%228%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%20opacity%3D%220.08%22%2F%3E%0D%0A%09%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3Ashow%3D%22%7Bvisible%7D%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x%3D%2210%25%22%20y%3D%2220%25%22%20width%3D%2235%25%22%20height%3D%2260%25%22%20rx%3D%226%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%20opacity%3D%220.9%22%2F%3E%0D%0A%09%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20x%3Ashow%3D%22%7Bvisible%7D%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cx%3D%2227.5%25%22%20cy%3D%2250%25%22%20r%3D%2212%25%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22white%22%20opacity%3D%220.25%22%2F%3E%0D%0A%09%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3Ahide%3D%22%7Bhidden%7D%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x%3D%2255%25%22%20y%3D%2220%25%22%20width%3D%2235%25%22%20height%3D%2260%25%22%20rx%3D%226%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%20opacity%3D%220.35%22%2F%3E%0D%0A%09%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20x%3Ahide%3D%22%7Bhidden%7D%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cx%3D%2272.5%25%22%20cy%3D%2250%25%22%20r%3D%2212%25%22%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22currentColor%22%20opacity%3D%220.9%22%2F%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%22%22%22%0D%0A%7D)%3B%0D%0A%09%0D%0Acanvas.Model%5B%22visible%22%5D%20%3D%20true%3B%0D%0Acanvas.Model%5B%22hidden%22%5D%20%3D%20false%3B%0D%0Acanvas.Render()%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvas)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-show-hide-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-show-hide-light.png%3Fv%3D639235348588988347)%7B%20.light%20.snapshot%7D%20!%5Bsvg-show-hide-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-show-hide-dark.png%3Fv%3D639235348588988347)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-show-hide-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-show-hide-light.png%3Fv%3D639235348588988347)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-show-hide-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-show-hide-dark.png%3Fv%3D639235348588988347)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Template%20Injection%20(%60%3C%3Fbg%3F%3E%60%2C%20%60x-bg%60)%0ACompose%20complex%20graphics%20by%20referencing%20sibling%20templates.%20Use%20processing%20instructions%20%60%3C%3FtemplateName%3F%3E%60%20or%20%60%3Cx-templateName%2F%3E%60%20tags%20to%20inline%20one%20template%20into%20another.%20Here%20a%20soft%20background%20wash%20is%20defined%20once%20and%20injected%20into%20the%20foreground%20mail%20icon%2C%20keeping%20markup%20DRY.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.TopDown%0D%0A%7D%3B%0D%0A%09%0D%0Aint%20dim%20%3D%20panel.Height%20-%20panel.Padding.Vertical%3B%0D%0A%09%0D%0Avar%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20dim%2C%0D%0A%20%20%20%20Height%20%3D%20dim%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(0%2C%2010%2C%200%2C%2010)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_1%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.PRIMARY%0D%0A%7D%3B%0D%0A%09%0D%0A%2F%2F%20Background%20template%20%E2%80%94%20injected%20by%20processing%20instruction%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22bg%22%2C%0D%0A%20%20%20%20Svg%20%3D%0D%0A%20%20%20%20%20%20%20%20%40%22%3Csvg%20width%3D%22%22100%25%22%22%20height%3D%22%22100%25%22%22%20viewBox%3D%22%220%200%20100%20100%22%22%20fill%3D%22%22none%22%22%20xmlns%3D%22%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ccircle%20cx%3D%22%2250%25%22%22%20cy%3D%22%2250%25%22%22%20r%3D%22%2250%25%22%22%20fill%3D%22%22currentColor%22%22%20opacity%3D%22%220.1%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fsvg%3E%22%0D%0A%7D)%3B%0D%0A%09%0D%0A%2F%2F%20Foreground%20template%20%E2%80%94%20consumes%20bg%20via%20%3C%3Fbg%3F%3E%20then%20draws%20the%20icon%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22main%22%2C%0D%0A%20%20%20%20Svg%20%3D%0D%0A%20%20%20%20%20%20%20%20%40%22%3Csvg%20width%3D%22%22100%25%22%22%20height%3D%22%22100%25%22%22%20viewBox%3D%22%220%200%2024%2024%22%22%20fill%3D%22%22none%22%22%20stroke%3D%22%22currentColor%22%22%20stroke-width%3D%22%222%22%22%20stroke-linecap%3D%22%22round%22%22%20stroke-linejoin%3D%22%22round%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%3Fbg%3F%3E%3Cpath%20stroke%3D%22%22none%22%22%20d%3D%22%22M0%200h24v24H0z%22%22%20fill%3D%22%22none%22%22%2F%3E%3Cpath%20d%3D%22%22M3%207a2%202%200%200%201%202%20-2h14a2%202%200%200%201%202%202v10a2%202%200%200%201%20-2%202h-14a2%202%200%200%201%20-2%20-2v-10z%22%22%20%2F%3E%3Cpath%20d%3D%22%22M3%207l9%206l9%20-6%22%22%20%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fsvg%3E%22%0D%0A%7D)%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvas)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-processing-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-processing-light.png%3Fv%3D639235348611781498)%7B%20.light%20.snapshot%7D%20!%5Bsvg-processing-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-processing-dark.png%3Fv%3D639235348611781498)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-processing-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-processing-light.png%3Fv%3D639235348611781498)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-processing-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-processing-dark.png%3Fv%3D639235348611781498)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20CSS%20SmartFormat%20Variables%20(%60var()%60)%0AInside%20%60%3Cstyle%3E%60%20blocks%2C%20the%20%60var()%60%20syntax%20is%20rewritten%20to%20SmartFormat%20placeholders.%20This%20lets%20you%20drive%20CSS%20values%20from%20the%20%60Model%60%20dictionary%20at%20runtime.%20Use%20it%20for%20theme%20tokens%2C%20dynamic%20palettes%2C%20or%20responsive%20stroke%20widths%20without%20inline%20attribute%20repetition.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20200%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.TopDown%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20panel.Width%20-%20panel.Padding.Horizontal%2C%0D%0A%20%20%20%20Height%20%3D%20(int)((panel.Height%20-%20panel.Padding.Vertical)%20*%200.6)%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(0%2C%2010%2C%200%2C%2010)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_2%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.PRIMARY%0D%0A%7D%3B%0D%0A%09%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22cssvar%22%2C%0D%0A%20%20%20%20Svg%20%3D%0D%0A%20%20%20%20%20%20%20%20%40%22%3Csvg%20width%3D%22%22100%25%22%22%20height%3D%22%22100%25%22%22%20viewBox%3D%22%220%200%20100%20100%22%22%20fill%3D%22%22none%22%22%20xmlns%3D%22%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cstyle%3E.box%20%7B%20fill%3A%20var(accent)%3B%20stroke%3A%20var(accent)%3B%20stroke-width%3A%202%3B%20%7D%3C%2Fstyle%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Crect%20class%3D%22%22box%22%22%20x%3D%22%2220%25%22%22%20y%3D%22%2220%25%22%22%20width%3D%22%2260%25%22%22%20height%3D%22%2260%25%22%22%20rx%3D%22%228%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ctext%20x%3D%22%2250%25%22%22%20y%3D%22%2250%25%22%22%20dominant-baseline%3D%22%22middle%22%22%20text-anchor%3D%22%22middle%22%22%20font-size%3D%22%2214%22%22%20fill%3D%22%22white%22%22%3E%7Blabel%7D%3C%2Ftext%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fsvg%3E%22%0D%0A%7D)%3B%0D%0A%09%0D%0Acanvas.Model%5B%22accent%22%5D%20%3D%20%22%238b5cf6%22%3B%0D%0Acanvas.Model%5B%22label%22%5D%20%3D%20%22Smart%20CSS%22%3B%0D%0Acanvas.Render()%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvas)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-css-smart-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-css-smart-light.png%3Fv%3D639235348634376327)%7B%20.light%20.snapshot%7D%20!%5Bsvg-css-smart-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-css-smart-dark.png%3Fv%3D639235348634376327)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-css-smart-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-css-smart-light.png%3Fv%3D639235348634365413)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-css-smart-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-css-smart-dark.png%3Fv%3D639235348634376327)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%0D%0A%3A%3A%3A%20hero%20layout%3Asplit%20glow%3Atrue%0D%0A%23%23%20Advanced%20Composition%0ACombine%20%60%3Cscript%3E%60%20data%20injection%2C%20%60x%3Afor%60%2C%20property%20binding%2C%20arithmetic%20expressions%2C%20and%20%60x%3Ashow%60%20in%20a%20single%20template.%20A%20JSON%20script%20block%20seeds%20the%20context%20with%20an%20array%20of%20metrics.%20The%20loop%20renders%20three%20bars%20with%20percentage%20heights%20driven%20by%20%60%7Bval%7D%60%2C%20conditional%20HIGH%20badges%20via%20%60%7Bval%20%3E%2080%7D%60%2C%20and%20centered%20labels.%20This%20demonstrates%20how%20%60KtSvgCanvas%60%20acts%20as%20a%20declarative%20data-visualization%20surface.%0D%0A%60%60%60csharp%20%22%F0%9F%94%B4%20%F0%9F%9F%A1%20%F0%9F%9F%A2%22%0D%0Avar%20panel%20%3D%20new%20FlowLayoutPanel%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20420%2C%0D%0A%20%20%20%20Height%20%3D%20260%2C%0D%0A%20%20%20%20Padding%20%3D%20new%20Padding(20)%2C%0D%0A%20%20%20%20BackColor%20%3D%20Color.Transparent%2C%0D%0A%20%20%20%20AutoScroll%20%3D%20false%2C%0D%0A%20%20%20%20FlowDirection%20%3D%20FlowDirection.TopDown%0D%0A%7D%3B%0D%0A%09%0D%0Avar%20canvas%20%3D%20new%20KtSvgCanvas%0D%0A%7B%0D%0A%20%20%20%20Width%20%3D%20panel.Width%20-%20panel.Padding.Horizontal%2C%0D%0A%20%20%20%20Height%20%3D%20(int)((panel.Height%20-%20panel.Padding.Vertical)%20*%200.7)%2C%0D%0A%20%20%20%20Margin%20%3D%20new%20Padding(0%2C%2010%2C%200%2C%2010)%2C%0D%0A%20%20%20%20BackColor%20%3D%20KtColor.BASE_1%2C%0D%0A%20%20%20%20Color%20%3D%20KtColor.PRIMARY%0D%0A%7D%3B%0D%0A%09%0D%0Acanvas.Templates.Add(new%20KtSvgTemplate(canvas.Templates)%0D%0A%7B%0D%0A%20%20%20%20Name%20%3D%20%22dashboard%22%2C%0D%0A%20%20%20%20Svg%20%3D%0D%0A%20%20%20%20%20%20%20%20%40%22%3Csvg%20width%3D%22%22100%25%22%22%20height%3D%22%22100%25%22%22%20viewBox%3D%22%220%200%20100%20100%22%22%20fill%3D%22%22none%22%22%20xmlns%3D%22%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cscript%3E%7B%22%22metrics%22%22%3A%5B%7B%22%22name%22%22%3A%22%22CPU%22%22%2C%22%22val%22%22%3A72%2C%22%22x%22%22%3A10%7D%2C%7B%22%22name%22%22%3A%22%22RAM%22%22%2C%22%22val%22%22%3A45%2C%22%22x%22%22%3A43%7D%2C%7B%22%22name%22%22%3A%22%22NET%22%22%2C%22%22val%22%22%3A88%2C%22%22x%22%22%3A76%7D%5D%7D%3C%2Fscript%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Cg%20x%3Afor%3D%22%22metrics%20as%20m%22%22%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Crect%20x%3D%22%22%7Bx%7D%25%22%22%20y%3D%22%2210%25%22%22%20width%3D%22%2230%25%22%22%20height%3D%22%2280%25%22%22%20rx%3D%22%224%22%22%20fill%3D%22%22currentColor%22%22%20opacity%3D%22%220.1%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ctext%20x%3D%22%22%7Bx%20%2B%2015%7D%25%22%22%20y%3D%22%2225%25%22%22%20text-anchor%3D%22%22middle%22%22%20font-size%3D%22%2210%22%22%20fill%3D%22%22currentColor%22%22%3E%7Bname%7D%3C%2Ftext%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Crect%20x%3D%22%22%7Bx%20%2B%205%7D%25%22%22%20y%3D%22%22%7B90%20-%20val%7D%25%22%22%20width%3D%22%2220%25%22%22%20height%3D%22%22%7Bval%7D%25%22%22%20fill%3D%22%22currentColor%22%22%20opacity%3D%22%220.8%22%22%2F%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ctext%20x%3D%22%22%7Bx%20%2B%2015%7D%25%22%22%20y%3D%22%2295%25%22%22%20text-anchor%3D%22%22middle%22%22%20font-size%3D%22%2210%22%22%20fill%3D%22%22currentColor%22%22%3E%7Bval%7D%25%3C%2Ftext%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3Ctext%20x%3D%22%22%7Bx%20%2B%2015%7D%25%22%22%20y%3D%22%2240%25%22%22%20text-anchor%3D%22%22middle%22%22%20font-size%3D%22%229%22%22%20fill%3D%22%22currentColor%22%22%20x%3Ashow%3D%22%22%7Bval%20%3E%2080%7D%22%22%3EHIGH%3C%2Ftext%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fg%3E%22%20%2B%0D%0A%20%20%20%20%20%20%20%20%40%22%3C%2Fsvg%3E%22%0D%0A%7D)%3B%0D%0A%09%0D%0Apanel.Controls.Add(canvas)%3B%0D%0A%60%60%60%0D%0A%3D%3D%20side%0D%0A%3A%3A%3A%20tabs%0D%0A%3D%3D%20tab%20%22Auto%22%20icon%3Aapp-window%0D%0A!%5Bsvg-advanced-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-advanced-light.png%3Fv%3D639235348657412089)%7B%20.light%20.snapshot%7D%20!%5Bsvg-advanced-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-advanced-dark.png%3Fv%3D639235348657412089)%7B.dark%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Light%22%20icon%3Asun%0D%0A!%5Bsvg-advanced-light%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-advanced-light.png%3Fv%3D639235348657412089)%7B%20%20.snapshot%7D%0D%0A%0D%0A%3D%3D%20tab%20%22Dark%22%20icon%3Amoon%0D%0A!%5Bsvg-advanced-dark%5D(%2Fassets%2Fimages%2Fscreenshots%2Fkt-svg-canvas%2Fsvg-advanced-dark.png%3Fv%3D639235348657412089)%7B%20.snapshot%7D%0D%0A%0D%0A%3A%3A%3A%0D%0A%3A%3A%3A%0D%0A%23%23%20API%20%60Reference%60%0A%7C%20%20%20%7C%20%20%7C%20%20%20%7C%0A%7C%20--------%20%7C%20-------%20%7C%20-----------%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22Templates%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Kt-SvgContainer%22%20color%3A%236B7C94%20icon%3Acheck-check%20%20%7C%20*Sets%20the%20Templates.*%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22ExComposited%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Boolean%22%20color%3A%230B64F4%20icon%3Aexternal-link%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.boolean%3Fview%3Dnetframework-4.8%20%20%7C%20*Sets%20the%20Ex%20composited.*%20%7C%0A%7C%20%3A%3A%3A%20tag%20%22Latency%22%20icon%3Awrench%20%7C%20%3A%3A%3A%20tag%20%22Int32%22%20color%3A%230B64F4%20icon%3Aexternal-link%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.int32%3Fview%3Dnetframework-4.8%20%3A%3A%3A%20tag%20%22Nullable%22%20color%3A%23F96A06%20icon%3Acircle-alert%20url%3Aexternal%3Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fbuiltin-types%2Fnullable-value-types%20%7C%20*Sets%20the%20Latency.*%20%7C%0A" style="display: none;"></div>
+                  
+                    <nav aria-label="breadcrumb" class="docmd-breadcrumbs">
+                      <ol>
+                        
+                        
+                          <li class="breadcrumb-item " >
+                            
+                              <span> 🟣 Controls</span>
+                            
+                            
+                              <span class="breadcrumb-separator">
+<svg class="lucide-icon icon-chevron-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>
+</span>
+                            
+                          </li>
+                        
+                          <li class="breadcrumb-item active" aria-current=&quot;page&quot;>
+                            
+                              <span>Kt • SvgCanvas</span>
+                            
+                            
+                          </li>
+                        
+                      </ol>
+                    </nav>
+                  
+
+                  
+                    <div class="docmd-copy-widgets">
+                      
+                        <button class="docmd-copy-btn docmd-copy-raw-btn" data-copied="Copied!" title="Copy Markdown" aria-label="Copy Markdown">
+                          <span class="docmd-btn-icon">
+<svg class="lucide-icon icon-copy " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-copy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+</svg>
+</span>
+                        </button>
+                      
+                      
+                        <button class="docmd-copy-btn docmd-copy-context-btn" data-copied="Copied!" title="Copy Context">
+                          <span class="docmd-btn-icon">
+<svg class="lucide-icon icon-message-square " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-message-square"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+</svg>
+</span>
+                          <span class="docmd-btn-text">Copy Context</span>
+                        </button>
+                      
+                    </div>
+                  
+                </div>
+                
+                <div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h1>Kt <code>SvgCanvas</code></h1>
+<p>A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables.</p>
+<div class="docmd-container callout callout-tip"><div class="callout-content">
+<h4>🟣 PREMIUM</h4>
+<p>This component is only available in the Premium version of KimTools.</p>
+<a href="https://kimtoo.net/#pricinghttps://kimtoo.net/#pricing" class="docmd-button" target="_blank" rel="noopener noreferrer">
+<svg class="lucide-icon icon-external-link button-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+Get KimTools</a></div></div>
+</div>
+<div class="hero-side">
+<p><img src="../../assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-light.png?v=639235348439107254" alt="kt-svg-canvas-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-dark.png?v=639235348439107254" alt="kt-svg-canvas-dark" class="dark snapshot"></p>
+</div>
+</div>
+<div class="docmd-container callout callout-success"><div class="callout-content">
+<h4>🟢 DESIGNER SUPPORT</h4>
+<p><strong>This control has full Visual Studio design-time support.</strong><br>
+Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.</p>
+</div></div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Icon Row / Tabler Set</h2>
+<p>Display multiple Tabler icons side-by-side in individual <code>KtSvgCanvas</code> instances. Each canvas carries its own <code>KtSvgTemplate</code> with a distinct icon path. Canvas dimensions are set to 80 % of the panel height for uniform, responsive sizing. Use the <code>Color</code> property to theme each icon independently against a transparent background.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">LeftToRight</span>
+};
+	
+string[] icons <span class="hljs-operator">=</span> { IconHome, IconUser, IconHeart, IconGear, IconBell };
+KtColor[] colors <span class="hljs-operator">=</span> { KtColor.<span class="hljs-attr">PRIMARY</span>, KtColor.<span class="hljs-attr">INFO</span>, KtColor.<span class="hljs-attr">ERROR</span>, KtColor.<span class="hljs-attr">CONTENT</span>, KtColor.<span class="hljs-attr">WARNING</span> };
+	
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i <span class="hljs-operator">&lt;</span> icons.<span class="hljs-attr">Length</span>; i<span class="hljs-operator">++</span>)
+{
+    <span class="hljs-keyword">int</span> dim <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.8</span>);
+	
+    <span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+    {
+        Width <span class="hljs-operator">=</span> dim,
+        Height <span class="hljs-operator">=</span> dim,
+        Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">8</span>),
+        BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+        Color <span class="hljs-operator">=</span> colors[i]
+    };
+	
+    canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+    {
+        Name <span class="hljs-operator">=</span> $<span class="hljs-string">&quot;icon-{i}&quot;</span>,
+        Svg <span class="hljs-operator">=</span> icons[i]
+    });
+	
+    panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+}
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639235348474064273" alt="svg-icon-row-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639235348474064273" alt="svg-icon-row-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639235348474038877" alt="svg-icon-row-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639235348474038877" alt="svg-icon-row-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Themed Icons (<code>Color</code>, <code>BackColor</code>)</h2>
+<p>Tabler icons inherit the canvas <code>Color</code> as their stroke color. Place canvases on contrasting <code>BackColor</code> surfaces — light on dark, primary on white, or tinted washes. The error state uses <code>KtColor.ERROR</code> at full strength over a 20 % opacity wash. This makes the same vector paths adapt to any theme surface without duplicating SVG markup.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">LeftToRight</span>
+};
+	
+<span class="hljs-keyword">int</span> dim <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.8</span>);
+	
+<span class="hljs-keyword">var</span> canvasLight <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> dim,
+    Height <span class="hljs-operator">=</span> dim,
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">8</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_1</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">CONTENT</span>
+};
+	
+canvasLight.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvasLight.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;search&quot;</span>,
+    Svg <span class="hljs-operator">=</span> IconSearch
+});
+	
+<span class="hljs-keyword">var</span> canvasPrimary <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> dim,
+    Height <span class="hljs-operator">=</span> dim,
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">8</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">PRIMARY</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">White</span>
+};
+	
+canvasPrimary.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvasPrimary.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;check&quot;</span>,
+    Svg <span class="hljs-operator">=</span> IconCheck
+});
+	
+<span class="hljs-keyword">var</span> canvasError <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> dim,
+    Height <span class="hljs-operator">=</span> dim,
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">8</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">ERROR</span> <span class="hljs-operator">%</span> <span class="hljs-number">20</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">ERROR</span>
+};
+	
+canvasError.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvasError.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;heart&quot;</span>,
+    Svg <span class="hljs-operator">=</span> IconHeart
+});
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvasLight);
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvasPrimary);
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvasError);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639235348498376833" alt="svg-themed-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639235348498376833" alt="svg-themed-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639235348498364462" alt="svg-themed-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639235348498364462" alt="svg-themed-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Model-Bound Geometry &amp; Text</h2>
+<p>Leverage the <code>Model</code> dictionary to inject dynamic values into SVG templates. Reference keys like <code>{status}</code> and <code>{progress}</code> inside the SVG markup; the compiler substitutes them at render time. Here the bar width is driven by <code>{progress}%</code>, stretching relative to the canvas. Ideal for progress badges, counters, and live data overlays.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">TopDown</span>
+};
+	
+<span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> panel.<span class="hljs-attr">Width</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Horizontal</span>,
+    Height <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.6</span>),
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_2</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">PRIMARY</span>
+};
+	
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;status&quot;</span>,
+    Svg <span class="hljs-operator">=</span>
+        @<span class="hljs-string">&quot;&lt;svg width=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-string">&quot;0 0 100 100&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; xmlns=&quot;</span><span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;rect x=&quot;</span><span class="hljs-string">&quot;0&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;30%&quot;</span><span class="hljs-string">&quot; width=&quot;</span><span class="hljs-string">&quot;{progress}%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;40%&quot;</span><span class="hljs-string">&quot; rx=&quot;</span><span class="hljs-string">&quot;4&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-string">&quot;0.9&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;text x=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; dominant-baseline=&quot;</span><span class="hljs-string">&quot;middle&quot;</span><span class="hljs-string">&quot; text-anchor=&quot;</span><span class="hljs-string">&quot;middle&quot;</span><span class="hljs-string">&quot; font-size=&quot;</span><span class="hljs-string">&quot;14&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;white&quot;</span><span class="hljs-string">&quot;&gt;{status}&lt;/text&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/svg&gt;&quot;</span>
+});
+	
+canvas.<span class="hljs-attr">Model</span>[<span class="hljs-string">&quot;status&quot;</span>] <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Uploading...&quot;</span>;
+canvas.<span class="hljs-attr">Model</span>[<span class="hljs-string">&quot;progress&quot;</span>] <span class="hljs-operator">=</span> <span class="hljs-number">65</span>;
+canvas.<span class="hljs-title function_">Render</span>();
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639235348521282182" alt="svg-model-bound-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639235348521282182" alt="svg-model-bound-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639235348521272039" alt="svg-model-bound-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639235348521272039" alt="svg-model-bound-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Conditional Rendering (<code>x:if</code> / <code>x:else</code>)</h2>
+<p>Toggle entire SVG branches using <code>x:if</code> and <code>x:else</code> attributes. The compiler evaluates the bound expression and emits only the matching branch. Use this for state-driven icons — check vs. cross, connected vs. disconnected, or locked vs. unlocked.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">TopDown</span>
+};
+	
+<span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Width</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Horizontal</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.5</span>),
+    Height <span class="hljs-operator">=</span> panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>,
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_2</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">SUCCESS</span>
+};
+	
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;toggle&quot;</span>,
+    Svg <span class="hljs-operator">=</span>
+        @<span class="hljs-string">&quot;&lt;svg width=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-string">&quot;0 0 100 100&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; xmlns=&quot;</span><span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;g x:if=&quot;</span><span class="hljs-string">&quot;{isActive}&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;circle cx=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; cy=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; r=&quot;</span><span class="hljs-string">&quot;40%&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-string">&quot;0.2&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;path d=&quot;</span><span class="hljs-string">&quot;M5 12l5 5l10 -10&quot;</span><span class="hljs-string">&quot; stroke=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; stroke-width=&quot;</span><span class="hljs-string">&quot;2&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; transform=&quot;</span><span class="hljs-string">&quot;scale(2.5) translate(4,4)&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/g&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;g x:else&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;circle cx=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; cy=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; r=&quot;</span><span class="hljs-string">&quot;40%&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-string">&quot;0.1&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;path d=&quot;</span><span class="hljs-string">&quot;M6 6l12 12 M6 18l12 -12&quot;</span><span class="hljs-string">&quot; stroke=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; stroke-width=&quot;</span><span class="hljs-string">&quot;2&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; transform=&quot;</span><span class="hljs-string">&quot;scale(2.5) translate(4,4)&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/g&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/svg&gt;&quot;</span>
+});
+	
+canvas.<span class="hljs-attr">Model</span>[<span class="hljs-string">&quot;isActive&quot;</span>] <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;
+canvas.<span class="hljs-title function_">Render</span>();
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639235348543778045" alt="svg-conditional-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639235348543778045" alt="svg-conditional-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639235348543778045" alt="svg-conditional-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639235348543778045" alt="svg-conditional-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>List Rendering (<code>x:for</code>)</h2>
+<p>Repeat SVG fragments with <code>x:for</code> using a JSON array literal injected via <code>&lt;script&gt;</code>. The compiler expands the loop into SmartFormat list syntax, binding each iteration to the declared variable. Reference item properties directly — <code>{x}</code> and <code>{a}</code> — to build ratings, step indicators, or dot pagers without manual duplication.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">TopDown</span>
+};
+	
+<span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> panel.<span class="hljs-attr">Width</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Horizontal</span>,
+    Height <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.5</span>),
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_1</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">WARNING</span>
+};
+	
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;rating&quot;</span>,
+    Svg <span class="hljs-operator">=</span>
+        @<span class="hljs-string">&quot;&lt;svg width=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-string">&quot;0 0 100 100&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; xmlns=&quot;</span><span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;script&gt;{&quot;</span><span class="hljs-string">&quot;dots&quot;</span><span class="hljs-string">&quot;:[{&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:10,&quot;</span><span class="hljs-string">&quot;a&quot;</span><span class="hljs-string">&quot;:1},{&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:30,&quot;</span><span class="hljs-string">&quot;a&quot;</span><span class="hljs-string">&quot;:1},{&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:50,&quot;</span><span class="hljs-string">&quot;a&quot;</span><span class="hljs-string">&quot;:1},{&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:70,&quot;</span><span class="hljs-string">&quot;a&quot;</span><span class="hljs-string">&quot;:0.2},{&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:90,&quot;</span><span class="hljs-string">&quot;a&quot;</span><span class="hljs-string">&quot;:0.2}]}&lt;/script&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;g x:for=&quot;</span><span class="hljs-string">&quot;dots as d&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;circle cx=&quot;</span><span class="hljs-string">&quot;{x}%&quot;</span><span class="hljs-string">&quot; cy=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; r=&quot;</span><span class="hljs-string">&quot;8%&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-string">&quot;{a}&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/g&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/svg&gt;&quot;</span>
+});
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639235348566344818" alt="svg-loop-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639235348566344818" alt="svg-loop-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639235348566344818" alt="svg-loop-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639235348566344818" alt="svg-loop-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Visibility Toggles (<code>x:show</code> / <code>x:hide</code>)</h2>
+<p>Control visibility without removing elements from the DOM using <code>x:show</code> and <code>x:hide</code>. These attributes compile to SVG <code>visibility</code> rules driven by the model. Useful for soft-state indicators — online dots, notification badges, or validation checkmarks.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">TopDown</span>
+};
+	
+<span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> panel.<span class="hljs-attr">Width</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Horizontal</span>,
+    Height <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.5</span>),
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_2</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">INFO</span>
+};
+	
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;visibility&quot;</span>,
+    Svg <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;
+          &lt;svg width=&quot;</span><span class="hljs-number">100</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-number">100</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100</span> <span class="hljs-number">100</span><span class="hljs-string">&quot; fill=&quot;</span>none<span class="hljs-string">&quot; xmlns=&quot;</span>http<span class="hljs-operator">://</span>www.<span class="hljs-attr">w3</span>.<span class="hljs-attr">org</span><span class="hljs-operator">/</span><span class="hljs-number">2000</span><span class="hljs-operator">/</span>svg<span class="hljs-string">&quot;&gt;
+              &lt;rect x=&quot;</span><span class="hljs-number">5</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-number">10</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; width=&quot;</span><span class="hljs-number">90</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-number">80</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; rx=&quot;</span><span class="hljs-number">8</span><span class="hljs-string">&quot;
+                    fill=&quot;</span>currentColor<span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-number">0.08</span><span class="hljs-string">&quot;/&gt;
+	
+              &lt;rect x:show=&quot;</span>{visible}<span class="hljs-string">&quot;
+                    x=&quot;</span><span class="hljs-number">10</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-number">20</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; width=&quot;</span><span class="hljs-number">35</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-number">60</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; rx=&quot;</span><span class="hljs-number">6</span><span class="hljs-string">&quot;
+                    fill=&quot;</span>currentColor<span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-number">0.9</span><span class="hljs-string">&quot;/&gt;
+	
+              &lt;circle x:show=&quot;</span>{visible}<span class="hljs-string">&quot;
+                      cx=&quot;</span><span class="hljs-number">27.5</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; cy=&quot;</span><span class="hljs-number">50</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; r=&quot;</span><span class="hljs-number">12</span><span class="hljs-operator">%</span><span class="hljs-string">&quot;
+                      fill=&quot;</span>white<span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-number">0.25</span><span class="hljs-string">&quot;/&gt;
+	
+              &lt;rect x:hide=&quot;</span>{hidden}<span class="hljs-string">&quot;
+                    x=&quot;</span><span class="hljs-number">55</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-number">20</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; width=&quot;</span><span class="hljs-number">35</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-number">60</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; rx=&quot;</span><span class="hljs-number">6</span><span class="hljs-string">&quot;
+                    fill=&quot;</span>currentColor<span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-number">0.35</span><span class="hljs-string">&quot;/&gt;
+	
+              &lt;circle x:hide=&quot;</span>{hidden}<span class="hljs-string">&quot;
+                      cx=&quot;</span><span class="hljs-number">72.5</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; cy=&quot;</span><span class="hljs-number">50</span><span class="hljs-operator">%</span><span class="hljs-string">&quot; r=&quot;</span><span class="hljs-number">12</span><span class="hljs-operator">%</span><span class="hljs-string">&quot;
+                      fill=&quot;</span>currentColor<span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-number">0.9</span><span class="hljs-string">&quot;/&gt;
+          &lt;/svg&gt;
+          &quot;</span><span class="hljs-string">&quot;&quot;</span>
+});
+	
+canvas.<span class="hljs-attr">Model</span>[<span class="hljs-string">&quot;visible&quot;</span>] <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;
+canvas.<span class="hljs-attr">Model</span>[<span class="hljs-string">&quot;hidden&quot;</span>] <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;
+canvas.<span class="hljs-title function_">Render</span>();
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639235348588988347" alt="svg-show-hide-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639235348588988347" alt="svg-show-hide-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639235348588988347" alt="svg-show-hide-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639235348588988347" alt="svg-show-hide-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Template Injection (<code>&lt;?bg?&gt;</code>, <code>x-bg</code>)</h2>
+<p>Compose complex graphics by referencing sibling templates. Use processing instructions <code>&lt;?templateName?&gt;</code> or <code>&lt;x-templateName/&gt;</code> tags to inline one template into another. Here a soft background wash is defined once and injected into the foreground mail icon, keeping markup DRY.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">TopDown</span>
+};
+	
+<span class="hljs-keyword">int</span> dim <span class="hljs-operator">=</span> panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>;
+	
+<span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> dim,
+    Height <span class="hljs-operator">=</span> dim,
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_1</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">PRIMARY</span>
+};
+	
+<span class="hljs-comment">// Background template — injected by processing instruction</span>
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;bg&quot;</span>,
+    Svg <span class="hljs-operator">=</span>
+        @<span class="hljs-string">&quot;&lt;svg width=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-string">&quot;0 0 100 100&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; xmlns=&quot;</span><span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;circle cx=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; cy=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; r=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-string">&quot;0.1&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/svg&gt;&quot;</span>
+});
+	
+<span class="hljs-comment">// Foreground template — consumes bg via &lt;?bg?&gt; then draws the icon</span>
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;main&quot;</span>,
+    Svg <span class="hljs-operator">=</span>
+        @<span class="hljs-string">&quot;&lt;svg width=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-string">&quot;0 0 24 24&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; stroke=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; stroke-width=&quot;</span><span class="hljs-string">&quot;2&quot;</span><span class="hljs-string">&quot; stroke-linecap=&quot;</span><span class="hljs-string">&quot;round&quot;</span><span class="hljs-string">&quot; stroke-linejoin=&quot;</span><span class="hljs-string">&quot;round&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;?bg?&gt;&lt;path stroke=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; d=&quot;</span><span class="hljs-string">&quot;M0 0h24v24H0z&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot;/&gt;&lt;path d=&quot;</span><span class="hljs-string">&quot;M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z&quot;</span><span class="hljs-string">&quot; /&gt;&lt;path d=&quot;</span><span class="hljs-string">&quot;M3 7l9 6l9 -6&quot;</span><span class="hljs-string">&quot; /&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/svg&gt;&quot;</span>
+});
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639235348611781498" alt="svg-processing-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639235348611781498" alt="svg-processing-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639235348611781498" alt="svg-processing-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639235348611781498" alt="svg-processing-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>CSS SmartFormat Variables (<code>var()</code>)</h2>
+<p>Inside <code>&lt;style&gt;</code> blocks, the <code>var()</code> syntax is rewritten to SmartFormat placeholders. This lets you drive CSS values from the <code>Model</code> dictionary at runtime. Use it for theme tokens, dynamic palettes, or responsive stroke widths without inline attribute repetition.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">200</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">TopDown</span>
+};
+	
+<span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> panel.<span class="hljs-attr">Width</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Horizontal</span>,
+    Height <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.6</span>),
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_2</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">PRIMARY</span>
+};
+	
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;cssvar&quot;</span>,
+    Svg <span class="hljs-operator">=</span>
+        @<span class="hljs-string">&quot;&lt;svg width=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-string">&quot;0 0 100 100&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; xmlns=&quot;</span><span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;style&gt;.box { fill: var(accent); stroke: var(accent); stroke-width: 2; }&lt;/style&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;rect class=&quot;</span><span class="hljs-string">&quot;box&quot;</span><span class="hljs-string">&quot; x=&quot;</span><span class="hljs-string">&quot;20%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;20%&quot;</span><span class="hljs-string">&quot; width=&quot;</span><span class="hljs-string">&quot;60%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;60%&quot;</span><span class="hljs-string">&quot; rx=&quot;</span><span class="hljs-string">&quot;8&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;text x=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;50%&quot;</span><span class="hljs-string">&quot; dominant-baseline=&quot;</span><span class="hljs-string">&quot;middle&quot;</span><span class="hljs-string">&quot; text-anchor=&quot;</span><span class="hljs-string">&quot;middle&quot;</span><span class="hljs-string">&quot; font-size=&quot;</span><span class="hljs-string">&quot;14&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;white&quot;</span><span class="hljs-string">&quot;&gt;{label}&lt;/text&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/svg&gt;&quot;</span>
+});
+	
+canvas.<span class="hljs-attr">Model</span>[<span class="hljs-string">&quot;accent&quot;</span>] <span class="hljs-operator">=</span> <span class="hljs-string">&quot;#8b5cf6&quot;</span>;
+canvas.<span class="hljs-attr">Model</span>[<span class="hljs-string">&quot;label&quot;</span>] <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Smart CSS&quot;</span>;
+canvas.<span class="hljs-title function_">Render</span>();
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639235348634376327" alt="svg-css-smart-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639235348634376327" alt="svg-css-smart-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639235348634365413" alt="svg-css-smart-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639235348634376327" alt="svg-css-smart-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<div class="docmd-hero hero-split hero-glow"><div class="hero-content">
+<h2>Advanced Composition</h2>
+<p>Combine <code>&lt;script&gt;</code> data injection, <code>x:for</code>, property binding, arithmetic expressions, and <code>x:show</code> in a single template. A JSON script block seeds the context with an array of metrics. The loop renders three bars with percentage heights driven by <code>{val}</code>, conditional HIGH badges via <code>{val &gt; 80}</code>, and centered labels. This demonstrates how <code>KtSvgCanvas</code> acts as a declarative data-visualization surface.</p>
+<div class="docmd-code-block-wrapper"><div class="docmd-code-block-header"><span class="docmd-code-block-title">🔴 🟡 🟢</span></div><pre class="hljs"><code class="language-csharp"><span class="hljs-keyword">var</span> panel <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> FlowLayoutPanel
+{
+    Width <span class="hljs-operator">=</span> <span class="hljs-number">420</span>,
+    Height <span class="hljs-operator">=</span> <span class="hljs-number">260</span>,
+    Padding <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">20</span>),
+    BackColor <span class="hljs-operator">=</span> Color.<span class="hljs-attr">Transparent</span>,
+    AutoScroll <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>,
+    FlowDirection <span class="hljs-operator">=</span> FlowDirection.<span class="hljs-attr">TopDown</span>
+};
+	
+<span class="hljs-keyword">var</span> canvas <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> KtSvgCanvas
+{
+    Width <span class="hljs-operator">=</span> panel.<span class="hljs-attr">Width</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Horizontal</span>,
+    Height <span class="hljs-operator">=</span> (<span class="hljs-keyword">int</span>)((panel.<span class="hljs-attr">Height</span> <span class="hljs-operator">-</span> panel.<span class="hljs-attr">Padding</span>.<span class="hljs-attr">Vertical</span>) <span class="hljs-operator">*</span> <span class="hljs-number">0.7</span>),
+    Margin <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title function_">Padding</span>(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>),
+    BackColor <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">BASE_1</span>,
+    Color <span class="hljs-operator">=</span> KtColor.<span class="hljs-attr">PRIMARY</span>
+};
+	
+canvas.<span class="hljs-attr">Templates</span>.<span class="hljs-title function_">Add</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">KtSvgTemplate</span>(canvas.<span class="hljs-attr">Templates</span>)
+{
+    Name <span class="hljs-operator">=</span> <span class="hljs-string">&quot;dashboard&quot;</span>,
+    Svg <span class="hljs-operator">=</span>
+        @<span class="hljs-string">&quot;&lt;svg width=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;100%&quot;</span><span class="hljs-string">&quot; viewBox=&quot;</span><span class="hljs-string">&quot;0 0 100 100&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;none&quot;</span><span class="hljs-string">&quot; xmlns=&quot;</span><span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;script&gt;{&quot;</span><span class="hljs-string">&quot;metrics&quot;</span><span class="hljs-string">&quot;:[{&quot;</span><span class="hljs-string">&quot;name&quot;</span><span class="hljs-string">&quot;:&quot;</span><span class="hljs-string">&quot;CPU&quot;</span><span class="hljs-string">&quot;,&quot;</span><span class="hljs-string">&quot;val&quot;</span><span class="hljs-string">&quot;:72,&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:10},{&quot;</span><span class="hljs-string">&quot;name&quot;</span><span class="hljs-string">&quot;:&quot;</span><span class="hljs-string">&quot;RAM&quot;</span><span class="hljs-string">&quot;,&quot;</span><span class="hljs-string">&quot;val&quot;</span><span class="hljs-string">&quot;:45,&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:43},{&quot;</span><span class="hljs-string">&quot;name&quot;</span><span class="hljs-string">&quot;:&quot;</span><span class="hljs-string">&quot;NET&quot;</span><span class="hljs-string">&quot;,&quot;</span><span class="hljs-string">&quot;val&quot;</span><span class="hljs-string">&quot;:88,&quot;</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-string">&quot;:76}]}&lt;/script&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;g x:for=&quot;</span><span class="hljs-string">&quot;metrics as m&quot;</span><span class="hljs-string">&quot;&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;rect x=&quot;</span><span class="hljs-string">&quot;{x}%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;10%&quot;</span><span class="hljs-string">&quot; width=&quot;</span><span class="hljs-string">&quot;30%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;80%&quot;</span><span class="hljs-string">&quot; rx=&quot;</span><span class="hljs-string">&quot;4&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-string">&quot;0.1&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;text x=&quot;</span><span class="hljs-string">&quot;{x + 15}%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;25%&quot;</span><span class="hljs-string">&quot; text-anchor=&quot;</span><span class="hljs-string">&quot;middle&quot;</span><span class="hljs-string">&quot; font-size=&quot;</span><span class="hljs-string">&quot;10&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot;&gt;{name}&lt;/text&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;rect x=&quot;</span><span class="hljs-string">&quot;{x + 5}%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;{90 - val}%&quot;</span><span class="hljs-string">&quot; width=&quot;</span><span class="hljs-string">&quot;20%&quot;</span><span class="hljs-string">&quot; height=&quot;</span><span class="hljs-string">&quot;{val}%&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; opacity=&quot;</span><span class="hljs-string">&quot;0.8&quot;</span><span class="hljs-string">&quot;/&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;text x=&quot;</span><span class="hljs-string">&quot;{x + 15}%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;95%&quot;</span><span class="hljs-string">&quot; text-anchor=&quot;</span><span class="hljs-string">&quot;middle&quot;</span><span class="hljs-string">&quot; font-size=&quot;</span><span class="hljs-string">&quot;10&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot;&gt;{val}%&lt;/text&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;text x=&quot;</span><span class="hljs-string">&quot;{x + 15}%&quot;</span><span class="hljs-string">&quot; y=&quot;</span><span class="hljs-string">&quot;40%&quot;</span><span class="hljs-string">&quot; text-anchor=&quot;</span><span class="hljs-string">&quot;middle&quot;</span><span class="hljs-string">&quot; font-size=&quot;</span><span class="hljs-string">&quot;9&quot;</span><span class="hljs-string">&quot; fill=&quot;</span><span class="hljs-string">&quot;currentColor&quot;</span><span class="hljs-string">&quot; x:show=&quot;</span><span class="hljs-string">&quot;{val &gt; 80}&quot;</span><span class="hljs-string">&quot;&gt;HIGH&lt;/text&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/g&gt;&quot;</span> <span class="hljs-operator">+</span>
+        @<span class="hljs-string">&quot;&lt;/svg&gt;&quot;</span>
+});
+	
+panel.<span class="hljs-attr">Controls</span>.<span class="hljs-title function_">Add</span>(canvas);
+</code></pre>
+</div></div>
+<div class="hero-side">
+<div class="docmd-tabs">
+<div class="docmd-tabs-nav"><div class="docmd-tabs-nav-item active">
+<svg class="lucide-icon icon-app-window tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-app-window"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+<span>Auto</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-sun tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+<span>Light</span></div><div class="docmd-tabs-nav-item ">
+<svg class="lucide-icon icon-moon tab-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+<span>Dark</span></div></div><div class="docmd-tabs-content"><div class="docmd-tab-pane active"><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639235348657412089" alt="svg-advanced-light" class="light snapshot"> <img src="../../assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639235348657412089" alt="svg-advanced-dark" class="dark snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639235348657412089" alt="svg-advanced-light" class="snapshot"></p>
+</div><div class="docmd-tab-pane "><p><img src="../../assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639235348657412089" alt="svg-advanced-dark" class="snapshot"></p>
+</div></div></div></div>
+</div>
+<h2 id="api-reference" class="docmd-heading"><a href="#api-reference" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>API <code>Reference</code></h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Templates</span></td>
+<td><span class="docmd-tag" style="--tag-color: #6B7C94; background-color: color-mix(in srgb, #6B7C94 15%, transparent); color: #6B7C94; border-color: color-mix(in srgb, #6B7C94 30%, transparent);">
+<svg class="lucide-icon icon-check-check tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-check-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 7 17l-5-5" />
+  <path d="m22 10-7.5 7.5L13 16" />
+</svg>
+Kt-SvgContainer</span></td>
+<td><em>Sets the Templates.</em></td>
+</tr>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+ExComposited</span></td>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.8" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #0B64F4; background-color: color-mix(in srgb, #0B64F4 15%, transparent); color: #0B64F4; border-color: color-mix(in srgb, #0B64F4 30%, transparent);">
+<svg class="lucide-icon icon-external-link tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+Boolean</span></a></td>
+<td><em>Sets the Ex composited.</em></td>
+</tr>
+<tr>
+<td><span class="docmd-tag">
+<svg class="lucide-icon icon-wrench tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+Latency</span></td>
+<td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #0B64F4; background-color: color-mix(in srgb, #0B64F4 15%, transparent); color: #0B64F4; border-color: color-mix(in srgb, #0B64F4 30%, transparent);">
+<svg class="lucide-icon icon-external-link tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-external-link"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+</svg>
+Int32</span></a> <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types" class="docmd-tag-link" style="text-decoration:none;" target="_blank" rel="noopener noreferrer"><span class="docmd-tag" style="--tag-color: #F96A06; background-color: color-mix(in srgb, #F96A06 15%, transparent); color: #F96A06; border-color: color-mix(in srgb, #F96A06 30%, transparent);">
+<svg class="lucide-icon icon-circle-alert tag-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-circle-alert"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <line x1="12" x2="12" y1="8" y2="12" />
+  <line x1="12" x2="12.01" y1="16" y2="16" />
+</svg>
+Nullable</span></a></td>
+<td><em>Sets the Latency.</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+                
+                  <div class="page-navigation">
+                    
+                      <a href="../../controls/kt-spinner/" class="prev-page">
+                        
+<svg class="lucide-icon icon-arrow-left page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 19-7-7 7-7" />
+  <path d="M19 12H5" />
+</svg>
+
+                        <span><small>Previous</small><strong>
+                            Kt • Spinner
+                          </strong></span>
+                      </a>
+                    
+                    
+                      <a href="../../controls/kt-switch/" class="next-page">
+                        <span><small>Next</small>
+                          <strong>
+                            Kt • Switch
+                          </strong></span>
+                        
+<svg class="lucide-icon icon-arrow-right page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg>
+
+                      </a>
+                    
+                  </div>
+                
+              </div>
+              
+            </div>
+            <div class="page-footer-actions">
+              
+              
+              <span class="git-spacer"></span>
+              
+            </div>
+          </main>
+          
+
+
+<footer class="page-footer">
+  <div class="footer-content">
+    <div class="user-footer">KimTools.WinForms © 2026</div>
+    
+  </div>
+</footer>
+
+        </div>
+      </div>
+      
+      <script src="../../assets/js/docmd-main.js?v=mtd2ncoy"></script>
+      
+      <script src="../../assets/js/docmd-git.js?v=mtd2ncoy"></script>
+      <script src="../../assets/js/docmd-image-lightbox.js?v=mtd2ncoy" ></script>
+<script src="../../assets/js/vendor/minisearch.js?v=mtd2ncoy" ></script>
+<script src="../../assets/js/docmd-search.js?v=mtd2ncoy" ></script>
+
+  <!-- Search Modal (Injected by @docmd/plugin-search) -->
+  <div id="docmd-search-modal" class="docmd-search-modal" style="display: none;" data-show-confidence="false" data-show-filters="true"
+       data-search-placeholder="Search documentation..."
+       data-search-no-results="No results found."
+       data-search-error="Failed to load search index."
+       data-search-offline="Search requires a web server. Open this site via http://localhost instead of file:// to enable search."
+       data-search-offline-build="Search is disabled because these docs were built with the --offline flag. Rebuild the site without the flag to enable search."
+       data-search-initial="Type to start searching..."
+       data-search-navigate="to navigate"
+       data-search-escape="to close">
+      <div class="docmd-search-box">
+          <div class="docmd-search-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon icon-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              <input type="text" id="docmd-search-input" placeholder="Search documentation..." autocomplete="off" spellcheck="false">
+              <button onclick="window.closeDocmdSearch()" class="docmd-search-close" aria-label="Close search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon icon-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+              </button>
+          </div>
+          <div id="docmd-search-results" class="docmd-search-results"></div>
+          <div class="docmd-search-footer">
+              <span><kbd class="docmd-kbd">↑</kbd> <kbd class="docmd-kbd">↓</kbd> to navigate</span>
+              <span><kbd class="docmd-kbd">ESC</kbd> to close</span>
+          </div>
+      </div>
+  </div>
+
+    <script>
+      (function() {
+        var searchDebounceTimer;
+
+        document.addEventListener('click', function(e) {
+          var link = e.target.closest('a');
+          if (!link || !window.gtag) return;
+          
+          var url = link.href;
+          var hostname = window.location.hostname;
+          var isExternal = link.hostname && link.hostname !== hostname;
+          var isDownload = link.hasAttribute('download') || url.match(/\.(pdf|zip|tar|gz|exe|pkg)$/i);
+          
+          if (isExternal) {
+            gtag('event', 'click_external', { 'url': url, 'link_text': link.innerText.trim() });
+          } else if (isDownload) {
+            gtag('event', 'download', { 'file_name': url.split('/').pop(), 'url': url });
+          }
+
+          // TOC tracking
+          if (link.classList.contains('toc-link')) {
+            gtag('event', 'toc_click', { 'target_id': link.getAttribute('href'), 'title': link.innerText.trim() });
+          }
+
+          // Permalink tracking
+          if (link.classList.contains('heading-anchor')) {
+            gtag('event', 'permalink_click', { 'url': url });
+          }
+        });
+
+        
+        // Search Keyword Tracking
+        document.addEventListener('input', function(e) {
+          if (e.target.id === 'docmd-search-input' && window.gtag) {
+            var query = e.target.value.trim();
+            if (query.length < 3) return;
+            
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(function() {
+              gtag('event', 'search', { 'search_term': query });
+            }, 1000);
+          }
+        });
+        
+      })();
+    </script>
+
+
+      
+        <script
+          src="../../assets/js/kimtools.js?v=mtd2ncoy"></script>
+        
+      
+      
+  </body>
+</html>

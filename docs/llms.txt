@@ -54,6 +54,8 @@
   A horizontal range slider with state-based theming, fill/outline thumb styles, thick/thin track borders, and smooth color transitions.
 - [KimTools / Controls / Spinner](https://kimtoo.net/controls/kt-spinner/)
   A customizable animated loading spinner with preset styles, dash patterns, cap shapes, speed control, and optional center text.
+- [KimTools / Controls / SvgCanvas](https://kimtoo.net/controls/kt-svg-canvas/)
+  A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables.
 - [KimTools / Controls / Switch](https://kimtoo.net/controls/kt-switch/)
   A smooth, highly customizable toggle switch control for Modern WinForms supporting custom state styling and animations.
 - [KimTools / Controls / Table](https://kimtoo.net/controls/kt-table/)

@@ -4,10 +4,10 @@ title: "KimTools / Controls / Window"
 description: "A modern, theme-aware WinForms window with customizable backgrounds, styling, and layout support."
 source: "https://kimtoo.net/controls/kt-window/"
 path: /controls/kt-window/
-updated: 2026-08-27
+updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T20:29:04.312Z"
+  generated_at: "2026-08-28T14:53:35.714Z"
 ---
 ---
 title: "KimTools / Controls / Window"

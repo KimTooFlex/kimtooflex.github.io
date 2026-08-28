@@ -5,12 +5,12 @@ bundle:
   description: ""
   url: "https://kimtoo.net"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T20:29:04.450Z"
+  generated_at: "2026-08-28T14:53:35.842Z"
   default_type: concept
 stats:
-  concepts: 37
+  concepts: 38
   by_type:
-    concept: 37
+    concept: 38
   locales: 
   versions: 
 concepts:
@@ -211,6 +211,14 @@ concepts:
     title: "KimTools / Controls / Spinner"
     path: /controls/kt-spinner/
     file: concepts/controls-kt-spinner.md
+    locale: ""
+    version: ""
+    tags: 
+  - id: controls-kt-svg-canvas
+    type: concept
+    title: "KimTools / Controls / SvgCanvas"
+    path: /controls/kt-svg-canvas/
+    file: concepts/controls-kt-svg-canvas.md
     locale: ""
     version: ""
     tags: 

@@ -4,10 +4,10 @@ title: "KimTools / Components / Toasts"
 description: "Deliver stunningly neat, time-bound, and brief messages about application processes. Supports multiple message types, custom positioning, action buttons, drag interaction, and per-type visual customization."
 source: "https://kimtoo.net/components/kt-toasts/"
 path: /components/kt-toasts/
-updated: 2026-08-27
+updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T20:29:03.966Z"
+  generated_at: "2026-08-28T14:53:34.798Z"
 ---
 ---
 title: "KimTools / Components / Toasts"

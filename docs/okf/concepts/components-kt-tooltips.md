@@ -4,10 +4,10 @@ title: "KimTools / Components / Tooltips"
 description: "Provides enhanced ToolTips with rich customization including icons, HTML content, fade animations, auto-close timing, shadow effects, and extender provider support for associating tips with any control."
 source: "https://kimtoo.net/components/kt-tooltips/"
 path: /components/kt-tooltips/
-updated: 2026-08-27
+updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T20:29:03.969Z"
+  generated_at: "2026-08-28T14:53:34.890Z"
 ---
 ---
 title: "KimTools / Components / Tooltips"

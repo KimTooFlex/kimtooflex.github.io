@@ -153,6 +153,12 @@
       "priority": "medium"
     },
     {
+      "title": "KimTools / Controls / SvgCanvas",
+      "url": "https://kimtoo.net/controls/kt-svg-canvas/",
+      "description": "A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables.",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Controls / Switch",
       "url": "https://kimtoo.net/controls/kt-switch/",
       "description": "A smooth, highly customizable toggle switch control for Modern WinForms supporting custom state styling and animations.",

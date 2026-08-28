@@ -4,10 +4,10 @@ title: "KimTools / Licensing"
 description: "Understand KimTools.WinForms licensing, editions, activation, and commercial usage."
 source: "https://kimtoo.net/licensing/"
 path: /licensing/
-updated: 2026-08-27
+updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T20:29:04.371Z"
+  generated_at: "2026-08-28T14:53:35.738Z"
 ---
 ---
 title: "KimTools / Licensing"

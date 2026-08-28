@@ -1231,8 +1231,8 @@ border-width: 0;
   background-color: transparent;
 }
 
-.docmd-breadcrumbs-row {
-  display: none;
+.docmd-breadcrumbs {
+  visibility: hidden;
 }
 
 .header-title {

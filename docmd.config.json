@@ -202,6 +202,12 @@
           "icon": "loader"
         },
         {
+          "kt": "kt-svg-canvas",
+          "path": "/controls/kt-svg-canvas.md",
+          "title": "Kt • SvgCanvas",
+          "icon": "image"
+        },
+        {
           "kt": "kt-switch",
           "path": "/controls/kt-switch.md",
           "title": "Kt • Switch",

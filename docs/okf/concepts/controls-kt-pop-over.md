@@ -4,10 +4,10 @@ title: "KimTools / Controls / PopOver"
 description: "An extender provider that turns any control into a popover trigger, showing a target control in a dropdown with configurable direction, shadow, and lifecycle events."
 source: "https://kimtoo.net/controls/kt-pop-over/"
 path: /controls/kt-pop-over/
-updated: 2026-08-27
+updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T20:29:04.135Z"
+  generated_at: "2026-08-28T14:53:35.398Z"
 ---
 ---
 title: "KimTools / Controls / PopOver"

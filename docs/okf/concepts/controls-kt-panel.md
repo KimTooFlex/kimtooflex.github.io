@@ -4,10 +4,10 @@ title: "KimTools / Controls / Panel"
 description: "A modern, fully customizable panel control for WinForms. It is a container for grouping and styling related content."
 source: "https://kimtoo.net/controls/kt-panel/"
 path: /controls/kt-panel/
-updated: 2026-08-27
+updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T20:29:04.120Z"
+  generated_at: "2026-08-28T14:53:35.362Z"
 ---
 ---
 title: "KimTools / Controls / Panel"
