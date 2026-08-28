@@ -7,7 +7,7 @@ path: /components/kt-toasts/
 updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T14:53:34.798Z"
+  generated_at: "2026-08-28T16:10:20.869Z"
 ---
 ---
 title: "KimTools / Components / Toasts"

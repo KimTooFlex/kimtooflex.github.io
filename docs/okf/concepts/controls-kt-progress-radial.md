@@ -7,7 +7,7 @@ path: /controls/kt-progress-radial/
 updated: 2026-08-28
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T14:53:35.454Z"
+  generated_at: "2026-08-28T16:10:21.043Z"
 ---
 ---
 title: "KimTools / Controls / ProgressRadial"
