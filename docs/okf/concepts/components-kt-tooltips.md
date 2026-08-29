@@ -7,7 +7,7 @@ path: /components/kt-tooltips/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:13:49.546Z"
+  generated_at: "2026-08-29T11:21:04.551Z"
 ---
 ---
 title: "KimTools / Components / Tooltips"

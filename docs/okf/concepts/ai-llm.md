@@ -7,7 +7,7 @@ path: /ai-llm/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:13:49.474Z"
+  generated_at: "2026-08-29T11:21:04.543Z"
 ---
 ---
 title: "KimTools / AI & LLM Context"
@@ -22,11 +22,29 @@ toc: false
 # AI / LLM `Context`
 KimTools.WinForms publishes a complete, machine-readable context file so AI coding assistants and LLM agents can understand the entire component API in a single fetch.
 
+::: button "llms.txt" external:https://kimtoo.net/docs/llms.txt icon:external-link
 ::: button "llms-full.txt" external:https://kimtoo.net/docs/llms-full.txt icon:external-link
 == side
 ![llms-context-example](/assets/images/ChatGPT-vs-Claude-vs-Copilot-vs-Gemini-hero.webp){ .with-shadow}
 :::
 
+
+## Full context
+
+Here's the fastest way to get an AI assistant up to speed on KimTools — copy one of the two links below into any tool that accepts a URL for context (Claude, ChatGPT, Cursor, and most others support this).
+> every control, every property, every code example, all in one file
+```
+https://kimtoo.net/docs/llms-full.txt
+```
+
+### Quick index
+> just page titles, descriptions, and links, for when the assistant only needs an overview:
+
+```
+https://kimtoo.net/docs/llms.txt
+```
+
+Not sure which one to use? Start with `llms-full.txt` — it's larger, but it means the assistant already has everything it needs without asking it to fetch individual pages afterward. Reach for the lighter `llms.txt` only if you're working with a tool that has a small context window, or you just want a table of contents.
 
 ## General
 

@@ -7,7 +7,7 @@ path: /utilities/kt-brush/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:13:50.127Z"
+  generated_at: "2026-08-29T11:21:04.984Z"
 ---
 ---
 title: "KimTools / Brush"

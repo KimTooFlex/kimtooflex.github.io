@@ -7,7 +7,7 @@ path: /controls/kt-progress/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:13:49.781Z"
+  generated_at: "2026-08-29T11:21:04.679Z"
 ---
 ---
 title: "KimTools / Controls / Progress"
