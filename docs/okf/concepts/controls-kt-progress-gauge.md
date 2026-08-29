@@ -7,7 +7,7 @@ path: /controls/kt-progress-gauge/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T19:18:50.684Z"
+  generated_at: "2026-08-29T19:21:14.429Z"
 ---
 ---
 title: "KimTools / Controls / ProgressGauge"

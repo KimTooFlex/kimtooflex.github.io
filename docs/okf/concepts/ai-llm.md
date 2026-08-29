@@ -7,7 +7,7 @@ path: /ai-llm/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T19:18:50.523Z"
+  generated_at: "2026-08-29T19:21:14.235Z"
 ---
 ---
 title: "KimTools / AI & LLM Context"
@@ -21,9 +21,9 @@ toc: false
 ::: hero layout:split glow:true
 # AI / LLM `Context`
 KimTools.WinForms publishes a complete, machine-readable context file so AI coding assistants and LLM agents can understand the entire component API in a single fetch.
+ 
+::: button "llms-full.txt" external:https://kimtoo.net/llms-full.txt icon:external-link
 
-[//]: # (::: button "llms.txt" external:https://kimtoo.net/docs/llms.txt icon:external-link)
-::: button "llms-full.txt" external:https://kimtoo.net/docs/llms-full.txt icon:external-link
 == side
 ![llms-context-example](/assets/images/ChatGPT-vs-Claude-vs-Copilot-vs-Gemini-hero.webp){ .with-shadow}
 :::

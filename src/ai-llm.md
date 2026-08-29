@@ -10,9 +10,9 @@ toc: false
 ::: hero layout:split glow:true
 # AI / LLM `Context`
 KimTools.WinForms publishes a complete, machine-readable context file so AI coding assistants and LLM agents can understand the entire component API in a single fetch.
+ 
+::: button "llms-full.txt" external:https://kimtoo.net/llms-full.txt icon:external-link
 
-[//]: # (::: button "llms.txt" external:https://kimtoo.net/docs/llms.txt icon:external-link)
-::: button "llms-full.txt" external:https://kimtoo.net/docs/llms-full.txt icon:external-link
 == side
 ![llms-context-example](/assets/images/ChatGPT-vs-Claude-vs-Copilot-vs-Gemini-hero.webp){ .with-shadow}
 :::
