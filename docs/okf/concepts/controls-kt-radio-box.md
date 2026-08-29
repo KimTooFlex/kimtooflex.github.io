@@ -4,10 +4,10 @@ title: "KimTools / Controls / RadioBox"
 description: "A customizable, stylish radio button control for WinForms with built-in binding and color states."
 source: "https://kimtoo.net/controls/kt-radio-box/"
 path: /controls/kt-radio-box/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.055Z"
+  generated_at: "2026-08-29T11:03:15.761Z"
 ---
 ---
 title: "KimTools / Controls / RadioBox"

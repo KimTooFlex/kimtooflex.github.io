@@ -4,10 +4,10 @@ title: "KimTools / Controls / Menu"
 description: "An expandable tree-style navigation menu supporting independently themeable state styles, gradient highlights, custom connector lines, checkboxes, and inline badge tags."
 source: "https://kimtoo.net/controls/kt-menu/"
 path: /controls/kt-menu/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:20.955Z"
+  generated_at: "2026-08-29T11:03:15.632Z"
 ---
 ---
 title: "KimTools / Controls / Menu"

@@ -17,7 +17,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-tooltips-light](/assets/images/screenshots/kt-tooltips/kt-tooltips-light.png?v=639234698723286342){ .light .snapshot} ![kt-tooltips-dark](/assets/images/screenshots/kt-tooltips/kt-tooltips-dark.png?v=639234698723286342){.dark .snapshot}
+![kt-tooltips-light](/assets/images/screenshots/kt-tooltips/kt-tooltips-light.png?v=639235548653844470){ .light .snapshot} ![kt-tooltips-dark](/assets/images/screenshots/kt-tooltips/kt-tooltips-dark.png?v=639235548653844470){.dark .snapshot}
 :::
 <!-- -->
 ## Icon & Title Support

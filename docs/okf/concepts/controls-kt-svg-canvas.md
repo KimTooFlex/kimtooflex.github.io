@@ -4,10 +4,10 @@ title: "KimTools / Controls / SvgCanvas"
 description: "A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables."
 source: "https://kimtoo.net/controls/kt-svg-canvas/"
 path: /controls/kt-svg-canvas/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.143Z"
+  generated_at: "2026-08-29T11:03:15.844Z"
 ---
 ---
 title: "KimTools / Controls / SvgCanvas"
@@ -28,13 +28,86 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-svg-canvas-light](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-light.png?v=639235409898594873){ .light .snapshot} ![kt-svg-canvas-dark](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-dark.png?v=639235409898594873){.dark .snapshot}
+![kt-svg-canvas-light](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-light.png?v=639235954585400778){ .light .snapshot} ![kt-svg-canvas-dark](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-dark.png?v=639235954585400778){.dark .snapshot}
 :::
 
 ::: callout success
 #### 🟢 DESIGNER SUPPORT
 **This control has full Visual Studio design-time support.**
 Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.
+:::
+
+::: tabs
+== tab "IconHeart"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+</svg>
+```
+
+== tab "IconStar"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+</svg>
+```
+
+== tab "IconBell"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+</svg>
+```
+
+== tab "IconCheck"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" />
+</svg>
+```
+
+== tab "IconGear"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 2.37 2.37a1.724 1.724 0 0 0 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+</svg>
+```
+
+== tab "IconHome"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+```
+
+== tab "IconMail"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" />
+</svg>
+```
+
+== tab "IconSearch"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" />
+</svg>
+```
+
+== tab "IconUser"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+```
+
+== tab "IconX"
+```svg "🔴 🟡 🟢"
+<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" />
+</svg>
+```
+
 :::
 
 ::: hero layout:split glow:true
@@ -79,20 +152,20 @@ for (int i = 0; i < icons.Length; i++)
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639235409935310221){ .light .snapshot} ![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639235409935310221){.dark .snapshot}
+![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639235954619000714){ .light .snapshot} ![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639235954619000714){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639235409935269483){  .snapshot}
+![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639235954618979055){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639235409935269483){ .snapshot}
+![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639235954618979055){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
 ## Themed Icons (`Color`, `BackColor`)
-Tabler icons inherit the canvas `Color` as their stroke color. Place canvases on contrasting `BackColor` surfaces — light on dark, primary on white, or tinted washes. The error state uses `KtColor.ERROR` at full strength over a 20 % opacity wash. This makes the same vector paths adapt to any theme surface without duplicating SVG markup.
+Tabler icons inherit the canvas `Color` as their stroke color. Place canvases on contrasting `BackColor` surfaces - light on dark, primary on white, or tinted washes. The error state uses `KtColor.ERROR` at full strength over a 20 % opacity wash. This makes the same vector paths adapt to any theme surface without duplicating SVG markup.
 ```csharp "🔴 🟡 🟢"
 var panel = new FlowLayoutPanel
 {
@@ -106,16 +179,16 @@ var panel = new FlowLayoutPanel
 	
 int dim = 100;
 	
-var canvasLight = new KtSvgCanvas
+var canvasSecondary = new KtSvgCanvas
 {
     Width = dim,
     Height = dim,
     Margin = new Padding(8),
-    BackColor = KtColor.BASE_1,
-    Color = KtColor.CONTENT
+    BackColor = KtColor.SECONDARY % 20,
+    Color = KtColor.SECONDARY
 };
 	
-canvasLight.Templates.Add(new KtSvgTemplate(canvasLight.Templates)
+canvasSecondary.Templates.Add(new KtSvgTemplate(canvasSecondary.Templates)
 {
     Name = "search",
     Svg = IconSearch
@@ -126,8 +199,8 @@ var canvasPrimary = new KtSvgCanvas
     Width = dim,
     Height = dim,
     Margin = new Padding(8),
-    BackColor = KtColor.PRIMARY,
-    Color = KtColor.White
+    BackColor = KtColor.PRIMARY % 20,
+    Color = KtColor.PRIMARY
 };
 	
 canvasPrimary.Templates.Add(new KtSvgTemplate(canvasPrimary.Templates)
@@ -136,35 +209,35 @@ canvasPrimary.Templates.Add(new KtSvgTemplate(canvasPrimary.Templates)
     Svg = IconCheck
 });
 	
-var canvasError = new KtSvgCanvas
+var canvasAccent = new KtSvgCanvas
 {
     Width = dim,
     Height = dim,
     Margin = new Padding(8),
-    BackColor = KtColor.ERROR % 20,
-    Color = KtColor.ERROR
+    BackColor = KtColor.ACCENT % 20,
+    Color = KtColor.ACCENT
 };
 	
-canvasError.Templates.Add(new KtSvgTemplate(canvasError.Templates)
+canvasAccent.Templates.Add(new KtSvgTemplate(canvasAccent.Templates)
 {
     Name = "heart",
     Svg = IconHeart
 });
 	
-panel.Controls.Add(canvasLight);
+panel.Controls.Add(canvasSecondary);
 panel.Controls.Add(canvasPrimary);
-panel.Controls.Add(canvasError);
+panel.Controls.Add(canvasAccent);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639235409960375754){ .light .snapshot} ![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639235409960375754){.dark .snapshot}
+![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639235954642902166){ .light .snapshot} ![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639235954642902166){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639235409960370591){  .snapshot}
+![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639235954642902166){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639235409960370591){ .snapshot}
+![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639235954642902166){ .snapshot}
 
 :::
 :::
@@ -176,17 +249,17 @@ A simplified progress bar built with basic `<rect>` elements and top-left text u
 var canvas = new KtSvgCanvas
 {
     Width = 400,
-    Height = 100,
-    Margin = new Padding(0, 10, 0, 10),
-    BackColor = KtColor.Transparent,
-    Color = KtColor.PRIMARY
+    Height = 400,
+    BackColor = Color.Transparent,
+    Color = KtColor.PRIMARY,
+    Dock = DockStyle.Fill
 };
 	
 canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 {
     Name = "status",
     Svg = """
-          <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" >
               <!-- Top-Left Text -->
               <text x="5" y="45" dominant-baseline="hanging" font-size="10" font-weight="bold" fill="currentColor">{status}</text>
 	
@@ -206,98 +279,73 @@ canvas.Render();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639235409983552505){ .light .snapshot} ![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639235409983552505){.dark .snapshot}
+![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639235954665651847){ .light .snapshot} ![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639235954665651847){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639235409983552505){  .snapshot}
+![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639235954665642939){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639235409983552505){ .snapshot}
+![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639235954665642939){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## Conditional Rendering (`x:if` / `x:else`)
-Toggle entire SVG branches using `x:if` and `x:else` attributes. The compiler evaluates the bound expression and emits only the matching branch. Use this for state-driven icons — check vs. cross, connected vs. disconnected, or locked vs. unlocked.
+## Conditional Rendering (`x-if` / `x-else`)
+Toggle entire SVG branches using `x-if` and `x-else` attributes.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 420,
-    Height = 200,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-int dim = 100;
-	
 var canvas = new KtSvgCanvas
 {
-    Width = dim,
-    Height = dim,
-    Margin = new Padding(0, 10, 0, 10),
-    BackColor = KtColor.BASE_2,
-    Color = KtColor.SUCCESS
+    Width = 400,
+    Height = 400,
+    BackColor = Color.Transparent,
 };
 	
 canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 {
     Name = "toggle",
+    // preserveAspectRatio="xMidYMid meet" centers and fills the 400x400 space uniformly
     Svg = """
-        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g x:if="{isActive}">
-                <circle cx="50%" cy="50%" r="40%" fill="currentColor" opacity="0.2"/>
-                <path d="M5 12l5 5l10 -10" stroke="currentColor" stroke-width="2" fill="none" transform="scale(2.5) translate(4,4)"/>
-            </g>
-            <g x:else>
-                <circle cx="50%" cy="50%" r="40%" fill="currentColor" opacity="0.1"/>
-                <path d="M6 6l12 12 M6 18l12 -12" stroke="currentColor" stroke-width="2" fill="none" transform="scale(2.5) translate(4,4)"/>
-            </g>
-        </svg>
-        """
+          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+             <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.2"/>
+              <g x-if="isActive">
+                  <!-- Centered 100x100 relative geometry -->
+                  <polyline points="30,52 42,64 70,36" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </g>
+          </svg>
+          """
 });
 	
 canvas.Model["isActive"] = true;
-canvas.Render();
+canvas.Color = canvas.Model["isActive"].ToObject<bool>()
+    ? KtColor.SUCCESS
+    : KtColor.NEUTRAL;
 	
-panel.Controls.Add(canvas);
+canvas.Render();
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639235410006430827){ .light .snapshot} ![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639235410006430827){.dark .snapshot}
+![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639235954688107895){ .light .snapshot} ![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639235954688107895){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639235410006375433){  .snapshot}
+![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639235954688107895){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639235410006375433){ .snapshot}
+![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639235954688107895){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## List Rendering (`x:for`)
-Repeat SVG fragments with `x:for` using a JSON array literal injected via `<script>`. The compiler expands the loop into SmartFormat list syntax, binding each iteration to the declared variable. Reference item properties directly — `{x}` and `{a}` — to build ratings, step indicators, or dot pagers without manual duplication.
+## List Rendering with loops (`x-for`)
+Repeat SVG fragments with `x-for` using a JSON array literal injected via `<script>`. The compiler expands the loop into SmartFormat list syntax, binding each iteration to the declared variable. Reference item properties directly - `{x}` and `{a}` - to build ratings, step indicators, or dot pagers without manual duplication.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 420,
-    Height = 200,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-int dim = 100;
-	
 var canvas = new KtSvgCanvas
 {
-    Width = dim,
-    Height = dim,
-    Margin = new Padding(0, 10, 0, 10),
-    BackColor = KtColor.BASE_1,
+    Width = 400,
+    Height = 400,
+    BackColor = Color.Transparent,
     Color = KtColor.WARNING
 };
 	
@@ -306,51 +354,47 @@ canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
     Name = "rating",
     Svg = """
         <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <script>{"dots":[{"x":10,"a":1},{"x":30,"a":1},{"x":50,"a":1},{"x":70,"a":0.2},{"x":90,"a":0.2}]}</script>
-            <g x:for="dots as d">
-                <circle cx="{x}%" cy="50%" r="8%" fill="currentColor" opacity="{a}"/>
-            </g>
+          <script>
+           { 
+             "dots":[ 
+                {"x":10,"a":1},
+                {"x":30,"a":1}, 
+                {"x":50,"a":1}, 
+                {"x":70,"a":0.2}, 
+                {"x":90,"a":0.2}] 
+            }
+          </script>
+          <g x-for="dots">
+             <circle cx="{x}%" cy="50%" r="8%" fill="currentColor" opacity="{a}"/>
+          </g> 
         </svg>
         """
 });
-	
-panel.Controls.Add(canvas);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639235410029411908){ .light .snapshot} ![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639235410029411908){.dark .snapshot}
+![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639235954710650991){ .light .snapshot} ![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639235954710650991){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639235410029411908){  .snapshot}
+![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639235954710650991){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639235410029411908){ .snapshot}
+![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639235954710650991){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## Visibility Toggles (`x:show` / `x:hide`)
-Control visibility without removing elements from the DOM using `x:show` and `x:hide`. These attributes compile to SVG `visibility` rules driven by the model. Useful for soft-state indicators — online dots, notification badges, or validation checkmarks.
+## Visibility Toggles (`x-show` / `x-hide`)
+Control visibility without removing elements from the DOM using `x-show` and `x-hide`. These attributes compile to SVG `visibility` rules driven by the model. Useful for soft-state indicators - online dots, notification badges, or validation checkmarks.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 420,
-    Height = 420,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
 var canvas = new KtSvgCanvas
 {
-    Width = panel.Width - panel.Padding.Horizontal,
-    Height = (int)((panel.Height - panel.Padding.Vertical) * 0.5),
-    Margin = new Padding(0, 10, 0, 10),
-    BackColor = KtColor.BASE_2,
-    Color = KtColor.INFO
+    Width = 400,
+    Height = 400,
+    BackColor = Color.Transparent,
+    Color = KtColor.WARNING
 };
 	
 canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
@@ -361,19 +405,19 @@ canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
             <rect x="5%" y="10%" width="90%" height="80%" rx="8"
                   fill="currentColor" opacity="0.08"/>
 	
-            <rect x:show="{visible}"
+            <rect x-show="{visible}"
                   x="10%" y="20%" width="35%" height="60%" rx="6"
                   fill="currentColor" opacity="0.9"/>
 	
-            <circle x:show="{visible}"
+            <circle x-show="{visible}"
                     cx="27.5%" cy="50%" r="12%"
                     fill="white" opacity="0.25"/>
 	
-            <rect x:hide="{hidden}"
+            <rect x-hide="{hidden}"
                   x="55%" y="20%" width="35%" height="60%" rx="6"
                   fill="currentColor" opacity="0.35"/>
 	
-            <circle x:hide="{hidden}"
+            <circle x-hide="{hidden}"
                     cx="72.5%" cy="50%" r="12%"
                     fill="currentColor" opacity="0.9"/>
         </svg>
@@ -383,19 +427,17 @@ canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 canvas.Model["visible"] = true;
 canvas.Model["hidden"] = false;
 canvas.Render();
-	
-panel.Controls.Add(canvas);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639235410052442456){ .light .snapshot} ![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639235410052442456){.dark .snapshot}
+![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639235954733081252){ .light .snapshot} ![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639235954733081252){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639235410052432375){  .snapshot}
+![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639235954733081252){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639235410052432375){ .snapshot}
+![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639235954733081252){ .snapshot}
 
 :::
 :::
@@ -404,172 +446,139 @@ panel.Controls.Add(canvas);
 ## Template Injection (`<?bg?>`, `x-bg`)
 Compose complex graphics by referencing sibling templates. Use processing instructions `<?templateName?>` or `<x-templateName/>` tags to inline one template into another. Here a soft background wash is defined once and injected into the foreground mail icon, keeping markup DRY.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 420,
-    Height = 420,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
-int dim = panel.Height - panel.Padding.Vertical;
-	
 var canvas = new KtSvgCanvas
 {
-    Width = dim,
-    Height = dim,
-    Margin = new Padding(0, 10, 0, 10),
-    BackColor = KtColor.BASE_1,
-    Color = KtColor.PRIMARY
+    Width = 400,
+    Height = 400,
+    BackColor = Color.Transparent,
+    Color = KtColor.WARNING
 };
 	
-// Background template — injected by processing instruction
+	
+// Background template - injected by processing instruction
 canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 {
     Name = "bg",
     Svg = """
-        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50%" cy="50%" r="50%" fill="currentColor" opacity="0.1"/>
-        </svg>
+             <circle cx="50%" cy="50%" r="50%" fill="currentColor" opacity="0.5"/> 
         """
 });
 	
-// Foreground template — consumes bg via <?bg?> then draws the icon
+// Foreground template - consumes bg via <?bg?> then draws the icon
 canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 {
     Name = "main",
     Svg = """
         <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <?bg?><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" />
+           <x-bg/>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+            <path d="M3 7l9 6l9 -6" />
         </svg>
         """
 });
-	
-panel.Controls.Add(canvas);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639235410075698957){ .light .snapshot} ![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639235410075698957){.dark .snapshot}
+![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639235954754035880){ .light .snapshot} ![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639235954754035880){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639235410075698957){  .snapshot}
+![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639235954754035880){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639235410075698957){ .snapshot}
+![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639235954754035880){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## CSS SmartFormat Variables (`var()`)
+## CSS Variables (`var()`)
 Inside `<style>` blocks, the `var()` syntax is rewritten to SmartFormat placeholders. This lets you drive CSS values from the `Model` dictionary at runtime. Use it for theme tokens, dynamic palettes, or responsive stroke widths without inline attribute repetition.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 420,
-    Height = 420,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
 var canvas = new KtSvgCanvas
 {
-    Width = panel.Width - panel.Padding.Horizontal,
-    Height = (int)((panel.Height - panel.Padding.Vertical) * 0.6),
-    Margin = new Padding(0, 10, 0, 10),
-    BackColor = KtColor.BASE_2,
-    Color = KtColor.PRIMARY
+    Width = 400,
+    Height = 400,
+    BackColor = Color.Transparent,
+    Color = KtColor.WARNING,
+    Dock = DockStyle.Fill
 };
+	
 	
 canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 {
     Name = "cssvar",
     Svg = """
-        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <style>.box { fill: var(accent); stroke: var(accent); stroke-width: 2; }</style>
-            <rect class="box" x="20%" y="20%" width="60%" height="60%" rx="8"/>
-            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="14" fill="white">{label}</text>
+        <svg width="100%" height="100%" viewBox="0 0 100 100"  fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <style>
+              .box { 
+                 fill: var(accent); 
+                 stroke: var(accent);
+                 stroke-width: 2; 
+              }
+            </style>
+            <rect class="box" x="10" y="10" width="80" height="80" rx="8"/>
+            <text x="20" y="50" dominant-baseline="central" text-anchor="middle" font-size="14" fill="white">{label}</text>
         </svg>
         """
 });
 	
 canvas.Model["accent"] = "#8b5cf6";
-canvas.Model["label"] = "Smart CSS";
+canvas.Model["label"] = "KimTools";
 canvas.Render();
-	
-panel.Controls.Add(canvas);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639235410098836178){ .light .snapshot} ![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639235410098836178){.dark .snapshot}
+![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639235954775121730){ .light .snapshot} ![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639235954775121730){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639235410098836178){  .snapshot}
+![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639235954775111715){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639235410098836178){ .snapshot}
+![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639235954775111715){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
 ## Advanced Composition
-Combine `<script>` data injection, `x:for`, property binding, arithmetic expressions, and `x:show` in a single template. A JSON script block seeds the context with an array of metrics. The loop renders three bars with percentage heights driven by `{val}`, conditional HIGH badges via `{val > 80}`, and centered labels. This demonstrates how `KtSvgCanvas` acts as a declarative data-visualization surface.
+Combine `<script>` data injection, `x-for`, property binding, arithmetic expressions, and `x-show` in a single template. A JSON script block seeds the context with an array of metrics. The loop renders three bars with percentage heights driven by `{val}`, conditional HIGH badges via `{val > 80}`, and centered labels. This demonstrates how `KtSvgCanvas` acts as a declarative data-visualization surface.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 420,
-    Height = 420,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
 var canvas = new KtSvgCanvas
 {
-    Width = panel.Width - panel.Padding.Horizontal,
-    Height = (int)((panel.Height - panel.Padding.Vertical) * 0.7),
-    Margin = new Padding(0, 10, 0, 10),
-    BackColor = KtColor.BASE_1,
-    Color = KtColor.PRIMARY
+    Width = 400,
+    Height = 400,
+    BackColor = Color.Transparent,
+    Color = KtColor.WARNING
 };
+	
 	
 canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 {
     Name = "dashboard",
     Svg = """
         <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <script>{"metrics":[{"name":"CPU","val":72,"x":10},{"name":"RAM","val":45,"x":43},{"name":"NET","val":88,"x":76}]}</script>
-            <g x:for="metrics as m">
-                <rect x="{x}%" y="10%" width="30%" height="80%" rx="4" fill="currentColor" opacity="0.1"/>
-                <text x="{x + 15}%" y="20%" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">{name}</text>
-                <rect x="{x + 5}%" y="{90 - val}%" width="20%" height="{val}%" fill="currentColor" opacity="0.8"/>
-                <text x="{x + 15}%" y="85%" text-anchor="middle" dominant-baseline="central" font-size="10" fill="currentColor">{val}%</text>
-                <text x="{x + 15}%" y="40%" text-anchor="middle" dominant-baseline="central" font-size="9" fill="currentColor" x:show="{val > 80}">HIGH</text>
+            <g _:width="2">
+                <circle cx="20" cy="20" r="20"
+                    stroke="currentColor"
+                    stroke-width="{width}"/>                                     
             </g>
         </svg>
         """
 });
-	
-panel.Controls.Add(canvas);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639235410121779737){ .light .snapshot} ![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639235410121779737){.dark .snapshot}
+![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639235954797511296){ .light .snapshot} ![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639235954797511296){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639235410121774439){  .snapshot}
+![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639235954797511296){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639235410121774439){ .snapshot}
+![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639235954797511296){ .snapshot}
 
 :::
 :::

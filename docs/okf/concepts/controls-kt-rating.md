@@ -4,10 +4,10 @@ title: "KimTools / Controls / Rating"
 description: "A customizable rating input with star, circle, and square shapes, independent color states for empty, hover, rated, and disabled, plus read-only and right-click-to-clear support."
 source: "https://kimtoo.net/controls/kt-rating/"
 path: /controls/kt-rating/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.076Z"
+  generated_at: "2026-08-29T11:03:15.778Z"
 ---
 ---
 title: "KimTools / Controls / Rating"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-rating-light](/assets/images/screenshots/kt-rating/kt-rating-light.png?v=639234524724481667){ .light .snapshot} ![kt-rating-dark](/assets/images/screenshots/kt-rating/kt-rating-dark.png?v=639234524724481667){.dark .snapshot}
+![kt-rating-light](/assets/images/screenshots/kt-rating/kt-rating-light.png?v=639236067188420367){ .light .snapshot} ![kt-rating-dark](/assets/images/screenshots/kt-rating/kt-rating-dark.png?v=639236067188420367){.dark .snapshot}
 :::
 
 ::: callout success
@@ -38,37 +38,43 @@ Drag it from the Toolbox onto your form, customize its properties directly in th
 :::
 
 ::: hero layout:split glow:true
-## Shape Variants (`Shape`)
-Three built-in shapes — `Star`, `Circle`, and `Square` — each with independent `OuterRadius` and `BorderThickness`. Switch the entire visual language of the rating input by changing a single enum.
+## Star Shape (`RatingShapes.Star`)
+The classic rating layout rendered with precision-calculated star geometry.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
+var rating = new KtRating
 {
-    Width = 320,
-    Height = 200,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
-var starRating = new KtRating
-{
-    Margin = new Padding(5),
     Value = 4,
     Maximum = 5,
     Shape = KtRating.RatingShapes.Star,
-    OuterRadius = 10,
+    OuterRadius = 12,
     Spacing = 4,
     BorderThickness = 1,
     RatedFillColor = KtColor.Yellow % 75,
     RatedBorderColor = KtColor.Yellow,
     EmptyFillColor = KtColor.Yellow[90] % 25,
-    EmptyBorderColor = KtColor.Yellow % 50,
+    EmptyBorderColor = KtColor.Yellow % 50
 };
-	
-var circleRating = new KtRating
+```
+== side
+::: tabs
+== tab "Auto" icon:app-window
+![rating-shape-star-light](/assets/images/screenshots/kt-rating/rating-shape-star-light.png?v=639236067212247491){ .light .snapshot} ![rating-shape-star-dark](/assets/images/screenshots/kt-rating/rating-shape-star-dark.png?v=639236067212247491){.dark .snapshot}
+
+== tab "Light" icon:sun
+![rating-shape-star-light](/assets/images/screenshots/kt-rating/rating-shape-star-light.png?v=639236067212226391){  .snapshot}
+
+== tab "Dark" icon:moon
+![rating-shape-star-dark](/assets/images/screenshots/kt-rating/rating-shape-star-dark.png?v=639236067212226391){ .snapshot}
+
+:::
+:::
+
+::: hero layout:split glow:true
+## Circle Shape (`RatingShapes.Circle`)
+A modern, minimalist circular rating variant suitable for step indicators or simple scores.
+```csharp "🔴 🟡 🟢"
+var rating = new KtRating
 {
-    Margin = new Padding(5),
     Value = 3,
     Maximum = 5,
     Shape = KtRating.RatingShapes.Circle,
@@ -78,12 +84,29 @@ var circleRating = new KtRating
     RatedFillColor = KtColor.PRIMARY % 75,
     RatedBorderColor = KtColor.PRIMARY,
     EmptyFillColor = KtColor.PRIMARY[90] % 25,
-    EmptyBorderColor = KtColor.PRIMARY % 50,
+    EmptyBorderColor = KtColor.PRIMARY % 50
 };
-	
-var squareRating = new KtRating
+```
+== side
+::: tabs
+== tab "Auto" icon:app-window
+![rating-shape-circle-light](/assets/images/screenshots/kt-rating/rating-shape-circle-light.png?v=639236067232747424){ .light .snapshot} ![rating-shape-circle-dark](/assets/images/screenshots/kt-rating/rating-shape-circle-dark.png?v=639236067232747424){.dark .snapshot}
+
+== tab "Light" icon:sun
+![rating-shape-circle-light](/assets/images/screenshots/kt-rating/rating-shape-circle-light.png?v=639236067232747424){  .snapshot}
+
+== tab "Dark" icon:moon
+![rating-shape-circle-dark](/assets/images/screenshots/kt-rating/rating-shape-circle-dark.png?v=639236067232747424){ .snapshot}
+
+:::
+:::
+
+::: hero layout:split glow:true
+## Square Shape (`RatingShapes.Square`)
+A compact, box-style rating indicator ideal for quantitative scale displays.
+```csharp "🔴 🟡 🟢"
+var rating = new KtRating
 {
-    Margin = new Padding(5),
     Value = 2,
     Maximum = 5,
     Shape = KtRating.RatingShapes.Square,
@@ -93,44 +116,29 @@ var squareRating = new KtRating
     RatedFillColor = KtColor.SUCCESS % 75,
     RatedBorderColor = KtColor.SUCCESS,
     EmptyFillColor = KtColor.SUCCESS[90] % 25,
-    EmptyBorderColor = KtColor.SUCCESS % 50,
+    EmptyBorderColor = KtColor.SUCCESS % 50
 };
-	
-panel.Controls.Add(starRating);
-panel.Controls.Add(circleRating);
-panel.Controls.Add(squareRating);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rating-shapes-light](/assets/images/screenshots/kt-rating/rating-shapes-light.png?v=639234524759725579){ .light .snapshot} ![rating-shapes-dark](/assets/images/screenshots/kt-rating/rating-shapes-dark.png?v=639234524759725579){.dark .snapshot}
+![rating-shape-square-light](/assets/images/screenshots/kt-rating/rating-shape-square-light.png?v=639236067253398046){ .light .snapshot} ![rating-shape-square-dark](/assets/images/screenshots/kt-rating/rating-shape-square-dark.png?v=639236067253398046){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rating-shapes-light](/assets/images/screenshots/kt-rating/rating-shapes-light.png?v=639234524759725579){  .snapshot}
+![rating-shape-square-light](/assets/images/screenshots/kt-rating/rating-shape-square-light.png?v=639236067253398046){  .snapshot}
 
 == tab "Dark" icon:moon
-![rating-shapes-dark](/assets/images/screenshots/kt-rating/rating-shapes-dark.png?v=639234524759725579){ .snapshot}
+![rating-shape-square-dark](/assets/images/screenshots/kt-rating/rating-shape-square-dark.png?v=639236067253398046){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
 ## Read-Only Mode (`ReadOnly`)
-Set `ReadOnly = true` to display a static rating without interaction. Useful for review summaries, aggregate scores, or any context where user input should be disabled.
+Set `ReadOnly = true` to present static scores while suppressing hover and click interactions.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 260,
-    Height = 120,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
 var rating = new KtRating
 {
-    Margin = new Padding(10),
     Value = 4,
     Maximum = 5,
     ReadOnly = true,
@@ -141,42 +149,29 @@ var rating = new KtRating
     RatedFillColor = KtColor.Yellow % 75,
     RatedBorderColor = KtColor.Yellow,
     EmptyFillColor = KtColor.Yellow[90] % 25,
-    EmptyBorderColor = KtColor.Yellow % 50,
+    EmptyBorderColor = KtColor.Yellow % 50
 };
-	
-panel.Controls.Add(rating);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rating-readonly-light](/assets/images/screenshots/kt-rating/rating-readonly-light.png?v=639234524776316484){ .light .snapshot} ![rating-readonly-dark](/assets/images/screenshots/kt-rating/rating-readonly-dark.png?v=639234524776316484){.dark .snapshot}
+![rating-readonly-light](/assets/images/screenshots/kt-rating/rating-readonly-light.png?v=639236067274107875){ .light .snapshot} ![rating-readonly-dark](/assets/images/screenshots/kt-rating/rating-readonly-dark.png?v=639236067274107875){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rating-readonly-light](/assets/images/screenshots/kt-rating/rating-readonly-light.png?v=639234524776316484){  .snapshot}
+![rating-readonly-light](/assets/images/screenshots/kt-rating/rating-readonly-light.png?v=639236067274107875){  .snapshot}
 
 == tab "Dark" icon:moon
-![rating-readonly-dark](/assets/images/screenshots/kt-rating/rating-readonly-dark.png?v=639234524776316484){ .snapshot}
+![rating-readonly-dark](/assets/images/screenshots/kt-rating/rating-readonly-dark.png?v=639236067274107875){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## Disabled State (`DisabledRatedFillColor`, `DisabledEmptyFillColor`)
-When `Enabled = false`, the rating falls back to dedicated disabled colors. Fine-tune the muted appearance independently for rated and empty shapes.
+## Disabled State (`Enabled = false`)
+Configures independent opacity palettes via `DisabledRatedFillColor` and `DisabledEmptyFillColor`.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 260,
-    Height = 120,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
 var rating = new KtRating
 {
-    Margin = new Padding(10),
     Value = 3,
     Maximum = 5,
     Enabled = false,
@@ -184,47 +179,30 @@ var rating = new KtRating
     OuterRadius = 12,
     Spacing = 4,
     BorderThickness = 1,
-    RatedFillColor = KtColor.Yellow % 75,
-    RatedBorderColor = KtColor.Yellow,
-    EmptyFillColor = KtColor.Yellow[90] % 25,
-    EmptyBorderColor = KtColor.Yellow % 50,
     DisabledRatedFillColor = KtColor.Yellow % 50,
-    DisabledEmptyFillColor = KtColor.Yellow % 25,
+    DisabledEmptyFillColor = KtColor.Yellow % 25
 };
-	
-panel.Controls.Add(rating);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rating-disabled-light](/assets/images/screenshots/kt-rating/rating-disabled-light.png?v=639234524793706588){ .light .snapshot} ![rating-disabled-dark](/assets/images/screenshots/kt-rating/rating-disabled-dark.png?v=639234524793706588){.dark .snapshot}
+![rating-disabled-light](/assets/images/screenshots/kt-rating/rating-disabled-light.png?v=639236067294571781){ .light .snapshot} ![rating-disabled-dark](/assets/images/screenshots/kt-rating/rating-disabled-dark.png?v=639236067294571781){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rating-disabled-light](/assets/images/screenshots/kt-rating/rating-disabled-light.png?v=639234524793706588){  .snapshot}
+![rating-disabled-light](/assets/images/screenshots/kt-rating/rating-disabled-light.png?v=639236067294571781){  .snapshot}
 
 == tab "Dark" icon:moon
-![rating-disabled-dark](/assets/images/screenshots/kt-rating/rating-disabled-dark.png?v=639234524793706588){ .snapshot}
+![rating-disabled-dark](/assets/images/screenshots/kt-rating/rating-disabled-dark.png?v=639236067294571781){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## Custom Color Theme
-Replace the default yellow palette with any `KtColor`. Every state — `Rated`, `Empty`, and `Hover` — carries its own fill and border color, so the rating can match any design system.
+## Custom Palette (`KtColor`)
+Assign custom theme tones across `Rated`, `Empty`, and `Hover` states to blend with application branding.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
-{
-    Width = 260,
-    Height = 120,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
 var rating = new KtRating
 {
-    Margin = new Padding(10),
     Value = 4,
     Maximum = 5,
     Shape = KtRating.RatingShapes.Star,
@@ -236,73 +214,30 @@ var rating = new KtRating
     EmptyFillColor = KtColor.Rose % 20,
     EmptyBorderColor = KtColor.Rose % 40,
     HoverFillColor = KtColor.Rose % 60,
-    HoverBorderColor = KtColor.Rose,
+    HoverBorderColor = KtColor.Rose
 };
-	
-panel.Controls.Add(rating);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rating-custom-theme-light](/assets/images/screenshots/kt-rating/rating-custom-theme-light.png?v=639234524811025187){ .light .snapshot} ![rating-custom-theme-dark](/assets/images/screenshots/kt-rating/rating-custom-theme-dark.png?v=639234524811025187){.dark .snapshot}
+![rating-custom-theme-light](/assets/images/screenshots/kt-rating/rating-custom-theme-light.png?v=639236067315095318){ .light .snapshot} ![rating-custom-theme-dark](/assets/images/screenshots/kt-rating/rating-custom-theme-dark.png?v=639236067315095318){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rating-custom-theme-light](/assets/images/screenshots/kt-rating/rating-custom-theme-light.png?v=639234524811025187){  .snapshot}
+![rating-custom-theme-light](/assets/images/screenshots/kt-rating/rating-custom-theme-light.png?v=639236067315095318){  .snapshot}
 
 == tab "Dark" icon:moon
-![rating-custom-theme-dark](/assets/images/screenshots/kt-rating/rating-custom-theme-dark.png?v=639234524811025187){ .snapshot}
+![rating-custom-theme-dark](/assets/images/screenshots/kt-rating/rating-custom-theme-dark.png?v=639236067315095318){ .snapshot}
 
 :::
 :::
 
 ::: hero layout:split glow:true
-## Sizing & Spacing (`OuterRadius`, `Spacing`, `BorderThickness`)
-Scale the entire rating control by adjusting `OuterRadius`. `Spacing` controls the gap between shapes, and `BorderThickness` adjusts the outline weight. The control auto-resizes to fit its content.
+## Custom Sizing (`OuterRadius`, `Spacing`)
+Adjust overall element bounds using `OuterRadius`, shape distance via `Spacing`, and outline stroke width with `BorderThickness`.
 ```csharp "🔴 🟡 🟢"
-var panel = new FlowLayoutPanel
+var rating = new KtRating
 {
-    Width = 320,
-    Height = 200,
-    Padding = new Padding(20),
-    BackColor = Color.Transparent,
-    AutoScroll = false,
-    FlowDirection = FlowDirection.TopDown
-};
-	
-var small = new KtRating
-{
-    Margin = new Padding(5),
-    Value = 3,
-    Maximum = 5,
-    Shape = KtRating.RatingShapes.Star,
-    OuterRadius = 8,
-    Spacing = 2,
-    BorderThickness = 1,
-    RatedFillColor = KtColor.Yellow % 75,
-    RatedBorderColor = KtColor.Yellow,
-    EmptyFillColor = KtColor.Yellow[90] % 25,
-    EmptyBorderColor = KtColor.Yellow % 50,
-};
-	
-var medium = new KtRating
-{
-    Margin = new Padding(5),
-    Value = 3,
-    Maximum = 5,
-    Shape = KtRating.RatingShapes.Star,
-    OuterRadius = 12,
-    Spacing = 4,
-    BorderThickness = 1,
-    RatedFillColor = KtColor.Yellow % 75,
-    RatedBorderColor = KtColor.Yellow,
-    EmptyFillColor = KtColor.Yellow[90] % 25,
-    EmptyBorderColor = KtColor.Yellow % 50,
-};
-	
-var large = new KtRating
-{
-    Margin = new Padding(5),
-    Value = 3,
+    Value = 4,
     Maximum = 5,
     Shape = KtRating.RatingShapes.Star,
     OuterRadius = 16,
@@ -311,23 +246,19 @@ var large = new KtRating
     RatedFillColor = KtColor.Yellow % 75,
     RatedBorderColor = KtColor.Yellow,
     EmptyFillColor = KtColor.Yellow[90] % 25,
-    EmptyBorderColor = KtColor.Yellow % 50,
+    EmptyBorderColor = KtColor.Yellow % 50
 };
-	
-panel.Controls.Add(small);
-panel.Controls.Add(medium);
-panel.Controls.Add(large);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![rating-sizes-light](/assets/images/screenshots/kt-rating/rating-sizes-light.png?v=639234524828833912){ .light .snapshot} ![rating-sizes-dark](/assets/images/screenshots/kt-rating/rating-sizes-dark.png?v=639234524828833912){.dark .snapshot}
+![rating-sizing-light](/assets/images/screenshots/kt-rating/rating-sizing-light.png?v=639236067335768338){ .light .snapshot} ![rating-sizing-dark](/assets/images/screenshots/kt-rating/rating-sizing-dark.png?v=639236067335768338){.dark .snapshot}
 
 == tab "Light" icon:sun
-![rating-sizes-light](/assets/images/screenshots/kt-rating/rating-sizes-light.png?v=639234524828833912){  .snapshot}
+![rating-sizing-light](/assets/images/screenshots/kt-rating/rating-sizing-light.png?v=639236067335768338){  .snapshot}
 
 == tab "Dark" icon:moon
-![rating-sizes-dark](/assets/images/screenshots/kt-rating/rating-sizes-dark.png?v=639234524828833912){ .snapshot}
+![rating-sizing-dark](/assets/images/screenshots/kt-rating/rating-sizing-dark.png?v=639236067335768338){ .snapshot}
 
 :::
 :::
@@ -345,9 +276,10 @@ panel.Controls.Add(large);
 | ::: tag "Shape" icon:wrench | ::: tag "RatingShapes" color:#6B7C94 icon:check-check  | *Sets the rating shape style.* |
 | ::: tag "ReadOnly" icon:wrench | ::: tag "Boolean" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.8  | *Sets a value indicating whether the rating is in read-only mode.* |
 | ::: tag "RightClickToClear" icon:wrench | ::: tag "Boolean" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.8  | *Sets a value indicating whether the rating will be cleared after right-clicking it.* |
-| ::: tag "Value" icon:wrench | ::: tag "Int32" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the current rating value.* |
-| ::: tag "Maximum" icon:wrench | ::: tag "Int32" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the maximum rating count.* |
-| ::: tag "Spacing" icon:wrench | ::: tag "Int32" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the spacing between rating shapes.* |
-| ::: tag "BorderThickness" icon:wrench | ::: tag "Int32" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the border thickness of rating shapes.* |
+| ::: tag "Value" icon:wrench | ::: tag "integer" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the current rating value.* |
+| ::: tag "Maximum" icon:wrench | ::: tag "integer" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the maximum rating count.* |
+| ::: tag "Spacing" icon:wrench | ::: tag "integer" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the spacing between rating shapes.* |
+| ::: tag "BorderThickness" icon:wrench | ::: tag "integer" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.8  | *Sets the border thickness of rating shapes.* |
 | ::: tag "OuterRadius" icon:wrench | ::: tag "float" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.8  | *Sets the rating's shape radius.* |
 | ::: tag "InnerRadius" icon:wrench | ::: tag "float" color:#0B64F4 icon:external-link url:external:https://learn.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.8  | *Sets the inner radius of the star shape.* |
+

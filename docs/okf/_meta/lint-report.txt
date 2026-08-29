@@ -1,3 +1,4 @@
+[WARN] missing-type /ai-llm/  (using fallback 'concept')
 [WARN] missing-type /components/kt-pop-over/  (using fallback 'concept')
 [WARN] missing-type /components/kt-toasts/  (using fallback 'concept')
 [WARN] missing-type /components/kt-tooltips/  (using fallback 'concept')
@@ -36,6 +37,7 @@
 [WARN] missing-type /utilities/kt-brush/  (using fallback 'concept')
 [WARN] missing-type /utilities/kt-color/  (using fallback 'concept')
 [WARN] missing-type /utilities/kt-themes/  (using fallback 'concept')
+[WARN] orphan-concept ai-llm  (no inbound links)
 [WARN] orphan-concept components-kt-pop-over  (no inbound links)
 [WARN] orphan-concept components-kt-toasts  (no inbound links)
 [WARN] orphan-concept components-kt-tooltips  (no inbound links)

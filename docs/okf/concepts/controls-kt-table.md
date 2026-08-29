@@ -4,10 +4,10 @@ title: "KimTools / Controls / Table"
 description: "A fully themed data grid with per-region skinning, rounded cell corners, custom scrollbar overlays, and native-looking checkbox, button, and link rendering."
 source: "https://kimtoo.net/controls/kt-table/"
 path: /controls/kt-table/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.152Z"
+  generated_at: "2026-08-29T11:03:15.856Z"
 ---
 ---
 title: "KimTools / Controls / Table"

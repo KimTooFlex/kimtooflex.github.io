@@ -5,15 +5,23 @@ bundle:
   description: ""
   url: "https://kimtoo.net"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.243Z"
+  generated_at: "2026-08-29T11:03:15.947Z"
   default_type: concept
 stats:
-  concepts: 38
+  concepts: 39
   by_type:
-    concept: 38
+    concept: 39
   locales: 
   versions: 
 concepts:
+  - id: ai-llm
+    type: concept
+    title: "KimTools / AI & LLM Context"
+    path: /ai-llm/
+    file: concepts/ai-llm.md
+    locale: ""
+    version: ""
+    tags: 
   - id: components-kt-pop-over
     type: concept
     title: "KimTools / Components / PopOver"

@@ -4,10 +4,10 @@ title: "KimTools / Controls / Progress"
 description: "A stylish progress indicator supporting dual-layer rendering, gradient fills, hatch patterns, rounded corners, per-edge border control, and animated spinner text."
 source: "https://kimtoo.net/controls/kt-progress/"
 path: /controls/kt-progress/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.052Z"
+  generated_at: "2026-08-29T11:03:15.726Z"
 ---
 ---
 title: "KimTools / Controls / Progress"

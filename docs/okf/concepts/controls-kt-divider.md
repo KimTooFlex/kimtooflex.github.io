@@ -4,10 +4,10 @@ title: "KimTools / Controls / Divider"
 description: "A visual separator control for Modern WinForms providing styled divider lines, customizable orientations, dash caps, and gradient edge fading."
 source: "https://kimtoo.net/controls/kt-divider/"
 path: /controls/kt-divider/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:20.935Z"
+  generated_at: "2026-08-29T11:03:15.612Z"
 ---
 ---
 title: "KimTools / Controls / Divider"

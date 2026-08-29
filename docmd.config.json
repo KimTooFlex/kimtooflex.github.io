@@ -38,11 +38,6 @@
       "autoEvents": true,
       "trackSearch": true
     },
-    "pwa": {
-      "themeColor": "#1e293b",
-      "bgColor": "#ffffff",
-      "logo": "/assets/images/favicon.ico"
-    },
     "ai": false,
     "git": false
   },
@@ -60,6 +55,8 @@
           "title": "Requirements",
           "path": "/requirements.md"
         },
+        { "title": "AI / LLM",
+          "path": "/ai-llm.md" },
         {
           "title": "FAQ",
           "path": "/faq.md"

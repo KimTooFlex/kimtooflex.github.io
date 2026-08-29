@@ -4,6 +4,8 @@
 
 ## Documentation Files
 
+- [KimTools / AI & LLM Context](https://kimtoo.net/ai-llm/)
+  Machine-readable documentation context for AI coding assistants and LLM agents.
 - [KimTools / Components / PopOver](https://kimtoo.net/components/kt-pop-over/)
   An extender provider that turns any control into a popover trigger, showing a target control in a dropdown with configurable direction, shadow, and lifecycle events.
 - [KimTools / Components / Toasts](https://kimtoo.net/components/kt-toasts/)
@@ -47,7 +49,7 @@
 - [KimTools / Controls / Select](https://kimtoo.net/controls/kt-select/)
   A fully owner-drawn dropdown with rounded corners, theme-aware colors, adjustable indicator styles, and independent styling for the closed surface and dropdown list items.
 - [KimTools / Controls / Shapes](https://kimtoo.net/controls/kt-shapes/)
-  A versatile shape renderer supporting circles, ovals, squares, rectangles, polygons, and lines with independent fill, border, rotation, and side-count control.
+  A versatile shape renderer supporting circles, ovals, squares, rectangles, polygons (3 to 16 sides), and lines with independent fill opacity, border, rotation, and side-count control.
 - [KimTools / Controls / SliderVert](https://kimtoo.net/controls/kt-slider-vert/)
   A vertical range slider with independent track and elapsed colors, fill/outline thumb modes, and thick/thin border styles.
 - [KimTools / Controls / Slider](https://kimtoo.net/controls/kt-slider/)

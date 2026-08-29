@@ -2,10 +2,10 @@
 type: concept
 source: "https://kimtoo.net/templates/"
 path: /templates/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.229Z"
+  generated_at: "2026-08-29T11:03:15.895Z"
 ---
 ::: grids
 

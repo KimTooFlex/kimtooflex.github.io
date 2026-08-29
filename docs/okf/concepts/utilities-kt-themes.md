@@ -4,10 +4,10 @@ title: "KimTools / utilities / Themes"
 description: "Kimtools Modern themes inspired by `Taiwlind` and `DaisyUI` themes"
 source: "https://kimtoo.net/utilities/kt-themes/"
 path: /utilities/kt-themes/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:21.239Z"
+  generated_at: "2026-08-29T11:03:15.937Z"
 ---
 ---
 title: "KimTools / utilities / Themes"

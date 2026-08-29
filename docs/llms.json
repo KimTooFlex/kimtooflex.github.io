@@ -3,6 +3,12 @@
   "description": "",
   "pages": [
     {
+      "title": "KimTools / AI & LLM Context",
+      "url": "https://kimtoo.net/ai-llm/",
+      "description": "Machine-readable documentation context for AI coding assistants and LLM agents.",
+      "priority": "medium"
+    },
+    {
       "title": "KimTools / Components / PopOver",
       "url": "https://kimtoo.net/components/kt-pop-over/",
       "description": "An extender provider that turns any control into a popover trigger, showing a target control in a dropdown with configurable direction, shadow, and lifecycle events.",
@@ -131,7 +137,7 @@
     {
       "title": "KimTools / Controls / Shapes",
       "url": "https://kimtoo.net/controls/kt-shapes/",
-      "description": "A versatile shape renderer supporting circles, ovals, squares, rectangles, polygons, and lines with independent fill, border, rotation, and side-count control.",
+      "description": "A versatile shape renderer supporting circles, ovals, squares, rectangles, polygons (3 to 16 sides), and lines with independent fill opacity, border, rotation, and side-count control.",
       "priority": "medium"
     },
     {

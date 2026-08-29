@@ -4,10 +4,10 @@ title: "KimTools / Components / Tooltips"
 description: "Provides enhanced ToolTips with rich customization including icons, HTML content, fade animations, auto-close timing, shadow effects, and extender provider support for associating tips with any control."
 source: "https://kimtoo.net/components/kt-tooltips/"
 path: /components/kt-tooltips/
-updated: 2026-08-28
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-28T16:10:20.872Z"
+  generated_at: "2026-08-29T11:03:15.533Z"
 ---
 ---
 title: "KimTools / Components / Tooltips"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-tooltips-light](/assets/images/screenshots/kt-tooltips/kt-tooltips-light.png?v=639234698723286342){ .light .snapshot} ![kt-tooltips-dark](/assets/images/screenshots/kt-tooltips/kt-tooltips-dark.png?v=639234698723286342){.dark .snapshot}
+![kt-tooltips-light](/assets/images/screenshots/kt-tooltips/kt-tooltips-light.png?v=639235548653844470){ .light .snapshot} ![kt-tooltips-dark](/assets/images/screenshots/kt-tooltips/kt-tooltips-dark.png?v=639235548653844470){.dark .snapshot}
 :::
 <!-- -->
 ## Icon & Title Support
