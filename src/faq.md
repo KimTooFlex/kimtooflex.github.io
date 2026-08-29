@@ -2,7 +2,7 @@
 title: "KimTools / FAQ"
 description: "Frequently asked questions about KimTools.WinForms."
 layout: "full"
-toc: true
+toc: false
 ---
 
 

@@ -9778,7 +9778,7 @@ window.PatternStyle = HatchStyle.LargeConfetti;
 title: "KimTools / FAQ"
 description: "Frequently asked questions about KimTools.WinForms."
 layout: "full"
-toc: true
+toc: false
 ---
 
 
@@ -10274,7 +10274,7 @@ Supported versions:
 title: "KimTools / Licensing"
 description: "Understand KimTools.WinForms licensing, editions, activation, and commercial usage."
 layout: "full"
-toc: true
+toc: false
 ---
 
 ::: hero layout:split glow:true
@@ -10451,7 +10451,7 @@ Applications created using KimTools may be distributed according to the terms of
 title: "KimTools / System Requirements"
 description: "Supported operating systems, .NET versions, development environments, and hardware requirements for KimTools.WinForms."
 layout: "full"
-toc: true
+toc: false
 ---
 
 

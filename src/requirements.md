@@ -2,7 +2,7 @@
 title: "KimTools / System Requirements"
 description: "Supported operating systems, .NET versions, development environments, and hardware requirements for KimTools.WinForms."
 layout: "full"
-toc: true
+toc: false
 ---
 
 

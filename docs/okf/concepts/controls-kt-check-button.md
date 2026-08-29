@@ -7,7 +7,7 @@ path: /controls/kt-check-button/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:52:42.576Z"
+  generated_at: "2026-08-29T11:58:36.760Z"
 ---
 ---
 title: "KimTools / Controls / CheckButton"

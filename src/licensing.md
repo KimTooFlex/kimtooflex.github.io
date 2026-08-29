@@ -2,7 +2,7 @@
 title: "KimTools / Licensing"
 description: "Understand KimTools.WinForms licensing, editions, activation, and commercial usage."
 layout: "full"
-toc: true
+toc: false
 ---
 
 ::: hero layout:split glow:true

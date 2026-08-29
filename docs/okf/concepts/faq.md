@@ -7,13 +7,13 @@ path: /faq/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:52:43.001Z"
+  generated_at: "2026-08-29T11:58:37.042Z"
 ---
 ---
 title: "KimTools / FAQ"
 description: "Frequently asked questions about KimTools.WinForms."
 layout: "full"
-toc: true
+toc: false
 ---
 
 
