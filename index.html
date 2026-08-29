@@ -611,6 +611,30 @@
                 </div>
             </div>
         </div>
+
+        <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
+        <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <div class="flex gap-4 mb-8  justify-center">
+                    <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
+                    <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
+                </div>
+
+                <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                    <b class="grad-purple"> .NET</b>
+                    Compatibility
+                </p>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <span v-for="badge in dotnetBadges" :key="badge.text" class="pill text-xs font-mono"
+                          :style="`background: ${badge.color}18; color: ${badge.color}; border: 1px solid ${badge.color}33;`">
+                        {{ badge.text }}
+                    </span>
+                </div>
+
+
+            </div>
+        </div>
+
         <!-- ═══════════════ PRICING ═══════════════-->
         <section id="pricing" class="py-24 relative"  :class="isDark ? 'bg-[#0d0f14]' : 'bg-gray-50'">
             <div class="max-w-7xl mx-auto px-6">
@@ -730,29 +754,6 @@
 
             </div>
         </section>
-
-        <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
-        <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <div class="flex gap-4 mb-8  justify-center">
-                    <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
-                    <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
-                </div>
-
-                <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
-                    <b class="grad-purple"> .NET</b>
-                    Compatibility
-                </p>
-                <div class="flex flex-wrap justify-center gap-2">
-                    <span v-for="badge in dotnetBadges" :key="badge.text" class="pill text-xs font-mono"
-                          :style="`background: ${badge.color}18; color: ${badge.color}; border: 1px solid ${badge.color}33;`">
-                        {{ badge.text }}
-                    </span>
-                </div>
-
-
-            </div>
-        </div>
 
         <!-- ═══════════════ CONTROLS SECTION ═══════════════ -->
         <section id="components " class="py-24 grid-bg ">
@@ -1285,7 +1286,7 @@
                 const isDark = ref(savedTheme ? savedTheme === 'dark' : systemPrefersDark);
                 const mobileOpen = ref(false);
                 const query = ref('');
-                const limit = ref(4);
+                const limit = ref(8);
 
                 const banners = [
                     { text: `🎉 KimTools ${latest} is now live!`, url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
