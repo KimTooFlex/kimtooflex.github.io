@@ -7,7 +7,7 @@ path: /ai-llm/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:21:04.543Z"
+  generated_at: "2026-08-29T11:52:42.418Z"
 ---
 ---
 title: "KimTools / AI & LLM Context"
@@ -22,17 +22,20 @@ toc: false
 # AI / LLM `Context`
 KimTools.WinForms publishes a complete, machine-readable context file so AI coding assistants and LLM agents can understand the entire component API in a single fetch.
 
-::: button "llms.txt" external:https://kimtoo.net/docs/llms.txt icon:external-link
+[//]: # (::: button "llms.txt" external:https://kimtoo.net/docs/llms.txt icon:external-link)
 ::: button "llms-full.txt" external:https://kimtoo.net/docs/llms-full.txt icon:external-link
 == side
 ![llms-context-example](/assets/images/ChatGPT-vs-Claude-vs-Copilot-vs-Gemini-hero.webp){ .with-shadow}
 :::
 
+::: callout tip "MCP Support Coming Soon"
+We're actively building native Model Context Protocol (MCP) support, so AI agents will be able to search, read, and query KimTools documentation interactively instead of fetching a static file. Until then, the `llms.txt` files below give any AI tool full context in one request.
+:::
 
 ## Full context
 
-Here's the fastest way to get an AI assistant up to speed on KimTools — copy one of the two links below into any tool that accepts a URL for context (Claude, ChatGPT, Cursor, and most others support this).
-> every control, every property, every code example, all in one file
+Here's the fastest way to get an AI assistant up to speed on KimTools - copy one of the two links below into any tool that accepts a URL for context (Claude, ChatGPT, Cursor, and most others support this).
+> Paste the URL into Claude, ChatGPT, Cursor, or any tool that accepts a context URL, and the model will have full knowledge of KimTools controls, properties, and usage patterns for that session.
 ```
 https://kimtoo.net/docs/llms-full.txt
 ```
@@ -44,7 +47,7 @@ https://kimtoo.net/docs/llms-full.txt
 https://kimtoo.net/docs/llms.txt
 ```
 
-Not sure which one to use? Start with `llms-full.txt` — it's larger, but it means the assistant already has everything it needs without asking it to fetch individual pages afterward. Reach for the lighter `llms.txt` only if you're working with a tool that has a small context window, or you just want a table of contents.
+Not sure which one to use? Start with `llms-full.txt` - it's larger, but it means the assistant already has everything it needs without asking it to fetch individual pages afterward. Reach for the lighter `llms.txt` only if you're working with a tool that has a small context window, or you just want a table of contents.
 
 ## General
 
@@ -82,9 +85,9 @@ https://kimtoo.net/docs/llms.txt
 
 ::: collapsible "Does KimTools support interactive AI agent access (MCP)?"
 
-Not yet for public/remote use.
+Not yet - it's on the way.
 
-The documentation site is built with docmd, which ships a local-only MCP server (`docmd mcp`) for developers working directly in this docs project. There's no hosted MCP endpoint for external users at this time — `llms-full.txt` is the recommended way for outside tools to get context today.
+We're actively developing native MCP support so AI agents can search, read, and query the KimTools documentation interactively instead of relying on a static context file. In the meantime, `llms-full.txt` is the recommended way for outside tools to get full context today.
 
 :::
 

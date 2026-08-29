@@ -7,7 +7,7 @@ path: /utilities/kt-themes/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:21:05.011Z"
+  generated_at: "2026-08-29T11:52:43.114Z"
 ---
 ---
 title: "KimTools / utilities / Themes"
