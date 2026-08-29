@@ -26,14 +26,14 @@ We're actively building native Model Context Protocol (MCP) support, so AI agent
 Here's the fastest way to get an AI assistant up to speed on KimTools - copy one of the two links below into any tool that accepts a URL for context (Claude, ChatGPT, Cursor, and most others support this).
 > Paste the URL into Claude, ChatGPT, Cursor, or any tool that accepts a context URL, and the model will have full knowledge of KimTools controls, properties, and usage patterns for that session.
 ```
-https://kimtoo.net/docs/llms-full.txt
+https://kimtoo.net/llms-full.txt
 ```
 
 ### Quick index
 > just page titles, descriptions, and links, for when the assistant only needs an overview:
 
 ```
-https://kimtoo.net/docs/llms.txt
+https://kimtoo.net/llms.txt
 ```
 
 Not sure which one to use? Start with `llms-full.txt` - it's larger, but it means the assistant already has everything it needs without asking it to fetch individual pages afterward. Reach for the lighter `llms.txt` only if you're working with a tool that has a small context window, or you just want a table of contents.
@@ -53,7 +53,7 @@ It follows the emerging `llms.txt` convention adopted across the developer tooli
 Point any LLM tool at the file directly:
 
 ```
-https://kimtoo.net/docs/llms-full.txt
+https://kimtoo.net/llms-full.txt
 ```
 
 Paste the URL into Claude, ChatGPT, Cursor, or any tool that accepts a context URL, and the model will have full knowledge of KimTools controls, properties, and usage patterns for that session.
@@ -67,7 +67,7 @@ Yes.
 `llms.txt` provides a condensed index of page titles, descriptions, and links, useful when an agent only needs an overview before fetching specific pages.
 
 ```
-https://kimtoo.net/docs/llms.txt
+https://kimtoo.net/llms.txt
 ```
 
 :::
