@@ -7,7 +7,7 @@ path: /controls/kt-picture-box/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T13:48:09.606Z"
+  generated_at: "2026-08-29T16:32:57.812Z"
 ---
 ---
 title: "KimTools / Controls / PictureBox"

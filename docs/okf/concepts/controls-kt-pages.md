@@ -7,7 +7,7 @@ path: /controls/kt-pages/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T13:48:09.548Z"
+  generated_at: "2026-08-29T16:32:57.801Z"
 ---
 ---
 title: "KimTools / Controls / Pages"

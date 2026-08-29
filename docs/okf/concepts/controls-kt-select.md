@@ -7,7 +7,7 @@ path: /controls/kt-select/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T13:48:09.722Z"
+  generated_at: "2026-08-29T16:32:57.836Z"
 ---
 ---
 title: "KimTools / Controls / Select"

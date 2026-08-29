@@ -7,7 +7,7 @@ path: /controls/kt-label/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T13:48:09.539Z"
+  generated_at: "2026-08-29T16:32:57.796Z"
 ---
 ---
 title: "KimTools / Controls / Label"

@@ -7,7 +7,7 @@ path: /controls/kt-shapes/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T13:48:09.751Z"
+  generated_at: "2026-08-29T16:32:57.847Z"
 ---
 ---
 title: "KimTools / Controls / Shapes"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-shapes-light](/assets/images/screenshots/kt-shapes/kt-shapes-light.png?v=639236155889278614){ .light .snapshot} ![kt-shapes-dark](/assets/images/screenshots/kt-shapes/kt-shapes-dark.png?v=639236155889278614){.dark .snapshot}
+![kt-shapes-light](/assets/images/screenshots/kt-shapes/kt-shapes-light.png?v=639236286437673306){ .light .snapshot} ![kt-shapes-dark](/assets/images/screenshots/kt-shapes/kt-shapes-dark.png?v=639236286437673306){.dark .snapshot}
 :::
 
 ::: callout success
@@ -36,7 +36,7 @@ This component is only available in the Premium version of KimTools.
 **This control has full Visual Studio design-time support.**
 Drag it from the Toolbox onto your form, customize its properties directly in the Properties window, and KimTools will generate the corresponding code for you.
 :::
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var shape = new KtShapes();
 ```
 | ::: tag "Shape" icon:wrench | ::: tag "Shapes" color:#6B7C94 icon:check-check  | *Sets the shape to be drawn.* |
@@ -45,7 +45,7 @@ var shape = new KtShapes();
 ::: hero layout:split glow:true
 ## Circle (`Shapes.Circle`)
 Draws a smooth anti-aliased circle inscribed perfectly within equal control dimensions.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var circle = new KtShapes
@@ -65,13 +65,13 @@ panel.Controls.Add(circle);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-circle-light](/assets/images/screenshots/kt-shapes/shapes-circle-light.png?v=639236155924505683){ .light .snapshot} ![shapes-circle-dark](/assets/images/screenshots/kt-shapes/shapes-circle-dark.png?v=639236155924505683){.dark .snapshot}
+![shapes-circle-light](/assets/images/screenshots/kt-shapes/shapes-circle-light.png?v=639236286476781684){ .light .snapshot} ![shapes-circle-dark](/assets/images/screenshots/kt-shapes/shapes-circle-dark.png?v=639236286476781684){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-circle-light](/assets/images/screenshots/kt-shapes/shapes-circle-light.png?v=639236155924505683){  .snapshot}
+![shapes-circle-light](/assets/images/screenshots/kt-shapes/shapes-circle-light.png?v=639236286476770839){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-circle-dark](/assets/images/screenshots/kt-shapes/shapes-circle-dark.png?v=639236155924505683){ .snapshot}
+![shapes-circle-dark](/assets/images/screenshots/kt-shapes/shapes-circle-dark.png?v=639236286476770839){ .snapshot}
 
 :::
 :::
@@ -79,7 +79,7 @@ panel.Controls.Add(circle);
 ::: hero layout:split glow:true
 ## Oval (`Shapes.Oval`)
 Draws an ellipse that dynamically stretches to match rectangular control dimensions.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(150, 120);
 	
 var oval = new KtShapes
@@ -99,13 +99,13 @@ panel.Controls.Add(oval);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-oval-light](/assets/images/screenshots/kt-shapes/shapes-oval-light.png?v=639236155945199072){ .light .snapshot} ![shapes-oval-dark](/assets/images/screenshots/kt-shapes/shapes-oval-dark.png?v=639236155945199072){.dark .snapshot}
+![shapes-oval-light](/assets/images/screenshots/kt-shapes/shapes-oval-light.png?v=639236286497468316){ .light .snapshot} ![shapes-oval-dark](/assets/images/screenshots/kt-shapes/shapes-oval-dark.png?v=639236286497468316){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-oval-light](/assets/images/screenshots/kt-shapes/shapes-oval-light.png?v=639236155945189000){  .snapshot}
+![shapes-oval-light](/assets/images/screenshots/kt-shapes/shapes-oval-light.png?v=639236286497458317){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-oval-dark](/assets/images/screenshots/kt-shapes/shapes-oval-dark.png?v=639236155945189000){ .snapshot}
+![shapes-oval-dark](/assets/images/screenshots/kt-shapes/shapes-oval-dark.png?v=639236286497458317){ .snapshot}
 
 :::
 :::
@@ -113,7 +113,7 @@ panel.Controls.Add(oval);
 ::: hero layout:split glow:true
 ## Square (`Shapes.Square`)
 Draws an equilateral 4-sided box with centered geometry.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var square = new KtShapes
@@ -133,13 +133,13 @@ panel.Controls.Add(square);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-square-light](/assets/images/screenshots/kt-shapes/shapes-square-light.png?v=639236155965831128){ .light .snapshot} ![shapes-square-dark](/assets/images/screenshots/kt-shapes/shapes-square-dark.png?v=639236155965831128){.dark .snapshot}
+![shapes-square-light](/assets/images/screenshots/kt-shapes/shapes-square-light.png?v=639236286518250043){ .light .snapshot} ![shapes-square-dark](/assets/images/screenshots/kt-shapes/shapes-square-dark.png?v=639236286518250043){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-square-light](/assets/images/screenshots/kt-shapes/shapes-square-light.png?v=639236155965831128){  .snapshot}
+![shapes-square-light](/assets/images/screenshots/kt-shapes/shapes-square-light.png?v=639236286518250043){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-square-dark](/assets/images/screenshots/kt-shapes/shapes-square-dark.png?v=639236155965831128){ .snapshot}
+![shapes-square-dark](/assets/images/screenshots/kt-shapes/shapes-square-dark.png?v=639236286518250043){ .snapshot}
 
 :::
 :::
@@ -147,7 +147,7 @@ panel.Controls.Add(square);
 ::: hero layout:split glow:true
 ## Rectangle (`Shapes.Rectangle`)
 Draws a four-sided polygon scaled to custom width and height bounds.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(150, 120);
 	
 var rect = new KtShapes
@@ -167,13 +167,13 @@ panel.Controls.Add(rect);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-rectangle-light](/assets/images/screenshots/kt-shapes/shapes-rectangle-light.png?v=639236155986545299){ .light .snapshot} ![shapes-rectangle-dark](/assets/images/screenshots/kt-shapes/shapes-rectangle-dark.png?v=639236155986545299){.dark .snapshot}
+![shapes-rectangle-light](/assets/images/screenshots/kt-shapes/shapes-rectangle-light.png?v=639236286538948617){ .light .snapshot} ![shapes-rectangle-dark](/assets/images/screenshots/kt-shapes/shapes-rectangle-dark.png?v=639236286538948617){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-rectangle-light](/assets/images/screenshots/kt-shapes/shapes-rectangle-light.png?v=639236155986545299){  .snapshot}
+![shapes-rectangle-light](/assets/images/screenshots/kt-shapes/shapes-rectangle-light.png?v=639236286538948617){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-rectangle-dark](/assets/images/screenshots/kt-shapes/shapes-rectangle-dark.png?v=639236155986545299){ .snapshot}
+![shapes-rectangle-dark](/assets/images/screenshots/kt-shapes/shapes-rectangle-dark.png?v=639236286538948617){ .snapshot}
 
 :::
 :::
@@ -181,7 +181,7 @@ panel.Controls.Add(rect);
 ::: hero layout:split glow:true
 ## Line (`Shapes.Line`)
 Renders a vector stroke across the control's diagonal plane.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var line = new KtShapes
@@ -200,13 +200,13 @@ panel.Controls.Add(line);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-line-light](/assets/images/screenshots/kt-shapes/shapes-line-light.png?v=639236156007304796){ .light .snapshot} ![shapes-line-dark](/assets/images/screenshots/kt-shapes/shapes-line-dark.png?v=639236156007304796){.dark .snapshot}
+![shapes-line-light](/assets/images/screenshots/kt-shapes/shapes-line-light.png?v=639236286559570413){ .light .snapshot} ![shapes-line-dark](/assets/images/screenshots/kt-shapes/shapes-line-dark.png?v=639236286559570413){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-line-light](/assets/images/screenshots/kt-shapes/shapes-line-light.png?v=639236156007304796){  .snapshot}
+![shapes-line-light](/assets/images/screenshots/kt-shapes/shapes-line-light.png?v=639236286559570413){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-line-dark](/assets/images/screenshots/kt-shapes/shapes-line-dark.png?v=639236156007304796){ .snapshot}
+![shapes-line-dark](/assets/images/screenshots/kt-shapes/shapes-line-dark.png?v=639236286559570413){ .snapshot}
 
 :::
 :::
@@ -216,7 +216,7 @@ panel.Controls.Add(line);
 ::: hero layout:split glow:true
 ## Triangle (`Sides = 3`)
 Renders a 3-sided regular polygon shape with transparent fill to emphasize the border.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var triangle = new KtShapes
@@ -237,13 +237,13 @@ panel.Controls.Add(triangle);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-polygon-triangle-light](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-light.png?v=639236156029497969){ .light .snapshot} ![shapes-polygon-triangle-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-dark.png?v=639236156029497969){.dark .snapshot}
+![shapes-polygon-triangle-light](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-light.png?v=639236286581641020){ .light .snapshot} ![shapes-polygon-triangle-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-dark.png?v=639236286581641020){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-polygon-triangle-light](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-light.png?v=639236156029487659){  .snapshot}
+![shapes-polygon-triangle-light](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-light.png?v=639236286581631403){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-polygon-triangle-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-dark.png?v=639236156029487659){ .snapshot}
+![shapes-polygon-triangle-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-triangle-dark.png?v=639236286581631403){ .snapshot}
 
 :::
 :::
@@ -251,7 +251,7 @@ panel.Controls.Add(triangle);
 ::: hero layout:split glow:true
 ## Quadrilateral / Diamond (`Sides = 4`)
 Renders a 4-sided regular polygon shape with emphasized borders.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var quad = new KtShapes
@@ -272,13 +272,13 @@ panel.Controls.Add(quad);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-polygon-quad-light](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-light.png?v=639236156050405947){ .light .snapshot} ![shapes-polygon-quad-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-dark.png?v=639236156050405947){.dark .snapshot}
+![shapes-polygon-quad-light](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-light.png?v=639236286602317085){ .light .snapshot} ![shapes-polygon-quad-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-dark.png?v=639236286602317085){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-polygon-quad-light](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-light.png?v=639236156050405947){  .snapshot}
+![shapes-polygon-quad-light](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-light.png?v=639236286602317085){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-polygon-quad-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-dark.png?v=639236156050405947){ .snapshot}
+![shapes-polygon-quad-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-quad-dark.png?v=639236286602317085){ .snapshot}
 
 :::
 :::
@@ -286,7 +286,7 @@ panel.Controls.Add(quad);
 ::: hero layout:split glow:true
 ## Pentagon (`Sides = 5`)
 Renders a 5-sided regular polygon shape with emphasized borders.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var pentagon = new KtShapes
@@ -307,13 +307,13 @@ panel.Controls.Add(pentagon);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-polygon-pentagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-light.png?v=639236156071125305){ .light .snapshot} ![shapes-polygon-pentagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-dark.png?v=639236156071125305){.dark .snapshot}
+![shapes-polygon-pentagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-light.png?v=639236286622888726){ .light .snapshot} ![shapes-polygon-pentagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-dark.png?v=639236286622888726){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-polygon-pentagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-light.png?v=639236156071125305){  .snapshot}
+![shapes-polygon-pentagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-light.png?v=639236286622878767){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-polygon-pentagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-dark.png?v=639236156071125305){ .snapshot}
+![shapes-polygon-pentagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-pentagon-dark.png?v=639236286622878767){ .snapshot}
 
 :::
 :::
@@ -321,7 +321,7 @@ panel.Controls.Add(pentagon);
 ::: hero layout:split glow:true
 ## Hexagon (`Sides = 6`)
 Renders a 6-sided regular polygon shape with emphasized borders.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var hexagon = new KtShapes
@@ -342,13 +342,13 @@ panel.Controls.Add(hexagon);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-polygon-hexagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-light.png?v=639236156091722281){ .light .snapshot} ![shapes-polygon-hexagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-dark.png?v=639236156091722281){.dark .snapshot}
+![shapes-polygon-hexagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-light.png?v=639236286643764370){ .light .snapshot} ![shapes-polygon-hexagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-dark.png?v=639236286643764370){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-polygon-hexagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-light.png?v=639236156091706715){  .snapshot}
+![shapes-polygon-hexagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-light.png?v=639236286643764370){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-polygon-hexagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-dark.png?v=639236156091706715){ .snapshot}
+![shapes-polygon-hexagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-hexagon-dark.png?v=639236286643764370){ .snapshot}
 
 :::
 :::
@@ -356,7 +356,7 @@ panel.Controls.Add(hexagon);
 ::: hero layout:split glow:true
 ## Heptagon (`Sides = 7`)
 Renders a 7-sided regular polygon shape with emphasized borders.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var heptagon = new KtShapes
@@ -377,13 +377,13 @@ panel.Controls.Add(heptagon);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-polygon-heptagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-light.png?v=639236156112331690){ .light .snapshot} ![shapes-polygon-heptagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-dark.png?v=639236156112331690){.dark .snapshot}
+![shapes-polygon-heptagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-light.png?v=639236286664330279){ .light .snapshot} ![shapes-polygon-heptagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-dark.png?v=639236286664330279){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-polygon-heptagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-light.png?v=639236156112331690){  .snapshot}
+![shapes-polygon-heptagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-light.png?v=639236286664330279){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-polygon-heptagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-dark.png?v=639236156112331690){ .snapshot}
+![shapes-polygon-heptagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-heptagon-dark.png?v=639236286664330279){ .snapshot}
 
 :::
 :::
@@ -391,7 +391,7 @@ panel.Controls.Add(heptagon);
 ::: hero layout:split glow:true
 ## Octagon (`Sides = 8`)
 Renders an 8-sided regular polygon shape with emphasized borders.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var octagon = new KtShapes
@@ -412,13 +412,13 @@ panel.Controls.Add(octagon);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-polygon-octagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-light.png?v=639236156132866971){ .light .snapshot} ![shapes-polygon-octagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-dark.png?v=639236156132866971){.dark .snapshot}
+![shapes-polygon-octagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-light.png?v=639236286685252535){ .light .snapshot} ![shapes-polygon-octagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-dark.png?v=639236286685252535){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-polygon-octagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-light.png?v=639236156132866971){  .snapshot}
+![shapes-polygon-octagon-light](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-light.png?v=639236286685252535){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-polygon-octagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-dark.png?v=639236156132866971){ .snapshot}
+![shapes-polygon-octagon-dark](/assets/images/screenshots/kt-shapes/shapes-polygon-octagon-dark.png?v=639236286685252535){ .snapshot}
 
 :::
 :::
@@ -428,7 +428,7 @@ panel.Controls.Add(octagon);
 ::: hero layout:split glow:true
 ## Wireframe Outline (`FillShape = false`)
 Disables interior shape filling so only the border path is drawn.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var outline = new KtShapes
@@ -448,13 +448,13 @@ panel.Controls.Add(outline);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639236156154976993){ .light .snapshot} ![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639236156154976993){.dark .snapshot}
+![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639236286707513802){ .light .snapshot} ![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639236286707513802){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639236156154976993){  .snapshot}
+![shapes-outline-light](/assets/images/screenshots/kt-shapes/shapes-outline-light.png?v=639236286707503225){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639236156154976993){ .snapshot}
+![shapes-outline-dark](/assets/images/screenshots/kt-shapes/shapes-outline-dark.png?v=639236286707503225){ .snapshot}
 
 :::
 :::
@@ -464,7 +464,7 @@ panel.Controls.Add(outline);
 ::: hero layout:split glow:true
 ## Rotation (`Angle`)
 Applies a center-point rotation matrix using degree values (e.g. `Angle = 45`).
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var rotated = new KtShapes
@@ -486,13 +486,13 @@ panel.Controls.Add(rotated);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639236156177424587){ .light .snapshot} ![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639236156177424587){.dark .snapshot}
+![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639236286729675672){ .light .snapshot} ![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639236286729675672){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639236156177424587){  .snapshot}
+![shapes-rotation-light](/assets/images/screenshots/kt-shapes/shapes-rotation-light.png?v=639236286729675672){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639236156177424587){ .snapshot}
+![shapes-rotation-dark](/assets/images/screenshots/kt-shapes/shapes-rotation-dark.png?v=639236286729675672){ .snapshot}
 
 :::
 :::
@@ -507,7 +507,7 @@ panel.Controls.Add(rotated);
 ::: hero layout:split glow:true
 ## Heavy Border (`BorderThickness`)
 Scales the stroke width up to heavy lines using inset pen alignment.
-```csharp "🔴 🟡 🟢"
+```csharp "🔴 🟡 🟢" 
 var panel = CreateContainerPanel(120, 120);
 	
 var thick = new KtShapes
@@ -527,13 +527,13 @@ panel.Controls.Add(thick);
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639236156201279231){ .light .snapshot} ![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639236156201279231){.dark .snapshot}
+![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639236286753535914){ .light .snapshot} ![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639236286753535914){.dark .snapshot}
 
 == tab "Light" icon:sun
-![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639236156201279231){  .snapshot}
+![shapes-border-light](/assets/images/screenshots/kt-shapes/shapes-border-light.png?v=639236286753535914){  .snapshot}
 
 == tab "Dark" icon:moon
-![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639236156201279231){ .snapshot}
+![shapes-border-dark](/assets/images/screenshots/kt-shapes/shapes-border-dark.png?v=639236286753535914){ .snapshot}
 
 :::
 :::
