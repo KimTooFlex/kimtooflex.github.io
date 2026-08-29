@@ -7,7 +7,7 @@ path: /controls/kt-table/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:03:15.856Z"
+  generated_at: "2026-08-29T11:13:49.967Z"
 ---
 ---
 title: "KimTools / Controls / Table"

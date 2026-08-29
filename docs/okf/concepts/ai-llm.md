@@ -7,11 +7,12 @@ path: /ai-llm/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:03:15.508Z"
+  generated_at: "2026-08-29T11:13:49.474Z"
 ---
 ---
 title: "KimTools / AI & LLM Context"
 description: "Machine-readable documentation context for AI coding assistants and LLM agents."
+keywords: ["KimTools", "AI", "LLM", "llms.txt", "llms-full.txt", "Model Context Protocol", "MCP", "AI agents", "AI coding assistant", "RAG", "machine-readable documentation", "AI-ready", "LLM context", "ChatGPT", "Claude", "Anthropic", "OpenAI", "GPT", "Copilot", "GitHub Copilot", "Gemini", "Cursor", "Windsurf", "WinForms", ".NET", "C#"]
 layout: "full"
 toc: false
 ---
@@ -41,7 +42,9 @@ It follows the emerging `llms.txt` convention adopted across the developer tooli
 
 Point any LLM tool at the file directly:
 
-**https://kimtoo.net/docs/llms-full.txt**
+```
+https://kimtoo.net/docs/llms-full.txt
+```
 
 Paste the URL into Claude, ChatGPT, Cursor, or any tool that accepts a context URL, and the model will have full knowledge of KimTools controls, properties, and usage patterns for that session.
 
@@ -53,7 +56,9 @@ Yes.
 
 `llms.txt` provides a condensed index of page titles, descriptions, and links, useful when an agent only needs an overview before fetching specific pages.
 
-**https://kimtoo.net/docs/llms.txt**
+```
+https://kimtoo.net/docs/llms.txt
+```
 
 :::
 

@@ -7,7 +7,7 @@ path: /controls/kt-text-box/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:03:15.860Z"
+  generated_at: "2026-08-29T11:13:49.974Z"
 ---
 ---
 title: "KimTools / Controls / TextBox"
