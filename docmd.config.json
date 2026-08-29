@@ -55,8 +55,10 @@
           "title": "Requirements",
           "path": "/requirements.md"
         },
-        { "title": "AI / LLM",
-          "path": "/ai-llm.md" },
+        {
+          "title": "AI / LLM",
+          "path": "/ai-llm.md"
+        },
         {
           "title": "FAQ",
           "path": "/faq.md"

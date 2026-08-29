@@ -7,7 +7,7 @@ path: /controls/kt-radio-box/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:58:36.912Z"
+  generated_at: "2026-08-29T13:48:09.692Z"
 ---
 ---
 title: "KimTools / Controls / RadioBox"

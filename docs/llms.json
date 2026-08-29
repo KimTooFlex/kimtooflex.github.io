@@ -77,7 +77,7 @@
     {
       "title": "KimTools / Controls / Panel",
       "url": "https://kimtoo.net/controls/kt-panel/",
-      "description": "A modern, fully customizable panel control for WinForms. It is a container for grouping and styling related content.",
+      "description": "A modern, fully customizable panel control for WinForms. It acts as an advanced container for grouping and styling related content.",
       "priority": "medium"
     },
     {

@@ -7,7 +7,7 @@ path: /controls/kt-divider/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T11:58:36.796Z"
+  generated_at: "2026-08-29T13:48:09.534Z"
 ---
 ---
 title: "KimTools / Controls / Divider"
