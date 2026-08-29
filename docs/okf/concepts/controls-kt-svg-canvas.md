@@ -7,7 +7,7 @@ path: /controls/kt-svg-canvas/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T16:32:57.857Z"
+  generated_at: "2026-08-29T19:16:54.279Z"
 ---
 ---
 title: "KimTools / Controls / SvgCanvas"
@@ -28,7 +28,7 @@ This component is only available in the Premium version of KimTools.
 :::
 
 == side
-![kt-svg-canvas-light](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-light.png?v=639236224927089462){ .light .snapshot} ![kt-svg-canvas-dark](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-dark.png?v=639236224927089462){.dark .snapshot}
+![kt-svg-canvas-light](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-light.png?v=639236313805553950){ .light .snapshot} ![kt-svg-canvas-dark](/assets/images/screenshots/kt-svg-canvas/kt-svg-canvas-dark.png?v=639236313805553950){.dark .snapshot}
 :::
 
 ::: callout success
@@ -152,13 +152,13 @@ for (int i = 0; i < icons.Length; i++)
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639236224961373888){ .light .snapshot} ![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639236224961373888){.dark .snapshot}
+![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639236313839470581){ .light .snapshot} ![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639236313839470581){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639236224961364432){  .snapshot}
+![svg-icon-row-light](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-light.png?v=639236313839439945){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639236224961364432){ .snapshot}
+![svg-icon-row-dark](/assets/images/screenshots/kt-svg-canvas/svg-icon-row-dark.png?v=639236313839439945){ .snapshot}
 
 :::
 :::
@@ -179,65 +179,65 @@ var panel = new FlowLayoutPanel
 	
 int dim = 100;
 	
-var canvasSecondary = new KtSvgCanvas
+var canvasSearch = new KtSvgCanvas
 {
     Width = dim,
     Height = dim,
     Margin = new Padding(8),
-    BackColor = KtColor.SECONDARY % 20,
-    Color = KtColor.SECONDARY
+    BackColor = KtColor.SUCCESS % 20,
+    Color = KtColor.SUCCESS
 };
 	
-canvasSecondary.Templates.Add(new KtSvgTemplate(canvasSecondary.Templates)
+canvasSearch.Templates.Add(new KtSvgTemplate(canvasSearch.Templates)
 {
     Name = "search",
     Svg = IconSearch
 });
 	
-var canvasPrimary = new KtSvgCanvas
+var canvasCheck = new KtSvgCanvas
 {
     Width = dim,
     Height = dim,
     Margin = new Padding(8),
-    BackColor = KtColor.PRIMARY % 20,
-    Color = KtColor.PRIMARY
+    BackColor = KtColor.WARNING % 20,
+    Color = KtColor.WARNING
 };
 	
-canvasPrimary.Templates.Add(new KtSvgTemplate(canvasPrimary.Templates)
+canvasCheck.Templates.Add(new KtSvgTemplate(canvasCheck.Templates)
 {
     Name = "check",
     Svg = IconCheck
 });
 	
-var canvasAccent = new KtSvgCanvas
+var canvasHeart = new KtSvgCanvas
 {
     Width = dim,
     Height = dim,
     Margin = new Padding(8),
-    BackColor = KtColor.ACCENT % 20,
-    Color = KtColor.ACCENT
+    BackColor = KtColor.ERROR % 20,
+    Color = KtColor.ERROR
 };
 	
-canvasAccent.Templates.Add(new KtSvgTemplate(canvasAccent.Templates)
+canvasHeart.Templates.Add(new KtSvgTemplate(canvasHeart.Templates)
 {
     Name = "heart",
     Svg = IconHeart
 });
 	
-panel.Controls.Add(canvasSecondary);
-panel.Controls.Add(canvasPrimary);
-panel.Controls.Add(canvasAccent);
+panel.Controls.Add(canvasSearch);
+panel.Controls.Add(canvasCheck);
+panel.Controls.Add(canvasHeart);
 ```
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639236224985503901){ .light .snapshot} ![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639236224985503901){.dark .snapshot}
+![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639236313863176629){ .light .snapshot} ![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639236313863176629){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639236224985498514){  .snapshot}
+![svg-themed-light](/assets/images/screenshots/kt-svg-canvas/svg-themed-light.png?v=639236313863162004){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639236224985498514){ .snapshot}
+![svg-themed-dark](/assets/images/screenshots/kt-svg-canvas/svg-themed-dark.png?v=639236313863162004){ .snapshot}
 
 :::
 :::
@@ -279,13 +279,13 @@ canvas.Render();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639236225008430590){ .light .snapshot} ![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639236225008430590){.dark .snapshot}
+![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639236313884853474){ .light .snapshot} ![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639236313884853474){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639236225008430590){  .snapshot}
+![svg-model-bound-light](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-light.png?v=639236313884843381){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639236225008430590){ .snapshot}
+![svg-model-bound-dark](/assets/images/screenshots/kt-svg-canvas/svg-model-bound-dark.png?v=639236313884843381){ .snapshot}
 
 :::
 :::
@@ -326,13 +326,13 @@ canvas.Render();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639236225029646480){ .light .snapshot} ![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639236225029646480){.dark .snapshot}
+![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639236313907600308){ .light .snapshot} ![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639236313907600308){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639236225029622265){  .snapshot}
+![svg-conditional-light](/assets/images/screenshots/kt-svg-canvas/svg-conditional-light.png?v=639236313907569137){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639236225029622265){ .snapshot}
+![svg-conditional-dark](/assets/images/screenshots/kt-svg-canvas/svg-conditional-dark.png?v=639236313907569137){ .snapshot}
 
 :::
 :::
@@ -374,13 +374,13 @@ canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639236225052420415){ .light .snapshot} ![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639236225052420415){.dark .snapshot}
+![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639236313928904861){ .light .snapshot} ![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639236313928904861){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639236225052420415){  .snapshot}
+![svg-loop-light](/assets/images/screenshots/kt-svg-canvas/svg-loop-light.png?v=639236313928904861){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639236225052420415){ .snapshot}
+![svg-loop-dark](/assets/images/screenshots/kt-svg-canvas/svg-loop-dark.png?v=639236313928904861){ .snapshot}
 
 :::
 :::
@@ -431,13 +431,13 @@ canvas.Render();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639236225075110911){ .light .snapshot} ![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639236225075110911){.dark .snapshot}
+![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639236313950144028){ .light .snapshot} ![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639236313950144028){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639236225075105860){  .snapshot}
+![svg-show-hide-light](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-light.png?v=639236313950133689){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639236225075105860){ .snapshot}
+![svg-show-hide-dark](/assets/images/screenshots/kt-svg-canvas/svg-show-hide-dark.png?v=639236313950133689){ .snapshot}
 
 :::
 :::
@@ -481,13 +481,13 @@ canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639236225098019800){ .light .snapshot} ![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639236225098019800){.dark .snapshot}
+![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639236313972747807){ .light .snapshot} ![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639236313972747807){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639236225098019800){  .snapshot}
+![svg-processing-light](/assets/images/screenshots/kt-svg-canvas/svg-processing-light.png?v=639236313972747807){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639236225098019800){ .snapshot}
+![svg-processing-dark](/assets/images/screenshots/kt-svg-canvas/svg-processing-dark.png?v=639236313972747807){ .snapshot}
 
 :::
 :::
@@ -531,13 +531,13 @@ canvas.Render();
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639236225120518133){ .light .snapshot} ![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639236225120518133){.dark .snapshot}
+![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639236313995281231){ .light .snapshot} ![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639236313995281231){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639236225120518133){  .snapshot}
+![svg-css-smart-light](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-light.png?v=639236313995281231){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639236225120518133){ .snapshot}
+![svg-css-smart-dark](/assets/images/screenshots/kt-svg-canvas/svg-css-smart-dark.png?v=639236313995281231){ .snapshot}
 
 :::
 :::
@@ -572,13 +572,13 @@ canvas.Templates.Add(new KtSvgTemplate(canvas.Templates)
 == side
 ::: tabs
 == tab "Auto" icon:app-window
-![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639236225141429970){ .light .snapshot} ![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639236225141429970){.dark .snapshot}
+![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639236314017698754){ .light .snapshot} ![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639236314017698754){.dark .snapshot}
 
 == tab "Light" icon:sun
-![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639236225141429970){  .snapshot}
+![svg-advanced-light](/assets/images/screenshots/kt-svg-canvas/svg-advanced-light.png?v=639236314017698754){  .snapshot}
 
 == tab "Dark" icon:moon
-![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639236225141429970){ .snapshot}
+![svg-advanced-dark](/assets/images/screenshots/kt-svg-canvas/svg-advanced-dark.png?v=639236314017698754){ .snapshot}
 
 :::
 :::

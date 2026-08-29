@@ -7,7 +7,7 @@ path: /controls/kt-check-box/
 updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T16:32:57.712Z"
+  generated_at: "2026-08-29T19:16:54.034Z"
 ---
 ---
 title: "KimTools / Controls / CheckBox"
