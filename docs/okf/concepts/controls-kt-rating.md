@@ -7,7 +7,7 @@ path: /controls/kt-rating/
 updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T11:14:12.601Z"
+  generated_at: "2026-08-30T11:26:51.527Z"
 ---
 ---
 title: "KimTools / Controls / Rating"

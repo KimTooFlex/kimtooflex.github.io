@@ -7,7 +7,7 @@ path: /controls/kt-panel/
 updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T11:14:12.503Z"
+  generated_at: "2026-08-30T11:26:51.474Z"
 ---
 ---
 title: "KimTools / Controls / Panel"

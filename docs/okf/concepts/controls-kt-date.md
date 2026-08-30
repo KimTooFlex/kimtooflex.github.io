@@ -7,7 +7,7 @@ path: /controls/kt-date/
 updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T11:14:12.474Z"
+  generated_at: "2026-08-30T11:26:51.418Z"
 ---
 ---
 title: "KimTools / Controls / Date"

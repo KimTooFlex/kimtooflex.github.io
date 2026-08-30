@@ -7,7 +7,7 @@ path: /controls/kt-pop-over/
 updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T11:14:12.556Z"
+  generated_at: "2026-08-30T11:26:51.503Z"
 ---
 ---
 title: "KimTools / Controls / PopOver"

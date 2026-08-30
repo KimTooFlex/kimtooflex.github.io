@@ -7,7 +7,7 @@ path: /controls/kt-menu/
 updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T11:14:12.491Z"
+  generated_at: "2026-08-30T11:26:51.438Z"
 ---
 ---
 title: "KimTools / Controls / Menu"
