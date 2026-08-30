@@ -32,7 +32,11 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- Video pop-up -->
     <script src="https://unpkg.com/modal-video@2.4.6/js/modal-video.min.js"></script>
-    <!-- <script src="https://gumroad.com/js/gumroad.js"></script> -->
+
+    <!--Payment Processors-->
+<!--    <script src="https://gumroad.com/js/gumroad.js"></script>-->
+<!--    <script type="text/javascript" src="https://payhip.com/payhip.js"></script>-->
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-8RDLCMTFXX');</script>
@@ -426,15 +430,13 @@
                     </button>
 
                     <!-- CTA -->
-                    <a href="./docs" data-analytics="checkout-menu-button"
+                    <a href="#pricing" data-analytics="checkout-menu-button"
+                       @click="selectedTier = null"
                        class="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase px-4 py-2.5 rounded-lg transition-all"
                        style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
-                        Get Started
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2.5">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-dollar-sign-icon lucide-badge-dollar-sign"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                       Pricing
+                      </a>
 
                     <!-- Mobile hamburger -->
                     <button @click="mobileOpen = !mobileOpen"
@@ -526,30 +528,31 @@
                         </ul>
 
                         <!-- CTA row -->
-                        <div class="flex flex-wrap gap-4 animate-fade-up delay-400">
-                        
-                            <a href="https://checkout.kimtoo.net/?wanted=true&option=iEzCAUtpfn6l3wk4CVfadQ%3D%3D">
-                                <button type="button"
-                                        data-analytics="Kimtools Plus CTA"
-                                        class="w-full flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
-                                        style="background: linear-gradient(135deg, rgb(168, 85, 247), rgb(99, 102, 241));">
-                                    Get KimTools Plus
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                                </button>
-                            </a>
-                           
-                        
-                            <figure>
-                                <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
-                                   class="btn-secondary  grad-purple js-video-btn"
-                                   style="border-width: 0px;">
-                                    <svg class="text-slate-600 dark:text-white pr-1" xmlns="http://www.w3.org/2000/svg"
-                                         width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z" />
-                                    </svg> Watch Demo
+                        <div class="flex flex-col gap-4 animate-fade-up delay-400">
+
+                            <div class="flex flex-wrap gap-4">
+                                <a href="#pricing">
+                                    <button type="button"
+                                            data-analytics="Kimtools Plus CTA"
+                                            @click="selectPlusAndScroll"
+                                            class="flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
+                                            style="background: linear-gradient(135deg, rgb(168, 85, 247), rgb(99, 102, 241));">
+                                        Buy a PLUS license
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                                    </button>
                                 </a>
-                        
-                            </figure>
+
+
+                                <a href="https://kimtoo.net/docs"
+                                   data-analytics="Kimtools Docs CTA"
+                                   class="flex items-center justify-center gap-3 px-8 py-4 font-bold rounded-xl transition-all duration-200 active:scale-[0.97] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
+                                   :class="isDark ? 'bg-slate-200 text-black' : 'bg-slate-800 text-white'">
+                                    Read the docs
+                                 </a>
+                            </div>
+
+
+
                         </div>
                     </div>
 
@@ -593,10 +596,20 @@
                             </svg> -->
                             <b v-text="latestVersion"></b>
                         </div>
+                        <a  data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI"
+                           class="js-video-btn mt-5 inline-flex items-center gap-2 text-sm font-medium w-fit transition-colors"
+                           :class="isDark ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z" />
+                            </svg>
+                            Take the video tour
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 lucide lucide-corner-right-up-icon lucide-corner-right-up"><path d="m10 9 5-5 5 5"/><path d="M4 20h7a4 4 0 0 0 4-4V4"/></svg>
+                        </a>
                     </div>
 
                 </div>
             </div>
+
         </section>
         <!-- ═══════════════ TICKER / BADGES ═══════════════ -->
         <div class="py-4  border-y overflow-hidden border-slate-300 bg-slate-200 dark:border-slate-600 dark:bg-slate-700 ">
@@ -636,7 +649,7 @@
         </div>
 
         <!-- ═══════════════ PRICING ═══════════════-->
-        <section id="pricing" class="py-24 relative"  :class="isDark ? 'bg-[#0d0f14]' : 'bg-gray-50'">
+        <section id="pricing" class="py-24 relative" :class="isDark ? 'bg-[#0d0f14]' : 'bg-gray-50'">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div class="text-center mb-14">
@@ -652,40 +665,32 @@
                     </p>
                 </div>
 
-                <!-- Pricing cards -->
-                <div class="grid md:grid-cols-3 gap-6 items-stretch">
+                <!-- Pricing cards — always mounted, toggled via v-show so Payhip's script can bind on first load -->
+                <div v-show="!selectedTier" class="grid md:grid-cols-3 gap-6 items-stretch" style="transition: opacity 0.2s ease;">
                     <div v-for="tier in pricingTiers" :key="tier.key" class="relative rounded-2xl shadow-lg p-8 flex flex-col bg-slate-100 dark:bg-slate-800"
                          :class="[isDark ? 'card-dark' : 'card-light', tier.highlight ? 'md:-translate-y-3' : '']"
                          :style="tier.highlight ? 'border: 1.5px solid transparent; background-image: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(135deg,#3B82F6,#7C3AED); background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 24px 60px rgba(59,130,246,0.25);' : ''">
 
-                        <span v-if="tier.highlight" class="pill absolute -top-3 left-1/2 -translate-x-1/2 "
-                              style="border-width:5px; background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;"
-                              :style="`border-color:${isDark ? 'black':'white' }`">
-                            &nbsp;&nbsp; {{ tier.name }} &nbsp;&nbsp;
-                        </span>
+                <span v-if="tier.highlight" class="pill absolute -top-3 left-1/2 -translate-x-1/2 "
+                      style="border-width:5px; background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;"
+                      :style="`border-color:${isDark ? 'black':'white' }`">
+                    &nbsp;&nbsp; {{ tier.name }} &nbsp;&nbsp;
+                </span>
 
                         <div class="mb-6" :style="tier.highlight ? 'color:white;' : ''">
                             <br />
                             <div class="mt-2 w-full">
-                                <span v-if="tier.highlight"
-                                      class="absolute   left-1/2 -translate-x-1/2 "
-                                      style="  display:flex; align-items:center; gap:12px;">
-                                    <img style="height:80px"
-                                         :src="pricingTiers[0].logo"
-                                         :alt="pricingTiers[0].name" />
-
-                                    <img style="height:80px"
-                                         :src="pricingTiers[1].logo"
-                                         :alt="pricingTiers[1].name" />
-
-                                </span>
-                                <img v-else="tier.highlight" style="height:64px;float:right" :src="tier.logo" :alt="tier.name" />
+                        <span v-if="tier.highlight"
+                              class="absolute left-1/2 -translate-x-1/2 "
+                              style="display:flex; align-items:center; gap:12px;">
+                            <img style="height:80px" :src="pricingTiers[0].logo" :alt="pricingTiers[0].name" />
+                            <img style="height:80px" :src="pricingTiers[1].logo" :alt="pricingTiers[1].name" />
+                        </span>
+                                <img v-else style="height:64px;float:right" :src="tier.logo" :alt="tier.name" />
                             </div>
                             <span v-if="tier.highlight">
-                                <br/>
-                                <br/>
-                                <br/>
-                            </span>
+                        <br/><br/><br/>
+                    </span>
                             <h3 v-if="!tier.highlight" class="font-display text-xl font-bold mt-8"
                                 :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-900'">
                                 {{ tier.name }}
@@ -693,8 +698,7 @@
                         </div>
 
                         <div class="mb-6">
-                            <span class="font-display text-4xl font-bold"
-                                  :style="`color:${tier.color}`">${{ tier.price }}</span>
+                            <span class="font-display text-4xl font-bold" :style="`color:${tier.color}`">${{ tier.price }}</span>
                             <span class="text-xs font-mono opacity-50 ml-2"
                                   :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-600'">one-time</span>
                         </div>
@@ -712,37 +716,99 @@
                             </li>
                         </ul>
 
-                        <a :href="`https://checkout.kimtoo.net?wanted=true&option=${encodeURIComponent(tier.option)}`" data-analytics="pricing-tier-cta"
-                           class="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm transition-all active:scale-[0.98]"
-                           :style="tier.highlight
-                             ? 'background-color: white; color: #1E2939;'
-                             : `background: ${tier.color}18; color: ${tier.color}; border: 1.5px solid ${tier.color}44;`">
+                        <button @click="selectedTier = tier"
+                                class="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm transition-all active:scale-[0.98]"
+                                :style="tier.highlight
+                          ? 'background-color: white; color: #1E2939;'
+                          : `background: ${tier.color}18; color: ${tier.color}; border: 1.5px solid ${tier.color}44;`">
                             Get {{ tier.name }}
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                  fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Payment options panel — always mounted so Payhip's script binds the buttons on first page load -->
+                <div v-show="selectedTier" style="transition: opacity 0.2s ease;">
+                    <div class="relative max-w-md mx-auto rounded-2xl shadow-lg p-8 text-center bg-slate-100 dark:bg-slate-800"
+                         :class="isDark ? 'card-dark' : 'card-light'">
+
+                        <button @click="selectedTier = null"
+                                class="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center transition-colors"
+                                :class="isDark ? 'text-gray-400 hover:bg-white/10 hover:text-white' : 'text-gray-500 hover:bg-black/5 hover:text-gray-900'"
+                                aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M18 6L6 18M6 6l12 12" />
+                            </svg>
+                        </button>
+
+
+                    <h3 class="font-display text-2xl font-bold mb-1" :class="isDark ? 'text-white' : 'text-gray-900'">
+                        {{ selectedTier?.name }}
+                    </h3>
+                    <p class="text-sm opacity-60 mb-8" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        ${{ selectedTier?.price }} one-time — choose how to pay
+                    </p>
+
+                    <div class="flex flex-col gap-2">
+                        <a :href="`https://payhip.com/buy?s=1&variant_combination%5BiVNGX%5D=${encodeURIComponent(selectedTier?.payhip_variant ?? '')}&qty%5BiVNGX%5D=1&cart_links%5B%5D=iVNGX`"
+                           class="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl transition-all duration-200 active:scale-[0.98] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
+                           :class="isDark ? 'bg-slate-200' : 'bg-slate-800'">
+                            <svg width="20" height="15" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-3.000000, -6.000000)" :fill="isDark ? '#000000' : '#ffffff'" fill-rule="nonzero">
+                                        <path d="M8.27521338,12.5122653 C7.93003542,12.5122653 7.65021338,12.2324432 7.65021338,11.8872653 C7.65021338,11.5420873 7.93003542,11.2622653 8.27521338,11.2622653 L24.7879042,11.2622653 C25.5955939,11.2622653 26.25,11.9175905 26.25,12.7255368 L26.25,22.2867284 C26.25,23.0946748 25.5955939,23.75 24.7879042,23.75 L5.21231302,23.75 C4.40462325,23.75 3.75,23.0946748 3.75,22.2867397 L3.75,7.71327152 C3.75,6.90532518 4.40440608,6.25 5.21227212,6.25 L24.7880664,6.25552163 C25.5956079,6.25573147 26.25,6.91099507 26.25,7.71870362 L26.25,9.23577161 C26.25,9.58094958 25.9702675,9.86081168 25.6250895,9.86086112 C25.2799115,9.86091055 25.0000494,9.5811286 25,9.23595063 L24.9997827,7.71879313 C24.9997827,7.60083189 24.9046611,7.50555197 24.7877278,7.50552158 L5.21209583,7.49999998 C5.09515506,7.49999998 5,7.59528868 5,7.71326028 L5.00021718,22.2867284 C5.00021718,22.4047113 5.09537223,22.5 5.21231302,22.5 L24.7879042,22.5 C24.904845,22.5 25,22.4047113 25,22.2867284 L25,12.7255368 C25,12.607554 24.9048449,12.5122653 24.7879042,12.5122653 L8.27521338,12.5122653 Z" id="Stroke-1"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="text-sm font-semibold" :class="isDark ? 'text-black' : 'text-white'">Debit or Credit Card</span>
+                        </a>
+
+                        <a :href="`https://payhip.com/buy?s=1&variant_combination%5BiVNGX%5D=${encodeURIComponent(selectedTier?.payhip_variant ?? '')}&qty%5BiVNGX%5D=1&cart_links%5B%5D=iVNGX`"
+                           class="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl transition-all duration-200 active:scale-[0.98] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
+                           style="background-color:#FFC439;">
+                            <span class="text-sm font-semibold opacity-60" style="color:#000000;">Pay with</span>
+                            <img src="./images/paypal.webp" alt="PayPal" style="height:22px;width:auto;object-fit:contain;" />
+                        </a>
+
+                        <a :href="`https://checkout.kimtoo.net?wanted=true&option=${encodeURIComponent(selectedTier?.option ?? '')}`"
+                           data-analytics="pricing-tier-cta"
+                           class="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl transition-all duration-200 active:scale-[0.98] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
+                           style="background-color:#FF90E8;">
+                            <span class="text-sm font-semibold opacity-60" style="color:#000000;">Pay with</span>
+                            <img src="./images/gumroad.webp" alt="Gumroad" style="height:22px;width:auto;object-fit:contain;" />
                         </a>
                     </div>
+                        <button @click="selectedTier = null"
+                                class="mt-6 inline-flex items-center gap-1 text-sm opacity-60 hover:opacity-100 transition-opacity"
+                                :class="isDark ? 'text-white' : 'text-gray-900'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M19 12H5M12 19l-7-7 7-7" />
+                            </svg>
+                            Back to plans
+                        </button>
                 </div>
 
                 <!-- Shared feature checklist -->
                 <div class="mt-14 rounded-2xl p-8" :class="isDark ? 'card-dark' : 'card-light'">
-                    <p class="section-label mb-6 text-center opacity-60"
-                       :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                    <p class="section-label mb-6 text-center opacity-60" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
                         Included in every license
                     </p>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div v-for="feat in pricingFeatures" :key="feat"
                              class="flex items-center gap-2 text-xs font-mono"
                              :class="isDark ? 'text-gray-300' : 'text-gray-700'">
-                            <span class="w-5 h-5 rounded flex items-center justify-center flex-shrink-0"
-                                  style="background: #3B82F622; color: #3B82F6;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5" />
-                                </svg>
-                            </span>
+                    <span class="w-5 h-5 rounded flex items-center justify-center flex-shrink-0"
+                          style="background: #3B82F622; color: #3B82F6;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="3">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                    </span>
                             {{ feat }}
                         </div>
                     </div>
@@ -1288,6 +1354,9 @@
                 const query = ref('');
                 const limit = ref(8);
 
+                // script setup
+                const selectedTier = ref(null)
+
                 const banners = [
                     { text: `🎉 KimTools ${latest} is now live!`, url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
                     { text: '💥 Limited offer: Use code SDK26 for 50% DISCOUNT', url: 'https://checkout.kimtoo.net?wanted=true&code=SDK26', target: '_blank', cta: 'Claim Discount' },
@@ -1299,7 +1368,7 @@
                 const navLinks = [
 
                     { label: 'Documentation', href: './docs'  },
-                    { label: 'Pricing', href: '#pricing' },
+                    // { label: 'Pricing', href: '#pricing' },
                     { label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
                     { label: 'Themes & Templates', href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D', target: '_blank' },
                     { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms', target: '_blank' },
@@ -1343,6 +1412,7 @@
                 const pricingTiers = [
                     {
                         option: "kZvb1wvedojNu0twPUUhXg==",
+                        payhip_variant: "1788107980141",
                         key: 'framework',
                         emoji: '🟦',
                         logo: './images/dot-net-framework.webp',
@@ -1355,6 +1425,7 @@
                     },
                     {
                         option: "qX8IwOf2-BDYxK99l8XVhQ==",
+                        payhip_variant: "1788107943104",
                         key: 'core',
                         emoji: '🟪',
                         logo: './images/dot-net-core.webp',
@@ -1367,6 +1438,7 @@
                     },
                     {
                         option: "iEzCAUtpfn6l3wk4CVfadQ==",
+                        payhip_variant: "1788107902105",
                         key: 'plus',
                         emoji: '🟩',
                         name: 'PLUS',
@@ -1420,6 +1492,7 @@
                 const footerLinks = {
                     product: [
                         { label: 'Pricing', href: '#pricing' },
+                        { label: 'Become an Affiliate', href: 'https://kimtooflex.gumroad.com/affiliates' },
                         { label: 'Checkout', href: 'https://checkout.kimtoo.net', target: '_blank' },
                         { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms' },
                         { label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank' },
@@ -1445,7 +1518,13 @@
                     document.body.style.backgroundColor = isDark.value ? '#0d0f14' : '#ffffff';
                     document.body.style.color = isDark.value ? '#ffffff' : '#111827';
                 }
+                function selectPlusAndScroll() {
+                    const plusTier = pricingTiers.find(t => t.key === 'plus') // adjust the key match to whatever your Plus tier's actual key is
+                    if (!plusTier) return
 
+                    selectedTier.value = plusTier
+
+                }
                 async function fetchControls() {
                     try {
                         const res = await fetch('./docmd.config.json');
@@ -1492,12 +1571,12 @@
                 });
 
                 return {
-                    isDark, mobileOpen, query, limit,
+                    isDark,selectedTier, mobileOpen, query, limit,
                     currentBanner, navLinks, features, featColors,
                     stats, dotnetBadges, tickerBadges, controlGradients,
                     controls, filteredControls, footerLinks, latestVersion,
                     pricingTiers, pricingFeatures,
-                    toggleTheme,
+                    toggleTheme,selectPlusAndScroll,
                 };
             }
         }).mount('#app');
