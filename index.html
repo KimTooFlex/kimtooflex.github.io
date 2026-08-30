@@ -666,7 +666,7 @@
                     </p>
                 </div>
 
-                <!-- Pricing cards — always mounted, toggled via v-show so Payhip's script can bind on first load -->
+                <!-- Pricing cards - always mounted, toggled via v-show so Payhip's script can bind on first load -->
                 <div v-show="!selectedTier" class="grid md:grid-cols-3 gap-6 items-stretch" style="transition: opacity 0.2s ease;">
                     <div v-for="tier in pricingTiers" :key="tier.key" class="relative rounded-2xl shadow-lg p-8 flex flex-col bg-slate-100 dark:bg-slate-800"
                          :class="[isDark ? 'card-dark' : 'card-light', tier.highlight ? 'md:-translate-y-3' : '']"
@@ -734,7 +734,7 @@
                     </div>
                 </div>
 
-                <!-- Payment options panel — always mounted so Payhip's script binds the buttons on first page load -->
+                <!-- Payment options panel - always mounted so Payhip's script binds the buttons on first page load -->
                 <div v-show="selectedTier" style="transition: opacity 0.2s ease;">
                     <div class="relative max-w-md mx-auto rounded-2xl shadow-lg p-8 text-center bg-slate-100 dark:bg-slate-800"
                          :class="isDark ? 'card-dark' : 'card-light'">
@@ -750,11 +750,12 @@
                         </button>
 
 
-                    <h3 class="font-display text-2xl font-bold mb-1" :class="isDark ? 'text-white' : 'text-gray-900'">
-                        {{ selectedTier?.name }}
-                    </h3>
+                        <h3 class="font-display text-2xl font-bold mb-1" :class="isDark ? 'text-white' : 'text-gray-900'">
+                            KimTools for {{ selectedTier?.name }}
+                        </h3>
+
                     <p class="text-sm opacity-60 mb-8" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        ${{ selectedTier?.price }} one-time — choose how to pay
+                        ${{ selectedTier?.price }} one-time - choose how to pay
                     </p>
 
                     <div class="flex flex-col gap-2">
@@ -919,7 +920,7 @@
         <!--                     10 Essential Controls. <span class="grad-fire">Completely Free.</span> -->
         <!--                 </h3> -->
         <!--                 <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'"> -->
-        <!--                     <strong class="grad-green">KimTools Free Edition</strong> is here — a curated set of -->
+        <!--                     <strong class="grad-green">KimTools Free Edition</strong> is here - a curated set of -->
         <!--                     essential controls built with the same quality, performance, and modern design standards as -->
         <!--                     the PLUS+ suite. -->
         <!--                 </p> -->
@@ -1241,12 +1242,12 @@
                             Need something built? <span class="grad-fire">Let's talk.</span>
                         </h3>
                         <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            <strong class="grad-green">KimToo.net</strong> is available for freelance engagements —
+                            <strong class="grad-green">KimToo.net</strong> is available for freelance engagements -
                             custom WinForms controls, UI component libraries, licensing systems, or anything
                             in the .NET desktop space.
                         </p>
                         <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            Same craft that goes into KimTools — DPI-aware, theme-ready, production-grade.
+                            Same craft that goes into KimTools - DPI-aware, theme-ready, production-grade.
                             No hand-holding required on your end.
                         </p>
                         <div class="mt-10 w-full">
@@ -1449,7 +1450,7 @@
                         price: '37',
                         color: 'white',
                         targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+', '.NET Latest + Preview'],
-                        description: 'The ultimate developer license bundle — unlocks the full KimTools WinForms control suite across every supported WinForms target.',
+                        description: 'The ultimate developer license bundle - unlocks the full KimTools WinForms control suite across every supported WinForms target.',
                         highlight: true,
                     },
                 ];
