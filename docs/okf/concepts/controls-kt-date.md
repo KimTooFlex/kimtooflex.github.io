@@ -4,10 +4,10 @@ title: "KimTools / Controls / Date"
 description: "A modern, highly customizable Date Picker control for WinForms supporting custom icons, border radius, theme color styling, and alignment modes."
 source: "https://kimtoo.net/controls/kt-date/"
 path: /controls/kt-date/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.536Z"
+  generated_at: "2026-08-30T11:14:12.474Z"
 ---
 ---
 title: "KimTools / Controls / Date"

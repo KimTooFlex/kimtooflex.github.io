@@ -4,10 +4,10 @@ title: "KimTools / AI & LLM Context"
 description: "Machine-readable documentation context for AI coding assistants and LLM agents."
 source: "https://kimtoo.net/ai-llm/"
 path: /ai-llm/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.515Z"
+  generated_at: "2026-08-30T11:14:12.394Z"
 ---
 ---
 title: "KimTools / AI & LLM Context"

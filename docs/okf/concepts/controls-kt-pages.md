@@ -4,10 +4,10 @@ title: "KimTools / Controls / Pages"
 description: "An invisible tab-based navigation container for Modern WinForms that provides SPA-style routing, custom page transitions, navigation history, and design-time extenders."
 source: "https://kimtoo.net/controls/kt-pages/"
 path: /controls/kt-pages/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.543Z"
+  generated_at: "2026-08-30T11:14:12.495Z"
 ---
 ---
 title: "KimTools / Controls / Pages"

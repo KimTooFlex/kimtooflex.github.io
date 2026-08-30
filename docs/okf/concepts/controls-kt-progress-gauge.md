@@ -4,10 +4,10 @@ title: "KimTools / Controls / ProgressGauge"
 description: "An arc-based gauge meter with dual-range color support, automatic background generation, cap style control, and smooth value transitions."
 source: "https://kimtoo.net/controls/kt-progress-gauge/"
 path: /controls/kt-progress-gauge/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.591Z"
+  generated_at: "2026-08-30T11:14:12.563Z"
 ---
 ---
 title: "KimTools / Controls / ProgressGauge"

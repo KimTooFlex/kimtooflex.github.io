@@ -4,10 +4,10 @@ title: "KimTools / Brush"
 description: "Modern brush and color utilities for building consistent, theme-aware WinForms interfaces."
 source: "https://kimtoo.net/utilities/kt-brush/"
 path: /utilities/kt-brush/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.706Z"
+  generated_at: "2026-08-30T11:14:12.767Z"
 ---
 ---
 title: "KimTools / Brush"

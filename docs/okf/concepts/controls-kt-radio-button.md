@@ -4,10 +4,10 @@ title: "KimTools / Controls / RadioButton"
 description: "A themeable single-select control for WinForms, with independent checked and unchecked styling for background, border, icon and foreground."
 source: "https://kimtoo.net/controls/kt-radio-button/"
 path: /controls/kt-radio-button/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.618Z"
+  generated_at: "2026-08-30T11:14:12.598Z"
 ---
 ---
 title: "KimTools / Controls / RadioButton"

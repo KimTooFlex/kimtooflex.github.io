@@ -19,60 +19,103 @@ toc: false
     ![theme](/assets/images/ui-kit-light.png) { .size-large .light }
 :::
 
+# Why KimTools?
 
-# Why KimTools ?
+::: hero layout:split glow:true
+## Unlimited Projects
+Modern UI Toolkit for `{ .NET Framework & Core }`
 
-::: grids
+Build as many desktop applications as you need across legacy .NET Framework and modern .NET Core without limits.
 
-::: grid
-::: card "Unlimited Projects" icon:folder {.shadow} 
-Build as many desktop applications as you need.
+::: button "Learn More" /licensing.md icon:arrow-up-right {.primary}
 
-:::
-:::
-
-::: grid
-::: card "Unlimited Activations" icon:laptop
-
-Develop across your personal development machines.
-
-:::
+== side
+![Unlimited Projects](/assets/images/projects.webp) { .size-large }
 :::
 
-::: grid
-::: card "Royalty-Free" icon:package
+::: hero layout:split glow:true
+## Unlimited Activations
+Develop Across `{ All Your Devices }`
 
-Deploy applications without runtime royalties.
+Develop seamlessly across your personal workstations and development laptops with zero activation friction.
 
-:::
-:::
+::: button "Learn More" /requirements.md icon:arrow-up-right {.primary}
 
-::: grid
-::: card "Visual Designer" icon:layout
-
-Integrated WinForms Designer support and visual editors.
-
-:::
+== side
+![Unlimited Activations](/assets/images/activations.webp) { .size-large }
 :::
 
-::: grid
-::: card "Documentation" icon:book
+::: hero layout:split glow:true
+## Royalty-Free
+Deploy `{ Without Extra Costs }`
 
-Comprehensive guides, API documentation, and examples.
+Ship commercial applications to an infinite number of end-users with zero hidden runtime fees or royalties.
 
-:::
-:::
+::: button "Learn More" /licensing.md icon:arrow-up-right {.primary}
 
-::: grid
-::: card "Professional Themes" icon:palette
-
-Modern themes, semantic colors, and SVG icons.
-
-:::
+== side
+![Royalty Free](/assets/images/royalty.webp) { .size-large }
 :::
 
+::: hero layout:split glow:true
+## Visual Designers
+Low-Code `{ WYSIWYG Support }`
+
+Accelerate your application workflow using intuitive low-code visual designers and native WinForms property editors.
+
+[//]: # (::: button "Learn More" /docs/designers.md icon:arrow-up-right {.primary})
+
+== side
+![Visual Designers](/assets/images/designer.webp) { .size-large }
 :::
 
+::: hero layout:split glow:true
+## ~40 Controls & Components
+High Performance `{ UI Suite }`
+
+Access a rich suite of around 40 modern components engineered specifically for responsive WinForms interfaces.
+
+[//]: # (::: button "Explore Controls" /docs/controls.md icon:arrow-up-right {.primary})
+
+== side
+![Controls and Components](/assets/images/controls.webp) { .size-large }
+:::
+
+::: hero layout:split glow:true
+## 35 Modern Themes
+Inspired by `{ DaisyUI }`
+
+Instantly style your desktop applications with 35 light and dark themes designed out of the box.
+
+::: button "View Themes" /utilities/kt-themes.md icon:arrow-up-right {.primary}
+
+== side
+![Themes](/assets/images/themes.webp) { .size-large }
+:::
+
+::: hero layout:split glow:true
+## Semantic Colors
+Tailwind-Inspired `{ Palettes & KtColor }`
+
+Take control of your visual hierarchy with Tailwind colors, customizable variables, and native KtColor support.
+
+::: button "Explore Colors" /utilities/kt-color.md icon:arrow-up-right {.primary}
+
+== side
+![Semantic Colors](/assets/images/colors.webp) { .size-large }
+:::
+
+::: hero layout:split glow:true
+## Brushes & Shaders
+Minimal Code `{ Render Logic }`
+
+Custom rendering built for control vendors using KtBrush, clean SDKs, and minimal code footprint.
+
+::: button "Learn More" /utilities/kt-brush.md icon:arrow-up-right {.primary}
+
+== side
+![Brushes and Shaders](/assets/images/brushes.webp) { .size-large }
+:::
 
 
 # Supported Frameworks

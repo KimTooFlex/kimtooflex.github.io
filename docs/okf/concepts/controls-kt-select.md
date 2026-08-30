@@ -4,10 +4,10 @@ title: "KimTools / Controls / Select"
 description: "A fully owner-drawn dropdown with rounded corners, theme-aware colors, adjustable indicator styles, and independent styling for the closed surface and dropdown list items."
 source: "https://kimtoo.net/controls/kt-select/"
 path: /controls/kt-select/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.632Z"
+  generated_at: "2026-08-30T11:14:12.607Z"
 ---
 ---
 title: "KimTools / Controls / Select"

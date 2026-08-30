@@ -4,10 +4,10 @@ title: "KimTools / Controls / ProgressRadial"
 description: "A customizable circular progress indicator with gradient arcs, independent cap styles, sub/superscript annotations, and smooth animation support."
 source: "https://kimtoo.net/controls/kt-progress-radial/"
 path: /controls/kt-progress-radial/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.593Z"
+  generated_at: "2026-08-30T11:14:12.573Z"
 ---
 ---
 title: "KimTools / Controls / ProgressRadial"

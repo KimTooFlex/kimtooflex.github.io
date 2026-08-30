@@ -4,10 +4,10 @@ title: "KimTools / Controls / Button"
 description: "A modern, fully customizable button control for WinForms, with built-in icon, gradient, and border support."
 source: "https://kimtoo.net/controls/kt-button/"
 path: /controls/kt-button/
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T20:11:34.520Z"
+  generated_at: "2026-08-30T11:14:12.407Z"
 ---
 ---
 title: "KimTools / Controls / Button"
