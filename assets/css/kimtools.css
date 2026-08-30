@@ -515,6 +515,7 @@ html[data-theme="dark"] .sidebar-nav a[aria-current="page"] {
   backdrop-filter: blur(15px);
   padding-left: 25px; 
   zoom: 90%;
+  text-align: left;
 }
 
 .hero-content .hljs {

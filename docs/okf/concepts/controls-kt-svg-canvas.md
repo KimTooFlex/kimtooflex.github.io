@@ -7,7 +7,7 @@ path: /controls/kt-svg-canvas/
 updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T11:26:51.623Z"
+  generated_at: "2026-08-30T22:44:17.774Z"
 ---
 ---
 title: "KimTools / Controls / SvgCanvas"
