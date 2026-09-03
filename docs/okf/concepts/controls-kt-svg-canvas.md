@@ -4,10 +4,10 @@ title: "KimTools / Controls / SvgCanvas"
 description: "A high-performance SVG canvas with a full templating engine supporting model binding, loops, conditionals, show/hide, processing instructions, and CSS SmartFormat variables."
 source: "https://kimtoo.net/controls/kt-svg-canvas/"
 path: /controls/kt-svg-canvas/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.774Z"
+  generated_at: "2026-09-02T18:39:56.523Z"
 ---
 ---
 title: "KimTools / Controls / SvgCanvas"

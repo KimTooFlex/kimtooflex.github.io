@@ -4,10 +4,10 @@ title: "KimTools / Controls / Rating"
 description: "A customizable rating input with star, circle, and square shapes, independent color states for empty, hover, rated, and disabled, plus read-only and right-click-to-clear support."
 source: "https://kimtoo.net/controls/kt-rating/"
 path: /controls/kt-rating/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.732Z"
+  generated_at: "2026-09-02T18:39:56.454Z"
 ---
 ---
 title: "KimTools / Controls / Rating"

@@ -4,10 +4,10 @@ title: "KimTools / Controls / Spinner"
 description: "A customizable animated loading spinner with preset styles, dash patterns, cap shapes, speed control, and optional center text."
 source: "https://kimtoo.net/controls/kt-spinner/"
 path: /controls/kt-spinner/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.761Z"
+  generated_at: "2026-09-02T18:39:56.512Z"
 ---
 ---
 title: "KimTools / Controls / Spinner"

@@ -4,10 +4,10 @@ title: "KimTools / Controls / PictureBox"
 description: "A modern, customizable PictureBox control supporting rounded corners, custom border styles, image filters, and dynamic gradient/brush masking."
 source: "https://kimtoo.net/controls/kt-picture-box/"
 path: /controls/kt-picture-box/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.660Z"
+  generated_at: "2026-09-02T18:39:56.358Z"
 ---
 ---
 title: "KimTools / Controls / PictureBox"

@@ -4,10 +4,10 @@ title: "KimTools / Controls / CheckButton"
 description: "A themeable multi-select toggle control for WinForms, with independent Checked/Unchecked styling for background, border and icon."
 source: "https://kimtoo.net/controls/kt-check-button/"
 path: /controls/kt-check-button/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.511Z"
+  generated_at: "2026-09-02T18:39:56.233Z"
 ---
 ---
 title: "KimTools / Controls / CheckButton"

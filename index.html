@@ -2,31 +2,31 @@
 <html lang="en" class="dark">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>KimTools – Modern UI Framework for WinForms C# | VB.NET</title>
     <meta name="description"
-          content="KimTools Modern UI Framework Framework & SDK for WinForms C# | VB.NET. 35+ controls, 35+ themes, 10,000+ SVG icons. .NET 4.6 through .NET 9." />
+          content="KimTools Modern UI Framework Framework & SDK for WinForms C# | VB.NET. 35+ controls, 35+ themes, 10,000+ SVG icons. .NET 4.6 through .NET 9."/>
     <meta name="keywords"
-          content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools" />
-    <meta name="author" content="Kimutai Kipngetich" />
-    <meta property="og:title" content="KimTools – Modern WinForms UI Framework" />
+          content="WinForms UI, C# WinForms controls, VB.NET WinForms, .NET UI framework, WinForms theming, modern WinForms, KimTools"/>
+    <meta name="author" content="Kimutai Kipngetich"/>
+    <meta property="og:title" content="KimTools – Modern WinForms UI Framework"/>
     <meta property="og:description"
-          content="Upgrade WinForms apps with modern UI controls, theming, and high performance." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kimtoo.net" />
-    <meta property="og:image" content="https://kimtoo.net/images/top_img.png" />
-    <link rel="icon" href="favicon.ico" />
+          content="Upgrade WinForms apps with modern UI controls, theming, and high performance."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://kimtoo.net"/>
+    <meta property="og:image" content="https://kimtoo.net/images/top_img.png"/>
+    <link rel="icon" href="favicon.ico"/>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts: JetBrains Mono + Syne -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="stylesheet" href="https://unpkg.com/modal-video@2.4.6/css/modal-video.min.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet" />
+          rel="stylesheet"/>
 
     <!-- Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -34,12 +34,19 @@
     <script src="https://unpkg.com/modal-video@2.4.6/js/modal-video.min.js"></script>
 
     <!--Payment Processors-->
-<!--    <script src="https://gumroad.com/js/gumroad.js"></script>-->
-<!--    <script type="text/javascript" src="https://payhip.com/payhip.js"></script>-->
+    <!--    <script src="https://gumroad.com/js/gumroad.js"></script>-->
+    <!--    <script type="text/javascript" src="https://payhip.com/payhip.js"></script>-->
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-8RDLCMTFXX');</script>
+    <script>window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-8RDLCMTFXX');</script>
 
     <script>
         tailwind.config = {
@@ -51,7 +58,7 @@
                         display: ['Syne', 'sans-serif'],
                     },
                     colors: {
-                        green: { 400: '#60a5fa' },
+                        green: {400: '#60a5fa'},
                         kt: {
                             green: '#3B82F6',
                             cyan: '#7C3AED',
@@ -69,12 +76,12 @@
                     },
                     keyframes: {
                         fadeUp: {
-                            '0%': { opacity: '0', transform: 'translateY(24px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                            '0%': {opacity: '0', transform: 'translateY(24px)'},
+                            '100%': {opacity: '1', transform: 'translateY(0)'},
                         },
                         marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-50%)' },
+                            '0%': {transform: 'translateX(0%)'},
+                            '100%': {transform: 'translateX(-50%)'},
                         }
                     }
                 }
@@ -176,9 +183,9 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-            .control-card:hover {
-                transform: translateY(-4px);
-            }
+        .control-card:hover {
+            transform: translateY(-4px);
+        }
 
         /* Scrollbar */
         ::-webkit-scrollbar {
@@ -204,9 +211,9 @@
             white-space: nowrap;
         }
 
-            .ticker-inner.animate {
-                animation: marquee 30s linear infinite;
-            }
+        .ticker-inner.animate {
+            animation: marquee 30s linear infinite;
+        }
 
         /* Banner bar gradient */
         .banner-bar {
@@ -242,20 +249,20 @@
             padding-bottom: 2px;
         }
 
-            .nav-link::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -2px;
-                width: 0;
-                height: 2px;
-                background: #3B82F6;
-                transition: width 0.25s ease;
-            }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #3B82F6;
+            transition: width 0.25s ease;
+        }
 
-            .nav-link:hover::after {
-                width: 100%;
-            }
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
         /* Feature pill */
         .pill {
@@ -285,10 +292,10 @@
             transition: opacity 0.2s, transform 0.2s;
         }
 
-            .btn-primary:hover {
-                opacity: 0.88;
-                transform: translateY(-2px);
-            }
+        .btn-primary:hover {
+            opacity: 0.88;
+            transform: translateY(-2px);
+        }
 
         .btn-secondary {
             display: inline-flex;
@@ -306,9 +313,9 @@
         }
 
 
-            .btn-secondary:hover {
-                transform: translateY(-2px);
-            }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
 
         /* Sections */
         .section-label {
@@ -339,15 +346,15 @@
             overflow: hidden;
         }
 
-            .mobile-menu.closed {
-                max-height: 0;
-                opacity: 0;
-            }
+        .mobile-menu.closed {
+            max-height: 0;
+            opacity: 0;
+        }
 
-            .mobile-menu.open {
-                max-height: 500px;
-                opacity: 1;
-            }
+        .mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
 
         /* Animation delays */
         .delay-100 {
@@ -375,302 +382,327 @@
 
 <body class="transition-colors duration-300">
 
-    <div id="app">
+<div id="app">
 
-        <!-- ═══════════════ ANNOUNCEMENT BAR ═══════════════ -->
-        <div id="sticky-threshold" class="banner-bar text-white text-xs py-2 px-4 text-center relative"
-             style="font-family:'JetBrains Mono',monospace;">
-            <span class="opacity-80">{{ currentBanner.text }}</span>
-            &nbsp;
-            <a :href="currentBanner.url" :target="currentBanner.target"
-               class="inline-block bg-white text-black font-bold text-xs px-3 py-1 rounded-full hover:opacity-80 transition-opacity ml-2">
-                {{ currentBanner.cta }}
+    <!-- ═══════════════ ANNOUNCEMENT BAR ═══════════════ -->
+    <div id="sticky-threshold" class="banner-bar text-white text-xs py-2 px-4 text-center relative"
+         style="font-family:'JetBrains Mono',monospace;">
+        <span class="opacity-80">{{ currentBanner.text }}</span>
+        &nbsp;
+        <a :href="currentBanner.url" :target="currentBanner.target"
+           class="inline-block bg-white text-black font-bold text-xs px-3 py-1 rounded-full hover:opacity-80 transition-opacity ml-2">
+            {{ currentBanner.cta }}
+        </a>
+    </div>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav id="main-nav" class="sticky top-0 z-50 border-b shadow-md"
+         :class="isDark ? 'bg-slate-800/95 border-white/[0.1]' : 'bg-white/95 border-black/[0.07]'"
+         style="backdrop-filter: blur(16px);">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+            <!-- Logo -->
+            <a href="./" class="flex items-center gap-3">
+                <img :src="isDark ? './images/logo-wide-dark.webp' :  './images/logo-wide.webp'" alt="KimTools"
+                     class="py-2" style="height:50px;"/>
+                <!-- <span class="font-display  font-bold text-[24px] text-slate-800 dark:text-slate-300" >Kim<span class="grad-green">Tools</span></span> -->
             </a>
-        </div>
 
-        <!-- ═══════════════ NAVBAR ═══════════════ -->
-        <nav id="main-nav" class="sticky top-0 z-50 border-b shadow-md"
-             :class="isDark ? 'bg-slate-800/95 border-white/[0.1]' : 'bg-white/95 border-black/[0.07]'"
-             style="backdrop-filter: blur(16px);">
-            <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-7">
+                <a v-for="link in navLinks" :key="link.label" :href="link.href" :target="link.target || '_self'"
+                   class="nav-link text-xs font-bold tracking-widest uppercase transition-colors"
+                   :class="isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'">
+                    {{ link.label }}
+                </a>
+            </div>
 
-                <!-- Logo -->
-                <a href="./" class="flex items-center gap-3">
-                    <img :src="isDark ? './images/logo-wide-dark.webp' :  './images/logo-wide.webp'" alt="KimTools"
-                         class="py-2" style="height:50px;" />
-                    <!-- <span class="font-display  font-bold text-[24px] text-slate-800 dark:text-slate-300" >Kim<span class="grad-green">Tools</span></span> -->
+            <!-- Right: theme toggle + CTA -->
+            <div class="flex items-center gap-3">
+                <!-- Theme toggle -->
+                <button @click="toggleTheme"
+                        class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
+                        :class="isDark ? 'text-gray-400 hover:text-white hover:bg-white/10' : 'text-gray-500 hover:text-gray-900 hover:bg-black/10'">
+                    <svg v-show="isDark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                    </svg>
+                    <svg v-hide="isDark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                    </svg>
+                </button>
+
+                <!-- Menu CTA -->
+                <a href="#pricing" data-analytics="checkout-menu-button"
+                   @click="selectedTier = null"
+                   class="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase px-4 py-2.5 rounded-lg transition-all"
+                   style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-badge-dollar-sign-icon lucide-badge-dollar-sign">
+                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                        <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+                        <path d="M12 18V6"/>
+                    </svg>
+                    Pricing
                 </a>
 
-                <!-- Desktop Nav -->
-                <div class="hidden md:flex items-center gap-7">
-                    <a v-for="link in navLinks" :key="link.label" :href="link.href" :target="link.target || '_self'"
-                       class="nav-link text-xs font-bold tracking-widest uppercase transition-colors"
-                       :class="isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'">
-                        {{ link.label }}
-                    </a>
-                </div>
-
-                <!-- Right: theme toggle + CTA -->
-                <div class="flex items-center gap-3">
-                    <!-- Theme toggle -->
-                    <button @click="toggleTheme"
-                            class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
-                            :class="isDark ? 'text-gray-400 hover:text-white hover:bg-white/10' : 'text-gray-500 hover:text-gray-900 hover:bg-black/10'">
-                        <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                             stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="4" />
-                            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-                        </svg>
-                        <svg v-else xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                             stroke-linejoin="round">
-                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                        </svg>
-                    </button>
-
-                    <!-- CTA -->
-                    <a href="#pricing" data-analytics="checkout-menu-button"
-                       @click="selectedTier = null"
-                       class="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase px-4 py-2.5 rounded-lg transition-all"
-                       style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-dollar-sign-icon lucide-badge-dollar-sign"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
-                       Pricing
-                      </a>
-
-                    <!-- Mobile hamburger -->
-                    <button @click="mobileOpen = !mobileOpen"
-                            class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center"
-                            :class="isDark ? 'text-gray-400 hover:bg-white/10' : 'text-gray-600 hover:bg-black/10'">
-                        <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 6L6 18M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
+                <!-- Mobile hamburger -->
+                <button @click="mobileOpen = !mobileOpen"
+                        class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center"
+                        :class="isDark ? 'text-gray-400 hover:bg-white/10' : 'text-gray-600 hover:bg-black/10'">
+                    <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
             </div>
+        </div>
 
-            <!-- Mobile menu -->
-            <div class="mobile-menu md:hidden px-6 pb-4" :class="mobileOpen ? 'open' : 'closed'"
-                 :style="isDark ? 'border-top: 1px solid rgba(255,255,255,0.06)' : 'border-top: 1px solid rgba(0,0,0,0.07)'">
-                <div class="flex flex-col gap-4 pt-4">
-                    <a v-for="link in navLinks" :key="link.label" :href="link.href" :target="link.target || '_self'"
-                       class="text-xs font-bold tracking-widest uppercase"
-                       :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        {{ link.label }}
-                    </a>
-                    <a href="#pricing"
-                       class="btn-primary text-center justify-center mt-2">Pricing</a>
-                </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu md:hidden px-6 pb-4" :class="mobileOpen ? 'open' : 'closed'"
+             :style="isDark ? 'border-top: 1px solid rgba(255,255,255,0.06)' : 'border-top: 1px solid rgba(0,0,0,0.07)'">
+            <div class="flex flex-col gap-4 pt-4">
+                <a v-for="link in navLinks" :key="link.label" :href="link.href" :target="link.target || '_self'"
+                   class="text-xs font-bold tracking-widest uppercase"
+                   :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                    {{ link.label }}
+                </a>
+                <a href="#pricing"
+                   class="btn-primary text-center justify-center mt-2">Pricing</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- ═══════════════ HERO ═══════════════ -->
-        <section class="relative overflow-hidden grid-bg min-h-[92vh] flex items-center"
-                 :class="isDark ? '' : 'bg-gray-50'">
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="relative overflow-hidden grid-bg min-h-[92vh] flex items-center"
+             :class="isDark ? '' : 'bg-gray-50'">
 
-            <!-- Glow orbs -->
-            <div class="hero-glow w-[600px] h-[600px] bg-kt-green top-[-200px] left-[-200px]"></div>
-            <div class="hero-glow w-[500px] h-[500px] bg-kt-cyan bottom-[-100px] right-[-100px]"></div>
-            <div class="hero-glow w-[300px] h-[300px] bg-kt-purple top-[40%] left-[40%]"></div>
+        <!-- Glow orbs -->
+        <div class="hero-glow w-[600px] h-[600px] bg-kt-green top-[-200px] left-[-200px]"></div>
+        <div class="hero-glow w-[500px] h-[500px] bg-kt-cyan bottom-[-100px] right-[-100px]"></div>
+        <div class="hero-glow w-[300px] h-[300px] bg-kt-purple top-[40%] left-[40%]"></div>
 
-            <div class="max-w-7xl mx-auto px-6 py-24 w-full relative z-10">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="max-w-7xl mx-auto px-6 py-24 w-full relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-                    <!-- Left: Text -->
-                    <div>
-                        <!-- Label -->
-                        <div class="flex items-center gap-3 mb-6 animate-fade-up">
+                <!-- Left: Text -->
+                <div>
+                    <!-- Label -->
+                    <div class="flex items-center gap-3 mb-6 animate-fade-up">
                             <span class="pill" style="background: rgba(59,130,246,0.12); color: #3B82F6;">
                                 For WinForms
                                 Developers
                             </span>
-                            <span class="text-xs opacity-50 font-mono">
+                        <span class="text-xs opacity-50 font-mono">
                                 //&nbsp;<span v-text="latestVersion"></span>
                                 LTS
                             </span>
-                        </div>
+                    </div>
 
-                        <!-- Headline -->
-                        <h1 class="font-display font-800 leading-tight mb-6 animate-fade-up delay-100"
-                            :class="isDark ? 'text-white' : 'text-gray-900'"
-                            style="font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -0.02em;">
-                            Modern <span class="grad-green">UI
-                            Framework </span>for<br />
-                            <span class="font-mono" style="font-size:0.85em; opacity: 0.7;">{ <span class="font-bold">.NET</span> <span class="grad-fire font-bold">WinForms</span> }</span>
-                        </h1>
+                    <!-- Headline -->
+                    <h1 class="font-display font-800 leading-tight mb-6 animate-fade-up delay-100"
+                        :class="isDark ? 'text-white' : 'text-gray-900'"
+                        style="font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -0.02em;">
+                        Modern <span class="grad-green">UI
+                            Framework </span>for<br/>
+                        <span class="font-mono" style="font-size:0.85em; opacity: 0.7;">{ <span
+                                class="font-bold">.NET</span> <span class="grad-fire font-bold">WinForms</span> }</span>
+                    </h1>
 
-                        <!-- Subtext -->
-                        <p class="mb-8 leading-relaxed text-sm animate-fade-up delay-200"
-                           :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            An elegant suite of intuitive <span class="grad-purple font-bold">UI controls</span>,
-                            components, and libraries <br> perfectly polished to
-                            deliver an efficient, aesthetically pleasing Apps and world-class <span class="grad-fire font-bold">developer experience</span>.
-                        </p>
+                    <!-- Subtext -->
+                    <p class="mb-8 leading-relaxed text-sm animate-fade-up delay-200"
+                       :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        An elegant suite of intuitive <span class="grad-purple font-bold">UI controls</span>,
+                        components, and libraries <br> perfectly polished to
+                        deliver an efficient, aesthetically pleasing Apps and world-class <span
+                            class="grad-fire font-bold">developer experience</span>.
+                    </p>
 
-                        <!-- Feature list -->
-                        <ul class="space-y-2.5 mb-10 animate-fade-up delay-300">
-                            <li v-for="(feat, i) in features" :key="feat"
-                                class="flex items-center gap-3 text-sm font-mono">
+                    <!-- Feature list -->
+                    <ul class="space-y-2.5 mb-10 animate-fade-up delay-300">
+                        <li v-for="(feat, i) in features" :key="feat"
+                            class="flex items-center gap-3 text-sm font-mono">
                                 <span class="w-5 h-5 rounded flex items-center justify-center flex-shrink-0"
                                       :style="`background: ${featColors[i % featColors.length]}22; color: ${featColors[i % featColors.length]};`">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                          fill="none" stroke="currentColor" stroke-width="3">
-                                        <path d="M20 6L9 17l-5-5" />
+                                        <path d="M20 6L9 17l-5-5"/>
                                     </svg>
                                 </span>
-                                <span :class="isDark ? 'text-gray-300' : 'text-gray-700'">{{ feat }}</span>
-                            </li>
-                        </ul>
+                            <span :class="isDark ? 'text-gray-300' : 'text-gray-700'">{{ feat }}</span>
+                        </li>
+                    </ul>
 
-                        <!-- CTA row -->
-                        <div class="flex flex-col gap-4 animate-fade-up delay-400">
+                    <!-- CTA row -->
+                    <div class="flex flex-col gap-4 animate-fade-up delay-400">
 
-                            <div class="flex flex-wrap gap-4">
-                                <a href="#pricing">
-                                    <button type="button"
-                                            data-analytics="Kimtools Plus CTA"
-                                            @click="selectPlusAndScroll"
-                                            class="flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
-                                            style="background: linear-gradient(135deg, rgb(168, 85, 247), rgb(99, 102, 241));">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key-icon lucide-key"><path d="m2 21 9.6-9.6"/><path d="m7.5 15.5 2.3 2.3a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0L4 19"/><circle cx="15.5" cy="7.5" r="5.5"/></svg>
-                                        Get a PLUS license
-                                    </button>
-                                </a>
-
-
-                                <a href="https://kimtoo.net/docs"
-                                   data-analytics="Kimtools Docs CTA"
-                                   class="flex items-center justify-center gap-3 px-8 py-4 font-bold rounded-xl transition-all duration-200 active:scale-[0.97] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
-                                   :class="isDark ? 'bg-slate-200 text-black' : 'bg-slate-800 text-white'">
-                                    Read the docs
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                                </a>
-                            </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#pricing">
+                                <button type="button"
+                                        data-analytics="Kimtools Plus CTA"
+                                        @click="selectPlusAndScroll"
+                                        class="flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
+                                        style="background: linear-gradient(135deg, rgb(168, 85, 247), rgb(99, 102, 241));">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                         fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round" class="lucide lucide-key-icon lucide-key">
+                                        <path d="m2 21 9.6-9.6"/>
+                                        <path d="m7.5 15.5 2.3 2.3a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0L4 19"/>
+                                        <circle cx="15.5" cy="7.5" r="5.5"/>
+                                    </svg>
+                                    Get a PLUS license
+                                </button>
+                            </a>
 
 
-
+                            <a href="https://kimtoo.net/docs"
+                               data-analytics="Kimtools Docs CTA"
+                               class="flex items-center justify-center gap-3 px-8 py-4 font-bold rounded-xl transition-all duration-200 active:scale-[0.97] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
+                               :class="isDark ? 'bg-slate-200 text-black' : 'bg-slate-800 text-white'">
+                                Read the docs
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
                         </div>
+
+
                     </div>
-
-                    <!-- Right: Hero image -->
-                    <div class="relative animate-fade-up delay-300">
-                        <!-- Glowing frame -->
-                        <div class="relative rounded-2xl overflow-hidden"
-                             style="box-shadow: 0 0 0 1px rgba(59,130,246,0.15), 0 32px 80px rgba(222, 192, 192, 0.6);">
-                            <div class="absolute inset-0 rounded-2xl"
-                                 style="background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(124,58,237,0.04)); z-index:1; pointer-events:none;">
-                            </div>
-                            <figure>
-                                <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
-                                   class="block group js-video-btn">
-                                    <img :src="isDark? './images/ui-kit-dark.png':'./images/ui-kit-light.png'"
-                                           alt="KimTools UI Kit"
-                                         class="w-full rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]" />
-                                    <!-- Play overlay -->
-                                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
-                                         style="background: rgba(0,0,0,0.4); border-radius: 16px;">
-                                        <div class="w-16 h-16 rounded-full flex items-center justify-center"
-                                             style="background: linear-gradient(135deg,#3B82F6,#7C3AED);">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                 viewBox="0 0 24 24" fill="#0a0d0f">
-                                                <path d="M8 5.14v14l11-7z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                            </figure>
-                        </div>
-                        <!-- Corner tag -->
-                        <div class="absolute  animate-bounce -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-mono font-bold w-fit"
-                             style="z-index: 999; background: linear-gradient(135deg,#FF6B35,#9811A6,#00AFAF); color: white; transform: rotate(3deg);">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="currentColor"
-                                class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path
-                                    d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
-                            </svg> -->
-                            <b v-text="latestVersion"></b>
-                        </div>
-                        <a  data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI"
-                           class="js-video-btn mt-5 inline-flex items-center gap-2 text-sm font-medium w-fit transition-colors"
-                           :class="isDark ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z" />
-                            </svg>
-                            Take the video tour
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4 lucide lucide-corner-right-up-icon lucide-corner-right-up"><path d="m10 9 5-5 5 5"/><path d="M4 20h7a4 4 0 0 0 4-4V4"/></svg>
-                        </a>
-                    </div>
-
                 </div>
-            </div>
 
-        </section>
-        <!-- ═══════════════ TICKER / BADGES ═══════════════ -->
-        <div class="py-4  border-y overflow-hidden border-slate-300 bg-slate-200 dark:border-slate-600 dark:bg-slate-700 ">
-            <div class="ticker-wrap ">
-                <div class="ticker-inner  animate">
+                <!-- Right: Hero image -->
+                <div class="relative animate-fade-up delay-300">
+                    <!-- Glowing frame -->
+                    <div class="relative rounded-2xl overflow-hidden"
+                         style="box-shadow: 0 0 0 1px rgba(59,130,246,0.15), 0 32px 80px rgba(222, 192, 192, 0.6);">
+                        <div class="absolute inset-0 rounded-2xl"
+                             style="background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(124,58,237,0.04)); z-index:1; pointer-events:none;">
+                        </div>
+                        <figure>
+                            <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI?t=0"
+                               class="block group js-video-btn">
+                                <img :src="isDark? './images/ui-kit-dark.png':'./images/ui-kit-light.png'"
+                                     alt="KimTools UI Kit"
+                                     class="w-full rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"/>
+                                <!-- Play overlay -->
+                                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                                     style="background: rgba(0,0,0,0.4); border-radius: 16px;">
+                                    <div class="w-16 h-16 rounded-full flex items-center justify-center"
+                                         style="background: linear-gradient(135deg,#3B82F6,#7C3AED);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="#0a0d0f">
+                                            <path d="M8 5.14v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- Corner tag -->
+                    <div class="absolute  animate-bounce -top-3 -right-3 px-3 py-1 rounded-lg text-xs font-mono font-bold w-fit"
+                         style="z-index: 999; background: linear-gradient(135deg,#FF6B35,#9811A6,#00AFAF); color: white; transform: rotate(3deg);">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
+                        </svg> -->
+                        <b v-text="latestVersion"></b>
+                    </div>
+                    <a data-video-id='UgHwt2fzvmI' href="https://www.youtube.com/watch?v=UgHwt2fzvmI"
+                       class="js-video-btn mt-5 inline-flex items-center gap-2 text-sm font-medium w-fit transition-colors"
+                       :class="isDark ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                             fill="currentColor">
+                            <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z"/>
+                        </svg>
+                        Take the video tour
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="mb-4 lucide lucide-corner-right-up-icon lucide-corner-right-up">
+                            <path d="m10 9 5-5 5 5"/>
+                            <path d="M4 20h7a4 4 0 0 0 4-4V4"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- ═══════════════ TICKER / BADGES ═══════════════ -->
+    <div class="py-4  border-y overflow-hidden border-slate-300 bg-slate-200 dark:border-slate-600 dark:bg-slate-700 ">
+        <div class="ticker-wrap ">
+            <div class="ticker-inner  animate">
                     <span v-for="badge in [...tickerBadges, ...tickerBadges]" :key="badge + Math.random()"
                           class="inline-flex items-center gap-2 px-6 text-xs font-mono opacity-60 whitespace-nowrap"
                           :class="isDark ? 'text-slate-400' : 'text-slate-600'">
                         <span :style="`color: ${badge.color}`">▸</span>
                         {{ badge.text }}
                     </span>
-                </div>
             </div>
         </div>
+    </div>
 
-        <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
-        <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <div class="flex gap-4 mb-8  justify-center">
-                    <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80" />
-                    <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded" />
-                </div>
+    <!-- ═══════════════ COMPATIBILITY BADGES ═══════════════ -->
+    <div class="py-10 border-y" :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="flex gap-4 mb-8  justify-center">
+                <img src="./images/cs.png" alt="C#" class="h-10 w-auto opacity-80"/>
+                <img src="./images/vb.jpg" alt="VB.NET" class="h-10 w-auto opacity-80 rounded"/>
+            </div>
 
-                <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
-                    <b class="grad-purple"> .NET</b>
-                    Compatibility
-                </p>
-                <div class="flex flex-wrap justify-center gap-2">
+            <p class="section-label mb-6 opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                <b class="grad-purple"> .NET</b>
+                Compatibility
+            </p>
+            <div class="flex flex-wrap justify-center gap-2">
                     <span v-for="badge in dotnetBadges" :key="badge.text" class="pill text-xs font-mono"
                           :style="`background: ${badge.color}18; color: ${badge.color}; border: 1px solid ${badge.color}33;`">
                         {{ badge.text }}
                     </span>
-                </div>
-
-
             </div>
+
+
         </div>
+    </div>
 
-        <!-- ═══════════════ PRICING ═══════════════-->
-        <section id="pricing" class="py-24 relative" :class="isDark ? 'bg-[#0d0f14]' : 'bg-gray-50'">
-            <div class="max-w-7xl mx-auto px-6">
+    <!-- ═══════════════ PRICING ═══════════════-->
+    <section id="pricing" class="py-24 relative" :class="isDark ? 'bg-[#0d0f14]' : 'bg-gray-50'">
+        <div class="max-w-7xl mx-auto px-6">
 
-                <div class="text-center mb-14">
-                    <p class="section-label mb-4" style="color: #3B82F6;">Pricing</p>
-                    <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
-                        Simple, <span class="grad-green">lifetime</span> licensing
-                    </h2>
-                    <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        One-time purchase, no subscriptions.
-                        <br/>
-                        Pick the target that matches your stack or grab <b>{{pricingTiers[2].name}}</b>
-                        for everything.
-                    </p>
-                </div>
+            <div class="text-center mb-14">
+                <p class="section-label mb-4" style="color: #3B82F6;">Pricing</p>
+                <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
+                    Simple, <span class="grad-green">lifetime</span> licensing
+                </h2>
+                <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                    One-time purchase, no subscriptions.
+                    <br/>
+                    Pick the target that matches your stack or grab <b>{{pricingTiers[2].name}}</b>
+                    for everything.
+                </p>
+            </div>
 
-                <!-- Pricing cards - always mounted, toggled via v-show so Payhip's script can bind on first load -->
-                <div v-show="!selectedTier" class="grid md:grid-cols-3 gap-6 items-stretch" style="transition: opacity 0.2s ease;">
-                    <div v-for="tier in pricingTiers" :key="tier.key" class="relative rounded-2xl shadow-lg p-8 flex flex-col bg-slate-100 dark:bg-slate-800"
-                         :class="[isDark ? 'card-dark' : 'card-light', tier.highlight ? 'md:-translate-y-3' : '']"
-                         :style="tier.highlight ? 'border: 1.5px solid transparent; background-image: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(135deg,#3B82F6,#7C3AED); background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 24px 60px rgba(59,130,246,0.25);' : ''">
+            <!-- Pricing cards - always mounted, toggled via v-show so Payhip's script can bind on first load -->
+            <div v-show="!selectedTier" class="grid md:grid-cols-3 gap-6 items-stretch"
+                 style="transition: opacity 0.2s ease;">
+                <div v-for="tier in pricingTiers"
+                     :key="tier.key"
+                     class="relative rounded-2xl shadow-lg p-8 flex flex-col bg-slate-100 dark:bg-slate-800"
+                     :class="[isDark ? 'card-dark' : 'card-light', tier.highlight ? 'md:-translate-y-3' : '']"
+                     :style="tier.highlight ? 'border: 1.5px solid transparent; background-image: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(135deg,#3B82F6,#7C3AED); background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 24px 60px rgba(59,130,246,0.25);' : ''">
 
                 <span v-if="tier.highlight" class="pill absolute -top-3 left-1/2 -translate-x-1/2 "
                       style="border-width:5px; background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;"
@@ -678,45 +710,47 @@
                     &nbsp;&nbsp; {{ tier.name }} &nbsp;&nbsp;
                 </span>
 
-                        <div class="mb-6" :style="tier.highlight ? 'color:white;' : ''">
-                            <br />
-                            <div class="mt-2 w-full">
+                    <div class="mb-6" :style="tier.highlight ? 'color:white;' : ''">
+                        <br/>
+                        <div class="mt-2 w-full">
                         <span v-if="tier.highlight"
                               class="absolute left-1/2 -translate-x-1/2 "
                               style="display:flex; align-items:center; gap:12px;">
-                            <img style="height:80px" :src="pricingTiers[0].logo" :alt="pricingTiers[0].name" />
-                            <img style="height:80px" :src="pricingTiers[1].logo" :alt="pricingTiers[1].name" />
+                            <img style="height:80px" :src="pricingTiers[0].logo" :alt="pricingTiers[0].name"/>
+                            <img style="height:80px" :src="pricingTiers[1].logo" :alt="pricingTiers[1].name"/>
                         </span>
-                                <img v-else style="height:64px;float:right" :src="tier.logo" :alt="tier.name" />
-                            </div>
-                            <span v-if="tier.highlight">
-                        <br/><br/><br/>
-                    </span>
-                            <h3 v-if="!tier.highlight" class="font-display text-xl font-bold mt-8"
-                                :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-900'">
-                                {{ tier.name }}
-                            </h3>
+                            <img v-else style="height:64px;float:right" :src="tier.logo" :alt="tier.name"/>
                         </div>
+                        <span v-if="tier.highlight">
+                          <br/><br/><br/>
+                       </span>
+                        <h3 v-if="!tier.highlight" class="font-display text-xl font-bold mt-8"
+                            :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-900'">
+                            {{ tier.name }}
+                        </h3>
+                    </div>
 
-                        <div class="mb-6">
-                            <span class="font-display text-4xl font-bold" :style="`color:${tier.color}`">${{ tier.price }}</span>
-                            <span class="text-xs font-mono opacity-50 ml-2"
-                                  :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-600'">one-time</span>
-                        </div>
+                    <div class="mb-6">
+                        <span class="font-display text-4xl font-bold" :style="`color:${tier.color}`">${{ tier.price
+                            }}</span>
+                        <span class="text-xs font-mono opacity-50 ml-2"
+                              :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-600'">one-time</span>
+                    </div>
 
-                        <p class="text-sm leading-relaxed mb-6 opacity-60" :class="isDark || tier.highlight  ? 'text-white' : 'text-black'">
-                            {{ tier.description }}
-                        </p>
+                    <p class="text-sm leading-relaxed mb-6 opacity-60"
+                       :class="isDark || tier.highlight  ? 'text-white' : 'text-black'">
+                        {{ tier.description }}
+                    </p>
 
-                        <ul class="space-y-2 mb-8">
-                            <li v-for="target in tier.targets" :key="target"
-                                class="flex items-center gap-2 text-xs font-mono opacity-80"
-                                :class="isDark || tier.highlight ? 'text-white' : 'text-black'">
-                                <span :style="`color:${tier.color}`">●</span>
-                                {{ target }}
-                            </li>
-                        </ul>
-                        <a href="#pricing">
+                    <ul class="space-y-2 mb-8">
+                        <li v-for="target in tier.targets" :key="target"
+                            class="flex items-center gap-2 text-xs font-mono opacity-80"
+                            :class="isDark || tier.highlight ? 'text-white' : 'text-black'">
+                            <span :style="`color:${tier.color}`">●</span>
+                            {{ target }}
+                        </li>
+                    </ul>
+                    <a href="#pricing">
 
                         <button @click="selectedTier = tier"
                                 class="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm transition-all active:scale-[0.98]"
@@ -726,74 +760,149 @@
                             Get {{ tier.name }} License
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                  fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
                         </button>
                     </a>
-                    </div>
                 </div>
+            </div>
 
-                <!-- Payment options panel - always mounted so Payhip's script binds the buttons on first page load -->
-                <div v-show="selectedTier" style="transition: opacity 0.2s ease;">
-                    <div class="relative max-w-md mx-auto rounded-2xl shadow-lg p-8 text-center bg-slate-100 dark:bg-slate-800"
-                         :class="isDark ? 'card-dark' : 'card-light'">
+            <!-- Payment options panel - always mounted so Payhip's script binds the buttons on first page load -->
+            <div v-show="selectedTier" style="transition: opacity 0.2s ease;">
+                <div class="relative max-w-md mx-auto rounded-2xl shadow-lg p-8 text-center bg-slate-100 dark:bg-slate-800"
+                     :class="isDark ? 'card-dark' : 'card-light'">
 
-                        <button @click="selectedTier = null"
-                                class="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center transition-colors"
-                                :class="isDark ? 'text-gray-400 hover:bg-white/10 hover:text-white' : 'text-gray-500 hover:bg-black/5 hover:text-gray-900'"
-                                aria-label="Close">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M18 6L6 18M6 6l12 12" />
-                            </svg>
-                        </button>
+                    <button @click="selectedTier = null"
+                            class="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center transition-colors"
+                            :class="isDark ? 'text-gray-400 bg-white/10 hover:bg-white/20 hover:text-white' : 'text-gray-500 bg-black/5 hover:bg-black/10 hover:text-gray-900'"
+                            aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M18 6L6 18M6 6l12 12"/>
+                        </svg>
+                    </button>
 
 
-                        <h3 class="font-display text-2xl font-bold mb-1" :class="isDark ? 'text-white' : 'text-gray-900'">
-                            KimTools {{ selectedTier?.name }} License
-                        </h3>
+                    <!--                    <h4 class="font-display text-2xl font-bold mb-1" :class="isDark ? 'text-white' : 'text-gray-900'">-->
+                    <!--                        KimTools for {{ selectedTier?.name }}-->
+                    <!--                    </h4>-->
 
-                    <p class="text-sm opacity-60 mb-8" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        ${{ selectedTier?.price }} one-time - choose how to pay
+                    <div class="mb-6">
+                        <br/>
+                        <div class="pb-10  w-full" style="margin-top: -100px;">
+                        <span v-if="selectedTier?.highlight"
+                              class="absolute left-1/2 -translate-x-1/2 "
+                              style="display:flex; align-items:center; gap:12px;">
+                            <img style="height:80px" :src="pricingTiers[0].logo" :alt="pricingTiers[0].name"/>
+                            <img style="height:80px" :src="pricingTiers[1].logo" :alt="pricingTiers[1].name"/>
+                        </span>
+                            <img v-else style="height:80px;" class="absolute left-1/2 -translate-x-1/2 "
+                                 :src="selectedTier?.logo" :alt="selectedTier?.name"/>
+                        </div>
+
+                        <!--                        <h3 v-if="!selectedTier?.highlight" class="font-display text-xl font-bold mt-8"-->
+                        <!--                            :class="isDark || selectedTier?.highlight  ? 'text-white' : 'text-gray-900'">-->
+                        <!--                            {{ selectedTier?.name }}-->
+                        <!--                        </h3>-->
+
+                    </div>
+                    <div class="mb-6">
+                        <span class="font-display text-4xl font-bold grad-green">
+                            ${{ selectedTier?.price }}
+                        </span>
+                        <span class="text-xs font-mono opacity-50 ml-2"
+                              :class="isDark ? 'text-gray-400' : 'text-gray-600'">one-time</span>
+                    </div>
+                    <br>
+                    <p class="text-sm opacity-60 my-5" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        choose how to pay
                     </p>
 
-                    <div class="flex flex-col gap-2">
-                        <a :href="`https://buy.polar.sh/${encodeURIComponent(selectedTier?.polar_variant ?? '')}?theme=${(isDark ? 'dark':'light')}`"
-                           class="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl transition-all duration-200 active:scale-[0.98] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
-                           style="background-color:#646EDE;">
-                            <span class="text-sm font-semibold opacity-60" style="color:white;">Pay with</span>
-                            <img src="./images/stripe.png" alt="Stripe" style="height:22px;width:auto;object-fit:contain;" />
-                        </a>
+                    <div class="flex flex-col gap-3 max-w-md mx-auto">
+                        <!-- Divider -->
+                        <div class="relative my-1 flex items-center justify-center">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-indigo-500/20 dark:border-slate-400/20"></div>
+                            </div>
+                            <span class="relative   px-3 text-[11px] uppercase tracking-wider text-neutral-400">
+                                     <span class="px-2 opacity-70 py-0.5 text-[10px] font-semibold tracking-wide uppercase bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-300 rounded-full">
+                                         Recommended
+                                     </span>
+                            </span>
+                        </div>
+                        <!-- Primary Option: PayPal -->
 
                         <a :href="`https://payhip.com/buy?s=1&variant_combination%5BiVNGX%5D=${encodeURIComponent(selectedTier?.payhip_variant ?? '')}&qty%5BiVNGX%5D=1&cart_links%5B%5D=iVNGX`"
-                           class="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl transition-all duration-200 active:scale-[0.98] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
-                           style="background-color:#FFC439;">
-                            <span class="text-sm font-semibold opacity-60" style="color:#000000;">Pay with</span>
-                            <img src="./images/paypal.webp" alt="PayPal" style="height:22px;width:auto;object-fit:contain;" />
+                           class="group  relative w-full flex items-center justify-between p-4 rounded-xl shadow-sm border hover:border-2  border-slate-500/20   hover:border-yellow-500/30   bg-yellow-500/10  dark:bg-gradient-to-r dark:from-yellow-500/10 dark:to-slate-950 transition-all duration-200 active:scale-[0.98] hover:border-yellow-500  hover:shadow-md hover:-translate-y-0.5">
+                            <div class="flex flex-col items-start gap-1 ">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-bold text-neutral-900 dark:text-white">🔵 <span class="text-yellow-950/60 dark:text-yellow-100/60">Pay with</span> <strong>PayPal</strong> </span>
+                               </div>
+                                <span class="text-xs text-neutral-500 dark:text-neutral-400 opacity-80" style="text-align: left; zoom:85%; padding-left: 32px"><span class="opacity-70">Powered by</span> <strong>Payhip.com</strong></span>
+                            </div>
+                            <img src="./images/paypal.webp" alt="PayPal"
+                                 class="h-5 w-auto object-contain  dark:brightness-150 transition-all duration-200"/>
                         </a>
 
-                        <a :href="`https://checkout.kimtoo.net?wanted=true&option=${encodeURIComponent(selectedTier?.gumroad_variant ?? '')}`"
-                           data-analytics="pricing-tier-cta"
-                           class="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl transition-all duration-200 active:scale-[0.98] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
-                           style="background-color:#FF90E8;">
-                            <span class="text-sm font-semibold opacity-60" style="color:#000000;">Pay with</span>
-                            <img src="./images/gumroad.webp" alt="Gumroad" style="height:22px;width:auto;object-fit:contain;" />
+                        <!-- Primary Option: Stripe / Credit Card -->
+                        <a :href="`https://buy.polar.sh/${encodeURIComponent(selectedTier?.polar_variant ?? '')}?theme=${(isDark ? 'dark':'light')}`"
+                           class="group relative w-full flex items-center justify-between p-4 rounded-xl shadow-sm border hover:border-2  border-slate-500/20  bg-indigo-500/10 dark:bg-gradient-to-r dark:from-indigo-500/10 dark:to-slate-950 transition-all duration-200 active:scale-[0.98] hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-md hover:-translate-y-0.5">
+                            <div class="flex flex-col items-start gap-1">
+                                <div class="flex gap-2">
+                                    <span class="text-sm font-bold text-neutral-900 dark:text-white">🟣 <span class="text-indigo-950/60 dark:text-indigo-100/60">Pay with</span> Stripe</span>
+                                </div>
+                                <span class="text-xs text-neutral-500 dark:text-neutral-400" style="text-align: left; zoom:90%; padding-left: 32px"><span class="opacity-70">Powered by</span> <strong>Polar.sh </strong> </span>
+                            </div>
+                            <img src="./images/stripe.webp" alt="Stripe"
+                                 class="h-6 w-auto object-contain dark:brightness-150 transition-all duration-200"/>
                         </a>
+
+                        <br>
+                        <!-- Divider -->
+                        <div class="relative my-1 flex items-center justify-center">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-dashed border-slate-500/20 dark:border-slate-400/20"></div>
+                            </div>
+                            <span class="relative   px-3 text-[11px] uppercase tracking-wider text-neutral-400">
+                                     <span class="px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase  bg-slate-100 text-slate-800/30 dark:bg-slate-800 dark:text-slate-300/30 rounded-full">
+                                         Or Alternative
+                                     </span>
+                            </span>
+                        </div>
+
+                        <!--   Alternative: Gumroad -->
+
+
+                        <a :href="`https://kimtooflex.gumroad.com/l/kimtools?referrer=${encodeURIComponent('https://kimtoo.net')}&wanted=true&option=${encodeURIComponent(selectedTier?.gumroad_variant ?? '')}`"
+                           class="group relative w-full flex items-center justify-between p-4 rounded-xl shadow-sm  opacity-60 hover:opacity-100  hover:border-2  hover:border-solid  border-pink-500/30 bg-pink-500/10 dark:bg-gradient-to-r dark:from-pink-500/10 dark:to-slate-950 transition-all duration-200 active:scale-[0.98] hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-md hover:-translate-y-0.5">
+                            <div class="flex flex-col items-start gap-1">
+                                <div class="flex gap-2">
+                                    <span class="text-sm font-bold text-neutral-900 dark:text-white">
+                                        <span class="text-sm font-bold text-neutral-900 dark:text-white"><span v-if="isDark">⚪</span><span v-else>⚫</span> <span class="text-sky-950/60 dark:text-sky-100/60">Pay with</span> </span> Gumroad</span>
+                                </div>
+                             </div>
+                            <img src="./images/gumroad.webp" alt="Stripe"
+                                 class="h-6 w-auto object-contain"/>
+                        </a>
+
+                        <br/>
+
                     </div>
-                        <button @click="selectedTier = null"
-                                class="mt-6 inline-flex items-center gap-1 text-sm opacity-60 hover:opacity-100 transition-opacity"
-                                :class="isDark ? 'text-white' : 'text-gray-900'">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M19 12H5M12 19l-7-7 7-7" />
-                            </svg>
-                            Back to plans
-                        </button>
+                    <button @click="selectedTier = null"
+                            class="mt-6 inline-flex items-center gap-1 text-sm opacity-60 hover:opacity-100 transition-opacity"
+                            :class="isDark ? 'text-white' : 'text-gray-900'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Back / Cancel
+                    </button>
                 </div>
 
                 <!-- Shared feature checklist -->
                 <div class="mt-14 rounded-2xl p-8" :class="isDark ? 'card-dark' : 'card-light'">
-                    <p class="section-label mb-6 text-center opacity-60" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                    <p class="section-label mb-6 text-center opacity-60"
+                       :class="isDark ? 'text-gray-300' : 'text-gray-700'">
                         Included in every license
                     </p>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -804,7 +913,7 @@
                           style="background: #3B82F622; color: #3B82F6;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                              fill="none" stroke="currentColor" stroke-width="3">
-                            <path d="M20 6L9 17l-5-5" />
+                            <path d="M20 6L9 17l-5-5"/>
                         </svg>
                     </span>
                             {{ feat }}
@@ -817,794 +926,826 @@
                 </p>
 
             </div>
-        </section>
+    </section>
 
-        <!-- ═══════════════ CONTROLS SECTION ═══════════════ -->
-        <section id="components " class="py-24 grid-bg ">
-            <div class="max-w-7xl mx-auto px-6 shadow-xl bg-white dark:bg-slate-800  rounded-3xl"
-                 :class="isDark ? 'card-dark' : 'card-light'" style="padding: 50px;">
+    <!-- ═══════════════ CONTROLS SECTION ═══════════════ -->
+    <section id="components " class="py-24 grid-bg ">
+        <div class="max-w-7xl mx-auto px-6 shadow-xl bg-white dark:bg-slate-800  rounded-3xl"
+             :class="isDark ? 'card-dark' : 'card-light'" style="padding: 50px;">
 
-                <div class="text-center mb-14">
-                    <p class="section-label mb-4" style="color: #7C3AED;">UI Components</p>
-                    <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
-                        WinForms <span class="grad-green">Controls</span> &amp; Components
-                    </h2>
-                    <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        By marrying a Tailwind-inspired architecture with high-fidelity rendering, we've replaced the
-                        exhausting grind of manual styling with the pure joy of low-code creation.
-                    </p>
-                </div>
+            <div class="text-center mb-14">
+                <p class="section-label mb-4" style="color: #7C3AED;">UI Components</p>
+                <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
+                    WinForms <span class="grad-green">Controls</span> &amp; Components
+                </h2>
+                <p class="text-sm max-w-xl mx-auto" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                    By marrying a Tailwind-inspired architecture with high-fidelity rendering, we've replaced the
+                    exhausting grind of manual styling with the pure joy of low-code creation.
+                </p>
+            </div>
 
-                <!-- Search -->
-                <div class="flex items-center justify-between mb-8 gap-4">
-                    <div class="relative flex-1 max-w-sm">
-                        <input v-model="query" type="text" placeholder="Search..."
-                               class="w-full rounded-lg px-4 py-3 pl-10 text-sm font-mono outline-none transition-all"
-                               :class="isDark
+            <!-- Search -->
+            <div class="flex items-center justify-between mb-8 gap-4">
+                <div class="relative flex-1 max-w-sm">
+                    <input v-model="query" type="text" placeholder="Search..."
+                           class="w-full rounded-lg px-4 py-3 pl-10 text-sm font-mono outline-none transition-all"
+                           :class="isDark
                              ? 'bg-white/[0.05] border border-white/10 text-white placeholder-white/30 focus:border-kt-green/50'
-                             : 'bg-black/[0.04] border border-black/[0.09] text-gray-900 placeholder-gray-400 focus:border-kt-green/60'" />
-                        <svg class="absolute left-3 top-3.5 opacity-40" xmlns="http://www.w3.org/2000/svg" width="16"
-                             height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                        </svg>
-                    </div>
-                    <span class="text-xs font-mono opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                             : 'bg-black/[0.04] border border-black/[0.09] text-gray-900 placeholder-gray-400 focus:border-kt-green/60'"/>
+                    <svg class="absolute left-3 top-3.5 opacity-40" xmlns="http://www.w3.org/2000/svg" width="16"
+                         height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </div>
+                <span class="text-xs font-mono opacity-50" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
                         {{ filteredControls.length }}<span class="opacity-50">/{{ controls.length }}</span> controls
                     </span>
-                </div>
+            </div>
 
-                <!-- Cards grid -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <template v-for="(control, i) in filteredControls.slice(0, limit)" :key="control.name">
-                        <a :href="'./docs/'+control.category+'/' + control.slug"
-                           class="control-card group"
-                           :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
-                            <div class="aspect-video overflow-hidden p-5 rounded-t-xl dark:bg-slate-800">
-                                <img :src="'./docs/assets/images/screenshots/'+control.slug+'/' + control.slug + (isDark ? '-dark' : '-light')+'.png'" :alt="control.name"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                            </div>
-                            <div class="p-4 dark:bg-slate-700 flex items-center justify-between">
-                                <p class="text-xs font-mono font-600"
-                                   :class="isDark ? 'text-slate-200' : 'text-slate-800'">
-                                    <span class="text-blue-500 opacity-75">kt</span>
-                                    {{ control.name.replace('Kt ', '') }}
-                                </p>
+            <!-- Cards grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <template v-for="(control, i) in filteredControls.slice(0, limit)" :key="control.name">
+                    <a :href="'./docs/'+control.category+'/' + control.slug"
+                       class="control-card group"
+                       :class="isDark ? 'card-dark hover:border-white/10' : 'card-light hover:border-black/10'">
+                        <div class="aspect-video overflow-hidden p-5 rounded-t-xl dark:bg-slate-800">
+                            <img :src="'./docs/assets/images/screenshots/'+control.slug+'/' + control.slug + (isDark ? '-dark' : '-light')+'.png'"
+                                 :alt="control.name"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        </div>
+                        <div class="p-4 dark:bg-slate-700 flex items-center justify-between">
+                            <p class="text-xs font-mono font-600"
+                               :class="isDark ? 'text-slate-200' : 'text-slate-800'">
+                                <span class="text-blue-500 opacity-75">kt</span>
+                                {{ control.name.replace('Kt ', '') }}
+                            </p>
 
-                                <span :class="'pill text-xs font-mono ' + (isDark ? 'text-slate-200' : 'text-slate-800')"
-                                      :style="`zoom:80%;background: ${control.color}18; color: ${control.color}; border: 1px solid ${control.color}33;`">
-                                    {{ control.category.replace("ies","y").replace(/s+$/i, "") }}
+                            <span :class="'pill text-xs font-mono ' + (isDark ? 'text-slate-200' : 'text-slate-800')"
+                                  :style="`zoom:80%;background: ${control.color}18; color: ${control.color}; border: 1px solid ${control.color}33;`">
+                                    {{ control.category.replace("ies", "y").replace(/s+$/i, "") }}
                                 </span>
-                            </div>
-                        </a>
-                    </template>
-                </div>
-
-                <!-- Show more -->
-                <div v-if="limit < filteredControls.length" class="text-center mt-10">
-                    <button data-analytics="show_more_controls" @click="limit += 16" class="btn-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2">
-                            <path d="M12 5v14M5 12l7 7 7-7" />
-                        </svg>
-                        Show More
-                    </button>
-                </div>
-
+                        </div>
+                    </a>
+                </template>
             </div>
-        </section>
 
-        <!-- $1$ ═══════════════ FREE SECTION ═══════════════ #1# -->
-        <!-- <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'"> -->
-        <!--     <div class="max-w-7xl mx-auto px-6"> -->
-        <!--         <div class="grid lg:grid-cols-2 gap-16 items-center"> -->
-        <!-- -->
-        <!--             <div class="order-2 lg:order-1"> -->
-        <!--                 <div class="rounded-2xl overflow-hidden p-16" -->
-        <!--                      :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'"> -->
-        <!--                     <img src="./images/can.png" alt="KimTools Free Edition" class="w-full" /> -->
-        <!--                 </div> -->
-        <!--             </div> -->
-        <!-- -->
-        <!--             <div class="order-1 lg:order-2"> -->
-        <!--                 <p class="section-label mb-4" style="color: #FF6B35;">Free Edition</p> -->
-        <!--                 <h3 class="font-display text-3xl font-bold leading-tight mb-6" -->
-        <!--                     :class="isDark ? 'text-white' : 'text-gray-900'"> -->
-        <!--                     10 Essential Controls. <span class="grad-fire">Completely Free.</span> -->
-        <!--                 </h3> -->
-        <!--                 <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'"> -->
-        <!--                     <strong class="grad-green">KimTools Free Edition</strong> is here - a curated set of -->
-        <!--                     essential controls built with the same quality, performance, and modern design standards as -->
-        <!--                     the PLUS+ suite. -->
-        <!--                 </p> -->
-        <!--                 <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'"> -->
-        <!--                     No compromise on rendering fidelity. No watered-down controls. Full access to the DPI-aware, -->
-        <!--                     theme-ready foundation that makes KimTools stand out. -->
-        <!--                 </p> -->
-        <!-- -->
-        <!--                 <div class="mt-10 w-full"> -->
-        <!--                     <a href="https://gumroad.com/checkout?product=wdhwd&option=iQgbFGr3IQ-hOnXIWI4ncA%3D%3D&quantity=1&_gl=1*b57d87*_ga*NTUyNzIxMDM4LjE3Nzg0NTk2NjU.*_ga_6LJN6D94N6*czE3ODI0NzY2MTIkbzExMyRnMCR0MTc4MjQ3NjYxMiRqNjAkbDAkaDA." target="_blank" rel="noopener noreferrer" -->
-        <!--                        data-analytics="get_free_edition" -->
-        <!--                        class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20" -->
-        <!--                        style="height: 54px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);"> -->
-        <!--                         Get Free Edition -->
-        <!--                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" -->
-        <!--                              fill="none" stroke="currentColor" stroke-width="2.5"> -->
-        <!--                             <path d="M5 12h14M12 5l7 7-7 7" /> -->
-        <!--                         </svg> -->
-        <!--                     </a> -->
-        <!--                     <p class="mt-4 text-[11px] italic" :class="isDark ? 'text-gray-600' : 'text-gray-400'"> -->
-        <!--                         * Free forever. No account required. -->
-        <!--                     </p> -->
-        <!--                 </div> -->
-        <!-- -->
-        <!--             </div> -->
-        <!-- -->
-        <!--         </div> -->
-        <!--     </div> -->
-        <!-- </section> -->
-        <!-- ═══════════════ ABOUT / STORY ═══════════════ -->
-        <section class="py-24 relative shadow dark:bg-slate-900">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-16 items-start">
-
-                    <div>
-                        <p class="section-label mb-4" style="color: #3B82F6;">Our Story</p>
-                        <h2 class="font-display text-4xl font-bold leading-tight mb-6"
-                            :class="isDark ? 'text-white' : 'text-gray-900'">
-                            Built by developers<br />
-                            <span class="grad-green">who felt the gap.</span>
-                        </h2>
-                        <div class="space-y-4 text-sm leading-relaxed"
-                             :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            <p>
-                                For years, we've watched the WinForms community feel sidelined as the world of modern
-                                design moved on.
-                            </p>
-                            <p>
-                                As the creator of the <a class="grad-purple" href="https://kimtoo.net/bunifu">
-                                    Bunifu
-                                    Framework
-                                </a> and a
-                                multi-year Microsoft MVP, our founder built this ecosystem because we believe you
-                                shouldn't have to choose between the reliability of .NET and the beauty of modern
-                                software.
-                            </p>
-
-                        </div>
-
-                    </div>
-                    <!-- https://public-files.gumroad.com/5p0xae7bxlqlnckbe2y29nu7scwi -->
-                    <!-- Stats grid -->
-                    <div class="grid grid-cols-2 gap-4">
-
-                        <div class="lg:col-span-2">
-                            <div class="rounded-2xl overflow-hidden"
-                                 style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 32px 80px rgba(0,0,0,0.6);">
-                                <img src="./images/kt-table.gif" alt="KimTools Table" class="w-full" />
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
+            <!-- Show more -->
+            <div v-if="limit < filteredControls.length" class="text-center mt-10">
+                <button data-analytics="show_more_controls" @click="limit += 16" class="btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                    Show More
+                </button>
             </div>
-        </section>
 
+        </div>
+    </section>
 
-        <!-- ═══════════════ DEVELOPER EXPERIENCE ═══════════════ -->
-        <section class="py-24 bg-white shadow-xl dark:bg-slate-800">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <!-- $1$ ═══════════════ FREE SECTION ═══════════════ #1# -->
+    <!-- <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'"> -->
+    <!--     <div class="max-w-7xl mx-auto px-6"> -->
+    <!--         <div class="grid lg:grid-cols-2 gap-16 items-center"> -->
+    <!-- -->
+    <!--             <div class="order-2 lg:order-1"> -->
+    <!--                 <div class="rounded-2xl overflow-hidden p-16" -->
+    <!--                      :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'"> -->
+    <!--                     <img src="./images/can.png" alt="KimTools Free Edition" class="w-full" /> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!-- -->
+    <!--             <div class="order-1 lg:order-2"> -->
+    <!--                 <p class="section-label mb-4" style="color: #FF6B35;">Free Edition</p> -->
+    <!--                 <h3 class="font-display text-3xl font-bold leading-tight mb-6" -->
+    <!--                     :class="isDark ? 'text-white' : 'text-gray-900'"> -->
+    <!--                     10 Essential Controls. <span class="grad-fire">Completely Free.</span> -->
+    <!--                 </h3> -->
+    <!--                 <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'"> -->
+    <!--                     <strong class="grad-green">KimTools Free Edition</strong> is here - a curated set of -->
+    <!--                     essential controls built with the same quality, performance, and modern design standards as -->
+    <!--                     the PLUS+ suite. -->
+    <!--                 </p> -->
+    <!--                 <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'"> -->
+    <!--                     No compromise on rendering fidelity. No watered-down controls. Full access to the DPI-aware, -->
+    <!--                     theme-ready foundation that makes KimTools stand out. -->
+    <!--                 </p> -->
+    <!-- -->
+    <!--                 <div class="mt-10 w-full"> -->
+    <!--                     <a href="https://gumroad.com/checkout?product=wdhwd&option=iQgbFGr3IQ-hOnXIWI4ncA%3D%3D&quantity=1&_gl=1*b57d87*_ga*NTUyNzIxMDM4LjE3Nzg0NTk2NjU.*_ga_6LJN6D94N6*czE3ODI0NzY2MTIkbzExMyRnMCR0MTc4MjQ3NjYxMiRqNjAkbDAkaDA." target="_blank" rel="noopener noreferrer" -->
+    <!--                        data-analytics="get_free_edition" -->
+    <!--                        class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20" -->
+    <!--                        style="height: 54px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);"> -->
+    <!--                         Get Free Edition -->
+    <!--                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" -->
+    <!--                              fill="none" stroke="currentColor" stroke-width="2.5"> -->
+    <!--                             <path d="M5 12h14M12 5l7 7-7 7" /> -->
+    <!--                         </svg> -->
+    <!--                     </a> -->
+    <!--                     <p class="mt-4 text-[11px] italic" :class="isDark ? 'text-gray-600' : 'text-gray-400'"> -->
+    <!--                         * Free forever. No account required. -->
+    <!--                     </p> -->
+    <!--                 </div> -->
+    <!-- -->
+    <!--             </div> -->
+    <!-- -->
+    <!--         </div> -->
+    <!--     </div> -->
+    <!-- </section> -->
+    <!-- ═══════════════ ABOUT / STORY ═══════════════ -->
+    <section class="py-24 relative shadow dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
 
-                    <div class="order-2 lg:order-1">
-                        <div class="rounded-2xl overflow-hidden " :class="isDark ? 'card-dark' : 'card-light'">
-                            <img src="./images/kt-designer.gif" alt="KimTools Free Edition" class="w-full" />
-                        </div>
-                    </div>
-
-                    <div class="order-1 lg:order-2">
-                        <!-- IDE logos -->
-                        <div class="mt-8">
-                            <img src="./images/vs-rider.png" alt="Visual Studio + Rider" class="h-16 mb-5 " />
-                        </div>
-                        <p class="section-label mb-4" style="color: #FF6B35;">Developer Experience</p>
-                        <h2 class="font-display text-4xl font-bold leading-tight mb-6"
-                            :class="isDark ? 'text-white' : 'text-gray-900'">
-                            What you see.<br />
-                            <span class="grad-fire">Is what you get.</span>
-                        </h2>
-                        <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            Kimtools Designer is a <strong class="grad-green">
-                                WYSIWYG
-                                powerhouse
-                            </strong> for WinForms that replaces static properties with a <strong class="grad-green">semantic theme engine</strong>
-                            and integrated color tokens.
-                            <br>
-                            <br>
-                            It bridges the gap between design and code with a <strong class="grad-green">
-                                VsCode-style
-                                markup editor
-                            </strong> for real-time HTML/SVG editing, an <strong class="grad-green">integrated icon search</strong>, it allows you to visually compose
-                            modern, production-ready
-                            interfaces with instant, live feedback directly on the design surface.
+                <div>
+                    <p class="section-label mb-4" style="color: #3B82F6;">Our Story</p>
+                    <h2 class="font-display text-4xl font-bold leading-tight mb-6"
+                        :class="isDark ? 'text-white' : 'text-gray-900'">
+                        Built by developers<br/>
+                        <span class="grad-green">who felt the gap.</span>
+                    </h2>
+                    <div class="space-y-4 text-sm leading-relaxed"
+                         :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        <p>
+                            For years, we've watched the WinForms community feel sidelined as the world of modern
+                            design moved on.
+                        </p>
+                        <p>
+                            As the creator of the <a class="grad-purple" href="https://kimtoo.net/bunifu">
+                            Bunifu
+                            Framework
+                        </a> and a
+                            multi-year Microsoft MVP, our founder built this ecosystem because we believe you
+                            shouldn't have to choose between the reliability of .NET and the beauty of modern
+                            software.
                         </p>
 
                     </div>
 
                 </div>
-            </div>
-        </section>
-
-
-
-        <!-- ═══════════════ NEWSLETTER SUBSCRIPTION SECTION ═══════════════ -->
-        <section class="py-24 relative overflow-hidden" :class="isDark ? 'bg-[#080b10]' : 'bg-gray-900'"
-                 style="min-height: 500px;">
-
-            <!-- Subtle Ambient Glow -->
-            <div class="hero-glow w-[500px] h-[500px] bg-purple-600 top-[-100px] right-[-100px] absolute"
-                 style="opacity:0.1; filter: blur(100px);"></div>
-
-            <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <div class="grid lg:grid-cols-5 gap-12 items-center">
-
-                    <!-- Left Side: Content -->
-                    <div class="lg:col-span-3">
-                        <p class="section-label mb-4" style="color: #A855F7;"> Stay in the loop</p>
-                        <h2 class="font-display text-4xl font-bold text-white leading-tight mb-6">
-                            Subscribe to <br>
-                            Our <span class="grad-purple">Newsletter</span>
-                        </h2>
-
-                        <div class="space-y-6 text-gray-400 text-base leading-relaxed">
-                            <p>
-                                By joining the KimTools inner circle, you gain a significant competitive advantage in
-                                the WinForms development space. Beyond simple version updates, our newsletter provides a
-                                direct line to the technical blueprints of the ecosystem
-                            </p>
-                            <p>
-                                Our subscribers receive exclusive early access to new component betas, comprehensive
-                                feature previews, and specialized tips for mastering <strong class="text-white">
-                                    WinForms
-                                    modernization
-                                </strong> that you won't find on the public site.
-                            </p>
-                            <p>
-                                Join a growing community of developers building the next generation of high-fidelity
-                                desktop applications.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <!-- Right Side: Centered Form Card -->
-                    <div class="lg:col-span-2 flex justify-center">
-                        <div class="w-full max-w-md p-8 rounded-3xl border border-white/5 shadow-2xl relativ bg-slate-800"
-                             style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
-
-                            <div class="text-center mb-8">
-                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/10 text-purple-400 mb-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                         stroke-linejoin="round">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                        </path>
-                                        <polyline points="22,6 12,13 2,6"></polyline>
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-white">Join the Community</h3>
-                                <p class="text-gray-400 text-xs mt-2">
-                                    Get the latest roadmap • updates • assets • Dev
-                                    Tips & Tricks
-                                </p>
-                            </div>
-
-                            <form action="https://gumroad.com/follow_from_embed_form" method="post"
-                                  id="gumroad-follow-form-newsletter" class="flex flex-col gap-4 w-full">
-                                <input type="hidden" name="seller_id" value="2023101745328" />
-
-                                <div class="space-y-4">
-                                    <input type="email" name="email" placeholder="developer@example.com" required
-                                           class="w-full px-5 py-4 rounded-xl border border-gray-700 bg-black/30 text-white text-sm transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50 placeholder:text-gray-600" />
-
-                                    <button type="submit" data-analytics="subscribe_newsletter"
-                                            class="w-full flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
-                                            style="background: linear-gradient(135deg, #A855F7, #6366F1);">
-                                        Subscribe Now
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                            <path d="M5 12h14M12 5l7 7-7 7" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </form>
-
-                            <p class="mt-6 text-center text-[10px] text-slate-600 uppercase tracking-widest font-medium">
-                                Secure & Private • No Spam
-                            </p>
-                            <div class="mt-6 flex items-center justify-center gap-2">
-                                <div class="flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-500/20 bg-slate-500/5 text-[10px] font-bold uppercase tracking-wider text-slate-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                                         fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                                         stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                    </svg>
-                                    One-click Unsubscribe
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══════════════ AI-READY SECTION ═══════════════ -->
-        <section class="py-24 relative overflow-hidden " :class="isDark ? 'bg-[#080b10]' : 'bg-gray-900'"
-                 style="min-height: 480px;">
-
-            <div class="hero-glow w-[500px] h-[500px] bg-kt-purple top-[-100px] right-[-100px]" style="opacity:0.12;">
-            </div>
-
-            <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <div class="grid lg:grid-cols-5 gap-12 items-center">
-
-                    <div class="lg:col-span-3">
-                        <p class="section-label mb-4" style="color: #A855F7;">Roadmap</p>
-                        <h2 class="font-display text-4xl font-bold text-white leading-tight mb-6">
-                            The Next Frontier:<br />
-                            <span class="grad-purple">AI-Ready WinForms</span>
-                        </h2>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            The KimTools Ecosystem is evolving into the ultimate AI-Ready stack, featuring an integrated
-                            MCP Server, Generative UI, and components designed specifically for human-AI collaboration.
-                        </p>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            With an AI Agent built directly into the workflow, your development experience becomes a
-                            seamless partnership where stunning, high-fidelity interfaces are generated, customized, and
-                            maintained with zero friction.
-                        </p>
-
-                    </div>
+                <!-- https://public-files.gumroad.com/5p0xae7bxlqlnckbe2y29nu7scwi -->
+                <!-- Stats grid -->
+                <div class="grid grid-cols-2 gap-4">
 
                     <div class="lg:col-span-2">
                         <div class="rounded-2xl overflow-hidden"
                              style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 32px 80px rgba(0,0,0,0.6);">
-                            <img src="./images/kt-textbox.gif" alt="KimTools Demo" class="w-full" />
+                            <img src="./images/kt-table.gif" alt="KimTools Table" class="w-full"/>
                         </div>
                     </div>
 
                 </div>
-            </div>
-        </section>
-        <!-- ═══════════════ YOUTUBE / TUTORIALS ═══════════════ -->
-        <section class="py-24" :class="isDark ? 'bg-[#080b10]' : 'bg-gray-100'">
 
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <p class="section-label mb-4" style="color: #FF4C8B;">YouTube Channel</p>
-                <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
-                    Master KimTools with<br /><span class="grad-fire">in-depth Video Demos</span>
-                </h2>
-                <p class="text-sm max-w-xl mx-auto mb-10" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                    Every UI component comes with an in-depth screencast. In addition to production-ready components,
-                    you get training and instruction to build and modify them for yourself.
-                </p>
-
-                <!-- YouTube embed -->
-                <div class="rounded-2xl overflow-hidden mb-8"
-                     style="box-shadow: 0 0 0 1px rgba(255,76,139,0.15), 0 32px 80px rgba(0,0,0,0.6);">
-                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/Imd-vLtjTVI"
-                            title="Build a Modern WinForms Dashboard with KimTools" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen class="w-full">
-                    </iframe>
-                </div>
-                <br>
-                <br>
-                <p class="text-sm mb-6" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                    New KimTools updates, control demos, and WinForms tips posted regularly.
-                    <span class="grad-green font-bold">Subscribe</span> to stay updated.
-                </p>
-                <a href="https://www.youtube.com/@kimtooflex" target="_blank" class="btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                         fill="currentColor" class="mr-4">
-                        <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z" />
-                    </svg>
-                    Watch on YouTube
-                </a>
             </div>
-        </section>
-        <!-- ═══════════════ HIRE SECTION ═══════════════ -->
-        <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="order-2 lg:order-1">
-                        <div class="rounded-2xl overflow-hidden p-16"
-                             :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'">
-                            <a target="_blank" href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&tier=1">
-                                <img src="./images/mvp.jpg" alt="Custom WinForms Development" class="w-full" />
-                            </a>
-                        </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════ DEVELOPER EXPERIENCE ═══════════════ -->
+    <section class="py-24 bg-white shadow-xl dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <div class="order-2 lg:order-1">
+                    <div class="rounded-2xl overflow-hidden " :class="isDark ? 'card-dark' : 'card-light'">
+                        <img src="./images/kt-designer.gif" alt="KimTools Free Edition" class="w-full"/>
                     </div>
-                    <div class="order-1 lg:order-2">
-                        <p class="section-label mb-4" style="color: #FF6B35;">Custom Development</p>
-                        <h3 class="font-display text-3xl font-bold leading-tight mb-6"
-                            :class="isDark ? 'text-white' : 'text-gray-900'">
-                            Need something built? <span class="grad-fire">Let's talk.</span>
-                        </h3>
-                        <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            <strong class="grad-green">KimToo.net</strong> is available for freelance engagements -
-                            custom WinForms controls, UI component libraries, licensing systems, or anything
-                            in the .NET desktop space.
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <!-- IDE logos -->
+                    <div class="mt-8">
+                        <img src="./images/vs-rider.png" alt="Visual Studio + Rider" class="h-16 mb-5 "/>
+                    </div>
+                    <p class="section-label mb-4" style="color: #FF6B35;">Developer Experience</p>
+                    <h2 class="font-display text-4xl font-bold leading-tight mb-6"
+                        :class="isDark ? 'text-white' : 'text-gray-900'">
+                        What you see.<br/>
+                        <span class="grad-fire">Is what you get.</span>
+                    </h2>
+                    <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        Kimtools Designer is a <strong class="grad-green">
+                        WYSIWYG
+                        powerhouse
+                    </strong> for WinForms that replaces static properties with a <strong class="grad-green">semantic
+                        theme engine</strong>
+                        and integrated color tokens.
+                        <br>
+                        <br>
+                        It bridges the gap between design and code with a <strong class="grad-green">
+                        VsCode-style
+                        markup editor
+                    </strong> for real-time HTML/SVG editing, an <strong class="grad-green">integrated icon
+                        search</strong>, it allows you to visually compose
+                        modern, production-ready
+                        interfaces with instant, live feedback directly on the design surface.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════ NEWSLETTER SUBSCRIPTION SECTION ═══════════════ -->
+    <section class="py-24 relative overflow-hidden" :class="isDark ? 'bg-[#080b10]' : 'bg-gray-900'"
+             style="min-height: 500px;">
+
+        <!-- Subtle Ambient Glow -->
+        <div class="hero-glow w-[500px] h-[500px] bg-purple-600 top-[-100px] right-[-100px] absolute"
+             style="opacity:0.1; filter: blur(100px);"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-5 gap-12 items-center">
+
+                <!-- Left Side: Content -->
+                <div class="lg:col-span-3">
+                    <p class="section-label mb-4" style="color: #A855F7;"> Stay in the loop</p>
+                    <h2 class="font-display text-4xl font-bold text-white leading-tight mb-6">
+                        Subscribe to <br>
+                        Our <span class="grad-purple">Newsletter</span>
+                    </h2>
+
+                    <div class="space-y-6 text-gray-400 text-base leading-relaxed">
+                        <p>
+                            By joining the KimTools inner circle, you gain a significant competitive advantage in
+                            the WinForms development space. Beyond simple version updates, our newsletter provides a
+                            direct line to the technical blueprints of the ecosystem
                         </p>
-                        <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                            Same craft that goes into KimTools - DPI-aware, theme-ready, production-grade.
-                            No hand-holding required on your end.
+                        <p>
+                            Our subscribers receive exclusive early access to new component betas, comprehensive
+                            feature previews, and specialized tips for mastering <strong class="text-white">
+                            WinForms
+                            modernization
+                        </strong> that you won't find on the public site.
                         </p>
-                        <div class="mt-10 w-full">
-                            <a href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&tier=1"
-                               data-analytics="hire_cta"
-                               class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20"
-                               style="height: 54px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);">
-                                Get a Free Quote
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2.5">
-                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                        <p>
+                            Join a growing community of developers building the next generation of high-fidelity
+                            desktop applications.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Side: Centered Form Card -->
+                <div class="lg:col-span-2 flex justify-center">
+                    <div class="w-full max-w-md p-8 rounded-3xl border border-white/5 shadow-2xl relativ bg-slate-800"
+                         style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+
+                        <div class="text-center mb-8">
+                            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/10 text-purple-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
-                            </a>
-                            <p class="mt-4 text-[11px] italic" :class="isDark ? 'text-gray-600' : 'text-gray-400'">
-                                * Typically respond within 24 hours.
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Join the Community</h3>
+                            <p class="text-gray-400 text-xs mt-2">
+                                Get the latest roadmap • updates • assets • Dev
+                                Tips & Tricks
                             </p>
                         </div>
+
+                        <form action="https://gumroad.com/follow_from_embed_form" method="post"
+                              id="gumroad-follow-form-newsletter" class="flex flex-col gap-4 w-full">
+                            <input type="hidden" name="seller_id" value="2023101745328"/>
+
+                            <div class="space-y-4">
+                                <input type="email" name="email" placeholder="developer@example.com" required
+                                       class="w-full px-5 py-4 rounded-xl border border-gray-700 bg-black/30 text-white text-sm transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50 placeholder:text-gray-600"/>
+
+                                <button type="submit" data-analytics="subscribe_newsletter"
+                                        class="w-full flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
+                                        style="background: linear-gradient(135deg, #A855F7, #6366F1);">
+                                    Subscribe Now
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+
+                        <p class="mt-6 text-center text-[10px] text-slate-600 uppercase tracking-widest font-medium">
+                            Secure & Private • No Spam
+                        </p>
+                        <div class="mt-6 flex items-center justify-center gap-2">
+                            <div class="flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-500/20 bg-slate-500/5 text-[10px] font-bold uppercase tracking-wider text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                     stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                                One-click Unsubscribe
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
+    <!-- ═══════════════ AI-READY SECTION ═══════════════ -->
+    <section class="py-24 relative overflow-hidden " :class="isDark ? 'bg-[#080b10]' : 'bg-gray-900'"
+             style="min-height: 480px;">
 
-        <!-- ═══════════════ FOOTER ═══════════════ -->
-        <footer class="border-t" :class="isDark ? 'border-white/[0.06] bg-[#0d0f14]' : 'border-black/[0.07] bg-white'">
-            <div class="max-w-7xl mx-auto px-6 py-16">
-                <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="hero-glow w-[500px] h-[500px] bg-kt-purple top-[-100px] right-[-100px]" style="opacity:0.12;">
+        </div>
 
-                    <!-- Brand -->
-                    <div class="md:col-span-2">
-                        <div class="flex items-center gap-1 mb-4">
-                            <img style="height: 44;" :src="isDark ? './images/logo-dark.png' :  './images/logo.png'"
-                                 alt="KimTools" />
-                        </div>
-                        <p class="text-sm leading-relaxed mb-6" :class="isDark ? 'text-gray-500' : 'text-gray-500'">
-                            The modern UI Framework for WinForms developers. Build beautiful, AI-ready .NET applications
-                            with confidence.
-                        </p>
-                        <a href="mailto:support@kimtoo.net" class="text-sm font-mono transition-colors"
-                           style="color: #3B82F6;">
-                            support@kimtoo.net
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-5 gap-12 items-center">
+
+                <div class="lg:col-span-3">
+                    <p class="section-label mb-4" style="color: #A855F7;">Roadmap</p>
+                    <h2 class="font-display text-4xl font-bold text-white leading-tight mb-6">
+                        The Next Frontier:<br/>
+                        <span class="grad-purple">AI-Ready WinForms</span>
+                    </h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        The KimTools Ecosystem is evolving into the ultimate AI-Ready stack, featuring an integrated
+                        MCP Server, Generative UI, and components designed specifically for human-AI collaboration.
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        With an AI Agent built directly into the workflow, your development experience becomes a
+                        seamless partnership where stunning, high-fidelity interfaces are generated, customized, and
+                        maintained with zero friction.
+                    </p>
+
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="rounded-2xl overflow-hidden"
+                         style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 32px 80px rgba(0,0,0,0.6);">
+                        <img src="./images/kt-textbox.gif" alt="KimTools Demo" class="w-full"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ═══════════════ YOUTUBE / TUTORIALS ═══════════════ -->
+    <section class="py-24" :class="isDark ? 'bg-[#080b10]' : 'bg-gray-100'">
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="section-label mb-4" style="color: #FF4C8B;">YouTube Channel</p>
+            <h2 class="font-display text-4xl font-bold mb-4" :class="isDark ? 'text-white' : 'text-gray-900'">
+                Master KimTools with<br/><span class="grad-fire">in-depth Video Demos</span>
+            </h2>
+            <p class="text-sm max-w-xl mx-auto mb-10" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                Every UI component comes with an in-depth screencast. In addition to production-ready components,
+                you get training and instruction to build and modify them for yourself.
+            </p>
+
+            <!-- YouTube embed -->
+            <div class="rounded-2xl overflow-hidden mb-8"
+                 style="box-shadow: 0 0 0 1px rgba(255,76,139,0.15), 0 32px 80px rgba(0,0,0,0.6);">
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/Imd-vLtjTVI"
+                        title="Build a Modern WinForms Dashboard with KimTools" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="w-full">
+                </iframe>
+            </div>
+            <br>
+            <br>
+            <p class="text-sm mb-6" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                New KimTools updates, control demos, and WinForms tips posted regularly.
+                <span class="grad-green font-bold">Subscribe</span> to stay updated.
+            </p>
+            <a href="https://www.youtube.com/@kimtooflex" target="_blank" class="btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                     fill="currentColor" class="mr-4">
+                    <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-9 6v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9z"/>
+                </svg>
+                Watch on YouTube
+            </a>
+        </div>
+    </section>
+    <!-- ═══════════════ HIRE SECTION ═══════════════ -->
+    <section class="py-24 shadow-lg dark:bg-slate-800" :class="isDark ? '' : 'bg-gray-50'">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="rounded-2xl overflow-hidden p-16"
+                         :class="isDark ? 'card-dark bg-slate-700' : 'card-light bg-slate-200'">
+                        <a target="_blank"
+                           href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&tier=1">
+                            <img src="./images/mvp.jpg" alt="Custom WinForms Development" class="w-full"/>
                         </a>
                     </div>
-
-                    <!-- Links -->
-                    <div>
-                        <p class="text-xs font-mono font-bold uppercase tracking-widest mb-4 opacity-40"
-                           :class="isDark ? 'text-gray-300' : 'text-gray-700'">Product</p>
-                        <ul class="space-y-3">
-                            <li v-for="link in footerLinks.product" :key="link.label">
-                                <a :href="link.href" :target="link.target" class="text-sm transition-colors"
-                                   :class="isDark ? 'text-gray-500 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
-                                    {{ link.label }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <p class="text-xs font-mono font-bold uppercase tracking-widest mb-4 opacity-40"
-                           :class="isDark ? 'text-gray-300' : 'text-gray-700'">Resources</p>
-                        <ul class="space-y-3">
-                            <li v-for="link in footerLinks.resources" :key="link.label">
-                                <a :href="link.href" :target="link.target" class="text-sm transition-colors"
-                                   :class="isDark ? 'text-gray-500 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
-                                    {{ link.label }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
                 </div>
-
-                <!-- Bottom -->
-                <div class="border-t pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
-                     :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
-                    <p class="text-xs font-mono opacity-40" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
-                        © 2026 KimTools. All Rights Reserved.
+                <div class="order-1 lg:order-2">
+                    <p class="section-label mb-4" style="color: #FF6B35;">Custom Development</p>
+                    <h3 class="font-display text-3xl font-bold leading-tight mb-6"
+                        :class="isDark ? 'text-white' : 'text-gray-900'">
+                        Need something built? <span class="grad-fire">Let's talk.</span>
+                    </h3>
+                    <p class="text-sm leading-relaxed mb-4" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        <strong class="grad-green">KimToo.net</strong> is available for freelance engagements -
+                        custom WinForms controls, UI component libraries, licensing systems, or anything
+                        in the .NET desktop space.
                     </p>
+                    <p class="text-sm leading-relaxed" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
+                        Same craft that goes into KimTools - DPI-aware, theme-ready, production-grade.
+                        No hand-holding required on your end.
+                    </p>
+                    <div class="mt-10 w-full">
+                        <a href="https://www.upwork.com/services/product/development-it-a-beautiful-modern-windows-app-template-1963837364232065163?ref=project_share&tier=1"
+                           data-analytics="hire_cta"
+                           class="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.98] hover:shadow-lg shadow-[#FF6B35]/20"
+                           style="height: 54px; background: linear-gradient(135deg, #FF6B35, #8B5CF6);">
+                            Get a Free Quote
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <p class="mt-4 text-[11px] italic" :class="isDark ? 'text-gray-600' : 'text-gray-400'">
+                            * Typically respond within 24 hours.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-    </div><!-- #app -->
 
-    <script>
-        const { createApp, ref, computed, onMounted } = Vue;
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="border-t" :class="isDark ? 'border-white/[0.06] bg-[#0d0f14]' : 'border-black/[0.07] bg-white'">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
 
-        createApp({
-            setup() {
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-1 mb-4">
+                        <img style="height: 44;" :src="isDark ? './images/logo-dark.png' :  './images/logo.png'"
+                             alt="KimTools"/>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6" :class="isDark ? 'text-gray-500' : 'text-gray-500'">
+                        The modern UI Framework for WinForms developers. Build beautiful, AI-ready .NET applications
+                        with confidence.
+                    </p>
+                    <a href="mailto:support@kimtoo.net" class="text-sm font-mono transition-colors"
+                       style="color: #3B82F6;">
+                        support@kimtoo.net
+                    </a>
+                </div>
 
-                const now = new Date();
+                <!-- Links -->
+                <div>
+                    <p class="text-xs font-mono font-bold uppercase tracking-widest mb-4 opacity-40"
+                       :class="isDark ? 'text-gray-300' : 'text-gray-700'">Product</p>
+                    <ul class="space-y-3">
+                        <li v-for="link in footerLinks.product" :key="link.label">
+                            <a :href="link.href" :target="link.target" class="text-sm transition-colors"
+                               :class="isDark ? 'text-gray-500 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
+                                {{ link.label }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                // .slice(-2) takes the last two digits (e.g., "2026" becomes "26")
-                const yy = now.getFullYear().toString().slice(-2);
+                <div>
+                    <p class="text-xs font-mono font-bold uppercase tracking-widest mb-4 opacity-40"
+                       :class="isDark ? 'text-gray-300' : 'text-gray-700'">Resources</p>
+                    <ul class="space-y-3">
+                        <li v-for="link in footerLinks.resources" :key="link.label">
+                            <a :href="link.href" :target="link.target" class="text-sm transition-colors"
+                               :class="isDark ? 'text-gray-500 hover:text-white' : 'text-gray-500 hover:text-gray-900'">
+                                {{ link.label }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                // .getMonth() is 0-indexed (Jan is 0), so we add 1
-                const mm = now.getMonth() + 1;
+            </div>
 
-                const latest = `v${yy}.${mm}`;
-                const latestVersion = ref(latest);
+            <!-- Bottom -->
+            <div class="border-t pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+                 :class="isDark ? 'border-white/[0.06]' : 'border-black/[0.07]'">
+                <p class="text-xs font-mono opacity-40" :class="isDark ? 'text-gray-300' : 'text-gray-700'">
+                    © 2026 KimTools. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
 
-                // Initialize from localStorage or fallback to system preference
-                const savedTheme = localStorage.getItem('docmd-theme');
-                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+</div><!-- #app -->
 
-                const isDark = ref(savedTheme ? savedTheme === 'dark' : systemPrefersDark);
-                const mobileOpen = ref(false);
-                const query = ref('');
-                const limit = ref(8);
+<script>
+    const {createApp, ref, computed, onMounted} = Vue;
 
-                // script setup
-                const selectedTier = ref(null)
+    createApp({
+        setup() {
 
-                const banners = [
-                    { text: `🎉 KimTools ${latest} is now live!`, url: 'https://checkout.kimtoo.net', target: '_blank', cta: 'Get it now' },
-                    { text: '💥 Limited offer: Use code SDK26 for 50% DISCOUNT', url: 'https://checkout.kimtoo.net?wanted=true&code=SDK26', target: '_blank', cta: 'Claim Discount' },
-                    { text: '📺 New demo: Modern Dashboard + Light/Dark Mode WinForms', url: 'https://www.youtube.com/@kimtooflex', target: '_blank', cta: 'Watch Now' },
-                ];
-                const bannerIndex = ref(0);
-                const currentBanner = computed(() => banners[bannerIndex.value]);
+            const now = new Date();
 
-                const navLinks = [
+            // .slice(-2) takes the last two digits (e.g., "2026" becomes "26")
+            const yy = now.getFullYear().toString().slice(-2);
 
-                    { label: 'Documentation', href: './docs'  },
-                    // { label: 'Pricing', href: '#pricing' },
-                    { label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
-                    { label: 'Themes & Templates', href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D', target: '_blank' },
-                    { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms', target: '_blank' },
-                    // { label: 'Blog', href: 'https://store.kimtoo.net?section=0JNqmLFulvHeku3QucyOJg%3D%3D', target: '_blank' },
-                    //{ label: 'Bunifu', href: 'https://kimtoo.net/bunifu' },
-                     { label: 'Contact', href: 'https://support.kimtoo.net', target: '_blank' },
-                ];
+            // .getMonth() is 0-indexed (Jan is 0), so we add 1
+            const mm = now.getMonth() + 1;
 
-                const features = [
-                    '40 Modern Customizable Controls',
-                    'C# & VB.NET Language support',
-                    '.NET Framework targets',
-                    '.NET Core targets',
-                    '35+ Enterprise-Grade Stylable Themes',
-                    'Tailwind-Style Semantic Color System',
-                    '10,000+ Precision Vector Icons (SVG)',
-                    'WYSIWYG Designer UI Editors',
-                    'Now available on Nuget.org',
+            const latest = `v${yy}.${mm}`;
+            const latestVersion = ref(latest);
 
-                    // 'Advanced Rendering Engine',
-                ];
-                const featColors = ['#3B82F6', '#7C3AED', '#FF6B35', '#FF4C8B', '#A855F7', '#FFD166'];
+            // Initialize from localStorage or fallback to system preference
+            const savedTheme = localStorage.getItem('docmd-theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-                const stats = [
-                    { value: '35+', label: 'UI Controls', color: '#3B82F6' },
-                    { value: '35+', label: 'Themes', color: '#7C3AED' },
-                    { value: '10K+', label: 'SVG Icons', color: '#FF6B35' },
-                    { value: '5×', label: 'Microsoft MVP', color: '#A855F7' },
-                ];
+            const isDark = ref(savedTheme ? savedTheme === 'dark' : systemPrefersDark);
+            const mobileOpen = ref(false);
+            const query = ref('');
+            const limit = ref(8);
 
-                const dotnetBadges = [
-                    { text: '.NET Framework 4.6.2', color: '#3B82F6' },
-                    { text: '.NET Framework 4.7', color: '#3B82F6' },
-                    { text: '.NET Framework 4.8+', color: '#3B82F6' },
+            // script setup
+            const selectedTier = ref(null)
 
-                    { text: '.NET Core 8.0', color: '#A855F7' },
-                    { text: '.NET 9.0', color: '#A855F7' },
-                    { text: '.NET 10.0 (Preview)', color: '#A855F7' },
-                ];
+            const banners = [
+                {
+                    text: `🎉 KimTools ${latest} is now live!`,
+                    url: 'https://checkout.kimtoo.net',
+                    target: '_blank',
+                    cta: 'Get it now'
+                },
+                {
+                    text: '💥 Limited offer: Use code SDK26 for 50% DISCOUNT',
+                    url: 'https://checkout.kimtoo.net?wanted=true&code=SDK26',
+                    target: '_blank',
+                    cta: 'Claim Discount'
+                },
+                {
+                    text: '📺 New demo: Modern Dashboard + Light/Dark Mode WinForms',
+                    url: 'https://www.youtube.com/@kimtooflex',
+                    target: '_blank',
+                    cta: 'Watch Now'
+                },
+            ];
+            const bannerIndex = ref(0);
+            const currentBanner = computed(() => banners[bannerIndex.value]);
 
-                const pricingTiers = [
+            const navLinks = [
+
+                {label: 'Documentation', href: './docs'},
+                // { label: 'Pricing', href: '#pricing' },
+                {label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank'},
+                {
+                    label: 'Themes & Templates',
+                    href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D',
+                    target: '_blank'
+                },
+                {label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms', target: '_blank'},
+                // { label: 'Blog', href: 'https://store.kimtoo.net?section=0JNqmLFulvHeku3QucyOJg%3D%3D', target: '_blank' },
+                //{ label: 'Bunifu', href: 'https://kimtoo.net/bunifu' },
+                {label: 'Contact', href: 'https://support.kimtoo.net', target: '_blank'},
+            ];
+
+            const features = [
+                '40 Modern Customizable Controls',
+                'C# & VB.NET Language support',
+                '.NET Framework targets',
+                '.NET Core targets',
+                '35+ Enterprise-Grade Stylable Themes',
+                'Tailwind-Style Semantic Color System',
+                '10,000+ Precision Vector Icons (SVG)',
+                'WYSIWYG Designer UI Editors',
+                'Now available on Nuget.org',
+
+                // 'Advanced Rendering Engine',
+            ];
+            const featColors = ['#3B82F6', '#7C3AED', '#FF6B35', '#FF4C8B', '#A855F7', '#FFD166'];
+
+            const stats = [
+                {value: '35+', label: 'UI Controls', color: '#3B82F6'},
+                {value: '35+', label: 'Themes', color: '#7C3AED'},
+                {value: '10K+', label: 'SVG Icons', color: '#FF6B35'},
+                {value: '5×', label: 'Microsoft MVP', color: '#A855F7'},
+            ];
+
+            const dotnetBadges = [
+                {text: '.NET Framework 4.6.2', color: '#3B82F6'},
+                {text: '.NET Framework 4.7', color: '#3B82F6'},
+                {text: '.NET Framework 4.8+', color: '#3B82F6'},
+
+                {text: '.NET Core 8.0', color: '#A855F7'},
+                {text: '.NET 9.0', color: '#A855F7'},
+                {text: '.NET 10.0 (Preview)', color: '#A855F7'},
+            ];
+
+            const pricingTiers = [
+                {
+                    gumroad_variant: "kZvb1wvedojNu0twPUUhXg==",
+                    payhip_variant: "1788107980141",
+                    polar_variant: "polar_cl_saf77n0vfTql1dF31HbFYnKbCElIhMp0AuV5K1PAYcK",
+                    key: 'framework',
+                    emoji: '🟦',
+                    logo: './images/dot-net-framework.webp',
+                    name: '.NET Framework',
+                    price: '22',
+                    color: '#A855F7',
+                    targets: ['.NET Framework 4.6.2', '4.7 – 4.7.2', '4.8 – 4.8.1'],
+                    description: 'Unlocks the full KimTools WinForms control suite for .NET Framework. Ideal for developers who solely target .NET Framework.',
+                    highlight: false,
+                },
+                {
+                    gumroad_variant: "qX8IwOf2-BDYxK99l8XVhQ==",
+                    payhip_variant: "1788107943104",
+                    polar_variant: "polar_cl_SwoQMEH0oGPwvwdW29fBFpEEyKHyZxOSi36se4Q98kI",
+                    key: 'core',
+                    emoji: '🟪',
+                    logo: './images/dot-net-core.webp',
+                    name: '.NET Core',
+                    price: '28',
+                    color: '#3B82F6',
+                    targets: ['.NET 8.0', '.NET 9.0', '.NET 10.0 (Preview)'],
+                    description: 'Unlocks the full KimTools WinForms control suite for .NET 8, 9, and 10 (Preview). Ideal for developers who solely target .NET Core.',
+                    highlight: false,
+                },
+                {
+                    gumroad_variant: "iEzCAUtpfn6l3wk4CVfadQ==",
+                    payhip_variant: "1788107902105",
+                    polar_variant: "polar_cl_OnsNuTwvD0ezuF1ydTLqPFFfKeggFH2QAesui17ln52",
+                    key: 'plus',
+                    emoji: '🟩',
+                    name: 'PLUS',
+                    price: '37',
+                    color: 'white',
+                    targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+', '.NET Latest + Preview'],
+                    description: 'The ultimate developer license bundle - unlocks the full KimTools WinForms control suite across every supported WinForms target.',
+                    highlight: true,
+                },
+            ];
+
+            const pricingFeatures = [
+                'One-time purchase',
+                'Designer access',
+                '100% Royalty-free',
+                'Unlimited projects',
+                'Unlimited activations',
+                'C# language support',
+                'Visual Basic (VB.NET)',
+                'Templates & source code',
+            ];
+
+            const tickerBadges = [
+                {text: '.NET Framework 4.6+', color: '#3B82F6'},
+                {text: '.NET 8.0+ Support', color: '#A855F7'},
+                {text: 'C# & VB.NET', color: '#3B82F6'},
+                {text: 'DPI-Aware Rendering', color: '#7C3AED'},
+                {text: 'WinForms Designer', color: '#FF6B35'},
+                {text: '10,000+ SVG Icons', color: '#FF4C8B'},
+                {text: '35+ Themes', color: '#FFD166'},
+                {text: 'Tailwind Color System', color: '#3B82F6'},
+                {text: 'AI-Ready Stack', color: '#A855F7'},
+                {text: 'Lifetime License (Limited)', color: '#FF6B35'},
+            ];
+
+            const controlGradients = [
+                '#1a222a, #0d111a',
+                '#1a1a2a, #0d0d1a',
+                '#2a1a1a, #1a0d0d',
+                '#221a2a, #110d1a',
+            ];
+
+            const controls = ref([]);
+
+            const filteredControls = computed(() => {
+                if (!query.value) return controls.value;
+                const q = query.value.toLowerCase();
+                return controls.value.filter(c => c.name.toLowerCase().includes(q));
+            });
+
+            const footerLinks = {
+                product: [
+                    {label: 'Pricing', href: '#pricing'},
+                    {label: 'Become an Affiliate', href: 'https://kimtooflex.gumroad.com/affiliates'},
+                    {label: 'Checkout', href: 'https://checkout.kimtoo.net', target: '_blank'},
+                    {label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms'},
+                    {label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank'},
                     {
-                        gumroad_variant: "kZvb1wvedojNu0twPUUhXg==",
-                        payhip_variant: "1788107980141",
-                        polar_variant: "polar_cl_saf77n0vfTql1dF31HbFYnKbCElIhMp0AuV5K1PAYcK",
-                        key: 'framework',
-                        emoji: '🟦',
-                        logo: './images/dot-net-framework.webp',
-                        name: '.NET Framework',
-                        price: '22',
-                        color: '#A855F7',
-                        targets: ['.NET Framework 4.6.2', '4.7 – 4.7.2', '4.8 – 4.8.1'],
-                        description: 'Unlocks the full KimTools WinForms control suite for .NET Framework. Ideal for developers who solely target .NET Framework.',
-                        highlight: false,
+                        label: 'News',
+                        href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D',
+                        target: '_blank'
                     },
-                    {
-                        gumroad_variant: "qX8IwOf2-BDYxK99l8XVhQ==",
-                        payhip_variant: "1788107943104",
-                        polar_variant: "polar_c_5RtDazI3nQpgCZQAQY9KmDh3zp9iluPcoD0Pr2f0fS0",
-                        key: 'core',
-                        emoji: '🟪',
-                        logo: './images/dot-net-core.webp',
-                        name: '.NET Core',
-                        price: '28',
-                        color: '#3B82F6',
-                        targets: ['.NET 8.0', '.NET 9.0', '.NET 10.0 (Preview)'],
-                        description: 'Unlocks the full KimTools WinForms control suite for .NET 8, 9, and 10 (Preview). Ideal for developers who solely target .NET Core.',
-                        highlight: false,
-                    },
-                    {
-                        gumroad_variant: "iEzCAUtpfn6l3wk4CVfadQ==",
-                        payhip_variant: "1788107902105",
-                        polar_variant: "polar_c_g1NSc2zrEnwOzasOCln8vJBfVa4XameLElkR11jE6ei",
-                        key: 'plus',
-                        emoji: '🟩',
-                        name: 'PLUS',
-                        price: '37',
-                        color: 'white',
-                        targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+', '.NET Latest + Preview'],
-                        description: 'The ultimate developer license bundle - unlocks the full KimTools WinForms control suite across every supported WinForms target.',
-                        highlight: true,
-                    },
-                ];
+                ],
+                resources: [
+                    {label: 'Get Bunifu (30% Discount)', href: 'https://kimtoo.net/bunifu'},
+                    {label: 'Documentation', href: './docs',},
+                    {label: 'YouTube Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank'},
+                    {label: 'Support Ticket', href: 'https://support.kimtoo.net', target: '_blank'},
+                    {label: 'Contact Support', href: 'mailto:support@kimtoo.net'},
+                ],
+            };
 
-                const pricingFeatures = [
-                    'One-time purchase',
-                    'Designer access',
-                    '100% Royalty-free',
-                    'Unlimited projects',
-                    'Unlimited activations',
-                    'C# language support',
-                    'Visual Basic (VB.NET)',
-                    'Templates & source code',
-                ];
-
-                const tickerBadges = [
-                    { text: '.NET Framework 4.6+', color: '#3B82F6' },
-                    { text: '.NET 8.0+ Support', color: '#A855F7' },
-                    { text: 'C# & VB.NET', color: '#3B82F6' },
-                    { text: 'DPI-Aware Rendering', color: '#7C3AED' },
-                    { text: 'WinForms Designer', color: '#FF6B35' },
-                    { text: '10,000+ SVG Icons', color: '#FF4C8B' },
-                    { text: '35+ Themes', color: '#FFD166' },
-                    { text: 'Tailwind Color System', color: '#3B82F6' },
-                    { text: 'AI-Ready Stack', color: '#A855F7' },
-                    { text: 'Lifetime License (Limited)', color: '#FF6B35' },
-                ];
-
-                const controlGradients = [
-                    '#1a222a, #0d111a',
-                    '#1a1a2a, #0d0d1a',
-                    '#2a1a1a, #1a0d0d',
-                    '#221a2a, #110d1a',
-                ];
-
-                const controls = ref([]);
-
-                const filteredControls = computed(() => {
-                    if (!query.value) return controls.value;
-                    const q = query.value.toLowerCase();
-                    return controls.value.filter(c => c.name.toLowerCase().includes(q));
-                });
-
-                const footerLinks = {
-                    product: [
-                        { label: 'Pricing', href: '#pricing' },
-                        { label: 'Become an Affiliate', href: 'https://kimtooflex.gumroad.com/affiliates' },
-                        { label: 'Checkout', href: 'https://checkout.kimtoo.net', target: '_blank' },
-                        { label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms' },
-                        { label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank' },
-                        { label: 'News', href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D', target: '_blank' },
-                    ],
-                    resources: [
-                        { label: 'Get Bunifu (30% Discount)', href: 'https://kimtoo.net/bunifu' },
-                        { label: 'Documentation', href: './docs',  },
-                        { label: 'YouTube Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank' },
-                        { label: 'Support Ticket', href: 'https://support.kimtoo.net', target: '_blank' },
-                        { label: 'Contact Support', href: 'mailto:support@kimtoo.net' },
-                    ],
-                };
-
-                function toggleTheme() {
-                    isDark.value = !isDark.value;
-                    localStorage.setItem('docmd-theme', isDark.value ? 'dark' : 'light');
-                    RenderTheme();
-                }
-
-                function RenderTheme() {
-                    document.documentElement.classList.toggle('dark', isDark.value);
-                    document.body.style.backgroundColor = isDark.value ? '#0d0f14' : '#ffffff';
-                    document.body.style.color = isDark.value ? '#ffffff' : '#111827';
-                }
-                function selectPlusAndScroll() {
-                    const plusTier = pricingTiers.find(t => t.key === 'plus') // adjust the key match to whatever your Plus tier's actual key is
-                    if (!plusTier) return
-
-                    selectedTier.value = plusTier
-
-                }
-                async function fetchControls() {
-                    try {
-                        const res = await fetch('./docmd.config.json');
-                        const data = await res.json();
-
-                        const flat = [];
-
-                        for (const parent of data.navigation || []) {
-                            if (!parent.children?.length) continue;
-
-                            const category = parent.kt || 'misc';
-
-                            for (const child of parent.children) {
-                                if (!child.kt) continue;
-
-                                flat.push({
-                                    name: child.title,
-                                    slug: child.kt,
-                                    category: category,
-                                    thumbnail: `./docs/assets/images/screenshots/${category}/${child.kt}-dark.png`,                                    color: category.toLowerCase()==="controls"
-                                        ? "#9810FA"
-                                        : category.toLowerCase()==="components"
-                                            ? "#4F39F6"
-                                            : "#81C03F"
-                                });
-                            }
-                        }
-
-                        controls.value = flat;
-                    } catch {
-                        controls.value = [];
-                    }
-                }
-
-                onMounted(() => {
-                    fetchControls();
-                    setInterval(() => {
-                        bannerIndex.value = (bannerIndex.value + 1) % banners.length;
-                    }, 5000);
-
-
-                    RenderTheme();
-                    console.clear();
-                });
-
-                return {
-                    isDark,selectedTier, mobileOpen, query, limit,
-                    currentBanner, navLinks, features, featColors,
-                    stats, dotnetBadges, tickerBadges, controlGradients,
-                    controls, filteredControls, footerLinks, latestVersion,
-                    pricingTiers, pricingFeatures,
-                    toggleTheme,selectPlusAndScroll,
-                };
+            function toggleTheme() {
+                isDark.value = !isDark.value;
+                localStorage.setItem('docmd-theme', isDark.value ? 'dark' : 'light');
+                RenderTheme();
             }
-        }).mount('#app');
-    </script>
+
+            function RenderTheme() {
+                document.documentElement.classList.toggle('dark', isDark.value);
+                document.body.style.backgroundColor = isDark.value ? '#0d0f14' : '#ffffff';
+                document.body.style.color = isDark.value ? '#ffffff' : '#111827';
+            }
+
+            function selectPlusAndScroll() {
+                const plusTier = pricingTiers.find(t => t.key === 'plus') // adjust the key match to whatever your Plus tier's actual key is
+                if (!plusTier) return
+
+                selectedTier.value = plusTier
+
+            }
+
+            async function fetchControls() {
+                try {
+                    const res = await fetch('./docmd.config.json');
+                    const data = await res.json();
+
+                    const flat = [];
+
+                    for (const parent of data.navigation || []) {
+                        if (!parent.children?.length) continue;
+
+                        const category = parent.kt || 'misc';
+
+                        for (const child of parent.children) {
+                            if (!child.kt) continue;
+
+                            flat.push({
+                                name: child.title,
+                                slug: child.kt,
+                                category: category,
+                                thumbnail: `./docs/assets/images/screenshots/${category}/${child.kt}-dark.png`,
+                                color: category.toLowerCase() === "controls"
+                                    ? "#9810FA"
+                                    : category.toLowerCase() === "components"
+                                        ? "#4F39F6"
+                                        : "#81C03F"
+                            });
+                        }
+                    }
+
+                    controls.value = flat;
+                } catch {
+                    controls.value = [];
+                }
+            }
+
+            onMounted(() => {
+                fetchControls();
+                setInterval(() => {
+                    bannerIndex.value = (bannerIndex.value + 1) % banners.length;
+                }, 5000);
 
 
-    <!-- Tawk.to -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true; s1.src = 'https://embed.tawk.to/6306a5d437898912e964fc2b/1gb8vfi4s';
-            s1.charset = 'UTF-8'; s1.setAttribute('crossorigin', '*'); s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!-- Video pop-up -->
-    <script type="text/javascript">
-        window.addEventListener('DOMContentLoaded', () => {
-            new ModalVideo(".js-video-btn");
-            //Google Event Tracker: This one script tracks EVERY button with a data-analytics attribute automatically
-            document.querySelectorAll("[data-analytics], .js-video-btn").forEach(btn => {
-                btn.addEventListener('click', () => {
-                    gtag('event', btn.getAttribute('data-analytics'));
-                });
+                RenderTheme();
+                console.clear();
+            });
+
+            return {
+                isDark, selectedTier, mobileOpen, query, limit,
+                currentBanner, navLinks, features, featColors,
+                stats, dotnetBadges, tickerBadges, controlGradients,
+                controls, filteredControls, footerLinks, latestVersion,
+                pricingTiers, pricingFeatures,
+                toggleTheme, selectPlusAndScroll,
+            };
+        }
+    }).mount('#app');
+</script>
+
+
+<!-- Tawk.to -->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/6306a5d437898912e964fc2b/1gb8vfi4s';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!-- Video pop-up -->
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', () => {
+        new ModalVideo(".js-video-btn");
+        //Google Event Tracker: This one script tracks EVERY button with a data-analytics attribute automatically
+        document.querySelectorAll("[data-analytics], .js-video-btn").forEach(btn => {
+            btn.addEventListener('click', () => {
+                gtag('event', btn.getAttribute('data-analytics'));
             });
         });
-    </script>
+    });
+</script>
 
 </body>
 

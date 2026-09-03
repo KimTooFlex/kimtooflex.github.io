@@ -21,6 +21,8 @@ KimTools.WinForms publishes a complete, machine-readable context file so AI codi
 We're actively building native Model Context Protocol (MCP) support, so AI agents will be able to search, read, and query KimTools documentation interactively instead of fetching a static file. Until then, the `llms.txt` files below give any AI tool full context in one request.
 :::
 
+
+
 ## Full context
 
 Here's the fastest way to get an AI assistant up to speed on KimTools - copy one of the two links below into any tool that accepts a URL for context (Claude, ChatGPT, Cursor, and most others support this).

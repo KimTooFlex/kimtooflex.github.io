@@ -4,10 +4,10 @@ title: "KimTools / AI & LLM Context"
 description: "Machine-readable documentation context for AI coding assistants and LLM agents."
 source: "https://kimtoo.net/ai-llm/"
 path: /ai-llm/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.451Z"
+  generated_at: "2026-09-02T18:39:56.205Z"
 ---
 ---
 title: "KimTools / AI & LLM Context"
@@ -31,6 +31,8 @@ KimTools.WinForms publishes a complete, machine-readable context file so AI codi
 ::: callout tip "MCP Support Coming Soon"
 We're actively building native Model Context Protocol (MCP) support, so AI agents will be able to search, read, and query KimTools documentation interactively instead of fetching a static file. Until then, the `llms.txt` files below give any AI tool full context in one request.
 :::
+
+
 
 ## Full context
 

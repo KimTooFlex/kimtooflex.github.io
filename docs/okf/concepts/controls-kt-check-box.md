@@ -4,10 +4,10 @@ title: "KimTools / Controls / CheckBox"
 description: "A themeable, better-looking checkbox for WinForms, inspired by iCheck, with per-state color control."
 source: "https://kimtoo.net/controls/kt-check-box/"
 path: /controls/kt-check-box/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.508Z"
+  generated_at: "2026-09-02T18:39:56.228Z"
 ---
 ---
 title: "KimTools / Controls / CheckBox"

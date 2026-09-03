@@ -4,10 +4,10 @@ title: "KimTools / Controls / SliderVert"
 description: "A vertical range slider with independent track and elapsed colors, fill/outline thumb modes, and thick/thin border styles."
 source: "https://kimtoo.net/controls/kt-slider-vert/"
 path: /controls/kt-slider-vert/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.756Z"
+  generated_at: "2026-09-02T18:39:56.475Z"
 ---
 ---
 title: "KimTools / Controls / SliderVert"

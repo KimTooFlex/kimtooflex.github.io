@@ -4,10 +4,10 @@ title: "KimTools / Controls / Label"
 description: "A theme-aware label control for Modern WinForms with intelligent foreground contrast generation and KtColor palette integration."
 source: "https://kimtoo.net/controls/kt-label/"
 path: /controls/kt-label/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.609Z"
+  generated_at: "2026-09-02T18:39:56.284Z"
 ---
 ---
 title: "KimTools / Controls / Label"

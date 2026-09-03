@@ -4,10 +4,10 @@ title: "KimTools / Controls / TextBox"
 description: "An enhanced, highly flexible text input control for Modern WinForms supporting custom styles, SVG icons, and automatic casing."
 source: "https://kimtoo.net/controls/kt-text-box/"
 path: /controls/kt-text-box/
-updated: 2026-08-30
+updated: 2026-09-02
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-30T22:44:17.825Z"
+  generated_at: "2026-09-02T18:39:56.556Z"
 ---
 ---
 title: "KimTools / Controls / TextBox"
