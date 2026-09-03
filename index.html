@@ -91,6 +91,9 @@
     </script>
 
     <style>
+        [v-cloak] {
+            display: none;
+        }
         /* Hide the logo span specifically */
         .gumroad-button .logo-full,
         .gumroad-button svg {
@@ -418,18 +421,18 @@
             </div>
 
             <!-- Right: theme toggle + CTA -->
-            <div class="flex items-center gap-3">
+            <div v-cloak  class=" flex items-center gap-3">
                 <!-- Theme toggle -->
-                <button @click="toggleTheme"
+                <button  @click="toggleTheme"
                         class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
                         :class="isDark ? 'text-gray-400 hover:text-white hover:bg-white/10' : 'text-gray-500 hover:text-gray-900 hover:bg-black/10'">
-                    <svg v-show="isDark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                    <svg  v-if="isDark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                          stroke-linejoin="round">
                         <circle cx="12" cy="12" r="4"/>
                         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
                     </svg>
-                    <svg v-hide="isDark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                          stroke-linejoin="round">
                         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
@@ -1460,6 +1463,7 @@
             const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
             const isDark = ref(savedTheme ? savedTheme === 'dark' : systemPrefersDark);
+            const isLight =ref( !isDark);
             const mobileOpen = ref(false);
             const query = ref('');
             const limit = ref(8);
@@ -1710,7 +1714,7 @@
             });
 
             return {
-                isDark, selectedTier, mobileOpen, query, limit,
+                isDark,isLight, selectedTier, mobileOpen, query, limit,
                 currentBanner, navLinks, features, featColors,
                 stats, dotnetBadges, tickerBadges, controlGradients,
                 controls, filteredControls, footerLinks, latestVersion,
