@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KimTools Theme Builder</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<style>
+:root{--ct:#eef2f6;--b1:#080b0f;--b2:#171f27;--b3:#242e39;--primary:#0d9488;--primary-on:#f5f5f5;
+--mut:color-mix(in srgb,var(--ct) 60%,var(--b1));--ac:var(--primary);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--b1);color:var(--ct);font-family:"Segoe UI",system-ui,sans-serif}
+.panel{background:var(--b2);border:1px solid var(--b3);border-radius:10px}
+.mut{color:var(--mut)}
+input[type=color]{width:30px;height:30px;padding:0;border:1px solid var(--b3);border-radius:6px;background:none;cursor:pointer}
+.hex{color-scheme:inherit;width:84px;background:transparent;border:1px solid var(--b3);border-radius:6px;padding:3px 6px;font:12px Consolas,monospace;color:var(--ct)}
+.chip{border:1px solid var(--b3);border-radius:999px;padding:3px 10px;font-size:13px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip.on{border-color:var(--ac);outline:1px solid var(--ac)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.code{background:var(--cbg);color:var(--cfg);border-radius:0 0 10px 10px;padding:14px;overflow-x:auto;font:12.5px/1.55 Consolas,"Courier New",monospace;margin:0}
+.cdark{--cbg:#10151c;--cfg:#d6deeb;--k:#82aaff;--t:#ffcb6b;--n:#f78c6c;--cm:#6b7a90;--s:#c3e88d;--l:#ff869a}
+.clight{--cbg:#fafbfc;--cfg:#24292f;--k:#0550ae;--t:#953800;--n:#0a3069;--cm:#6e7781;--s:#116329;--l:#cf222e}
+.hljs-keyword,.hljs-type{color:var(--k)}.hljs-built_in,.hljs-title{color:var(--t)}.hljs-number{color:var(--n)}
+.hljs-comment{color:var(--cm);font-style:italic}.hljs-string{color:var(--s)}.hljs-literal{color:var(--l)}
+/* app preview, driven by the theme variables */
+.win{background:var(--b1);color:var(--ct);border:1px solid var(--b3);border-radius:10px;overflow:hidden;font-size:13px}
+.win .tb{background:var(--b2);border-bottom:1px solid var(--b3)}
+.win .side{background:var(--b2);border-right:1px solid var(--b3);width:176px;flex:none}
+.win .card{background:var(--b2);border:1px solid var(--b3);border-radius:8px}
+.win .sk{background:var(--b3);border-radius:4px;height:8px}
+.win .ic{background:var(--b3);border-radius:4px;width:16px;height:16px;flex:none}
+.win .nav{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:6px}
+.win .nav.act{background:color-mix(in srgb,var(--primary) 18%,var(--b2));box-shadow:inset 2px 0 0 var(--primary)}
+.win .inp{background:var(--b1);border:1px solid var(--b3);border-radius:6px;padding:6px 10px;width:100%;color:var(--ct);font-size:13px}
+.win .b{border-radius:6px;padding:6px 12px;font-weight:600;white-space:nowrap}
+.win .badge{border-radius:999px;padding:1px 8px;font-size:11px;font-weight:600}
+.win .track{background:var(--b3);border-radius:4px;height:6px}
+.win .dot3{width:10px;height:10px;border-radius:50%}
+</style>
+</head>
+<body>
+<div id="app" class="max-w-7xl mx-auto p-4 lg:p-6">
+  <header class="mb-5 flex items-center justify-between gap-3 flex-wrap pb-4" style="border-bottom:1px solid var(--b3)">
+    <div>
+      <h1 class="text-2xl font-semibold">KimTools Theme Builder</h1>
+      <p class="mut text-sm">Pick a preset, tweak the colors, copy the C# method into your WinForms project.</p>
+    </div>
+    <a href="https://kimtoo.net" target="_blank" rel="noopener" class="text-sm font-semibold no-underline"
+       style="background:var(--primary);color:var(--primary-on);border-radius:8px;padding:8px 14px">&larr; Back to kimtoo.net</a>
+  </header>
+
+  <div class="grid lg:grid-cols-[360px_1fr] gap-5">
+    <!-- editor -->
+    <section class="panel p-4 space-y-4 self-start">
+      <div>
+        <div class="text-sm font-medium mb-2">Presets</div>
+        <div class="flex flex-wrap gap-2">
+          <button v-for="p in presets" :key="p.name" class="chip" :class="{on: p.name===name}" @click="load(p)">
+            <span class="dot" :style="{background:'#'+p.primary[0]}"></span>{{ p.name }}
+          </button>
+        </div>
+      </div>
+      <div>
+        <label class="text-sm font-medium">Theme name</label>
+        <input v-model="name" class="hex w-full mt-1" style="width:100%;font-family:inherit;font-size:14px;padding:6px 8px" placeholder="My Dark Theme">
+        <div class="mut text-xs mt-1">Method: <code class="font-mono">{{ fn }}()</code></div>
+      </div>
+      <div>
+        <div class="text-sm font-medium mb-2">Content and base</div>
+        <div v-for="k in baseKeys" :key="k" class="flex items-center gap-2 mb-2">
+          <input type="color" v-model="c[k]">
+          <input class="hex" :value="c[k]" @change="setHex(c,k,$event)" spellcheck="false">
+          <span class="text-sm">{{ labels[k] }}</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-sm font-medium mb-1">Semantic colors</div>
+        <div class="mut text-xs mb-2">Second picker is the content color. Tick "auto" to pass Color.Empty (falls back to CONTENT).</div>
+        <div v-for="k in roleKeys" :key="k" class="flex items-center gap-2 mb-2">
+          <input type="color" v-model="c[k]">
+          <input class="hex" :value="c[k]" @change="setHex(c,k,$event)" spellcheck="false">
+          <input type="color" v-model="on[k]" :disabled="auto[k]" :style="{opacity:auto[k]?.3:1}" title="Content color">
+          <label class="text-xs mut flex items-center gap-1"><input type="checkbox" v-model="auto[k]">auto</label>
+          <span class="text-sm">{{ labels[k] }}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- preview + code -->
+    <section class="space-y-5 min-w-0">
+      <div class="win" :style="vars">
+        <div class="tb flex items-center justify-between px-3 py-2">
+          <div class="flex items-center gap-2">
+            <span class="rounded" style="width:16px;height:16px;background:var(--primary)"></span>
+            <span class="font-semibold">{{ name || 'Untitled' }}</span>
+          </div>
+          <div class="flex gap-1.5"><span class="dot3" style="background:var(--warning)"></span><span class="dot3" style="background:var(--success)"></span><span class="dot3" style="background:var(--error)"></span></div>
+        </div>
+        <div class="flex">
+          <aside class="side p-3 hidden sm:flex flex-col gap-1" style="min-height:420px">
+            <div class="nav act"><span class="ic" style="background:var(--primary)"></span><span class="font-medium">Dashboard</span></div>
+            <div v-for="w in [70,55,80,60,45]" :key="w" class="nav"><span class="ic"></span><span class="sk" :style="{width:w+'%'}"></span></div>
+            <div class="mt-auto flex items-center gap-2 pt-3" style="border-top:1px solid var(--b3)">
+              <span class="rounded-full" style="width:28px;height:28px;background:var(--accent)"></span>
+              <div class="flex-1 space-y-1.5"><div class="sk" style="width:70%"></div><div class="sk" style="width:45%;height:6px"></div></div>
+            </div>
+          </aside>
+          <main class="flex-1 p-4 space-y-3 min-w-0">
+            <div class="flex gap-2 items-center">
+              <input class="inp" placeholder="Search projects">
+              <button class="b" :style="role('primary')">New</button>
+              <button class="b" :style="role('secondary')">Export</button>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              <div class="card p-3">
+                <div class="flex justify-between items-center"><span style="opacity:.7">Revenue</span><span class="badge" :style="role('success')">+12%</span></div>
+                <div class="text-xl font-semibold my-1">$24.8k</div>
+                <div class="track"><div style="height:6px;width:72%;border-radius:4px;background:var(--success)"></div></div>
+              </div>
+              <div class="card p-3">
+                <div class="flex justify-between items-center"><span style="opacity:.7">Users</span><span class="badge" :style="role('info')">New</span></div>
+                <div class="text-xl font-semibold my-1">1,284</div>
+                <div class="track"><div style="height:6px;width:48%;border-radius:4px;background:var(--info)"></div></div>
+              </div>
+              <div class="card p-3">
+                <div class="flex justify-between items-center"><span style="opacity:.7">Errors</span><span class="badge" :style="role('error')">3</span></div>
+                <div class="text-xl font-semibold my-1">0.4%</div>
+                <div class="track"><div style="height:6px;width:12%;border-radius:4px;background:var(--error)"></div></div>
+              </div>
+              <div class="card p-2">
+                <div style="opacity:.7;margin-bottom:4px">Layers</div>
+                <div style="background:var(--b1);border:1px solid var(--b3);border-radius:6px;padding:4px 6px;font-size:11px">Base 1
+                  <div style="background:var(--b2);border:1px solid var(--b3);border-radius:5px;padding:4px 6px;margin-top:3px">Base 2
+                    <div style="background:var(--b3);border-radius:4px;padding:3px 6px;margin-top:3px">Base 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-5 gap-3">
+              <div class="card p-3 md:col-span-3">
+                <div class="font-semibold mb-2">Weekly activity</div>
+                <div class="flex items-end gap-2" style="height:96px">
+                  <div v-for="(h,i) in [40,65,50,80,60,92,70]" :key="i" class="flex-1 rounded-t"
+                       :style="{height:h+'%',background:['var(--primary)','var(--secondary)','var(--accent)'][i%3]}"></div>
+                </div>
+              </div>
+              <div class="card p-3 md:col-span-2 space-y-2">
+                <div class="font-semibold">Deployments</div>
+                <div v-for="(r,i) in [['success','Live'],['warning','Review'],['info','Queued'],['error','Failed']]" :key="i" class="flex items-center gap-2">
+                  <span class="ic"></span><span class="sk flex-1" :style="{maxWidth:(40+i*12)+'%'}"></span>
+                  <span class="badge" :style="role(r[0])">{{ r[1] }}</span>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <div class="panel" style="overflow:hidden">
+        <div class="flex items-center justify-between px-4 py-2" style="border-bottom:1px solid var(--b3)">
+          <div class="text-sm font-medium">C# code</div>
+          <button class="chip" @click="copy">{{ copied ? 'Copied' : 'Copy code' }}</button>
+        </div>
+        <pre class="code" :class="isDark ? 'cdark' : 'clight'"><code v-html="highlighted"></code></pre>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+const R = (h, o) => ({ hex: h, on: o || null });
+// role entries: [hex, contentHex or null for Color.Empty]
+const mk = (name, base, roles) => ({ name, content: base[0], base1: base[1], base2: base[2], base3: base[3],
+  primary: roles[0], secondary: roles[1], accent: roles[2], success: roles[3], info: roles[4], warning: roles[5], error: roles[6] });
+const W = 'F5F5F5';
+const presets = [
+  mk('My Dark Theme', ['EEF2F6','080B0F','171F27','242E39'], [['0D9488',W],['0C8C5F',W],['0287A9',W],['1CAE8C',W],['3E9BE0',W],['E0A13A',W],['E5645F',W]]),
+  mk('Clean Light', ['1F2937','FFFFFF','F3F4F6','E5E7EB'], [['2563EB','FFFFFF'],['7C3AED','FFFFFF'],['DB2777','FFFFFF'],['16A34A','FFFFFF'],['0EA5E9','FFFFFF'],['D97706','FFFFFF'],['DC2626','FFFFFF']]),
+  mk('Nord', ['ECEFF4','2E3440','3B4252','434C5E'], [['88C0D0','2E3440'],['81A1C1','2E3440'],['B48EAD','2E3440'],['A3BE8C','2E3440'],['5E81AC','ECEFF4'],['EBCB8B','2E3440'],['BF616A','ECEFF4']]),
+  mk('Dracula', ['F8F8F2','1E1F29','282A36','44475A'], [['BD93F9','282A36'],['FF79C6','282A36'],['8BE9FD','282A36'],['50FA7B','282A36'],['6272A4','F8F8F2'],['F1FA8C','282A36'],['FF5555','F8F8F2']]),
+  mk('Rose Light', ['3F2A33','FFF8FA','FCE7EE','F8D0DD'], [['E11D48','FFFFFF'],['F97316','FFFFFF'],['A855F7','FFFFFF'],['16A34A','FFFFFF'],['0EA5E9','FFFFFF'],['EAB308','3F2A33'],['B91C1C','FFFFFF']]),
+  mk('Forest Night', ['E8F0E9','0D1410','16221B','223229'], [['22C55E','0D1410'],['84CC16','0D1410'],['14B8A6','0D1410'],['4ADE80','0D1410'],['38BDF8','0D1410'],['FACC15','0D1410'],['F87171','0D1410']]),
+  mk('Catppuccin Mocha', ['CDD6F4','181825','1E1E2E','313244'], [['89B4FA','1E1E2E'],['CBA6F7','1E1E2E'],['F5C2E7','1E1E2E'],['A6E3A1','1E1E2E'],['89DCEB','1E1E2E'],['F9E2AF','1E1E2E'],['F38BA8','1E1E2E']]),
+  mk('Catppuccin Latte', ['4C4F69','EFF1F5','E6E9EF','CCD0DA'], [['1E66F5','FFFFFF'],['8839EF','FFFFFF'],['EA76CB','FFFFFF'],['40A02B','FFFFFF'],['04A5E5','FFFFFF'],['DF8E1D','4C4F69'],['D20F39','FFFFFF']]),
+  mk('Tokyo Night', ['C0CAF5','16161E','1A1B26','292E42'], [['7AA2F7','16161E'],['BB9AF7','16161E'],['7DCFFF','16161E'],['9ECE6A','16161E'],['2AC3DE','16161E'],['E0AF68','16161E'],['F7768E','16161E']]),
+  mk('One Dark', ['ABB2BF','21252B','282C34','3E4451'], [['61AFEF','282C34'],['C678DD','282C34'],['56B6C2','282C34'],['98C379','282C34'],['4FA6ED','282C34'],['E5C07B','282C34'],['E06C75','282C34']]),
+  mk('Gruvbox Dark', ['EBDBB2','1D2021','282828','3C3836'], [['83A598','282828'],['D3869B','282828'],['FE8019','282828'],['B8BB26','282828'],['8EC07C','282828'],['FABD2F','282828'],['FB4934','282828']]),
+  mk('Solarized Dark', ['93A1A1','002B36','073642','0A4655'], [['268BD2','FDF6E3'],['6C71C4','FDF6E3'],['2AA198','FDF6E3'],['859900','FDF6E3'],['3B9AD9','FDF6E3'],['B58900','FDF6E3'],['DC322F','FDF6E3']]),
+  mk('Solarized Light', ['586E75','FDF6E3','EEE8D5','E0DAC5'], [['268BD2','FDF6E3'],['6C71C4','FDF6E3'],['2AA198','FDF6E3'],['859900','FDF6E3'],['3B9AD9','FDF6E3'],['B58900','FDF6E3'],['DC322F','FDF6E3']]),
+  mk('Monokai', ['F8F8F2','1E1F1C','272822','3E3D32'], [['A6E22E','272822'],['AE81FF','272822'],['66D9EF','272822'],['A6E22E','272822'],['66D9EF','272822'],['E6DB74','272822'],['F92672','F8F8F2']]),
+  mk('GitHub Dark', ['E6EDF3','0D1117','161B22','30363D'], [['2F81F7','FFFFFF'],['A371F7','FFFFFF'],['F778BA','0D1117'],['3FB950','0D1117'],['58A6FF','0D1117'],['D29922','0D1117'],['F85149','FFFFFF']]),
+  mk('GitHub Light', ['1F2328','FFFFFF','F6F8FA','D0D7DE'], [['0969DA','FFFFFF'],['8250DF','FFFFFF'],['BF3989','FFFFFF'],['1A7F37','FFFFFF'],['218BFF','FFFFFF'],['9A6700','FFFFFF'],['CF222E','FFFFFF']]),
+  mk('Material Ocean', ['8F93A2','0F111A','1A1C25','292D3E'], [['82AAFF','0F111A'],['C792EA','0F111A'],['89DDFF','0F111A'],['C3E88D','0F111A'],['82AAFF','0F111A'],['FFCB6B','0F111A'],['F07178','0F111A']]),
+];
+const baseKeys = ['content','base1','base2','base3'];
+const roleKeys = ['primary','secondary','accent','success','info','warning','error'];
+const labels = { content:'Content (text)', base1:'Base 1 (page)', base2:'Base 2 (surface)', base3:'Base 3 (raised)',
+  primary:'Primary', secondary:'Secondary', accent:'Accent', success:'Success', info:'Info', warning:'Warning', error:'Error' };
+const consts = { content:'CONTENT', base1:'BASE_1', base2:'BASE_2', base3:'BASE_3' };
+roleKeys.forEach(k => consts[k] = k.toUpperCase());
+const named = { F5F5F5:'WhiteSmoke', FFFFFF:'White', '000000':'Black' };
+
+const { createApp, reactive, computed, ref, watch } = Vue;
+const KEY = 'kimtools-theme-builder:last';
+createApp({
+  setup() {
+    const c = reactive({}), on = reactive({}), auto = reactive({});
+    const name = ref('');
+    const copied = ref(false);
+    const hx = h => '#' + h.toLowerCase();
+    function load(p) {
+      name.value = p.name;
+      baseKeys.forEach(k => c[k] = hx(p[k]));
+      roleKeys.forEach(k => { c[k] = hx(p[k][0]); on[k] = hx(p[k][1] || 'FFFFFF'); auto[k] = !p[k][1]; });
+    }
+    load(presets[0]);
+    try {
+      const saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (saved && saved.c) {
+        name.value = saved.name || '';
+        [...baseKeys, ...roleKeys].forEach(k => { if (saved.c[k]) c[k] = saved.c[k]; });
+        roleKeys.forEach(k => { if (saved.on && saved.on[k]) on[k] = saved.on[k]; if (saved.auto) auto[k] = !!saved.auto[k]; });
+      }
+    } catch (e) {}
+    function setHex(obj, k, e) {
+      let v = e.target.value.trim().replace(/^#/, '');
+      if (/^[0-9a-fA-F]{3}$/.test(v)) v = v.split('').map(x => x + x).join('');
+      if (/^[0-9a-fA-F]{6}$/.test(v)) obj[k] = '#' + v.toLowerCase(); else e.target.value = obj[k];
+    }
+    const fn = computed(() => {
+      let s = name.value.replace(/[^A-Za-z0-9 _-]/g, ' ').split(/[\s_-]+/).filter(Boolean)
+        .map(w => w[0].toUpperCase() + w.slice(1)).join('');
+      if (!s) s = 'My';
+      if (/^\d/.test(s)) s = '_' + s;
+      return /Theme$/.test(s) ? s : s + 'Theme';
+    });
+    const col = h => {
+      const x = h.replace('#', '').toUpperCase();
+      if (named[x]) return 'Color.' + named[x];
+      return 'Color.FromArgb(' + [0, 2, 4].map(i => parseInt(x.substr(i, 2), 16)).join(', ') + ')';
+    };
+    const line = (k, withOn) => '    KtColor.@default(KtColor.' + consts[k] + ', ' + col(c[k]) +
+      (withOn ? ', ' + (auto[k] ? 'Color.Empty' : col(on[k])) : '') + ');';
+    const code = computed(() => {
+      const L = ['public void ' + fn.value + '()', '{', line('content'), '',
+        '    // Base colors reuse KtColor.CONTENT as their content color', ...['base1','base2','base3'].map(k => line(k)), '',
+        '    // Semantic brand colors (variable color, content color)', ...['primary','secondary','accent'].map(k => line(k, true)), '',
+        '    // Semantic role colors', ...['success','info','warning','error'].map(k => line(k, true)), '',
+        '    KtColor.RenderTheme();', '}'];
+      return L.join('\n');
+    });
+    const isDark = computed(() => {
+      const h = c.base1.replace('#', '');
+      const [r, g, b] = [0, 2, 4].map(i => parseInt(h.substr(i, 2), 16));
+      return (0.2126 * r + 0.7152 * g + 0.0722 * b) < 140;
+    });
+    const highlighted = computed(() => hljs.highlight(code.value, { language: 'csharp' }).value);
+    const vars = computed(() => {
+      const v = { '--ct': c.content, '--b1': c.base1, '--b2': c.base2, '--b3': c.base3 };
+      roleKeys.forEach(k => { v['--' + k] = c[k]; v['--' + k + '-on'] = auto[k] ? c.content : on[k]; });
+      return v;
+    });
+    const applyPage = () => {
+      const st = document.documentElement.style;
+      Object.entries(vars.value).forEach(([k, v]) => st.setProperty(k, v));
+      try { localStorage.setItem(KEY, JSON.stringify({ name: name.value, c: { ...c }, on: { ...on }, auto: { ...auto } })); } catch (e) {}
+    };
+    watch([vars, name, () => ({ ...on }), () => ({ ...auto })], applyPage, { immediate: true, deep: true });
+    const role = k => ({ background: 'var(--' + k + ')', color: 'var(--' + k + '-on)' });
+    function copy() {
+      const done = () => { copied.value = true; setTimeout(() => copied.value = false, 1500); };
+      const fallback = () => { const t = document.createElement('textarea'); t.value = code.value; document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); done(); } catch (e) {} t.remove(); };
+      try { navigator.clipboard.writeText(code.value).then(done, fallback); } catch (e) { fallback(); }
+    }
+    return { c, on, auto, name, fn, presets, baseKeys, roleKeys, labels, load, setHex, highlighted, isDark, vars, role, copy, copied };
+  }
+}).mount('#app');
+</script>
+</body>
+</html>
