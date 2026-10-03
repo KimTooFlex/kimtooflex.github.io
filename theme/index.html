@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>KimTools Theme Builder</title>
+  <link rel="icon" href="./../favicon.ico"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -40,6 +41,16 @@ input[type=color]{width:30px;height:30px;padding:0;border:1px solid var(--b3);bo
 .win .track{background:var(--b3);border-radius:4px;height:6px}
 .win .dot3{width:10px;height:10px;border-radius:50%}
 </style>
+   <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-8RDLCMTFXX');</script>
 </head>
 <body>
 <div id="app" class="max-w-7xl mx-auto p-4 lg:p-6">
@@ -48,7 +59,7 @@ input[type=color]{width:30px;height:30px;padding:0;border:1px solid var(--b3);bo
       <h1 class="text-2xl font-semibold">KimTools Theme Builder</h1>
       <p class="mut text-sm">Pick a preset, tweak the colors, copy the C# method into your WinForms project.</p>
     </div>
-    <a href="https://kimtoo.net" target="_blank" rel="noopener" class="text-sm font-semibold no-underline"
+    <a href="https://kimtoo.net"  rel="noopener" class="text-sm font-semibold no-underline"
        style="background:var(--primary);color:var(--primary-on);border-radius:8px;padding:8px 14px">&larr; Back to kimtoo.net</a>
   </header>
 

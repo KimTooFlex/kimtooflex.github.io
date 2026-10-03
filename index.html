@@ -33,10 +33,7 @@
     <!-- Video pop-up -->
     <script src="https://unpkg.com/modal-video@2.4.6/js/modal-video.min.js"></script>
 
-    <!--Payment Processors-->
-    <!--    <script src="https://gumroad.com/js/gumroad.js"></script>-->
-    <!--    <script type="text/javascript" src="https://payhip.com/payhip.js"></script>-->
-
+   
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RDLCMTFXX"></script>
     <script>window.dataLayer = window.dataLayer || [];
@@ -440,18 +437,12 @@
                 </button>
 
                 <!-- Menu CTA -->
-                <a href="#pricing" data-analytics="checkout-menu-button"
+                <a href="./theme/" data-analytics="checkout-menu-button"
                    @click="selectedTier = null"
                    class="hidden md:inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase px-4 py-2.5 rounded-lg transition-all"
                    style="background: linear-gradient(135deg,#3B82F6,#7C3AED); color: white;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                         stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-badge-dollar-sign-icon lucide-badge-dollar-sign">
-                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
-                        <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
-                        <path d="M12 18V6"/>
-                    </svg>
-                    Pricing
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette preview-icon"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+                    Theme Builder
                 </a>
 
                 <!-- Mobile hamburger -->
@@ -479,8 +470,8 @@
                    :class="isDark ? 'text-gray-400' : 'text-gray-600'">
                     {{ link.label }}
                 </a>
-                <a href="#pricing"
-                   class="btn-primary text-center justify-center mt-2">Pricing</a>
+                <a href="./theme/"
+                   class="btn-primary text-center justify-center mt-2"> Theme Builder</a>
             </div>
         </div>
     </nav>
@@ -552,7 +543,7 @@
                             <a href="#pricing" class="transition-all duration-200 active:scale-[0.98] hover:border-yellow-500  hover:shadow-md hover:-translate-y-0.5">
                                 <button type="button"
                                         data-analytics="Kimtools Plus CTA"
-                                        @click="selectPlusAndScroll"
+                                        @click="selectPlusTier"
                                         class="flex items-center justify-center gap-3 px-8 py-4 font-bold text-white rounded-xl transition-all active:scale-[0.97] hover:brightness-110 shadow-lg shadow-purple-900/20"
                                         style="background: linear-gradient(135deg, rgb(168, 85, 247), rgb(99, 102, 241));">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
@@ -562,12 +553,12 @@
                                         <path d="m7.5 15.5 2.3 2.3a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0L4 19"/>
                                         <circle cx="15.5" cy="7.5" r="5.5"/>
                                     </svg>
-                                    Get a PLUS license
+                                    Get KimTools&nbsp;&nbsp;
                                 </button>
                             </a>
 
 
-                            <a href="https://kimtoo.net/docs"
+                            <a href="./docs/"
                                data-analytics="Kimtools Docs CTA"
                                class="flex items-center justify-center gap-3 px-8 py-4 font-bold rounded-xl transition-all duration-200 active:scale-[0.97] hover:brightness-95 hover:shadow-md hover:-translate-y-0.5"
                                :class="isDark ? 'bg-slate-200 text-black' : 'bg-slate-800 text-white'">
@@ -719,28 +710,42 @@
                         <span v-if="tier.highlight"
                               class="absolute left-1/2 -translate-x-1/2 "
                               style="display:flex; align-items:center; gap:12px;">
-                            <img style="height:80px" :src="pricingTiers[0].logo" :alt="pricingTiers[0].name"/>
                             <img style="height:80px" :src="pricingTiers[1].logo" :alt="pricingTiers[1].name"/>
+                            <img style="height:80px" :src="pricingTiers[2].logo" :alt="pricingTiers[2].name"/>
                         </span>
                             <img v-else style="height:64px;float:right" :src="tier.logo" :alt="tier.name"/>
                         </div>
                         <span v-if="tier.highlight">
                           <br/><br/><br/>
                        </span>
-                        <h3 v-if="!tier.highlight" class="font-display text-xl font-bold mt-8"
+                        <h3 v-if="!tier.highlight" class="font-display text-xl font-bold mt-2"
                             :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-900'">
-                            {{ tier.name }}
+                          <span class="opacity-50 text-sm">KimTools License for</span> <br/>
+                          {{ tier.name }}
                         </h3>
                     </div>
+<hr/>
+                 <div class="mb-4 mt-4 flex items-baseline justify-center">
+    <!-- Current/Sale Price -->
+    <span class="sr-only">Current price:</span>
+    <span 
+        class="font-display text-4xl font-bold" 
+        :style="{ color: tier.color }"
+    >
+        {{ tier.offer }}
+    </span>
 
-                    <div class="mb-6">
-                        <span class="font-display text-4xl font-bold" :style="`color:${tier.color}`">${{ tier.price
-                            }}</span>
-                        <span class="text-xs font-mono opacity-50 ml-2"
-                              :class="isDark || tier.highlight  ? 'text-white' : 'text-gray-600'">one-time</span>
-                    </div>
-
-                    <p class="text-sm leading-relaxed mb-6 opacity-60"
+    <!-- Original Price -->
+    <span class="sr-only">Original price:</span>
+    <s 
+        class="text-md font-bold font-mono opacity-75 ml-2" 
+        :class="isDark || tier.highlight ? 'text-white' : 'text-red-600'"
+    >
+        {{ tier.price }}
+    </s>
+</div>
+<hr/>
+                    <p class="text-sm leading-relaxed mt-4 mb-6 opacity-60"
                        :class="isDark || tier.highlight  ? 'text-white' : 'text-black'">
                         {{ tier.description }}
                     </p>
@@ -752,15 +757,21 @@
                             <span :style="`color:${tier.color}`">●</span>
                             {{ target }}
                         </li>
+                         <li v-for="target in tierFeatures" :key="target"
+                            class="flex items-center gap-2 text-xs font-mono opacity-80"
+                            :class="isDark || tier.highlight ? 'text-white' : 'text-black'">
+                            <span :style="`color:${tier.color}`">●</span>
+                            {{ target }}
+                        </li>
                     </ul>
-                    <a href="#pricing" class="transition-all duration-200 active:scale-[0.98] hover:border-yellow-500  hover:shadow-md hover:-translate-y-0.5">
+                    <a  :href="`#pricing-${tier.key}`" class="transition-all duration-200 active:scale-[0.98] hover:border-yellow-500  hover:shadow-md hover:-translate-y-0.5">
 
-                        <button @click="selectedTier = tier"
+                        <button :id="`pricing-${tier.key}`" @click="selectedTier = tier"
                                 class="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm transition-all active:scale-[0.98]"
                                 :style="tier.highlight
                           ? 'background-color: white; color: #1E2939;'
                           : `background: ${tier.color}18; color: ${tier.color}; border: 1.5px solid ${tier.color}44;`">
-                            Get {{ tier.name }} License
+                             {{tier.cta }}
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                  fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -796,31 +807,29 @@
                         <span v-if="selectedTier?.highlight"
                               class="absolute left-1/2 -translate-x-1/2 "
                               style="display:flex; align-items:center; gap:12px;">
-                            <img style="height:80px" :src="pricingTiers[0].logo" :alt="pricingTiers[0].name"/>
-                            <img style="height:80px" :src="pricingTiers[1].logo" :alt="pricingTiers[1].name"/>
+                            <img style="height:80px" :src="pricingTiers[1].logo" :alt="pricingTiers[0].name"/>
+                            <img style="height:80px" :src="pricingTiers[2].logo" :alt="pricingTiers[1].name"/>
                         </span>
                             <img v-else style="height:80px;" class="absolute left-1/2 -translate-x-1/2 "
                                  :src="selectedTier?.logo" :alt="selectedTier?.name"/>
                         </div>
 
-                        <!--                        <h3 v-if="!selectedTier?.highlight" class="font-display text-xl font-bold mt-8"-->
-                        <!--                            :class="isDark || selectedTier?.highlight  ? 'text-white' : 'text-gray-900'">-->
-                        <!--                            {{ selectedTier?.name }}-->
-                        <!--                        </h3>-->
+                                              
 
                     </div>
                     <div class="mb-6">
                         <span class="font-display text-4xl font-bold grad-green">
-                            ${{ selectedTier?.price }}
+                            {{ selectedTier?.offer }}
                         </span>
-                        <span class="text-xs font-mono opacity-50 ml-2"
-                              :class="isDark ? 'text-gray-400' : 'text-gray-600'">one-time</span>
+                        
+                        <span class="text-md font-bold font-mono opacity-75 ml-2 line-through"
+                              :class="isDark ? 'text-red-400' : 'text-red-600'"> {{ selectedTier?.price }}</span>
                     </div>
+                    <h3  class="font-display text-xl font-bold mt-8"
+                                                   :class="isDark   ? 'text-white' : 'text-gray-900'">
+                                                   {{ selectedTier?.cta }}
+                                               </h3>
                     <br>
-                    <p class="text-sm opacity-60 my-5" :class="isDark ? 'text-gray-400' : 'text-gray-600'">
-                        choose how to pay
-                    </p>
-
                     <div class="flex flex-col gap-3 max-w-md mx-auto">
                         <!-- Divider -->
                         <div class="relative my-1 flex items-center justify-center">
@@ -829,7 +838,7 @@
                             </div>
                             <span class="relative   px-3 text-[11px] uppercase tracking-wider text-neutral-400">
                                      <span class="px-2 opacity-70 py-0.5 text-[10px] font-semibold tracking-wide uppercase bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-300 rounded-full">
-                                         Recommended
+                                         Recommended Payment Methods
                                      </span>
                             </span>
                         </div>
@@ -854,7 +863,7 @@
                                 <div class="flex gap-2">
                                     <span class="text-sm font-bold text-neutral-900 dark:text-white">🟣 <span class="text-indigo-950/60 dark:text-indigo-100/60">Pay with</span> Stripe</span>
                                 </div>
-                                <span class="text-xs text-neutral-500 dark:text-neutral-400" style="text-align: left; zoom:90%; padding-left: 32px"><span class="opacity-70">Powered by</span> <strong>Polar.sh </strong> </span>
+                                <span class="text-xs text-neutral-500 dark:text-neutral-400" style="text-align: left; zoom:90%; padding-left: 32px"><span class="opacity-70"></span> <strong>Debit|Credit Card, Google|Apple Pay, CashApp...etc</strong> </span>
                             </div>
                             <img src="./images/stripe.webp" alt="Stripe"
                                  class="h-6 w-auto object-contain dark:brightness-150 transition-all duration-200"/>
@@ -898,7 +907,7 @@
                              fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M19 12H5M12 19l-7-7 7-7"/>
                         </svg>
-                        Back / Cancel
+                        Back (View Plans)
                     </button>
                 </div>
 
@@ -1495,19 +1504,18 @@
             const currentBanner = computed(() => banners[bannerIndex.value]);
 
             const navLinks = [
-
+                 { label: 'Pricing', href: '#pricing' },
                 {label: 'Documentation', href: './docs'},
-                // { label: 'Pricing', href: '#pricing' },
                 {label: 'Demos', href: 'https://www.youtube.com/@kimtooflex', target: '_blank'},
                 {
-                    label: 'Themes & Templates',
+                    label: 'Store',
                     href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D',
                     target: '_blank'
                 },
                 {label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms', target: '_blank'},
                 // { label: 'Blog', href: 'https://store.kimtoo.net?section=0JNqmLFulvHeku3QucyOJg%3D%3D', target: '_blank' },
                 //{ label: 'Bunifu', href: 'https://kimtoo.net/bunifu' },
-                {label: 'Contact', href: 'https://support.kimtoo.net', target: '_blank'},
+                {label: 'Support', href: 'https://support.kimtoo.net', target: '_blank'},
             ];
 
             const features = [
@@ -1542,8 +1550,31 @@
                 {text: '.NET 10.0 (Preview)', color: '#A855F7'},
             ];
 
+            const tierFeatures =[
+               "One-time Single Purchase",
+               "Lifetime License",
+               "Unlimited Activations",
+               "Unlimited Projects",
+               "Royalty Free",
+               "Premium Support"
+            ];
+
             const pricingTiers = [
                 {
+                    gumroad_variant: "iEzCAUtpfn6l3wk4CVfadQ==",
+                    payhip_variant: "1788107902105",
+                    polar_variant: "polar_cl_OnsNuTwvD0ezuF1ydTLqPFFfKeggFH2QAesui17ln52",
+                    key: 'plus',
+                    emoji: '🟩',
+                    name: 'PLUS',
+                    cta: 'Get KimTools (All in One)',
+                    price: '$37.00',
+                    offer: '$17.76',
+                    color: 'white',
+                    targets: ['.NET Framework 4.6.2+', '.NET Core 8.0, 9.0, 10', '.NET Latest + Preview'],
+                    description: 'Unlocks the full KimTools WinForms control suite for .NET Framework & .NETCore ultimate developer bundle.',
+                    highlight: true,
+                }, {
                     gumroad_variant: "kZvb1wvedojNu0twPUUhXg==",
                     payhip_variant: "1788107980141",
                     polar_variant: "polar_cl_saf77n0vfTql1dF31HbFYnKbCElIhMp0AuV5K1PAYcK",
@@ -1551,10 +1582,12 @@
                     emoji: '🟦',
                     logo: './images/dot-net-framework.webp',
                     name: '.NET Framework',
-                    price: '22',
+                    cta: 'Get KimTools (.NetFramework)',
+                    price: '$22.00',    
+                    offer: '$10.56',
                     color: '#A855F7',
-                    targets: ['.NET Framework 4.6.2', '4.7 – 4.7.2', '4.8 – 4.8.1'],
-                    description: 'Unlocks the full KimTools WinForms control suite for .NET Framework. Ideal for developers who solely target .NET Framework.',
+                    targets: ['.NET Framework 4.6.2', '.NET Framework 4.7 – 4.7.2', '.NET Framework 4.8 – 4.8.1'],
+                    description: 'Unlocks the full KimTools WinForms control suite for .NET Framework.',
                     highlight: false,
                 },
                 {
@@ -1565,25 +1598,15 @@
                     emoji: '🟪',
                     logo: './images/dot-net-core.webp',
                     name: '.NET Core',
-                    price: '28',
+                         cta: 'Get KimTools (.NetCore)',
+                    price: '$28.00',  
+                    offer: '$13.44',
                     color: '#3B82F6',
-                    targets: ['.NET 8.0', '.NET 9.0', '.NET 10.0 (Preview)'],
-                    description: 'Unlocks the full KimTools WinForms control suite for .NET 8, 9, and 10 (Preview). Ideal for developers who solely target .NET Core.',
+                    targets: ['.NET 8.0', '.NET 9.0', '.NET 10.0'],
+                    description: 'Unlocks the full KimTools WinForms control suite for .NETCore (.NET8.0, 9.0 & .NET10).',
                     highlight: false,
                 },
-                {
-                    gumroad_variant: "iEzCAUtpfn6l3wk4CVfadQ==",
-                    payhip_variant: "1788107902105",
-                    polar_variant: "polar_cl_OnsNuTwvD0ezuF1ydTLqPFFfKeggFH2QAesui17ln52",
-                    key: 'plus',
-                    emoji: '🟩',
-                    name: 'PLUS',
-                    price: '37',
-                    color: 'white',
-                    targets: ['.NET Framework 4.6.2+', '.NET Core 8.0+', '.NET Latest + Preview'],
-                    description: 'The ultimate developer license bundle - unlocks the full KimTools WinForms control suite across every supported WinForms target.',
-                    highlight: true,
-                },
+               
             ];
 
             const pricingFeatures = [
@@ -1633,7 +1656,7 @@
                     {label: 'Nuget', href: 'https://www.nuget.org/packages/KimTools.WinForms'},
                     {label: 'Themes', href: 'https://store.kimtoo.net', target: '_blank'},
                     {
-                        label: 'News',
+                        label: 'Newsletter',
                         href: 'https://store.kimtoo.net?section=5xMJt-qk-ZRRVj07EDOYIw%3D%3D',
                         target: '_blank'
                     },
@@ -1659,11 +1682,18 @@
                 document.body.style.color = isDark.value ? '#ffffff' : '#111827';
             }
 
-            function selectPlusAndScroll() {
-                const plusTier = pricingTiers.find(t => t.key === 'plus') // adjust the key match to whatever your Plus tier's actual key is
-                if (!plusTier) return
+            function selectPlusTier() {
+              
+              setTimeout(() =>   selectTier("plus"),3000);
 
-                selectedTier.value = plusTier
+            }
+
+
+           function selectTier(tier) {
+                const _tier = pricingTiers.find(t => t.key === tier.toString().toLowerCase()) // adjust the key match to whatever your Plus tier's actual key is
+                if (!_tier) return
+
+               selectedTier.value = _tier;
 
             }
 
@@ -1718,8 +1748,8 @@
                 currentBanner, navLinks, features, featColors,
                 stats, dotnetBadges, tickerBadges, controlGradients,
                 controls, filteredControls, footerLinks, latestVersion,
-                pricingTiers, pricingFeatures,
-                toggleTheme, selectPlusAndScroll,
+                pricingTiers,tierFeatures, pricingFeatures,
+                toggleTheme, selectTier,selectPlusTier,
             };
         }
     }).mount('#app');
