@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store embed test</title>
+<style>
+  :root { --bg:#f3f4f6; --fg:#111827; --card:#fff; --line:#d1d5db; }
+  body.dark { --bg:#0b0f17; --fg:#e5e7eb; --card:#111827; --line:#374151; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.5 system-ui, Segoe UI, sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding:16px 24px; background:var(--card); border-bottom:1px solid var(--line); }
+  h1 { margin:0 0 12px; font-size:18px; }
+  .row { display:flex; flex-wrap:wrap; gap:12px; align-items:end; }
+  label { display:flex; flex-direction:column; gap:4px; font-size:12px; opacity:.8; }
+  input { padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--fg); font:inherit; }
+  #url { width:min(32rem, 90vw); }
+  #h { width:6rem; }
+  button, a.btn { padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); font:inherit; cursor:pointer; text-decoration:none; }
+  button:hover, a.btn:hover { border-color:#3b82f6; }
+  main { max-width:1200px; margin:24px auto; padding:0 24px; }
+  .frame { position:relative; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--card); }
+  iframe { display:block; width:100%; border:0; pointer-events:none; }
+  #cover { position:absolute; inset:0; z-index:1; cursor:pointer; }
+  .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  pre { margin:16px 0 0; padding:12px; overflow:auto; border:1px solid var(--line); border-radius:8px; background:var(--card); font-size:12px; }
+  .note { margin-top:8px; font-size:12px; opacity:.7; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Store embed test</h1>
+  <div class="row">
+    <label>Product page URL
+      <input id="url" type="url" value="https://kimtoo.net/store/browser/">
+    </label>
+    <label>Height (px)
+      <input id="h" type="number" min="300" step="50" value="900">
+    </label>
+    <label style="flex-direction:row;align-items:center;gap:6px;padding-bottom:8px">
+      <input id="auto" type="checkbox" checked style="padding:0"> Auto height
+    </label>
+    <button id="load" type="button">Load</button>
+    <button id="theme" type="button">Toggle host page theme</button>
+    <a id="open" class="btn" href="#" target="_blank" rel="noopener">Open with ?embed=1</a>
+  </div>
+</header>
+
+<main>
+  <div class="frame">
+    <iframe id="f" title="Store product" loading="lazy" tabindex="-1"></iframe>
+    <a id="cover" href="#"><span class="sr">Open the store page</span></a>
+  </div>
+  <pre id="code"></pre>
+  <p class="note">The frame is display only: a link covers it, so a click anywhere opens the product page in the host window (no embed parameter). If the frame stays blank, the server is probably blocking framing (X-Frame-Options or frame-ancestors). The page must also be live online, since the iframe loads it from the web.</p>
+</main>
+
+<script>
+(function () {
+  var url = document.getElementById('url'),
+      h = document.getElementById('h'),
+      f = document.getElementById('f'),
+      code = document.getElementById('code'),
+      open = document.getElementById('open'),
+      auto = document.getElementById('auto'),
+      cover = document.getElementById('cover');
+
+  function setTheme(dark, save) {
+    document.body.classList.toggle('dark', dark);
+    var t = dark ? 'dark' : 'light';
+    if (save) { try { localStorage.setItem('docmd-theme', t); } catch (e) {} }
+    try { f.contentWindow.postMessage({ type: 'docmd-theme', theme: t }, '*'); } catch (e) {}
+  }
+  (function () {
+    var t = null; try { t = localStorage.getItem('docmd-theme'); } catch (e) {}
+    document.body.classList.toggle('dark', t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+  })();
+
+  function load() {
+    var u = url.value.trim(), height = parseInt(h.value, 10) || 900;
+    f.src = u;
+    cover.href = u;
+    if (!auto.checked) f.style.height = height + 'px';
+    open.href = u + (u.indexOf('?') > -1 ? '&' : '?') + 'embed=1';
+    code.textContent =
+      '<div style="position:relative">\n' +
+      '  <iframe id="storeFrame"\n    src="' + u + '"\n    title="Store product"\n    width="100%"\n    height="' + height + '"\n' +
+      '    style="border:0;border-radius:12px;pointer-events:none"\n    tabindex="-1"\n    loading="lazy">\n  </iframe>\n' +
+      '  <a href="' + u + '" style="position:absolute;inset:0" aria-label="Open the store page"></a>\n</div>\n\n' +
+      '<!-- optional: auto height, no inner scrollbar -->\n' +
+      '<script>\nwindow.addEventListener("message", function (e) {\n' +
+      '  var f = document.getElementById("storeFrame");\n' +
+      '  if (e.source === f.contentWindow && e.data && e.data.type === "kt-embed-height")\n' +
+      '    f.style.height = e.data.height + "px";\n});\n<\/script>';
+  }
+
+  document.getElementById('load').addEventListener('click', load);
+  document.getElementById('theme').addEventListener('click', function () { setTheme(!document.body.classList.contains('dark'), true); });
+  f.addEventListener('load', function () { setTheme(document.body.classList.contains('dark'), false); });
+  url.addEventListener('keydown', function (e) { if (e.key === 'Enter') load(); });
+  h.addEventListener('input', function () { if (!auto.checked) f.style.height = (parseInt(h.value, 10) || 900) + 'px'; });
+  window.addEventListener('message', function (e) {
+    var d = e.data;
+    if (!auto.checked || e.source !== f.contentWindow || !d || d.type !== 'kt-embed-height') return;
+    f.style.height = d.height + 'px';
+    h.value = d.height;
+  });
+  load();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "status": "published",
+  "analyticsId": "G-8RDLCMTFXX",
+  "featured": true,
+  "order": 10,
+  "title": "Browser",
+  "tagline": "A boilerplate browser template for WinForms, ready to build on.",
+  "tier": "premium",
+  "type": "project-template",
+  "languages": ["csharp"],
+  "tags": ["Browser", "WebView2", "WinForms", "C#"],
+  "frameworks": [".NET Framework 4.6.2+", ".NET 8+"],
+  "version": "1.0.0",
+  "kimtoolsVersion": "26.8+",
+  "updated": "2026-11-15",
+  "seo": {
+    "title": "KimTools Browser | WinForms Template",
+    "description": "A customizable C# WinForms browser template powered by KimTools.",
+    "keywords": ["C# Browser", "Project template", "WinForms", "WebView2", "KimTools"]
+  },
+  "video": {
+    "youtubeId": ""
+  },
+  "description": [
+    "A ready-to-use browser application template built with C# and KimTools.",
+    "Includes a modern interface, navigation toolbar, address bar and tab layout.",
+    "Customize the source code to build your own desktop browser."
+  ],
+  "highlights": [
+    "Dark Mode Themes",
+    "Light Mode Themes",
+    "Modern browser UI",
+    "Navigation toolbar",
+    "Address bar",
+    "Tab management",
+    "Customizable source code",
+    "C# WinForms project",
+    "AI Sidebar"
+  ],
+  "features": [
+    {
+      "title": "AI Ready, Modern UI",
+      "text": "Clean browser interface with KimTools controls."
+    },
+    {
+      "title": "Navigation",
+      "text": "Back, forward, refresh and home controls."
+    },
+    {
+      "title": "Tabs",
+      "text": "Browser-style tab management interface."
+    },
+    {
+      "title": "Customizable",
+      "text": "Modify and extend the included C# source code."
+    }
+  ],
+  "screenshotAlt": [
+    "Browser application main window",
+    "Browser navigation toolbar",
+    "Browser tab interface"
+  ],
+  "requirements": [
+    "Windows 10 or later",
+    "Visual Studio 2022+",
+    "KimTools SDK 26.8+",
+    "Valid KimTools Premium license",
+    "WebView2 Runtime if required by the implementation"
+  ],
+  "changelog": [],
+  "faq": [
+    {
+      "q": "Which frameworks are supported?",
+      "a": ".NET Framework 4.6.2+ and .NET 8+."
+    },
+    {
+      "q": "Can I customize the source code?",
+      "a": "Yes. The full C# source code is included."
+    },
+    {
+      "q": "Can I use it commercially?",
+      "a": "Yes, under the applicable KimTools license."
+    }
+  ]
+}
