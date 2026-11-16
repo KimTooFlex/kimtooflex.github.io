@@ -2,7 +2,7 @@
   "free": false,
   "offer": 52,
   "buttons": [
-    { "label": "Watch Demo", "url": "https://www.youtube.com/watch?v=UgHwt2fzvmI" }
+    { "label": "Watch Demo", "url": "" }
   ],
   "plans": {
     "bundle": {
