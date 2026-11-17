@@ -1,6 +1,5 @@
-{
-  "free": false,
-  "offer": 52,
+{ 
+  "offer": 50,
   "buttons": [
     { "label": "Watch Demo", "url": "" }
   ],
@@ -11,9 +10,10 @@
       "tagline": "The source code plus a full KimTools license",
       "who": "For developers who want the source code and KimTools for every project.",
       "includes": ["Everything in Template / Source Code", "Full KimTools license", "KimTools updates under your license"],
-      "price": 52.00,
-      "salePrice": 52.00,
+      "price":32.00 ,
+      "salePrice": 32.00,
       "checkout": [
+
         {
           "color": "#6D63FF",
           "provider": "polar",
@@ -27,7 +27,7 @@
           "provider": "payhip",
           "title": "Pay with PayPal",
           "description": "Checkout through payhip.com",
-          "url": "https://payhip.com/buy?s=1&variant_combination%5BFoKq9%5D=1794825807851&cart_links%5B%5D=FoKq9&qty%5BFoKq9%5D=1", 
+          "url": "https://payhip.com/buy?s=1&variant_combination%5BFoKq9%5D=1794825859997&cart_links%5B%5D=FoKq9&qty%5BFoKq9%5D=1",
           "logo": "https://kimtoo.net/images/paypal.webp"
         },
         {
@@ -46,14 +46,15 @@
       "tagline": "The full source code with one KimTools version bundled",
       "who": "For teams that want the source code only, or already own KimTools.",
       "includes": ["Full project source", "One KimTools version bundled for offline use", "Bug fixes for buyers"],
-      "price": 37.00,
-      "salePrice": 37.00,
+      "price": 16.00,
+      "salePrice": 16.00,
       "checkout": [
+
         {
           "color": "#6D63FF",
           "provider": "polar",
           "title": "Pay with Stripe",
-          "description": "Checkout through polar.sh",
+          "description": "Checkout on polar.sh",
           "url": "https://buy.polar.sh/polar_cl_XnVTOk0dYqQWL7Hu8Uz7cPNP7YFjjZtKc7ovq02Ffcq",
           "logo": "https://kimtoo.net/images/stripe.webp"
         },
@@ -61,18 +62,19 @@
           "color": "#19AAEC",
           "provider": "payhip",
           "title": "Pay with PayPal",
-          "description": "Checkout through payhip.com",
-          "url": "https://payhip.com/buy?s=1&variant_combination%5BFoKq9%5D=1794825859997&cart_links%5B%5D=FoKq9&qty%5BFoKq9%5D=1", 
+          "description": "Checkout on payhip.com",
+          "url": "https://payhip.com/buy?s=1&variant_combination%5BFoKq9%5D=1794825807851&cart_links%5B%5D=FoKq9&qty%5BFoKq9%5D=1",
           "logo": "https://kimtoo.net/images/paypal.webp"
         },
         {
           "color": "#FF9FFF",
           "provider": "gumroad",
           "title": "Pay with Gumroad",
-          "description": "Checkout through Gumroad.com",
+          "description": "Checkout on Gumroad.com",
           "url": "https://gumroad.com/checkout?product=zuvnbk&option=MeltKJ3slnsjdTAGrly3Jg%3D%3D&quantity=1&code=SDK26",
           "logo": "https://kimtoo.net/images/gumroad.webp"
         }
+
       ]
     }
   }

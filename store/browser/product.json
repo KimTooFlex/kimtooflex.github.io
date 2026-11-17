@@ -3,41 +3,46 @@
   "analyticsId": "G-8RDLCMTFXX",
   "featured": true,
   "order": 10,
-  "title": "Browser",
-  "tagline": "A boilerplate browser template for WinForms, ready to build on.",
+  "title": "Browser Template",
+  "tagline": "A ready-to-use browser application template built with C# and KimTools.",
   "tier": "premium",
   "type": "project-template",
-  "languages": ["csharp"],
-  "tags": ["Browser", "WebView2", "WinForms", "C#"],
-  "frameworks": [".NET Framework 4.6.2+", ".NET 8+"],
+  "languages": [ "csharp" ],
+  "tags": [ "Browser", "WebView2", "WinForms", "C#" ],
+  "frameworks": [ ".NET Framework 4.6.2+", ".NET 8+" ],
   "version": "1.0.0",
   "kimtoolsVersion": "26.8+",
   "updated": "2026-11-15",
   "seo": {
     "title": "KimTools Browser | WinForms Template",
     "description": "A customizable C# WinForms browser template powered by KimTools.",
-    "keywords": ["C# Browser", "Project template", "WinForms", "WebView2", "KimTools"]
+    "keywords": [ "C# Browser", "Project template", "WinForms", "WebView2", "KimTools" ]
   },
   "video": {
     "youtubeId": ""
   },
   "description": [
-    "A ready-to-use browser application template built with C# and KimTools.",
     "Includes a modern interface, navigation toolbar, address bar and tab layout.",
     "Customize the source code to build your own desktop browser."
   ],
-  "highlights": [
-    "Dark Mode Themes",
-    "Light Mode Themes",
-    "Modern browser UI",
-    "Navigation toolbar",
-    "Address bar",
-    "Tab management",
-    "Customizable source code",
-    "C# WinForms project",
-    "AI Sidebar"
-  ],
+
   "features": [
+    {
+      "title": "Visual Studio Project (C# WinForms)",
+      "text": "Ready-to-open C# WinForms solution for Visual Studio."
+    },
+    {
+      "title": "18 Themes (Dark / Light Mode)",
+      "text": "Switch between 18 built-in KimTools themes."
+    },
+    {
+      "title": "Royalty Free",
+      "text": "Use it in your apps with no royalties to pay."
+    },
+    {
+      "title": "Chromium Based",
+      "text": "Powered by a Chromium engine for modern web rendering."
+    },
     {
       "title": "AI Ready, Modern UI",
       "text": "Clean browser interface with KimTools controls."
@@ -61,11 +66,7 @@
     "Browser tab interface"
   ],
   "requirements": [
-    "Windows 10 or later",
-    "Visual Studio 2022+",
-    "KimTools SDK 26.8+",
-    "Valid KimTools Premium license",
-    "WebView2 Runtime if required by the implementation"
+    "Visual Studio 2019+"
   ],
   "changelog": [],
   "faq": [
